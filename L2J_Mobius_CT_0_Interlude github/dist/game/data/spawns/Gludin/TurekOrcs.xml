@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<!-- gludio15_1621_01m1 -->
+	<spawn zone="turek_orc_zone_01">
+		<AIData>
+			<fleeX>-95152</fleeX>
+			<fleeY>102304</fleeY>
+			<fleeZ>-3552</fleeZ>
+		</AIData>
+		<territory minZ="-3692" maxZ="-2992">
+			<node x="-99708" y="100418" />
+			<node x="-98553" y="100158" />
+			<node x="-98637" y="104050" />
+			<node x="-101237" y="103989" />
+		</territory>
+		<npc id="20498" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+		<npc id="20501" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+	</spawn>
+	<!-- gludio15_1621_02m1 -->
+	<spawn zone="turek_orc_zone_02">
+		<AIData>
+			<fleeX>-97392</fleeX>
+			<fleeY>106816</fleeY>
+			<fleeZ>-3392</fleeZ>
+		</AIData>
+		<territory minZ="-3715" maxZ="-3015">
+			<node x="-100403" y="104743" />
+			<node x="-98598" y="104208" />
+			<node x="-98544" y="109423" />
+			<node x="-100571" y="106885" />
+		</territory>
+		<npc id="20498" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+	</spawn>
+	<!-- gludio15_1721_01m1 -->
+	<spawn zone="turek_orc_zone_03">
+		<AIData>
+			<fleeX>-95152</fleeX>
+			<fleeY>102304</fleeY>
+			<fleeZ>-3552</fleeZ>
+		</AIData>
+		<territory minZ="-3664" maxZ="-2864">
+			<node x="-98220" y="100314" />
+			<node x="-93925" y="102007" />
+			<node x="-95754" y="103735" />
+			<node x="-98186" y="102776" />
+		</territory>
+		<npc id="20494" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek War Hound -->
+		<npc id="20500" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Sentinel -->
+		<npc id="20499" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+	</spawn>
+	<!-- gludio15_1721_02m1 -->
+	<spawn zone="turek_orc_zone_04">
+		<AIData>
+			<fleeX>-94176</fleeX>
+			<fleeY>100144</fleeY>
+			<fleeZ>-3520</fleeZ>
+		</AIData>
+		<territory minZ="-3740" maxZ="-3040">
+			<node x="-96564" y="98436" />
+			<node x="-92323" y="99029" />
+			<node x="-91976" y="103016" />
+			<node x="-97591" y="99988" />
+		</territory>
+		<npc id="20494" count="4" respawnDelay="60" respawnRandom="20" /> <!-- Turek War Hound -->
+		<npc id="20500" count="7" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Sentinel -->
+		<npc id="20499" count="6" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+	</spawn>
+	<!-- gludio15_1721_03m1 -->
+	<spawn zone="turek_orc_zone_05">
+		<AIData>
+			<fleeX>-90416</fleeX>
+			<fleeY>100384</fleeY>
+			<fleeZ>-3552</fleeZ>
+		</AIData>
+		<territory minZ="-3716" maxZ="-2916">
+			<node x="-92222" y="99365" />
+			<node x="-87934" y="99872" />
+			<node x="-87088" y="101108" />
+			<node x="-90154" y="103859" />
+			<node x="-91868" y="103040" />
+		</territory>
+		<npc id="20494" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek War Hound -->
+		<npc id="20500" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Sentinel -->
+		<npc id="20499" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+	</spawn>
+	<!-- gludio15_1721_04m1 -->
+	<spawn zone="turek_orc_zone_06">
+		<AIData>
+			<fleeX>-88272</fleeX>
+			<fleeY>103152</fleeY>
+			<fleeZ>-3392</fleeZ>
+		</AIData>
+		<territory minZ="-3572" maxZ="-2972">
+			<node x="-87013" y="101152" />
+			<node x="-86290" y="102891" />
+			<node x="-86637" y="104750" />
+			<node x="-88038" y="105818" />
+			<node x="-89004" y="105604" />
+			<node x="-90074" y="103901" />
+		</territory>
+		<npc id="20494" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek War Hound -->
+		<npc id="20500" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Sentinel -->
+		<npc id="20499" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+	</spawn>
+	<!-- gludio15_1721_05m1 -->
+	<spawn zone="turek_orc_zone_07">
+		<AIData>
+			<fleeX>-97392</fleeX>
+			<fleeY>106816</fleeY>
+			<fleeZ>-3392</fleeZ>
+		</AIData>
+		<territory minZ="-3640" maxZ="-3140">
+			<node x="-95250" y="105015" />
+			<node x="-95937" y="109031" />
+			<node x="-98216" y="108700" />
+			<node x="-98128" y="104096" />
+		</territory>
+		<npc id="20496" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+		<npc id="20501" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+	</spawn>
+	<!-- gludio15_1721_06m1 -->
+	<spawn zone="turek_orc_zone_08">
+		<AIData>
+			<fleeX>-93392</fleeX>
+			<fleeY>106368</fleeY>
+			<fleeZ>-3696</fleeZ>
+		</AIData>
+		<territory minZ="-3908" maxZ="-2708">
+			<node x="-92850" y="104286" />
+			<node x="-90889" y="104952" />
+			<node x="-91756" y="106782" />
+			<node x="-95570" y="107440" />
+			<node x="-95130" y="104826" />
+		</territory>
+		<npc id="20500" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Sentinel -->
+		<npc id="20499" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+	</spawn>
+	<!-- gludio15_1721_07m1 -->
+	<spawn zone="turek_orc_zone_09">
+		<AIData>
+			<fleeX>-93424</fleeX>
+			<fleeY>108016</fleeY>
+			<fleeZ>-3872</fleeZ>
+		</AIData>
+		<territory minZ="-3912" maxZ="-3112">
+			<node x="-95637" y="109483" />
+			<node x="-95581" y="107558" />
+			<node x="-91717" y="106862" />
+			<node x="-91112" y="107928" />
+			<node x="-93361" y="109981" />
+		</territory>
+		<npc id="20499" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+	</spawn>
+	<!-- gludio15_1721_08m1 -->
+	<spawn zone="turek_orc_zone_10">
+		<AIData>
+			<fleeX>-97200</fleeX>
+			<fleeY>110528</fleeY>
+			<fleeZ>-3472</fleeZ>
+		</AIData>
+		<territory minZ="-3676" maxZ="-3076">
+			<node x="-98228" y="108800" />
+			<node x="-95895" y="109146" />
+			<node x="-95524" y="110170" />
+			<node x="-96588" y="112416" />
+			<node x="-98224" y="112417" />
+		</territory>
+		<npc id="20499" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+		<npc id="20501" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+	</spawn>
+	<!-- gludio15_1721_09m1 -->
+	<spawn zone="turek_orc_zone_11">
+		<AIData>
+			<fleeX>-97056</fleeX>
+			<fleeY>114192</fleeY>
+			<fleeZ>-3552</fleeZ>
+		</AIData>
+		<territory minZ="-3736" maxZ="-2936">
+			<node x="-98218" y="112506" />
+			<node x="-96542" y="112511" />
+			<node x="-95144" y="114945" />
+			<node x="-97220" y="116900" />
+			<node x="-98212" y="116972" />
+		</territory>
+		<npc id="20499" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+	</spawn>
+	<!-- gludio15_1721_10m1 -->
+	<spawn zone="turek_orc_zone_12">
+		<AIData>
+			<fleeX>-93888</fleeX>
+			<fleeY>112432</fleeY>
+			<fleeZ>-3696</fleeZ>
+		</AIData>
+		<territory minZ="-3916" maxZ="-2716">
+			<node x="-95200" y="110248" />
+			<node x="-93384" y="110120" />
+			<node x="-91156" y="112612" />
+			<node x="-93590" y="114946" />
+			<node x="-95066" y="114882" />
+			<node x="-96464" y="112391" />
+		</territory>
+		<npc id="20500" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Sentinel -->
+		<npc id="20499" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+		<npc id="20501" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+	</spawn>
+	<!-- gludio15_1721_11m1 -->
+	<spawn zone="turek_orc_zone_13">
+		<AIData>
+			<fleeX>-91552</fleeX>
+			<fleeY>110112</fleeY>
+			<fleeZ>-3536</fleeZ>
+		</AIData>
+		<territory minZ="-3908" maxZ="-2708">
+			<node x="-90132" y="107440" />
+			<node x="-87572" y="110732" />
+			<node x="-91108" y="112492" />
+			<node x="-93225" y="110080" />
+		</territory>
+		<npc id="20500" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Sentinel -->
+		<npc id="20499" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+	</spawn>
+	<!-- gludio15_1721_12m1 -->
+	<spawn zone="turek_orc_zone_14">
+		<AIData>
+			<fleeX>-97232</fleeX>
+			<fleeY>117952</fleeY>
+			<fleeZ>-3424</fleeZ>
+		</AIData>
+		<territory minZ="-3684" maxZ="-2884">
+			<node x="-98248" y="117028" />
+			<node x="-96654" y="117468" />
+			<node x="-94744" y="120383" />
+			<node x="-96338" y="120746" />
+			<node x="-98264" y="119450" />
+		</territory>
+		<npc id="20499" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+	</spawn>
+	<!-- gludio15_1721_13m1 -->
+	<spawn zone="turek_orc_zone_15">
+		<AIData>
+			<fleeX>-93840</fleeX>
+			<fleeY>117600</fleeY>
+			<fleeZ>-3600</fleeZ>
+		</AIData>
+		<territory minZ="-3676" maxZ="-2776">
+			<node x="-93507" y="115075" />
+			<node x="-90746" y="118919" />
+			<node x="-92167" y="120462" />
+			<node x="-94626" y="120366" />
+			<node x="-96153" y="117076" />
+			<node x="-95000" y="115033" />
+		</territory>
+		<npc id="20500" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Sentinel -->
+		<npc id="20499" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="4" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="4" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="4" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+		<npc id="20501" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+	</spawn>
+	<!-- gludio15_1721_14m1 -->
+	<spawn zone="turek_orc_zone_16">
+		<AIData>
+			<fleeX>-91008</fleeX>
+			<fleeY>114784</fleeY>
+			<fleeZ>-3549</fleeZ>
+		</AIData>
+		<territory minZ="-3636" maxZ="-2836">
+			<node x="-93410" y="115021" />
+			<node x="-91016" y="112672" />
+			<node x="-88716" y="115276" />
+			<node x="-88832" y="118440" />
+			<node x="-90588" y="118896" />
+		</territory>
+		<npc id="20499" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="4" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="4" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+		<npc id="20501" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+	</spawn>
+	<!-- gludio15_1721_15m1 -->
+	<spawn zone="turek_orc_zone_17">
+		<AIData>
+			<fleeX>-90560</fleeX>
+			<fleeY>111488</fleeY>
+			<fleeZ>-3456</fleeZ>
+		</AIData>
+		<territory minZ="-3600" maxZ="-2800">
+			<node x="-90984" y="112628" />
+			<node x="-87988" y="111064" />
+			<node x="-86960" y="114732" />
+			<node x="-88752" y="115056" />
+		</territory>
+		<npc id="20500" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Sentinel -->
+		<npc id="20499" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Footman -->
+		<npc id="20496" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Archer -->
+		<npc id="20498" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Supplier -->
+		<npc id="20497" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+	</spawn>
+	<!-- gludio15_1721_21sm1 -->
+	<spawn zone="turek_orc_zone_18">
+		<AIData>
+			<fleeX>-95152</fleeX>
+			<fleeY>102304</fleeY>
+			<fleeZ>-3552</fleeZ>
+		</AIData>
+		<territory minZ="-3720" maxZ="-3120">
+			<node x="-95382" y="101898" />
+			<node x="-94802" y="101966" />
+			<node x="-94767" y="102625" />
+			<node x="-95160" y="102693" />
+			<node x="-95595" y="102504" />
+		</territory>
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+	</spawn>
+	<!-- gludio15_1721_23sm1 -->
+	<spawn zone="turek_orc_zone_19">
+		<territory minZ="-3728" maxZ="-3228">
+			<node x="-90379" y="99890" />
+			<node x="-90090" y="100200" />
+			<node x="-90159" y="100585" />
+			<node x="-90697" y="100722" />
+			<node x="-90933" y="100205" />
+		</territory>
+		<npc id="20497" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+	</spawn>
+	<!-- gludio15_1721_24sm1 -->
+	<spawn zone="turek_orc_zone_20">
+		<territory minZ="-3628" maxZ="-3128">
+			<node x="-88803" y="102890" />
+			<node x="-88175" y="102599" />
+			<node x="-87878" y="102983" />
+			<node x="-87976" y="103336" />
+			<node x="-88316" y="103501" />
+			<node x="-88680" y="103308" />
+		</territory>
+		<npc id="20497" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Skirmisher -->
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+	</spawn>
+	<!-- gludio15_1721_25sm1 -->
+	<spawn zone="turek_orc_zone_21">
+		<AIData>
+			<fleeX>-97392</fleeX>
+			<fleeY>106816</fleeY>
+			<fleeZ>-3392</fleeZ>
+		</AIData>
+		<territory minZ="-3512" maxZ="-3012">
+			<node x="-97492" y="106352" />
+			<node x="-97028" y="106404" />
+			<node x="-96868" y="106828" />
+			<node x="-97076" y="107172" />
+			<node x="-97459" y="107140" />
+			<node x="-97663" y="106816" />
+		</territory>
+		<npc id="20501" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+	<!-- gludio15_1721_26sm1 -->
+	<spawn zone="turek_orc_zone_22">
+		<AIData>
+			<fleeX>-93392</fleeX>
+			<fleeY>106368</fleeY>
+			<fleeZ>-3696</fleeZ>
+		</AIData>
+		<territory minZ="-3844" maxZ="-3544">
+			<node x="-94151" y="106168" />
+			<node x="-93299" y="105623" />
+			<node x="-92826" y="106323" />
+			<node x="-93646" y="106877" />
+		</territory>
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+	<!-- gludio15_1721_27sm1 -->
+	<spawn zone="turek_orc_zone_23">
+		<AIData>
+			<fleeX>-93424</fleeX>
+			<fleeY>108016</fleeY>
+			<fleeZ>-3872</fleeZ>
+		</AIData>
+		<territory minZ="-4016" maxZ="-3716">
+			<node x="-93798" y="107508" />
+			<node x="-93041" y="107627" />
+			<node x="-93046" y="108165" />
+			<node x="-93405" y="108426" />
+			<node x="-93901" y="108202" />
+		</territory>
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+	<!-- gludio15_1721_28sm1 -->
+	<spawn zone="turek_orc_zone_24">
+		<AIData>
+			<fleeX>-97200</fleeX>
+			<fleeY>110528</fleeY>
+			<fleeZ>-3472</fleeZ>
+		</AIData>
+		<territory minZ="-3712" maxZ="-3312">
+			<node x="-97303" y="110259" />
+			<node x="-96745" y="110429" />
+			<node x="-96816" y="110831" />
+			<node x="-97394" y="111039" />
+			<node x="-97576" y="110561" />
+		</territory>
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+	<!-- gludio15_1721_29sm1 -->
+	<spawn zone="turek_orc_zone_25">
+		<AIData>
+			<fleeX>-91552</fleeX>
+			<fleeY>110112</fleeY>
+			<fleeZ>-3536</fleeZ>
+		</AIData>
+		<territory minZ="-3716" maxZ="-3216">
+			<node x="-91560" y="109640" />
+			<node x="-91120" y="109892" />
+			<node x="-91264" y="110508" />
+			<node x="-91792" y="110424" />
+			<node x="-91888" y="109888" />
+		</territory>
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+	<!-- gludio15_1721_30sm1 -->
+	<spawn zone="turek_orc_zone_26">
+		<AIData>
+			<fleeX>-90560</fleeX>
+			<fleeY>111488</fleeY>
+			<fleeZ>-3456</fleeZ>
+		</AIData>
+		<territory minZ="-3576" maxZ="-3176">
+			<node x="-90836" y="111220" />
+			<node x="-90252" y="111188" />
+			<node x="-90148" y="111808" />
+			<node x="-90776" y="111760" />
+		</territory>
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+	</spawn>
+	<!-- gludio15_1721_31sm1 -->
+	<spawn zone="turek_orc_zone_27">
+		<AIData>
+			<fleeX>-93888</fleeX>
+			<fleeY>112432</fleeY>
+			<fleeZ>-3696</fleeZ>
+		</AIData>
+		<territory minZ="-3808" maxZ="-3408">
+			<node x="-93687" y="111529" />
+			<node x="-93143" y="111844" />
+			<node x="-93012" y="112700" />
+			<node x="-93891" y="113293" />
+			<node x="-94746" y="112718" />
+			<node x="-94560" y="111746" />
+		</territory>
+		<npc id="20501" count="4" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+	<!-- gludio15_1721_32sm1 -->
+	<spawn zone="turek_orc_zone_28">
+		<AIData>
+			<fleeX>-97056</fleeX>
+			<fleeY>114192</fleeY>
+			<fleeZ>-3552</fleeZ>
+		</AIData>
+		<territory minZ="-3712" maxZ="-3212">
+			<node x="-97396" y="114024" />
+			<node x="-96644" y="113988" />
+			<node x="-96588" y="114708" />
+			<node x="-97496" y="114600" />
+		</territory>
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+	<!-- gludio15_1721_33sm1 -->
+	<spawn zone="turek_orc_zone_29">
+		<AIData>
+			<fleeX>-97232</fleeX>
+			<fleeY>117952</fleeY>
+			<fleeZ>-3424</fleeZ>
+		</AIData>
+		<territory minZ="-3556" maxZ="-3056">
+			<node x="-97492" y="117748" />
+			<node x="-96976" y="117684" />
+			<node x="-96840" y="118004" />
+			<node x="-97108" y="118284" />
+			<node x="-97504" y="118184" />
+		</territory>
+		<npc id="20501" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+	<!-- gludio15_1721_34sm1 -->
+	<spawn zone="turek_orc_zone_30">
+		<AIData>
+			<fleeX>-93840</fleeX>
+			<fleeY>117600</fleeY>
+			<fleeZ>-3600</fleeZ>
+		</AIData>
+		<territory minZ="-3716" maxZ="-3216">
+			<node x="-94171" y="117321" />
+			<node x="-93541" y="117368" />
+			<node x="-93455" y="117896" />
+			<node x="-94029" y="118121" />
+			<node x="-94348" y="117765" />
+		</territory>
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+	<!-- gludio15_1721_35sm1 -->
+	<spawn zone="turek_orc_zone_31">
+		<AIData>
+			<fleeX>-92032</fleeX>
+			<fleeY>119280</fleeY>
+			<fleeZ>-3488</fleeZ>
+		</AIData>
+		<territory minZ="-3584" maxZ="-3084">
+			<node x="-92359" y="119084" />
+			<node x="-91724" y="118862" />
+			<node x="-91605" y="119607" />
+			<node x="-92284" y="119789" />
+		</territory>
+		<npc id="20501" count="2" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="1" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+	<!-- gludio15_1721_36sm1 -->
+	<spawn zone="turek_orc_zone_32">
+		<AIData>
+			<fleeX>-91008</fleeX>
+			<fleeY>114784</fleeY>
+			<fleeZ>-3549</fleeZ>
+		</AIData>
+		<territory minZ="-3644" maxZ="-3144">
+			<node x="-91648" y="113612" />
+			<node x="-90332" y="113584" />
+			<node x="-90288" y="116760" />
+			<node x="-91668" y="116732" />
+		</territory>
+		<npc id="20501" count="4" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Shaman -->
+		<npc id="20495" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Warlord -->
+		<npc id="20546" count="3" respawnDelay="60" respawnRandom="20" /> <!-- Turek Orc Elder -->
+	</spawn>
+</list>

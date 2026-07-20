@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="7000" levels="1" name="NPC Default">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7001" levels="1" name="Dispel Buff">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>400</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>900</effectRange>
+		<magicLevel>99</magicLevel>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>buff</slot>
+				<rate>100</rate>
+				<max>20</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7002" levels="1" name="Dispel Debuff">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>400</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>900</effectRange>
+		<magicLevel>99</magicLevel>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>debuff</slot>
+				<rate>100</rate>
+				<max>20</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7003" levels="1" name="Dispel All">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>400</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>900</effectRange>
+		<magicLevel>99</magicLevel>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>buff</slot>
+				<rate>100</rate>
+				<max>20</max>
+			</effect>
+			<effect name="DispelByCategory">
+				<slot>debuff</slot>
+				<rate>100</rate>
+				<max>20</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7004" levels="2" name="Dispel Petrification">
+		<!-- Cures petrification with the effect of 2 or less. -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<effectPoint>566</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>TURN_STONE,2</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7005" levels="4" name="Greater Chant of Vampire">
+		<!-- Temporarily allows party members to partially restore HP using damage inflicted upon the enemy. Excludes damage from skill or range attack. Effect 4. -->
+		<operateType>A2</operateType>
+		<targetType>CLAN_MEMBER</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>655</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>74</magicLevel>
+		<mpConsume>217</mpConsume>
+		<mpInitialConsume>55</mpInitialConsume>
+		<reuseDelay>20000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="absorbDam">9</add> <!-- absorb 9% HP from damage inflicted on enemies -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7006" levels="13" name="The Love of Pa'agrio">
+		<!-- Greatly enhances alliance members' HP restoration. Effect 6. -->
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>6</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>655</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<mpConsume>272</mpConsume>
+		<reuseDelay>20000</reuseDelay>
+	</skill>
+	<skill id="7007" levels="4" name="Greater Seal of Flame">
+		<!-- A protective ring of fire that continuously reduces HP of surrounding enemies and their alliance members. Effect 8. -->
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>8</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>DOT_ATTR</abnormalType>
+		<activateRate>35</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>400</castRange>
+		<effectPoint>-409</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<mpConsume>153</mpConsume>
+		<reuseDelay>20000</reuseDelay>
+	</skill>
+	<skill id="7008" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7009" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7010" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7011" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7012" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7013" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7014" levels="1" name="Test - Critical Damage Up">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>85</magicLevel>
+	</skill>
+	<skill id="7015" levels="1" name="Test - Critical Damage Down">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>85</magicLevel>
+	</skill>
+	<skill id="7016" levels="1" name="Test - Critical Damage Up">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>85</magicLevel>
+	</skill>
+	<skill id="7017" levels="1" name="Test - Critical Damage Down">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>85</magicLevel>
+	</skill>
+	<skill id="7018" levels="1" name="Test - Critical Rate Up">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>85</magicLevel>
+	</skill>
+	<skill id="7019" levels="1" name="Test - Critical Rate Down">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>85</magicLevel>
+	</skill>
+	<skill id="7020" levels="1" name="Test - Critical Rate Up">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>85</magicLevel>
+	</skill>
+	<skill id="7021" levels="1" name="Test - Critical Rate Down">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>85</magicLevel>
+	</skill>
+	<skill id="7022" levels="1" name="Test - Find Hidden Door">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectLimit>6-12</affectLimit>
+		<hitTime>1000</hitTime>
+		<magicLevel>85</magicLevel>
+	</skill>
+	<skill id="7023" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7024" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7025" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7026" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7027" levels="1" name="not_used">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7028" levels="1" name="For Stationary NPCs">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>99</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>100</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7029" levels="4" name="Super Haste">
+		<!-- Level 1: Speed is increased. -->
+		<!-- Level 2: speed is increased significantly. -->
+		<!-- Level 3: Speed is increased dramatically. -->
+		<!-- Level 4: Grants the combined power of two warriors. -->
+		<table name="#amount">1 1 1 1</table>
+		<table name="#mAtkSpd">2 3 4 5</table>
+		<table name="#pAtk">250 500 750 1500</table>
+		<table name="#mAtk">250 500 750 1500</table>
+		<table name="#pAtkSpd">2 3 4 5</table>
+		<table name="#reuse">0.01 0.01 0.01 0.01</table>
+		<table name="#runSpd">2 3 4 5</table>
+		<icon>icon.skill7029</icon>
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<effectPoint>1</effectPoint>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="runSpd">#runSpd</mul>
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<mul stat="pAtk">#pAtk</mul>
+				<mul stat="mAtk">#mAtk</mul> <!-- custom -->
+				<mul stat="pReuse">#reuse</mul>
+				<mul stat="mReuse">#reuse</mul>
+				<mul stat="regHp">#amount</mul>
+				<mul stat="regMp">#amount</mul>
+				<mul stat="maxMp">#amount</mul>
+				<mul stat="weightLimit">#amount</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7030" levels="1" name="Summon King Bugbear">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>8</itemConsumeCount>
+		<itemConsumeId>1458</itemConsumeId> <!-- Crystal: D-Grade -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>3</mpConsume>
+		<reuseDelay>4000</reuseDelay>
+		<conditions>
+			<player canSummon="true" />
+		</conditions>
+		<effects>
+			<effect name="Summon">
+				<npcId>20150</npcId>
+				<lifeTime>1200</lifeTime>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7031" levels="1" name="Summon Skeleton Royal Guard">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>8</itemConsumeCount>
+		<itemConsumeId>1458</itemConsumeId> <!-- Crystal: D-Grade -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>3</mpConsume>
+		<reuseDelay>4000</reuseDelay>
+		<conditions>
+			<player canSummon="true" />
+		</conditions>
+		<effects>
+			<effect name="Summon">
+				<npcId>20169</npcId>
+				<lifeTime>1200</lifeTime>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7032" levels="1" name="Summon Hunter Gargoyle">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>8</itemConsumeCount>
+		<itemConsumeId>1458</itemConsumeId> <!-- Crystal: D-Grade -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>3</mpConsume>
+		<reuseDelay>4000</reuseDelay>
+		<conditions>
+			<player canSummon="true" />
+		</conditions>
+		<effects>
+			<effect name="Summon">
+				<npcId>20241</npcId>
+				<lifeTime>1200</lifeTime>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7033" levels="1" name="Test Flame Strike">
+		<operateType>P</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7034" levels="1" name="Test Aqua Splash">
+		<operateType>P</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7035" levels="1" name="Display - Swoop Cannon">
+		<!-- This aerial attack inflicts damage on a target inside the Outer Castle. -->
+		<operateType>P</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7036" levels="1" name="Display - Valakas">
+		<!-- Valakas Use Skill -->
+		<operateType>P</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7037" levels="1" name="Display - Tyrannosaurus Capture">
+		<!-- Tyrannosaurus Use Skill -->
+		<operateType>P</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7038" levels="1" name="Channeling DD Test: Short">
+		<operateType>P</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7039" levels="1" name="Channeling DD Test: Middle">
+		<operateType>P</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7040" levels="1" name="Channeling DD Test: Long">
+		<operateType>P</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="7041" levels="1" name="Master's Blessing - Focus">
+		<!-- A GM is always by your side. Increases critical attack rate temporarily. Effect 3. -->
+		<icon>icon.skill1077</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>52</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRate">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7042" levels="1" name="Master's Blessing - Death Whisper">
+		<!-- A GM is always by your side. Increases critical attack rate temporarily. Effect 3. -->
+		<icon>icon.skill1242</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>56</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critDmg">1.35</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7043" levels="1" name="Master's Blessing - Haste">
+		<!-- A GM is always by your side. Increases Atk. Spd. temporarily. Effect 2. -->
+		<icon>icon.skill1086</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>52</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.33</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7044" levels="1" name="Master's Blessing - Guidance">
+		<!-- A GM is always by your side. Increases Accuracy temporarily. Effect 3. -->
+		<icon>icon.skill1240</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>HIT_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>56</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">4</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7045" levels="1" name="Master's Blessing - Blessed Body">
+		<!-- A GM is always by your side. Increases maximum HP temporarily. Effect 6. -->
+		<icon>icon.skill1045</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>6</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAX_HP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>72</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.35</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7046" levels="1" name="Master's Blessing - Blessed Soul">
+		<!-- A GM is always by your side. Increases maximum MP temporarily. Effect 6. -->
+		<icon>icon.skill1048</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>6</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAX_MP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>70</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxMp">1.35</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7047" levels="1" name="Master's Blessing - Agility">
+		<!-- A GM is always by your side. Increases Evasion temporarily. Effect 3. -->
+		<icon>icon.skill1087</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>AVOID_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>52</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">4</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7048" levels="1" name="Master's Blessing - Acumen">
+		<!-- A GM is always by your side. Increases Casting Spd. temporarily. Effect 3. -->
+		<icon>icon.skill1085</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>48</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7049" levels="1" name="Master's Blessing - Decrease Weight">
+		<!-- A GM is always by your side. Reduces current weight. Effect 3. -->
+		<icon>icon.skill1257</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>52</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<add stat="weightPenalty">9000</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7050" levels="1" name="Master's Blessing - Might">
+		<!-- A GM is always by your side. Increases P. Atk. temporarily. Effect 3. -->
+		<icon>icon.skill1068</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>40</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">1.15</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7051" levels="1" name="Master's Blessing - Shield">
+		<!-- A GM is always by your side. Increases P. Def. temporarily. Effect 3. -->
+		<icon>icon.skill1040</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>44</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.15</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7052" levels="1" name="Master's Blessing - Magic Barrier">
+		<!-- A GM is always by your side. Increases M. Def. temporarily. Effect 3. -->
+		<icon>icon.skill1036</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>52</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mDef">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7053" levels="1" name="Master's Blessing - Vampiric Rage">
+		<!-- A GM is always by your side. Temporarily increases the amount of HP absorbed from damage done to a target. Excludes damage from skills or ranged attacks. Effect 4. -->
+		<icon>icon.skill1268</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>72</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<add stat="absorbDam">9</add> <!-- absorb 9% HP from damage inflicted on enemies -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7054" levels="1" name="Master's Blessing - Empower">
+		<!-- A GM is always by your side. Increases M. Atk. temporarily. Effect 3. -->
+		<icon>icon.skill1059</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>52</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtk">1.75</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7055" levels="1" name="Master's Blessing - Wind Walk">
+		<!-- A GM is always by your side. Increases Speed temporarily. Effect 2. -->
+		<icon>icon.skill1204</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>30</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">33</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7056" levels="1" name="Master's Blessing - Berserker Spirit">
+		<!-- A GM is always by your side. Temporarily reduces P. Def., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect 2. -->
+		<icon>icon.skill1062</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BERSERKER</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>52</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtk">1.16</mul>
+				<mul stat="pAtk">1.08</mul>
+				<mul stat="mDef">0.84</mul>
+				<mul stat="pDef">0.92</mul>
+				<mul stat="mAtkSpd">1.08</mul>
+				<mul stat="pAtkSpd">1.08</mul>
+				<add stat="runSpd">8</add>
+				<sub stat="rEvas">4</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7057" levels="1" name="Master's Blessing - Greater Might">
+		<!-- A GM is always by your side. Temporarily increases the target's P. Atk. Effect 3. -->
+		<icon>icon.skill1388</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PA_PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>74</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">1.1</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7058" levels="1" name="Master's Blessing - Greater Shield">
+		<!-- A GM is always by your side. Temporarily increases the target's P. Def. Effect 3. -->
+		<icon>icon.skill1389</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PA_PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>74</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.15</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7059" levels="1" name="Master's Blessing - Wild Magic">
+		<!-- A GM is always by your side. Temporarily increases the critical attack rate for magic attacks. Effect 2. -->
+		<icon>icon.skill1303</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>70</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<add stat="mCritRate">2</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7060" levels="1" name="Master's Blessing - Clarity">
+		<!-- A GM is always by your side. Temporarily decreases the target's MP consumption for skills. Effect 3. -->
+		<icon>icon.skill1397</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CHEAP_MAGIC</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>74</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate">0.9</mul>
+				<mul stat="physicalMpConsumeRate">0.8</mul>
+				<mul stat="danceMpConsumeRate">0.8</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7061" levels="1" name="Master's Blessing - Prophecy of Water">
+		<!-- A GM is always by your side. The spirit of an ancient wizard temporarily possesses the target. -->
+		<icon>icon.skill1355</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>78</magicLevel>
+		<mpConsume>1</mpConsume>
+		<mpInitialConsume>1</mpInitialConsume>
+		<effects>
+			<effect name="Buff">
+				<add stat="mCritRate">2</add>
+				<mul stat="regMp">1.2</mul>
+				<mul stat="pAtk">1.1</mul>
+				<mul stat="pDef">1.2</mul>
+				<mul stat="pAtkSpd">1.2</mul>
+				<mul stat="mAtk">1.2</mul>
+				<mul stat="mDef">1.2</mul>
+				<mul stat="mAtkSpd">1.2</mul>
+				<sub stat="debuffVuln">10</sub>
+				<mul stat="runSpd">0.8</mul>
+				<mul stat="magicalMpConsumeRate">0.95</mul>
+				<mul stat="physicalMpConsumeRate">0.95</mul>
+				<mul stat="danceMpConsumeRate">0.95</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7062" levels="1" name="Master's Blessing - Prophecy of Fire">
+		<!-- A GM is always by your side. The spirit of an ancient warrior temporarily possesses the target. -->
+		<icon>icon.skill1356</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>78</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxMp">1.2</mul>
+				<mul stat="regHp">1.2</mul>
+				<add stat="mCritRate">2</add>
+				<mul stat="critDmg">1.2</mul>
+				<mul stat="pAtk">1.1</mul>
+				<mul stat="pDef">1.2</mul>
+				<mul stat="pAtkSpd">1.2</mul>
+				<mul stat="mAtk">1.2</mul>
+				<mul stat="mDef">1.2</mul>
+				<mul stat="mAtkSpd">1.2</mul>
+				<add stat="accCombat">4</add>
+				<sub stat="debuffVuln">10</sub>
+				<mul stat="runSpd">0.8</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7063" levels="1" name="Master's Blessing - Prophecy of Wind">
+		<!-- A GM is always by your side. The spirit of an ancient assassin temporarily possesses the target. -->
+		<icon>icon.skill1357</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>78</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.2</mul>
+				<mul stat="critRate">1.2</mul>
+				<mul stat="mCritPower">1.2</mul>
+				<mul stat="pAtk">1.1</mul>
+				<mul stat="pDef">1.2</mul>
+				<mul stat="pAtkSpd">1.2</mul>
+				<mul stat="mAtk">1.2</mul>
+				<mul stat="mDef">1.2</mul>
+				<mul stat="mAtkSpd">1.2</mul>
+				<sub stat="debuffVuln">10</sub>
+				<mul stat="runSpd">0.8</mul>
+				<add stat="absorbDam">5</add> <!-- absorb 5% HP from damage inflicted on enemies -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7064" levels="1" name="Master's Blessing - Chant of Victory">
+		<!-- A GM is always by your side. The spirit of an ancient hero temporarily possesses the target. -->
+		<icon>icon.skill1363</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>78</magicLevel>
+		<mpConsume>2</mpConsume>
+		<effects>
+			<effect name="MaxHp">
+				<power>20</power>
+				<type>PER</type>
+				<heal>true</heal>
+				<add stat="mCritRate">2</add>
+				<mul stat="critDmg">1.2</mul>
+				<mul stat="pAtk">1.1</mul>
+				<mul stat="pDef">1.2</mul>
+				<mul stat="pAtkSpd">1.2</mul>
+				<mul stat="mAtk">1.2</mul>
+				<mul stat="mDef">1.2</mul>
+				<mul stat="mAtkSpd">1.2</mul>
+				<sub stat="debuffVuln">10</sub>
+				<add stat="accCombat">4</add>
+				<mul stat="runSpd">0.8</mul>
+			</effect>
+		</effects>
+	</skill>
+</list>

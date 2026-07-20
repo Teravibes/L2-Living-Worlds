@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+/L2J_Mobius_CT_0_Interlude github/.env
+/L2J_Mobius_CT_0_Interlude github/.venv
+
+# Build output
+/build/
+/L2J_Mobius_CT_0_Interlude github/bin/
+
+# Runtime-generated brain memory (player-global, regenerated at runtime)
+/L2J_Mobius_CT_0_Interlude github/memory/fpc_memory.json
+
+# One-click pack build artifacts
+/L2J_Mobius_CT_0_Interlude github/L2J-Offline-OneClick.zip

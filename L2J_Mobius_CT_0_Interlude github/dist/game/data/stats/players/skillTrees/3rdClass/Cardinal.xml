@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Cardinal -->
+	<skillTree type="classSkillTree" classId="97" parentClassId="16">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true" />
+		<skill skillName="Health" skillId="329" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true" />
+		<skill skillName="Balance Life" skillId="1335" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true">
+			<item id="7645" count="1" /> <!-- Spellbook - Balance Life -->
+		</skill>
+
+		<skill skillName="Skill Mastery" skillId="331" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true" />
+		<skill skillName="Divine Protection" skillId="1353" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true">
+			<item id="7663" count="1" /> <!-- Spellbook - Divine Protection -->
+		</skill>
+		<skill skillName="Mass Block Shield" skillId="1360" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true">
+			<item id="7670" count="1" /> <!-- Spellbook - Mass Block Shield -->
+		</skill>
+		<skill skillName="Spell Force" skillId="427" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true" />
+
+		<skill skillName="Arcane Wisdom" skillId="336" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true" />
+		<skill skillName="Mass Block Wind Walk" skillId="1361" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true">
+			<item id="7671" count="1" /> <!-- Spellbook - Mass Block Wind Walk -->
+		</skill>
+		<skill skillName="Divine Lore" skillId="436" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true" />
+		<skill skillName="Cleanse" skillId="1409" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true">
+			<item id="8881" count="1" /> <!-- Spellbook: Cleanse -->
+		</skill>
+
+		<skill skillName="Salvation" skillId="1410" skillLevel="1" getLevel="79" levelUpSp="80000000" learnedByNpc="true">
+			<item id="8882" count="1" /> <!-- Spellbook: Salvation -->
+		</skill>
+
+		<skill skillName="Purification Field" skillId="1425" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8905" count="1" /> <!-- Ancient Spellbook: Purification Field -->
+		</skill>
+		<skill skillName="Miracle" skillId="1426" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8906" count="1" /> <!-- Ancient Spellbook: Miracle -->
+		</skill>
+	</skillTree>
+</list>

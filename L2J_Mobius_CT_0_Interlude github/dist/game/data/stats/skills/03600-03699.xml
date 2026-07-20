@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="3600" levels="9" name="Special Ability: Anger">
+		<!-- Level 1: Decreases the character's Maximum HP but increases P. Atk. Allows the character to attack multiple opponents. -->
+		<!-- Level 2: Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents. -->
+		<!-- Level 3: Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents. -->
+		<!-- Level 4: Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents. -->
+		<!-- Level 5: Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents. -->
+		<!-- Level 6: Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents. -->
+		<!-- Level 7: Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP. -->
+		<!-- Level 8: Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP. -->
+		<!-- Level 9: Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 75</table>
+		<table name="#pAtk">20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45</table>
+		<table name="#pvpBonus">1 1 1 1 1 1 1.05 1.05 1.05</table>
+		<icon>icon.skill1062</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pAtk">#pAtk</add>
+				<mul stat="maxHp">0.85</mul>
+				<add stat="atkCountMax">4</add>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3601" levels="9" name="Special Ability: Haste">
+		<!-- Level 1: Increases Atk.Spd., and enables the character to attack multiple opponents. -->
+		<!-- Level 2: Increases Atk.Spd., and enables the character to attack multiple opponents. -->
+		<!-- Level 3: Increases Atk.Spd., and enables the character to attack multiple opponents. -->
+		<!-- Level 4: Increases Atk.Spd., and enables the character to attack multiple opponents. -->
+		<!-- Level 5: Increases Atk.Spd., and enables the character to attack multiple opponents. -->
+		<!-- Level 6: Increases Atk.Spd., and enables the character to attack multiple opponents. -->
+		<!-- Level 7: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP. -->
+		<!-- Level 8: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP. -->
+		<!-- Level 9: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 75</table>
+		<table name="#pAtkSpd">1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07</table>
+		<table name="#pvpBonus">1 1 1 1 1 1 1.05 1.05 1.05</table>
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<add stat="atkCountMax">4</add>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3602" levels="9" name="Special Ability: Guidance">
+		<!-- Level 1: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP. -->
+		<!-- Level 2: Increases Accuracy, and enables the character to attack multiple opponents. -->
+		<!-- Level 3: Increases Accuracy, and enables the character to attack multiple opponents. -->
+		<!-- Level 4: Increases Accuracy, and enables the character to attack multiple opponents. -->
+		<!-- Level 5: Increases Accuracy, and enables the character to attack multiple opponents. -->
+		<!-- Level 6: Increases Accuracy, and enables the character to attack multiple opponents. -->
+		<!-- Level 7: Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP. -->
+		<!-- Level 8: Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP. -->
+		<!-- Level 9: Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP. -->
+		<table name="#accCombat">6.88 6.07 5.72 5.37 5.02 4.68 4.34 3.95 5.27</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 75</table>
+		<table name="#pvpBonus">1 1 1 1 1 1 1.05 1.05 1.05</table>
+		<icon>icon.skill1240</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">#accCombat</add>
+				<add stat="atkCountMax">4</add>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3603" levels="10" name="Demon Sword Zariche">
+		<!-- The Demon Bremmnon used this mystical sword to slaughter his enemies. The more blood the sword sheds, the more powerful it becomes. -->
+		<table name="#maxCp">12 13 14 15 17 19 21 23 25 27</table>
+		<table name="#pAtk">3 4.5 6 7.5 9 10.5 11 11.5 12 12.5</table>
+		<table name="#mAtk">3 3.25 3.5 3.75 4 4.25 4.5 5 5.5 5.75</table>
+		<table name="#pDef">2.5 2.6 2.7 2.8 2.9 3 3.25 3.5 3.75 4</table>
+		<table name="#mDef">3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5</table>
+		<table name="#runSpd">4 6 8 10 12 14 16 18 19 20</table>
+		<table name="#accCombat">15 20 25 30 35 40 45 50 55 60</table>
+		<icon>icon.weapon_unique_zariche_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<minPledgeClass>2</minPledgeClass>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxCp">#maxCp</mul>
+				<mul stat="pAtk">#pAtk</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="mDef">#mDef</mul>
+				<add stat="runSpd">#runSpd</add>
+				<add stat="accCombat">#accCombat</add>
+				<add stat="absorbDam">100</add>
+				<mul stat="regCp">20</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3604" levels="1" name="Frintezza's Necklace">
+		<!-- Increases resistance to dark/poison/bleed/paralysis/shock/sleep attacks. Reduces skill re-use time. Reflects some of the damage received back to the enemy (does not include damage from skills or ranged attacks). -->
+		<icon>icon.accessory_necklace_of_frintessa_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="darkRes">15</add>
+				<mul stat="mReuse">0.95</mul>
+				<mul stat="pReuse">0.95</mul>
+				<add stat="reflectDam">4</add>
+			</effect>
+			<effect name="AttackTrait">
+				<POISON>25</POISON>
+				<BLEED>25</BLEED>
+				<PARALYZE>15</PARALYZE>
+				<SHOCK>15</SHOCK>
+				<SLEEP>15</SLEEP>
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>25</POISON>
+				<BLEED>25</BLEED>
+				<PARALYZE>15</PARALYZE>
+				<SHOCK>15</SHOCK>
+				<SLEEP>15</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
+		<!-- Increases P. Def. and maximum HP. -->
+		<icon>icon.armor_t1001_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.05</mul>
+				<mul stat="pAtk">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3606" levels="1" name="Clan Oath Light Armor Set">
+		<!-- Increases P. Def. and Evasion. -->
+		<icon>icon.armor_t1002_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.05</mul>
+				<mul stat="critDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3607" levels="1" name="Clan Oath Robe Set">
+		<!-- Increases P. Def. and Casting Spd. -->
+		<icon>icon.armor_t1003_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="regMp">1.05</mul>
+				<mul stat="mAtkSpd">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3608" levels="1" name="Apella Heavy Armor Set">
+		<!-- Increases maximum CP/CP regeneration and decreases experience value penalty if killed by another player. Casts a hold on an attacking player at a certain rate. -->
+		<icon>icon.armor_t1004_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxCp">232</add>
+				<mul stat="regCp">1.4</mul>
+				<mul stat="reduceExpLostByPvp">0.9</mul>
+			</effect>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<skillId>1201</skillId>
+				<skillLevel>33</skillLevel> <!-- Dryad Root -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3609" levels="1" name="Apella Light Armor Set">
+		<!-- Increases maximum CP/CP regeneration and decreases experience value penalty if killed by another player. Casts a Speed reduction curse on an attacking player. -->
+		<icon>icon.armor_t1005_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxCp">195</add>
+				<mul stat="regCp">1.4</mul>
+				<mul stat="reduceExpLostByPvp">0.9</mul>
+			</effect>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<skillId>1160</skillId>
+				<skillLevel>15</skillLevel> <!-- Slow -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3610" levels="1" name="Apella Robe Set">
+		<!-- Increases maximum CP/CP regeneration and decreases experience value penalty if killed by a player. Casts an Atk. Spd. reduction curse on attacking player. -->
+		<icon>icon.armor_t1006_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxCp">177</add>
+				<mul stat="regCp">1.4</mul>
+				<mul stat="reduceExpLostByPvp">0.9</mul>
+			</effect>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<skillId>1206</skillId>
+				<skillLevel>19</skillLevel> <!-- Wind Shackle -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
+		<!-- Increases P. Def. and MP regeneration by enchanting set items. -->
+		<icon>icon.skill0231</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pDef">
+					<value>25</value>
+					<using kind="HEAVY" />
+				</add>
+				<add stat="regMp">
+					<value>1.518</value>
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
+		<!-- Increases M. Def. and Evasion by enchanting set items. -->
+		<icon>icon.skill0233</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">
+					<value>2</value>
+					<using kind="LIGHT" />
+				</add>
+				<add stat="mDef">
+					<value>14</value>
+					<using kind="LIGHT" />
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3613" levels="1" name="Enchant Robe (Grade D)">
+		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
+		<icon>icon.skill0234</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pDef">
+					<value>16</value>
+					<using kind="MAGIC" />
+				</add>
+				<mul stat="weightLimit">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
+		<!-- Increases P. Def. and MP regeneration by enchanting set items. -->
+		<icon>icon.skill0231</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pDef">
+					<value>38</value>
+					<using kind="HEAVY" />
+				</add>
+				<add stat="regMp">
+					<value>2.019</value>
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
+		<!-- Increases M. Def. and Evasion by enchanting set items. -->
+		<icon>icon.skill0233</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">
+					<value>2</value>
+					<using kind="LIGHT" />
+				</add>
+				<add stat="mDef">
+					<value>20</value>
+					<using kind="LIGHT" />
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3616" levels="1" name="Enchant Robe (Grade C)">
+		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
+		<icon>icon.skill0234</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pDef">
+					<value>24</value>
+					<using kind="MAGIC" />
+				</add>
+				<mul stat="weightLimit">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
+		<!-- Increases P. Def. and MP regeneration by enchanting set items. -->
+		<icon>icon.skill0231</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pDef">
+					<value>44</value>
+					<using kind="HEAVY" />
+				</add>
+				<add stat="regMp">
+					<value>2.25</value>
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
+		<!-- Increases M. Def. and Evasion by enchanting set items. -->
+		<icon>icon.skill0233</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">
+					<value>2</value>
+					<using kind="LIGHT" />
+				</add>
+				<add stat="mDef">
+					<value>24</value>
+					<using kind="LIGHT" />
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3619" levels="1" name="Enchant Robe (Grade B)">
+		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
+		<icon>icon.skill0234</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pDef">
+					<value>28</value>
+					<using kind="MAGIC" />
+				</add>
+				<mul stat="weightLimit">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
+		<!-- Increases P. Def. and MP regeneration by enchanting set items. -->
+		<icon>icon.skill0231</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pDef">
+					<value>50</value>
+					<using kind="HEAVY" />
+				</add>
+				<add stat="regMp">
+					<value>2.43</value>
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
+		<!-- Increases M. Def. and Evasion by enchanting set items. -->
+		<icon>icon.skill0233</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">
+					<value>2</value>
+					<using kind="LIGHT" />
+				</add>
+				<add stat="mDef">
+					<value>27</value>
+					<using kind="LIGHT" />
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3622" levels="1" name="Enchant Robe (Grade A)">
+		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
+		<icon>icon.skill0234</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pDef">
+					<value>32</value>
+					<using kind="MAGIC" />
+				</add>
+				<mul stat="weightLimit">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
+		<!-- Increases P. Def. and MP regeneration by enchanting set items. -->
+		<icon>icon.skill0231</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pDef">
+					<value>59</value>
+					<using kind="HEAVY" />
+				</add>
+				<add stat="regMp">
+					<value>2.823</value>
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
+		<!-- Increases M. Def. and Evasion by enchanting set items. -->
+		<icon>icon.skill0233</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">
+					<value>2</value>
+					<using kind="LIGHT" />
+				</add>
+				<add stat="mDef">
+					<value>33</value>
+					<using kind="LIGHT" />
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3625" levels="1" name="Enchant Robe (Grade S)">
+		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
+		<icon>icon.skill0234</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pDef">
+					<value>38</value>
+					<using kind="MAGIC" />
+				</add>
+				<mul stat="weightLimit">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3626" levels="1" name="Kabokula">
+		<!-- Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
+		<icon>icon.weapon_seize_mace_i00</icon>
+		<operateType>CA5</operateType>
+		<targetType>ONE</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<castRange>300</castRange>
+		<channelingSkillId>5106</channelingSkillId>
+		<channelingTickInterval>2</channelingTickInterval>
+		<effectPoint>-100</effectPoint>
+		<effectRange>500</effectRange>
+		<hitTime>25000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8764</itemConsumeId> <!-- Trap Stone -->
+		<magicLevel>85</magicLevel>
+		<reuseDelay>1000</reuseDelay>
+		<conditions msgId="109">
+			<target npcId="22215,22216,22217" />
+		</conditions>
+	</skill>
+	<skill id="3627" levels="1" name="Tapirawa">
+		<!-- Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
+		<icon>icon.weapon_seize_mace_i00</icon>
+		<operateType>CA5</operateType>
+		<targetType>ONE</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<castRange>300</castRange>
+		<channelingSkillId>5107</channelingSkillId>
+		<channelingTickInterval>2</channelingTickInterval>
+		<effectPoint>-100</effectPoint>
+		<effectRange>500</effectRange>
+		<hitTime>25000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8764</itemConsumeId> <!-- Trap Stone -->
+		<magicLevel>85</magicLevel>
+		<reuseDelay>1000</reuseDelay>
+		<conditions msgId="109">
+			<target npcId="22215,22216,22217" />
+		</conditions>
+	</skill>
+	<skill id="3628" levels="1" name="Shabonoba">
+		<!-- Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
+		<icon>icon.weapon_seize_mace_i00</icon>
+		<operateType>CA5</operateType>
+		<targetType>ONE</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<castRange>300</castRange>
+		<channelingSkillId>5108</channelingSkillId>
+		<channelingTickInterval>2</channelingTickInterval>
+		<effectPoint>-100</effectPoint>
+		<effectRange>500</effectRange>
+		<hitTime>25000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8764</itemConsumeId> <!-- Trap Stone -->
+		<magicLevel>85</magicLevel>
+		<reuseDelay>1000</reuseDelay>
+		<conditions msgId="109">
+			<target npcId="22215,22216,22217" />
+		</conditions>
+	</skill>
+	<skill id="3629" levels="10" name="Blood Sword Akamanah">
+		<!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood. -->
+		<table name="#maxCp">12 13 14 15 17 19 21 23 25 27</table>
+		<table name="#pAtk">3 4.5 6 7.5 9 10.5 11 11.5 12 12.5</table>
+		<table name="#mAtk">3 3.25 3.5 3.75 4 4.25 4.5 5 5.5 5.75</table>
+		<table name="#pDef">2.5 2.6 2.7 2.8 2.9 3 3.25 3.5 3.75 4</table>
+		<table name="#mDef">3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5</table>
+		<table name="#runSpd">4 6 8 10 12 14 16 18 19 20</table>
+		<table name="#accCombat">15 20 25 30 35 40 45 50 55 60</table>
+		<icon>icon.weapon_aka_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<minPledgeClass>2</minPledgeClass>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxCp">#maxCp</mul>
+				<mul stat="pAtk">#pAtk</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="mDef">#mDef</mul>
+				<add stat="runSpd">#runSpd</add>
+				<add stat="accCombat">#accCombat</add>
+				<add stat="absorbDam">100</add>
+				<mul stat="regCp">20</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3630" levels="1" name="Void Burst">
+		<!-- Discharges cursed energy to attack nearby enemies. -->
+		<icon>icon.skill3630</icon>
+		<operateType>A1</operateType>
+		<targetType>AURA</targetType>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
+		<effectPoint>-1</effectPoint>
+		<hitTime>2000</hitTime>
+		<magicLevel>78</magicLevel>
+		<mpConsume>140</mpConsume>
+		<power>11500</power>
+		<reuseDelay>60000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage" />
+		</effects>
+	</skill>
+	<skill id="3631" levels="1" name="Void Flow">
+		<!-- Emits cursed energy to strike a distant enemy. -->
+		<icon>icon.skill3631</icon>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<affectLimit>6-12</affectLimit>
+		<castRange>600</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1900</hitTime>
+		<magicLevel>78</magicLevel>
+		<mpConsume>140</mpConsume>
+		<power>15000</power>
+		<reuseDelay>60000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage" />
+		</effects>
+	</skill>
+	<skill id="3632" levels="1" name="Clan Gate">
+		<!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
+		<icon>icon.accessory_crown_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<abnormalVisualEffect>MAGIC_SQUARE</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>10000</hitTime>
+		<magicLevel>60</magicLevel>
+		<reuseDelay>3600000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</conditions>
+		<effects>
+			<effect name="ClanGate" />
+			<effect name="ImmobileBuff" />
+		</effects>
+	</skill>
+	<skill id="3633" levels="2" name="Residential Shock Immunity">
+		<!-- Level 1: Active: Momentarily increases resistance to shock attacks. -->
+		<!-- Level 2: Active: Momentarily gives complete resistance to shock attacks. -->
+		<table name="#trait_shock">80 100</table>
+		<icon>icon.accessory_pledge_cap1_i05</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<magicLevel>60</magicLevel>
+		<reuseDelay>600000</reuseDelay>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>#trait_shock</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+</list>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event name="Team Vs Team" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/event.xsd">
+	<!-- 
+		The pattern attribute specifies the schedule time of the event.
+		- Minutes (0-59)
+		- Hours (0-23)
+		- Day of the month (1-31)
+		- Month (1-12)
+		- Day of the week (0-7)
+		You can use * as a wildcard value.
+		You can use multiple schedule elements.
+	-->
+	<!-- Run at 20:00 (8:00 PM) every day. -->
+	<!-- <schedule pattern="0 20 * * *" /> -->
+</event>

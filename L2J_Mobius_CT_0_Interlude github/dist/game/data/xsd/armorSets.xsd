@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence maxOccurs="1" minOccurs="1">
+				<xs:element name="set" maxOccurs="unbounded" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence maxOccurs="1" minOccurs="1">
+							<xs:element name="chest" maxOccurs="1" minOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="legs" maxOccurs="2" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="head" maxOccurs="2" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="gloves" maxOccurs="2" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="feet" maxOccurs="2" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="shield" maxOccurs="2" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="skill" maxOccurs="unbounded" minOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="level" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="shield_skill" maxOccurs="2" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="level" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="enchant6skill" maxOccurs="1" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="level" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="int" maxOccurs="1" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="val" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="str" maxOccurs="1" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="val" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="con" maxOccurs="1" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="val" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="men" maxOccurs="1" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="val" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="dex" maxOccurs="1" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="val" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="wit" maxOccurs="1" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="val" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" use="required" type="xs:positiveInteger" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

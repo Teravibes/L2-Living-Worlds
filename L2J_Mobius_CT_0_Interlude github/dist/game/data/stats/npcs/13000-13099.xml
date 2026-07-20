@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="13001" level="70" type="Folk" name="Heart of Warding">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<acquire exp="490" sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="17" />
+			<height normal="120" />
+		</collision>
+	</npc>
+	<npc id="13002" level="20" type="ControlTower" name="Life Control Tower">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<acquire sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<attack physical="44.32863" magical="30.2707" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="86.87049" magical="63.56806" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="13003" level="20" type="ControlTower" name="Life Control Tower">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<acquire sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<attack physical="44.32863" magical="30.2707" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="86.87049" magical="63.56806" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="13004" level="20" type="FlameTower" name="Flame Control Tower">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<acquire sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<attack physical="44.32863" magical="30.2707" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="86.87049" magical="63.56806" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="13005" level="20" type="FlameTower" name="Flame Control Tower">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<acquire sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<attack physical="44.32863" magical="30.2707" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="86.87049" magical="63.56806" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="13006" level="70" type="Folk" name="Christmas Tree">
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<acquire sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status attackable="false" targetable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="0.01" />
+			<height normal="0.01" />
+		</collision>
+	</npc>
+	<npc id="13007" level="70" type="Folk" name="Special Christmas Tree">
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<acquire sp="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status attackable="false" targetable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="0.01" />
+			<height normal="0.01" />
+		</collision>
+	</npc>
+	<npc id="13014" level="70" type="Folk" name="">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3046.70947" hpRegen="8.5" mp="1846.8" mpRegen="3" />
+			<attack physical="983.0479" magical="671.29428" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="1" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300">
+			<clanList>
+				<clan>FIRE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="13015" level="70" type="Folk">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="683.28" magical="468" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="296.1" magical="206.28" />
+			<speed>
+				<walk ground="10" />
+				<run ground="1" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000">
+			<clanList>
+				<clan>ANDREAS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="18.5" />
+		</collision>
+	</npc>
+	<npc id="13016" level="1" type="Folk" name="King Squash">
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" />
+		<collision>
+			<radius normal="23" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="13017" level="1" type="Folk" name="Emperor Squash">
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" />
+		<collision>
+			<radius normal="34" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="13018" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="5" />
+			<param name="despawn_time" value="120" />
+			<skill name="union_skill" id="5123" level="1" /> <!-- Maximum Defense -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13019" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="5124" level="1" /> <!-- Anti-Music -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13020" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="5" />
+			<param name="despawn_time" value="120" />
+			<skill name="union_skill" id="5125" level="1" /> <!-- Maximum Resist Status -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13021" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="5" />
+			<param name="despawn_time" value="120" />
+			<skill name="union_skill" id="5126" level="1" /> <!-- Maximum Recovery -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13022" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="5" />
+			<param name="despawn_time" value="120" />
+			<skill name="union_skill" id="5127" level="1" /> <!-- Recover Force -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13023" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="5" />
+			<param name="despawn_time" value="120" />
+			<skill name="union_skill" id="5128" level="1" /> <!-- Maximize long-range weapon use -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13024" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="5" />
+			<param name="despawn_time" value="120" />
+			<skill name="union_skill" id="5129" level="1" /> <!-- Smokescreen -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13025" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="5130" level="1" /> <!-- Volcano -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13026" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="5131" level="1" /> <!-- Tsunami -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13027" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="5132" level="1" /> <!-- Cyclone -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13028" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="5145" level="1" /> <!-- Day of Doom -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13029" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="5133" level="1" /> <!-- Gehenna -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13030" level="70" type="EffectPoint">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="5134" level="1" /> <!-- Anti-Summoning Field -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="919.8" magical="546" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329" magical="267.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="20" />
+			</speed>
+		</stats>
+		<status attackable="false" hasSummoner="true" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="13031" level="70" type="Folk" name="Huge Pig">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="680" hpRegen="0" mp="2000" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="60000" magical="200000" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="1000">
+			<clanList>
+				<clan>PIG</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="100">
+					<item id="9142" min="1" max="2" chance="100" /> <!-- Apiga -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="15" />
+			<height normal="18.3" />
+		</collision>
+	</npc>
+	<npc id="13032" level="70" type="Folk" name="Huge Pig">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="680" hpRegen="0" mp="2000" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="60000" magical="200000" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="1000">
+			<clanList>
+				<clan>PIG</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="18.3" />
+		</collision>
+	</npc>
+	<npc id="13033" level="70" type="Folk" name="Huge Pig">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="680" hpRegen="0" mp="2000" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="60000" magical="200000" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="1000">
+			<clanList>
+				<clan>PIG</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="18.3" />
+		</collision>
+	</npc>
+	<npc id="13034" level="70" type="Monster" name="Super Huge Pig">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3400" hpRegen="0" mp="6000" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="60000" magical="200000" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>PIG</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="100">
+					<item id="9142" min="4" max="6" chance="100" /> <!-- Apiga -->
+				</group>
+				<group chance="50">
+					<item id="9144" min="1" max="1" chance="100" /> <!-- Pirate's Booty -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="29" />
+			<height normal="38.7" />
+		</collision>
+	</npc>
+	<npc id="13035" level="70" type="Folk" name="Golden Pig">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="680" hpRegen="0" mp="2000" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="60000" magical="200000" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="1000">
+			<clanList>
+				<clan>PIG</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="100">
+					<item id="9142" min="1" max="3" chance="100" /> <!-- Apiga -->
+				</group>
+				<group chance="100">
+					<item id="9144" min="1" max="1" chance="100" /> <!-- Pirate's Booty -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="15" />
+			<height normal="18.3" />
+		</collision>
+	</npc>
+	<npc id="13036" level="70" type="Chest" name="Alchemist's Chest">
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="683.28" magical="468" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.1" magical="206.28" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="100">
+					<item id="9170" min="1" max="4" chance="100" /> <!-- Magic Reagents -->
+				</group>
+				<group chance="100">
+					<item id="9168" min="1" max="2" chance="100" /> <!-- Philosopher's Stone Ore -->
+				</group>
+				<group chance="10">
+					<item id="9169" min="1" max="1" chance="100" /> <!-- Philosopher's Stone Conversion Formula -->
+				</group>
+				<group chance="10">
+					<item id="9162" min="1" max="1" chance="16.5" /> <!-- Red Philosopher's Stone Transmutation Circle -->
+					<item id="9163" min="1" max="1" chance="16.5" /> <!-- Blue Philosopher's Stone Transmutation Circle -->
+					<item id="9164" min="1" max="1" chance="16.5" /> <!-- Orange Philosopher's Stone Transmutation Circle -->
+					<item id="9165" min="1" max="1" chance="16.5" /> <!-- Black Philosopher's Stone Transmutation Circle -->
+					<item id="9166" min="1" max="1" chance="16.5" /> <!-- White Philosopher's Stone Transmutation Circle -->
+					<item id="9167" min="1" max="1" chance="17.5" /> <!-- Green Philosopher's Stone Transmutation Circle -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+</list>

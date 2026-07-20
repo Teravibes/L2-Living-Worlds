@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Spectral Dancer -->
+	<skillTree type="classSkillTree" classId="107" parentClassId="34">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="12500000" learnedByNpc="true" />
+		<skill skillName="Health" skillId="329" skillLevel="1" getLevel="76" levelUpSp="12500000" learnedByNpc="true" />
+
+		<skill skillName="Dance of Shadows" skillId="366" skillLevel="1" getLevel="77" levelUpSp="14670000" learnedByNpc="true" />
+		<skill skillName="Dance of Medusa" skillId="367" skillLevel="1" getLevel="77" levelUpSp="14670000" learnedByNpc="true" />
+		<skill skillName="Battle Force" skillId="426" skillLevel="1" getLevel="77" levelUpSp="14670000" learnedByNpc="true" />
+
+		<skill skillName="Siren's Dance" skillId="365" skillLevel="1" getLevel="78" levelUpSp="32000000" learnedByNpc="true" />
+		<skill skillName="Inner Rhythm" skillId="428" skillLevel="1" getLevel="78" levelUpSp="32000000" learnedByNpc="true" />
+
+		<skill skillName="Symbol of Noise" skillId="455" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8893" count="1" /> <!-- Ancient Tactical Manual: Symbol of Noise -->
+		</skill>
+	</skillTree>
+</list>

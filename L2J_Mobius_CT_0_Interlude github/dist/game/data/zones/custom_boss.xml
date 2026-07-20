@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Boss Zones -->
+	<zone name="Anakim and Lilith Boss" id="12003" type="BossZone" shape="NPoly" minZ="-5504" maxZ="-5104">
+		<stat name="default_enabled" val="false" />
+		<stat name="InvadeTime" val="1800000" />
+		<node X="183938" Y="-13697" />
+		<node X="186190" Y="-13692" />
+		<node X="186176" Y="-8513" />
+		<node X="183920" Y="-8513" />
+	</zone>
+	<!-- Forge of the Gods/Hall of Flames -->
+	<zone name="Fire 1" id="12004" type="BossZone" shape="NPoly" minZ="-3326" maxZ="-1326">
+		<stat name="default_enabled" val="false" />
+		<stat name="InvadeTime" val="1800000" />
+		<node X="183373" Y="-117179" />
+		<node X="184098" Y="-116718" />
+		<node X="184137" Y="-115290" />
+		<node X="183970" Y="-115002" />
+		<node X="183673" Y="-114982" />
+		<node X="182400" Y="-115593" />
+		<node X="182338" Y="-116737" />
+	</zone>
+	<zone name="Fire 2" id="12005" type="BossZone" shape="NPoly" minZ="-2208" maxZ="792">
+		<stat name="default_enabled" val="false" />
+		<stat name="InvadeTime" val="1800000" />
+		<node X="183432" Y="-117590" />
+		<node X="196325" Y="-119107" />
+		<node X="196377" Y="-103657" />
+		<node X="187161" Y="-103538" />
+	</zone>
+	<zone name="Valakas Boss" id="12010" type="BossZone" shape="NPoly" minZ="-2572" maxZ="5428">
+		<stat name="InvadeTime" val="1800000" />
+		<node X="196866" Y="-130845" />
+		<node X="229289" Y="-130860" />
+		<node X="229176" Y="-98508" />
+		<node X="196880" Y="-98498" />
+	</zone>
+	<zone name="Frintezza Boss" id="12011" type="BossZone" shape="Cuboid" minZ="-5140" maxZ="-4000"> <!-- Not Verified -->
+		<stat name="InvadeTime" val="1800000" />
+		<node X="172176" Y="-74106" />
+		<node X="176284" Y="-90033" />
+	</zone>
+	<zone name="Queen Ant Boss" id="12012" type="BossZone" shape="NPoly" minZ="-5947" maxZ="-5547"> <!-- Not Verified -->
+		<stat name="default_enabled" val="false" />
+		<node X="-21490" Y="178613" />
+		<node X="-22258" Y="178961" />
+		<node X="-22890" Y="182205" />
+		<node X="-22770" Y="183129" />
+		<node X="-21594" Y="183945" />
+		<node X="-20570" Y="183381" />
+		<node X="-20310" Y="182673" />
+		<node X="-20762" Y="179129" />
+	</zone>
+	<zone name="Orfen Boss" id="12013" type="BossZone" shape="NPoly" minZ="-5796" maxZ="-3796"> <!-- Not Verified -->
+		<stat name="default_enabled" val="false" />
+		<node X="43976" Y="24664" />
+		<node X="43284" Y="18952" />
+		<node X="42476" Y="18164" />
+		<node X="42480" Y="16448" />
+		<node X="43084" Y="15944" />
+		<node X="45140" Y="15816" />
+		<node X="48800" Y="15112" />
+		<node X="56556" Y="12040" />
+		<node X="59068" Y="14288" />
+		<node X="61064" Y="18492" />
+		<node X="60380" Y="23672" />
+		<node X="58724" Y="27412" />
+		<node X="55696" Y="28496" />
+		<node X="43976" Y="24664" />
+	</zone>
+	<zone id="12014" name="Altar of Sacrifice" type="BossZone" shape="Cuboid" minZ="-10730" maxZ="-10290"> <!-- Not Verified -->
+		<stat name="default_enabled" val="false" />
+		<stat name="InvadeTime" val="1800000" />
+		<node X="-18176" Y="-54972" />
+		<node X="-14614" Y="-51620" />
+	</zone>
+	<zone id="12015" name="Ice Fairy Sirra Boss" type="BossZone" shape="NPoly" minZ="-4000" maxZ="-500"> <!-- Not Verified -->
+		<stat name="oustX" val="115844" />
+		<stat name="oustY" val="-125602" />
+		<stat name="oustZ" val="-3352" />
+		<node X="101744" Y="-130016" />
+		<node X="111376" Y="-130096" />
+		<node X="114416" Y="-126128" />
+		<node X="115246" Y="-125857" />
+		<node X="115209" Y="-125669" />
+		<node X="113920" Y="-125669" />
+		<node X="102400" Y="-121920" />
+		<node X="99456" Y="-126208" />
+	</zone>
+	<zone id="12016" name="Lair of Zaken" type="BossZone" shape="Cuboid" minZ="-3775" maxZ="-2690">
+		<stat name="default_enabled" val="false" />
+		<stat name="InvadeTime" val="1800000" />
+		<node X="53182" Y="216945" />
+		<node X="57311" Y="221151" />
+	</zone>
+</list>

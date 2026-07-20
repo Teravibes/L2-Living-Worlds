@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<!-- Duelist -->
+	<npc id="81001" level="85" type="Monster" name="Gladus" title="Duelist">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="39" dex="55" wit="39" con="82" men="38">
+			<vitals hp="22228" hpRegen="10.8" mp="3681" mpRegen="3.0" />
+			<attack physical="4425" magical="1284" random="30" critical="94" accuracy="206" attackSpeed="517" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3613" magical="2307" />
+			<speed>
+				<walk ground="82" />
+				<run ground="132" />
+			</speed>
+		</stats>
+		<status talkable="false" attackable="true" />
+		<fakePlayer classId="88" hair="0" hairColor="0" face="0" equipRHand="5706" equipHead="2419" equipGloves="5774" equipChest="2383" equipFeet="5786" />
+		<ai type="FIGHTER" clanHelpRange="1000" aggroRange="1000" isAggressive="true"> <!-- FIGHTER, ARCHER, BALANCED, MAGE, HEALER -->
+			<clanList>
+				<clan>FAKE_PLAYER</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+		<parameters>
+			<skill name="Skill01_ID" id="261" level="22" />
+			<skill name="Skill02_ID" id="1" level="37" />
+			<skill name="Skill03_ID" id="6" level="37" />
+			<skill name="Skill04_ID" id="8" level="7" />
+		</parameters>
+		<skillList>
+			<skill id="261" level="22" /> <!-- Triple Sonic Slash -->
+			<skill id="1" level="37" /> <!-- Triple Slash -->
+			<skill id="6" level="37" /> <!-- Sonic Blaster -->
+			<skill id="8" level="7" /> <!-- Sonic Focus -->
+		</skillList>
+	</npc>
+</list>

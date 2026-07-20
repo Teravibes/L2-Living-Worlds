@@ -1,0 +1,1973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="30300" level="70" type="Trainer" name="Pushkin" title="Blacksmith">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="93" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="89" /> <!-- rhand: Big Hammer -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="16.5" />
+		</collision>
+	</npc>
+	<npc id="30301" level="70" type="Merchant" name="Hally" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="85" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30305" level="70" type="Folk" name="Vellior" title="Tetrarch">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="180" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="23.8" />
+		</collision>
+	</npc>
+	<npc id="30307" level="70" type="Folk" name="Karrod" title="Blacksmith">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30311" level="70" type="Folk" name="Sir Collin Windawood">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="158" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30312" level="70" type="Folk" name="Rockswell" title="Lighthouse Keeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="30313" level="70" type="Merchant" name="Asha" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="85" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30314" level="70" type="Merchant" name="Nestle" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="110" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="30315" level="70" type="Merchant" name="Poesia" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="85" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30316" level="70" type="Warehouse" name="Raut" title="Warehouse Keeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="150" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="30317" level="70" type="Trainer" name="Kluto" title="Blacksmith">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="93" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="89" /> <!-- rhand: Big Hammer -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="16.5" />
+		</collision>
+	</npc>
+	<npc id="30320" level="70" type="Teleporter" name="Richlin" title="Gatekeeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="IsGateKeeperForCoreTime" value="1" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30321" level="70" type="Merchant" name="Sydnia" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="85" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30322" level="70" type="Warehouse" name="Ballin" title="Warehouse Keeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="150" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="30325" level="70" type="Trainer" name="Audiberti" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="130" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30326" level="70" type="Trainer" name="Leona" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="90" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="30327" level="70" type="Trainer" name="Sorius" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="187" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="30328" level="70" type="Trainer" name="Reisa" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="123" />
+		</parameters>
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="30329" level="70" type="Trainer" name="Virgil" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30330" level="70" type="Trainer" name="Sidra" title="Magister">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="skill_sharing_item" value="15309" /> <!-- Holy Pomander - Shillien Saint -->
+			<param name="token_num" value="4" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30331" level="80" type="Guard" name="Thoma" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- rhand: Long Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30332" level="80" type="Guard" name="Bathis" title="Captain">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+			<param name="enter_type" value="1" />
+			<param name="inzone_id1" value="57" />
+			<param name="inzone_id2" value="58" />
+			<param name="inzone_id3" value="59" />
+			<param name="inzone_id4" value="73" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution lhand: Round Shield -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" shield="148" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30333" level="80" type="Guard" name="Praga" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" lhand="20" /> <!-- rhand: Long Sword lhand: Buckler -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" shield="148" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30334" level="80" type="Guard" name="Babenco" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- rhand: Long Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30335" level="80" type="Guard" name="Brynn" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- rhand: Long Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30336" level="80" type="Guard" name="Curtis" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- rhand: Long Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30337" level="80" type="Guard" name="Moretti" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" lhand="20" /> <!-- rhand: Long Sword lhand: Buckler -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" shield="148" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30338" level="80" type="Guard" name="Melville" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- rhand: Long Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30342" level="70" type="Folk" name="Varsak">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="30344" level="70" type="Trainer" name="Rohmer" title="Magister">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="90" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30345" level="70" type="Trainer" name="Ramoniell" title="Magister">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="100" />
+		</parameters>
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21.2" />
+		</collision>
+	</npc>
+	<npc id="30346" level="80" type="Guard" name="Kayleen" title="Sentry">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="277" /> <!-- rhand: Dark Elven Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="30347" level="80" type="Guard" name="Marion" title="Sentry">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="30348" level="80" type="Guard" name="Nelsya" title="Sentry">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="30349" level="80" type="Guard" name="Jenna" title="Sentry">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="277" /> <!-- rhand: Dark Elven Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="30350" level="70" type="Warehouse" name="Carlon" title="Warehouse Keeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="150" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="30351" level="70" type="Folk" name="Astaron">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30352" level="70" type="Folk" name="Karina">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="107" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="30353" level="70" type="Folk" name="Jughead">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30354" level="70" type="Folk" name="Jewel">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="107" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="30355" level="80" type="Guard" name="Roselyn" title="Sentry">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="277" /> <!-- rhand: Dark Elven Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="30356" level="80" type="Guard" name="Altima" title="Sentry">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="277" /> <!-- rhand: Dark Elven Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="30357" level="80" type="Guard" name="Kristin" title="Sentry">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="30358" level="70" type="VillageMasterDElf" name="Thifiell" title="Tetrarch">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="180" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="6" />
+			<height normal="23.8" />
+		</collision>
+	</npc>
+	<npc id="30359" level="70" type="Folk" name="Kaitar" title="Tetrarch">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="180" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="23.8" />
+		</collision>
+	</npc>
+	<npc id="30360" level="70" type="Trainer" name="Harant" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30361" level="70" type="Folk" name="Rizraell">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="133" />
+		</parameters>
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="30362" level="70" type="Folk" name="Andellia">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="133" />
+		</parameters>
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="30363" level="70" type="Folk" name="Aios" title="Blacksmith">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="130" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="30368" level="70" type="Folk" name="Lilith">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="133" />
+		</parameters>
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="30369" level="70" type="Trainer" name="Baenedes" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="187" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="30370" level="70" type="Folk" name="Nerupa">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="64" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="15" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="30371" level="70" type="Folk" name="Thalia">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="133" />
+		</parameters>
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="30373" level="70" type="VillageMasterFighter" name="Ramos" title="Grand Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="63" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="30374" level="70" type="Trainer" name="Rhodiell" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="123" />
+		</parameters>
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="30375" level="70" type="Trainer" name="Adonius" title="Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="187" />
+			<param name="skill_sharing_item" value="15308" /> <!-- Holy Pomander - Eva's Saint -->
+			<param name="token_num" value="1" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="22.2" />
+		</collision>
+	</npc>
+	<npc id="30376" level="70" type="Trainer" name="Nell" title="Magister">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="100" />
+		</parameters>
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21.2" />
+		</collision>
+	</npc>
+	<npc id="30377" level="70" type="Trainer" name="Talbot" title="Magister">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="156" />
+			<param name="skill_sharing_item" value="15309" /> <!-- Holy Pomander - Shillien Saint -->
+			<param name="token_num" value="4" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="30378" level="70" type="Trainer" name="Estella" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="103" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30379" level="80" type="Guard" name="Bezique" title="Captain">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30380" level="80" type="Guard" name="Plink" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- rhand: Long Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30381" level="80" type="Guard" name="Alvah" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- rhand: Long Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30382" level="80" type="Guard" name="Leikan" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" lhand="20" /> <!-- rhand: Long Sword lhand: Buckler -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" shield="148" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30383" level="80" type="Guard" name="Scott" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- rhand: Long Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30384" level="80" type="Guard" name="Linus" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" lhand="20" /> <!-- rhand: Long Sword lhand: Buckler -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" shield="148" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30385" level="80" type="Guard" name="Weisz" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- rhand: Long Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30386" level="80" type="Guard" name="Luis" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" lhand="20" /> <!-- rhand: Long Sword lhand: Buckler -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" shield="148" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="30387" level="70" type="Merchant" name="Clancy" title="Wharf Manager">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="30391" level="70" type="Folk" name="Parina">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="20.5" />
+		</collision>
+	</npc>
+</list>

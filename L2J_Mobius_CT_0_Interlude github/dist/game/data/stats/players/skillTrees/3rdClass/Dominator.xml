@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Dominator -->
+	<skillTree type="classSkillTree" classId="115" parentClassId="51">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true" />
+		<skill skillName="Health" skillId="329" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true" />
+		<skill skillName="Seal of Disease" skillId="1367" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true">
+			<item id="7835" count="1" /> <!-- Amulet: Seal of Disease -->
+		</skill>
+
+		<skill skillName="Skill Mastery" skillId="331" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true" />
+		<skill skillName="The Eye of Pa'agrio" skillId="1364" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true">
+			<item id="7674" count="1" /> <!-- Amulet - Pa'agrio's Eye -->
+		</skill>
+		<skill skillName="The Soul of Pa'agrio" skillId="1365" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true">
+			<item id="7675" count="1" /> <!-- Amulet - Pa'agrio's Soul -->
+		</skill>
+		<skill skillName="Spell Force" skillId="427" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true" />
+
+		<skill skillName="Arcane Power" skillId="337" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true" />
+		<skill skillName="Seal of Despair" skillId="1366" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true">
+			<item id="7676" count="1" /> <!-- Amulet - Seal of Despair -->
+		</skill>
+		<skill skillName="Divine Lore" skillId="436" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true" />
+		<skill skillName="Pa'agrio's Emblem" skillId="1415" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true">
+			<item id="8887" count="1" /> <!-- Amulet: Pa'agrio's Emblem -->
+		</skill>
+
+		<skill skillName="Victories of Pa'agrio" skillId="1414" skillLevel="1" getLevel="79" levelUpSp="40000000" learnedByNpc="true">
+			<item id="8886" count="1" /> <!-- Amulet: Victories of Pa'agrio -->
+		</skill>
+		<skill skillName="Pa'agrio's Fist" skillId="1416" skillLevel="1" getLevel="79" levelUpSp="40000000" learnedByNpc="true">
+			<item id="8888" count="1" /> <!-- Amulet: Pa'agrio's Fist -->
+		</skill>
+
+		<skill skillName="Flames of Invincibility" skillId="1427" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8907" count="1" /> <!-- Ancient Spellbook: Flames of Invincibility -->
+		</skill>
+	</skillTree>
+</list>

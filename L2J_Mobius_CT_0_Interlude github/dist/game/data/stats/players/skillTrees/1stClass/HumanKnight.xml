@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Human Knight -->
+	<skillTree type="classSkillTree" classId="4" parentClassId="0">
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="1" getLevel="20" levelUpSp="4700" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="1" getLevel="20" levelUpSp="1500" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="2" getLevel="20" levelUpSp="1500" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="3" getLevel="20" levelUpSp="1500" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="1" getLevel="20" levelUpSp="2300" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="2" getLevel="20" levelUpSp="2300" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="1" getLevel="20" levelUpSp="2300" learnedByNpc="true">
+			<item id="1097" count="1" /> <!-- Spellbook: Drain Health -->
+		</skill>
+		<skill skillName="Drain Health" skillId="70" skillLevel="2" getLevel="20" levelUpSp="2300" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="1" getLevel="20" levelUpSp="1500" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="2" getLevel="20" levelUpSp="1500" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="3" getLevel="20" levelUpSp="1500" learnedByNpc="true" />
+		<skill skillName="Shield Mastery" skillId="153" skillLevel="1" getLevel="20" levelUpSp="4700" learnedByNpc="true" />
+		<skill skillName="Majesty" skillId="82" skillLevel="1" getLevel="20" levelUpSp="4700" learnedByNpc="true" />
+		<skill skillName="Ultimate Defense" skillId="110" skillLevel="1" getLevel="20" levelUpSp="4700" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="2" getLevel="24" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="4" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="5" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="6" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="3" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="4" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="5" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="3" getLevel="24" levelUpSp="5000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="4" getLevel="24" levelUpSp="5000" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="4" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="5" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="6" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="1" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="2" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="3" getLevel="24" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Deflect Arrow" skillId="112" skillLevel="1" getLevel="24" levelUpSp="10000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="3" getLevel="28" levelUpSp="6000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="4" getLevel="28" levelUpSp="6000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="7" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="8" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="9" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="6" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="7" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="8" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="5" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="6" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="7" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="7" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="8" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="9" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="4" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="5" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="6" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Divine Heal" skillId="45" skillLevel="1" getLevel="28" levelUpSp="4000" learnedByNpc="true">
+			<item id="1378" count="1" /> <!-- Spellbook: Divine Heal -->
+		</skill>
+		<skill skillName="Divine Heal" skillId="45" skillLevel="2" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Divine Heal" skillId="45" skillLevel="3" getLevel="28" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Shield Mastery" skillId="153" skillLevel="2" getLevel="28" levelUpSp="12000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="5" getLevel="32" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="6" getLevel="32" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="10" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="11" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="12" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="9" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="10" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="11" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="8" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="9" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="10" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="10" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="11" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="12" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="7" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="8" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="9" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Divine Heal" skillId="45" skillLevel="4" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Divine Heal" skillId="45" skillLevel="5" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Divine Heal" skillId="45" skillLevel="6" getLevel="32" levelUpSp="8300" learnedByNpc="true" />
+		<skill skillName="Deflect Arrow" skillId="112" skillLevel="2" getLevel="32" levelUpSp="25000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="7" getLevel="36" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="8" getLevel="36" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="13" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="14" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="15" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="12" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="13" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="14" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="11" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="12" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="13" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="13" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="14" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Shield Stun" skillId="92" skillLevel="15" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="10" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="11" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="12" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Divine Heal" skillId="45" skillLevel="7" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Divine Heal" skillId="45" skillLevel="8" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Divine Heal" skillId="45" skillLevel="9" getLevel="36" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Focus Mind" skillId="191" skillLevel="1" getLevel="36" levelUpSp="39000" learnedByNpc="true" />
+	</skillTree>
+</list>

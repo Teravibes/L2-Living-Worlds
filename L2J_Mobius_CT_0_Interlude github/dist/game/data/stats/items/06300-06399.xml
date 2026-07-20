@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6300" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+		<!-- Giran/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="5000000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="6301" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+		<!-- Oren/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="2500000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="6302" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+		<!-- Oren/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="5000000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="6303" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+		<!-- Aden/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="2500000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="6304" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+		<!-- Aden/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="5000000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="6305" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+		<!-- Innadril/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="2500000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="6306" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+		<!-- Innadril/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="5000000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="6307" type="Weapon" name="Sword of Limit - Guidance">
+		<!-- <Soul Crystal Enhancement>. Increases the accuracy rate to 5. -->
+		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1400" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3007" level="3" /> <!-- Special Ability: Guidance -->
+		</skills>
+	</item>
+	<item id="6308" type="Weapon" name="Sword of Limit - Critical Drain">
+		<!-- <Soul Crystal Enhancement>. Absorbs HP +9 from target during a critical attack. -->
+		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1400" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3022" level="3" type_chance="35" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
+		</skills>
+	</item>
+	<item id="6309" type="Weapon" name="Sword of Limit - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. -->
+		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1400" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" /> <!-- Special Ability: Health -->
+		</skills>
+	</item>
+	<item id="6310" type="Weapon" name="Sword of Whispering Death - Empower">
+		<!-- <Soul Crystal Enhancement>. Increases M. Atk. by 24. -->
+		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="920" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3076" level="3" /> <!-- Special Ability: Empower -->
+		</skills>
+	</item>
+	<item id="6311" type="Weapon" name="Sword of Whispering Death - M. Atk.">
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and increases M. Atk. by 99 during magic use. -->
+		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="920" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3077" level="3" /> <!-- Special Ability: Magic Power -->
+		</skills>
+	</item>
+	<item id="6312" type="Weapon" name="Sword of Whispering Death - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. Increases the chances of causing Silence by 10% when using Dark Magic. Effect 1. -->
+		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="920" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3078" level="3" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
+		</skills>
+	</item>
+	<item id="6313" type="Weapon" name="Homunkulus's Sword - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
+		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="950" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
+		</skills>
+	</item>
+	<item id="6314" type="Weapon" name="Homunkulus's Sword - Conversion">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 60% and decreases maximum HP by 40%. -->
+		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="950" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3048" level="1" /> <!-- Special Ability: Conversion -->
+		</skills>
+	</item>
+	<item id="6315" type="Weapon" name="Homunkulus's Sword - Magic Paralyze">
+		<!-- <Soul Crystal Enhancement>. Increases the chances of causing paralysis by 5% when using Dark Magic upon a target. Effect 1. -->
+		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="950" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3079" level="3" type_chance="5" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Paralyze -->
+		</skills>
+	</item>
+	<item id="6316" type="EtcItem" name="Food for Wyvern">
+		<!-- When the hunger gauge of a wyvern drops to 55% or below, its food will be consumed automatically. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="300" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="PetFood" />
+		<set name="for_npc" val="true" />
+		<conditions msgId="600">
+			<player categoryType="STRIDER,WYVERN_GROUP" />
+		</conditions>
+		<skills>
+			<skill id="2180" level="1" /> <!-- Feed: Castle Strider -->
+		</skills>
+	</item>
+	<item id="6317" type="EtcItem" name="Mixing Manual">
+		<!-- A manual received from Magic Trader Wesley, with instructions for using the material mixing urn located in the basement of the Ivory Tower. -->
+		<set name="icon" val="icon.etc_spellbook_red_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="1" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="Book" />
+	</item>
+	<item id="6318" type="EtcItem" name="Blood Fire">
+		<!-- Dark flames from Purgatory. The only way to melt true gold. -->
+		<set name="icon" val="icon.etc_potion_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="50" />
+		<set name="price" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6319" type="EtcItem" name="Mimir's Elixir">
+		<!-- A legendary elixir said to bestow ultimate wisdom. Take it to Magister Ladd. -->
+		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6320" type="EtcItem" name="Pure Silver">
+		<!-- An essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6321" type="EtcItem" name="True Gold">
+		<!-- An essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
+		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6322" type="EtcItem" name="Sage's Stone">
+		<!-- An essential ingredient of Mimir's Elixir. Take it to Magister Joan. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6323" type="Armor" name="Sealed Phoenix Necklace">
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def+4 and MP+26 are given. -->
+		<set name="icon" val="icon.accessary_phoenixs_necklace_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="139" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="1740000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">76</stat>
+		</stats>
+	</item>
+	<item id="6324" type="Armor" name="Sealed Phoenix Earring">
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def.+3 and MP+20 are given. -->
+		<set name="icon" val="icon.accessary_phoenixs_earing_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="104" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="1310000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">57</stat>
+		</stats>
+	</item>
+	<item id="6325" type="Armor" name="Sealed Phoenix Ring">
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def.+2 and MP+13 are given. -->
+		<set name="icon" val="icon.accessary_phoenixs_ring_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="69" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="871000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">38</stat>
+		</stats>
+	</item>
+	<item id="6326" type="Armor" name="Sealed Majestic Necklace">
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def.+5 and MP+33 are given. -->
+		<set name="icon" val="icon.accessary_inferno_necklace_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="208" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="2600000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">80</stat>
+		</stats>
+	</item>
+	<item id="6327" type="Armor" name="Sealed Majestic Earring">
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def.+3 and MP+25 are given. -->
+		<set name="icon" val="icon.accessary_inferno_earing_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="156" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="1950000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">60</stat>
+		</stats>
+	</item>
+	<item id="6328" type="Armor" name="Sealed Majestic Ring">
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def.+2 and MP+17 are given. -->
+		<set name="icon" val="icon.accessary_inferno_ring_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="104" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="1300000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">40</stat>
+		</stats>
+	</item>
+	<item id="6329" type="EtcItem" name="Recipe: Sealed Phoenix Necklace(70%)">
+		<!-- For Dwarves only. The recipe for the Sealed Phoenix Necklace. Requires Create Item - Skill Level 7. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="34800" />
+		<set name="recipe_id" val="617" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6330" type="EtcItem" name="Recipe: Sealed Phoenix Necklace(100%)">
+		<!-- For Dwarves only. The recipe for the Sealed Phoenix Necklace. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="34800" />
+		<set name="recipe_id" val="618" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6331" type="EtcItem" name="Recipe: Sealed Phoenix Earring(70%)">
+		<!-- For Dwarves only. The recipe for the sealed Phoenix Earrings. Requires Create Item - Skill Level 7. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="26200" />
+		<set name="recipe_id" val="613" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6332" type="EtcItem" name="Recipe: Sealed Phoenix Earring(100%)">
+		<!-- For Dwarves only. The recipe for the sealed Phoenix Earrings. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="26200" />
+		<set name="recipe_id" val="614" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6333" type="EtcItem" name="Recipe: Sealed Phoenix Ring(70%)">
+		<!-- For Dwarves only. The recipe for the Sealed Phoenix Ring. Requires Create Item - Skill Level 7. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17420" />
+		<set name="recipe_id" val="621" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6334" type="EtcItem" name="Recipe: Sealed Phoenix Ring(100%)">
+		<!-- For Dwarves only. The recipe for the Sealed Phoenix Ring. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17420" />
+		<set name="recipe_id" val="622" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6335" type="EtcItem" name="Recipe: Sealed Majestic Necklace(70%)">
+		<!-- For Dwarves only. The recipe for the Sealed Majestic Necklace. Requires Create Item - Skill Level 8. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="52000" />
+		<set name="recipe_id" val="619" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6336" type="EtcItem" name="Recipe: Sealed Majestic Necklace(100%)">
+		<!-- For Dwarves only. The recipe for the Sealed Majestic Necklace. Requires Create Item - Skill Level 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="52000" />
+		<set name="recipe_id" val="620" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6337" type="EtcItem" name="Recipe: Sealed Majestic Earring(70%)">
+		<!-- For Dwarves only. The recipe for the Sealed Majestic Earrings. Requires Create Item - Skill Level 8. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="39000" />
+		<set name="recipe_id" val="615" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6338" type="EtcItem" name="Recipe: Sealed Majestic Earring(100%)">
+		<!-- For Dwarves only. The recipe for the Sealed Majestic Earrings. Requires Create Item - Skill Level 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="39000" />
+		<set name="recipe_id" val="616" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6339" type="EtcItem" name="Recipe: Sealed Majestic Ring(70%)">
+		<!-- For Dwarves only. The recipe for the Sealed Majestic Ring. Requires Create Item - Skill Level 8. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="26000" />
+		<set name="recipe_id" val="623" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6340" type="EtcItem" name="Recipe: Sealed Majestic Ring(100%)">
+		<!-- For Dwarves only. The recipe for the Sealed Majestic Ring. Requires Create Item - Skill Level 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="26000" />
+		<set name="recipe_id" val="624" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6341" type="EtcItem" name="Sealed Phoenix Earring Gemstone">
+		<!-- An essential ingredient needed by a Dwarf to make a Sealed Phoenix Earring. It can be sold at any store. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="7231" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6342" type="EtcItem" name="Sealed Majestic Earring Gemstone">
+		<!-- An essential ingredient needed by a Dwarf to make a Sealed Majestic Earring. It can be sold at any store. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="8829" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6343" type="EtcItem" name="Sealed Phoenix Necklace Beads">
+		<!-- An essential ingredient needed by a Dwarf to make a Sealed Phoenix Necklace. It can be sold at any store. -->
+		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="9354" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6344" type="EtcItem" name="Sealed Majestic Necklace Beads">
+		<!-- An essential ingredient needed by a Dwarf to make a Sealed Majestic Necklace. It can be sold at any store. -->
+		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="13643" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6345" type="EtcItem" name="Sealed Phoenix Ring Gemstone">
+		<!-- An essential ingredient needed by a Dwarf to make a Sealed Phoenix Ring. It can be sold at any store. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5228" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6346" type="EtcItem" name="Sealed Majestic Ring Gemstone">
+		<!-- An essential ingredient needed by a Dwarf to make a Sealed Majestic Ring. It can be sold at any store. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="6143" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6347" type="Weapon" name="Berserker Blade - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical Attack by 73. -->
+		<set name="icon" val="icon.weapon_berserker_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2452" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="6130000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">190</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3010" level="4" /> <!-- Special Ability: Focus -->
+		</skills>
+	</item>
+	<item id="6348" type="Weapon" name="Berserker Blade - Critical Damage">
+		<!-- <Soul Crystal Enhancement>. Increases P. Atk. by 270 during a critical attack. -->
+		<set name="icon" val="icon.weapon_berserker_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2452" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="6130000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">190</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3542" level="4" /> <!-- Special Ability: Critical Damage -->
+		</skills>
+	</item>
+	<item id="6349" type="Weapon" name="Berserker Blade - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<set name="icon" val="icon.weapon_berserker_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2452" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="6130000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">190</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3037" level="4" /> <!-- Special Ability: Haste -->
+		</skills>
+	</item>
+	<item id="6350" type="EtcItem" name="Amulet: Pa'agrio's Honor">
+		<!-- Amulet required for the Pa'agrio's Honor spell. Used by Overlords. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="8700" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6351" type="EtcItem" name="Amulet: Ritual of Life">
+		<!-- Amulet required for the Ritual of Life spell. Used by Overlords. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="8200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6352" type="EtcItem" name="Spellbook: Prayer">
+		<!-- Spellbook needed to learn Prayer. Used by Bishops. -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="8700" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6353" type="EtcItem" name="Blue Gemstone">
+		<!-- A gemstone obtained from gremlins. Take it to a newbie helper. -->
+		<set name="icon" val="icon.etc_crystal_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6354" type="Weapon" name="Falchion - for Beginners">
+		<set name="icon" val="icon.weapon_falchion_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6355" type="Weapon" name="Mage Staff - for Beginners">
+		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1050" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">30</stat>
+			<stat type="mAtk">31</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6356" type="Weapon" name="Dark Elven Dagger - Rsk. Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 13% when HP falls below 60%. -->
+		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1050" />
+		<set name="price" val="2290000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">94</stat>
+			<stat type="mAtk">61</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3033" level="1" /> <!-- Special Ability: Rsk. Haste -->
+		</skills>
+	</item>
+	<item id="6357" type="Weapon" name="Stiletto - Rsk. Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 12% when HP falls below 60%. -->
+		<set name="icon" val="icon.weapon_stiletto_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1030" />
+		<set name="price" val="2870000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">107</stat>
+			<stat type="mAtk">68</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3033" level="2" /> <!-- Special Ability: Rsk. Haste -->
+		</skills>
+	</item>
+	<item id="6358" type="Weapon" name="Crystal Dagger - Critical Damage">
+		<!-- <Soul Crystal Enhancement>. Increases P. Atk. to 140 during a critical attack. -->
+		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2452" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="1000" />
+		<set name="price" val="6130000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">136</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3043" level="4" /> <!-- Special Ability: Critical Damage -->
+		</skills>
+	</item>
+	<item id="6359" type="Weapon" name="Demon's Dagger - Critical Damage">
+		<!-- <Soul Crystal Enhancement>. Increases P. Atk. to 160 during a critical attack. -->
+		<set name="icon" val="icon.weapon_demons_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1746" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="970" />
+		<set name="price" val="13100000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">170</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3043" level="6" /> <!-- Special Ability: Critical Damage -->
+		</skills>
+	</item>
+	<item id="6360" type="EtcItem" name="Blue Seal Stone">
+		<!-- A fragment of an ancient seal. Collect them all. Valued at 3 Ancient Adena. -->
+		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="3" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6361" type="EtcItem" name="Green Seal Stone">
+		<!-- A fragment of an ancient seal. Collect them all to break the seal. Valued at 5 Ancient Adena. -->
+		<set name="icon" val="icon.etc_wind_rune_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6362" type="EtcItem" name="Red Seal Stone">
+		<!-- A fragment of an ancient seal. Collect them all to break the seal. Valued at 10 Ancient Adena. -->
+		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="10" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6363" type="EtcItem" name="Stolen Infernium Ore">
+		<!-- Infernium ore once owned by the Iron Gate Guild. Take it to Warehouse Keeper Romp of Aden Castle Town to play bingo. -->
+		<set name="icon" val="icon.etc_inf_ore_high_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6364" type="Weapon" name="Forgotten Blade">
+		<!-- Bestows one of the following functions: Haste, Health or Focus. -->
+		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6365" type="Weapon" name="Basalt Battlehammer">
+		<!-- Bestows one of the following functions: HP Drain, Health or HP Regeneration. -->
+		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1570" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6366" type="Weapon" name="Imperial Staff">
+		<!-- Bestows one of the following functions: Empower, MP Regeneration or Magic Hold. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="910" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">274</stat>
+			<stat type="mAtk">193</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6367" type="Weapon" name="Angel Slayer">
+		<!-- Bestows one of the following functions: Crt. Damage, HP Drain or Haste. -->
+		<set name="icon" val="icon.weapon_angel_slayer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="950" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">246</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6368" type="Weapon" name="Shining Bow">
+		<set name="icon" val="icon.weapon_shining_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1650" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="11" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="reuse_delay" val="820" />
+		<stats>
+			<stat type="pAtk">581</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="6369" type="Weapon" name="Dragon Hunter Axe">
+		<!-- Bestows one of the following functions: HP Regeneration, Health or HP Drain. -->
+		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1820" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6370" type="Weapon" name="Saint Spear">
+		<!-- Bestows one of the following functions: Health, Guidance or Haste. -->
+		<set name="icon" val="icon.weapon_saint_spear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1800" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+	</item>
+	<item id="6371" type="Weapon" name="Demon Splinter">
+		<!-- Bestows one of the following functions: Focus, Health or Crt. Stun. -->
+		<set name="icon" val="icon.weapon_demon_splinter_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1350" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6372" type="Weapon" name="Heaven's Divider">
+		<!-- Bestows one of the following functions: Haste, Health or Focus. -->
+		<set name="icon" val="icon.weapon_heavens_divider_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1380" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6373" type="Armor" name="Imperial Crusader Breastplate">
+		<set name="icon" val="icon.armor_t88_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="715" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="7620" />
+		<set name="price" val="14300000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">205</stat>
+		</stats>
+	</item>
+	<item id="6374" type="Armor" name="Imperial Crusader Gaiters">
+		<set name="icon" val="icon.armor_t88_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="448" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3260" />
+		<set name="price" val="8960000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">128</stat>
+		</stats>
+	</item>
+	<item id="6375" type="Armor" name="Imperial Crusader Gauntlets">
+		<set name="icon" val="icon.armor_t88_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6376" type="Armor" name="Imperial Crusader Boots">
+		<set name="icon" val="icon.armor_t88_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1110" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6377" type="Armor" name="Imperial Crusader Shield">
+		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="188" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1170" />
+		<set name="price" val="3760000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">290</stat>
+		</stats>
+	</item>
+	<item id="6378" type="Armor" name="Imperial Crusader Helmet">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="268" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="550" />
+		<set name="price" val="5370000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">83</stat>
+		</stats>
+	</item>
+	<item id="6379" type="Armor" name="Draconic Leather Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t89_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="870" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4950" />
+		<set name="price" val="17400000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">249</stat>
+		</stats>
+	</item>
+	<item id="6380" type="Armor" name="Draconic Leather Gloves">
+		<set name="icon" val="icon.armor_t89_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6381" type="Armor" name="Draconic Leather Boots">
+		<set name="icon" val="icon.armor_t89_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1110" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6382" type="Armor" name="Draconic Leather Helmet">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="268" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="550" />
+		<set name="price" val="5370000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">83</stat>
+		</stats>
+	</item>
+	<item id="6383" type="Armor" name="Major Arcana Robe">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t90_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="870" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="2300" />
+		<set name="price" val="17400000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">166</stat>
+			<stat type="maxMp">866</stat>
+		</stats>
+	</item>
+	<item id="6384" type="Armor" name="Major Arcana Gloves">
+		<set name="icon" val="icon.armor_t90_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6385" type="Armor" name="Major Arcana Boots">
+		<set name="icon" val="icon.armor_t90_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1110" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6386" type="Armor" name="Major Arcana Circlet">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="268" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="550" />
+		<set name="price" val="5370000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">83</stat>
+		</stats>
+	</item>
+	<item id="6387" type="EtcItem" name="Blessed Scroll of Resurrection for Pets">
+		<!-- A magic scroll that resurrects a dead pet and restores its Exp. completely. -->
+		<set name="icon" val="icon.etc_scroll_of_resurrection_pet_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="5000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2179" level="1" /> <!-- Blessed Scroll of Resurrection: Pet -->
+		</skills>
+	</item>
+	<item id="6388" type="EtcItem" name="Lord of the Manor's Certificate of Approval">
+		<!-- This certificate allows the bearer to join the Lords of Dawn without belonging to a castle-owning clan. -->
+		<set name="icon" val="icon.etc_permit_card_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6389" type="EtcItem" name="Squash Seed">
+		<!-- Fall Harvest Event - Double click it and a young squash will appear. -->
+		<set name="icon" val="icon.etc_gourd_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2003" level="1" /> <!-- Squash Seed -->
+		</skills>
+	</item>
+	<item id="6390" type="EtcItem" name="Large Squash Seed">
+		<!-- Fall Harvest Event - Double click it and a large young squash will appear. -->
+		<set name="icon" val="icon.etc_gourd_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2004" level="1" /> <!-- Large Squash Seed -->
+		</skills>
+	</item>
+	<item id="6391" type="EtcItem" name="Pollen">
+		<!-- Fall Harvest Event - Buzz the Cat will give you a squash seed for it, or it may be used to grow a squash. -->
+		<set name="icon" val="icon.etc_nectar_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2005" level="1" /> <!-- Pollen -->
+		</skills>
+	</item>
+	<item id="6392" type="EtcItem" name="Event - Medal">
+		<!-- L2 Medal Collection Event - If you take it to an Event Manager, he will trade it for a prize item of your choice. -->
+		<set name="icon" val="icon.etc_event_medal_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6393" type="EtcItem" name="Event - Glittering Medal">
+		<!-- L2 Medal Collection Event - It is used to raise the grade of a collector during the event. -->
+		<set name="icon" val="icon.etc_event_glitter_medal_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6394" type="Armor" name="Red Party Mask">
+		<!-- A fashion accessory item that allows you to show a unique appearance. -->
+		<set name="icon" val="icon.etc_party_mask_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="500000" />
+	</item>
+	<item id="6395" type="EtcItem" name="Amulet: Chant of Predator">
+		<!-- Amulet required for the Chant of Predator spell. Used by Warcryers. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6396" type="EtcItem" name="Amulet: Chant of Eagle">
+		<!-- Amulet required for the Chant of Eagle spell. Used by Warcryers. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6397" type="EtcItem" name="Amulet: Chant of Vampire">
+		<!-- Amulet required for the Chant of Vampire spell. Used by Warcryers. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6398" type="EtcItem" name="Spellbook: Body of Avatar">
+		<!-- Spellbook needed to learn Body of Avatar. Used by Bishops. -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6399" type="EtcItem" name="Badge of Rabbit">
+		<!-- The badge that indicates that its bearer's event collector grade is "rabbit." Without this badge, one cannot prove one's grade. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+</list>

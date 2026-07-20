@@ -1,0 +1,1769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6600" type="Weapon" name="Saint Spear - Guidance">
+		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 5. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_saint_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1800" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3602" level="9" /> <!-- Special Ability: Guidance -->
+		</skills>
+	</item>
+	<item id="6601" type="Weapon" name="Saint Spear - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_saint_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1800" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3601" level="9" /> <!-- Special Ability: Haste -->
+		</skills>
+	</item>
+	<item id="6602" type="Weapon" name="Demon Splinter - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases critical chance by 80. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_demon_splinter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1350" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3565" level="1" /> <!-- Special Ability: Focus -->
+		</skills>
+	</item>
+	<item id="6603" type="Weapon" name="Demon Splinter - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_demon_splinter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1350" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
+		</skills>
+	</item>
+	<item id="6604" type="Weapon" name="Demon Splinter - Critical Stun">
+		<!-- <Soul Crystal Enhancement>. Produces a stun effect at a rate of about 25% during a critical attack. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_demon_splinter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1350" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+			<skill id="3571" level="1" type_chance="27" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Crt. Stun -->
+		</skills>
+	</item>
+	<item id="6605" type="Weapon" name="Heavens Divider - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_heavens_divider_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1380" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3564" level="1" /> <!-- Special Ability: Haste -->
+		</skills>
+	</item>
+	<item id="6606" type="Weapon" name="Heavens Divider - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_heavens_divider_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1380" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
+		</skills>
+	</item>
+	<item id="6607" type="Weapon" name="Heavens Divider - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases critical chance by 84. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_heavens_divider_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1380" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3566" level="1" /> <!-- Special Ability: Focus -->
+		</skills>
+	</item>
+	<item id="6608" type="Weapon" name="Arcana Mace - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_arcana_mace_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">225</stat>
+			<stat type="mAtk">175</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
+		</skills>
+	</item>
+	<item id="6609" type="Weapon" name="Arcana Mace - MP Regeneration">
+		<!-- <Soul Crystal Enhancement>. Increases MP regeneration rate. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_arcana_mace_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">225</stat>
+			<stat type="mAtk">175</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3576" level="1" /> <!-- Special Ability: MP Regeneration -->
+		</skills>
+	</item>
+	<item id="6610" type="Weapon" name="Arcana Mace - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_arcana_mace_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">225</stat>
+			<stat type="mAtk">175</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
+		</skills>
+	</item>
+	<item id="6611" type="Weapon" name="Infinity Blade">
+		<!-- During a critical attack, decreases one's P. Def and increases de-buff casting ability, damage shield effect, Max HP, Max MP, Max CP, and shield defense power. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">379</stat>
+			<stat type="mAtk">169</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3578" level="1" /> <!-- Special Ability: Infinity Blade -->
+			<skill id="3579" level="1" type="ON_CRITICAL_SKILL" /> <!-- Decrease P. Def. -->
+		</skills>
+	</item>
+	<item id="6612" type="Weapon" name="Infinity Cleaver">
+		<!-- Increases critical attack success rate/power, MaxHP, MaxCP and damage inflicted during PvP. Inflicts extra damage on critical attack. Reflects debuff attack back on enemy. -->
+		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">461</stat>
+			<stat type="mAtk">169</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3582" level="1" /> <!-- Special Ability: Infinity Cleaver -->
+		</skills>
+	</item>
+	<item id="6613" type="Weapon" name="Infinity Axe">
+		<!-- During a critical attack, it bestows one the ability to cause internal conflict to one's opponent. Damage shield function, Max HP, Max MP, Max CP as well as one's shield defense rate are increased. It also enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">379</stat>
+			<stat type="mAtk">169</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3580" level="1" /> <!-- Special Ability: Infinity Axe -->
+			<skill id="3581" level="1" type="ON_CRITICAL_SKILL" /> <!-- Discord -->
+		</skills>
+	</item>
+	<item id="6614" type="Weapon" name="Infinity Rod">
+		<!-- When good magic is cast upon a target, increases Max MP, Max CP, Casting Spd, and MP regeneration rate. During PvP, HP regeneration is increased to 100% and enhances damage to target. -->
+		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">303</stat>
+			<stat type="mAtk">226</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3597" level="1" /> <!-- Special Ability: Infinity Rod -->
+			<skill id="3598" level="1" type_chance="3" type="ON_MAGIC_SKILL" /> <!-- Full Recover -->
+		</skills>
+	</item>
+	<item id="6615" type="Weapon" name="Infinity Crusher">
+		<!-- Increases Max HP, Max CP, and Atk. Spd. Stuns a target when a critical attack occurs and has possibility of reflecting the skill back on the player. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_the_hammer_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">461</stat>
+			<stat type="mAtk">169</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3583" level="1" /> <!-- Special Ability: Infinity Crusher -->
+			<skill id="3584" level="1" type="ON_CRITICAL_SKILL" /> <!-- Shock -->
+		</skills>
+	</item>
+	<item id="6616" type="Weapon" name="Infinity Scepter">
+		<!-- When casting good magic, HP regeneration increases 100%, raises MAX MP, Max CP, M. Atk., lowers MP Consumption, increases the Magic Critical rate, and reduces the Magic Cancel. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">369</stat>
+			<stat type="mAtk">249</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3595" level="1" /> <!-- Special Ability: Infinity Scepter -->
+			<skill id="3596" level="1" type_chance="3" type="ON_MAGIC_SKILL" /> <!-- Full Recover -->
+		</skills>
+	</item>
+	<item id="6617" type="Weapon" name="Infinity Stinger">
+		<!-- Increases Max MP, Max CP, Atk. Spd., MP regen rate, and the success rate of Mortal and Deadly Blow from the back of the target. Silences the target when a critical attack occurs and has Vampiric Rage effect. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">332</stat>
+			<stat type="mAtk">169</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3589" level="1" /> <!-- Special Ability: Infinity Stinger -->
+			<skill id="3590" level="1" type="ON_CRITICAL_SKILL" /> <!-- Silence -->
+		</skills>
+	</item>
+	<item id="6618" type="Weapon" name="Infinity Fang">
+		<!-- Increases Max HP, Max MP, Max CP and evasion. Stuns a target when a critical attack occurs and has possibility of reflecting the skill back on the player at a certain probability rate. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">461</stat>
+			<stat type="mAtk">169</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3587" level="1" /> <!-- Special Ability: Infinity Fang -->
+			<skill id="3588" level="1" type="ON_CRITICAL_SKILL" /> <!-- Shock -->
+		</skills>
+	</item>
+	<item id="6619" type="Weapon" name="Infinity Bow">
+		<!-- Increases Max MP/Max CP and decreases re-use delay of a bow. Slows target when a critical attack occurs and has Cheap Shot effect. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="11" />
+		<set name="reuse_delay" val="1398" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">707</stat>
+			<stat type="mAtk">169</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="3593" level="1" /> <!-- Special Ability: Infinity Bow -->
+			<skill id="3594" level="1" type="ON_CRITICAL_SKILL" /> <!-- Slow -->
+		</skills>
+	</item>
+	<item id="6620" type="Weapon" name="Infinity Wing">
+		<!-- When a critical attack occurs, increases Max HP, Max MP, Max CP and critical chance. Silences the target and has possibility of reflecting the skill back on the target. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">461</stat>
+			<stat type="mAtk">169</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3585" level="1" /> <!-- Infinity Wing -->
+			<skill id="3586" level="1" type="ON_CRITICAL_SKILL" /> <!-- Physical Skill Restraint -->
+		</skills>
+	</item>
+	<item id="6621" type="Weapon" name="Infinity Spear">
+		<!-- During a critical attack, increases Max HP, Max CP, Atk. Spd. and Accuracy. Casts dispel on a target and has possibility of reflecting the skill back on the target. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">379</stat>
+			<stat type="mAtk">169</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3591" level="1" /> <!-- Special Ability: Infinity Spear -->
+			<skill id="3592" level="1" type="ON_CRITICAL_SKILL" /> <!-- Dispell -->
+		</skills>
+	</item>
+	<item id="6622" type="EtcItem" name="Secret Book of Giants">
+		<!-- Giants' Scroll. Take it to a certain NPC to enchant skills. -->
+		<set name="icon" val="icon.etc_codex_of_giant_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6623" type="EtcItem" name="Dummy - Quest Item 1">
+		<!-- Testing purpose - Quest Item -->
+		<set name="icon" val="icon.etc_socks_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6624" type="EtcItem" name="Dummy - Quest Item 2">
+		<!-- Testing purpose - Quest Item -->
+		<set name="icon" val="icon.etc_socks_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6625" type="EtcItem" name="Dummy - Quest Item 3">
+		<!-- Testing purpose - Quest Item -->
+		<set name="icon" val="icon.etc_socks_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6626" type="EtcItem" name="Dummy - Quest Item 4">
+		<!-- Testing purpose - Quest Item -->
+		<set name="icon" val="icon.etc_socks_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6627" type="EtcItem" name="Dummy - Quest Item 5">
+		<!-- Testing purpose - Quest Item -->
+		<set name="icon" val="icon.etc_socks_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6628" type="EtcItem" name="Dummy - Quest Item 6">
+		<!-- Testing purpose - Quest Item -->
+		<set name="icon" val="icon.etc_socks_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6629" type="EtcItem" name="Dummy - Quest Item 7">
+		<!-- Testing purpose - Quest Item -->
+		<set name="icon" val="icon.etc_socks_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6630" type="EtcItem" name="Dummy - Quest Item 8">
+		<!-- Testing purpose - Quest Item -->
+		<set name="icon" val="icon.etc_socks_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6631" type="EtcItem" name="Dummy - Quest Item 9">
+		<!-- Testing purpose - Quest Item -->
+		<set name="icon" val="icon.etc_socks_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6632" type="EtcItem" name="Dummy - Quest Item 10">
+		<!-- Testing purpose - Quest Item -->
+		<set name="icon" val="icon.etc_socks_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="6633" type="EtcItem" name="Dummy - General Item 1">
+		<!-- Testing purpose - General Item -->
+		<set name="icon" val="icon.etc_socks_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6634" type="EtcItem" name="Dummy - General Item 2">
+		<!-- Testing purpose - General Item -->
+		<set name="icon" val="icon.etc_socks_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6635" type="EtcItem" name="Dummy - General Item 3">
+		<!-- Testing purpose - General Item -->
+		<set name="icon" val="icon.etc_socks_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6636" type="EtcItem" name="Dummy - General Item 4">
+		<!-- Testing purpose - General Item -->
+		<set name="icon" val="icon.etc_socks_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6637" type="EtcItem" name="Dummy - General Item 5">
+		<!-- Testing purpose - General Item -->
+		<set name="icon" val="icon.etc_socks_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6638" type="EtcItem" name="Dummy - General Item 6">
+		<!-- Testing purpose - General Item -->
+		<set name="icon" val="icon.etc_socks_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6639" type="EtcItem" name="Dummy - General Item 7">
+		<!-- Testing purpose - General Item -->
+		<set name="icon" val="icon.etc_socks_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6640" type="EtcItem" name="Dummy - General Item 8">
+		<!-- Testing purpose - General Item -->
+		<set name="icon" val="icon.etc_socks_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6641" type="EtcItem" name="Dummy - General Item 9">
+		<!-- Testing purpose - General Item -->
+		<set name="icon" val="icon.etc_socks_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6642" type="EtcItem" name="Dummy - General Item 10">
+		<!-- Testing purpose - General Item -->
+		<set name="icon" val="icon.etc_socks_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6643" type="EtcItem" name="Golden Spice">
+		<!-- Food for creatures on the Beast Farm. - When this food is fed to monsters that are capable of evolving, they will do so at various rates. Once a monster reaches a certain level of growth, it can then become a pet. This food also causes monsters to only drop adena. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="40" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="BeastSpice" />
+		<skills>
+			<skill id="2188" level="1" /> <!-- Golden Spice -->
+		</skills>
+	</item>
+	<item id="6644" type="EtcItem" name="Crystal Spice">
+		<!-- Food for creatures on the Beast Farm. - When this food is fed to monsters that are capable of evolving, they will do so at various rates. Once a monster reaches a certain level of growth, it can then become a pet. This food also causes monsters to only drop materials. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="40" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="BeastSpice" />
+		<skills>
+			<skill id="2189" level="1" /> <!-- Crystal Spice -->
+		</skills>
+	</item>
+	<item id="6645" type="EtcItem" name="Beast Soulshot">
+		<!-- The light of a spirit is bestowed upon a pet/servitor and temporarily increases the power of attack. The number of soulshots consumed can be viewed in the Pet/Servitor Information window. (Used in the master's inventory.) -->
+		<set name="icon" val="icon.etc_beast_soul_shot_i00" />
+		<set name="default_action" val="SUMMON_SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BeastSoulShot" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2033" level="1" /> <!-- Item - Beast Soul Shot -->
+		</skills>
+	</item>
+	<item id="6646" type="EtcItem" name="Beast Spiritshot">
+		<!-- The light of a spirit is bestowed upon a pet/servitor and temporarily increases the power of M. Atk. The number of spiritshots consumed can be viewed in the Pet/Servitor Information window. (Used in the master's inventory.) -->
+		<set name="icon" val="icon.etc_beast_spirit_shot_i00" />
+		<set name="default_action" val="SUMMON_SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="40" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BeastSpiritShot" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2008" level="1" /> <!-- Item - Beast Spirit Shot -->
+		</skills>
+	</item>
+	<item id="6647" type="EtcItem" name="Blessed Beast Spiritshot">
+		<!-- The light of a higher-level spirit is bestowed upon a pet/servitor and temporarily increases the power of M. Atk. The number of blessed spiritshots consumed can be viewed in the Pet/Servitor Information window. (Used in the master's inventory.) -->
+		<set name="icon" val="icon.etc_blessed_beast_spirit_shot_i00" />
+		<set name="default_action" val="SUMMON_SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BeastSpiritShot" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2009" level="1" /> <!-- Item - Beast Blessed Spirit Shot -->
+		</skills>
+	</item>
+	<item id="6648" type="EtcItem" name="Baby Buffalo Panpipe">
+		<!-- A panpipe that is used to call a baby buffalo. The baby buffalo will take away 10% of the Exp its master acquires. -->
+		<set name="icon" val="icon.etc_buffalo_panpipe_i00" />
+		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="etcitem_type" val="PET_COLLAR" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="20" />
+		<set name="price" val="100000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<skills>
+			<skill id="2046" level="1" /> <!-- Wolves' Necklace -->
+		</skills>
+	</item>
+	<item id="6649" type="EtcItem" name="Baby Cougar Chime">
+		<!-- A chime that is used to call a baby cougar. The baby cougar will take away 10% of the Exp its master acquires. -->
+		<set name="icon" val="icon.etc_cougar_chime_i00" />
+		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="etcitem_type" val="PET_COLLAR" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="20" />
+		<set name="price" val="100000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<skills>
+			<skill id="2046" level="1" /> <!-- Wolves' Necklace -->
+		</skills>
+	</item>
+	<item id="6650" type="EtcItem" name="Baby Kookaburra Ocarina">
+		<!-- A ocarina that is used to call a baby Kookaburra. The baby Kookaburra will take away 10% of the Exp its master acquires. -->
+		<set name="icon" val="icon.etc_kukaburo_ocarina_i00" />
+		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="etcitem_type" val="PET_COLLAR" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="20" />
+		<set name="price" val="100000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<skills>
+			<skill id="2046" level="1" /> <!-- Wolves' Necklace -->
+		</skills>
+	</item>
+	<item id="6651" type="EtcItem" name="Noblesse Gate Pass">
+		<set name="icon" val="icon.etc_nobless_teleport_coupon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6652" type="EtcItem" name="Scroll: Protection of Valakas">
+		<!-- Increases your resistance to an attack made with Valakas' front claws. -->
+		<set name="icon" val="icon.etc_blesscharm_ward_val_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2231" level="1" /> <!-- Amulet: Protection of Valakas -->
+		</skills>
+	</item>
+	<item id="6653" type="EtcItem" name="Scroll: Flames of Valakas">
+		<set name="icon" val="icon.etc_aidcharm_cancel_deathfire_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="5000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6654" type="EtcItem" name="Scroll: Flames of Valakas">
+		<!-- Removes the abnormal state resulting from the fiery breath attack of Valakas. -->
+		<set name="icon" val="icon.etc_aidcharm_cancel_valbreath_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="40000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2233" level="1" /> <!-- Amulet: Flames of Valakas -->
+		</skills>
+	</item>
+	<item id="6655" type="EtcItem" name="Scroll: Slay Valakas">
+		<!-- Increases your P. Atk. when fighting against Valakas. -->
+		<set name="icon" val="icon.etc_blesscharm_slay_val_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="80000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2232" level="1" /> <!-- Amulet: Slay Valakas -->
+		</skills>
+	</item>
+	<item id="6656" type="Armor" name="Earring of Antharas">
+		<!-- Produces the following effects: MP +31, 80% increase in resistance to bleeding, increase in the amount of heal, vampiric rage effect, 60% increase in resistance to stun/silence, decrease in MP consumption, and increase in resistance to earthen attack. If a character wears two identical earrings, the effect of only one earring will be applied. -->
+		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="185" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="3700000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">71</stat>
+			<stat type="maxMp">31</stat>
+		</stats>
+		<skills>
+			<skill id="3558" level="1" /> <!-- Earring of Antharas -->
+		</skills>
+	</item>
+	<item id="6657" type="Armor" name="Necklace of Valakas">
+		<!-- Produces the following effects: MP+42, 80% increase in sleep resistance, HP +445, decrease in reuse delay, increase in P. Atk. and M. Atk. wild magic effect, damage shield effect and increase in resistance to flaming attack. -->
+		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="247" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="4940000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">95</stat>
+			<stat type="maxMp">42</stat>
+		</stats>
+		<skills>
+			<skill id="3557" level="1" /> <!-- Necklace of Valakas -->
+		</skills>
+	</item>
+	<item id="6658" type="Armor" name="Ring of Baium">
+		<!-- Produces the following effects: MP +21, 80% increase in resistance to poisoning, increase in Accuracy, increase in critical damage, 60% increase in resistance to hold, and increase in Atk. Spd. and Casting Spd. If a character wears two identical rings, only the effect of one ring will be applied. -->
+		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="86" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="1730000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+		<skills>
+			<skill id="3561" level="1" /> <!-- Ring of Baium -->
+		</skills>
+	</item>
+	<item id="6659" type="Armor" name="Earring of Zaken">
+		<!-- Produces the following effects: MP +31, +60% resistance to bleeding, increased heal, vampiric rage and +40% resistance to shock/abnormal mental state. If a character wears two identical earrings, only one earring's effects will apply. -->
+		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="129" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="2590000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">71</stat>
+			<stat type="maxMp">31</stat>
+		</stats>
+		<skills>
+			<skill id="3559" level="1" /> <!-- Earring of Zaken -->
+		</skills>
+	</item>
+	<item id="6660" type="Armor" name="Ring of Queen Ant">
+		<!-- Produces the following effects: MP +21, 60% increase in resistance to poisoning, increase in accuracy, increase in critical damage, and 40% increase in resistance to hold. If a character wears two identical rings, only the effect of one ring will be applied. -->
+		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="82" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="616000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+		<skills>
+			<skill id="3562" level="1" /> <!-- Ring of Ant Queen -->
+		</skills>
+	</item>
+	<item id="6661" type="Armor" name="Earring of Orfen">
+		<!-- Produces the following effects: MP+31, 40% increase in resistance to bleeding and increase in the amount of heal. If a character wears two identical earrings, the effect of only one earring will be applied. -->
+		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="104" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="1300000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">71</stat>
+			<stat type="maxMp">31</stat>
+		</stats>
+		<skills>
+			<skill id="3560" level="1" /> <!-- Earring of Orfen -->
+		</skills>
+	</item>
+	<item id="6662" type="Armor" name="Ring of Core">
+		<!-- Produces the following effects: MP+21, 40% increase in resistance to poisoning and increase in accuracy. If a character wears two identical rings, only the effect of one ring will be applied. -->
+		<set name="icon" val="icon.accessory_ring_of_core_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="69" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="870000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+		<skills>
+			<skill id="3563" level="1" /> <!-- Ring of Core -->
+		</skills>
+	</item>
+	<item id="6663" type="EtcItem" name="Scroll of Escape: Orc Village">
+		<set name="icon" val="icon.etc_scroll_of_return_agit_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6664" type="EtcItem" name="Scroll of Escape: Silenos Village">
+		<set name="icon" val="icon.etc_scroll_of_return_agit_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6665" type="EtcItem" name="Deluxe Chest Key - Grade 1">
+		<!-- Opens a level 1~19 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="130" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2229" level="1" /> <!-- Treasure Chest Key - 1 -->
+		</skills>
+	</item>
+	<item id="6666" type="EtcItem" name="Deluxe Chest Key - Grade 2">
+		<!-- Opens a level 20~29 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="200" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2229" level="2" /> <!-- Treasure Chest Key - 2 -->
+		</skills>
+	</item>
+	<item id="6667" type="EtcItem" name="Deluxe Chest Key - Grade 3">
+		<!-- Opens a level 30~39 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="320" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2229" level="3" /> <!-- Treasure Chest Key - 3 -->
+		</skills>
+	</item>
+	<item id="6668" type="EtcItem" name="Deluxe Chest Key - Grade 4">
+		<!-- Opens a level 40~49 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="560" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2229" level="4" /> <!-- Treasure Chest Key - 4 -->
+		</skills>
+	</item>
+	<item id="6669" type="EtcItem" name="Deluxe Chest Key - Grade 5">
+		<!-- Opens a level 50~59 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="860" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2229" level="5" /> <!-- Treasure Chest Key - 5 -->
+		</skills>
+	</item>
+	<item id="6670" type="EtcItem" name="Deluxe Chest Key - Grade 6">
+		<!-- Opens a level 60~69 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="1200" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2229" level="6" /> <!-- Treasure Chest Key - 6 -->
+		</skills>
+	</item>
+	<item id="6671" type="EtcItem" name="Deluxe Chest Key - Grade 7">
+		<!-- Opens a level 70~79 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="1800" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2229" level="7" /> <!-- Treasure Chest Key - 7 -->
+		</skills>
+	</item>
+	<item id="6672" type="EtcItem" name="Deluxe Chest Key - Grade 8">
+		<!-- Opens a level 80~89 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="price" val="2400" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2229" level="8" /> <!-- Treasure Chest Key - 8 -->
+		</skills>
+	</item>
+	<item id="6673" type="EtcItem" name="Festival Adena">
+		<!-- Currency used in the "2005 Lineage II Live" event. -->
+		<set name="icon" val="icon.etc_coin_of_fair_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6674" type="Armor" name="Sealed Imperial Crusader Breastplate">
+		<!-- Sealed Imperial Crusader Breastplate. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t88_u_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="715" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="7620" />
+		<set name="price" val="14300000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">193</stat>
+		</stats>
+	</item>
+	<item id="6675" type="Armor" name="Sealed Imperial Crusader Gaiters">
+		<!-- Sealed Imperial Crusader Gaiters. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t88_l_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="448" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3260" />
+		<set name="price" val="8960000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">121</stat>
+		</stats>
+	</item>
+	<item id="6676" type="Armor" name="Sealed Imperial Crusader Gauntlet">
+		<!-- Sealed Imperial Crusader Gauntlets. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t88_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6677" type="Armor" name="Sealed Imperial Crusader Boots">
+		<!-- Sealed Imperial Crusader Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t88_b_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1110" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6678" type="Armor" name="Sealed Imperial Crusader Shield">
+		<!-- Sealed Imperial Crusader Shield. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.shield_imperial_crusader_shield_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="188" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1170" />
+		<set name="price" val="3760000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">276</stat>
+		</stats>
+	</item>
+	<item id="6679" type="Armor" name="Sealed Imperial Crusader Helmet">
+		<!-- Sealed Imperial Crusader Helmet. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_helmet_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="268" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="550" />
+		<set name="price" val="5370000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">83</stat>
+		</stats>
+	</item>
+	<item id="6680" type="Armor" name="Sealed Draconic Leather Armor">
+		<!-- Sealed Draconic Leather Armor. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t89_ul_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="870" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4950" />
+		<set name="price" val="17400000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">236</stat>
+		</stats>
+	</item>
+	<item id="6681" type="Armor" name="Sealed Draconic Leather Glove">
+		<!-- Sealed Draconic Leather Gloves. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t89_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6682" type="Armor" name="Sealed Draconic Leather Boots">
+		<!-- Sealed Draconic Leather Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t89_b_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1110" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6683" type="Armor" name="Sealed Draconic Leather Helmet">
+		<!-- Sealed Draconic Leather Helmet. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_leather_helmet_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="268" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="550" />
+		<set name="price" val="5370000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">83</stat>
+		</stats>
+	</item>
+	<item id="6684" type="Armor" name="Sealed Major Arcana Robe">
+		<!-- Sealed Major Arcana Robe. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t90_ul_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="870" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="2300" />
+		<set name="price" val="17400000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">157</stat>
+			<stat type="maxMp">866</stat>
+		</stats>
+	</item>
+	<item id="6685" type="Armor" name="Sealed Major Arcana Glove">
+		<!-- Sealed Major Arcana Gloves. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t90_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6686" type="Armor" name="Sealed Major Arcana Boots">
+		<!-- Sealed Major Arcana Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t90_b_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="179" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1110" />
+		<set name="price" val="3580000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">55</stat>
+		</stats>
+	</item>
+	<item id="6687" type="Armor" name="Sealed Major Arcana Circlet">
+		<!-- Sealed Major Arcana Circlets. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_leather_helmet_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="268" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="550" />
+		<set name="price" val="5370000" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">83</stat>
+		</stats>
+	</item>
+	<item id="6688" type="EtcItem" name="Forgotten Blade Edge">
+		<!-- Main ingredient required for a Dwarf to make a Forgotten Blade. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="92529" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6689" type="EtcItem" name="Basalt Battlehammer Head">
+		<!-- Main ingredient required for a Dwarf to make a Basalt Battlehammer. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_squares_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="94306" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6690" type="EtcItem" name="Imperial Staff Head">
+		<!-- Main ingredient required for a Dwarf to make a Imperial Staff. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_bark_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="92353" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6691" type="EtcItem" name="Angel Slayer Blade">
+		<!-- Main ingredient required for a Dwarf to make a Angel Slayer. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="92529" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6692" type="EtcItem" name="Shining Bow Shaft">
+		<set name="icon" val="icon.etc_branch_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="91471" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6693" type="EtcItem" name="Dragon Hunter Axe Blade">
+		<!-- Main ingredient required for a Dwarf to make a hunter axe. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="90882" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6694" type="EtcItem" name="Saint Spear Blade">
+		<!-- Main ingredient required for a Dwarf to make a Saint Spear. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="90882" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6695" type="EtcItem" name="Demon Splinter Blade">
+		<!-- Main ingredient required for a Dwarf to make a Demon Splinter. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="94306" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6696" type="EtcItem" name="Heavens Divider Edge">
+		<!-- Main ingredient required for a Dwarf to make a Heaven's Divider. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="91082" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6697" type="EtcItem" name="Arcana Mace Head">
+		<!-- Main ingredient required for a Dwarf to make the sealed Arcana Mace. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_squares_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="94306" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6698" type="EtcItem" name="Sealed Tateossian Earring Part">
+		<!-- Main ingredient required for a Dwarf to make the Sealed Tateossian Earrings. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="10182" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6699" type="EtcItem" name="Sealed Tateossian Ring Gem">
+		<!-- Main ingredient required for a Dwarf to make the Sealed Tateossian Ring. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_crystal_ball_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="9176" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

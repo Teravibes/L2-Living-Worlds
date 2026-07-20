@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Grand Khavatari -->
+	<skillTree type="classSkillTree" classId="114" parentClassId="48">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="10000000" learnedByNpc="true" />
+		<skill skillName="Health" skillId="329" skillLevel="1" getLevel="76" levelUpSp="10000000" learnedByNpc="true" />
+		<skill skillName="Fortitude" skillId="335" skillLevel="1" getLevel="76" levelUpSp="10000000" learnedByNpc="true" />
+
+		<skill skillName="Skill Mastery" skillId="330" skillLevel="1" getLevel="77" levelUpSp="13000000" learnedByNpc="true" />
+		<skill skillName="Riposte Stance" skillId="340" skillLevel="1" getLevel="77" levelUpSp="13000000" learnedByNpc="true" />
+		<skill skillName="Battle Force" skillId="426" skillLevel="1" getLevel="77" levelUpSp="13000000" learnedByNpc="true" />
+
+		<skill skillName="Raging Force" skillId="346" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+		<skill skillName="Master of Combat" skillId="430" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+		<skill skillName="Force Meditation" skillId="441" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+
+		<skill skillName="Force Barrier" skillId="443" skillLevel="1" getLevel="79" levelUpSp="80000000" learnedByNpc="true" />
+
+		<skill skillName="Symbol of Energy" skillId="458" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8896" count="1" /> <!-- Ancient Tactical Manual: Symbol of Energy -->
+		</skill>
+	</skillTree>
+</list>

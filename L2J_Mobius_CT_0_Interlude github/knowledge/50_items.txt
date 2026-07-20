@@ -1,0 +1,16 @@
+# Lineage 2 Interlude common item shorthand and consumables.
+# Format: [item <tokens>] One short true line mapping slang to the real item.
+
+[item ss ssd ssc ssb ssa soulshot d c b a s] "ss" means Soulshot; "ssd" is Soulshot D-grade, "ssc" is Soulshot C-grade, and so on by grade.
+[item bss bssd bssc bssb blessed soulshot] "bss" / "bssd" means Blessed Soulshot of that grade, a stronger soulshot.
+[item sps spsd spsc spsb spiritshot d c] "sps" / "spsd" means Spiritshot D-grade; spiritshots power magic attacks.
+[item bsps bspsd bspsc blessed spiritshot] "bsps" means Blessed Spiritshot, the stronger spiritshot for mages.
+[item soe scroll escape] "soe" is a Scroll of Escape, which teleports you back to the nearest town.
+[item sls scroll resurrection res] A resurrection scroll or a cleric's res restores most XP lost on death.
+[item ewd ewc enchant weapon] "ewd" is Enchant Weapon D-grade; "ewc" Enchant Weapon C-grade; they upgrade weapons but can fail.
+[item ead eac enchant armor] "ead" is Enchant Armor D-grade; "eac" Enchant Armor C-grade.
+[item gemstone d c b] Gemstones (Gemstone D/C/B) are crafting and enchant materials.
+[item iron ore mat material] Iron Ore, Coal, Charcoal and Animal Bone are common low grade crafting materials.
+[item cp potion hp mp] HP potions heal health; "cp" potions restore CP; mana potions are limited in Interlude, so mages mostly rest.
+[item adena price wts wtb] "WTS" means want to sell, "WTB" want to buy; prices are quoted in adena, often "k" (thousand) or "kk"/"m" (million).
+[item d c b a s grade] Item grades go no-grade, D, C, B, A, S; quote the grade when buying or selling gear and shots.

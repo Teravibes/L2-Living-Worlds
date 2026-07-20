@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn zone="dion13_2122_01">
+		<territory minZ="-3869" maxZ="-2869">
+			<node x="34507" y="162123" />
+			<node x="41523" y="161005" />
+			<node x="42133" y="163614" />
+			<node x="32934" y="163587" />
+		</territory>
+		<npc id="20939" count="10" respawnDelay="45" /> <!-- Tanor Silenos Warrior -->
+	</spawn>
+	<spawn zone="dion13_2122_02">
+		<territory minZ="-3467" maxZ="-2267">
+			<node x="41784" y="161100" />
+			<node x="46612" y="160716" />
+			<node x="51659" y="163606" />
+			<node x="42227" y="163603" />
+		</territory>
+		<npc id="20939" count="8" respawnDelay="45" /> <!-- Tanor Silenos Warrior -->
+		<npc id="20944" count="4" respawnDelay="45" /> <!-- Nightmare Lord -->
+	</spawn>
+	<spawn zone="dion13_2122_03">
+		<territory minZ="-2943" maxZ="-2143">
+			<node x="50358" y="162813" />
+			<node x="54555" y="161502" />
+			<node x="58663" y="163640" />
+			<node x="51849" y="163652" />
+		</territory>
+		<npc id="20939" count="2" respawnDelay="45" /> <!-- Tanor Silenos Warrior -->
+		<npc id="20944" count="4" respawnDelay="45" /> <!-- Nightmare Lord -->
+	</spawn>
+	<spawn zone="dion13_2122_04">
+		<territory minZ="-3729" maxZ="-2429">
+			<node x="56219" y="162213" />
+			<node x="65262" y="157122" />
+			<node x="65323" y="163590" />
+			<node x="58759" y="163551" />
+		</territory>
+		<npc id="20939" count="4" respawnDelay="45" /> <!-- Tanor Silenos Warrior -->
+		<npc id="20944" count="10" respawnDelay="45" /> <!-- Nightmare Lord -->
+		<npc id="20941" count="6" respawnDelay="45" /> <!-- Tanor Silenos Chieftain -->
+	</spawn>
+	<spawn zone="dion13_2122_05">
+		<territory minZ="-3789" maxZ="-2689">
+			<node x="64250" y="146987" />
+			<node x="65162" y="146870" />
+			<node x="65143" y="155403" />
+			<node x="63376" y="151753" />
+		</territory>
+		<npc id="20939" count="2" respawnDelay="45" /> <!-- Tanor Silenos Warrior -->
+		<npc id="20944" count="2" respawnDelay="45" /> <!-- Nightmare Lord -->
+		<npc id="20941" count="1" respawnDelay="45" /> <!-- Tanor Silenos Chieftain -->
+	</spawn>
+	<spawn zone="dion13_2122_06">
+		<territory minZ="-3789" maxZ="-2689">
+			<node x="63982" y="142779" />
+			<node x="65167" y="141626" />
+			<node x="65176" y="146649" />
+			<node x="63736" y="144599" />
+		</territory>
+		<npc id="20939" count="2" respawnDelay="45" /> <!-- Tanor Silenos Warrior -->
+		<npc id="20944" count="1" respawnDelay="45" /> <!-- Nightmare Lord -->
+	</spawn>
+	<spawn zone="dion13_2122_08s">
+		<territory minZ="-3724" maxZ="-2524">
+			<node x="38161" y="162091" />
+			<node x="41318" y="161797" />
+			<node x="41918" y="163433" />
+			<node x="37852" y="163429" />
+		</territory>
+		<npc id="20939" count="3" respawnDelay="45" /> <!-- Tanor Silenos Warrior -->
+	</spawn>
+	<spawn zone="dion13_2122_09s">
+		<territory minZ="-3276" maxZ="-2376">
+			<node x="45485" y="162041" />
+			<node x="47721" y="161650" />
+			<node x="48543" y="163425" />
+			<node x="44375" y="163435" />
+		</territory>
+		<npc id="20944" count="3" respawnDelay="45" /> <!-- Nightmare Lord -->
+	</spawn>
+	<spawn zone="dion13_2122_10s">
+		<territory minZ="-3702" maxZ="-2802">
+			<node x="62282" y="159897" />
+			<node x="64998" y="159112" />
+			<node x="65021" y="162016" />
+			<node x="61185" y="162615" />
+		</territory>
+		<npc id="20941" count="3" respawnDelay="45" /> <!-- Tanor Silenos Chieftain -->
+	</spawn>
+	<spawn zone="dion13_2123_01">
+		<territory minZ="-3828" maxZ="-2928">
+			<node x="32993" y="164026" />
+			<node x="40754" y="164003" />
+			<node x="37169" y="165878" />
+			<node x="32911" y="165143" />
+		</territory>
+		<npc id="20939" count="7" respawnDelay="45" /> <!-- Tanor Silenos Warrior -->
+	</spawn>
+	<spawn zone="dion13_2123_02">
+		<territory minZ="-3229" maxZ="-1729">
+			<node x="43099" y="164040" />
+			<node x="52011" y="164030" />
+			<node x="51151" y="166130" />
+			<node x="46495" y="167393" />
+		</territory>
+		<npc id="20939" count="5" respawnDelay="45" /> <!-- Tanor Silenos Warrior -->
+		<npc id="20944" count="5" respawnDelay="45" /> <!-- Nightmare Lord -->
+	</spawn>
+	<spawn zone="dion13_2123_03">
+		<territory minZ="-3052" maxZ="-1552">
+			<node x="52202" y="164043" />
+			<node x="58627" y="164033" />
+			<node x="53905" y="165604" />
+			<node x="51868" y="164962" />
+		</territory>
+		<npc id="20944" count="4" respawnDelay="45" /> <!-- Nightmare Lord -->
+	</spawn>
+	<spawn zone="dion13_2222_01">
+		<territory minZ="-3796" maxZ="-2996">
+			<node x="65653" y="140593" />
+			<node x="70132" y="141486" />
+			<node x="70297" y="144673" />
+			<node x="65639" y="145754" />
+		</territory>
+		<npc id="20944" count="5" respawnDelay="45" /> <!-- Nightmare Lord -->
+		<npc id="20941" count="5" respawnDelay="45" /> <!-- Tanor Silenos Chieftain -->
+	</spawn>
+	<spawn zone="dion13_2222_02">
+		<territory minZ="-3796" maxZ="-2996">
+			<node x="65647" y="145871" />
+			<node x="67633" y="145307" />
+			<node x="66515" y="149891" />
+			<node x="65655" y="150018" />
+		</territory>
+		<npc id="20944" count="2" respawnDelay="45" /> <!-- Nightmare Lord -->
+		<npc id="20941" count="2" respawnDelay="45" /> <!-- Tanor Silenos Chieftain -->
+	</spawn>
+	<spawn zone="dion13_2222_03">
+		<territory minZ="-3796" maxZ="-2996">
+			<node x="65640" y="150135" />
+			<node x="66531" y="149992" />
+			<node x="67559" y="151048" />
+			<node x="65625" y="154132" />
+		</territory>
+		<npc id="20944" count="2" respawnDelay="45" /> <!-- Nightmare Lord -->
+		<npc id="20941" count="1" respawnDelay="45" /> <!-- Tanor Silenos Chieftain -->
+	</spawn>
+	<spawn zone="dion13_2222_04">
+		<territory minZ="-3796" maxZ="-2996">
+			<node x="65694" y="155668" />
+			<node x="68513" y="155405" />
+			<node x="69046" y="159913" />
+			<node x="65694" y="161414" />
+		</territory>
+		<npc id="20944" count="6" respawnDelay="45" /> <!-- Nightmare Lord -->
+		<npc id="20941" count="4" respawnDelay="45" /> <!-- Tanor Silenos Chieftain -->
+	</spawn>
+</list>

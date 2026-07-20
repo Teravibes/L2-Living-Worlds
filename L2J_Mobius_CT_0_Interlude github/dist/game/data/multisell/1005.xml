@@ -1,0 +1,3367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list maintainEnchantment="true" applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30298</npc> <!-- Pinter (Blacksmith) -->
+		<npc>30300</npc> <!-- Pushkin (Blacksmith) -->
+		<npc>30317</npc> <!-- Kluto (Blacksmith) -->
+		<npc>30458</npc> <!-- Poitan (Blacksmith) -->
+		<npc>30471</npc> <!-- Rupio (Blacksmith) -->
+		<npc>30678</npc> <!-- Helton (Blacksmith) -->
+		<npc>30688</npc> <!-- Duning (Blacksmith) -->
+		<npc>30846</npc> <!-- Wilbert (Blacksmith) -->
+		<npc>30898</npc> <!-- Morning (Blacksmith) -->
+		<npc>31271</npc> <!-- Hilda (Blacksmith) -->
+		<npc>31316</npc> <!-- Vincenz (Blacksmith) -->
+		<npc>31583</npc> <!-- Feynn (Blacksmith) -->
+		<npc>31960</npc> <!-- Buryun (Blacksmith) -->
+		<npc>31990</npc> <!-- Siger (Blacksmith) -->
+	</npcs>
+	<item>
+		<!-- Stormbringer -->
+		<ingredient count="1" id="72" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Stormbringer - Critical Anger -->
+		<production count="1" id="4681" />
+	</item>
+	<item>
+		<!-- Stormbringer -->
+		<ingredient count="1" id="72" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Stormbringer - Focus -->
+		<production count="1" id="4682" />
+	</item>
+	<item>
+		<!-- Stormbringer -->
+		<ingredient count="1" id="72" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Stormbringer - Light -->
+		<production count="1" id="4683" />
+	</item>
+	<item>
+		<!-- Flamberge -->
+		<ingredient count="1" id="71" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Flamberge - Critical Damage -->
+		<production count="1" id="4711" />
+	</item>
+	<item>
+		<!-- Flamberge -->
+		<ingredient count="1" id="71" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Flamberge - Focus -->
+		<production count="1" id="4712" />
+	</item>
+	<item>
+		<!-- Flamberge -->
+		<ingredient count="1" id="71" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Flamberge - Light -->
+		<production count="1" id="4713" />
+	</item>
+	<item>
+		<!-- Big Hammer -->
+		<ingredient count="1" id="89" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Big Hammer - Health -->
+		<production count="1" id="4726" />
+	</item>
+	<item>
+		<!-- Big Hammer -->
+		<ingredient count="1" id="89" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Big Hammer - Rsk. Focus -->
+		<production count="1" id="4727" />
+	</item>
+	<item>
+		<!-- Big Hammer -->
+		<ingredient count="1" id="89" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Big Hammer - Haste -->
+		<production count="1" id="4728" />
+	</item>
+	<item>
+		<!-- Battle Axe -->
+		<ingredient count="1" id="160" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Battle Axe - Anger -->
+		<production count="1" id="4729" />
+	</item>
+	<item>
+		<!-- Battle Axe -->
+		<ingredient count="1" id="160" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Battle Axe - Rsk. Focus -->
+		<production count="1" id="4730" />
+	</item>
+	<item>
+		<!-- Battle Axe -->
+		<ingredient count="1" id="160" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Battle Axe - Haste -->
+		<production count="1" id="4731" />
+	</item>
+	<item>
+		<!-- Silver Axe -->
+		<ingredient count="1" id="161" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Silver Axe - Anger -->
+		<production count="1" id="4732" />
+	</item>
+	<item>
+		<!-- Silver Axe -->
+		<ingredient count="1" id="161" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Silver Axe - Rsk. Focus -->
+		<production count="1" id="4733" />
+	</item>
+	<item>
+		<!-- Silver Axe -->
+		<ingredient count="1" id="161" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Silver Axe - Haste -->
+		<production count="1" id="4734" />
+	</item>
+	<item>
+		<!-- Skull Graver -->
+		<ingredient count="1" id="173" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Skull Graver - Anger -->
+		<production count="1" id="4735" />
+	</item>
+	<item>
+		<!-- Skull Graver -->
+		<ingredient count="1" id="173" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Skull Graver - Health -->
+		<production count="1" id="4736" />
+	</item>
+	<item>
+		<!-- Skull Graver -->
+		<ingredient count="1" id="173" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Skull Graver - Rsk. Focus -->
+		<production count="1" id="4737" />
+	</item>
+	<item>
+		<!-- Cursed Dagger -->
+		<ingredient count="1" id="226" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Cursed Dagger - Critical Bleed -->
+		<production count="1" id="4759" />
+	</item>
+	<item>
+		<!-- Cursed Dagger -->
+		<ingredient count="1" id="226" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Cursed Dagger - Critical Poison -->
+		<production count="1" id="4760" />
+	</item>
+	<item>
+		<!-- Cursed Dagger -->
+		<ingredient count="1" id="226" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Cursed Dagger - Rsk. Haste -->
+		<production count="1" id="4761" />
+	</item>
+	<item>
+		<!-- Dark Elven Dagger -->
+		<ingredient count="1" id="232" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Dark Elven Dagger - Focus -->
+		<production count="1" id="4762" />
+	</item>
+	<item>
+		<!-- Dark Elven Dagger -->
+		<ingredient count="1" id="232" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Dark Elven Dagger - Back Blow -->
+		<production count="1" id="4763" />
+	</item>
+	<item>
+		<!-- Dark Elven Dagger -->
+		<ingredient count="1" id="232" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Dark Elven Dagger - Rsk. Haste -->
+		<production count="1" id="6356" />
+	</item>
+	<item>
+		<!-- Chakram -->
+		<ingredient count="1" id="263" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Chakram - Critical Drain -->
+		<production count="1" id="4789" />
+	</item>
+	<item>
+		<!-- Chakram -->
+		<ingredient count="1" id="263" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Chakram - Critical Poison -->
+		<production count="1" id="4790" />
+	</item>
+	<item>
+		<!-- Chakram -->
+		<ingredient count="1" id="263" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Chakram - Rsk. Haste -->
+		<production count="1" id="4791" />
+	</item>
+	<item>
+		<!-- Crystallized Ice Bow -->
+		<ingredient count="1" id="281" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Crystallized Ice Bow - Guidance -->
+		<production count="1" id="4810" />
+	</item>
+	<item>
+		<!-- Crystallized Ice Bow -->
+		<ingredient count="1" id="281" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Crystallized Ice Bow - Evasion -->
+		<production count="1" id="4811" />
+	</item>
+	<item>
+		<!-- Crystallized Ice Bow -->
+		<ingredient count="1" id="281" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Crystallized Ice Bow - Quick Recovery -->
+		<production count="1" id="4812" />
+	</item>
+	<item>
+		<!-- Scythe -->
+		<ingredient count="1" id="96" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Scythe - Anger -->
+		<production count="1" id="4834" />
+	</item>
+	<item>
+		<!-- Scythe -->
+		<ingredient count="1" id="96" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Scythe - Critical Stun -->
+		<production count="1" id="4835" />
+	</item>
+	<item>
+		<!-- Scythe -->
+		<ingredient count="1" id="96" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Scythe - Light -->
+		<production count="1" id="4836" />
+	</item>
+	<item>
+		<!-- Orcish Glaive -->
+		<ingredient count="1" id="298" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Orcish Glaive - Anger -->
+		<production count="1" id="4837" />
+	</item>
+	<item>
+		<!-- Orcish Glaive -->
+		<ingredient count="1" id="298" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Orcish Glaive - Critical Stun -->
+		<production count="1" id="4838" />
+	</item>
+	<item>
+		<!-- Orcish Glaive -->
+		<ingredient count="1" id="298" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Orcish Glaive - Towering Blow -->
+		<production count="1" id="4839" />
+	</item>
+	<item>
+		<!-- Body Slasher -->
+		<ingredient count="1" id="302" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Body Slasher - Critical Stun -->
+		<production count="1" id="4840" />
+	</item>
+	<item>
+		<!-- Body Slasher -->
+		<ingredient count="1" id="302" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Body Slasher - Towering Blow -->
+		<production count="1" id="4841" />
+	</item>
+	<item>
+		<!-- Body Slasher -->
+		<ingredient count="1" id="302" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Body Slasher - Wide Blow -->
+		<production count="1" id="4842" />
+	</item>
+	<item>
+		<!-- Heavy Doom Hammer -->
+		<ingredient count="1" id="191" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Heavy Doom Hammer - Magic Regeneration -->
+		<production count="1" id="4864" />
+	</item>
+	<item>
+		<!-- Heavy Doom Hammer -->
+		<ingredient count="1" id="191" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Heavy Doom Hammer - Mental Shield -->
+		<production count="1" id="4865" />
+	</item>
+	<item>
+		<!-- Heavy Doom Hammer -->
+		<ingredient count="1" id="191" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Heavy Doom Hammer - Magic Hold -->
+		<production count="1" id="4866" />
+	</item>
+	<item>
+		<!-- Crystal Staff -->
+		<ingredient count="1" id="192" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Crystal Staff - Rsk. Evasion -->
+		<production count="1" id="4867" />
+	</item>
+	<item>
+		<!-- Crystal Staff -->
+		<ingredient count="1" id="192" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Crystal Staff - Mana Up -->
+		<production count="1" id="4868" />
+	</item>
+	<item>
+		<!-- Crystal Staff -->
+		<ingredient count="1" id="192" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Crystal Staff - Blessed Body -->
+		<production count="1" id="4869" />
+	</item>
+	<item>
+		<!-- Heavy Doom Axe -->
+		<ingredient count="1" id="194" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Heavy Doom Axe - Magic Poison -->
+		<production count="1" id="4870" />
+	</item>
+	<item>
+		<!-- Heavy Doom Axe -->
+		<ingredient count="1" id="194" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Heavy Doom Axe - Magic Weakness -->
+		<production count="1" id="4871" />
+	</item>
+	<item>
+		<!-- Heavy Doom Axe -->
+		<ingredient count="1" id="194" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Heavy Doom Axe - Magic Chaos -->
+		<production count="1" id="4872" />
+	</item>
+	<item>
+		<!-- Stick of Faith -->
+		<ingredient count="1" id="193" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Stick of Faith - Mana Up -->
+		<production count="1" id="7701" />
+	</item>
+	<item>
+		<!-- Stick of Faith -->
+		<ingredient count="1" id="193" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Stick of Faith - Magic Hold -->
+		<production count="1" id="7702" />
+	</item>
+	<item>
+		<!-- Stick of Faith -->
+		<ingredient count="1" id="193" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Stick of Faith - Magic Shield -->
+		<production count="1" id="7703" />
+	</item>
+	<item>
+		<!-- Shamshir -->
+		<ingredient count="1" id="73" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Shamshir - Guidance -->
+		<production count="1" id="4684" />
+	</item>
+	<item>
+		<!-- Shamshir -->
+		<ingredient count="1" id="73" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Shamshir - Back Blow -->
+		<production count="1" id="4685" />
+	</item>
+	<item>
+		<!-- Shamshir -->
+		<ingredient count="1" id="73" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Shamshir - Rsk. Evasion -->
+		<production count="1" id="4686" />
+	</item>
+	<item>
+		<!-- Katana -->
+		<ingredient count="1" id="74" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Katana - Focus -->
+		<production count="1" id="4687" />
+	</item>
+	<item>
+		<!-- Katana -->
+		<ingredient count="1" id="74" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Katana - Critical Damage -->
+		<production count="1" id="4688" />
+	</item>
+	<item>
+		<!-- Katana -->
+		<ingredient count="1" id="74" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Katana - Haste -->
+		<production count="1" id="4689" />
+	</item>
+	<item>
+		<!-- Spirit Sword -->
+		<ingredient count="1" id="131" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Spirit Sword - Critical Damage -->
+		<production count="1" id="4690" />
+	</item>
+	<item>
+		<!-- Spirit Sword -->
+		<ingredient count="1" id="131" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Spirit Sword - Critical Poison -->
+		<production count="1" id="4691" />
+	</item>
+	<item>
+		<!-- Spirit Sword -->
+		<ingredient count="1" id="131" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Spirit Sword - Haste -->
+		<production count="1" id="4692" />
+	</item>
+	<item>
+		<!-- Raid Sword -->
+		<ingredient count="1" id="133" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Raid Sword - Focus -->
+		<production count="1" id="4693" />
+	</item>
+	<item>
+		<!-- Raid Sword -->
+		<ingredient count="1" id="133" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Raid Sword - Critical Drain -->
+		<production count="1" id="4694" />
+	</item>
+	<item>
+		<!-- Raid Sword -->
+		<ingredient count="1" id="133" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Raid Sword - Critical Poison -->
+		<production count="1" id="4695" />
+	</item>
+	<item>
+		<!-- Soulfire Dirk -->
+		<ingredient count="1" id="242" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Soulfire Dirk - Mana Up -->
+		<production count="1" id="7810" />
+	</item>
+	<item>
+		<!-- Soulfire Dirk -->
+		<ingredient count="1" id="242" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Soulfire Dirk - Magic Hold -->
+		<production count="1" id="7811" />
+	</item>
+	<item>
+		<!-- Soulfire Dirk -->
+		<ingredient count="1" id="242" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Soulfire Dirk - Magic Silence -->
+		<production count="1" id="7812" />
+	</item>
+	<item>
+		<!-- Dwarven War Hammer -->
+		<ingredient count="1" id="2502" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Dwarven War Hammer - Anger -->
+		<production count="1" id="4738" />
+	</item>
+	<item>
+		<!-- Dwarven War Hammer -->
+		<ingredient count="1" id="2502" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Dwarven War Hammer - Health -->
+		<production count="1" id="4739" />
+	</item>
+	<item>
+		<!-- Dwarven War Hammer -->
+		<ingredient count="1" id="2502" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Dwarven War Hammer - Haste -->
+		<production count="1" id="4740" />
+	</item>
+	<item>
+		<!-- Stiletto -->
+		<ingredient count="1" id="227" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Stiletto - Critical Bleed -->
+		<production count="1" id="4765" />
+	</item>
+	<item>
+		<!-- Stiletto -->
+		<ingredient count="1" id="227" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Stiletto - Critical Poison -->
+		<production count="1" id="4766" />
+	</item>
+	<item>
+		<!-- Stiletto -->
+		<ingredient count="1" id="227" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Stiletto - Rsk. Haste -->
+		<production count="1" id="6357" />
+	</item>
+	<item>
+		<!-- Knuckle Duster -->
+		<ingredient count="1" id="4233" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Knuckle Duster - Rsk. Evasion -->
+		<production count="1" id="4798" />
+	</item>
+	<item>
+		<!-- Knuckle Duster -->
+		<ingredient count="1" id="4233" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Knuckle Duster - Rsk. Haste -->
+		<production count="1" id="4799" />
+	</item>
+	<item>
+		<!-- Knuckle Duster -->
+		<ingredient count="1" id="4233" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Knuckle Duster - Haste -->
+		<production count="1" id="4800" />
+	</item>
+	<item>
+		<!-- Elemental Bow -->
+		<ingredient count="1" id="282" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Elemental Bow - Guidance -->
+		<production count="1" id="4813" />
+	</item>
+	<item>
+		<!-- Elemental Bow -->
+		<ingredient count="1" id="282" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Elemental Bow - Miser -->
+		<production count="1" id="4814" />
+	</item>
+	<item>
+		<!-- Elemental Bow -->
+		<ingredient count="1" id="282" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Elemental Bow - Quick Recovery -->
+		<production count="1" id="4815" />
+	</item>
+	<item>
+		<!-- Noble Elven Bow -->
+		<ingredient count="1" id="285" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Noble Elven Bow - Evasion -->
+		<production count="1" id="4816" />
+	</item>
+	<item>
+		<!-- Noble Elven Bow -->
+		<ingredient count="1" id="285" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Noble Elven Bow - Miser -->
+		<production count="1" id="4817" />
+	</item>
+	<item>
+		<!-- Noble Elven Bow -->
+		<ingredient count="1" id="285" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Noble Elven Bow - Cheap Shot -->
+		<production count="1" id="4818" />
+	</item>
+	<item>
+		<!-- Bec de Corbin -->
+		<ingredient count="1" id="94" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Bec de Corbin - Critical Stun -->
+		<production count="1" id="4843" />
+	</item>
+	<item>
+		<!-- Bec de Corbin -->
+		<ingredient count="1" id="94" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Bec de Corbin - Towering Blow -->
+		<production count="1" id="4844" />
+	</item>
+	<item>
+		<!-- Bec de Corbin -->
+		<ingredient count="1" id="94" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Bec de Corbin - Light -->
+		<production count="1" id="4845" />
+	</item>
+	<item>
+		<!-- Cursed Staff -->
+		<ingredient count="1" id="195" />
+		<!-- Red Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4635" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Cursed Staff - Magic Hold -->
+		<production count="1" id="4873" />
+	</item>
+	<item>
+		<!-- Cursed Staff -->
+		<ingredient count="1" id="195" />
+		<!-- Green Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4646" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Cursed Staff - Magic Poison -->
+		<production count="1" id="4874" />
+	</item>
+	<item>
+		<!-- Cursed Staff -->
+		<ingredient count="1" id="195" />
+		<!-- Blue Soul Crystal - Stage 6 -->
+		<ingredient count="1" id="4657" />
+		<!-- Gemstone C -->
+		<ingredient count="238" id="2131" />
+		<!-- Adena -->
+		<ingredient count="714000" id="57" />
+		<!-- Cursed Staff - Magic Weakness -->
+		<production count="1" id="4875" />
+	</item>
+	<item>
+		<!-- Stick of Eternity -->
+		<ingredient count="1" id="196" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Stick of Eternity - Empower -->
+		<production count="1" id="7704" />
+	</item>
+	<item>
+		<!-- Stick of Eternity -->
+		<ingredient count="1" id="196" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Stick of Eternity - Rsk. Evasion -->
+		<production count="1" id="7705" />
+	</item>
+	<item>
+		<!-- Stick of Eternity -->
+		<ingredient count="1" id="196" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Stick of Eternity - Blessed Body -->
+		<production count="1" id="7706" />
+	</item>
+	<item>
+		<!-- Nirvana Axe -->
+		<ingredient count="1" id="174" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Nirvana Axe - Magic Poison -->
+		<production count="1" id="7708" />
+	</item>
+	<item>
+		<!-- Nirvana Axe -->
+		<ingredient count="1" id="174" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Nirvana Axe - M. Atk. -->
+		<production count="1" id="7707" />
+	</item>
+	<item>
+		<!-- Nirvana Axe -->
+		<ingredient count="1" id="174" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Nirvana Axe - Magic Weakness -->
+		<production count="1" id="7709" />
+	</item>
+	<item>
+		<!-- Club of Nature -->
+		<ingredient count="1" id="201" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Club of Nature - Magic Hold -->
+		<production count="1" id="7712" />
+	</item>
+	<item>
+		<!-- Club of Nature -->
+		<ingredient count="1" id="201" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Club of Nature - Mental Shield -->
+		<production count="1" id="7711" />
+	</item>
+	<item>
+		<!-- Club of Nature -->
+		<ingredient count="1" id="201" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Club of Nature - Acumen -->
+		<production count="1" id="7710" />
+	</item>
+	<item>
+		<!-- Mace of Underworld -->
+		<ingredient count="1" id="202" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Mace of Underworld - Mana Up -->
+		<production count="1" id="7713" />
+	</item>
+	<item>
+		<!-- Mace of Underworld -->
+		<ingredient count="1" id="202" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Mace of Underworld - Magic Silence -->
+		<production count="1" id="7714" />
+	</item>
+	<item>
+		<!-- Mace of Underworld -->
+		<ingredient count="1" id="202" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Mace of Underworld - Conversion -->
+		<production count="1" id="7715" />
+	</item>
+	<item>
+		<!-- Inferno Staff -->
+		<ingredient count="1" id="198" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Inferno Staff - Magic Silence -->
+		<production count="1" id="7717" />
+	</item>
+	<item>
+		<!-- Inferno Staff -->
+		<ingredient count="1" id="198" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Inferno Staff - Acumen -->
+		<production count="1" id="7716" />
+	</item>
+	<item>
+		<!-- Inferno Staff -->
+		<ingredient count="1" id="198" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Inferno Staff - Magic Paralyze -->
+		<production count="1" id="7718" />
+	</item>
+	<item>
+		<!-- Poleaxe -->
+		<ingredient count="1" id="95" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Poleaxe - Wide Blow -->
+		<production count="1" id="7721" />
+	</item>
+	<item>
+		<!-- Poleaxe -->
+		<ingredient count="1" id="95" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Poleaxe - Towering Blow -->
+		<production count="1" id="7720" />
+	</item>
+	<item>
+		<!-- Poleaxe -->
+		<ingredient count="1" id="95" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Poleaxe - Critical Stun -->
+		<production count="1" id="7719" />
+	</item>
+	<item>
+		<!-- Caliburs -->
+		<ingredient count="1" id="75" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Caliburs - Guidance -->
+		<production count="1" id="4696" />
+	</item>
+	<item>
+		<!-- Caliburs -->
+		<ingredient count="1" id="75" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Caliburs - Focus -->
+		<production count="1" id="4697" />
+	</item>
+	<item>
+		<!-- Caliburs -->
+		<ingredient count="1" id="75" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Caliburs - Critical Damage -->
+		<production count="1" id="4698" />
+	</item>
+	<item>
+		<!-- Sword of Delusion -->
+		<ingredient count="1" id="76" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Delusion - Focus -->
+		<production count="1" id="4699" />
+	</item>
+	<item>
+		<!-- Sword of Delusion -->
+		<ingredient count="1" id="76" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Delusion - Health -->
+		<production count="1" id="4700" />
+	</item>
+	<item>
+		<!-- Sword of Delusion -->
+		<ingredient count="1" id="76" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Delusion - Rsk. Haste -->
+		<production count="1" id="4701" />
+	</item>
+	<item>
+		<!-- Tsurugi -->
+		<ingredient count="1" id="77" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Tsurugi - Focus -->
+		<production count="1" id="4702" />
+	</item>
+	<item>
+		<!-- Tsurugi -->
+		<ingredient count="1" id="77" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Tsurugi - Critical Damage -->
+		<production count="1" id="4703" />
+	</item>
+	<item>
+		<!-- Tsurugi -->
+		<ingredient count="1" id="77" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Tsurugi - Haste -->
+		<production count="1" id="4704" />
+	</item>
+	<item>
+		<!-- Sword of Nightmare -->
+		<ingredient count="1" id="134" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Nightmare - Health -->
+		<production count="1" id="4705" />
+	</item>
+	<item>
+		<!-- Sword of Nightmare -->
+		<ingredient count="1" id="134" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Nightmare - Focus -->
+		<production count="1" id="4706" />
+	</item>
+	<item>
+		<!-- Sword of Nightmare -->
+		<ingredient count="1" id="134" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Nightmare - Light -->
+		<production count="1" id="4707" />
+	</item>
+	<item>
+		<!-- War Axe -->
+		<ingredient count="1" id="162" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- War Axe - Anger -->
+		<production count="1" id="4741" />
+	</item>
+	<item>
+		<!-- War Axe -->
+		<ingredient count="1" id="162" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- War Axe - Health -->
+		<production count="1" id="4742" />
+	</item>
+	<item>
+		<!-- War Axe -->
+		<ingredient count="1" id="162" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- War Axe - Haste -->
+		<production count="1" id="4743" />
+	</item>
+	<item>
+		<!-- Grace Dagger -->
+		<ingredient count="1" id="231" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Grace Dagger - Evasion -->
+		<production count="1" id="4768" />
+	</item>
+	<item>
+		<!-- Grace Dagger -->
+		<ingredient count="1" id="231" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Grace Dagger - Focus -->
+		<production count="1" id="4769" />
+	</item>
+	<item>
+		<!-- Grace Dagger -->
+		<ingredient count="1" id="231" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Grace Dagger - Back Blow -->
+		<production count="1" id="4770" />
+	</item>
+	<item>
+		<!-- Dark Screamer -->
+		<ingredient count="1" id="233" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Dark Screamer - Evasion -->
+		<production count="1" id="4771" />
+	</item>
+	<item>
+		<!-- Dark Screamer -->
+		<ingredient count="1" id="233" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Dark Screamer - Focus -->
+		<production count="1" id="4772" />
+	</item>
+	<item>
+		<!-- Dark Screamer -->
+		<ingredient count="1" id="233" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Dark Screamer - Critical Bleed -->
+		<production count="1" id="4773" />
+	</item>
+	<item>
+		<!-- Fisted Blade -->
+		<ingredient count="1" id="265" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Fisted Blade - Rsk. Evasion -->
+		<production count="1" id="4792" />
+	</item>
+	<item>
+		<!-- Fisted Blade -->
+		<ingredient count="1" id="265" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Fisted Blade - Rsk. Haste -->
+		<production count="1" id="4793" />
+	</item>
+	<item>
+		<!-- Fisted Blade -->
+		<ingredient count="1" id="265" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Fisted Blade - Haste -->
+		<production count="1" id="4794" />
+	</item>
+	<item>
+		<!-- Akat Long Bow -->
+		<ingredient count="1" id="283" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Akat Long Bow - Guidance -->
+		<production count="1" id="4819" />
+	</item>
+	<item>
+		<!-- Akat Long Bow -->
+		<ingredient count="1" id="283" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Akat Long Bow - Evasion -->
+		<production count="1" id="4820" />
+	</item>
+	<item>
+		<!-- Akat Long Bow -->
+		<ingredient count="1" id="283" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Akat Long Bow - Miser -->
+		<production count="1" id="4821" />
+	</item>
+	<item>
+		<!-- Paradia Staff -->
+		<ingredient count="1" id="197" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Paradia Staff - Magic Regeneration -->
+		<production count="1" id="4876" />
+	</item>
+	<item>
+		<!-- Paradia Staff -->
+		<ingredient count="1" id="197" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Paradia Staff - Mental Shield -->
+		<production count="1" id="4877" />
+	</item>
+	<item>
+		<!-- Paradia Staff -->
+		<ingredient count="1" id="197" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Paradia Staff - Magic Hold -->
+		<production count="1" id="4878" />
+	</item>
+	<item>
+		<!-- Pa'agrian Hammer -->
+		<ingredient count="1" id="199" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Pa'agrian Hammer - Rsk. Evasion -->
+		<production count="1" id="4879" />
+	</item>
+	<item>
+		<!-- Pa'agrian Hammer -->
+		<ingredient count="1" id="199" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Pa'agrian Hammer - Magic Poison -->
+		<production count="1" id="4880" />
+	</item>
+	<item>
+		<!-- Pa'agrian Hammer -->
+		<ingredient count="1" id="199" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Pa'agrian Hammer - Magic Weakness -->
+		<production count="1" id="4881" />
+	</item>
+	<item>
+		<!-- Sage's Staff -->
+		<ingredient count="1" id="200" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sage's Staff - Magic Hold -->
+		<production count="1" id="4882" />
+	</item>
+	<item>
+		<!-- Sage's Staff -->
+		<ingredient count="1" id="200" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sage's Staff - Magic Poison -->
+		<production count="1" id="4883" />
+	</item>
+	<item>
+		<!-- Sage's Staff -->
+		<ingredient count="1" id="200" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sage's Staff - Magic Weakness -->
+		<production count="1" id="4884" />
+	</item>
+	<item>
+		<!-- Scorpion -->
+		<ingredient count="1" id="301" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="225" id="2131" />
+		<!-- Adena -->
+		<ingredient count="675000" id="57" />
+		<!-- Scorpion - Anger -->
+		<production count="1" id="4846" />
+	</item>
+	<item>
+		<!-- Scorpion -->
+		<ingredient count="1" id="301" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="225" id="2131" />
+		<!-- Adena -->
+		<ingredient count="675000" id="57" />
+		<!-- Scorpion - Critical Stun -->
+		<production count="1" id="4847" />
+	</item>
+	<item>
+		<!-- Scorpion -->
+		<ingredient count="1" id="301" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="225" id="2131" />
+		<!-- Adena -->
+		<ingredient count="675000" id="57" />
+		<!-- Scorpion - Towering Blow -->
+		<production count="1" id="4848" />
+	</item>
+	<item>
+		<!-- Widow Maker -->
+		<ingredient count="1" id="303" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="225" id="2131" />
+		<!-- Adena -->
+		<ingredient count="675000" id="57" />
+		<!-- Widow Maker - Critical Stun -->
+		<production count="1" id="4849" />
+	</item>
+	<item>
+		<!-- Widow Maker -->
+		<ingredient count="1" id="303" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="225" id="2131" />
+		<!-- Adena -->
+		<ingredient count="675000" id="57" />
+		<!-- Widow Maker - Towering Blow -->
+		<production count="1" id="4850" />
+	</item>
+	<item>
+		<!-- Widow Maker -->
+		<ingredient count="1" id="303" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="225" id="2131" />
+		<!-- Adena -->
+		<ingredient count="675000" id="57" />
+		<!-- Widow Maker - Wide Blow -->
+		<production count="1" id="4851" />
+	</item>
+	<item>
+		<!-- Pa'agrian Axe -->
+		<ingredient count="1" id="203" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="225" id="2131" />
+		<!-- Adena -->
+		<ingredient count="675000" id="57" />
+		<!-- Pa'agrian Axe - Mana Up -->
+		<production count="1" id="4885" />
+	</item>
+	<item>
+		<!-- Pa'agrian Axe -->
+		<ingredient count="1" id="203" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="225" id="2131" />
+		<!-- Adena -->
+		<ingredient count="675000" id="57" />
+		<!-- Pa'agrian Axe - Magic Weakness -->
+		<production count="1" id="4886" />
+	</item>
+	<item>
+		<!-- Pa'agrian Axe -->
+		<ingredient count="1" id="203" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="225" id="2131" />
+		<!-- Adena -->
+		<ingredient count="675000" id="57" />
+		<!-- Pa'agrian Axe - Magic Chaos -->
+		<production count="1" id="4887" />
+	</item>
+	<item>
+		<!-- Samurai Longsword -->
+		<ingredient count="1" id="135" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Samurai Longsword - Focus -->
+		<production count="1" id="4708" />
+	</item>
+	<item>
+		<!-- Samurai Longsword -->
+		<ingredient count="1" id="135" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Samurai Longsword - Critical Damage -->
+		<production count="1" id="4709" />
+	</item>
+	<item>
+		<!-- Samurai Longsword -->
+		<ingredient count="1" id="135" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Samurai Longsword - Haste -->
+		<production count="1" id="4710" />
+	</item>
+	<item>
+		<!-- Yaksa Mace -->
+		<ingredient count="1" id="2503" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Yaksa Mace - Anger -->
+		<production count="1" id="4744" />
+	</item>
+	<item>
+		<!-- Yaksa Mace -->
+		<ingredient count="1" id="2503" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Yaksa Mace - Health -->
+		<production count="1" id="4745" />
+	</item>
+	<item>
+		<!-- Yaksa Mace -->
+		<ingredient count="1" id="2503" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Yaksa Mace - Rsk. Focus -->
+		<production count="1" id="4746" />
+	</item>
+	<item>
+		<!-- Crystal Dagger -->
+		<ingredient count="1" id="228" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Crystal Dagger - Critical Bleed -->
+		<production count="1" id="4774" />
+	</item>
+	<item>
+		<!-- Crystal Dagger -->
+		<ingredient count="1" id="228" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Crystal Dagger - Critical Poison -->
+		<production count="1" id="4775" />
+	</item>
+	<item>
+		<!-- Crystal Dagger -->
+		<ingredient count="1" id="228" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Crystal Dagger - Critical Damage -->
+		<production count="1" id="6358" />
+	</item>
+	<item>
+		<!-- Great Pata -->
+		<ingredient count="1" id="266" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Great Pata - Critical Drain -->
+		<production count="1" id="4795" />
+	</item>
+	<item>
+		<!-- Great Pata -->
+		<ingredient count="1" id="266" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Great Pata - Critical Poison -->
+		<production count="1" id="4796" />
+	</item>
+	<item>
+		<!-- Great Pata -->
+		<ingredient count="1" id="266" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Great Pata - Rsk. Haste -->
+		<production count="1" id="4797" />
+	</item>
+	<item>
+		<!-- Eminence Bow -->
+		<ingredient count="1" id="286" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Eminence Bow - Guidance -->
+		<production count="1" id="4822" />
+	</item>
+	<item>
+		<!-- Eminence Bow -->
+		<ingredient count="1" id="286" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Eminence Bow - Miser -->
+		<production count="1" id="4823" />
+	</item>
+	<item>
+		<!-- Eminence Bow -->
+		<ingredient count="1" id="286" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Eminence Bow - Cheap Shot -->
+		<production count="1" id="4824" />
+	</item>
+	<item>
+		<!-- Orcish Poleaxe -->
+		<ingredient count="1" id="299" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Orcish Poleaxe - Critical Stun -->
+		<production count="1" id="4852" />
+	</item>
+	<item>
+		<!-- Orcish Poleaxe -->
+		<ingredient count="1" id="299" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Orcish Poleaxe - Towering Blow -->
+		<production count="1" id="4853" />
+	</item>
+	<item>
+		<!-- Orcish Poleaxe -->
+		<ingredient count="1" id="299" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Orcish Poleaxe - Wide Blow -->
+		<production count="1" id="4854" />
+	</item>
+	<item>
+		<!-- Deadman's Staff -->
+		<ingredient count="1" id="204" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Deadman's Staff - Magic Regeneration -->
+		<production count="1" id="4888" />
+	</item>
+	<item>
+		<!-- Deadman's Staff -->
+		<ingredient count="1" id="204" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Deadman's Staff - Mental Shield -->
+		<production count="1" id="4889" />
+	</item>
+	<item>
+		<!-- Deadman's Staff -->
+		<ingredient count="1" id="204" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Deadman's Staff - Magic Hold -->
+		<production count="1" id="4890" />
+	</item>
+	<item>
+		<!-- Ghoul's Staff -->
+		<ingredient count="1" id="205" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Ghoul's Staff - Rsk. Evasion -->
+		<production count="1" id="4891" />
+	</item>
+	<item>
+		<!-- Ghoul's Staff -->
+		<ingredient count="1" id="205" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Ghoul's Staff - Mana Up -->
+		<production count="1" id="4892" />
+	</item>
+	<item>
+		<!-- Ghoul's Staff -->
+		<ingredient count="1" id="205" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Ghoul's Staff - Blessed Body -->
+		<production count="1" id="4893" />
+	</item>
+	<item>
+		<!-- Demon's Staff -->
+		<ingredient count="1" id="206" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Demon's Staff - Magic Poison -->
+		<production count="1" id="4894" />
+	</item>
+	<item>
+		<!-- Demon's Staff -->
+		<ingredient count="1" id="206" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Demon's Staff - Magic Weakness -->
+		<production count="1" id="4895" />
+	</item>
+	<item>
+		<!-- Demon's Staff -->
+		<ingredient count="1" id="206" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Demon's Staff - Magic Chaos -->
+		<production count="1" id="4896" />
+	</item>
+	<item>
+		<!-- Keshanberk -->
+		<ingredient count="1" id="142" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Keshanberk - Guidance -->
+		<production count="1" id="4714" />
+	</item>
+	<item>
+		<!-- Keshanberk -->
+		<ingredient count="1" id="142" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Keshanberk - Focus -->
+		<production count="1" id="4715" />
+	</item>
+	<item>
+		<!-- Keshanberk -->
+		<ingredient count="1" id="142" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Keshanberk - Back Blow -->
+		<production count="1" id="4716" />
+	</item>
+	<item>
+		<!-- Great Sword -->
+		<ingredient count="1" id="78" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Great Sword - Health -->
+		<production count="1" id="4723" />
+	</item>
+	<item>
+		<!-- Great Sword -->
+		<ingredient count="1" id="78" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Great Sword - Critical Damage -->
+		<production count="1" id="4724" />
+	</item>
+	<item>
+		<!-- Great Sword -->
+		<ingredient count="1" id="78" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Great Sword - Focus -->
+		<production count="1" id="4725" />
+	</item>
+	<item>
+		<!-- Heavy War Axe -->
+		<ingredient count="1" id="91" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Heavy War Axe - Anger -->
+		<production count="1" id="4747" />
+	</item>
+	<item>
+		<!-- Heavy War Axe -->
+		<ingredient count="1" id="91" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Heavy War Axe - Health -->
+		<production count="1" id="4748" />
+	</item>
+	<item>
+		<!-- Heavy War Axe -->
+		<ingredient count="1" id="91" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Heavy War Axe - Rsk. Focus -->
+		<production count="1" id="4749" />
+	</item>
+	<item>
+		<!-- Hell Knife -->
+		<ingredient count="1" id="243" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Hell Knife - Magic Regeneration -->
+		<production count="1" id="7813" />
+	</item>
+	<item>
+		<!-- Hell Knife -->
+		<ingredient count="1" id="243" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Hell Knife - Mental Shield -->
+		<production count="1" id="7814" />
+	</item>
+	<item>
+		<!-- Hell Knife -->
+		<ingredient count="1" id="243" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Hell Knife - Magic Weakness -->
+		<production count="1" id="7815" />
+	</item>
+	<item>
+		<!-- Kris -->
+		<ingredient count="1" id="229" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Kris - Evasion -->
+		<production count="1" id="4777" />
+	</item>
+	<item>
+		<!-- Kris -->
+		<ingredient count="1" id="229" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Kris - Focus -->
+		<production count="1" id="4778" />
+	</item>
+	<item>
+		<!-- Kris -->
+		<ingredient count="1" id="229" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Kris - Back Blow -->
+		<production count="1" id="4779" />
+	</item>
+	<item>
+		<!-- Arthro Nail -->
+		<ingredient count="1" id="267" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Arthro Nail - Critical Poison -->
+		<production count="1" id="4801" />
+	</item>
+	<item>
+		<!-- Arthro Nail -->
+		<ingredient count="1" id="267" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Arthro Nail - Rsk. Evasion -->
+		<production count="1" id="4802" />
+	</item>
+	<item>
+		<!-- Arthro Nail -->
+		<ingredient count="1" id="267" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Arthro Nail - Rsk. Haste -->
+		<production count="1" id="4803" />
+	</item>
+	<item>
+		<!-- Dark Elven Long Bow -->
+		<ingredient count="1" id="284" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Dark Elven Long Bow - Evasion -->
+		<production count="1" id="4825" />
+	</item>
+	<item>
+		<!-- Dark Elven Long Bow -->
+		<ingredient count="1" id="284" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Dark Elven Long Bow - Critical Bleed -->
+		<production count="1" id="4826" />
+	</item>
+	<item>
+		<!-- Dark Elven Long Bow -->
+		<ingredient count="1" id="284" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Dark Elven Long Bow - Miser -->
+		<production count="1" id="4827" />
+	</item>
+	<item>
+		<!-- Great Axe -->
+		<ingredient count="1" id="300" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Great Axe - Anger -->
+		<production count="1" id="4855" />
+	</item>
+	<item>
+		<!-- Great Axe -->
+		<ingredient count="1" id="300" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Great Axe - Critical Stun -->
+		<production count="1" id="4856" />
+	</item>
+	<item>
+		<!-- Great Axe -->
+		<ingredient count="1" id="300" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Great Axe - Light -->
+		<production count="1" id="4857" />
+	</item>
+	<item>
+		<!-- Sprite's Staff -->
+		<ingredient count="1" id="92" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Sprite's Staff - Magic Regeneration -->
+		<production count="1" id="4897" />
+	</item>
+	<item>
+		<!-- Sprite's Staff -->
+		<ingredient count="1" id="92" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Sprite's Staff - Mental Shield -->
+		<production count="1" id="4898" />
+	</item>
+	<item>
+		<!-- Sprite's Staff -->
+		<ingredient count="1" id="92" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Sprite's Staff - Magic Hold -->
+		<production count="1" id="4899" />
+	</item>
+	<item>
+		<!-- Sword of Valhalla -->
+		<ingredient count="1" id="148" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Sword of Valhalla - Acumen -->
+		<production count="1" id="7722" />
+	</item>
+	<item>
+		<!-- Sword of Valhalla -->
+		<ingredient count="1" id="148" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Sword of Valhalla - Magic Weakness -->
+		<production count="1" id="7723" />
+	</item>
+	<item>
+		<!-- Sword of Valhalla -->
+		<ingredient count="1" id="148" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Sword of Valhalla - Magic Regeneration -->
+		<production count="1" id="7724" />
+	</item>
+	<item>
+		<!-- Sword of Damascus -->
+		<ingredient count="1" id="79" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Sword of Damascus - Focus -->
+		<production count="1" id="4717" />
+	</item>
+	<item>
+		<!-- Sword of Damascus -->
+		<ingredient count="1" id="79" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Sword of Damascus - Critical Damage -->
+		<production count="1" id="4718" />
+	</item>
+	<item>
+		<!-- Sword of Damascus -->
+		<ingredient count="1" id="79" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Sword of Damascus - Haste -->
+		<production count="1" id="4719" />
+	</item>
+	<item>
+		<!-- Deadman's Glory -->
+		<ingredient count="1" id="171" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Deadman's Glory - Anger -->
+		<production count="1" id="4750" />
+	</item>
+	<item>
+		<!-- Deadman's Glory -->
+		<ingredient count="1" id="171" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Deadman's Glory - Health -->
+		<production count="1" id="4751" />
+	</item>
+	<item>
+		<!-- Deadman's Glory -->
+		<ingredient count="1" id="171" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Deadman's Glory - Haste -->
+		<production count="1" id="4752" />
+	</item>
+	<item>
+		<!-- Art of Battle Axe -->
+		<ingredient count="1" id="175" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Art of Battle Axe - Health -->
+		<production count="1" id="4753" />
+	</item>
+	<item>
+		<!-- Art of Battle Axe -->
+		<ingredient count="1" id="175" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Art of Battle Axe - Rsk. Focus -->
+		<production count="1" id="4754" />
+	</item>
+	<item>
+		<!-- Art of Battle Axe -->
+		<ingredient count="1" id="175" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Art of Battle Axe - Haste -->
+		<production count="1" id="4755" />
+	</item>
+	<item>
+		<!-- Demon's Dagger -->
+		<ingredient count="1" id="234" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Demon's Dagger - Critical Bleed -->
+		<production count="1" id="4780" />
+	</item>
+	<item>
+		<!-- Demon's Dagger -->
+		<ingredient count="1" id="234" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Demon's Dagger - Critical Poison -->
+		<production count="1" id="4781" />
+	</item>
+	<item>
+		<!-- Demon's Dagger -->
+		<ingredient count="1" id="234" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Demon's Dagger - Critical Damage -->
+		<production count="1" id="6359" />
+	</item>
+	<item>
+		<!-- Bellion Cestus -->
+		<ingredient count="1" id="268" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Bellion Cestus - Critical Drain -->
+		<production count="1" id="4804" />
+	</item>
+	<item>
+		<!-- Bellion Cestus -->
+		<ingredient count="1" id="268" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Bellion Cestus - Critical Poison -->
+		<production count="1" id="4805" />
+	</item>
+	<item>
+		<!-- Bellion Cestus -->
+		<ingredient count="1" id="268" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Bellion Cestus - Rsk. Haste -->
+		<production count="1" id="4806" />
+	</item>
+	<item>
+		<!-- Bow of Peril -->
+		<ingredient count="1" id="287" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Bow of Peril - Guidance -->
+		<production count="1" id="4828" />
+	</item>
+	<item>
+		<!-- Bow of Peril -->
+		<ingredient count="1" id="287" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Bow of Peril - Quick Recovery -->
+		<production count="1" id="4829" />
+	</item>
+	<item>
+		<!-- Bow of Peril -->
+		<ingredient count="1" id="287" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Bow of Peril - Cheap Shot -->
+		<production count="1" id="4830" />
+	</item>
+	<item>
+		<!-- Lance -->
+		<ingredient count="1" id="97" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Lance - Anger -->
+		<production count="1" id="4858" />
+	</item>
+	<item>
+		<!-- Lance -->
+		<ingredient count="1" id="97" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Lance - Critical Stun -->
+		<production count="1" id="4859" />
+	</item>
+	<item>
+		<!-- Lance -->
+		<ingredient count="1" id="97" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Lance - Towering Blow -->
+		<production count="1" id="4860" />
+	</item>
+	<item>
+		<!-- Staff of Evil Spirits -->
+		<ingredient count="1" id="210" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Staff of Evil Spirits - Magic Focus -->
+		<production count="1" id="4900" />
+	</item>
+	<item>
+		<!-- Staff of Evil Spirits -->
+		<ingredient count="1" id="210" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Staff of Evil Spirits - Blessed Body -->
+		<production count="1" id="4901" />
+	</item>
+	<item>
+		<!-- Staff of Evil Spirits -->
+		<ingredient count="1" id="210" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Staff of Evil Spirits - Magic Poison -->
+		<production count="1" id="4902" />
+	</item>
+	<item>
+		<!-- Sword of Limit -->
+		<ingredient count="1" id="132" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Limit - Guidance -->
+		<production count="1" id="6307" />
+	</item>
+	<item>
+		<!-- Sword of Limit -->
+		<ingredient count="1" id="132" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Limit - Critical Drain -->
+		<production count="1" id="6308" />
+	</item>
+	<item>
+		<!-- Sword of Limit -->
+		<ingredient count="1" id="132" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Limit - Health -->
+		<production count="1" id="6309" />
+	</item>
+	<item>
+		<!-- Sword of Whispering Death -->
+		<ingredient count="1" id="145" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Whispering Death - Empower -->
+		<production count="1" id="6310" />
+	</item>
+	<item>
+		<!-- Sword of Whispering Death -->
+		<ingredient count="1" id="145" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Whispering Death - M. Atk. -->
+		<production count="1" id="6311" />
+	</item>
+	<item>
+		<!-- Sword of Whispering Death -->
+		<ingredient count="1" id="145" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Sword of Whispering Death - Magic Silence -->
+		<production count="1" id="6312" />
+	</item>
+	<item>
+		<!-- Homunkulus's Sword -->
+		<ingredient count="1" id="84" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Homunkulus's Sword - Acumen -->
+		<production count="1" id="6313" />
+	</item>
+	<item>
+		<!-- Homunkulus's Sword -->
+		<ingredient count="1" id="84" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Homunkulus's Sword - Conversion -->
+		<production count="1" id="6314" />
+	</item>
+	<item>
+		<!-- Homunkulus's Sword -->
+		<ingredient count="1" id="84" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Homunkulus's Sword - Magic Paralyze -->
+		<production count="1" id="6315" />
+	</item>
+	<item>
+		<!-- Berserker Blade -->
+		<ingredient count="1" id="5286" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Berserker Blade - Focus -->
+		<production count="1" id="6347" />
+	</item>
+	<item>
+		<!-- Berserker Blade -->
+		<ingredient count="1" id="5286" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Berserker Blade - Critical Damage -->
+		<production count="1" id="6348" />
+	</item>
+	<item>
+		<!-- Berserker Blade -->
+		<ingredient count="1" id="5286" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Berserker Blade - Haste -->
+		<production count="1" id="6349" />
+	</item>
+	<item>
+		<!-- Pa'agrian Sword -->
+		<ingredient count="1" id="7882" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Pa'agrian Sword - Focus -->
+		<production count="1" id="8102" />
+	</item>
+	<item>
+		<!-- Pa'agrian Sword -->
+		<ingredient count="1" id="7882" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Pa'agrian Sword - Health -->
+		<production count="1" id="8103" />
+	</item>
+	<item>
+		<!-- Pa'agrian Sword -->
+		<ingredient count="1" id="7882" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Pa'agrian Sword - Critical Drain -->
+		<production count="1" id="8104" />
+	</item>
+	<item>
+		<!-- Guardian Sword -->
+		<ingredient count="1" id="7883" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Guardian Sword - Critical Bleed -->
+		<production count="1" id="8107" />
+	</item>
+	<item>
+		<!-- Guardian Sword -->
+		<ingredient count="1" id="7883" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Guardian Sword - Critical Drain -->
+		<production count="1" id="8105" />
+	</item>
+	<item>
+		<!-- Guardian Sword -->
+		<ingredient count="1" id="7883" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Guardian Sword - Health -->
+		<production count="1" id="8106" />
+	</item>
+	<item>
+		<!-- Mysterious Sword -->
+		<ingredient count="1" id="7887" />
+		<!-- Red Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4634" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Mysterious Sword - Acumen -->
+		<production count="1" id="8111" />
+	</item>
+	<item>
+		<!-- Mysterious Sword -->
+		<ingredient count="1" id="7887" />
+		<!-- Green Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4645" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Mysterious Sword - M. Atk. -->
+		<production count="1" id="8112" />
+	</item>
+	<item>
+		<!-- Mysterious Sword -->
+		<ingredient count="1" id="7887" />
+		<!-- Blue Soul Crystal - Stage 5 -->
+		<ingredient count="1" id="4656" />
+		<!-- Gemstone C -->
+		<ingredient count="97" id="2131" />
+		<!-- Adena -->
+		<ingredient count="291000" id="57" />
+		<!-- Mysterious Sword - Magic Weakness -->
+		<production count="1" id="8113" />
+	</item>
+	<item>
+		<!-- Ecliptic Sword -->
+		<ingredient count="1" id="7888" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Ecliptic Sword - Empower -->
+		<production count="1" id="8114" />
+	</item>
+	<item>
+		<!-- Ecliptic Sword -->
+		<ingredient count="1" id="7888" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Ecliptic Sword - M. Atk. -->
+		<production count="1" id="8115" />
+	</item>
+	<item>
+		<!-- Ecliptic Sword -->
+		<ingredient count="1" id="7888" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Ecliptic Sword - Magic Silence -->
+		<production count="1" id="8116" />
+	</item>
+	<item>
+		<!-- Wizard's Tear -->
+		<ingredient count="1" id="7889" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Wizard's Tear - Acumen -->
+		<production count="1" id="8117" />
+	</item>
+	<item>
+		<!-- Wizard's Tear -->
+		<ingredient count="1" id="7889" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Wizard's Tear - Conversion -->
+		<production count="1" id="8119" />
+	</item>
+	<item>
+		<!-- Wizard's Tear -->
+		<ingredient count="1" id="7889" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Wizard's Tear - M. Atk. -->
+		<production count="1" id="8118" />
+	</item>
+	<item>
+		<!-- Ecliptic Axe -->
+		<ingredient count="1" id="7891" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Ecliptic Axe - Conversion -->
+		<production count="1" id="8138" />
+	</item>
+	<item>
+		<!-- Ecliptic Axe -->
+		<ingredient count="1" id="7891" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Ecliptic Axe - M. Atk. -->
+		<production count="1" id="8139" />
+	</item>
+	<item>
+		<!-- Ecliptic Axe -->
+		<ingredient count="1" id="7891" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Ecliptic Axe - Magic Hold -->
+		<production count="1" id="8140" />
+	</item>
+	<item>
+		<!-- Spell Breaker -->
+		<ingredient count="1" id="7892" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Spell Breaker - Acumen -->
+		<production count="1" id="8141" />
+	</item>
+	<item>
+		<!-- Spell Breaker -->
+		<ingredient count="1" id="7892" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Spell Breaker - Magic Hold -->
+		<production count="1" id="8143" />
+	</item>
+	<item>
+		<!-- Spell Breaker -->
+		<ingredient count="1" id="7892" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Spell Breaker - Mental Shield -->
+		<production count="1" id="8142" />
+	</item>
+	<item>
+		<!-- Kaim Vanul's Bones -->
+		<ingredient count="1" id="7893" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Kaim Vanul's Bones - Conversion -->
+		<production count="1" id="8146" />
+	</item>
+	<item>
+		<!-- Kaim Vanul's Bones -->
+		<ingredient count="1" id="7893" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Kaim Vanul's Bones - Magic Silence -->
+		<production count="1" id="8145" />
+	</item>
+	<item>
+		<!-- Kaim Vanul's Bones -->
+		<ingredient count="1" id="7893" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Kaim Vanul's Bones - Mana Up -->
+		<production count="1" id="8144" />
+	</item>
+	<item>
+		<!-- Dwarven Hammer -->
+		<ingredient count="1" id="7897" />
+		<!-- Green Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4648" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Dwarven Hammer - Health -->
+		<production count="1" id="8120" />
+	</item>
+	<item>
+		<!-- Dwarven Hammer -->
+		<ingredient count="1" id="7897" />
+		<!-- Red Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4637" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Dwarven Hammer - Anger -->
+		<production count="1" id="8121" />
+	</item>
+	<item>
+		<!-- Dwarven Hammer -->
+		<ingredient count="1" id="7897" />
+		<!-- Blue Soul Crystal - Stage 8 -->
+		<ingredient count="1" id="4659" />
+		<!-- Gemstone C -->
+		<ingredient count="555" id="2131" />
+		<!-- Adena -->
+		<ingredient count="1665000" id="57" />
+		<!-- Dwarven Hammer - Critical Bleed -->
+		<production count="1" id="8122" />
+	</item>
+	<item>
+		<!-- Karik Horn -->
+		<ingredient count="1" id="7898" />
+		<!-- Blue Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4658" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Karik Horn - Focus -->
+		<production count="1" id="8123" />
+	</item>
+	<item>
+		<!-- Karik Horn -->
+		<ingredient count="1" id="7898" />
+		<!-- Green Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4647" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Karik Horn - Haste -->
+		<production count="1" id="8124" />
+	</item>
+	<item>
+		<!-- Karik Horn -->
+		<ingredient count="1" id="7898" />
+		<!-- Red Soul Crystal - Stage 7 -->
+		<ingredient count="1" id="4636" />
+		<!-- Gemstone C -->
+		<ingredient count="306" id="2131" />
+		<!-- Adena -->
+		<ingredient count="918000" id="57" />
+		<!-- Karik Horn - Critical Drain -->
+		<production count="1" id="8125" />
+	</item>
+	<item>
+		<!-- Ice Storm Hammer -->
+		<ingredient count="1" id="7900" />
+		<!-- Green Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4649" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Ice Storm Hammer - Anger -->
+		<production count="1" id="8130" />
+	</item>
+	<item>
+		<!-- Ice Storm Hammer -->
+		<ingredient count="1" id="7900" />
+		<!-- Blue Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4660" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Ice Storm Hammer - Critical Bleed -->
+		<production count="1" id="8131" />
+	</item>
+	<item>
+		<!-- Ice Storm Hammer -->
+		<ingredient count="1" id="7900" />
+		<!-- Red Soul Crystal - Stage 9 -->
+		<ingredient count="1" id="4638" />
+		<!-- Gemstone B -->
+		<ingredient count="222" id="2132" />
+		<!-- Adena -->
+		<ingredient count="2220000" id="57" />
+		<!-- Ice Storm Hammer - Focus -->
+		<production count="1" id="8129" />
+	</item>
+	<item>
+		<!-- Star Buster -->
+		<ingredient count="1" id="7901" />
+		<!-- Green Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4650" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Star Buster - Haste -->
+		<production count="1" id="8133" />
+	</item>
+	<item>
+		<!-- Star Buster -->
+		<ingredient count="1" id="7901" />
+		<!-- Red Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4639" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Star Buster - Health -->
+		<production count="1" id="8132" />
+	</item>
+	<item>
+		<!-- Star Buster -->
+		<ingredient count="1" id="7901" />
+		<!-- Blue Soul Crystal - Stage 10 -->
+		<ingredient count="1" id="4661" />
+		<!-- Gemstone B -->
+		<ingredient count="339" id="2132" />
+		<!-- Adena -->
+		<ingredient count="3390000" id="57" />
+		<!-- Star Buster - Rsk. Focus -->
+		<production count="1" id="8134" />
+	</item>
+</list>

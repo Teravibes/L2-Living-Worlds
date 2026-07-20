@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Spellsinger -->
+	<skillTree type="classSkillTree" classId="27" parentClassId="26">
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="10" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="11" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="12" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="9" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="10" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="11" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="13" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="14" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="15" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="10" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="11" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="12" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="9" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="10" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="1" getLevel="40" levelUpSp="14000" learnedByNpc="true">
+			<item id="3081" count="1" /> <!-- Spellbook: Aura Flare -->
+		</skill>
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="2" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="1" getLevel="40" levelUpSp="14000" learnedByNpc="true">
+			<item id="3085" count="1" /> <!-- Spellbook: Hydro Blast -->
+		</skill>
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="2" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="1" getLevel="40" levelUpSp="14000" learnedByNpc="true">
+			<item id="3086" count="1" /> <!-- Spellbook: Frost Bolt -->
+		</skill>
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="2" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="3" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLevel="2" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="1" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="6" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="2" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="1" getLevel="40" levelUpSp="27000" learnedByNpc="true">
+			<item id="3082" count="1" /> <!-- Spellbook: Surrender to Water -->
+		</skill>
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="1" getLevel="40" levelUpSp="27000" learnedByNpc="true">
+			<item id="4917" count="1" /> <!-- Spellbook: Aura Bolt -->
+		</skill>
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="1" getLevel="40" levelUpSp="27000" learnedByNpc="true">
+			<item id="4907" count="1" /> <!-- Spellbook: Solar Flare -->
+		</skill>
+		<skill skillName="Resist Aqua" skillId="1182" skillLevel="2" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Freezing Skin" skillId="1238" skillLevel="1" getLevel="40" levelUpSp="27000" learnedByNpc="true">
+			<item id="3088" count="1" /> <!-- Spellbook: Freezing Skin -->
+		</skill>
+		<skill skillName="Mana Regeneration" skillId="1047" skillLevel="1" getLevel="40" levelUpSp="27000" learnedByNpc="true">
+			<item id="4207" count="1" /> <!-- Spellbook: Mana Regeneration -->
+		</skill>
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="1" getLevel="40" levelUpSp="27000" learnedByNpc="true">
+			<item id="3062" count="1" /> <!-- Spellbook: Curse Fear -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="14" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="15" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="12" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="14" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="16" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="17" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="18" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="14" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="15" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="11" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="12" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="3" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="4" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="3" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="4" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="3" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="4" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="1" getLevel="44" levelUpSp="18000" learnedByNpc="true">
+			<item id="3087" count="1" /> <!-- Spellbook: Ice Dagger -->
+		</skill>
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="2" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="2" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="3" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="7" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="3" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="2" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="2" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="2" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Resist Aqua" skillId="1182" skillLevel="3" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLevel="1" getLevel="44" levelUpSp="35000" learnedByNpc="true">
+			<item id="3080" count="1" /> <!-- Spellbook: Sleeping Cloud -->
+		</skill>
+		<skill skillName="Freezing Shackle" skillId="1183" skillLevel="1" getLevel="44" levelUpSp="35000" learnedByNpc="true">
+			<item id="3084" count="1" /> <!-- Spellbook: Freezing Shackle -->
+		</skill>
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="2" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="17" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="18" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="15" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="17" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="19" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="20" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="21" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="17" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="18" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="13" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="14" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="5" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="6" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="5" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="6" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="5" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="6" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="3" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="4" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="4" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Quick Recovery" skillId="164" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="2" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="8" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="4" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="1" getLevel="48" levelUpSp="57000" learnedByNpc="true">
+			<item id="3079" count="1" /> <!-- Spellbook: Cancel -->
+		</skill>
+		<skill skillName="Freezing Skin" skillId="1238" skillLevel="2" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Mana Regeneration" skillId="1047" skillLevel="2" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="21" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="18" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="22" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="23" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="24" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="21" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="15" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="16" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="7" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="8" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="7" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="8" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="7" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="8" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="1" getLevel="52" levelUpSp="45000" learnedByNpc="true">
+			<item id="3083" count="1" /> <!-- Spellbook: Frost Wall -->
+		</skill>
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="2" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="5" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="6" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="3" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="4" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="9" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="5" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="4" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="4" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="4" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="2" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Freezing Shackle" skillId="1183" skillLevel="2" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="4" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="23" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="24" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="21" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="23" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="25" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="26" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="27" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="23" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="24" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="17" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="18" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="9" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="10" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="9" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="10" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="9" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="10" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="3" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="4" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="7" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="8" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLevel="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="10" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="6" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Freezing Skin" skillId="1238" skillLevel="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLevel="2" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="25" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="26" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="24" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="25" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="28" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="29" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="11" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="12" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="25" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="26" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="11" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="12" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="5" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="6" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="19" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="4" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="11" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="9" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="11" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="7" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="6" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="6" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="6" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="4" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Aqua Splash" skillId="1295" skillLevel="1" getLevel="58" levelUpSp="110000" learnedByNpc="true">
+			<item id="5809" count="1" /> <!-- Spellbook: Aqua Splash -->
+		</skill>
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="6" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Aura Flash" skillId="1417" skillLevel="1" getLevel="58" levelUpSp="110000" learnedByNpc="true">
+			<item id="8891" count="1" /> <!-- Spellbook: Aura Flash -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="27" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="28" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="26" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="27" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="30" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="31" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="13" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="14" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="27" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="28" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="13" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="14" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="7" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="8" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="20" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="6" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="5" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="12" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="10" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="12" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="8" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="7" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="7" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="7" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="5" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Mana Regeneration" skillId="1047" skillLevel="3" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Aqua Splash" skillId="1295" skillLevel="2" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="7" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="30" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="28" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="32" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="33" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="15" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="16" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="30" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="15" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="16" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="9" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="10" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="21" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="4" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="13" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="11" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="13" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="9" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="8" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="8" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="8" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="6" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLevel="3" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Aqua Splash" skillId="1295" skillLevel="3" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="8" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Aura Flash" skillId="1417" skillLevel="2" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="32" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="30" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="34" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="35" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="17" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="18" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="32" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="17" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="18" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="11" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="12" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="22" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="14" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="12" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="14" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="10" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="9" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="9" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="9" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="7" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Freezing Shackle" skillId="1183" skillLevel="3" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Aqua Splash" skillId="1295" skillLevel="4" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="9" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="34" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="32" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="36" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="37" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="19" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="20" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="34" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="19" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="20" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="13" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="14" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="23" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="7" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="15" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="13" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="15" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="11" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="10" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="10" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="10" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="8" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Seed of Water" skillId="1286" skillLevel="1" getLevel="66" levelUpSp="320000" learnedByNpc="true">
+			<item id="4929" count="1" /> <!-- Spellbook: Seed of Water -->
+		</skill>
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLevel="4" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Aqua Splash" skillId="1295" skillLevel="5" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="10" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Aura Flash" skillId="1417" skillLevel="3" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="36" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="34" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="38" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="39" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="21" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="22" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="36" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="21" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="22" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="15" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="16" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="24" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="6" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="5" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="16" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="14" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="16" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="12" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="11" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="11" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="11" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="9" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Aura Symphony" skillId="1288" skillLevel="1" getLevel="68" levelUpSp="370000" learnedByNpc="true">
+			<item id="4931" count="1" /> <!-- Spellbook: Aura Symphony -->
+		</skill>
+		<skill skillName="Aqua Splash" skillId="1295" skillLevel="6" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="11" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="37" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="38" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="36" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="37" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="40" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="41" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="23" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="24" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="37" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="38" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="23" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="24" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="17" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="18" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="25" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="17" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="15" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="17" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="13" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="12" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="12" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="12" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="10" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Blizzard" skillId="1290" skillLevel="1" getLevel="70" levelUpSp="430000" learnedByNpc="true">
+			<item id="4933" count="1" /> <!-- Spellbook: Blizzard -->
+		</skill>
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLevel="5" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Mana Regeneration" skillId="1047" skillLevel="4" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Aqua Splash" skillId="1295" skillLevel="7" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="12" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Aura Flash" skillId="1417" skillLevel="4" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="40" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="38" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="42" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="43" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="25" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="26" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="40" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="25" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="26" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="19" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="20" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="26" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="8" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="18" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="16" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="18" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="14" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="13" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="13" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="13" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="11" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Elemental Symphony" skillId="1293" skillLevel="1" getLevel="72" levelUpSp="750000" learnedByNpc="true">
+			<item id="5014" count="1" /> <!-- Spellbook: Elemental Symphony -->
+		</skill>
+		<skill skillName="Aqua Splash" skillId="1295" skillLevel="8" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="13" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="42" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="40" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="44" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="45" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="27" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Aura Flare" skillId="1231" skillLevel="28" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="42" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="27" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Hydro Blast" skillId="1235" skillLevel="28" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="21" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Frost Wall" skillId="1174" skillLevel="22" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="27" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="6" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="7" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="6" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Frost Bolt" skillId="1236" skillLevel="19" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Ice Dagger" skillId="1237" skillLevel="17" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="19" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Surrender To Earth" skillId="1223" skillLevel="15" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Surrender To Water" skillId="1071" skillLevel="14" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Aura Bolt" skillId="1275" skillLevel="14" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Solar Flare" skillId="1265" skillLevel="14" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Cancellation" skillId="1056" skillLevel="12" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Freezing Shackle" skillId="1183" skillLevel="4" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Aqua Splash" skillId="1295" skillLevel="9" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="14" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Aura Flash" skillId="1417" skillLevel="5" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+	</skillTree>
+</list>

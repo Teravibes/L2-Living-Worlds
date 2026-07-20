@@ -1,0 +1,1874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="35600" level="56" type="Folk" name="Manager">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1724.6831" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="405.96455" magical="277.22116" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" />
+		<collision>
+			<radius normal="5" />
+			<height normal="10.5" />
+		</collision>
+	</npc>
+	<npc id="35601" level="56" type="CastleDoorman" name="Doorman">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="DoorName1" value="spa_agit_001_001" />
+			<param name="DoorName2" value="spa_agit_001_002" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1724" hpRegen="13.43" mp="9999" mpRegen="3.09" />
+			<attack physical="5400" magical="4740" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3550" magical="3900" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="600" />
+		<collision>
+			<radius normal="5" />
+			<height normal="10.5" />
+		</collision>
+	</npc>
+	<npc id="35602" level="56" type="CastleDoorman" name="Doorman">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="DoorName1" value="spa_agit_004_001" />
+			<param name="DoorName2" value="spa_agit_004_002" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1724" hpRegen="13.43" mp="9999" mpRegen="3.09" />
+			<attack physical="5400" magical="4740" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3550" magical="3900" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="600" />
+		<collision>
+			<radius normal="5" />
+			<height normal="10.5" />
+		</collision>
+	</npc>
+	<npc id="35603" level="70" type="Folk" name="Coordinator">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="600" />
+		<collision>
+			<radius normal="15" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="35604" level="56" type="Folk" name="Messenger">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1724.6831" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="405.96455" magical="277.22116" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="5" />
+			<height normal="10.5" />
+		</collision>
+	</npc>
+	<npc id="35605" level="56" type="ClanHallManager" name="Angout" title="Steward">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1724.6831" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="405.96455" magical="277.22116" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="35606" level="56" type="Folk" name="Victor's Flag">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="63.5" />
+			<height normal="97.5" />
+		</collision>
+	</npc>
+	<npc id="35607" level="56" type="Folk" name="Red Flag">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="51.8" />
+			<height normal="108.25" />
+		</collision>
+	</npc>
+	<npc id="35608" level="56" type="Folk" name="Yellow Flag">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="51.8" />
+			<height normal="108.25" />
+		</collision>
+	</npc>
+	<npc id="35609" level="56" type="Folk" name="Green Flag">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="51.8" />
+			<height normal="108.25" />
+		</collision>
+	</npc>
+	<npc id="35610" level="56" type="Folk" name="Blue Flag">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="51.8" />
+			<height normal="108.25" />
+		</collision>
+	</npc>
+	<npc id="35611" level="56" type="Folk" name="Purple Flag">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="51.8" />
+			<height normal="108.25" />
+		</collision>
+	</npc>
+	<npc id="35612" level="70" type="Folk" name="Group Gatekeeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="AgitID" value="63" />
+			<param name="Pos_x1" value="59020" />
+			<param name="Pos_y1" value="-93374" />
+			<param name="Pos_z1" value="-1352" />
+			<param name="Pos_x2" value="59020" />
+			<param name="Pos_y2" value="-93374" />
+			<param name="Pos_z2" value="-1352" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="683.28" magical="468" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.1" magical="206.28" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="35613" level="70" type="Folk" name="Group Gatekeeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="AgitID" value="63" />
+			<param name="Pos_x1" value="56954" />
+			<param name="Pos_y1" value="-92338" />
+			<param name="Pos_z1" value="-1360" />
+			<param name="Pos_x2" value="56954" />
+			<param name="Pos_y2" value="-92338" />
+			<param name="Pos_z2" value="-1360" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="683.28" magical="468" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.1" magical="206.28" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="35614" level="70" type="Folk" name="Group Gatekeeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="AgitID" value="63" />
+			<param name="Pos_x1" value="57963" />
+			<param name="Pos_y1" value="-91641" />
+			<param name="Pos_z1" value="-1360" />
+			<param name="Pos_x2" value="57963" />
+			<param name="Pos_y2" value="-91641" />
+			<param name="Pos_z2" value="-1360" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="683.28" magical="468" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.1" magical="206.28" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="35615" level="70" type="Folk" name="Group Gatekeeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="AgitID" value="63" />
+			<param name="Pos_x1" value="58835" />
+			<param name="Pos_y1" value="-92432" />
+			<param name="Pos_z1" value="-1360" />
+			<param name="Pos_x2" value="58835" />
+			<param name="Pos_y2" value="-92432" />
+			<param name="Pos_z2" value="-1360" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="683.28" magical="468" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.1" magical="206.28" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="35616" level="70" type="Folk" name="Group Gatekeeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="AgitID" value="63" />
+			<param name="Pos_x1" value="58423" />
+			<param name="Pos_y1" value="-93505" />
+			<param name="Pos_z1" value="-1360" />
+			<param name="Pos_x2" value="58423" />
+			<param name="Pos_y2" value="-93505" />
+			<param name="Pos_z2" value="-1360" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="683.28" magical="468" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.1" magical="206.28" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="35617" level="70" type="Folk" name="Group Gatekeeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="AgitID" value="63" />
+			<param name="Pos_x1" value="57267" />
+			<param name="Pos_y1" value="-93405" />
+			<param name="Pos_z1" value="-1360" />
+			<param name="Pos_x2" value="57267" />
+			<param name="Pos_y2" value="-93405" />
+			<param name="Pos_z2" value="-1360" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="11.85" mp="1493" mpRegen="2.78" />
+			<attack physical="683.28" magical="468" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.1" magical="206.28" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="35618" level="60" type="Defender" name="Frenzied Cougar">
+		<parameters>
+			<param name="Dest_X" value="57760" />
+			<param name="Dest_Y" value="-92608" />
+			<param name="Dest_Z" value="-1312" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="70386.6449027313" hpRegen="8.5" mp="2143.56666666667" mpRegen="3" />
+			<attack physical="293.998763258434" magical="625.529276102317" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1240.61871367051" magical="226.8662" />
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="34" />
+			<height normal="28" grown="34" />
+		</collision>
+	</npc>
+	<npc id="35619" level="60" type="Defender" name="Frenzied Buffalo">
+		<parameters>
+			<param name="Dest_X" value="57760" />
+			<param name="Dest_Y" value="-92608" />
+			<param name="Dest_Z" value="-1312" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="31673.9902062291" hpRegen="8.5" mp="2143.56666666667" mpRegen="3" />
+			<attack physical="293.998763258434" magical="625.529276102317" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1240.61871367051" magical="226.8662" />
+			<speed>
+				<walk ground="80" />
+				<run ground="140" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="22" grown="27" />
+			<height normal="31" grown="38" />
+		</collision>
+	</npc>
+	<npc id="35620" level="70" type="Defender" name="Frenzied Kookaburra">
+		<parameters>
+			<param name="Dest_X" value="57760" />
+			<param name="Dest_Y" value="-92608" />
+			<param name="Dest_Z" value="-1312" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="35193.3224513656" hpRegen="8.5" mp="2143.56666666667" mpRegen="3" />
+			<attack physical="293.998763258434" magical="625.529276102317" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2481.23742734103" magical="226.8662" />
+			<speed>
+				<walk ground="23" />
+				<run ground="140" />
+			</speed>
+			<hitTime>540</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="10" grown="13" />
+			<height normal="33" grown="40" />
+		</collision>
+	</npc>
+	<npc id="35621" level="70" type="Defender" name="Frenzied Buffalo Baby">
+		<parameters>
+			<param name="Dest_X" value="57760" />
+			<param name="Dest_Y" value="-92608" />
+			<param name="Dest_Z" value="-1312" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="35193.3224513656" hpRegen="8.5" mp="2143.56666666667" mpRegen="3" />
+			<attack physical="293.998763258434" magical="625.529276102317" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="620.309356835257" magical="226.8662" />
+			<speed>
+				<walk ground="30" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="35622" level="70" type="Defender" name="Frenzied Baby Cougar">
+		<parameters>
+			<param name="Dest_X" value="57760" />
+			<param name="Dest_Y" value="-92608" />
+			<param name="Dest_Z" value="-1312" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="28154.6579610925" hpRegen="8.5" mp="2143.56666666667" mpRegen="3" />
+			<attack physical="235.199010606747" magical="625.529276102317" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="992.494970936412" magical="226.8662" />
+			<speed>
+				<walk ground="28" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15.7" />
+		</collision>
+	</npc>
+	<npc id="35623" level="70" type="Folk" name="Inner Doorman">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="DoorName1" value="Farm_003" />
+			<param name="DoorName2" value="Farm_004" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" grown="17" />
+			<height normal="32" grown="39" />
+		</collision>
+	</npc>
+	<npc id="35624" level="70" type="Folk" name="Inner Doorman">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="DoorName1" value="Farm_003" />
+			<param name="DoorName2" value="Farm_004" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" grown="17" />
+			<height normal="32" grown="39" />
+		</collision>
+	</npc>
+	<npc id="35625" level="70" type="Folk" name="Outer Doorman">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="DoorName1" value="Farm_001" />
+			<param name="DoorName2" value="Farm_002" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" grown="17" />
+			<height normal="32" grown="39" />
+		</collision>
+	</npc>
+	<npc id="35626" level="70" type="Folk" name="Outer Doorman">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="DoorName1" value="Farm_001" />
+			<param name="DoorName2" value="Farm_002" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" grown="17" />
+			<height normal="32" grown="39" />
+		</collision>
+	</npc>
+	<npc id="35627" level="70" type="Folk" name="Messenger">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" grown="17" />
+			<height normal="32" grown="39" />
+		</collision>
+	</npc>
+	<npc id="35628" level="70" type="Folk" name="Quigby" title="Farm Manager">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="74" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" grown="17" />
+			<height normal="32" grown="39" />
+		</collision>
+	</npc>
+	<npc id="35629" level="73" type="Monster" name="Lidia von Hellmann">
+		<parameters>
+			<param name="AreaName1" value="lidia_zone1" />
+			<param name="AreaName2" value="lidia_zone2" />
+			<param name="AreaName3" value="lidia_zone3" />
+			<skill name="SelfRangeDDMagic" id="4999" level="1" /> <!-- Lidia - Range Life Drain -->
+			<skill name="DDMagic" id="4998" level="1" /> <!-- Lidia - Twister -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="8209" /> <!-- rhand: Monster Only (Lidia Von Helmann Sword) -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="903214.01529417" hpRegen="37.3" mp="1607.4" mpRegen="3" />
+			<attack physical="1575.77421162885" magical="556.495115206205" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="486.91174" />
+			<speed>
+				<walk ground="20" />
+				<run ground="180" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4998" level="1" /> <!-- Lidia - Twister -->
+			<skill id="4999" level="1" /> <!-- Lidia - Range Life Drain -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="25.4" />
+		</collision>
+	</npc>
+	<npc id="35630" level="72" type="Defender" name="Alfred von Hellmann">
+		<parameters>
+			<param name="AreaName" value="lidia_zone3" />
+			<skill name="PhysicalSpecial" id="5000" level="1" /> <!-- Alfred - Super Strike -->
+			<skill name="DDMagic" id="5001" level="1" /> <!-- Alfred - Life Drain -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="8679" /> <!-- rhand: Sword of Ipos -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="110191.515554098" hpRegen="22.5" mp="1574" mpRegen="3" />
+			<attack physical="1440.0352703072" magical="124.100601309407" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="984.81219" magical="480.42854" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5000" level="1" /> <!-- Alfred - Super Strike -->
+			<skill id="5001" level="1" /> <!-- Alfred - Life Drain -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="19" grown="22" />
+			<height normal="35" grown="42.9" />
+		</collision>
+	</npc>
+	<npc id="35631" level="72" type="Defender" name="Giselle von Hellmann">
+		<parameters>
+			<param name="AreaName1" value="lidia_zone1" />
+			<param name="AreaName2" value="lidia_zone2" />
+			<skill name="SelfRangeBuff_a" id="5002" level="1" /> <!-- Giselle - Vampiric Rage -->
+			<skill name="DDMagic" id="5003" level="1" /> <!-- Giselle - Tempest -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="99" /> <!-- rhand: Apprentice's Spellbook -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="110191.515554098" hpRegen="22.5" mp="1574" mpRegen="3" />
+			<attack physical="1440.0352703072" magical="124.100601309407" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="984.81219" magical="480.42854" />
+			<speed>
+				<walk ground="46" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5002" level="1" /> <!-- Giselle - Vampiric Rage -->
+			<skill id="5003" level="1" /> <!-- Giselle - Tempest -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="5.5" grown="6.5" />
+			<height normal="28" grown="34.5" />
+		</collision>
+	</npc>
+	<npc id="35632" level="72" type="Defender" name="Vampire Adept">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="946" /> <!-- rhand: Skeleton Dagger -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7144.07596150875" hpRegen="8.5" mp="1442.4" mpRegen="3" />
+			<attack physical="1722.93049617806" magical="136.904519716845" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="310.02959" magical="226.8662" />
+			<speed>
+				<walk ground="64" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="6" grown="7" />
+			<height normal="21.5" grown="25.8" />
+		</collision>
+	</npc>
+	<npc id="35633" level="71" type="Defender" name="Vampire Soldier">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="234" /> <!-- rhand: Demon's Dagger -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7896.58908" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<attack physical="1709.62599479499" magical="528.41601" random="5" critical="12" accuracy="-3.75" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="314.65987" magical="230.25444" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" grown="9" />
+			<height normal="23.5" grown="29" />
+		</collision>
+	</npc>
+	<npc id="35634" level="72" type="Defender" name="Vampire Caster">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_FiendArcher" id="5056" level="7" /> <!-- Castle DD Wind -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="946" /> <!-- rhand: Skeleton Dagger -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8029.97562" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="3526.34865872365" magical="542.68324" random="5" critical="12" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="40" distance="10" width="0" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="64" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4066" level="8" /> <!-- NPC Twister -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5056" level="7" /> <!-- Castle DD Wind -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="700" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="6" grown="7" />
+			<height normal="21.5" grown="25.8" />
+		</collision>
+	</npc>
+	<npc id="35635" level="73" type="Defender" name="Vampire Magister">
+		<parameters>
+			<param name="MoveAroundSocial" value="95" />
+			<param name="MoveAroundSocial1" value="95" />
+			<param name="MoveAroundSocial2" value="95" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="99" /> <!-- rhand: Apprentice's Spellbook -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8274.17769984" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="1922.69132349405" magical="562.9734023" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="46" />
+				<run ground="155" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="5.5" grown="6.5" />
+			<height normal="28" grown="34.5" />
+		</collision>
+	</npc>
+	<npc id="35636" level="73" type="Defender" name="Vampire Warlord">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<skill name="Buff" id="4030" level="3" /> <!-- NPC Clan Might -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6723" /> <!-- rhand: Monster Only(Vampire Warrior) -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8570.3061768948" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<attack physical="1712.88111790828" magical="584.837886935576" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="43" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" grown="10" />
+			<height normal="31.5" grown="38" />
+		</collision>
+	</npc>
+	<npc id="35637" level="73" type="Defender" name="Vampire Leader">
+		<parameters>
+			<param name="MoveAroundSocial" value="130" />
+			<param name="MoveAroundSocial1" value="130" />
+			<param name="MoveAroundSocial2" value="130" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8923.07059194948" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1556.42253864287" magical="608.096657928153" random="5" critical="12" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="15" />
+				<run ground="170" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7.5" />
+			<height normal="25.8" />
+		</collision>
+	</npc>
+	<npc id="35638" level="70" type="Folk" name="Valens" title="Wyvern Manager">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" grown="9" />
+			<height normal="23.5" grown="29" />
+		</collision>
+	</npc>
+	<npc id="35639" level="70" type="Folk" name="Jacquard" title="Messenger">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" grown="9" />
+			<height normal="23.5" grown="29" />
+		</collision>
+	</npc>
+	<npc id="35640" level="70" type="ClanHallManager" name="Bandello" title="Steward">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" grown="9" />
+			<height normal="23.5" grown="29" />
+		</collision>
+	</npc>
+	<npc id="35641" level="70" type="CastleDoorman" name="Fortress Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="DoorName1" value="fortress_outter_001" />
+			<param name="DoorName2" value="fortress_outter_002" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="60" />
+				<run ground="1" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" grown="9" />
+			<height normal="23.5" grown="29" />
+		</collision>
+	</npc>
+	<npc id="35642" level="70" type="CastleDoorman" name="Fortress Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="DoorName1" value="fortress_003" />
+			<param name="DoorName2" value="fortress_004" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="60" />
+				<run ground="1" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" grown="9" />
+			<height normal="23.5" grown="29" />
+		</collision>
+	</npc>
+	<npc id="35643" level="70" type="Folk" name="Gate">
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1724.6831" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<attack physical="405.96455" magical="277.22116" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="600">
+			<clanList>
+				<clan>DION_SIEGE</clan>
+				<clan>DOOR</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="184" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35644" level="70" type="Merchant" name="Manor Manager" title="Schuttgart">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="93" />
+			<param name="manor_id" value="9" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="35645" level="70" type="Merchant" name="Manor Manager" title="Schuttgart">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="180" />
+			<param name="manor_id" value="9" />
+		</parameters>
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35646" level="72" type="Folk" name="Vampire Caster">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="946" /> <!-- rhand: Skeleton Dagger -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6886" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="2773" magical="426.74754" random="5" critical="12" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="40" distance="10" width="0" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="64" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4066" level="8" /> <!-- NPC Twister -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5056" level="7" /> <!-- Castle DD Wind -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="700">
+			<clanList>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="6" grown="7" />
+			<height normal="21.5" grown="25.8" />
+		</collision>
+	</npc>
+	<npc id="35647" level="73" type="Folk" name="Vampire Leader">
+		<parameters>
+			<param name="MoveAroundSocial" value="130" />
+			<param name="MoveAroundSocial1" value="130" />
+			<param name="MoveAroundSocial2" value="130" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7333" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="1204" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="15" />
+				<run ground="170" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="100">
+			<clanList>
+				<clan>LIDIA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7.5" />
+			<height normal="25.8" />
+		</collision>
+	</npc>
+	<npc id="35648" level="70" type="Folk" name="Court Magician" title="Gludio">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="33" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="21.957" />
+		</collision>
+	</npc>
+	<npc id="35649" level="70" type="Folk" name="Court Magician" title="Dion">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="33" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="21.957" />
+		</collision>
+	</npc>
+	<npc id="35650" level="70" type="Folk" name="Court Magician" title="Giran">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="33" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="21.957" />
+		</collision>
+	</npc>
+	<npc id="35651" level="70" type="Folk" name="Court Magician" title="Oren">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="33" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="21.957" />
+		</collision>
+	</npc>
+	<npc id="35652" level="70" type="Folk" name="Court Magician" title="Aden">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="33" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="21.957" />
+		</collision>
+	</npc>
+	<npc id="35653" level="70" type="Folk" name="Court Magician" title="Innadril">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="33" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="21.957" />
+		</collision>
+	</npc>
+	<npc id="35654" level="70" type="Folk" name="Court Magician" title="Goddard">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="33" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="21.957" />
+		</collision>
+	</npc>
+	<npc id="35655" level="70" type="Folk" name="Court Magician" title="Rune">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="33" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="21.957" />
+		</collision>
+	</npc>
+	<npc id="35656" level="70" type="Folk" name="Court Magician" title="Schuttgart">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="33" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="21.957" />
+		</collision>
+	</npc>
+</list>

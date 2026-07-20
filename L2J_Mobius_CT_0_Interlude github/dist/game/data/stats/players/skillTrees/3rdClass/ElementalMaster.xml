@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Elemental Master -->
+	<skillTree type="classSkillTree" classId="104" parentClassId="28">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="12500000" learnedByNpc="true" />
+		<skill skillName="Warrior Bane" skillId="1350" skillLevel="1" getLevel="76" levelUpSp="12500000" learnedByNpc="true">
+			<item id="7660" count="1" /> <!-- Spellbook - Warrior Bane -->
+		</skill>
+
+		<skill skillName="Skill Mastery" skillId="331" skillLevel="1" getLevel="77" levelUpSp="14670000" learnedByNpc="true" />
+		<skill skillName="Wizard Servitor" skillId="1347" skillLevel="1" getLevel="77" levelUpSp="14670000" learnedByNpc="true">
+			<item id="7657" count="1" /> <!-- Spellbook - Wizard Servitor -->
+		</skill>
+		<skill skillName="Spell Force" skillId="427" skillLevel="1" getLevel="77" levelUpSp="14670000" learnedByNpc="true" />
+
+		<skill skillName="Arcane Agility" skillId="338" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+		<skill skillName="Final Servitor" skillId="1349" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true">
+			<item id="7659" count="1" /> <!-- Spellbook - Final Servitor -->
+		</skill>
+		<skill skillName="Summon Lore" skillId="435" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+
+		<skill skillName="Summon Magnus the Unicorn" skillId="1407" skillLevel="1" getLevel="79" levelUpSp="80000000" learnedByNpc="true">
+			<item id="8879" count="1" /> <!-- Spellbook: Summon Magnus the Unicorn -->
+		</skill>
+
+		<skill skillName="Anti-Summoning Field" skillId="1424" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8904" count="1" /> <!-- Ancient Spellbook: Anti-Summoning Field -->
+		</skill>
+	</skillTree>
+</list>

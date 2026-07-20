@@ -1,0 +1,1688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="600" type="Armor" name="Sealed Avadon Boots">
+		<set name="icon" val="icon.armor_t66_b_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="69" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1170" />
+		<set name="price" val="519000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="601" type="Armor" name="Sealed Doom Boots">
+		<set name="icon" val="icon.armor_t71_b_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="107" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="804000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="602" type="Armor" name="Boots of Pledge">
+		<set name="icon" val="icon.armor_iron_boots_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="154" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1130" />
+		<set name="price" val="1160000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">45</stat>
+		</stats>
+	</item>
+	<item id="603" type="Armor" name="Divine Boots">
+		<set name="icon" val="icon.armor_t67_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="143" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1200" />
+		<set name="price" val="358000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">39</stat>
+		</stats>
+	</item>
+	<item id="604" type="Armor" name="Crafted Leather Gloves">
+		<set name="icon" val="icon.armor_t09_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="38" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="650" />
+		<set name="price" val="20900" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">19</stat>
+		</stats>
+	</item>
+	<item id="605" type="Armor" name="Leather Gauntlets">
+		<set name="icon" val="icon.armor_t18_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="60" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="640" />
+		<set name="price" val="33300" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">22</stat>
+		</stats>
+	</item>
+	<item id="606" type="Armor" name="Rip Gauntlets">
+		<set name="icon" val="icon.armor_t40_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="135" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="630" />
+		<set name="price" val="74700" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">27</stat>
+		</stats>
+	</item>
+	<item id="607" type="Armor" name="Ogre Power Gauntlets">
+		<set name="icon" val="icon.armor_t45_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="177" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="620" />
+		<set name="price" val="97800" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">29</stat>
+		</stats>
+	</item>
+	<item id="608" type="Armor" name="Mithril Gauntlets">
+		<set name="icon" val="icon.armor_t61_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="98" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="600" />
+		<set name="price" val="245000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">36</stat>
+		</stats>
+	</item>
+	<item id="609" type="Armor" name="Gauntlets of Ghost">
+		<set name="icon" val="icon.armor_gauntlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="143" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1920" />
+		<set name="price" val="358000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">39</stat>
+		</stats>
+	</item>
+	<item id="610" type="Armor" name="Saint Knight's Gauntlets">
+		<set name="icon" val="icon.armor_gauntlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="69" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="6400" />
+		<set name="price" val="519000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="611" type="Armor" name="Soul Leech Gauntlets">
+		<set name="icon" val="icon.armor_gauntlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="107" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="4800" />
+		<set name="price" val="804000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="612" type="Armor" name="Sealed Zubei's Gauntlets">
+		<set name="icon" val="icon.armor_t64_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="69" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="price" val="519000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="613" type="Armor" name="Sand Dragon Gloves">
+		<set name="icon" val="icon.armor_gauntlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="140" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="3200" />
+		<set name="price" val="1760000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">48</stat>
+		</stats>
+	</item>
+	<item id="614" type="Armor" name="Knight's Cloak">
+		<set name="icon" val="icon.armor_back04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="38" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="240" />
+		<set name="price" val="20900" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">7</stat>
+		</stats>
+	</item>
+	<item id="615" type="Armor" name="Cobweb Cloak">
+		<set name="icon" val="icon.armor_back05" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="60" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="COBWEB" />
+		<set name="weight" val="240" />
+		<set name="price" val="33300" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">8</stat>
+		</stats>
+	</item>
+	<item id="616" type="Armor" name="Cloak of Magic">
+		<set name="icon" val="icon.armor_back06" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="135" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="240" />
+		<set name="price" val="74700" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">11</stat>
+		</stats>
+	</item>
+	<item id="617" type="Armor" name="Mithril Cloak">
+		<set name="icon" val="icon.armor_back07" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="177" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="240" />
+		<set name="price" val="97800" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">11</stat>
+		</stats>
+	</item>
+	<item id="618" type="Armor" name="Cloak of Self Protection">
+		<set name="icon" val="icon.armor_back08" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="64" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="240" />
+		<set name="price" val="161000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">13</stat>
+		</stats>
+	</item>
+	<item id="619" type="Armor" name="(Not In Use) Ancient Cloak">
+		<set name="icon" val="icon.armor_back09" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="98" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="230" />
+		<set name="price" val="245000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">15</stat>
+		</stats>
+	</item>
+	<item id="620" type="Armor" name="Cloak of Protection">
+		<set name="icon" val="icon.armor_back09" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="143" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="230" />
+		<set name="price" val="358000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">16</stat>
+		</stats>
+	</item>
+	<item id="621" type="Armor" name="Cloak of Hell">
+		<set name="icon" val="icon.armor_back09" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="107" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="price" val="804000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">18</stat>
+		</stats>
+	</item>
+	<item id="622" type="Armor" name="(Not In Use) Holy Spirit's Cloak">
+		<set name="icon" val="icon.armor_back09" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="price" val="1160000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">18</stat>
+		</stats>
+	</item>
+	<item id="623" type="Armor" name="Divine Cloak">
+		<set name="icon" val="icon.armor_back09" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="140" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="price" val="1760000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">19</stat>
+		</stats>
+	</item>
+	<item id="624" type="Armor" name="Cloak of Invisibility">
+		<set name="icon" val="icon.armor_back09" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="260" />
+		<set name="price" val="37" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">2</stat>
+		</stats>
+	</item>
+	<item id="625" type="Armor" name="Bone Shield">
+		<set name="icon" val="icon.shield_bone_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1380" />
+		<set name="price" val="12900" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">90</stat>
+		</stats>
+	</item>
+	<item id="626" type="Armor" name="Bronze Shield">
+		<set name="icon" val="icon.shield_bronze_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="39" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1370" />
+		<set name="price" val="21900" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">101</stat>
+		</stats>
+	</item>
+	<item id="627" type="Armor" name="Aspis">
+		<set name="icon" val="icon.shield_aspis_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="63" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1350" />
+		<set name="price" val="35000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">114</stat>
+		</stats>
+	</item>
+	<item id="628" type="Armor" name="Hoplon">
+		<set name="icon" val="icon.shield_hoplon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="96" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1340" />
+		<set name="price" val="53300" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">128</stat>
+		</stats>
+	</item>
+	<item id="629" type="Armor" name="Kite Shield">
+		<set name="icon" val="icon.shield_kite_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="142" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1320" />
+		<set name="price" val="78400" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">142</stat>
+		</stats>
+	</item>
+	<item id="630" type="Armor" name="Square Shield">
+		<set name="icon" val="icon.shield_square_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="187" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1310" />
+		<set name="price" val="103000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">154</stat>
+		</stats>
+	</item>
+	<item id="631" type="Armor" name="Eldarake">
+		<set name="icon" val="icon.shield_eldarake_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="53" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1290" />
+		<set name="price" val="133000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">166</stat>
+		</stats>
+	</item>
+	<item id="632" type="Armor" name="Knight's Shield">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="67" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1260" />
+		<set name="price" val="169000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">178</stat>
+		</stats>
+	</item>
+	<item id="633" type="Armor" name="Zubei's Shield">
+		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1210" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="634" type="Armor" name="Dragon Shield">
+		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="125" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1170" />
+		<set name="price" val="2510000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_dropable" val="false" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">269</stat>
+		</stats>
+	</item>
+	<item id="635" type="Armor" name="Wolf Shield">
+		<set name="icon" val="icon.shield_small_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="640" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="636" type="Armor" name="Shining Dragon Shield">
+		<set name="icon" val="icon.shield_doom_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="720" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="637" type="Armor" name="Shield of Valor">
+		<set name="icon" val="icon.shield_small_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="720" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="638" type="Armor" name="Glorious Shield">
+		<set name="icon" val="icon.shield_shield_of_victory_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="800" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="639" type="Armor" name="Red Flame Shield">
+		<set name="icon" val="icon.shield_tower_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="960" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="640" type="Armor" name="Elven Crystal Shield">
+		<set name="icon" val="icon.shield_masterpiece_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="720" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="641" type="Armor" name="Dark Crystal Shield">
+		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="97" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="1190" />
+		<set name="price" val="1220000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">243</stat>
+		</stats>
+	</item>
+	<item id="642" type="Armor" name="Elven Vagian Shield">
+		<set name="icon" val="icon.shield_shield_of_victory_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="560" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="643" type="Armor" name="Dark Vagian Shield">
+		<set name="icon" val="icon.shield_shield_of_victory_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="644" type="Armor" name="Hell Shield">
+		<set name="icon" val="icon.shield_shield_of_grace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="640" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="645" type="Armor" name="Art of Shield">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="560" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="646" type="Armor" name="Shield of Silence">
+		<set name="icon" val="icon.shield_shield_of_assistance_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="640" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="647" type="Armor" name="Gust Shield">
+		<set name="icon" val="icon.shield_shield_of_grace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="720" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="648" type="Armor" name="Prairie Shield">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="800" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="649" type="Armor" name="Shield of Underworld">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="880" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="650" type="Armor" name="Shield of Concentration">
+		<set name="icon" val="icon.shield_shield_of_grace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="960" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="651" type="Armor" name="Ace's Shield">
+		<set name="icon" val="icon.shield_shield_of_assistance_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1040" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="652" type="Armor" name="Guardian's Shield">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1120" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="653" type="Armor" name="Marksman Shield">
+		<set name="icon" val="icon.shield_doom_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1200" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="654" type="Armor" name="Shield of Mana">
+		<set name="icon" val="icon.shield_shield_of_pledge_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="480" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="655" type="Armor" name="Sage's Shield">
+		<set name="icon" val="icon.shield_sages_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="656" type="Armor" name="Paradia Shield">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="480" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="657" type="Armor" name="Inferno Shield">
+		<set name="icon" val="icon.shield_shield_of_victory_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="658" type="Armor" name="Shield of Black Ore">
+		<set name="icon" val="icon.shield_composite_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="659" type="Armor" name="Shield of Summoning">
+		<set name="icon" val="icon.shield_shield_of_sola_eclipse_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="480" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="660" type="Armor" name="Otherworldly Shield">
+		<set name="icon" val="icon.shield_round_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="661" type="Armor" name="Elemental Shield">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="480" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="662" type="Armor" name="Shield of Phantom">
+		<set name="icon" val="icon.shield_shield_of_assistance_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="663" type="Armor" name="Shield of Grace">
+		<set name="icon" val="icon.shield_leather_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="480" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="664" type="Armor" name="Shield of Holy Spirit">
+		<set name="icon" val="icon.shield_composite_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="665" type="Armor" name="Phoenix Shield">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="480" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="666" type="Armor" name="Cerberus Shield">
+		<set name="icon" val="icon.shield_doom_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="667" type="Armor" name="Shield of Aid">
+		<set name="icon" val="icon.shield_shield_of_assistance_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="480" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="668" type="Armor" name="Shield of Blessing">
+		<set name="icon" val="icon.shield_shield_of_pledge_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="669" type="Armor" name="Flame Shield">
+		<set name="icon" val="icon.shield_composite_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="480" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="670" type="Armor" name="Shield of Bravery">
+		<set name="icon" val="icon.shield_shield_of_assistance_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="671" type="Armor" name="Blood Shield">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="480" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="672" type="Armor" name="Absolute Shield">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="673" type="Armor" name="Avadon Shield">
+		<set name="icon" val="icon.shield_avadon_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="72" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1210" />
+		<set name="price" val="545000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">216</stat>
+		</stats>
+	</item>
+	<item id="674" type="Armor" name="Divine Shield">
+		<set name="icon" val="icon.shield_knight_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="112" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="560" />
+		<set name="price" val="845000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="675" type="Armor" name="Silk Yarn Undergarment Set">
+		<set name="icon" val="icon.armor_underwear01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="170" />
+		<set name="price" val="1330" />
+		<stats>
+			<stat type="pDef">6</stat>
+		</stats>
+	</item>
+	<item id="676" type="Armor" name="Pure White Undergarment Set">
+		<set name="icon" val="icon.armor_underwear01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="160" />
+		<set name="price" val="6150" />
+		<stats>
+			<stat type="pDef">9</stat>
+		</stats>
+	</item>
+	<item id="677" type="Armor" name="One-Piece Swimsuit">
+		<set name="icon" val="icon.armor_underwear01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="18" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="150" />
+		<set name="price" val="10400" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">10</stat>
+		</stats>
+	</item>
+	<item id="678" type="Armor" name="Bikini Set">
+		<set name="icon" val="icon.armor_underwear02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="30" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="150" />
+		<set name="price" val="16700" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">11</stat>
+		</stats>
+	</item>
+	<item id="679" type="Armor" name="Cursed Undergarment Set">
+		<set name="icon" val="icon.armor_underwear01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="46" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="150" />
+		<set name="price" val="25400" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">12</stat>
+		</stats>
+	</item>
+	<item id="680" type="Armor" name="Mithril Undergarment Set">
+		<set name="icon" val="icon.armor_underwear01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="25" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="140" />
+		<set name="price" val="63100" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">16</stat>
+		</stats>
+	</item>
+	<item id="681" type="Armor" name="Fascination Undergarment Set">
+		<set name="icon" val="icon.armor_underwear01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="32" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="140" />
+		<set name="price" val="80500" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">17</stat>
+		</stats>
+	</item>
+	<item id="682" type="Armor" name="Demon's Undergarment Set">
+		<set name="icon" val="icon.armor_underwear01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="140" />
+		<set name="price" val="179000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">19</stat>
+		</stats>
+	</item>
+	<item id="683" type="Armor" name="Holy Undergarment Set">
+		<set name="icon" val="icon.armor_underwear01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="53" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="140" />
+		<set name="price" val="402000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">22</stat>
+		</stats>
+	</item>
+	<item id="684" type="Armor" name="Underwear of Rule">
+		<set name="icon" val="icon.armor_underwear02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="70" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="140" />
+		<set name="price" val="880000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">24</stat>
+		</stats>
+	</item>
+	<item id="685" type="Armor" name="Crystal Swimsuit Set">
+		<set name="icon" val="icon.armor_underwear02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="65" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="130" />
+		<set name="price" val="1310000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">26</stat>
+		</stats>
+	</item>
+	<item id="686" type="EtcItem" name="Chair">
+		<!-- Chair -->
+		<set name="icon" val="icon.etc_branch_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
+		<set name="price" val="1000" />
+	</item>
+	<item id="687" type="EtcItem" name="Darin's Letter">
+		<!-- The love letter that Darin has written to Roxxy. Darin has asked you to deliver this letter to Gatekeeper Roxxy. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="688" type="EtcItem" name="Roxxy's Kerchief">
+		<!-- Roxxy's handkerchief. This is the reply that Roxxy has given to Darin's letter, and must be delivered to Darin. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="689" type="EtcItem" name="Poetry Book">
+		<!-- A poetry book treasured by Arujien. The book contains poems that he has written. Take this to Greenis. -->
+		<set name="icon" val="icon.etc_spell_books_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="690" type="EtcItem" name="Lyrics Book">
+		<!-- The lyrics book of Herbien -->
+		<set name="icon" val="icon.item_normal06" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="691" type="EtcItem" name="Romance Novel">
+		<!-- A romance novel -->
+		<set name="icon" val="icon.item_normal07" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="692" type="EtcItem" name="Arujien's Letter">
+		<!-- Arujien's letter -->
+		<set name="icon" val="icon.item_canuse37" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="693" type="EtcItem" name="Greenis's Letter">
+		<!-- Greenis's letter, refusing Arujien's love. Take this to Arujien. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="694" type="EtcItem" name="Ingredient List">
+		<!-- A list of ingredients: 3 omen beast bloods, 2 mana seeker husks, 2 gargoyle horns -->
+		<set name="icon" val="icon.item_normal37" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="695" type="EtcItem" name="Omen Beast's Blood">
+		<!-- The blood of an omen beast. -->
+		<set name="icon" val="icon.item_canuse48" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="696" type="EtcItem" name="Mana Seeker's Husk">
+		<!-- The husk of a mana seeker. -->
+		<set name="icon" val="icon.item_normal30" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="697" type="EtcItem" name="Gargoyle's Horn">
+		<!-- The horn of a gargoyle. -->
+		<set name="icon" val="icon.item_normal24" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="698" type="EtcItem" name="Gilbert's List">
+		<!-- A list of things to eliminate: orcs, hobgoblins, walking fungus -->
+		<set name="icon" val="icon.item_normal37" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="699" type="EtcItem" name="Orc's Nose">
+		<!-- The nose of an orc. -->
+		<set name="icon" val="icon.item_canuse05" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+</list>

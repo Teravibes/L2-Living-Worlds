@@ -1,0 +1,25 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="npc" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="skill">
+								<xs:complexType>
+									<xs:attribute type="xs:positiveInteger" name="id" use="required" />
+									<xs:attribute type="xs:short" name="level" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="initialDelay" use="optional" />
+									<xs:attribute type="xs:positiveInteger" name="delay" use="required" />
+									<xs:attribute type="xs:string" name="affectScope" use="optional" />
+									<xs:attribute type="xs:string" name="affectObject" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:positiveInteger" name="id" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

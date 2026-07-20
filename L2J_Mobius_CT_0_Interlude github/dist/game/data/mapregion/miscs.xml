@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+	<!-- The Royal Family's Catacomb -->
+	<region name="the_royal_family's_catacomb" town="The Royal Family's Catacomb" castle="0" locId="1659" bbs="15">
+		<respawnPoint X="181544" Y="-80897" Z="-2728" />
+		<respawnPoint X="181415" Y="-80791" Z="-2728" />
+		<respawnPoint X="181383" Y="-80984" Z="-2728" />
+		<respawnPoint X="181277" Y="-81017" Z="-2728" />
+		<respawnPoint X="181232" Y="-80937" Z="-2728" />
+		<respawnPoint X="181063" Y="-81000" Z="-2728" />
+		<respawnPoint X="181125" Y="-80920" Z="-2728" />
+		<respawnPoint X="181122" Y="-80869" Z="-2728" />
+		<respawnPoint X="181155" Y="-80825" Z="-2728" />
+		<respawnPoint X="181142" Y="-80754" Z="-2728" />
+		<respawnPoint X="181301" Y="-80776" Z="-2728" />
+		<respawnPoint X="181398" Y="-80782" Z="-2728" />
+		<respawnPoint X="181722" Y="-80785" Z="-2728" />
+		<respawnPoint X="181491" Y="-80868" Z="-2728" />
+		<respawnPoint X="181544" Y="-80897" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181415" Y="-80791" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181383" Y="-80984" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181277" Y="-81017" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181232" Y="-80937" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181063" Y="-81000" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181125" Y="-80920" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181122" Y="-80869" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181155" Y="-80825" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181142" Y="-80754" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181301" Y="-80776" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181398" Y="-80782" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181722" Y="-80785" Z="-2728" isChaotic="true" />
+		<respawnPoint X="181491" Y="-80868" Z="-2728" isChaotic="true" />
+	</region>
+
+	<!-- Spirit Cave -->
+	<region name="spirit_cave" town="Soul Island" castle="0" locId="2189" bbs="13">
+		<respawnPoint X="-125607" Y="38452" Z="1152" />
+		<respawnPoint X="-125472" Y="38450" Z="1152" />
+		<respawnPoint X="-125615" Y="37771" Z="1152" />
+		<respawnPoint X="-125464" Y="37776" Z="1152" />
+		<respawnPoint X="-125517" Y="38267" Z="1155" />
+		<respawnPoint X="-125531" Y="37944" Z="1155" />
+		<respawnPoint X="-122237" Y="55073" Z="-1609" isChaotic="true" />
+		<respawnPoint X="-120736" Y="58526" Z="-2032" isChaotic="true" />
+		<respawnPoint X="-106674" Y="49527" Z="-1735" isChaotic="true" />
+		<respawnPoint X="-107156" Y="45055" Z="-1673" isChaotic="true" />
+		<respawnPoint X="-106104" Y="47189" Z="-1529" isChaotic="true" />
+	</region>
+
+	<!-- Southern Wasteland -->
+	<region name="southern_wasteland" town="Southern Wasteland" castle="0" locId="2190" bbs="2">
+		<respawnPoint X="-16434" Y="208803" Z="-3691" />
+		<respawnPoint X="-16929" Y="209712" Z="-3691" />
+		<respawnPoint X="-16219" Y="210056" Z="-3691" />
+		<respawnPoint X="-15686" Y="209285" Z="-3691" />
+		<respawnPoint X="-17067" Y="208965" Z="-3691" />
+		<respawnPoint X="-17463" Y="209659" Z="-3691" />
+		<respawnPoint X="-16434" Y="208803" Z="-3691" isChaotic="true" />
+		<respawnPoint X="-16929" Y="209712" Z="-3691" isChaotic="true" />
+		<respawnPoint X="-16219" Y="210056" Z="-3691" isChaotic="true" />
+		<respawnPoint X="-15686" Y="209285" Z="-3691" isChaotic="true" />
+		<respawnPoint X="-17067" Y="208965" Z="-3691" isChaotic="true" />
+		<respawnPoint X="-17463" Y="209659" Z="-3691" isChaotic="true" />
+		<map X="19" Y="25" />
+		<map X="20" Y="25" />
+	</region>
+
+	<!-- Border Of Nightmare -->
+	<region name="border_of_nightmare" town="Border of Nightmare" castle="0" locId="3065" bbs="7">
+		<respawnPoint X="-114633" Y="-154243" Z="-6720" />
+		<respawnPoint X="-114619" Y="-153720" Z="-6720" />
+		<respawnPoint X="-114595" Y="-153080" Z="-6720" />
+		<respawnPoint X="-114619" Y="-152528" Z="-6720" />
+		<respawnPoint X="-114633" Y="-154243" Z="-6720" isChaotic="true" />
+		<respawnPoint X="-114619" Y="-153720" Z="-6720" isChaotic="true" />
+		<respawnPoint X="-114595" Y="-153080" Z="-6720" isChaotic="true" />
+		<respawnPoint X="-114619" Y="-152528" Z="-6720" isChaotic="true" />
+	</region>
+</list>

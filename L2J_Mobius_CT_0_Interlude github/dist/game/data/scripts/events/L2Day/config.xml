@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event name="L2 Day" active="23 03 2006-28 03 2016" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
+	<droplist>
+		<add item="3875" min="1" max="1" chance="1%" /> <!-- A -->
+		<add item="3876" min="1" max="1" chance="1%" /> <!-- C -->
+		<add item="3877" min="1" max="1" chance="1%" /> <!-- E -->
+		<add item="3878" min="1" max="1" chance="1%" /> <!-- F -->
+		<add item="3879" min="1" max="1" chance="1%" /> <!-- G -->
+		<add item="3880" min="1" max="1" chance="1%" /> <!-- H -->
+		<add item="3881" min="1" max="1" chance="1%" /> <!-- I -->
+		<add item="3882" min="1" max="1" chance="1%" /> <!-- L -->
+		<add item="3883" min="1" max="1" chance="1%" /> <!-- N -->
+		<add item="3884" min="1" max="1" chance="1%" /> <!-- O -->
+		<add item="3885" min="1" max="1" chance="1%" /> <!-- R -->
+		<add item="3886" min="1" max="1" chance="1%" /> <!-- S -->
+		<add item="3887" min="1" max="1" chance="1%" /> <!-- T -->
+		<add item="3888" min="1" max="1" chance="1%" /> <!-- II -->
+	</droplist>
+	<spawnlist>
+		<add npc="31854" x="-84128" y="243258" z="-3735" heading="9707" />
+		<add npc="31855" x="45510" y="48364" z="-3065" heading="49859" />
+		<add npc="31856" x="11861" y="16173" z="-4568" heading="18289" />
+		<add npc="31857" x="115639" y="-178066" z="-921" heading="27485" />
+		<add npc="31858" x="-44810" y="-113388" z="-192" heading="15527" />
+	</spawnlist>
+	<messages>
+		<add type="onEnd" text="L2 Day: Event end!" />
+		<add type="onEnter" text="L2 Day Event: Collect letters from monsters. Create the words NCSOFT, CHRONICLE and LINEAGE II. Turn these letters to the Event Manager in the villages and win great prizes!" />
+	</messages>
+</event>

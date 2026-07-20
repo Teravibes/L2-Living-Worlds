@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="2001" levels="1" name="Red Potion">
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="HealOverTime" ticks="3">
+				<power>2</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2002" levels="1" name="Healing Drug">
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="HealOverTime" ticks="3">
+				<power>1.5</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2003" levels="1" name="Squash Seed">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6389</itemConsumeId> <!-- Squash Seed -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>12774</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2004" levels="1" name="Large Squash Seed">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6390</itemConsumeId> <!-- Large Squash Seed -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>12777</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2005" levels="1" name="Pollen">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType> <!-- FIXME: This should be OTHERS -->
+		<castRange>200</castRange>
+		<effectPoint>-150</effectPoint>
+		<effectRange>300</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6391</itemConsumeId> <!-- Pollen -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="2006" levels="1" name="Scroll: Enchant Weapon (Grade A)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2007" levels="1" name="Scroll: Enchant Armor (Grade A)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2008" levels="1" name="Item - Beast Spirit Shot">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2009" levels="1" name="Item - Beast Blessed Spirit Shot">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2010" levels="1" name="Endeavor Potion">
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>HIT_UP</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">4</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2011" levels="1" name="Haste Potion">
+		<!-- Increases Speed. Effect 1. -->
+		<icon>icon.etc_potion_green_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">20</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2012" levels="1" name="Potion of Alacrity">
+		<!-- Temporarily increases Atk. Spd. Effect 1. -->
+		<icon>icon.etc_reagent_green_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.15</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2013" levels="1" name="Scroll of Escape">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>20000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>736</itemConsumeId> <!-- Scroll of Escape -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2014" levels="1" name="Scroll of Resurrection">
+		<operateType>A1</operateType>
+		<targetType>PC_BODY</targetType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>15000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>737</itemConsumeId> <!-- Scroll of Resurrection -->
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<player canResurrect="true" />
+		</conditions>
+		<effects>
+			<effect name="Resurrection" />
+		</effects>
+	</skill>
+	<skill id="2015" levels="1" name="Scroll: Enchant Weapon (Grade B)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2016" levels="1" name="Scroll: Enchant Armor (Grade B)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2017" levels="1" name="Scroll: Enchant Weapon (Grade C)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2018" levels="1" name="Scroll: Enchant Armor (Grade C)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2019" levels="1" name="Scroll: Enchant Weapon (Grade D)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2020" levels="1" name="Scroll: Enchant Armor (Grade D)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2021" levels="1" name="Scroll: Enchant Weapon (Grade S)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2022" levels="1" name="Scroll: Enchant Armor (Grade S)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2023" levels="1" name="Elven Firework">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6403</itemConsumeId> <!-- Star Shard -->
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2024" levels="1" name="Firework">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6406</itemConsumeId> <!-- Firework -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="2025" levels="1" name="Large Firework">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6407</itemConsumeId> <!-- Large Firework -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="2026" levels="1" name="Scroll: Enchant Weapon (Grade S)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2027" levels="1" name="Scroll: Enchant Weapon (Grade A)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2028" levels="1" name="Scroll: Enchant Weapon (Grade B)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2029" levels="1" name="Scroll: Enchant Weapon (Grade C)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2030" levels="1" name="Scroll: Enchant Weapon (Grade D)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2031" levels="1" name="Lesser Healing Potion">
+		<!-- Increases HP regeneration significantly. Effect 1. -->
+		<icon>icon.etc_lesser_potion_red_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="HealOverTime" ticks="3">
+				<power>8</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2032" levels="1" name="Healing Potion">
+		<!-- Increases HP regeneration significantly. Effect 2. -->
+		<icon>icon.etc_potion_scarlet_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="HealOverTime" ticks="3">
+				<power>24</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2033" levels="1" name="Item - Beast Soul Shot">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2034" levels="1" name="Greater Haste Potion">
+		<!-- Increases Speed. Effect 2. -->
+		<icon>icon.etc_lesser_potion_green_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">33</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2035" levels="1" name="Greater Swift Attack Potion">
+		<!-- Increases Atk. Spd. Effect 2. -->
+		<icon>icon.etc_lesser_potion_purple_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.33</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2036" levels="2" name="Blessed Scroll of Escape">
+		<table name="#itemConsumeId">1538 3958</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>200</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2037" levels="1" name="Greater Healing Potion">
+		<!-- Increases HP regeneration significantly. Effect 3. -->
+		<icon>icon.etc_reagent_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="HealOverTime" ticks="3">
+				<power>50</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2038" levels="1" name="Quick Healing Potion">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Heal">
+				<power>435</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2039" levels="1" name="Soulshot: No Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2040" levels="1" name="Scroll of Escape: Clan Hall">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>20000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>1829</itemConsumeId> <!-- Scroll of Escape: Clan Hall -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>CLANHALL</escapeType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2041" levels="1" name="Scroll of Escape: Castle">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>20000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>1830</itemConsumeId> <!-- Scroll of Escape: Castle -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>CASTLE</escapeType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2042" levels="1" name="Antidote">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>POISON,3</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2043" levels="1" name="Greater Antidote">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>POISON,7</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2044" levels="1" name="Bandage">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>BLEEDING,3</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2045" levels="1" name="Emergency Dressing">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>BLEEDING,7</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2046" levels="1" name="Wolves' Necklace">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>5000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="SummonPet" />
+		</effects>
+	</skill>
+	<skill id="2047" levels="1" name="Spiritshot: No Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2048" levels="1" name="Wolves' Food">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<feed>100</feed>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2049" levels="1" name="Blessed Scroll of Resurrection">
+		<operateType>A1</operateType>
+		<targetType>PC_BODY</targetType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3936</itemConsumeId> <!-- Blessed Scroll of Resurrection -->
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<player canResurrect="true" />
+		</conditions>
+		<effects>
+			<effect name="Resurrection">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2050" levels="1" name="Scroll of Guidance">
+		<!-- Increases Accuracy. Effect 3. -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>HIT_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3926</itemConsumeId> <!-- L2Day - Scroll of Guidance -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">4</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2051" levels="1" name="Scroll of Death Whisper">
+		<!-- Increases the impact of a critical attack. Effect 3. -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3927</itemConsumeId> <!-- L2Day - Scroll of Death Whisper -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critDmg">1.35</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2052" levels="1" name="Scroll of Focus">
+		<!-- Increases critical attack rate. Effect 3. -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3928</itemConsumeId> <!-- L2Day - Scroll of Focus -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRate">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2053" levels="1" name="Scroll of Greater Acumen">
+		<!-- Increases Casting Spd. Effect 3. -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3929</itemConsumeId> <!-- L2Day - Scroll of Greater Acumen -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2054" levels="1" name="Scroll of Haste">
+		<!-- Increases Atk. Spd. Effect 2. -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3930</itemConsumeId> <!-- L2Day - Scroll of Haste -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.33</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2055" levels="1" name="Scroll of Agility">
+		<!-- Increases Evasion. Effect 3. -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>AVOID_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3931</itemConsumeId> <!-- L2Day - Scroll of Agility -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">4</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2056" levels="1" name="Scroll of Mystic Empower">
+		<!-- Increases M. Atk. Effect 3. -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3932</itemConsumeId> <!-- L2Day - Scroll of Mystic Empower -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtk">1.75</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2057" levels="1" name="Scroll of Might">
+		<!-- Increases P. Atk. Effect 3. -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3933</itemConsumeId> <!-- L2Day - Scroll of Might -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">1.15</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2058" levels="1" name="Scroll of Wind Walk">
+		<!-- Increases Speed. Effect 2. -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3934</itemConsumeId> <!-- L2Day - Scroll of Windwalk -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">33</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2059" levels="1" name="Scroll of Shield">
+		<!-- Increases P. Def. Effect 3. -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3935</itemConsumeId> <!-- L2Day - Scroll of Shield -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.15</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2060" levels="1" name="Healing Medicine">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>FATAL_POISON,1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2061" levels="1" name="Blessed Spiritshot: No Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2062" levels="1" name="">
+		<operateType>A1</operateType>
+		<targetType>PC_BODY</targetType>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3959</itemConsumeId> <!-- L2Day - Blessed Resurrection Effect -->
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<player canResurrect="true" />
+		</conditions>
+		<effects>
+			<effect name="Resurrection">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2063" levels="1" name="Hatchling Food">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<feed>150</feed>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
+		<!-- Increases MP regeneration. Effect 4 -->
+		<icon>icon.etc_scroll_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MP_REGEN_UP</abnormalType>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>4218</itemConsumeId> <!-- L2 Day - Scroll of Mana Regeneration -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="regMp">1.82</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2065" levels="8" name="Box Key">
+		<table name="#effectPoints">-1 -2 -3 -4 -5 -6 -7 -8</table>
+		<operateType>A1</operateType>
+		<targetType>UNLOCKABLE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount> <!-- Epilogue Modification -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>3000</reuseDelay>
+		<conditions msgId="109">
+			<target npcType="Chest" />
+		</conditions>
+		<effects>
+			<effect name="OpenChest" />
+		</effects>
+	</skill>
+	<skill id="2066" levels="1" name="Item - Theme Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2067" levels="1" name="Item - Theme Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2068" levels="1" name="Item - Race Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2069" levels="1" name="Item - Race Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2070" levels="1" name="Item - Race Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2071" levels="1" name="Item - Race Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2072" levels="1" name="Item - Race Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2073" levels="1" name="Item - Theme Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2074" levels="1" name="Potion of Critical Escape">
+		<!-- Misdirects enemy attack and slows Speed of user. -->
+		<icon>icon.etc_potion_red_i00</icon>
+		<operateType>A3</operateType>
+		<targetType>AREA</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<affectLimit>9-10</affectLimit>
+		<affectRange>200</affectRange>
+		<castRange>600</castRange>
+		<effectRange>800</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="RandomizeHate" />
+			<effect name="Debuff">
+				<mul stat="runSpd">0.7</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2075" levels="1" name="Decrease Hate Scroll">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectRange>800</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DeleteHateOfMe">
+				<chance>70</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2076" levels="1" name="Bless of Eva">
+		<!-- Increase lung capacity. Effect 1. -->
+		<icon>icon.etc_bless_of_eva_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>400</abnormalTime>
+		<abnormalType>MAX_BREATH_UP</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="breath">5</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2077" levels="1" name="Potion of Revenge">
+		<!-- Lowers user's P. Def. and reflects a certain amount of damage back to the enemy, excluding damage from skill use or remote attacks. Effect 3. -->
+		<icon>icon.etc_potion_blue_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>DMG_SHIELD</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">0.83</mul>
+				<add stat="reflectDam">20</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2078" levels="1" name="Compressed Package of Soulshots: No Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>1835</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2079" levels="1" name="Compressed Package of Soulshots: D-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>1463</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2080" levels="1" name="Compressed Package of Soulshots: C-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>1464</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2081" levels="1" name="Compressed Package of Soulshots: B-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>1465</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2082" levels="1" name="Compressed Package of Soulshots: A-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>1466</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2083" levels="1" name="Compressed Package of Soulshots: S-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>1467</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2084" levels="1" name="Compressed Package of Spiritshots: No Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>2509</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2085" levels="1" name="Compressed Package of Spiritshots: D-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>2510</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2086" levels="1" name="Compressed Package of Spiritshots: C-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>2511</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2087" levels="1" name="Compressed Package of Spiritshots: B-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>2512</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2088" levels="1" name="Compressed Package of Spiritshots: A-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>2513</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2089" levels="1" name="Compressed Package of Spiritshots: S-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>2514</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2090" levels="1" name="Compressed Package of Blessed Spiritshots: No Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>3947</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2091" levels="1" name="Compressed Package of Blessed Spiritshots: D-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>3948</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2092" levels="1" name="Compressed Package of Blessed Spiritshots: C-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>3949</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2093" levels="1" name="Compressed Package of Blessed Spiritshots: B-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>3950</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2094" levels="1" name="Compressed Package of Blessed Spiritshots: A-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>3951</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2095" levels="1" name="Compressed Package of Blessed Spiritshots: S-grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>3952</itemId>
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2096" levels="1" name="Soul Crystal">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>300</castRange>
+		<effectPoint>-150</effectPoint>
+		<effectRange>500</effectRange>
+		<hitTime>1200</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>26</mpConsume>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="2097" levels="3" name="Sowing">
+		<table name="#magicLevel">10 20 30</table>
+		<table name="#mpConsume">4 6 8</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1800</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="Sow" />
+		</effects>
+	</skill>
+	<skill id="2098" levels="1" name="Harvesting">
+		<operateType>A1</operateType>
+		<targetType>CORPSE_MOB</targetType>
+		<castRange>20</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>3</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="Harvesting" />
+		</effects>
+	</skill>
+	<skill id="2099" levels="1" name="Escape: 5 minutes">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>300000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
+	</skill>
+</list>

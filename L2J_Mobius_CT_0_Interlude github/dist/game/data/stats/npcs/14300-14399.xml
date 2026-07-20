@@ -1,0 +1,3223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="14300" level="27" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="4" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="824" hpRegen="5.53" mp="367" mpRegen="1.53" />
+			<attack physical="80.08" magical="62.1" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="118.75" magical="101.79" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="3" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14301" level="37" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="5" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1356" hpRegen="7.11" mp="553" mpRegen="1.84" />
+			<attack physical="155.4" magical="122.72" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="154.7" magical="129.2" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="3" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14302" level="46" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="5" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1967" hpRegen="8.69" mp="816" mpRegen="2.14" />
+			<attack physical="260.65" magical="187.86" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="191.1" magical="161" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="3" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14303" level="54" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="5" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2594" hpRegen="10.27" mp="1102" mpRegen="2.45" />
+			<attack physical="381.6" magical="267.81" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="222.23" magical="190.45" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="4" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14304" level="60" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="6" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3093.184704" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="481.34551" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="6" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="4" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14305" level="62" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="6" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3260.497312" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="6" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="4" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14306" level="64" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="6" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3426.914032" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="6" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="4" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14307" level="66" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="6" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3591.48344" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="276.72752" magical="202.49719" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="6" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="4" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14308" level="68" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="6" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3753.227168" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="209.54692" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="6" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14309" level="70" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="7" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3911.149104" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="7" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14310" level="72" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="7" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4064.245296" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="7" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14311" level="74" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="7" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4211.514176" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.65987" magical="230.25444" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="7" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14312" level="76" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="7" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4351.967232" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="7" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14313" level="78" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="8" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="855.81" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="8" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14314" level="78" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="8" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="860.08905" magical="591.0000196" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="8" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14315" level="78" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="8" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="864.3681" magical="597.5900392" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="8" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14316" level="78" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="8" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="868.64715" magical="604.1800588" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="8" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14317" level="78" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="8" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="872.9262" magical="610.7700784" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="8" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14318" level="78" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="8" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="877.20525" magical="617.360098" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="8" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14319" level="78" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="9" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="881.4843" magical="623.9501175" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="9" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14320" level="78" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="9" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="885.76335" magical="630.5401371" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="9" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14321" level="78" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="9" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="890.0424" magical="637.1301567" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="9" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14322" level="79" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="9" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="894.32145" magical="643.7201763" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="9" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14323" level="79" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="9" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="898.6005" magical="650.3101959" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="9" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14324" level="79" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="9" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="902.87955" magical="656.9002155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="9" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14325" level="79" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="10" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="907.1586" magical="663.4902351" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14326" level="79" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="10" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="911.43765" magical="670.0802547" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14327" level="79" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="10" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="915.7167" magical="676.6702743" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14328" level="79" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="10" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="919.99575" magical="683.2602939" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14329" level="79" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="10" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="924.2748" magical="689.8503135" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14330" level="79" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="10" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="928.55385" magical="696.440333" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14331" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="11" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="932.8329" magical="703.0303526" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14332" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="11" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="937.11195" magical="709.6203722" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14333" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="11" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="941.391" magical="716.2103918" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14334" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="11" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="945.67005" magical="722.8004114" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14335" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="11" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="949.9491" magical="729.390431" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14336" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="11" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="954.22815" magical="735.9804506" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14337" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="12" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="958.5072" magical="742.5704702" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14338" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="12" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="962.78625" magical="749.1604898" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14339" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="12" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="967.0653" magical="755.7505094" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14340" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="12" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="971.34435" magical="762.340529" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14341" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="12" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="975.6234" magical="768.9305486" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14342" level="80" type="Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="12" /> <!-- Master Recharge -->
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="979.90245" magical="775.5205681" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4025" level="1" /> <!-- Master Recharge -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14343" level="27" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="2" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="824" hpRegen="5.53" mp="367" mpRegen="1.53" />
+			<attack physical="80.08" magical="62.1" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="118.75" magical="101.79" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14344" level="37" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="2" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1356" hpRegen="7.11" mp="553" mpRegen="1.84" />
+			<attack physical="155.4" magical="122.72" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="154.7" magical="129.2" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14345" level="47" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="3" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2042" hpRegen="8.69" mp="851" mpRegen="2.14" />
+			<attack physical="277.55" magical="200.88" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="197.34" magical="165.9" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14346" level="54" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="3" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2594" hpRegen="10.27" mp="1102" mpRegen="2.45" />
+			<attack physical="381.6" magical="267.81" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="222.23" magical="190.45" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14347" level="22" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="4" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="619" hpRegen="5.53" mp="279" mpRegen="1.53" />
+			<attack physical="52.36" magical="38.64" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="96.9" magical="83.52" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14348" level="32" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="4" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1069" hpRegen="7.11" mp="458" mpRegen="1.84" />
+			<attack physical="107.8" magical="81.42" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="128.35" magical="107.92" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14349" level="42" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="5" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1681" hpRegen="8.69" mp="679" mpRegen="2.14" />
+			<attack physical="202.15" magical="141.36" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="167.7" magical="141.4" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14350" level="50" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="5" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2273" hpRegen="8.69" mp="957" mpRegen="2.14" />
+			<attack physical="305.4" magical="208.56" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="197.38" magical="169" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14351" level="58" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="5" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2925.892256" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<attack physical="442.8992" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="5" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14352" level="60" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="6" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3093.184704" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="481.34551" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="6" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14353" level="62" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="6" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3260.497312" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="6" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14354" level="64" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="6" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3426.914032" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="6" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14355" level="66" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="6" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3591.48344" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="276.72752" magical="202.49719" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="6" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14356" level="68" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="6" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3753.227168" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="209.54692" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="6" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14357" level="70" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="7" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3911.149104" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="7" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14358" level="72" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="7" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4064.245296" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="7" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14359" level="74" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="7" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4211.514176" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.65987" magical="230.25444" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="7" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14360" level="76" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="7" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4351.967232" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="7" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14361" level="78" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="855.81" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14362" level="78" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="860.08905" magical="591.0000196" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14363" level="78" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="864.3681" magical="597.5900392" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14364" level="78" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="868.64715" magical="604.1800588" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14365" level="78" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="872.9262" magical="610.7700784" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14366" level="78" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="877.20525" magical="617.360098" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="8" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14367" level="78" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="881.4843" magical="623.9501175" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14368" level="78" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="885.76335" magical="630.5401371" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14369" level="78" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="890.0424" magical="637.1301567" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14370" level="79" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="894.32145" magical="643.7201763" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14371" level="79" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="898.6005" magical="650.3101959" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14372" level="79" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="902.87955" magical="656.9002155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="9" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14373" level="79" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="10" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="907.1586" magical="663.4902351" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14374" level="79" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="10" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="911.43765" magical="670.0802547" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14375" level="79" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="10" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="915.7167" magical="676.6702743" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14376" level="79" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="10" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="919.99575" magical="683.2602939" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14377" level="79" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="10" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="924.2748" magical="689.8503135" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14378" level="79" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="10" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="928.55385" magical="696.440333" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14379" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="11" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="932.8329" magical="703.0303526" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14380" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="11" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="937.11195" magical="709.6203722" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14381" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="11" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="941.391" magical="716.2103918" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14382" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="11" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="945.67005" magical="722.8004114" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14383" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="11" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="949.9491" magical="729.390431" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14384" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="11" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="954.22815" magical="735.9804506" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14385" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="12" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="958.5072" magical="742.5704702" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14386" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="12" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="962.78625" magical="749.1604898" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14387" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="12" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="967.0653" magical="755.7505094" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14388" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="12" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="971.34435" magical="762.340529" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14389" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="12" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="975.6234" magical="768.9305486" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14390" level="80" type="Pet" name="Mirage the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4261" level="12" /> <!-- Mega Storm Strike -->
+			<param name="step1_action01" value="46" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="979.90245" magical="775.5205681" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hitTime>690</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4261" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14391" level="42" type="Pet" name="Merrow the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4137" level="4" /> <!-- Hydro Screw -->
+			<param name="step1_action01" value="43" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1260.979824" hpRegen="5.5" mp="531" mpRegen="2.1" />
+			<attack physical="218.180501" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="164.88513" magical="120.65578" />
+			<speed>
+				<walk ground="48" />
+				<run ground="180" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4137" level="4" /> <!-- Hydro Screw -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="2" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="14392" level="46" type="Pet" name="Merrow the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4137" level="4" /> <!-- Hydro Screw -->
+			<param name="step1_action01" value="43" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1475.744136" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<attack physical="272.85786" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="182.18816" magical="133.31739" />
+			<speed>
+				<walk ground="48" />
+				<run ground="180" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4137" level="4" /> <!-- Hydro Screw -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="2" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="14393" level="50" type="Pet" name="Merrow the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4137" level="5" /> <!-- Hydro Screw -->
+			<param name="step1_action01" value="43" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1705.201236" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="336.103966" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200.23844" magical="146.5258" />
+			<speed>
+				<walk ground="48" />
+				<run ground="180" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4137" level="5" /> <!-- Hydro Screw -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="2" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="14394" level="54" type="Pet" name="Merrow the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4137" level="5" /> <!-- Hydro Screw -->
+			<param name="step1_action01" value="43" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1946.107416" hpRegen="6.5" mp="861" mpRegen="2.4" />
+			<attack physical="407.757944" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="218.89589" magical="160.17851" />
+			<speed>
+				<walk ground="48" />
+				<run ground="180" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4137" level="5" /> <!-- Hydro Screw -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="2" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="14395" level="58" type="Pet" name="Merrow the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4137" level="5" /> <!-- Hydro Screw -->
+			<param name="step1_action01" value="43" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2194.419192" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<attack physical="487.18912" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
+			<speed>
+				<walk ground="48" />
+				<run ground="180" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4137" level="5" /> <!-- Hydro Screw -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="14396" level="60" type="Pet" name="Merrow the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4137" level="6" /> <!-- Hydro Screw -->
+			<param name="step1_action01" value="43" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2319.888528" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="529.480061" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" />
+			<speed>
+				<walk ground="48" />
+				<run ground="180" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4137" level="6" /> <!-- Hydro Screw -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="14397" level="62" type="Pet" name="Merrow the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4137" level="6" /> <!-- Hydro Screw -->
+			<param name="step1_action01" value="43" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2445.372984" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<attack physical="573.236301" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
+			<speed>
+				<walk ground="48" />
+				<run ground="180" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4137" level="6" /> <!-- Hydro Screw -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="14398" level="64" type="Pet" name="Merrow the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4137" level="6" /> <!-- Hydro Screw -->
+			<param name="step1_action01" value="43" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2570.185524" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="618.225025" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="48" />
+				<run ground="180" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4137" level="6" /> <!-- Hydro Screw -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="14399" level="66" type="Pet" name="Merrow the Unicorn">
+		<parameters>
+			<skill name="DDMagic" id="4137" level="6" /> <!-- Hydro Screw -->
+			<param name="step1_action01" value="43" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2693.61258" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<attack physical="664.178933" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="276.72752" magical="202.49719" />
+			<speed>
+				<walk ground="48" />
+				<run ground="180" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4137" level="6" /> <!-- Hydro Screw -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+</list>

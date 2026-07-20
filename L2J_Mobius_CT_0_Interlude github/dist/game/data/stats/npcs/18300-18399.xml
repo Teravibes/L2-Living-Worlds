@@ -1,0 +1,1890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="18300" level="33" type="Folk" name="Offering of the Branded, Evoked Spirit">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="PhysicalSpecial" id="4572" level="3" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="158" /> <!-- rhand: Tarbar -->
+		<acquire exp="1751" sp="100" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
+			<attack physical="113.49065" magical="77.49941" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="129.23095" magical="78.2854098527333" />
+			<speed>
+				<walk ground="45" />
+				<run ground="155" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="3" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="18301" level="46" type="Folk" name="Flame of Apostates">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4614" level="5" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="8451" sp="597" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3689.36034" hpRegen="16.5" mp="637.8" mpRegen="2.1" />
+			<attack physical="248.0526" magical="169.38777" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="182.18816" magical="110.365783306098" />
+			<speed>
+				<walk ground="48" />
+				<run ground="30" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="5" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="18302" level="44" type="Folk" name="Offering of Apostates, Evoked Spirit">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="PhysicalSpecial" id="4572" level="4" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="172" /> <!-- rhand: Heavy Bone Club -->
+		<acquire exp="3113" sp="213" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1138.62924" hpRegen="5.5" mp="584" mpRegen="2.1" />
+			<attack physical="222.23112" magical="151.75505" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="173.43552" magical="105.063618563116" />
+			<speed>
+				<walk ground="45" />
+				<run ground="160" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="4" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="22" grown="26.4" />
+		</collision>
+	</npc>
+	<npc id="18303" level="57" type="Folk" name="Flame of the Witch">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4614" level="6" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="12978" sp="1077" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5329.74054" hpRegen="19.5" mp="948" mpRegen="2.4" />
+			<attack physical="424.23295" magical="289.69611" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="233.18839" magical="141.260653361756" />
+			<speed>
+				<walk ground="48" />
+				<run ground="30" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="6" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="18304" level="55" type="Folk" name="Offering of the Witch, Evoked Spirit">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="PhysicalSpecial" id="4572" level="5" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="91" /> <!-- rhand: Heavy War Axe -->
+		<acquire exp="4864" sp="393" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="135.474142874948" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="5" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18305" level="68" type="Folk" name="Flame of Dark Omen">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4614" level="7" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="18471" sp="1782" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7037.30094" hpRegen="22.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="173.471817575614" />
+			<speed>
+				<walk ground="48" />
+				<run ground="30" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="7" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="18306" level="66" type="Folk" name="Offering of Dark Omen, Evoked Spirit">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="PhysicalSpecial" id="4572" level="6" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2503" /> <!-- rhand: Yaksa Mace -->
+		<acquire exp="7004" sp="659" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="276.72752" magical="167.635752432965" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="6" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18307" level="79" type="Folk" name="Flame of Forbidden Path">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="24306" sp="2763" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8612.3322261" hpRegen="25.755" mp="1657.41" mpRegen="3.03" />
+			<attack physical="884.2525659" magical="609.868172336" random="7" critical="4" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="340.4407808" magical="206.231917983858" evasion="1" />
+			<speed>
+				<walk ground="48" />
+				<run ground="30" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="18308" level="77" type="Folk" name="Offering of /Forbidden Path, Evoked Spirit">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="PhysicalSpecial" id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="175" /> <!-- rhand: Art of Battle Axe -->
+		<acquire exp="9533" sp="1032" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2762.08447" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<attack physical="835.75573" magical="570.71283" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="198.859549127918" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<hitTime>300</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18309" level="35" type="Folk" name="Flame of the Branded">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="DDMagic" id="4614" level="4" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="4893" sp="288" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2318.21406" hpRegen="13.5" mp="402.6" mpRegen="1.8" />
+			<attack physical="129.32896" magical="88.31491" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="136.72948" magical="82.8278636923005" />
+			<speed>
+				<walk ground="48" />
+				<run ground="30" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="4" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="18310" level="33" type="Folk" name="Offering of the Branded, Evoked Spirit">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="PhysicalSpecial" id="4572" level="3" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="158" /> <!-- rhand: Tarbar -->
+		<acquire exp="1751" sp="100" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
+			<attack physical="113.49065" magical="77.49941" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="129.23095" magical="78.2854098527333" />
+			<speed>
+				<walk ground="45" />
+				<run ground="155" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="3" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="18311" level="46" type="Folk" name="Flame of Apostates">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="DDMagic" id="4614" level="5" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="8451" sp="597" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3689.36034" hpRegen="16.5" mp="637.8" mpRegen="2.1" />
+			<attack physical="248.0526" magical="169.38777" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="182.18816" magical="110.365783306098" />
+			<speed>
+				<walk ground="48" />
+				<run ground="30" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="5" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="18312" level="44" type="Folk" name="Offering of Apostates, Evoked Spirit">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="PhysicalSpecial" id="4572" level="4" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="172" /> <!-- rhand: Heavy Bone Club -->
+		<acquire exp="3113" sp="213" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1138.62924" hpRegen="5.5" mp="584" mpRegen="2.1" />
+			<attack physical="222.23112" magical="151.75505" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="173.43552" magical="105.063618563116" />
+			<speed>
+				<walk ground="45" />
+				<run ground="160" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="4" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="22" grown="26.4" />
+		</collision>
+	</npc>
+	<npc id="18313" level="57" type="Folk" name="Flame of the Witch">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="DDMagic" id="4614" level="6" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="12978" sp="1077" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5329.74054" hpRegen="19.5" mp="948" mpRegen="2.4" />
+			<attack physical="424.23295" magical="289.69611" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="233.18839" magical="141.260653361756" />
+			<speed>
+				<walk ground="48" />
+				<run ground="30" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="6" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="18314" level="55" type="Folk" name="Offering of the Witch, Evoked Spirit">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="PhysicalSpecial" id="4572" level="5" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="91" /> <!-- rhand: Heavy War Axe -->
+		<acquire exp="4864" sp="393" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="135.474142874948" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="5" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18315" level="68" type="Folk" name="Flame of Dark Omen">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="DDMagic" id="4614" level="7" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="18471" sp="1782" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7037.30094" hpRegen="22.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="173.471817575614" />
+			<speed>
+				<walk ground="48" />
+				<run ground="30" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="7" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="18316" level="66" type="Folk" name="Offering of Dark Omen, Evoked Spirit">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="PhysicalSpecial" id="4572" level="6" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2503" /> <!-- rhand: Yaksa Mace -->
+		<acquire exp="7004" sp="659" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="276.72752" magical="167.635752432965" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="6" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18317" level="79" type="Folk" name="Flame of Forbidden Path">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="DDMagic" id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="24306" sp="2763" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8527.06161" hpRegen="25.5" mp="1641" mpRegen="3" />
+			<attack physical="875.49759" magical="609.868172336" random="7" critical="4" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="204.1900178058" evasion="1" />
+			<speed>
+				<walk ground="48" />
+				<run ground="30" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="18318" level="77" type="Folk" name="Offering of Forbidden Path, Evoked Spirit">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="PhysicalSpecial" id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="175" /> <!-- rhand: Art of Battle Axe -->
+		<acquire exp="9533" sp="1032" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2762.08447" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<attack physical="835.75573" magical="570.71283" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="198.859549127918" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<hitTime>300</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18319" level="10" type="Monster" name="Caught Frog">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SayType" value="0" />
+			<skill name="PhysicalSpecial" id="4382" level="1" /> <!-- Curse of Lake Ghost -->
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="421" sp="14" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="163.28607" hpRegen="2" mp="108.4" mpRegen="0.9" />
+			<attack physical="19.33758" magical="13.20506" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="52.5514795" magical="37.4524577768779" evasion="10" />
+			<speed>
+				<walk ground="50" />
+				<run ground="110" />
+			</speed>
+			<hitTime>350</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4382" level="1" /> <!-- Curse of Lake Ghost -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="0.1159">
+					<item id="6529" min="1" max="1" chance="100" /> <!-- Baby Duck Rod -->
+				</group>
+				<group chance="33.8151">
+					<item id="6519" min="1" max="1" chance="25.7143" /> <!-- Green Colored Lure - Low Grade -->
+					<item id="6522" min="1" max="1" chance="17.1429" /> <!-- Purple Colored Lure - Low Grade -->
+					<item id="6525" min="1" max="1" chance="21.4286" /> <!-- Yellow Colored Lure - Low Grade -->
+					<item id="6535" min="12" max="36" chance="35.7142" /> <!-- Fishing Shot: non-grade -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="20" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="18320" level="20" type="Monster" name="Caught Undine">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SayType" value="1" />
+			<skill name="PhysicalSpecial" id="4382" level="2" /> <!-- Curse of Lake Ghost -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="843" sp="37" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="73.8399165" magical="52.6243330671097" evasion="10" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>350</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4382" level="2" /> <!-- Curse of Lake Ghost -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="0.0527">
+					<item id="6530" min="1" max="1" chance="100" /> <!-- Albatross Rod -->
+				</group>
+				<group chance="43.904">
+					<item id="6519" min="1" max="1" chance="30" /> <!-- Green Colored Lure - Low Grade -->
+					<item id="6522" min="1" max="1" chance="20" /> <!-- Purple Colored Lure - Low Grade -->
+					<item id="6525" min="1" max="1" chance="25" /> <!-- Yellow Colored Lure - Low Grade -->
+					<item id="6536" min="12" max="36" chance="25" /> <!-- Fishing Shot: D-grade -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="18321" level="30" type="Monster" name="Caught Rakul">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SayType" value="2" />
+			<skill name="PhysicalSpecial" id="4382" level="3" /> <!-- Curse of Lake Ghost -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="156" /> <!-- rhand: Hand Axe -->
+		<acquire exp="1550" sp="85" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<attack physical="92.64226" magical="63.26266" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="100.6946295" magical="71.7631875602859" evasion="10" />
+			<speed>
+				<walk ground="60" />
+				<run ground="130" />
+			</speed>
+			<hitTime>590</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4382" level="3" /> <!-- Curse of Lake Ghost -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="0.02">
+					<item id="6531" min="1" max="1" chance="100" /> <!-- Pelican Rod -->
+				</group>
+				<group chance="39.5843">
+					<item id="6520" min="2" max="6" chance="8.40005" /> <!-- Green Colored Lure -->
+					<item id="6523" min="1" max="1" chance="28" /> <!-- Purple Colored Lure -->
+					<item id="6526" min="1" max="1" chance="33.5999" /> <!-- Yellow Colored Lure -->
+					<item id="6537" min="12" max="36" chance="30" /> <!-- Fishing Shot: C-grade -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="30" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="18322" level="40" type="Monster" name="Caught Sea Giant">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SayType" value="3" />
+			<skill name="PhysicalSpecial" id="4382" level="4" /> <!-- Curse of Lake Ghost -->
+		</parameters>
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<equipment rhand="131" /> <!-- rhand: Spirit Sword -->
+		<acquire exp="2755" sp="178" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="966.57792" hpRegen="4.5" mp="478.8" mpRegen="1.8" />
+			<attack physical="176.36077" magical="120.43155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="133.0677975" magical="94.8349307253096" evasion="10" />
+			<speed>
+				<walk ground="35" />
+				<run ground="140" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4382" level="4" /> <!-- Curse of Lake Ghost -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="0.0108">
+					<item id="6532" min="1" max="1" chance="100" /> <!-- KingFisher Rod -->
+				</group>
+				<group chance="32.6944">
+					<item id="6520" min="2" max="6" chance="20.6613" /> <!-- Green Colored Lure -->
+					<item id="6523" min="1" max="1" chance="55.0963" /> <!-- Purple Colored Lure -->
+					<item id="6526" min="3" max="9" chance="11.0193" /> <!-- Yellow Colored Lure -->
+					<item id="6538" min="15" max="45" chance="13.2231" /> <!-- Fishing Shot: B-grade -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="13" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="18323" level="50" type="Monster" name="Caught Sea Horse Soldier">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SayType" value="4" />
+			<skill name="PhysicalSpecial" id="4382" level="5" /> <!-- Curse of Lake Ghost -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<equipment rhand="291" /> <!-- rhand: Trident -->
+		<acquire exp="4305" sp="324" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="170.202674" magical="121.300264676839" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="150" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4382" level="5" /> <!-- Curse of Lake Ghost -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="0.0041">
+					<item id="6533" min="1" max="1" chance="100" /> <!-- Cygnus Pole -->
+				</group>
+				<group chance="48.4814">
+					<item id="6521" min="2" max="6" chance="13.9536" /> <!-- Green Colored Lure - High Grade -->
+					<item id="6524" min="1" max="1" chance="41.8604" /> <!-- Purple Colored Lure - High Grade -->
+					<item id="6527" min="2" max="6" chance="9.30233" /> <!-- Yellow Colored Lure - High Grade -->
+					<item id="6539" min="3" max="9" chance="34.8837" /> <!-- Fishing Shot: A-grade -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="9" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="18324" level="60" type="Monster" name="Caught Homunculus">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="SayType" value="5" />
+			<skill name="PhysicalSpecial" id="4382" level="6" /> <!-- Curse of Lake Ghost -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="6200" sp="538" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="481.34551" magical="328.69659" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="210.502568" magical="150.021245531891" evasion="10" />
+			<speed>
+				<walk ground="30" />
+				<run ground="160" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4382" level="6" /> <!-- Curse of Lake Ghost -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="0.0061">
+					<item id="6533" min="1" max="1" chance="100" /> <!-- Cygnus Pole -->
+				</group>
+				<group chance="58.4812">
+					<item id="6521" min="2" max="6" chance="13.9535" /> <!-- Green Colored Lure - High Grade -->
+					<item id="6524" min="1" max="1" chance="41.8605" /> <!-- Purple Colored Lure - High Grade -->
+					<item id="6527" min="2" max="6" chance="9.30231" /> <!-- Yellow Colored Lure - High Grade -->
+					<item id="6539" min="3" max="9" chance="34.8837" /> <!-- Fishing Shot: A-grade -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="12" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="18325" level="70" type="Monster" name="Caught Flava">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SayType" value="6" />
+			<skill name="PhysicalSpecial" id="4382" level="7" /> <!-- Curse of Lake Ghost -->
+		</parameters>
+		<race>PLANT</race>
+		<sex>MALE</sex>
+		<acquire exp="8438" sp="837" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="251.5285745" magical="179.259718906208" evasion="10" />
+			<speed>
+				<walk ground="30" />
+				<run ground="170" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4382" level="7" /> <!-- Curse of Lake Ghost -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="0.0017">
+					<item id="6534" min="1" max="1" chance="100" /> <!-- Triton Pole -->
+				</group>
+				<group chance="47.1824">
+					<item id="6521" min="2" max="6" chance="15.0001" /> <!-- Green Colored Lure - High Grade -->
+					<item id="6524" min="1" max="1" chance="44.9998" /> <!-- Purple Colored Lure - High Grade -->
+					<item id="6527" min="2" max="6" chance="10.0001" /> <!-- Yellow Colored Lure - High Grade -->
+					<item id="6540" min="3" max="9" chance="30" /> <!-- Fishing Shot: S-grade -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="18" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="18326" level="80" type="Monster" name="Caught Gigantic Eye">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SayType" value="7" />
+			<skill name="PhysicalSpecial" id="4382" level="9" /> <!-- Curse of Lake Ghost -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="10478" sp="1237" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.75854" magical="635.688655236" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="290.16875" magical="206.797845445097" evasion="12" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>540</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4382" level="9" /> <!-- Curse of Lake Ghost -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="0.003">
+					<item id="6534" min="1" max="1" chance="100" /> <!-- Triton Pole -->
+				</group>
+				<group chance="57.1824">
+					<item id="6521" min="2" max="6" chance="15.0001" /> <!-- Green Colored Lure - High Grade -->
+					<item id="6524" min="1" max="1" chance="44.9999" /> <!-- Purple Colored Lure - High Grade -->
+					<item id="6527" min="2" max="6" chance="10.0001" /> <!-- Yellow Colored Lure - High Grade -->
+					<item id="6540" min="3" max="9" chance="30" /> <!-- Fishing Shot: S-grade -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="21" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="18327" level="58" type="Monster" name="Freya's Servant">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1828.68266" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<attack physical="387.5368" magical="302.44274" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="158.4514992" />
+			<speed>
+				<walk ground="140" />
+				<run ground="140" />
+			</speed>
+			<hitTime>370</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+			<clanList>
+				<clan>ICE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="18328" level="83" type="Monster" name="Hall Alarm Device">
+		<parameters>
+			<param name="TDoorName1" value="grave_pathway_1" />
+			<param name="TDoorName2" value="grave_pathway_2" />
+			<param name="WallDoorName1" value="wall_door_a_center_1" />
+			<param name="WallDoorName2" value="wall_door_a_center_2" />
+			<param name="WallDoorName3" value="wall_door_a_center_3" />
+			<param name="WallDoorName4" value="wall_door_a_center_4" />
+			<param name="WallDoorName5" value="wall_door_a_center_5" />
+			<param name="WallDoorName6" value="wall_door_a_center_6" />
+			<param name="WallDoorName7" value="wall_door_a_center_7" />
+			<param name="WallDoorName8" value="wall_door_a_center_8" />
+			<param name="dmgzone" value="25_15_frintessaE_01" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="100000" hpRegen="8.8" mp="1846.8" mpRegen="3.1" />
+			<attack physical="1034.34087" magical="760.9193205984" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="378.92625" magical="277.281785" evasion="7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+			<hitTime>600</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" canMove="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai type="CORPSE" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="18329" level="83" type="Monster" name="Hall Keeper Captain">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
+			<skill name="SelfBuff" id="4028" level="3" /> <!-- NPC Might -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="78" /> <!-- rhand: Great Sword -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="40" />
+				<run ground="160" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai aggroRange="2000" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>HALLGUARD</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="25" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18330" level="83" type="Monster" name="Hall Keeper Wizard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_LongRangeDDMagic" id="4137" level="9" /> <!-- Hydro Screw -->
+			<skill name="W_ShortRangeDDMagic" id="4560" level="9" /> <!-- NPC Fire Burn -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="326" /> <!-- rhand: Heathen's Book -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="70" />
+				<run ground="175" />
+			</speed>
+			<hitTime>740</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="2000" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>HALLGUARD</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="18331" level="83" type="Monster" name="Hall Keeper Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
+			<skill name="SelfBuff" id="4028" level="3" /> <!-- NPC Might -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="2000" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>HALLGUARD</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+	</npc>
+	<npc id="18332" level="83" type="Monster" name="Hall Keeper Patrol">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="PhysicalSpecial" id="4101" level="9" /> <!-- NPC Spinning Slash -->
+			<skill name="SelfBuff" id="4028" level="3" /> <!-- NPC Might -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="124" /> <!-- rhand: Two-Handed Sword -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="70" />
+				<run ground="170" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="2000" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>HALLGUARD</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="31" grown="38" />
+		</collision>
+	</npc>
+	<npc id="18333" level="83" type="Monster" name="Hall Keeper Suicidal Soldier">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="SelfRangeDDMagic" id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="30" />
+				<run ground="150" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="2000" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>HALLGUARD</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.8" />
+		</collision>
+	</npc>
+	<npc id="18334" level="83" type="Monster" name="Dark Choir Captain">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="50" critical="1" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" canMove="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4286" level="1" /> <!-- Greater Sleep Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="2000" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>DARKBAND</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="100">
+					<item id="8192" min="10" max="20" chance="100" /> <!-- Breaking Arrow -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+	</npc>
+	<npc id="18335" level="83" type="Monster" name="Dark Choir Prima Donna">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="30" />
+				<run ground="200" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>DARKBAND</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="23" grown="32" />
+			<height normal="40" grown="50" />
+		</collision>
+	</npc>
+	<npc id="18336" level="83" type="Monster" name="Dark Choir Lancer">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="100" />
+				<run ground="180" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>DARKBAND</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" grown="25" />
+			<height normal="45" grown="52" />
+		</collision>
+	</npc>
+	<npc id="18337" level="83" type="Monster" name="Dark Choir Archer">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="PhysicalSpecial" id="4040" level="9" /> <!-- NPC Bow Attack -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="50" critical="1" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="40" />
+				<run ground="140" />
+			</speed>
+			<hitTime>800</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>DARKBAND</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="18338" level="83" type="Monster" name="Dark Choir Witch Doctor">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_LongRangeDDMagic" id="4137" level="9" /> <!-- Hydro Screw -->
+			<skill name="W_ShortRangeDDMagic" id="4560" level="9" /> <!-- NPC Fire Burn -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="30" />
+				<run ground="190" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>DARKBAND</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="23" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="18339" level="83" type="Monster" name="Dark Choir Player">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="150" lhand="103" /> <!-- rhand: Elemental Sword lhand: Tower Shield -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<hitTime>300</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>DARKBAND</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
+		</collision>
+	</npc>
+	<npc id="18340" level="80" type="Monster" name="Hall Keeper Suicidal Soldier">
+		<parameters>
+			<skill name="SelfRangeDDMagic" id="5042" level="9" /> <!-- NPC Dispel Bomb -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="30" />
+				<run ground="100" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>DARKBAND</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.8" />
+		</collision>
+	</npc>
+	<npc id="18341" level="83" type="Monster" name="Hall Keeper Suicidal Soldier">
+		<parameters>
+			<skill name="SelfRangeDDMagic" id="5042" level="9" /> <!-- NPC Dispel Bomb -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="30" />
+				<run ground="150" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>DARKBAND</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.8" />
+		</collision>
+	</npc>
+	<npc id="18342" level="1" type="Monster" name="Gremlin">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<acquire exp="29" sp="2" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="29.59016164" />
+			<speed>
+				<walk ground="20" />
+				<run ground="50" />
+			</speed>
+			<hitTime>370</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="100">
+					<item id="57" min="7" max="13" chance="100" /> <!-- Adena -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="10" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="18343" level="80" type="Monster" name="Gatekeeper Zombie">
+		<parameters>
+			<param name="pass1" value="8064" /> <!-- Visitor's Mark -->
+			<param name="pass2" value="8065" /> <!-- Faded Visitor's Mark -->
+			<param name="pass3" value="8067" /> <!-- Pagan's Mark -->
+			<param name="SkillRange" value="700" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="8217" /> <!-- rhand: Monster Only (Zombie Gateguard Spear) -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2985.1835" hpRegen="8.65" mp="1777.4" mpRegen="3.05" />
+			<attack physical="1025.486" magical="742.0569674364" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="373.32382" magical="273.1822" evasion="5" />
+			<speed>
+				<walk ground="33" />
+				<run ground="120" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4422" level="3" /> <!-- Dark Attacks -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="700" clanHelpRange="1200">
+			<clanList>
+				<clan>TRIOLL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="17" />
+			<height normal="30.5" />
+		</collision>
+	</npc>
+	<npc id="18344" level="80" type="Monster" name="Ancient Egg">
+		<parameters>
+			<param name="BroadCastRange" value="300" />
+			<param name="ProbBroadCast" value="80" />
+			<minions name="Privates">
+				<npc id="22197" count="3" respawnTime="0" weightPoint="1" />
+			</minions>
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="10" hpRegen="8.5" mp="1881.8" mpRegen="3" />
+			<attack physical="998.77667" magical="709.589203596" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="365.6202" magical="267.545" evasion="2" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" canMove="false" />
+		<skillList>
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="53" />
+			<height normal="11.5" />
+		</collision>
+	</npc>
+	<npc id="18345" level="80" type="Monster" name="Sprigant">
+		<parameters>
+			<param name="DeBuff_interval" value="15" />
+			<param name="ProbSelfRangeDeBuff1" value="100" />
+			<param name="Social1" value="1" />
+			<param name="Social1_Frame" value="2" />
+		</parameters>
+		<race>PLANT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2974.35686398316" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="60" />
+				<run ground="165" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<dropLists>
+			<drop>
+				<group chance="25">
+					<item id="8787" min="1" max="1" chance="100" /> <!-- Sprigant's Fruit -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="45" />
+			<height normal="67" />
+		</collision>
+	</npc>
+	<npc id="18346" level="80" type="Monster" name="Sprigant">
+		<parameters>
+			<param name="DeBuff_interval" value="15" />
+			<param name="ProbSelfRangeDeBuff1" value="100" />
+			<param name="Social1" value="1" />
+			<param name="Social1_Frame" value="2" />
+		</parameters>
+		<race>PLANT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2974.35686398316" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="60" />
+				<run ground="150" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<dropLists>
+			<drop>
+				<group chance="25">
+					<item id="8787" min="1" max="1" chance="100" /> <!-- Sprigant's Fruit -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="45" />
+			<height normal="67" />
+		</collision>
+	</npc>
+</list>

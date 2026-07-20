@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30006"> <!-- Roxxy -->
+		<teleport type="NORMAL">
+			<location name="The Village of Gludin" x="-80749" y="149834" z="-3043" feeCount="18000" />
+			<location name="Dark Elf Village" x="9716" y="15502" z="-4500" feeCount="24000" />
+			<location name="Dwarven Village" x="115120" y="-178112" z="-916" feeCount="46000" />
+			<location name="Elven Village" x="46890" y="51531" z="-2976" feeCount="23000" />
+			<location name="Orc Village" x="-45186" y="-112459" z="-236" feeCount="35000" />
+			<location name="Elven Ruins" x="-112367" y="234703" z="-3688" feeCount="830" />
+			<location name="Singing Waterfall" x="-111728" y="244330" z="-3448" feeCount="770" />
+			<location name="Talking Island, Western Territory (Northern Area)" x="-106696" y="214691" z="-3424" feeCount="1000" />
+			<location name="Obelisk of Victory" x="-99586" y="237637" z="-3568" feeCount="470" />
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeId="6651" feeCount="1" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeId="6651" feeCount="1" />
+			<location name="Center of the Elven Ruins" x="49315" y="248452" z="-5960" feeId="6651" feeCount="1" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeId="6651" feeCount="1" />
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeCount="1000" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeCount="1000" />
+			<location name="Center of the Elven Ruins" x="49315" y="248452" z="-5960" feeCount="1000" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeCount="1000" />
+		</teleport>
+	</npc>
+</list>

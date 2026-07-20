@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
+	<skill id="100000" levels="1" name="Ghost Walking">
+		<icon>icon.skill0110</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<displayId>110</displayId>
+		<effectPoint>679</effectPoint>
+		<hitTime>1000</hitTime>
+		<magicLevel>83</magicLevel>
+		<mpConsume>36</mpConsume>
+		<reuseDelay>900000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">33</add>
+				<add stat="rEvas">100</add>
+				<sub stat="cancelVuln">100</sub>
+				<add stat="pSkillEvas">100</add>
+			</effect>
+		</effects>
+	</skill>
+</list>

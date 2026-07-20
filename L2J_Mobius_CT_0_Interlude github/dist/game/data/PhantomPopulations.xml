@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Real-Player phantom deployment groups (read by PhantomManager on boot).
+
+	Each <population> spawns clientless real-Player phantoms into a hunting zone. Phantoms are
+	scattered within the group's circle (center + radius) or, if a polygon is drawn, inside that
+	shape; each spawn point is Z-snapped to the ground via geodata so they do not stack or float.
+
+	ON-DEMAND: phantoms are NOT created at boot. A group spawns when a real player comes within
+	(radius + ~2000) of its center, and despawns ~30s after the last player leaves the area (its
+	DB rows are deleted on despawn, so nothing leaks). Each visit rolls a fresh crowd.
+
+	Attributes:
+	  name      - label for logs (optional).
+	  x, y, z   - group center / anchor (required).
+	  radius    - circular scatter radius around the center (default 800). Ignored if a polygon
+	              of 3+ <point> children is given.
+	  count     - how many phantoms to deploy (default 0 = nothing).
+	  minLevel  - lowest level rolled (default 1).
+	  maxLevel  - highest level rolled (default = minLevel). Each phantom rolls a level in the range.
+	  respawn   - true (default): when a phantom dies it is despawned and a fresh one is spawned
+	              into the same group a short while later. false: dead phantoms are not replaced.
+	  role      - (optional) makes this a SUPPORT BUDDY instead of a field hunter. One of:
+	              BUDDY_ELDER (Elven Elder - mage buffs, heals, recharge),
+	              BUDDY_PROPHET (Prophet - fighter buffs), or
+	              BUDDY_WARCRYER (Warcryer - Orc buffs). A buddy spawns idle where placed (it does NOT hunt).
+	              Whisper it to party up (you invite, it auto-accepts), then it keeps you buffed and topped up
+	              to ~half health, follows you, warns when low on MP, and teleports to a named gatekeeper
+	              destination on command ("going to ruins of agony"). Place buddies in town at level 40+ so
+	              they have a real buff kit; count = how many copies to offer.
+	  regularCount  - (optional, default 0) auto-generate this many stable "regular" identities for the group,
+	              with NO manual authoring. Each is built from a fixed seed (population name + slot), so the
+	              same slot is the same name/appearance/class on every restart. Easiest way to get recurring
+	              faces. Combine with <regular> children to mix hand-picked characters and auto ones.
+	  regularChance - (optional, default 25) % chance a spawn uses one of this group's regular identities
+	              (authored or auto-generated) instead of a fresh random one. Only matters if regulars exist.
+
+	Regulars - recurring, recognizable faces (regularCount and/or <regular> children):
+	  By default every spawn is a brand-new random identity, so the "person" you chatted with yesterday is
+	  gone. Regulars are fixed identities that keep the SAME name and appearance every time they spawn. The
+	  LLM brain hashes the name into a persistent personality, so a regular also sounds the same each session -
+	  a character you actually recognize. The rest of the crowd stays randomized. A regular is never spawned
+	  twice at once. Two ways to define them (mixable):
+	    - regularCount="N"  -> auto-generate N stable regulars (no authoring; recommended).
+	    - <regular .../>     -> hand-pick a specific name/look/class (below).
+	  (Note: you rarely need authored regulars anymore - friend-inviting ANY phantom in game promotes it into
+	  a persistent regular on the spot, and <friend> entries below craft one from scratch.)
+	  <regular> attributes:
+	    name      - the fixed character name (required; must be a valid, unique character name).
+	    female    - true/false (default false).
+	    face      - 0-2 (default 0).      hairColor - 0-3 (default 0).      hairStyle - 0-2 (default 0).
+	    classId   - (optional) pin the class too, e.g. 0 Human Fighter, 10 Human Mage, 18 Elven Fighter,
+	                25 Elven Mystic, 31 Dark Fighter, 38 Dark Mystic, 44 Orc Fighter, 53 Dwarven Fighter.
+	                Omit (or 0) to let the class roll each spawn (only name/appearance are pinned).
+	                Ignored for buddy populations (they keep their support class).
+
+	Optional area instead of a circle - draw a polygon with <point> children:
+	  <population name="..." x="..." y="..." z="..." count="10" minLevel="20" maxLevel="30">
+	    <point x="..." y="..." />
+	    <point x="..." y="..." />
+	    <point x="..." y="..." />
+	  </population>
+
+	Crafted friends - <friend> entries (author them in the fpc-editor's Phantoms > Friends panel):
+	  A creation order for a permanent companion made to your own spec ("recreate an old friend"). The next
+	  time the owner is online, the server creates the character next to them, adds it to their friends list,
+	  and from then on it behaves like any befriended regular: always online while you are, chats over the
+	  friends window in its own stable persona, survives restarts. An entry whose name already exists in game
+	  is IGNORED (never duplicated, never re-added after you friend-delete it), so the entries are safe to
+	  leave in this file forever. Apply without a restart via //phantom reload.
+	  <friend> attributes:
+	    owner     - your character's name (required).
+	    name      - the friend's name (required; 1-16 letters/digits, must be free).
+	    class     - a specific class id (any race/class - pick it in the editor's grouped dropdown), or a
+	                keyword: fighter | mage | elder | prophet | warcryer (default: random fighter).
+	                Buddy classes (Prophet 17, Elven Elder 30, Warcryer 52 - or their keywords) craft an idle
+	                BUDDY friend (buffs on whisper) instead of a hunter. Summoner classes are not supported.
+	    level     - target level (default 0 = match the owner's level at creation).
+	    sex       - m | f (default random).
+	    face      - 0-2 (default random).  hairStyle - 0-2 (default random).  hairColor - 0-3 (default random).
+	  Example: <friend owner="MyMain" name="Halvard" class="prophet" level="52" sex="m" />
+
+	NOTE: phantoms only hunt when EnableAutoPlay = True in config/Custom/AutoPlay.ini.
+	With no populations defined here, nothing auto-deploys (admin //phantom spawn still works).
+
+	Example (commented out - edit/uncomment or manage via the fpc-editor tool):
+
+	<population name="Giran Field" x="83400" y="147600" z="-3400" radius="1500" count="10" minLevel="20" maxLevel="30" respawn="true" />
+
+	Easiest: auto-generate 4 stable regulars (no authoring), appearing ~40% of spawns:
+	<population name="Giran Field" x="83400" y="147600" z="-3400" radius="1500" count="10" minLevel="20" maxLevel="30" regularCount="4" regularChance="40" />
+
+	Or mix auto-generated regulars with a couple of hand-picked characters:
+	<population name="Giran Field" x="83400" y="147600" z="-3400" radius="1500" count="10" minLevel="20" maxLevel="30" regularCount="3" regularChance="40">
+		<regular name="Halvard" face="1" hairColor="0" hairStyle="2" classId="18" />
+		<regular name="Sable" female="true" face="0" hairColor="2" hairStyle="1" classId="38" />
+	</population>
+
+	Support buddies idling in Giran (whisper one to party up - it then buffs/heals/follows you):
+	<population name="Giran Elder" x="83400" y="147600" z="-3400" radius="120" count="1" minLevel="70" maxLevel="70" role="BUDDY_ELDER" />
+	<population name="Giran Prophet" x="83430" y="147640" z="-3400" radius="120" count="1" minLevel="70" maxLevel="70" role="BUDDY_PROPHET" />
+	<population name="Giran Warcryer" x="83370" y="147560" z="-3400" radius="120" count="1" minLevel="70" maxLevel="70" role="BUDDY_WARCRYER" />
+-->
+<list>
+	<!-- ===== Support buddies (idle in town; whisper one to party up) ===== -->
+	<population name="Prophet" x="-14061" y="123384" z="-3000" radius="50" count="1" minLevel="56" maxLevel="56" role="BUDDY_PROPHET" />
+	<population name="Elder" x="-13958" y="123382" z="-3000" radius="50" count="1" minLevel="56" maxLevel="56" role="BUDDY_ELDER" />
+	<population name="WarCryer" x="-13856" y="123385" z="-3000" radius="50" count="1" minLevel="56" maxLevel="56" role="BUDDY_WARCRYER" />
+
+	<!-- ===== Ruins of Agony (your original lvl 20 farm spots) ===== -->
+	<population name="ROA 1" x="-45303" y="111139" z="-3000" radius="100" count="1" minLevel="20" maxLevel="20" />
+	<population name="ROA 2" x="-48567" y="109692" z="-3000" radius="800" count="2" minLevel="20" maxLevel="20" />
+	<population name="ROA 3" x="-43586" y="117477" z="-3000" radius="800" count="1" minLevel="20" maxLevel="20" />
+	<population name="ROA 4" x="-49475" y="113884" z="-3000" radius="300" count="1" minLevel="20" maxLevel="20" />
+
+	<!-- ===== Extra farm zones (a few phantoms each; centers taken from the server's own spawn
+	     territories in dist/game/data/spawns, so they sit inside the real hunting areas). Levels are
+	     set to each zone's mob tier. Tune count/level/radius to taste; delete any you don't want. ===== -->
+	<population name="Turek Orc Camp" x="-99500" y="102150" z="-3650" radius="700" count="2" minLevel="18" maxLevel="24" />
+	<population name="Plains of Dion" x="27800" y="135800" z="-3250" radius="800" count="2" minLevel="22" maxLevel="28" />
+	<population name="Bee Hive" x="19100" y="178700" z="-3750" radius="700" count="2" minLevel="24" maxLevel="30" />
+	<population name="Cruma Marshlands" x="13800" y="104900" z="-3800" radius="800" count="2" minLevel="26" maxLevel="33" />
+	<population name="Execution Grounds" x="39350" y="146400" z="-3820" radius="800" count="2" minLevel="32" maxLevel="40" />
+	<population name="Gorgon Flower Garden" x="118670" y="129000" z="-3600" radius="700" count="2" minLevel="32" maxLevel="40" />
+	<population name="Tanor Canyon" x="37800" y="162600" z="-3820" radius="800" count="2" minLevel="42" maxLevel="48" />
+	<population name="Death Pass" x="66600" y="105600" z="-3700" radius="700" count="2" minLevel="42" maxLevel="48" />
+	<population name="Breka's Stronghold" x="79000" y="121250" z="-2300" radius="600" count="2" minLevel="42" maxLevel="48" />
+</list>

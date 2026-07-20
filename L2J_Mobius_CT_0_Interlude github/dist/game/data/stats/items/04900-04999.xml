@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="4900" type="Weapon" name="Staff of Evil Spirits - Magic Focus">
+		<!-- <Soul Crystal Enhancement>. Casts Focus magic upon the target with a 20% chance of success when using good magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1746" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="930" />
+		<set name="price" val="13100000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">189</stat>
+			<stat type="mAtk">145</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1077" level="3" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Focus -->
+		</skills>
+	</item>
+	<item id="4901" type="Weapon" name="Staff of Evil Spirits - Blessed Body">
+		<!-- <Soul Crystal Enhancement>. Casts Blessed Body magic upon the target with a 20% chance of success when using good magic. Effect 5. -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1746" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="930" />
+		<set name="price" val="13100000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">189</stat>
+			<stat type="mAtk">145</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1045" level="5" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Blessed Body -->
+		</skills>
+	</item>
+	<item id="4902" type="Weapon" name="Staff of Evil Spirits - Magic Poison">
+		<!-- <Soul Crystal Enhancement>. Casts Curse Poison against the target with a 6% chance of success when using bad magic. Effect 7. -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1746" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="930" />
+		<set name="price" val="13100000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">189</stat>
+			<stat type="mAtk">145</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1168" level="6" type_chance="6" type="ON_MAGIC_SKILL" /> <!-- Curse: Poison -->
+		</skills>
+	</item>
+	<item id="4903" type="Weapon" name="Dasparion's Staff">
+		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1464" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="920" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">207</stat>
+			<stat type="mAtk">143</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4904" type="Weapon" name="Dasparion's Staff">
+		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1464" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="920" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">207</stat>
+			<stat type="mAtk">143</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1164" level="14" type_chance="4" type="ON_MAGIC_SKILL" /> <!-- Curse: Weakness -->
+		</skills>
+	</item>
+	<item id="4905" type="Weapon" name="Dasparion's Staff">
+		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1464" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="920" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">207</stat>
+			<stat type="mAtk">143</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1222" level="10" type_chance="4" type="ON_MAGIC_SKILL" /> <!-- Curse Chaos -->
+		</skills>
+	</item>
+	<item id="4906" type="EtcItem" name="Spellbook: Solar Spark">
+		<!-- Spellbook needed to learn Solar Spark. Used by Elven Wizards. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="1250" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4907" type="EtcItem" name="Spellbook: Solar Flare">
+		<!-- Spellbook needed to learn Solar Flare. Used by Spellsingers. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4908" type="EtcItem" name="Spellbook: Shadow Spark">
+		<!-- Spellbook needed to learn Shadow Spark. Used by Dark Wizards. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="1250" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4909" type="EtcItem" name="Spellbook: Shadow Flare">
+		<!-- Spellbook needed to learn Shadow Flare. Used by Spellhowlers. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4910" type="EtcItem" name="Spellbook: Vampiric Rage">
+		<!-- Spellbook needed to learn Vampiric Rage. Used by Shillien Oracles. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="1800" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4911" type="EtcItem" name="Spellbook: Curse Disease">
+		<!-- Spellbook needed to learn Curse Disease. Used by Necromancers. -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="6750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4912" type="EtcItem" name="Spellbook: Benediction">
+		<!-- Spellbook needed to learn Benediction. Used by Bishops. -->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="8700" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4913" type="EtcItem" name="Spellbook: Word of Fear">
+		<!-- Spellbook needed to learn Word of Fear. Used by Prophets. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4914" type="EtcItem" name="Spellbook: Serenade of Eva">
+		<!-- Spellbook needed to learn Serenade of Eva. Used by Elven Elders. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4915" type="EtcItem" name="Blueprint: Summon Wild Hog Cannon">
+		<!-- Blueprint needed to learn the Summon Wild Hog Cannon technique. Used by Warsmiths. -->
+		<set name="icon" val="icon.etc_plan_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="6750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4916" type="EtcItem" name="Spellbook: Energy Bolt">
+		<!-- Spellbook needed to learn Energy Bolt. Used by Human Wizards and Elven Wizards. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4917" type="EtcItem" name="Spellbook: Aura Bolt">
+		<!-- Spellbook needed to learn Aura Bolt. Used by Spellsingers and Sorcerers. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4918" type="EtcItem" name="Spellbook: Summon Kai the Cat">
+		<!-- Spellbook needed to learn Summon Kai the Cat. Used by Warlocks. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4919" type="EtcItem" name="Spellbook: Summon Merrow the Unicorn">
+		<!-- Spellbook needed to learn Summon Merrow the Unicorn. Used by Elemental Summoners. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4920" type="EtcItem" name="Spellbook: Summon Soulless">
+		<!-- Spellbook needed to learn Summon Soulless. Used by Phantom Summoners. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4921" type="EtcItem" name="Blueprint: Summon Big Boom">
+		<!-- A blueprint for learning the Summon Big Boom technique. Used by Warsmiths. -->
+		<set name="icon" val="icon.etc_plan_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="6750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4922" type="EtcItem" name="Spellbook: Summon Binding Cubic">
+		<!-- Spellbook needed to learn Summon Binding Cubic. Used by Warlocks. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4923" type="EtcItem" name="Spellbook: Summon Aqua Cubic">
+		<!-- Spellbook needed to learn Summon Aqua Cubic. Used by Elemental Summoners. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4924" type="EtcItem" name="Spellbook: Summon Spark Cubic">
+		<!-- Spellbook needed to learn Summon Spark Cubic. Used by Phantom Summoners. -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4925" type="EtcItem" name="Amulet: Pa'agrio's Haste">
+		<!-- Amulet required for the Pa'agrio's Haste spell. Used by Overlords. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="6750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4926" type="EtcItem" name="Amulet: Soul Guard">
+		<!-- Amulet required for the Soul Guard spell. Used by Overlords. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3850" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4927" type="EtcItem" name="Amulet: Chant of Revenge">
+		<!-- Amulet required for the Chant of Revenge spell. Used by Warcryers. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7700" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4928" type="EtcItem" name="Spellbook: Seed of Fire">
+		<!-- Spellbook needed to learn Seed of Fire. Used by Sorcerers and Sorceresses. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4929" type="EtcItem" name="Spellbook: Seed of Water">
+		<!-- Spellbook needed to learn Seed of Water. Used by Spellsingers. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4930" type="EtcItem" name="Spellbook: Seed of Wind">
+		<!-- Spellbook needed to learn Seed of Wind. Used by Spellhowlers. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4931" type="EtcItem" name="Spellbook: Aura Symphony">
+		<!-- Spellbook needed to learn Aura Symphony. Used by Sorcerers and Sorceresses, Spellsingers and Spellhowlers. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4932" type="EtcItem" name="Spellbook: Inferno">
+		<!-- Spellbook needed to learn Inferno. Used by Sorcerers and Sorceresses. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4933" type="EtcItem" name="Spellbook: Blizzard">
+		<!-- Spellbook needed to learn Blizzard. Used by Spellsingers. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4934" type="EtcItem" name="Spellbook: Demon Wind">
+		<!-- Spellbook needed to learn Demon Wind. Used by Spellhowlers. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4935" type="EtcItem" name="Spellbook: Elemental Symphony">
+		<!-- Spellbook needed to learn Elemental Symphony. Used by Spellsingers. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7200" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4936" type="EtcItem" name="Recipe: Avadon Shield (60%)">
+		<!-- For Dwarves only. The recipe for an Avadon Shield. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10900" />
+		<set name="recipe_id" val="478" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4937" type="EtcItem" name="Recipe: Adamantite Earrings (70%)">
+		<!-- For Dwarves only. The recipe for adamantite earrings. Requires Create Item - Skill Level 6. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="12120" />
+		<set name="recipe_id" val="328" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4938" type="EtcItem" name="Recipe: Adamantite Ring (70%)">
+		<!-- This formula for manufacturing an Adamantite Ring can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="8080" />
+		<set name="recipe_id" val="330" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4939" type="EtcItem" name="Recipe: Adamantite Necklace (70%)">
+		<!-- For Dwarves only. The recipe for an Adamantite Necklace. Requires Create Item - Skill Level 6. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16160" />
+		<set name="recipe_id" val="332" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4940" type="EtcItem" name="Recipe: Zubei's Breastplate (60%)">
+		<!-- For Dwarves only. The recipe for a Zubei's Breastplate. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="41600" />
+		<set name="recipe_id" val="341" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4941" type="EtcItem" name="Recipe: Zubei's Gaiters (60%)">
+		<!-- For Dwarves only. The recipe for Zubei's Gaiters. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="26000" />
+		<set name="recipe_id" val="343" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4942" type="EtcItem" name="Recipe: Boots of Silence (60%)">
+		<!-- For Dwarves only. The recipe for Boots of Silence. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10380" />
+		<set name="recipe_id" val="347" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4943" type="EtcItem" name="Recipe: Guardian's Boots (60%)">
+		<!-- For Dwarves only. The recipe for the Guardian's Boots. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10380" />
+		<set name="recipe_id" val="349" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4944" type="EtcItem" name="Recipe: Avadon Breastplate (60%)">
+		<!-- For Dwarves only. The recipe for an Avadon Breastplate. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="41600" />
+		<set name="recipe_id" val="357" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4945" type="EtcItem" name="Recipe: Avadon Gaiters (60%)">
+		<!-- For Dwarves only. The recipe for Avadon Gaiters. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="26000" />
+		<set name="recipe_id" val="359" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4946" type="EtcItem" name="Recipe: Zubei's Leather Shirt (60%)">
+		<!-- For Dwarves only. The recipe for a Zubei's Leather Shirt. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="31200" />
+		<set name="recipe_id" val="361" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4947" type="EtcItem" name="Recipe: Zubei's Leather Gaiters (60%)">
+		<!-- For Dwarves only. The recipe for Zubei's Leather Gaiters. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="19460" />
+		<set name="recipe_id" val="363" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4948" type="EtcItem" name="Recipe: Avadon Leather Armor (60%)">
+		<!-- For Dwarves only. The recipe for an Avadon Leather Armor. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45600" />
+		<set name="recipe_id" val="365" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4949" type="EtcItem" name="Recipe: Tunic of Zubei (60%)">
+		<!-- For Dwarves only. The recipe for a Tunic of Zubei. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="31200" />
+		<set name="recipe_id" val="367" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4950" type="EtcItem" name="Recipe: Stockings of Zubei (60%)">
+		<!-- For Dwarves only. The recipe for Stockings of Zubei. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="19460" />
+		<set name="recipe_id" val="369" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4951" type="EtcItem" name="Recipe: Avadon Robe (60%)">
+		<!-- For Dwarves only. The recipe for an Avadon Robe. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="45600" />
+		<set name="recipe_id" val="371" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4952" type="EtcItem" name="Recipe: Avadon Circlet (60%)">
+		<!-- For Dwarves only. The recipe for an Avadon Circlet. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="15560" />
+		<set name="recipe_id" val="373" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4953" type="EtcItem" name="Recipe: Avadon Gloves (60%)">
+		<!-- For Dwarves only. The recipe for the Sealed Avadon Gloves. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10380" />
+		<set name="recipe_id" val="375" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4954" type="EtcItem" name="Recipe: Chain Gloves of Silence (60%)">
+		<!-- For Dwarves only. The recipe for Chain Gloves of Silence. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10380" />
+		<set name="recipe_id" val="377" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4955" type="EtcItem" name="Recipe: Guardian's Gloves (60%)">
+		<!-- For Dwarves only. The recipe for the Guardian's Gloves. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10380" />
+		<set name="recipe_id" val="379" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4956" type="EtcItem" name="Recipe: Gloves of Blessing (60%)">
+		<!-- For Dwarves only. The recipe for Gloves of Blessing. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10380" />
+		<set name="recipe_id" val="381" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4957" type="EtcItem" name="Recipe: Boots of Blessing (60%)">
+		<!-- For Dwarves only. The recipe for Boots of Blessing. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10380" />
+		<set name="recipe_id" val="387" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4958" type="EtcItem" name="Recipe: Zubei's Boots (60%)">
+		<!-- For Dwarves only. The recipe for the Sealed Zubei's Boots. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10380" />
+		<set name="recipe_id" val="423" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4959" type="EtcItem" name="Recipe: Avadon Boots (60%)">
+		<!-- For Dwarves only. The recipe for the Sealed Avadon Boots. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10380" />
+		<set name="recipe_id" val="425" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4960" type="EtcItem" name="Recipe: Zubei's Gauntlets (60%)">
+		<!-- For Dwarves only. The recipe for the sealed Zubei's Gauntlets. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10380" />
+		<set name="recipe_id" val="429" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4961" type="EtcItem" name="Recipe: Zubei's Shield (60%)">
+		<!-- For Dwarves only. The recipe for a Zubei's Shield. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="10900" />
+		<set name="recipe_id" val="431" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4962" type="EtcItem" name="Recipe: Zubei's Helmet (60%)">
+		<!-- For Dwarves only. The recipe for a Zubei's Helmet. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="15560" />
+		<set name="recipe_id" val="433" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4963" type="EtcItem" name="Recipe: Great Sword (60%)">
+		<!-- For Dwarves only. The recipe for a Great Sword. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="173600" />
+		<set name="recipe_id" val="438" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4964" type="EtcItem" name="Recipe: Heavy War Axe (60%)">
+		<!-- For Dwarves only. The recipe for a Heavy War Axe. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="173600" />
+		<set name="recipe_id" val="440" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4965" type="EtcItem" name="Recipe: Sprite's Staff (60%)">
+		<!-- For Dwarves only. The recipe for a Sprite's Staff. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="173600" />
+		<set name="recipe_id" val="442" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4966" type="EtcItem" name="Recipe: Keshanberk (60%)">
+		<!-- For Dwarves only. The recipe for Keshanberk. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="173600" />
+		<set name="recipe_id" val="444" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4967" type="EtcItem" name="Recipe: Sword of Valhalla (60%)">
+		<!-- For Dwarves only. The recipe for the Sword of Valhalla. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="173600" />
+		<set name="recipe_id" val="446" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4968" type="EtcItem" name="Recipe: Kris (60%)">
+		<!-- For Dwarves only. The recipe for the Kris. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="173600" />
+		<set name="recipe_id" val="448" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4969" type="EtcItem" name="Recipe: Hell Knife (60%)">
+		<!-- For Dwarves only. The recipe for a Hell Knife. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="173600" />
+		<set name="recipe_id" val="450" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4970" type="EtcItem" name="Recipe: Arthro Nail (60%)">
+		<!-- For Dwarves only. The recipe for the Arthro Nail. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="173600" />
+		<set name="recipe_id" val="452" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4971" type="EtcItem" name="Recipe: Dark Elven Long Bow (60%)">
+		<!-- For Dwarves only. The recipe for a Dark Elven Long Bow. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="173600" />
+		<set name="recipe_id" val="454" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4972" type="EtcItem" name="Recipe: Great Axe (60%)">
+		<!-- For Dwarves only. The recipe for a Great Axe. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="173600" />
+		<set name="recipe_id" val="456" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4973" type="EtcItem" name="Recipe: Earring of Black Ore (70%)">
+		<!-- For Dwarves only. The recipe for Earrings of Black Ore. Requires Create Item - Skill Level 7. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="18480" />
+		<set name="recipe_id" val="334" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4974" type="EtcItem" name="Recipe: Ring of Black Ore (70%)">
+		<!-- For Dwarves only. The recipe for a Ring of Black Ore. Requires Create Item - Skill Level 7. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="12320" />
+		<set name="recipe_id" val="336" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4975" type="EtcItem" name="Recipe: Necklace of Black Ore (70%)">
+		<!-- For Dwarves only. The recipe for a Necklace of Black Ore. Requires Create Item - Skill Level 7. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="24600" />
+		<set name="recipe_id" val="338" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4976" type="EtcItem" name="Recipe: Implosion Boots (60%)">
+		<!-- For Dwarves only. The recipe for Boots of implosion. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="345" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4977" type="EtcItem" name="Recipe: Paradia Boots (60%)">
+		<!-- For Dwarves only. The recipe for Paradia Boots. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="351" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4978" type="EtcItem" name="Recipe: Elemental Boots (60%)">
+		<!-- For Dwarves only. The recipe for Elemental Boots. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="353" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4979" type="EtcItem" name="Recipe: Boots of Grace (60%)">
+		<!-- For Dwarves only. The recipe for Boots of Grace. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="355" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4980" type="EtcItem" name="Recipe: Doom Shield (60%)">
+		<!-- For Dwarves only. The recipe for a Doom Shield. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16900" />
+		<set name="recipe_id" val="383" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4981" type="EtcItem" name="Recipe: Blue Wolf Breastplate (60%)">
+		<!-- For Dwarves only. The recipe for a Blue Wolf Breastplate. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="64400" />
+		<set name="recipe_id" val="385" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4982" type="EtcItem" name="Recipe: Blue Wolf Gaiters (60%)">
+		<!-- For Dwarves only. The recipe for the Blue Wolf Gaiters. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="40200" />
+		<set name="recipe_id" val="389" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4983" type="EtcItem" name="Recipe: Doom Plate Armor (60%)">
+		<!-- For Dwarves only. The recipe for a Doom Plate Armor. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="94200" />
+		<set name="recipe_id" val="391" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4984" type="EtcItem" name="Recipe: Blue Wolf Leather Armor (60%)">
+		<!-- For Dwarves only. The recipe for a Blue Wolf Leather Armor. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="70600" />
+		<set name="recipe_id" val="393" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4985" type="EtcItem" name="Recipe: Leather Armor of Doom (60%)">
+		<!-- For Dwarves only. The recipe for a Leather Armor of Doom. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="70600" />
+		<set name="recipe_id" val="395" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4986" type="EtcItem" name="Recipe: Blue Wolf Tunic (60%)">
+		<!-- For Dwarves only. The recipe for a Blue Wolf Tunic. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="48200" />
+		<set name="recipe_id" val="397" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4987" type="EtcItem" name="Recipe: Tunic of Doom (60%)">
+		<!-- For Dwarves only. The recipe for a Tunic of Doom. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="48200" />
+		<set name="recipe_id" val="399" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4988" type="EtcItem" name="Recipe: Blue Wolf Stockings (60%)">
+		<!-- For Dwarves only. The recipe for the Blue Wolf stockings. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="30200" />
+		<set name="recipe_id" val="401" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4989" type="EtcItem" name="Recipe: Stockings of Doom (60%)">
+		<!-- For Dwarves only. The recipe for Stockings of Doom. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="30200" />
+		<set name="recipe_id" val="403" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4990" type="EtcItem" name="Recipe: Blue Wolf Helmet (60%)">
+		<!-- For Dwarves only. The recipe for a Blue Wolf Helmet. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="24200" />
+		<set name="recipe_id" val="405" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4991" type="EtcItem" name="Recipe: Doom Helmet (60%)">
+		<!-- For Dwarves only. The recipe for a Doom Helmet. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="24200" />
+		<set name="recipe_id" val="407" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4992" type="EtcItem" name="Recipe: Blue Wolf Boots (60%)">
+		<!-- For Dwarves only. The recipe for the sealed Blue Wolf Boots. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="409" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4993" type="EtcItem" name="Recipe: Doom Gloves (60%)">
+		<!-- For Dwarves only. The recipe for the Sealed Doom Gloves. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="411" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4994" type="EtcItem" name="Recipe: Elemental Gloves (60%)">
+		<!-- For Dwarves only. The recipe for Elemental Gloves. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="413" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4995" type="EtcItem" name="Recipe: Gloves of Grace (60%)">
+		<!-- For Dwarves only. The recipe for Gloves of Grace. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="415" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4996" type="EtcItem" name="Recipe: Implosion Gauntlets (60%)">
+		<!-- For Dwarves only. The recipe for Implosion Gauntlets. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="417" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4997" type="EtcItem" name="Recipe: Paradia Gloves (60%)">
+		<!-- For Dwarves only. The recipe for Paradia Gloves. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="419" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4998" type="EtcItem" name="Recipe: Blue Wolf Gloves (60%)">
+		<!-- For Dwarves only. The recipe for the sealed Blue Wolf Gloves. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="421" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="4999" type="EtcItem" name="Recipe: Doom Boots (60%)">
+		<!-- For Dwarves only. The recipe for the sealed Doom Boots. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="16080" />
+		<set name="recipe_id" val="427" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+</list>

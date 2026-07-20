@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/AdminCommands.xsd">
+	<!-- ADMIN ADMIN -->
+	<admin command="admin" description="Open main Admin menu." accessLevel="30" />
+	<admin command="admin1" description="Open main Admin menu." accessLevel="30" />
+	<admin command="admin2" description="Open game panel." accessLevel="30" />
+	<admin command="admin3" description="Open effects panel." accessLevel="30" />
+	<admin command="admin4" description="Open server Managment panel." accessLevel="30" />
+	<admin command="admin5" description="Open mods panel." accessLevel="30" />
+	<admin command="admin6" description="Open character menu." accessLevel="30" />
+	<admin command="admin7" description="Open GM menu." accessLevel="30" />
+	<admin command="gmliston" description="Show GM as online." accessLevel="30" />
+	<admin command="gmlistoff" description="Hide GM from online list." accessLevel="30" />
+	<admin command="silence" description="Silence mode (block PMs)." accessLevel="100" />
+	<admin command="diet" description="Diet mode (no weight limit)." accessLevel="100" />
+	<admin command="tradeoff" description="Disable trade for character." accessLevel="100" />
+	<admin command="set_mod" description="Modify server configuration parameters." accessLevel="100" />
+	<admin command="checkolympiad" description="Check Olympiad period end and next weekly change." accessLevel="100" />
+	<admin command="saveolymp" description="Save Olympiad nobles points." accessLevel="100" />
+	<admin command="sethero" description="Set player as hero." accessLevel="100" />
+	<admin command="givehero" description="Give unclaimed hero status." accessLevel="100" confirmDlg="true" />
+	<admin command="endolympiad" description="End current Olympiad period." accessLevel="100" confirmDlg="true" />
+	<admin command="setconfig" description="Open config server panel." accessLevel="100" />
+	<admin command="rates" description="Open the live rates panel." accessLevel="100" />
+	<admin command="setrate" description="Set a server rate live." accessLevel="100" />
+	<admin command="config_server" description="Open server config panel." accessLevel="100" />
+	<admin command="gmon" description="Enable GM mode." accessLevel="100" />
+
+	<!-- ADMIN ANNOUNCEMENTS -->
+	<admin command="announce" description="Send a announcment to all players." accessLevel="30" />
+	<admin command="announce_crit" description="Send a critical announcment to all players." accessLevel="100" />
+	<admin command="announce_screen" description="Display message at screen center for all players." accessLevel="100" />
+	<admin command="announces" description="Open the announcements management panel." accessLevel="30" />
+
+	<!-- ADMIN AUGMENT -->
+	<admin command="augment" description="Augment item using Item ID and Option ID." accessLevel="100" confirmDlg="true" />
+
+	<!-- ADMIN BAN -->
+	<admin command="ban_acc" description="Ban an account." accessLevel="30" confirmDlg="true" />
+	<admin command="unban_acc" description="Unban an account." accessLevel="30" confirmDlg="true" />
+	<admin command="ban_char" description="Ban a character." accessLevel="30" confirmDlg="true" />
+	<admin command="unban_char" description="Unban a character." accessLevel="30" confirmDlg="true" />
+	<admin command="punishment" description="Punishment information panel." accessLevel="30" />
+	<admin command="punishment_add" description="Add punishment." accessLevel="30" confirmDlg="true" />
+	<admin command="punishment_remove" description="Remove punishment." accessLevel="30" confirmDlg="true" />
+
+	<!-- ADMIN BUFFS -->
+	<admin command="buff" description="Apply a specific buff to the target player." accessLevel="100" />
+	<admin command="getbuffs" description="View active buffs on the target player." accessLevel="100" />
+	<admin command="getbuffs_ps" description="View passive buffs on the target player." accessLevel="100" />
+	<admin command="stopbuff" description="Stop a specific buff to the target player." accessLevel="100" />
+	<admin command="stopallbuffs" description="Stop all buffs." accessLevel="100" confirmDlg="true" />
+	<admin command="viewblockedeffects" description="View blocked effect types/slots for target." accessLevel="100" />
+	<admin command="viewskilleffects" description="View skill effects." accessLevel="100" />
+	<admin command="viewskilleffects_ps" description="View passive skill effects." accessLevel="100" />
+	<admin command="areacancel" description="Remove all buffs in that area." accessLevel="100" />
+	<admin command="removereuse" description="Remove reuse of the skills." accessLevel="100" />
+	<admin command="switch_gm_buffs" description="Toggle between GM aura and regular GM buffs." accessLevel="100" />
+
+	<!-- ADMIN CAMERA -->
+	<admin command="cam" description="Triggers a cinematic camera effect." accessLevel="100" />
+	<admin command="camex" description="Executes an extended cinematic camera effect with specific parameters." accessLevel="100" />
+	<admin command="cam3" description="Initiates a third variant of the cinematic camera effect." accessLevel="100" />
+
+	<!-- ADMIN CHANGE ACCESS LEVEL -->
+	<admin command="changelvl" description="Change access level to the target player." accessLevel="100" />
+
+	<!-- ADMIN CH SIEGE -->
+	<admin command="chsiege_siegablehall" description="View information about a siegable clan hall." accessLevel="100" />
+	<admin command="chsiege_startSiege" description="Start the clan hall siege." accessLevel="100" />
+	<admin command="chsiege_endsSiege" description="End clan hall siege." accessLevel="100" />
+	<admin command="chsiege_setSiegeDate" description="Set the date for clan hall siege." accessLevel="100" />
+	<admin command="chsiege_addAttacker" description="Add attackers to the list." accessLevel="100" />
+	<admin command="chsiege_removeAttacker" description="Remove attackers." accessLevel="100" />
+	<admin command="chsiege_clearAttackers" description="Clear attackers form the list." accessLevel="100" />
+	<admin command="chsiege_listAttackers" description="List attackers." accessLevel="100" />
+	<admin command="chsiege_forwardSiege" description="Force the clan hall siege to progress to the next stage." accessLevel="100" />
+
+	<!-- ADMIN CLAN -->
+	<admin command="clan_info" description="Open clan information panel." accessLevel="100" />
+	<admin command="clan_changeleader" description="Change clan leader." accessLevel="100" confirmDlg="true" />
+	<admin command="clan_show_pending" description="Shown pending clan leader change." accessLevel="100" />
+	<admin command="clan_force_pending" description="Forces a pending clan leadership change." accessLevel="100" confirmDlg="true" />
+
+	<!-- ADMIN CREATE ITEM -->
+	<admin command="itemcreate" description="Open item creation menu." accessLevel="100" />
+	<admin command="create_item" description="Create item (ID Amount)." accessLevel="100" />
+	<admin command="create_coin" description="Create coin (Name Amount)." accessLevel="100" />
+	<admin command="give_item_target" description="Give item to a target player." accessLevel="100" confirmDlg="true" />
+	<admin command="give_item_to_all" description="Give item to all online players." accessLevel="100" confirmDlg="true" />
+
+	<!-- ADMIN CURSED WEAPONS -->
+	<admin command="cw_add" description="Add Cursed Weapon to player." accessLevel="100" confirmDlg="true" />
+	<admin command="cw_remove" description="Remove Cursed Weapon from player." accessLevel="100" />
+	<admin command="cw_goto" description="Go to Cursed Weapon." accessLevel="100" />
+	<admin command="cw_info" description="Cursed weapons info." accessLevel="100" />
+	<admin command="cw_info_menu" description="Open Cursed Weapons info menu." accessLevel="100" />
+	<admin command="cw_reload" description="Reload Cursed weapons." accessLevel="100" />
+
+	<!-- ADMIN DEBUG -->
+	<admin command="debug" description="Open debug menu." accessLevel="100" />
+
+	<!-- ADMIN DELETE -->
+	<admin command="delete" description="Delete target NPC." accessLevel="100" />
+	<admin command="delete_group" description="Deletes a spawn group including all NPCs from the same spawn." accessLevel="100" confirmDlg="true" />
+
+	<!-- ADMIN DESTROY ITEMS -->
+	<admin command="destroy_items" description="Destroy all unequipped items in admin's inventory." accessLevel="100" confirmDlg="true" />
+	<admin command="destroy_all_items" description="Destroy all items in admin's inventory, including equipped." accessLevel="100" confirmDlg="true" />
+	<admin command="destroyitems" description="Destroy all unequipped items in admin's inventory." accessLevel="100" confirmDlg="true" />
+	<admin command="destroyallitems" description="Destroy all items in admin's inventory, including equipped." accessLevel="100" confirmDlg="true" />
+
+	<!-- ADMIN DISCONNECT -->
+	<admin command="character_disconnect" description="Kick target player from the game." accessLevel="100" />
+
+	<!-- ADMIN DOOR CONTROL -->
+	<admin command="open" description="Opens the selected door." accessLevel="100" />
+	<admin command="close" description="Closes the selected door." accessLevel="100" />
+	<admin command="openall" description="Opens all doors in the server." accessLevel="100" />
+	<admin command="closeall" description="Close all doors in the server." accessLevel="100" />
+	<admin command="showdoors" description="Debug doors in the current region." accessLevel="100" />
+
+	<!-- ADMIN EDIT CHAR -->
+	<admin command="edit_character" description="Opens edit character menu." accessLevel="100" />
+	<admin command="current_player" description="Opens information character panel." accessLevel="30" />
+	<admin command="nokarma" description="Remove karma from target player." accessLevel="100" />
+	<admin command="setkarma" description="Add karma to player." accessLevel="100" />
+	<admin command="setfame" description="Add fame to player." accessLevel="100" />
+	<admin command="character_list" description="Opens character list." accessLevel="30" />
+	<admin command="character_info" description="Opens character information panel." accessLevel="30" />
+	<admin command="show_characters" description="Opens character list on specific page." accessLevel="30" />
+	<admin command="find_character" description="Searches for a character by name." accessLevel="30" />
+	<admin command="find_ip" description="Finds all players connected from specified IP address." accessLevel="30" />
+	<admin command="find_account" description="Lists all characters belonging to specified account." accessLevel="30" />
+	<admin command="find_dualbox" description="Detect multiple characters logged in from the same IP (dualbox detection)." accessLevel="30" />
+	<admin command="strict_find_dualbox" description="Strict dualbox detection including connection tracing." accessLevel="30" />
+	<admin command="tracert" description="Shows network route information for targeted player." accessLevel="30" />
+	<admin command="rec" description="Give a recommendation to the targeted playe." accessLevel="100" />
+	<admin command="settitle" description="Set or change the title of the targeted player." accessLevel="100" />
+	<admin command="changename" description="Change the name of the targeted player." accessLevel="100" />
+	<admin command="setsex" description="Change the gender of the targeted player." accessLevel="100" />
+	<admin command="setcolor" description="Change player name color." accessLevel="100" />
+	<admin command="settcolor" description="Change player title color." accessLevel="100" />
+	<admin command="setclass" description="Change player class." accessLevel="100" />
+	<admin command="setpk" description="Set player PK count." accessLevel="100" />
+	<admin command="setpvp" description="Set player PVP count." accessLevel="100" />
+	<admin command="set_pvp_flag" description="Set player PvP flag state." accessLevel="100" />
+	<admin command="fullfood" description="Refill pet's food to maximum." accessLevel="100" />
+	<admin command="remove_clan_penalty" description="Remove clan penalty from player." accessLevel="100" />
+	<admin command="summon_info" description="Show information about the summoned pet." accessLevel="30" />
+	<admin command="unsummon" description="Unsummon player pet or summon." accessLevel="100" />
+	<admin command="summon_setlvl" description="Set level of the summoned pet." accessLevel="100" />
+	<admin command="show_pet_inv" description="Show inventory of the summoned pet." accessLevel="100" />
+	<admin command="partyinfo" description="See party info for the targeted player." accessLevel="30" />
+	<admin command="setnoble" description="Change noble status for the targeted player." accessLevel="100" confirmDlg="true" />
+	<admin command="set_hp" description="Set the HP of the targeted player." accessLevel="100" />
+	<admin command="set_mp" description="Set the MP of the targeted player." accessLevel="100" />
+	<admin command="set_cp" description="Set the CP of the targeted player." accessLevel="100" />
+
+	<!-- ADMIN EFFECTS -->
+	<admin command="invis" description="Make yourself invisible." accessLevel="30" />
+	<admin command="invisible" description="Make yourself invisible." accessLevel="30" />
+	<admin command="setinvis" description="Make target player invisible." accessLevel="100" />
+	<admin command="vis" description="Make yourself visible." accessLevel="30" />
+	<admin command="visible" description="Make yourself visible." accessLevel="30" />
+	<admin command="invis_menu" description="Opens invisible menu." accessLevel="30" />
+	<admin command="earthquake" description="Trigger an earthquake effect." accessLevel="100" />
+	<admin command="earthquake_menu" description="Open the earthquake menu." accessLevel="100" />
+	<admin command="bighead" description="Enlarge the head of the target character." accessLevel="100" />
+	<admin command="shrinkhead" description="Shrink the head of the target character." accessLevel="100" />
+	<admin command="para_all" description="Paralyze all players in the area." accessLevel="100" />
+	<admin command="unpara_all" description="Remove paralysis from all players in the area." accessLevel="100" />
+	<admin command="para" description="Paralyze the target player." accessLevel="100" />
+	<admin command="unpara" description="Remove paralysis from the target player." accessLevel="100" />
+	<admin command="para_all_menu" description="Opens paralyze menu." accessLevel="100" />
+	<admin command="unpara_all_menu" description="Opens paralyze menu." accessLevel="100" />
+	<admin command="para_menu" description="Opens paralyze menu." accessLevel="100" />
+	<admin command="unpara_menu" description="Opens paralyze menu." accessLevel="100" />
+	<admin command="clearteams" description="Clears the team (sets to NONE) for all visible players." accessLevel="100" />
+	<admin command="setteam_close" description="Sets team for all players within a specified radius." accessLevel="100" />
+	<admin command="setteam" description="Sets team for the targeted player or creature." accessLevel="100" />
+	<admin command="social" description="Trigger a social action on the target." accessLevel="100" />
+	<admin command="social_menu" description="Opens the social actions menu." accessLevel="100" />
+	<admin command="effect" description="Apply an effect to the target player." accessLevel="100" />
+	<admin command="effect_menu" description="Opens the effects menu." accessLevel="100" />
+	<admin command="ave_abnormal" description="Apply abnormal effects to the target." accessLevel="100" />
+	<admin command="ave_special" description="Apply special effects to the target." accessLevel="100" />
+	<admin command="ave_event" description="Apply event effects to the target." accessLevel="100" />
+	<admin command="play_sounds" description="Opens the sounds menu." accessLevel="100" />
+	<admin command="play_sound" description="Play a single sound by name." accessLevel="100" />
+	<admin command="atmosphere" description="Change the sky to day, night, or red, along with drugation effects." accessLevel="100" />
+	<admin command="atmosphere_menu" description="Opens the atmosphere menu." accessLevel="100" />
+	<admin command="event_trigger" description="Triggers a client visual event." accessLevel="100" />
+
+	<!-- ADMIN SPEED -->
+	<admin command="gmspeed" description="Set the player speed from 1 to 10." accessLevel="30" />
+	<admin command="superhaste" description="Add super haste from 1 to 4 with duration." accessLevel="30" />
+	<admin command="superhaste_menu" description="Opens the Super Haste menu." accessLevel="30" />
+	<admin command="speed" description="Add super haste from 1 to 4 with druation." accessLevel="30" />
+	<admin command="speed_menu" description="Opens the Super Haste menu." accessLevel="30" />
+
+	<!-- ADMIN ENCHANT -->
+	<admin command="seteh" description="Sets enchant level for helmet." accessLevel="100" />
+	<admin command="setec" description="Sets enchant level for chest armor." accessLevel="100" />
+	<admin command="seteg" description="Sets enchant level for gloves." accessLevel="100" />
+	<admin command="setel" description="Sets enchant level for leggings." accessLevel="100" />
+	<admin command="seteb" description="Sets enchant level for boots." accessLevel="100" />
+	<admin command="setew" description="Sets enchant level for weapon (right hand)." accessLevel="100" />
+	<admin command="setes" description="Sets enchant level for shield/left-hand weapon." accessLevel="100" />
+	<admin command="setle" description="Sets enchant level for left earring." accessLevel="100" />
+	<admin command="setre" description="Sets enchant level for right earring." accessLevel="100" />
+	<admin command="setlf" description="Sets enchant level for left ring." accessLevel="100" />
+	<admin command="setrf" description="Sets enchant level for right ring." accessLevel="100" />
+	<admin command="seten" description="Sets enchant level for necklace." accessLevel="100" />
+	<admin command="setun" description="Sets enchant level for underwear." accessLevel="100" />
+	<admin command="setba" description="Sets enchant level for cloak." accessLevel="100" />
+	<admin command="enchant" description="Opens the enchant menu." accessLevel="100" />
+
+	<!-- ADMIN EVENTS -->
+	<admin command="event_menu" description="Opens the main event menu." accessLevel="100" />
+	<admin command="event_start" description="Starts an event using its name (e.g., event_start TvT)." accessLevel="100" />
+	<admin command="event_stop" description="Stops an event using its name (e.g., event_stop TvT)." accessLevel="100" />
+	<admin command="event_start_menu" description="Opens the main event menu." accessLevel="100" />
+	<admin command="event_stop_menu" description="Opens the main event menu." accessLevel="100" />
+	<admin command="event_bypass" description="Forces a bypass command execution for a specified event." accessLevel="100" />
+
+	<!-- ADMIN EXP SP -->
+	<admin command="add_exp_sp_to_character" description="Add EXP and SP to the selected character." accessLevel="100" />
+	<admin command="add_exp_sp" description="Add EXP and SP to a specified player." accessLevel="100" />
+	<admin command="remove_exp_sp" description="Remove EXP and SP from a specified player." accessLevel="100" />
+
+	<!-- ADMIN FIGHT CALCULATOR -->
+	<admin command="fight_calculator" description="Opens the NPC fight simulation calculator." accessLevel="100" />
+	<admin command="fight_calculator_show" description="Displays detailed combat analysis between two NPCs or player vs target." accessLevel="100" />
+	<admin command="fcs" description="Displays combat analysis." accessLevel="100" />
+
+	<!-- ADMIN GEODATA -->
+	<admin command="geo_pos" description="Displays current position's geodata coordinates." accessLevel="30" />
+	<admin command="geo_spawn_pos" description="Displays spawn position's geodata coordinates." accessLevel="30" />
+	<admin command="geo_can_see" description="Checks if you can see the current target." accessLevel="30" />
+	<admin command="geo_can_move" description="Checks if you can move to the current target in a straight line." accessLevel="30" />
+	<admin command="geogrid" description="Toggles geodata grid visualization." accessLevel="30" />
+	<admin command="geomap" description="Displays current geodata map region information." accessLevel="30" />
+	<admin command="geomap_reload" description="Reload the given geodata map file." accessLevel="100" />
+	<admin command="geocell" description="Displays current geodata cell information." accessLevel="100" />
+	<admin command="geosave" description="Saves current geodata region to file." accessLevel="100" />
+	<admin command="geosaveall" description="Saves all loaded geodata regions to files." accessLevel="100" confirmDlg="true" />
+	<admin command="geoenablenorth" description="Enables north direction movement in current geodata cell." accessLevel="100" />
+	<admin command="en" description="Enables north direction movement in current geodata cell." accessLevel="100" />
+	<admin command="geodisablenorth" description="Disables north direction movement in current geodata cell." accessLevel="100" />
+	<admin command="dn" description="Disables north direction movement in current geodata cell." accessLevel="100" />
+	<admin command="geoenablesouth" description="Enables south direction movement in current geodata cell." accessLevel="100" />
+	<admin command="es" description="Enables south direction movement in current geodata cell." accessLevel="100" />
+	<admin command="geodisablesouth" description="Disables south direction movement in current geodata cell." accessLevel="100" />
+	<admin command="ds" description="Disables south direction movement in current geodata cell." accessLevel="100" />
+	<admin command="geoenableeast" description="Enables east direction movement in current geodata cell." accessLevel="100" />
+	<admin command="ee" description="Enables east direction movement in current geodata cell." accessLevel="100" />
+	<admin command="geodisableeast" description="Disables east direction movement in current geodata cell." accessLevel="100" />
+	<admin command="de" description="Disables east direction movement in current geodata cell." accessLevel="100" />
+	<admin command="geoenablewest" description="Enables west direction movement in current geodata cell." accessLevel="100" />
+	<admin command="ew" description="Enables west direction movement in current geodata cell." accessLevel="100" />
+	<admin command="geodisablewest" description="Disables west direction movement in current geodata cell." accessLevel="100" />
+	<admin command="dw" description="Disables west direction movement in current geodata cell." accessLevel="100" />
+	<admin command="geoedit" description="Opens geodata editing interface." accessLevel="100" />
+	<admin command="ge" description="Opens geodata cell editing interface." accessLevel="100" />
+
+	<!-- ADMIN GM -->
+	<admin command="gm" description="Remove your GM status." accessLevel="100" />
+
+	<!-- ADMIN GM CHAT -->
+	<admin command="gmchat" description="Send a message in the GM chat." accessLevel="30" />
+	<admin command="snoop" description="Snoop on a player's chat." accessLevel="30" />
+	<admin command="signs" description="Drive the Seven Signs cycle manually (status/validate/reset) in no-schedule mode." accessLevel="100" />
+	<admin command="gmchat_menu" description="Open the GM chat menu." accessLevel="30" />
+
+	<!-- ADMIN GOTO -->
+	<admin command="goto" description="Teleports you to a given location, player or NPC." accessLevel="30" />
+
+	<!-- ADMIN GRAND BOSS -->
+	<admin command="grandboss" description="Open the Grand Boss menu." accessLevel="100" />
+	<admin command="grandboss_skip" description="Skip the waiting time for the Grand Boss." accessLevel="100" />
+	<admin command="grandboss_respawn" description="Respawn the Grand Boss." accessLevel="100" />
+	<admin command="grandboss_minions" description="Despawn minions of the Grand Boss." accessLevel="100" />
+	<admin command="grandboss_abort" description="Abort fight of the Grand Boss." accessLevel="100" />
+	
+	<!-- ADMIN HEAL -->
+	<admin command="heal" description="Fully restore player HP, MP, and CP." accessLevel="100" />
+
+	<!-- ADMIN HELP -->
+	<admin command="help" description="Open help dialog window." accessLevel="30" />
+	<admin command="commands" description="Open help dialog for admin commands." accessLevel="30" />
+
+	<!-- ADMIN HTML -->
+	<admin command="html" description="Display an HTML file from data/html/admin/ directory." accessLevel="100" />
+	<admin command="loadhtml" description="Load and display an HTML file directly from the filesystem (bypasses cache)." accessLevel="100" />
+
+	<!-- ADMIN INSTANCE -->
+	<admin command="setinstance" description="Move target to specified instance ID." accessLevel="100" />
+	<admin command="createinstance" description="Create new instance from template." accessLevel="100" />
+	<admin command="destroyinstance" description="Destroy specified instance by ID." accessLevel="100" />
+	<admin command="listinstances" description="List all active instances with their IDs and names." accessLevel="100" />
+
+	<!-- ADMIN INSTANCE ZONE -->
+	<admin command="instancezone" description="Check player instancezone." accessLevel="100" />
+	<admin command="instancezone_clear" description="Clear instancezone." accessLevel="100" />
+
+	<!-- ADMIN INVUL -->
+	<admin command="invul" description="Set invulnerability for the admin character." accessLevel="30" />
+	<admin command="setinvul" description="Set invulnerability for a target player." accessLevel="100" />
+
+	<!-- ADMIN KICK -->
+	<admin command="kick" description="Kick a specific player from the server." accessLevel="100" confirmDlg="true" />
+	<admin command="kick_non_gm" description="Kick all players from the server who are not GMs." accessLevel="100" />
+
+	<!-- ADMIN KILL -->
+	<admin command="kill" description="Kill the target player." accessLevel="100" />
+	<admin command="kill_monster" description="Kill the target monster." accessLevel="100" />
+
+	<!-- ADMIN LEVEL -->
+	<admin command="add_level" description="Add specified number of levels to the target player." accessLevel="100" />
+	<admin command="set_level" description="Set the exact level for the target player." accessLevel="100" />
+
+	<!-- ADMIN LOGIN -->
+	<admin command="server_gm_only" description="Restrict access to the server for GM (Game Master) accounts only." accessLevel="30" />
+	<admin command="server_all" description="Allow access to the server for all players." accessLevel="30" />
+	<admin command="server_max_player" description="Set the maximum number of players allowed to log in to the server." accessLevel="30" />
+	<admin command="server_list_type" description="Set the type of the server." accessLevel="30" />
+	<admin command="server_list_age" description="Set the age of the server." accessLevel="30" />
+	<admin command="server_login" description="Opens server login menagment menu." accessLevel="30" />
+
+	<!-- ADMIN MAMMON -->
+	<admin command="mammon_find" description="Find mammon." accessLevel="30" />
+	<admin command="mammon_respawn" description="Respawn mammon." accessLevel="100" />
+
+	<!-- ADMIN MANOR -->
+	<admin command="manor" description="Opens the Manor status interface." accessLevel="100" />
+	
+	<!-- ADMIN MENU -->
+	<admin command="char_manage" description="Opens the character management menu." accessLevel="30" />
+	<admin command="teleport_character_to_menu" description="Teleports target character to specified coordinates." accessLevel="100" />
+	<admin command="recall_char_menu" description="Teleports target character to your location." accessLevel="100" confirmDlg="true" />
+	<admin command="recall_party_menu" description="Teleports target player's entire party to your location." accessLevel="100" confirmDlg="true" />
+	<admin command="recall_clan_menu" description="Teleports target player's entire clan to your location." accessLevel="100" confirmDlg="true" />
+	<admin command="goto_char_menu" description="Teleports you to target character's location." accessLevel="30" />
+	<admin command="kick_menu" description="Disconnects target player from the game." accessLevel="100" confirmDlg="true" />
+	<admin command="kill_menu" description="Instantly kills target character or monster." accessLevel="100" />
+	<admin command="ban_menu" description="Opens character ban management menu." accessLevel="30" />
+	<admin command="unban_menu" description="Opens character unban management menu." accessLevel="30" />
+
+	<!-- ADMIN MESSAGES -->
+	<admin command="msg" description="Displays a system message based on its ID." accessLevel="100" />
+
+	<!-- ADMIN FAKE PLAYERS -->
+	<admin command="fakechat" description="Send a fake chat message appearing to come from a fake player." accessLevel="100" />
+	<admin command="record_route" description="Start recording a bot movement route. Usage: //record_route &lt;name&gt;" accessLevel="100" />
+	<admin command="stop_route" description="Stop recording and save the current route to data/routes/." accessLevel="100" />
+	<admin command="list_routes" description="List all saved bot movement routes." accessLevel="100" />
+
+	<!-- ADMIN ONLINE -->
+	<admin command="online" description="Display a list of all currently online players." accessLevel="100" />
+
+	<!-- ADMIN PATH NODE -->
+	<admin command="path_find" description="Debug movement path." accessLevel="100" />
+
+	<!-- ADMIN PETITION -->
+	<admin command="view_petitions" description="Displays the list of active petitions." accessLevel="30" />
+	<admin command="view_petition" description="View details of a specific petition." accessLevel="30" />
+	<admin command="accept_petition" description="Accept the selected petition." accessLevel="30" />
+	<admin command="reject_petition" description="Reject the selected petition." accessLevel="30" />
+	<admin command="reset_petitions" description="Clear all active petitions." accessLevel="30" />
+	<admin command="force_peti" description="Open the petition window to target player." accessLevel="30" />
+
+	<!-- ADMIN P FORGE -->
+	<admin command="forge" description="Opens the packet forging interface for testing and debugging network packets." accessLevel="100" />
+	<admin command="forge_values" description="Sets up packet opcodes and format for forging test packets." accessLevel="100" />
+	<admin command="forge_send" description="Sends a forged packet to client/server for testing purposes." accessLevel="100" />
+
+	<!-- ADMIN PLEDGE -->
+	<admin command="pledge" description="Opens admin clan menu." accessLevel="100" />
+
+	<!-- ADMIN PC CAFE POINTS -->
+	<admin command="pccafepoints" description="Opens PC Cafe Points Manager." accessLevel="100" />
+
+	<!-- PREMIUM SYSTEM -->
+	<admin command="premium_menu" description="Opens the Premium Service Manager interface." accessLevel="100" />
+	<admin command="premium_add1" description="Grants the player 1 month of premium account." accessLevel="100" confirmDlg="true" />
+	<admin command="premium_add2" description="Grants the player 2 months of premium account." accessLevel="100" confirmDlg="true" />
+	<admin command="premium_add3" description="Grants the player 3 months of premium account." accessLevel="100" confirmDlg="true" />
+	<admin command="premium_info" description="View information about the player's premium status." accessLevel="100" />
+	<admin command="premium_remove" description="Remove premium service from a account." accessLevel="100" confirmDlg="true" />
+
+	<!-- ADMIN QUEST -->
+	<admin command="quest_reload" description="Reloads the specified quest script" accessLevel="100" />
+	<admin command="script_load" description="Load specified script (Path/to/script.java)." accessLevel="100" />
+	<admin command="script_unload" description="Unload specified script (Path/to/script.java)." accessLevel="100" />
+	<admin command="show_quests" description="Displays all quests assigned to the target NPC." accessLevel="100" />
+	<admin command="quest_info" description="Displays detailed information about a specific quest." accessLevel="100" />
+
+	<!-- ADMIN REGIONS -->
+	<admin command="region" description="Show world regions." accessLevel="100" />
+	<admin command="regions" description="Show world regions." accessLevel="100" />
+	<admin command="show_region" description="Show world regions." accessLevel="100" />
+	<admin command="show_regions" description="Show world regions." accessLevel="100" />
+	<admin command="showregion" description="Show world regions." accessLevel="100" />
+	<admin command="showregions" description="Show world regions." accessLevel="100" />
+	<admin command="region_clear" description="Hide world regions." accessLevel="100" />
+	<admin command="regions_clear" description="Hide world regions." accessLevel="100" />
+	<admin command="regionclear" description="Hide world regions." accessLevel="100" />
+	<admin command="regionsclear" description="Hide world regions." accessLevel="100" />
+
+	<!-- ADMIN RELOAD -->
+	<admin command="reload" description="Reload Panel." accessLevel="100" confirmDlg="true" />
+
+	<!-- ADMIN REPAIR CHAR -->
+	<admin command="restore" description="Restores character to default position and inventory." accessLevel="100" />
+	<admin command="repair" description="Repairs character by resetting position and inventory." accessLevel="100" />
+
+	<!-- ADMIN RES -->
+	<admin command="res" description="Resurrect the target player." accessLevel="100" />
+	<admin command="res_monster" description="Resurrect the target monster." accessLevel="100" />
+
+	<!-- ADMIN RIDE -->
+	<admin command="ride_wyvern" description="Mount a wyvern." accessLevel="100" />
+	<admin command="ride_strider" description="Mount a strider." accessLevel="100" />
+	<admin command="unride_wyvern" description="Dismount the wyvern." accessLevel="100" />
+	<admin command="unride_strider" description="Dismount the strider." accessLevel="100" />
+	<admin command="unride" description="Dismount from any current mount." accessLevel="100" />
+
+	<!-- ADMIN SHOP -->
+	<admin command="buy" description="Buy items from a specific buylist by ID." accessLevel="100" />
+	<admin command="gmshop" description="Open the GM shop interface." accessLevel="100" />
+
+	<!-- ADMIN SHOW QUEST -->
+	<admin command="charquestmenu" description="Opens the character quest management menu." accessLevel="100" />
+	<admin command="setcharquest" description="Set quest condition for the target character." accessLevel="100" />
+
+	<!-- ADMIN SHUTDOWN -->
+	<admin command="server_shutdown" description="Shuts down the server after a specified time (in seconds)." accessLevel="30" confirmDlg="true" />
+	<admin command="server_restart" description="Restarts the server after a specified time (in seconds)." accessLevel="30" confirmDlg="true" />
+	<admin command="server_abort" description="Aborts any scheduled server shutdown or restart." accessLevel="30" />
+
+	<!-- ADMIN SIEGE -->
+	<admin command="siege" description="Opens Siege/Castle/Clan Hall Menu." accessLevel="100" />
+	<admin command="add_attacker" description="Add Attackers." accessLevel="100" />
+	<admin command="add_defender" description="Add Defenders." accessLevel="100" />
+	<admin command="add_guard" description="Spawn castle guards." accessLevel="100" />
+	<admin command="list_siege_clans" description="List clans registered for the current siege." accessLevel="100" />
+	<admin command="clear_siege_list" description="Clear all registered siege clans." accessLevel="100" />
+	<admin command="move_defenders" description="Move defenders." accessLevel="100" />
+	<admin command="spawn_doors" description="Spawn or respawn all castle doors." accessLevel="100" />
+	<admin command="startsiege" description="Force start of the current siege." accessLevel="100" />
+	<admin command="endsiege" description="Force end of the current siege." accessLevel="100" />
+	<admin command="setsiegetime" description="Set siege time." accessLevel="100" />
+	<admin command="setcastle" description="Assign castle ownership to a clan." accessLevel="100" />
+	<admin command="removecastle" description="Remove castle ownership from a clan." accessLevel="100" />
+	
+	<!-- CLAN HALL -->
+	<admin command="clanhall" description="Open Clan Hall management menu." accessLevel="100" />
+	<admin command="clanhallset" description="Assign a Clan Hall to a clan." accessLevel="100" />
+	<admin command="clanhalldel" description="Remove Clan Hall ownership." accessLevel="100" />
+	<admin command="clanhallopendoors" description="Open all Clan Hall doors." accessLevel="100" />
+	<admin command="clanhallclosedoors" description="Close all Clan Hall doors." accessLevel="100" />
+	<admin command="clanhallteleportself" description="Teleport yourself to the selected Clan Hall." accessLevel="100" />
+
+	<!-- ADMIN SKILL -->
+	<admin command="show_skills" description="Opens skills player skills editor menu." accessLevel="100" />
+	<admin command="remove_skills" description="Opens interface to remove skills from target player." accessLevel="100" />
+	<admin command="skill_list" description="Shows list of all available skills." accessLevel="100" />
+	<admin command="skill_race" description="Shows skills available by race." accessLevel="100" />
+	<admin command="skill_class" description="Shows skills available by class." accessLevel="100" />
+	<admin command="skill_add_list" description="Shows skill levels available for a specific skill." accessLevel="100" />
+	<admin command="skill_index" description="Opens skill category index menu." accessLevel="100" />
+	<admin command="add_skill" description="Adds specified skill to target player." accessLevel="100" />
+	<admin command="remove_skill" description="Removes specified skill from target player." accessLevel="100" />
+	<admin command="get_skills" description="Copies all skills from target player to yourself." accessLevel="100" />
+	<admin command="reset_skills" description="Restores your original skills after using get_skills." accessLevel="100" />
+	<admin command="give_all_skills" description="Gives target player all skills available for their level/class." accessLevel="100" />
+	<admin command="give_all_skills_fs" description="Gives all skills including Forgotten Scroll skills." accessLevel="100" />
+	<admin command="give_clan_skills" description="Gives clan skills to target player's clan." accessLevel="100" />
+	<admin command="give_all_clan_skills" description="Gives all available clan skills." accessLevel="100" />
+	<admin command="remove_all_skills" description="Removes all skills from target player." accessLevel="100" />
+	<admin command="add_clan_skill" description="Adds specific clan skill." accessLevel="100" />
+	<admin command="setskill" description="Adds skill to yourself." accessLevel="100" />
+
+	<!-- ADMIN SPAWN -->
+	<admin command="show_spawns" description="Display a list of all current spawns in the game world." accessLevel="100" />
+	<admin command="spawn" description="Spawn a specific NPC or monster." accessLevel="100" />
+	<admin command="circlespawn" description="Spawn a specific NPC or monster in a circle from your position." accessLevel="100" />
+	<admin command="spawnat" description="Spawn an NPC or monster at specified coordinates." accessLevel="100" />
+	<admin command="spawn_monster" description="Spawn a monster by ID or name with optional respawn time and count." accessLevel="100" />
+	<admin command="spawn_index" description="Show list of monsters by level for spawning." accessLevel="100" />
+	<admin command="unspawnall" description="Remove all NPCs and monsters from the world." accessLevel="100" confirmDlg="true" />
+	<admin command="respawnall" description="Reload and respawn all NPCs and monsters." accessLevel="100" confirmDlg="true" />
+	<admin command="spawn_reload" description="Reload all spawn data from database." accessLevel="100" confirmDlg="true" />
+	<admin command="spawn_misc" description="Spawn all NPCs in GM testing area." accessLevel="100" confirmDlg="true" />
+	<admin command="spawnmisc" description="Alias for spawn_misc command." accessLevel="100" confirmDlg="true" />
+	<admin command="npc_index" description="Show list of NPCs by name prefix for spawning." accessLevel="100" />
+	<admin command="spawn_once" description="Spawn an NPC or monster only once, and it will not respawn after death." accessLevel="100" />
+	<admin command="show_npcs" description="Display a list of all current NPCs in the game world." accessLevel="100" />
+	<admin command="spawnnight" description="Spawn NPCs or monsters that are intended to appear during the night." accessLevel="100" />
+	<admin command="spawnday" description="Spawn NPCs or monsters that are intended to appear during the day." accessLevel="100" />
+	<admin command="instance_spawns" description="List all spawns in a specific instance." accessLevel="100" />
+	<admin command="list_spawns" description="List all spawn locations for a specific NPC." accessLevel="100" />
+	<admin command="list_positions" description="List positions of spawned NPCs and teleport options." accessLevel="100" />
+	<admin command="spawn_debug_menu" description="Open spawn debug information menu." accessLevel="100" />
+	<admin command="spawn_debug_print" description="Print spawn debug information in server logs." accessLevel="100" />
+	<admin command="spawn_debug_print_menu" description="Print spawn debug info and show debug menu." accessLevel="100" />
+	<admin command="topspawncount" description="Show top most frequently spawned NPCs." accessLevel="100" />
+	<admin command="top_spawn_count" description="Alias for topspawncount command." accessLevel="100" />
+
+	<!-- ADMIN SUMMON -->
+	<admin command="summon" description="Summon an item." accessLevel="100" />
+
+	<!-- ADMIN TARGET -->
+	<admin command="target" description="Targets a player by name." accessLevel="100" />
+
+	<!-- ADMIN TARGETSAY -->
+	<admin command="targetsay" description="Makes the targeted player or NPC say the specified text." accessLevel="100" />
+
+	<!-- ADMIN TELEPORT -->
+	<admin command="show_moves" description="Opens admin teleport menu." accessLevel="100" />
+	<admin command="show_moves_other" description="Opens admin teleport other menu." accessLevel="100" />
+	<admin command="show_teleport" description="Shows teleport window for target player." accessLevel="30" />
+	<admin command="teleport_to_character" description="Teleports you to your currently targeted player." accessLevel="30" />
+	<admin command="teleportto" description="Teleports you to the specified player by name." accessLevel="30" />
+	<admin command="move_to" description="Teleports you to specified X Y Z coordinates." accessLevel="100" />
+	<admin command="teleport_character" description="Teleports target player to specified coordinates." accessLevel="100" />
+	<admin command="recall" description="Recalls the specified player to your location." accessLevel="100" />
+	<admin command="walk" description="Makes your character walk to specified coordinates." accessLevel="100" />
+	<admin command="recall_npc" description="Recalls the specified NPC to your location." accessLevel="100" />
+	<admin command="gonorth" description="Moves your character north by specified distance." accessLevel="30" />
+	<admin command="gosouth" description="Moves your character south by specified distance." accessLevel="30" />
+	<admin command="goeast" description="Moves your character east by specified distance." accessLevel="30" />
+	<admin command="gowest" description="Moves your character west by specified distance." accessLevel="30" />
+	<admin command="goup" description="Moves your character up by specified distance." accessLevel="30" />
+	<admin command="godown" description="Moves your character down by specified distance." accessLevel="30" />
+	<admin command="tele" description="Shows teleport location selection window." accessLevel="30" />
+	<admin command="teleto" description="Activates click-to-teleport mode." accessLevel="30" />
+	<admin command="instant_move" description="Activates instant click-to-move mode." accessLevel="30" />
+	<admin command="sendhome" description="Send player to home village." accessLevel="100" confirmDlg="true" />
+
+	<!-- ADMIN TEST -->
+	<admin command="skill_test" description="Test a skill by ID." accessLevel="100" />
+
+	<!-- ADMIN VITALITY -->
+	<admin command="set_vitality" description="Opens vitality panel." accessLevel="100" />
+	<admin command="set_vitality_level" description="Set vitality level." accessLevel="100" />
+	<admin command="full_vitality" description="Give full vitality." accessLevel="100" />
+	<admin command="empty_vitality" description="Remove vitality." accessLevel="100" />
+	<admin command="get_vitality" description="See vitality level." accessLevel="100" />
+
+	<!-- ADMIN ZONE -->
+	<admin command="zone_check" description="Check zone menu." accessLevel="30" />
+	<admin command="zone_visual" description="See visual zone." accessLevel="100" />
+	<admin command="zone_visual_clear" description="Remove visual zone." accessLevel="100" />
+
+	<!-- ADMIN ZONE BUILD -->
+	<admin command="zone_build" description="Opens the zone builder interface." accessLevel="30" />
+	<admin command="zone_build_save" description="Saves the currently drawn zone." accessLevel="30" />
+	<admin command="zone_build_delete" description="Deletes a specified zone by ID." accessLevel="30" />
+	<admin command="zone_build_toggle" description="Toggles zone drawing mode on/off." accessLevel="30" />
+	<admin command="zone_build_clear" description="Clears the currently drawn zone points." accessLevel="30" />
+
+	<!-- ADMIN SCAN -->
+	<admin command="scan" description="Search nerby NPCs." accessLevel="30" />
+	<admin command="deleteNpcByObjectId" description="Delete NPC by object ID." accessLevel="100" confirmDlg="true" />
+
+	<!-- ADMIN SEARCH -->
+	<admin command="search" description="Open items search panel." accessLevel="30" />
+
+	<!-- ADMIN SERVERINFO -->
+	<admin command="serverinfo" description="Open server info panel." accessLevel="30" />
+
+	<!-- VOICE COMMANDS -->
+	<admin command="banchat" description="Temporarily bans a player from using chat." accessLevel="30" />
+	<admin command="chatban" description="Temporarily bans a player from using chat." accessLevel="30" />
+	<admin command="unbanchat" description="Unban a player from chat." accessLevel="30" />
+	<admin command="chatunban" description="Unban a player from chat." accessLevel="30" />
+
+	<!-- HIDE -->
+	<admin command="hide" description="Hide OFF/ON." accessLevel="30" />
+
+	<!-- FENCES -->
+	<admin command="addfence" description="Creates a new fence." accessLevel="100" />
+	<admin command="setfencestate" description="Changes the state of a selected fence." accessLevel="100" />
+	<admin command="removefence" description="Removes the selected fence." accessLevel="100" />
+	<admin command="listfence" description="List of all fances." accessLevel="100" />
+	<admin command="gofence" description="Teleports you to the selected fence's location." accessLevel="100" />
+</list>

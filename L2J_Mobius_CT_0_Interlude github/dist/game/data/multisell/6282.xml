@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>31555</npc> <!-- Abercrombie (Mercenary Supplier) -->
+	</npcs>
+	<item>
+		<!-- Golden Ram Coin -->
+		<ingredient count="1" id="7251" />
+		<!-- Booty - Gray Pouch -->
+		<production count="1" id="7725" />
+	</item>
+	<item>
+		<!-- Golden Ram Coin -->
+		<ingredient count="10" id="7251" />
+		<!-- Dimensional Diamond -->
+		<production count="1" id="7562" />
+	</item>
+	<item>
+		<!-- Golden Ram Coin -->
+		<ingredient count="6" id="7251" />
+		<!-- Booty - Yellow Pouch -->
+		<production count="1" id="7636" />
+	</item>
+	<item>
+		<!-- Golden Ram Coin -->
+		<ingredient count="28" id="7251" />
+		<!-- Booty - Brown Pouch -->
+		<production count="1" id="7637" />
+	</item>
+</list>

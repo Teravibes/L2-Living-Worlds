@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Shilien Saint -->
+	<skillTree type="classSkillTree" classId="112" parentClassId="43">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="10000000" learnedByNpc="true" />
+		<skill skillName="Health" skillId="329" skillLevel="1" getLevel="76" levelUpSp="10000000" learnedByNpc="true" />
+		<skill skillName="Arcane Protection" skillId="1354" skillLevel="1" getLevel="76" levelUpSp="10000000" learnedByNpc="true">
+			<item id="7664" count="1" /> <!-- Spellbook - Arcane Protection -->
+		</skill>
+
+		<skill skillName="Skill Mastery" skillId="331" skillLevel="1" getLevel="77" levelUpSp="13000000" learnedByNpc="true" />
+		<skill skillName="Block Shield" skillId="1358" skillLevel="1" getLevel="77" levelUpSp="13000000" learnedByNpc="true">
+			<item id="7668" count="1" /> <!-- Spellbook - Block Shield -->
+		</skill>
+		<skill skillName="Spell Force" skillId="427" skillLevel="1" getLevel="77" levelUpSp="13000000" learnedByNpc="true" />
+
+		<skill skillName="Arcane Wisdom" skillId="336" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+		<skill skillName="Prophecy of Wind" skillId="1357" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true">
+			<item id="7667" count="1" /> <!-- Spellbook - Prophecy of Wind -->
+		</skill>
+		<skill skillName="Divine Lore" skillId="436" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+
+		<skill skillName="Mass Recharge" skillId="1428" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8908" count="1" /> <!-- Ancient Spellbook: Mass Recharge -->
+		</skill>
+	</skillTree>
+</list>

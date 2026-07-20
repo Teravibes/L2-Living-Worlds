@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Shillien Oracle -->
+	<skillTree type="classSkillTree" classId="42" parentClassId="38">
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="3" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="1" getLevel="20" levelUpSp="1600" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="2" getLevel="20" levelUpSp="1600" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="1" getLevel="20" levelUpSp="1600" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="2" getLevel="20" levelUpSp="1600" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="5" getLevel="20" levelUpSp="1600" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="6" getLevel="20" levelUpSp="1600" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="1" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Quick Recovery" skillId="164" skillLevel="1" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="7" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="8" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="9" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="4" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="5" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="6" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="4" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="5" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="6" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLevel="1" getLevel="20" levelUpSp="1600" learnedByNpc="true">
+			<item id="1386" count="1" /> <!-- Spellbook: Disrupt Undead -->
+		</skill>
+		<skill skillName="Disrupt Undead" skillId="1031" skillLevel="2" getLevel="20" levelUpSp="1600" learnedByNpc="true" />
+		<skill skillName="Might" skillId="1068" skillLevel="2" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Wind Walk" skillId="1204" skillLevel="1" getLevel="20" levelUpSp="3300" learnedByNpc="true">
+			<item id="1098" count="1" /> <!-- Spellbook: Wind Walk -->
+		</skill>
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="2" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Concentration" skillId="1078" skillLevel="1" getLevel="20" levelUpSp="3300" learnedByNpc="true">
+			<item id="1399" count="1" /> <!-- Spellbook: Concentration -->
+		</skill>
+		<skill skillName="Resurrection" skillId="1016" skillLevel="1" getLevel="20" levelUpSp="3300" learnedByNpc="true">
+			<item id="1514" count="1" /> <!-- Spellbook: Resurrection -->
+		</skill>
+		<skill skillName="Kiss of Eva" skillId="1073" skillLevel="1" getLevel="20" levelUpSp="3300" learnedByNpc="true">
+			<item id="1515" count="1" /> <!-- Spellbook: Kiss of Eva -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="4" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="5" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="3" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="4" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="3" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="4" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="7" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="8" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLevel="1" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="1" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="10" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="11" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="12" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="7" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="8" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="9" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="7" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="8" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="9" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLevel="3" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLevel="4" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="1" getLevel="25" levelUpSp="2200" learnedByNpc="true">
+			<item id="1394" count="1" /> <!-- Spellbook: Sleep -->
+		</skill>
+		<skill skillName="Sleep" skillId="1069" skillLevel="2" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="3" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Dryad Root" skillId="1201" skillLevel="1" getLevel="25" levelUpSp="2200" learnedByNpc="true">
+			<item id="1415" count="1" /> <!-- Spellbook: Dryad Root -->
+		</skill>
+		<skill skillName="Dryad Root" skillId="1201" skillLevel="2" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Dryad Root" skillId="1201" skillLevel="3" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="3" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
+		<skill skillName="Shield" skillId="1040" skillLevel="2" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
+		<skill skillName="Empower" skillId="1059" skillLevel="1" getLevel="25" levelUpSp="6500" learnedByNpc="true">
+			<item id="1391" count="1" /> <!-- Spellbook: Empower -->
+		</skill>
+		<skill skillName="Focus" skillId="1077" skillLevel="1" getLevel="25" levelUpSp="6500" learnedByNpc="true">
+			<item id="1398" count="1" /> <!-- Spellbook: Focus -->
+		</skill>
+		<skill skillName="Mental Shield" skillId="1035" skillLevel="1" getLevel="25" levelUpSp="6500" learnedByNpc="true">
+			<item id="1388" count="1" /> <!-- Spellbook: Mental Shield -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="6" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="7" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="5" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="6" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="5" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="6" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="9" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="10" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Quick Recovery" skillId="164" skillLevel="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="13" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="14" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="15" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="10" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="11" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="12" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="10" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="11" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="12" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLevel="5" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLevel="6" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="4" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="5" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="6" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Dryad Root" skillId="1201" skillLevel="4" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Dryad Root" skillId="1201" skillLevel="5" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Dryad Root" skillId="1201" skillLevel="6" getLevel="30" levelUpSp="3900" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="1" getLevel="30" levelUpSp="5800" learnedByNpc="true">
+			<item id="1385" count="1" /> <!-- Spellbook: Recharge -->
+		</skill>
+		<skill skillName="Recharge" skillId="1013" skillLevel="2" getLevel="30" levelUpSp="5800" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="4" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Wind Walk" skillId="1204" skillLevel="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Concentration" skillId="1078" skillLevel="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Resurrection" skillId="1016" skillLevel="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Vampiric Rage" skillId="1268" skillLevel="1" getLevel="30" levelUpSp="12000" learnedByNpc="true">
+			<item id="4910" count="1" /> <!-- Spellbook: Vampiric Rage -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="8" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="9" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="7" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="8" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="7" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="8" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="11" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="12" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="1" getLevel="35" levelUpSp="23000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="2" getLevel="35" levelUpSp="23000" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="16" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="17" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="18" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="13" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="14" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="15" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="13" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="14" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="15" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLevel="7" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Disrupt Undead" skillId="1031" skillLevel="8" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="7" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="8" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="9" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Dryad Root" skillId="1201" skillLevel="7" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Dryad Root" skillId="1201" skillLevel="8" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Dryad Root" skillId="1201" skillLevel="9" getLevel="35" levelUpSp="7700" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="3" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="4" getLevel="35" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="5" getLevel="35" levelUpSp="23000" learnedByNpc="true" />
+		<skill skillName="Cure Poison" skillId="1012" skillLevel="2" getLevel="35" levelUpSp="23000" learnedByNpc="true" />
+		<skill skillName="Resist Wind" skillId="1189" skillLevel="1" getLevel="35" levelUpSp="23000" learnedByNpc="true">
+			<item id="1413" count="1" /> <!-- Spellbook: Resist Wind -->
+		</skill>
+	</skillTree>
+</list>

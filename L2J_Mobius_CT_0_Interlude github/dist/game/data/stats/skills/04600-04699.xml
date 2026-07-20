@@ -1,0 +1,2461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="4600" levels="12" name="Reducing P. Def Shock">
+		<!-- Level 1: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 1. -->
+		<!-- Level 2: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 2. -->
+		<!-- Level 3: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 2. -->
+		<!-- Level 4: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 5: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 6: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 7: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 8: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 9: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 10: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 11: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 12: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<table name="#abnormalLevels">11 12 12 13 13 13 13 13 13 13 13 13</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">25 41 57 77 100 123 143 153 161 166 170 172</table>
+		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
+		<table name="#pDef">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<icon>icon.skill0100</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<affectRange>150</affectRange>
+		<basicProperty>CON</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>6000</reuseDelay>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="PhysicalDamage" />
+			<effect name="Stun">
+				<mul stat="pDef">#pDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4601" levels="3" name="NPC Clan Buff - Acumen Focus">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#mAtkSpd">1.15 1.23 1.3</table>
+		<table name="#critRate">1.2 1.25 1.3</table>
+		<table name="#mpInitialConsume">6 11 20</table>
+		<table name="#mpConsume">23 42 78</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRate">#critRate</mul>
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4602" levels="12" name="Decrease P.Atk">
+		<!-- Level 1: Reduces P. Atk. Effect 1. -->
+		<!-- Level 2: Reduces P. Atk. Effect 2. -->
+		<!-- Level 3: Reduces P. Atk. Effect 2. -->
+		<!-- Level 4: Reduces P. Atk. Effect 3. -->
+		<!-- Level 5: Reduces P. Atk. Effect 3. -->
+		<!-- Level 6: Reduces P. Atk. Effect 3. -->
+		<!-- Level 7: Reduces P. Atk. Effect 3. -->
+		<!-- Level 8: Reduces P. Atk. Effect 3. -->
+		<!-- Level 9: Reduces P. Atk. Effect 3. -->
+		<!-- Level 10: Reduces P. Atk. Effect 3. -->
+		<!-- Level 11: Reduces P. Atk. Effect 3. -->
+		<!-- Level 12: Reduces P. Atk. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormalTime">5 10 10 15 15 15 15 15 15 15 15 15</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">5 8 11 14 18 22 26 28 29 30 31 31</table>
+		<table name="#mpConsume">19 31 42 56 72 88 104 110 116 120 122 124</table>
+		<table name="#pAtk">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<icon>icon.skill4037</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>#abnormalTime</abnormalTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>WIT</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<element>0</element> <!-- Fire -->
+		<elementPower>20</elementPower>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage" />
+			<effect name="Debuff">
+				<mul stat="pAtk">#pAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4603" levels="12" name="Decrease P.Atk">
+		<!-- Level 1: Reduces P. Atk. Effect 1. -->
+		<!-- Level 2: Reduces P. Atk. Effect 2. -->
+		<!-- Level 3: Reduces P. Atk. Effect 2. -->
+		<!-- Level 4: Reduces P. Atk. Effect 3. -->
+		<!-- Level 5: Reduces P. Atk. Effect 3. -->
+		<!-- Level 6: Reduces P. Atk. Effect 3. -->
+		<!-- Level 7: Reduces P. Atk. Effect 3. -->
+		<!-- Level 8: Reduces P. Atk. Effect 3. -->
+		<!-- Level 9: Reduces P. Atk. Effect 3. -->
+		<!-- Level 10: Reduces P. Atk. Effect 3. -->
+		<!-- Level 11: Reduces P. Atk. Effect 3. -->
+		<!-- Level 12: Reduces P. Atk. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormalTime">5 10 10 15 15 15 15 15 15 15 15 15</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">3 4 5 7 9 11 13 14 15 15 15 16</table>
+		<table name="#mpConsume">10 16 22 28 36 44 52 55 58 60 62 62</table>
+		<table name="#pAtk">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<icon>icon.skill4037</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>#abnormalTime</abnormalTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>WIT</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<element>0</element> <!-- Fire -->
+		<elementPower>20</elementPower>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtk">#pAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4604" levels="12" name="Decrease P.Atk">
+		<!-- Level 1: Reduces P. Atk. Effect 1. -->
+		<!-- Level 2: Reduces P. Atk. Effect 2. -->
+		<!-- Level 3: Reduces P. Atk. Effect 2. -->
+		<!-- Level 4: Reduces P. Atk. Effect 3. -->
+		<!-- Level 5: Reduces P. Atk. Effect 3. -->
+		<!-- Level 6: Reduces P. Atk. Effect 3. -->
+		<!-- Level 7: Reduces P. Atk. Effect 3. -->
+		<!-- Level 8: Reduces P. Atk. Effect 3. -->
+		<!-- Level 9: Reduces P. Atk. Effect 3. -->
+		<!-- Level 10: Reduces P. Atk. Effect 3. -->
+		<!-- Level 11: Reduces P. Atk. Effect 3. -->
+		<!-- Level 12: Reduces P. Atk. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormalTime">5 10 10 15 15 15 15 15 15 15 15 15</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">5 8 11 14 18 22 26 28 29 30 31 31</table>
+		<table name="#mpConsume">19 31 42 56 72 88 104 110 116 120 122 124</table>
+		<table name="#pAtk">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<table name="#power">9 13 19 26 34 43 51 55 58 61 63 65</table>
+		<icon>icon.skill4037</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>#abnormalTime</abnormalTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>WIT</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<hitTime>2000</hitTime>
+		<element>0</element> <!-- Fire -->
+		<elementPower>20</elementPower>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="MagicalDamage" />
+			<effect name="Debuff">
+				<mul stat="pAtk">#pAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4605" levels="12" name="Surrender To Fire">
+		<!-- Level 1: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 2. -->
+		<!-- Level 2: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 3. -->
+		<!-- Level 3: Instantly decreases resistance to fire attacks and increases resistance to water attacks. Effect 3. -->
+		<!-- Level 4: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 4. -->
+		<!-- Level 5: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 4. -->
+		<!-- Level 6: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 4. -->
+		<!-- Level 7: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 4. -->
+		<!-- Level 8: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 4. -->
+		<!-- Level 9: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 4. -->
+		<!-- Level 10: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 4. -->
+		<!-- Level 11: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 4. -->
+		<!-- Level 12: Instantly decreases resistance to fire attack and increases resistance to water attack. Effect 4. -->
+		<table name="#abnormalLevels">2 3 3 4 4 4 4 4 4 4 4 4</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#fireRes">20 25 25 30 30 30 30 30 30 30 30 30</table>
+		<table name="#waterRes">15 15 15 15 15 15 15 15 15 15 15 15</table>
+		<table name="#mpConsume">25 41 57 77 100 123 143 153 161 166 170 172</table>
+		<table name="#power">46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617</table>
+		<icon>icon.skill4279_new</icon>
+		<operateType>A2</operateType>
+		<targetType>FRONT_AREA</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>ARMOR_FIRE</abnormalType>
+		<activateRate>80</activateRate>
+		<affectRange>80</affectRange>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<fanRange>0,0,80,150</fanRange>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>6000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage" />
+			<effect name="Debuff">
+				<sub stat="fireRes">#fireRes</sub>
+				<add stat="waterRes">#waterRes</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4606" levels="12" name="Poison">
+		<!-- Level 1: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 2. -->
+		<!-- Level 2: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 3. -->
+		<!-- Level 3: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 4. -->
+		<!-- Level 4: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 5. -->
+		<!-- Level 5: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 6. -->
+		<!-- Level 6: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 7. -->
+		<!-- Level 7: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 8. -->
+		<!-- Level 8: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 8. -->
+		<!-- Level 9: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 9. -->
+		<!-- Level 10: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 9. -->
+		<!-- Level 11: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 10. -->
+		<!-- Level 12: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 10. -->
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#dot">12 18 24 31 38 44 48 48 50 50 51 51</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">37 62 86 116 1149 184 215 229 241 249 255 258</table>
+		<table name="#power">46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617</table>
+		<icon>icon.skill4035</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>35</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>6000</reuseDelay>
+		<trait>POISON</trait>
+		<effects>
+			<effect name="PhysicalDamage" />
+			<effect name="DamOverTime" ticks="5">
+				<power>#dot</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4607" levels="1" name="Magma Attack">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<element>0</element> <!-- Fire -->
+		<elementPower>20</elementPower>
+		<hitTime>1500</hitTime>
+		<magicLevel>80</magicLevel>
+		<power>187</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4608" levels="2" name="NPC Clan Buff - Berserk">
+		<table name="#abnormalLevels">1 2</table>
+		<table name="#magicLevel">30 70</table>
+		<table name="#pAtk">1.05 1.08</table>
+		<table name="#pAtkSpd">1.05 1.08</table>
+		<table name="#mAtk">1.1 1.16</table>
+		<table name="#mAtkSpd">1.05 1.08</table>
+		<table name="#runSpd">5 8</table>
+		<table name="#pDef">0.95 0.92</table>
+		<table name="#mDef">0.9 0.84</table>
+		<table name="#mpInitialConsume">4 10</table>
+		<table name="#mpConsume">16 39</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>BERSERKER</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">#pAtk</mul>
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<add stat="runSpd">#runSpd</add>
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="mDef">#mDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4609" levels="4" name="NPC Clan Buff - Vampiric Rage">
+		<table name="#abnormalLevels">1 2 3 4</table>
+		<table name="#absorbDam">6 7 8 9</table>
+		<table name="#magicLevel">20 40 60 70</table>
+		<table name="#mpInitialConsume">3 5 8 10</table>
+		<table name="#mpConsume">12 22 34 39</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="absorbDam">#absorbDam</add> <!-- absorb HP from damage inflicted on enemies -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4610" levels="3" name="NPC Clan Buff - Focus">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#critRate">1.2 1.25 1.3</table>
+		<table name="#mpInitialConsume">3 5 10</table>
+		<table name="#mpConsume">12 22 39</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRate">#critRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4611" levels="3" name="NPC Clan Buff - Death Whisper">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#critDmg">1.3 1.4 1.5</table>
+		<table name="#mpInitialConsume">3 5 10</table>
+		<table name="#mpConsume">12 22 39</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critDmg">#critDmg</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4612" levels="12" name="NPC Wide Wild Sweep">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">21 33 47 64 82 101 118 126 133 137 140 142</table>
+		<table name="#power">46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617</table>
+		<operateType>A1</operateType>
+		<targetType>FRONT_AREA</targetType>
+		<affectRange>1000</affectRange>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<fanRange>0,0,1000,180</fanRange>
+		<hitTime>1800</hitTime>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>6000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4613" levels="12" name="NPC Clan Heal">
+		<table name="#amount">83 151 245 362 494 627 743 789 823 845 853 853</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">5 9 13 18 24 29 34 36 38 39 39 39</table>
+		<table name="#mpConsume">20 35 54 74 96 118 136 146 151 155 158 158</table>
+		<operateType>A1</operateType>
+		<targetType>CLAN</targetType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Heal">
+				<power>#amount</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4614" levels="12" name="NPC Death Bomb">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">21 33 47 64 82 101 118 126 133 137 140 142</table>
+		<table name="#power">52 78 112 155 203 255 305 328 348 364 377 387</table>
+		<operateType>A1</operateType>
+		<targetType>AURA</targetType>
+		<affectRange>300</affectRange>
+		<effectPoint>-100</effectPoint>
+		<isSuicideAttack>true</isSuicideAttack>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4615" levels="12" name="Bleed">
+		<!-- Level 1: You suffer a wound that continually reduces HP. Effect 2. -->
+		<!-- Level 2: You suffer a wound that continually reduces HP. Effect 3. -->
+		<!-- Level 3: You suffer a wound that continually reduces HP. Effect 4. -->
+		<!-- Level 4: You suffer a wound that continually reduces HP. Effect 5. -->
+		<!-- Level 5: You suffer a wound that continually reduces HP. Effect 6. -->
+		<!-- Level 6: You suffer a wound that continually reduces HP. Effect 7. -->
+		<!-- Level 7: You suffer a wound that continually reduces HP. Effect 8. -->
+		<!-- Level 8: You suffer a wound that continually reduces HP. Effect 8. -->
+		<!-- Level 9: You suffer a wound that continually reduces HP. Effect 9. -->
+		<!-- Level 10: You suffer a wound that continually reduces HP. Effect 9. -->
+		<!-- Level 11: You suffer a wound that continually reduces HP. Effect 10. -->
+		<!-- Level 12: You suffer a wound that continually reduces HP. Effect 10. -->
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#dmg">9 13 17 22 27 31 34 34 35 35 36 36</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">4 7 10 13 17 20 24 25 27 28 28 29</table>
+		<table name="#mpConsume">18 27 38 51 66 82 95 102 106 110 112 114</table>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<affectRange>200</affectRange>
+		<basicProperty>CON</basicProperty>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="5">
+				<power>#dmg</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4616" levels="1" name="Fake Petrificiation">
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>360</abnormalTime>
+		<abnormalType>TURN_STONE</abnormalType>
+		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>80</magicLevel>
+		<mpConsume>58</mpConsume>
+		<mpInitialConsume>15</mpInitialConsume>
+		<power>100</power>
+		<effects>
+			<effect name="Petrification" />
+		</effects>
+	</skill>
+	<skill id="4617" levels="1" name="Dispel Petrification">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>80</magicLevel>
+		<mpConsume>58</mpConsume>
+		<mpInitialConsume>15</mpInitialConsume>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>TURN_STONE,2</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4618" levels="1" name="NPC Cancel PC Target">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>40</magicLevel>
+		<mpInitialConsume>7</mpInitialConsume>
+		<mpConsume>28</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="TargetCancel">
+				<chance>80</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4619" levels="1" name="NPC Dispel Sleep">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>40</magicLevel>
+		<mpInitialConsume>7</mpInitialConsume>
+		<mpConsume>28</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SLEEP,1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4620" levels="12" name="Paralysis">
+		<!-- A temporary paralysis which prevents movement. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">3 4 5 7 9 11 13 14 15 15 15 16</table>
+		<table name="#mpConsume">10 16 22 28 36 44 52 55 58 60 62 62</table>
+		<icon>icon.skill1170</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>WIT</basicProperty>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>6000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<trait>PARALYZE</trait>
+		<effects>
+			<effect name="Paralyze" />
+		</effects>
+	</skill>
+	<skill id="4621" levels="12" name="NPC AE - 80% HP Drain">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">18 30 41 54 70 86 101 107 112 116 119 121</table>
+		<table name="#mpConsume">71 118 162 218 279 343 403 428 450 466 476 482</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<operateType>A1</operateType>
+		<targetType>AREA</targetType>
+		<affectRange>200</affectRange>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<element>5</element> <!-- Dark -->
+		<elementPower>20</elementPower>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.8</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4622" levels="12" name="NPC AE - 80% HP Drain - Magic">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">9 15 20 27 35 43 51 54 56 58 60 60</table>
+		<table name="#mpConsume">36 59 82 110 140 172 202 214 226 234 238 242</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<operateType>A1</operateType>
+		<targetType>AREA</targetType>
+		<affectRange>200</affectRange>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<element>5</element> <!-- Dark -->
+		<elementPower>20</elementPower>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.8</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4623" levels="12" name="NPC AE - 80% HP Drain - Slow">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">9 15 20 27 35 43 51 54 56 58 60 60</table>
+		<table name="#mpConsume">36 59 82 110 140 172 202 214 226 234 238 242</table>
+		<table name="#power">9 13 19 26 34 43 51 55 58 61 63 65</table>
+		<operateType>A1</operateType>
+		<targetType>AREA</targetType>
+		<affectRange>200</affectRange>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<element>5</element> <!-- Dark -->
+		<elementPower>20</elementPower>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.8</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4624" levels="12" name="Decrease HP Regeneration Rate">
+		<!-- Decreases recovery from heal spells -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<icon>icon.skill1269</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
+		<activateRate>10</activateRate>
+		<basicProperty>WIT</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="healEffect">0</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4625" levels="12" name="Decrease Speed">
+		<!-- Level 1: Decreases Speed. Effect 1. -->
+		<!-- Level 2: Decreases Speed. Effect 2. -->
+		<!-- Level 3: Decreases Speed. Effect 2. -->
+		<!-- Level 4: Decreases Speed. Effect 3. -->
+		<!-- Level 5: Decreases Speed. Effect 3. -->
+		<!-- Level 6: Decreases Speed. Effect 3. -->
+		<!-- Level 7: Decreases Speed. Effect 3. -->
+		<!-- Level 8: Decreases Speed. Effect 3. -->
+		<!-- Level 9: Decreases Speed. Effect 3. -->
+		<!-- Level 10: Decreases Speed. Effect 3. -->
+		<!-- Level 11: Decreases Speed. Effect 3. -->
+		<!-- Level 12: Decreases Speed. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#runSpd">0.85 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</table>
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>10</activateRate>
+		<basicProperty>WIT</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">#runSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4626" levels="12" name="NPC Buff - Physical Barrier">
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8 9 10 11 12</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">1 2 3 4 5 6 7 7 7 8 8 8</table>
+		<table name="#mpConsume">6 8 11 14 18 22 26 28 30 30 31 31</table>
+		<table name="#pDef">1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 2.33 2.67 3 3.33</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">#pDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4627" levels="12" name="NPC Buff - Magical Barrier">
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8 9 10 11 12</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">1 2 3 4 5 6 7 7 7 8 8 8</table>
+		<table name="#mpConsume">6 8 11 14 18 22 26 28 30 30 31 31</table>
+		<table name="#mDef">1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 2.33 2.67 3 3.33</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MD_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mDef">#mDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4628" levels="1" name="Mysterious Aura">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4629" levels="12" name="NPC MR - HP Drain">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">3 6 8 10 13 16 18 19 20 21 22 22</table>
+		<table name="#mpConsume">14 22 30 39 50 62 74 78 82 84 86 87</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<element>5</element> <!-- Dark -->
+		<elementPower>20</elementPower>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.2</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4630" levels="12" name="NPC MR - Twister">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">3 4 5 7 9 11 13 14 15 15 15 16</table>
+		<table name="#mpConsume">10 16 22 28 26 44 52 55 58 60 62 62</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<element>2</element> <!-- Wind -->
+		<elementPower>20</elementPower>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4631" levels="3" name="NPC Buff - Acumen Shield WildMagic">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mpInitialConsume">6 11 17</table>
+		<table name="#mpConsume">23 42 66</table>
+		<table name="#mAtkSpd">1.15 1.23 1.3</table>
+		<table name="#pDef">1.8 1.12 1.15</table>
+		<table name="#mCritRate">3 4 4</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="mCritRate">#mCritRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4632" levels="3" name="NPC Buff - Acumen Empower WildMagic">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mpInitialConsume">6 11 17</table>
+		<table name="#mpConsume">23 42 66</table>
+		<table name="#mAtkSpd">1.15 1.23 1.3</table>
+		<table name="#mAtk">1.55 1.65 1.75</table>
+		<table name="#mCritRate">3 4 4</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="mCritRate">#mCritRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4633" levels="3" name="NPC Buff - Acumen Empower Berserk">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mpInitialConsume">6 11 17</table>
+		<table name="#mpConsume">23 42 66</table>
+		<table name="#pAtk">1.05 1.05 1.08</table>
+		<table name="#pAtkSpd">1.05 1.05 1.08</table>
+		<table name="#mAtk">1.71 1.82 2.03</table>
+		<table name="#mAtkSpd">1.21 1.29 1.4</table>
+		<table name="#runSpd">5 5 8</table>
+		<table name="#pDef">0.95 0.95 0.92</table>
+		<table name="#mDef">0.9 0.9 0.84</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">#pAtk</mul>
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<add stat="runSpd">#runSpd</add>
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="mDef">#mDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4634" levels="3" name="NPC Buff - Acumen Empower DamageShield">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mpInitialConsume">6 11 17</table>
+		<table name="#mpConsume">23 42 66</table>
+		<table name="#mAtkSpd">1.15 1.23 1.3</table>
+		<table name="#mAtk">1.55 1.65 1.75</table>
+		<table name="#reflectDam">10 15 20</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<add stat="reflectDam">#reflectDam</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4635" levels="3" name="NPC Buff - Acumen Berserk WildMagic">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mpInitialConsume">6 11 17</table>
+		<table name="#mpConsume">23 42 66</table>
+		<table name="#pAtk">1.05 1.05 1.08</table>
+		<table name="#pAtkSpd">1.05 1.05 1.08</table>
+		<table name="#mAtk">1.1 1.1 1.16</table>
+		<table name="#mAtkSpd">1.21 1.29 1.4</table>
+		<table name="#runSpd">5 5 8</table>
+		<table name="#pDef">0.95 0.95 0.92</table>
+		<table name="#mDef">0.9 0.9 0.84</table>
+		<table name="#mCritRate">3 4 4</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">#pAtk</mul>
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<add stat="runSpd">#runSpd</add>
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="mDef">#mDef</mul>
+				<mul stat="mCritRate">#mCritRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4636" levels="3" name="NPC Buff - Acumen Berserk DamageShield">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mpInitialConsume">6 11 17</table>
+		<table name="#mpConsume">23 42 66</table>
+		<table name="#pAtk">1.05 1.05 1.08</table>
+		<table name="#pAtkSpd">1.05 1.05 1.08</table>
+		<table name="#mAtk">1.1 1.1 1.16</table>
+		<table name="#mAtkSpd">1.21 1.29 1.4</table>
+		<table name="#runSpd">5 5 8</table>
+		<table name="#pDef">0.95 0.95 0.92</table>
+		<table name="#mDef">0.9 0.9 0.84</table>
+		<table name="#reflect">10 15 20</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">#pAtk</mul>
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<add stat="runSpd">#runSpd</add>
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="mDef">#mDef</mul>
+				<add stat="reflectDam">#reflect</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4637" levels="3" name="NPC Buff - Acumen WildMagic DamageShield">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mpInitialConsume">6 11 17</table>
+		<table name="#mpConsume">23 42 66</table>
+		<table name="#mAtkSpd">1.15 1.23 1.3</table>
+		<table name="#mCritRate">3 4 4</table>
+		<table name="#reflectDam">10 15 20</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<mul stat="mCritRate">#mCritRate</mul>
+				<add stat="reflectDam">#reflectDam</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4638" levels="3" name="NPC Clan Buff - Acumen Empower WildMagic">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mpInitialConsume">9 16 25</table>
+		<table name="#mpConsume">34 63 99</table>
+		<table name="#mAtkSpd">1.15 1.23 1.3</table>
+		<table name="#mAtk">1.55 1.65 1.75</table>
+		<table name="#mCritRate">3 4 4</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="mCritRate">#mCritRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4639" levels="3" name="NPC Clan Buff - Acumen Empower Berserk">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mpInitialConsume">9 16 25</table>
+		<table name="#mpConsume">34 63 99</table>
+		<table name="#pAtk">1.05 1.05 1.08</table>
+		<table name="#pAtkSpd">1.05 1.05 1.08</table>
+		<table name="#mAtk">1.71 1.82 2.03</table>
+		<table name="#mAtkSpd">1.21 1.29 1.4</table>
+		<table name="#runSpd">5 5 8</table>
+		<table name="#pDef">0.95 0.95 0.92</table>
+		<table name="#mDef">0.9 0.9 0.84</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">#pAtk</mul>
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<add stat="runSpd">#runSpd</add>
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="mDef">#mDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4640" levels="12" name="Sleep">
+		<!-- You are in an unconscious state that prohibits movement. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">4 6 8 11 14 17 20 21 22 23 23 23</table>
+		<table name="#mpConsume">14 23 32 42 54 66 78 83 87 90 92 94</table>
+		<icon>icon.skill4046</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>WIT</basicProperty>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<hitTime>2500</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<removedOnDamage>true</removedOnDamage>
+		<reuseDelay>8000</reuseDelay>
+		<trait>SLEEP</trait>
+		<effects>
+			<effect name="Sleep" />
+		</effects>
+	</skill>
+	<skill id="4641" levels="12" name="NPC Super Strike">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">41 66 93 127 164 202 236 252 265 274 280 283</table>
+		<table name="#power">137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1800</hitTime>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>6000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4642" levels="3" name="NPC Fast Spell Casting">
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mAtkSpd">1.05 1.07 1.1</table>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4643" levels="12" name="Decrease Speed">
+		<!-- Level 1: Instantly reduces Speed. Effect 1. -->
+		<!-- Level 2: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 3: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 4: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 5: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 6: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 7: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 8: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 9: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 10: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 11: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 12: Instantly reduces Speed. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">25 41 57 77 100 123 143 153 161 166 170 172</table>
+		<table name="#runSpd">0.85 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</table>
+		<table name="#power">46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617</table>
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>WIT</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>6000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage" />
+			<effect name="Debuff">
+				<mul stat="runSpd">#runSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4644" levels="2" name="Area Buff - Haste">
+		<table name="#abnormalLevels">1 2</table>
+		<table name="#magicLevel">30 70</table>
+		<table name="#pAtkSpd">1.15 1.33</table>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<effectPoint>100</effectPoint>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4645" levels="3" name="Area Buff - Focus">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#critRate">1.20 1.25 1.3</table>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRate">#critRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4646" levels="3" name="Area Buff - Death Whisper">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#critDmg">1.3 1.4 1.5</table>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critDmg">#critDmg</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4647" levels="3" name="Area Buff - Might">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#pAtk">1.08 1.12 1.15</table>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">#pAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4648" levels="3" name="Area Buff - Shield">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#pDef">1.08 1.12 1.15</table>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">#pDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4649" levels="12" name="Poison">
+		<!-- Level 1: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 2. -->
+		<!-- Level 2: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 3. -->
+		<!-- Level 3: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 4. -->
+		<!-- Level 4: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 5. -->
+		<!-- Level 5: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 6. -->
+		<!-- Level 6: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 7. -->
+		<!-- Level 7: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 8. -->
+		<!-- Level 8: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 8. -->
+		<!-- Level 9: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 9. -->
+		<!-- Level 10: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 9. -->
+		<!-- Level 11: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 10. -->
+		<!-- Level 12: A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 10. -->
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpInitialConsume">4 6 8 11 14 17 20 21 22 23 23 23</table>
+		<table name="#mpConsume">14 23 32 42 54 66 78 83 87 90 92 94</table>
+		<table name="#dot">12 18 24 31 38 44 48 48 50 50 51 51</table>
+		<icon>icon.skill4036</icon>
+		<operateType>A2</operateType>
+		<targetType>AURA</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>35</activateRate>
+		<affectRange>200</affectRange>
+		<basicProperty>MEN</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<mpConsume>#mpConsume</mpConsume>
+		<trait>POISON</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="5">
+				<power>#dot</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4650" levels="1" name="NPC AE - Dispel Hold">
+		<operateType>A1</operateType>
+		<targetType>AURA</targetType>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>40</magicLevel>
+		<mpConsume>42</mpConsume>
+		<mpInitialConsume>11</mpInitialConsume>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>ROOT_MAGICALLY,1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4651" levels="3" name="NPC AE - Dispel Slow">
+		<table name="#dispelAbnormals">SPEED_DOWN,1 SPEED_DOWN,2 SPEED_DOWN,3</table>
+		<table name="#magicLevel">20 40 60</table>
+		<table name="#mpConsume">23 42 66</table>
+		<table name="#mpInitialConsume">6 11 17</table>
+		<operateType>A1</operateType>
+		<targetType>AURA</targetType>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>#dispelAbnormals</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4652" levels="1" name="NPC AE - Dispel Silence">
+		<operateType>A1</operateType>
+		<targetType>AURA</targetType>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>40</magicLevel>
+		<mpConsume>42</mpConsume>
+		<mpInitialConsume>11</mpInitialConsume>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SILENCE,1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4653" levels="12" name="NPC Corpse Life Drain">
+		<table name="#amount">131 201 271 351 451 551 651 691 731 751 771 781</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
+		<operateType>A1</operateType>
+		<targetType>CORPSE</targetType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>100</power>
+		<reuseDelay>20000</reuseDelay>
+		<effects>
+			<effect name="Heal">
+				<power>#amount</power>
+			</effect>
+			<effect name="ConsumeBody" />
+		</effects>
+	</skill>
+	<skill id="4654" levels="12" name="NPC Death Link">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>6000</reuseDelay>
+		<effects>
+			<effect name="DeathLink" />
+		</effects>
+	</skill>
+	<skill id="4655" levels="12" name="NPC Death Link - Magic">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="DeathLink" />
+		</effects>
+	</skill>
+	<skill id="4656" levels="12" name="NPC Death Link - Slow">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
+		<table name="#power">9 13 19 26 34 43 51 55 58 61 63 65</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="DeathLink" />
+		</effects>
+	</skill>
+	<skill id="4657" levels="12" name="Hold">
+		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">22 37 50 67 86 106 124 132 139 143 147 149</table>
+		<table name="#mpInitialConsume">6 10 13 17 22 27 31 33 35 36 37 38</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<icon>icon.skill4047</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<reuseDelay>8000</reuseDelay>
+		<trait>HOLD</trait>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.2</power>
+			</effect>
+			<effect name="Root" />
+		</effects>
+	</skill>
+	<skill id="4658" levels="12" name="Hold">
+		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">11 19 25 34 43 53 62 66 70 72 74 75</table>
+		<table name="#mpInitialConsume">3 5 7 9 11 14 16 17 18 18 19 19</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<icon>icon.skill4047</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<trait>HOLD</trait>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.2</power>
+			</effect>
+			<effect name="Root" />
+		</effects>
+	</skill>
+	<skill id="4659" levels="12" name="Hold">
+		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">16 26 36 48 61 75 88 94 98 102 104 105</table>
+		<table name="#mpInitialConsume">4 7 9 12 16 19 22 24 25 26 26 27</table>
+		<table name="#power">9 13 19 26 34 43 51 55 58 61 63 65</table>
+		<icon>icon.skill4047</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<trait>HOLD</trait>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.2</power>
+			</effect>
+			<effect name="Root" />
+		</effects>
+	</skill>
+	<skill id="4660" levels="12" name="Sleep">
+		<!-- You are in an unconscious state that prohibits movement. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">22 37 50 67 86 106 124 132 139 143 147 149</table>
+		<table name="#mpInitialConsume">6 10 13 17 22 27 31 33 35 36 37 38</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<icon>icon.skill4046</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<removedOnDamage>true</removedOnDamage>
+		<reuseDelay>8000</reuseDelay>
+		<trait>SLEEP</trait>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.2</power>
+			</effect>
+			<effect name="Sleep" />
+		</effects>
+	</skill>
+	<skill id="4661" levels="12" name="Sleep">
+		<!-- You are in an unconscious state that prohibits movement. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">11 19 25 34 43 53 62 66 70 72 74 75</table>
+		<table name="#mpInitialConsume">3 5 7 9 11 14 16 17 18 18 19 19</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<icon>icon.skill4046</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<removedOnDamage>true</removedOnDamage>
+		<trait>SLEEP</trait>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.2</power>
+			</effect>
+			<effect name="Sleep" />
+		</effects>
+	</skill>
+	<skill id="4662" levels="12" name="Sleep">
+		<!-- You are in an unconscious state that prohibits movement. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">16 26 36 48 61 75 88 94 98 102 104 105</table>
+		<table name="#mpInitialConsume">4 7 9 12 16 19 22 24 25 26 26 27</table>
+		<table name="#power">9 13 19 26 34 43 51 55 58 61 63 65</table>
+		<icon>icon.skill4046</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<removedOnDamage>true</removedOnDamage>
+		<trait>SLEEP</trait>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.2</power>
+			</effect>
+			<effect name="Sleep" />
+		</effects>
+	</skill>
+	<skill id="4663" levels="1" name="NPC Hate">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<magicLevel>40</magicLevel>
+		<effects>
+			<effect name="TargetMeProbability">
+				<chance>80</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4664" levels="12" name="NPC 100% HP Drain">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">17 31 42 56 72 88 104 110 116 120 122 124</table>
+		<table name="#mpInitialConsume">5 8 11 14 18 22 28 29 29 30 31 31</table>
+		<table name="#power">12 18 25 35 46 57 68 73 78 81 84 86</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<element>5</element> <!-- Dark -->
+		<elementPower>20</elementPower>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="HpDrain">
+				<power>1</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4665" levels="12" name="NPC 100% HP Drain - Magic">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">9 16 21 28 36 44 52 55 58 60 61 62</table>
+		<table name="#mpInitialConsume">3 4 6 7 9 11 14 15 15 15 16 16</table>
+		<table name="#power">12 18 25 35 46 57 68 73 78 81 84 86</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<element>5</element> <!-- Dark -->
+		<elementPower>20</elementPower>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="HpDrain">
+				<power>1</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4666" levels="12" name="NPC 100% HP Drain - Slow">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">9 16 21 28 36 44 52 55 58 60 61 62</table>
+		<table name="#mpInitialConsume">3 4 6 7 9 11 14 15 15 15 16 16</table>
+		<table name="#power">6 9 13 18 23 29 34 37 39 41 42 43</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<element>5</element> <!-- Dark -->
+		<elementPower>20</elementPower>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="HpDrain">
+				<power>1</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4667" levels="12" name="NPC Strong 100% HP Drain">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">25 46 63 84 108 132 155 165 173 179 183 186</table>
+		<table name="#mpInitialConsume">7 12 16 21 27 33 43 42 44 45 46 47</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<element>5</element> <!-- Dark -->
+		<elementPower>20</elementPower>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="HpDrain">
+				<power>1</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4668" levels="12" name="NPC Strong 100% HP Drain - Magic">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 23 32 42 54 66 78 83 87 90 92 93</table>
+		<table name="#mpInitialConsume">4 6 8 11 14 17 21 22 22 23 23 24</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<element>5</element> <!-- Dark -->
+		<elementPower>20</elementPower>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="HpDrain">
+				<power>1</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4669" levels="12" name="NPC Strong 100% HP Drain - Slow">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 23 32 42 54 66 78 83 87 90 92 93</table>
+		<table name="#mpInitialConsume">4 6 8 11 14 17 21 22 22 23 23 24</table>
+		<table name="#power">9 13 19 26 34 43 51 55 58 61 63 65</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<element>5</element> <!-- Dark -->
+		<elementPower>20</elementPower>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="HpDrain">
+				<power>1</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4670" levels="12" name="Short Shock">
+		<!-- A blow that momentarily confuses you, inhibiting your ability to move. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">10 16 23 31 40 49 57 61 64 66 68 68</table>
+		<icon>icon.skill0100</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="4671" levels="1" name="AV - Teleport">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>1500</castRange>
+		<effectRange>2000</effectRange>
+		<magicLevel>40</magicLevel>
+		<effects>
+			<effect name="TeleportToTarget" />
+			<effect name="TargetMe" />
+		</effects>
+	</skill>
+	<skill id="4672" levels="1" name="NPC Corpse Remove">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<castRange>900</castRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
+	</skill>
+	<skill id="4673" levels="12" name="NPC Dispel Offensive Buff">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">12 20 27 35 45 55 67 69 73 75 77 78</table>
+		<table name="#power">8 17 25 33 42 50 58 67 75 83 92 100</table> <!-- Base Land Rate -->
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>PA_UP;BERSERKER;MA_UP;ATTACK_TIME_DOWN;DANCE_OF_FURY;SONG_OF_HUNTER</dispel>
+				<rate>#power</rate>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4674" levels="12" name="NPC Dispel Defensive Buff">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">12 20 27 35 45 55 67 69 73 75 77 78</table>
+		<table name="#power">8 17 25 33 42 50 58 67 75 83 92 100</table> <!-- Base Land Rate -->
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>PD_UP;MAX_HP_UP;SPEED_UP;CASTING_TIME_DOWN;SONG_OF_EARTH;DANCE_OF_FIRE</dispel>
+				<rate>#power</rate>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4675" levels="12" name="NPC Dispel Fighter Buff">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">12 20 27 35 45 55 67 69 73 75 77 78</table>
+		<table name="#power">8 17 25 33 42 50 58 67 75 83 92 100</table> <!-- Base Land Rate -->
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>HIT_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;ATTACK_TIME_DOWN</dispel>
+				<rate>#power</rate>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4676" levels="12" name="NPC Dispel Mage Offensive Buff">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">12 20 27 35 45 55 67 69 73 75 77 78</table>
+		<table name="#power">8 17 25 33 42 50 58 67 75 83 92 100</table> <!-- Base Land Rate -->
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>MA_UP;BERSERKER;CASTING_TIME_DOWN;MAX_MP_UP</dispel>
+				<rate>#power</rate>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4677" levels="12" name="NPC Dispel Fighter Defensive Buff">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">12 20 27 35 45 55 67 69 73 75 77 78</table>
+		<table name="#power">8 17 25 33 42 50 58 67 75 83 92 100</table> <!-- Base Land Rate -->
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>MAX_HP_UP;SHIELD_PROB_UP;VAMPIRIC_ATTACK;MD_UP</dispel>
+				<rate>#power</rate>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4678" levels="12" name="NPC Dispel Mage Defensive Buff">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">12 20 27 35 45 55 67 69 73 75 77 78</table>
+		<table name="#power">8 17 25 33 42 50 58 67 75 83 92 100</table> <!-- Base Land Rate -->
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>RESIST_DERANGEMENT;MAX_HP_UP;CANCEL_PROB_DOWN;SPEED_UP</dispel>
+				<rate>#power</rate>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4679" levels="1" name="Valakas">
+		<!-- Vulnerable to water, impervious to fire. -->
+		<icon>icon.skillboss</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<VALAKAS>-8</VALAKAS>
+				<set stat="debuffImmunity">1</set>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4680" levels="1" name="Valakas Lava Skin">
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PD_UP_SPECIAL</abnormalType>
+		<hitTime>3300</hitTime>
+		<magicLevel>-1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">10</mul>
+				<mul stat="mDef">10</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4681" levels="1" name="Valakas Trample">
+		<operateType>A1</operateType>
+		<targetType>FRONT_AREA</targetType>
+		<affectRange>250</affectRange>
+		<baseCritRate>10</baseCritRate>
+		<castRange>50</castRange>
+		<coolTime>1500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<element>0</element> <!-- Fire -->
+		<elementPower>180</elementPower>
+		<fanRange>0,15,250,160</fanRange>
+		<hitTime>1000</hitTime>
+		<magicLevel>75</magicLevel>
+		<power>23397</power>
+		<trait>VALAKAS</trait>
+		<effects>
+			<effect name="PhysicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4682" levels="1" name="Valakas Trample">
+		<operateType>A1</operateType>
+		<targetType>FRONT_AREA</targetType>
+		<affectRange>250</affectRange>
+		<baseCritRate>10</baseCritRate>
+		<castRange>50</castRange>
+		<coolTime>1500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<element>0</element> <!-- Fire -->
+		<elementPower>180</elementPower>
+		<fanRange>0,-15,250,160</fanRange>
+		<hitTime>1000</hitTime>
+		<magicLevel>75</magicLevel>
+		<power>23397</power>
+		<trait>VALAKAS</trait>
+		<effects>
+			<effect name="PhysicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4683" levels="1" name="Valakas Dragon Breath">
+		<!-- Deadly flames envelope your entire body, causing your HP to drop rapidly. -->
+		<icon>icon.skill4683</icon>
+		<operateType>A2</operateType>
+		<targetType>FRONT_AREA</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DRAGON_BREATH</abnormalType>
+		<activateRate>80</activateRate>
+		<affectRange>1200</affectRange>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<element>0</element> <!-- Fire -->
+		<elementPower>180</elementPower>
+		<fanRange>0,0,1200,35</fanRange>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>75</magicLevel>
+		<power>499</power>
+		<effects>
+			<effect name="MagicalDamage" />
+			<effect name="DamOverTime" ticks="3">
+				<power>216</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4684" levels="1" name="Valakas Dragon Breath">
+		<!-- Deadly flames envelope your entire body, causing your HP to drop rapidly. -->
+		<icon>icon.skill4683</icon>
+		<operateType>A2</operateType>
+		<targetType>FRONT_AREA</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DRAGON_BREATH</abnormalType>
+		<activateRate>80</activateRate>
+		<affectRange>1700</affectRange>
+		<basicProperty>MEN</basicProperty>
+		<castRange>900</castRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<element>0</element> <!-- Fire -->
+		<elementPower>180</elementPower>
+		<fanRange>0,0,1700,160</fanRange>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>75</magicLevel>
+		<power>499</power>
+		<effects>
+			<effect name="MagicalDamage" />
+			<effect name="DamOverTime" ticks="3">
+				<power>216</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4685" levels="1" name="Valakas Tail Stomp">
+		<operateType>A1</operateType>
+		<targetType>BEHIND_AURA</targetType>
+		<affectRange>1000</affectRange>
+		<baseCritRate>10</baseCritRate>
+		<coolTime>1000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<element>0</element> <!-- Fire -->
+		<elementPower>180</elementPower>
+		<fanRange>0,180,1000,120</fanRange>
+		<hitTime>3000</hitTime>
+		<magicLevel>75</magicLevel>
+		<power>37224</power>
+		<effects>
+			<effect name="PhysicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4686" levels="1" name="Valakas Tail Stomp">
+		<operateType>A1</operateType>
+		<targetType>BEHIND_AURA</targetType>
+		<affectRange>500</affectRange>
+		<effectPoint>-100</effectPoint>
+		<element>0</element> <!-- Fire -->
+		<elementPower>180</elementPower>
+		<fanRange>0,180,500,120</fanRange>
+		<magicLevel>85</magicLevel>
+		<power>157</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4687" levels="1" name="Valakas Tail Stomp">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>3000</hitTime>
+		<magicLevel>85</magicLevel>
+	</skill>
+	<skill id="4688" levels="1" name="Valakas Shock">
+		<!-- You are thrown into an immobilizing state of shock. -->
+		<icon>icon.skill4688</icon>
+		<operateType>A2</operateType>
+		<targetType>BEHIND_AURA</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>FLY_AWAY</abnormalType>
+		<activateRate>80</activateRate>
+		<affectRange>250</affectRange>
+		<baseCritRate>10</baseCritRate>
+		<basicProperty>CON</basicProperty>
+		<coolTime>3000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<element>0</element> <!-- Fire -->
+		<elementPower>180</elementPower>
+		<fanRange>0,180,250,500</fanRange>
+		<flyRadius>600</flyRadius>
+		<flyType>THROW_UP</flyType>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>75</magicLevel>
+		<power>21423</power>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="PhysicalDamage" />
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="4689" levels="2" name="Valakas Fear">
+		<!-- Overcome by terror, you flee aimlessly in fear. -->
+		<table name="#activateRates">80 -1</table>
+		<table name="#basicProperties">MEN NONE</table>
+		<table name="#coolTime">2000 0</table>
+		<table name="#hitTime">3000 0</table>
+		<table name="#lvlDepend">1 0</table>
+		<icon>icon.skill4689</icon>
+		<operateType>A2</operateType>
+		<targetType>FRONT_AURA</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<activateRate>#activateRates</activateRate>
+		<affectRange>1000</affectRange>
+		<basicProperty>#basicProperties</basicProperty>
+		<coolTime>#coolTime</coolTime>
+		<effectPoint>-100</effectPoint>
+		<element>0</element> <!-- Fire -->
+		<elementPower>180</elementPower>
+		<hitTime>#hitTime</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>#lvlDepend</lvlBonusRate>
+		<magicLevel>75</magicLevel>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="Fear" />
+		</effects>
+	</skill>
+	<skill id="4690" levels="1" name="Valakas Meteor Storm">
+		<operateType>A1</operateType>
+		<targetType>AURA</targetType>
+		<affectRange>300</affectRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<element>0</element> <!-- Fire -->
+		<elementPower>180</elementPower>
+		<hitTime>8000</hitTime>
+		<magicLevel>75</magicLevel>
+		<power>834</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4691" levels="4" name="Valakas Regeneration">
+		<table name="#abnormalLevels">11 12 13 14</table>
+		<table name="#regHp">0.15 0.3 0.5 0.8</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>HP_REGEN_DOWN</abnormalType>
+		<magicLevel>-1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="regHp">#regHp</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4692" levels="1" name="Quest BOSS Big Body">
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>BIG_BODY</abnormalType>
+		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Grow" />
+		</effects>
+	</skill>
+	<skill id="4693" levels="1" name="Quest BOSS Dispel Big Body">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>BIG_BODY,1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4694" levels="1" name="Ultimate Debuff">
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
+		<effectPoint>100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtk">0.55</mul>
+				<sub stat="accCombat">4</sub>
+				<sub stat="rEvas">4</sub>
+				<mul stat="pDef">0.55</mul>
+				<mul stat="pAtkSpd">0.75</mul>
+				<mul stat="critRate">0.77</mul>
+				<mul stat="mDef">0.2</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4695" levels="1" name="Ultimate Debuff">
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
+		<effectPoint>100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtk">0.2</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4696" levels="1" name="Ultimate Debuff">
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
+		<effectPoint>100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pDef">0.2</mul>
+				<mul stat="mDef">0.2</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4697" levels="12" name="NPC Monster Hate">
+		<table name="#effectPoints">-410 -608 -853 -1134 -1427 -1695 -1903 -1973 -2024 -2064 -2097 -2123</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">18 29 40 53 68 83 100 104 109 113 115 117</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<effectPoint>#effectPoints</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+	</skill>
+	<skill id="4698" levels="12" name="Area Buff - HP Regeneration">
+		<table name="#abnormalLevels">3 4 5 6 7 8 9 10 11 12 13 14</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#regHp">1.2 1.3 1.4 1.5 1.75 2 3 4 5 6 8.5 11</table>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>HP_REGEN_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="regHp">#regHp</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4699" levels="13" name="Blessing of Queen">
+		<!-- Level 1: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 1. -->
+		<!-- Level 2: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 2. -->
+		<!-- Level 3: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<!-- Level 4: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<!-- Level 5: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<!-- Level 6: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<!-- Level 7: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<!-- Level 8: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<!-- Level 9: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<!-- Level 10: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<!-- Level 11: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<!-- Level 12: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<!-- Level 13: Queen's buff magic Temporarily increases your party member's critical damage amount rate and power. Effect 3. -->
+		<table name="#abnormalLevels">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormalTime">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
+		<table name="#cAtk">1.2 1.22 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25</table>
+		<table name="#effectPoints">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#mpConsume">97 125 155 161 165 169 172 176 179 183 186 189 193</table>
+		<table name="#mpInitialConsume">25 32 39 41 42 43 43 44 45 46 47 48 49</table>
+		<table name="#critRate">1.25 1.27 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3</table>
+		<icon>icon.skill1331</icon>
+		<operateType>A2</operateType>
+		<targetType>PARTY</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>#abnormalTime</abnormalTime>
+		<abnormalType>BUFF_QUEEN_OF_CAT</abnormalType>
+		<affectRange>1000</affectRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRate">#critRate</mul>
+				<mul stat="critDmg">#cAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+</list>

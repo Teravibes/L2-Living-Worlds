@@ -1,0 +1,4429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="18100" level="76" type="FestivalMonster" name="Offering of Forbidden Path">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="236" /> <!-- rhand: Soul Separator -->
+		<acquire exp="8594" sp="919" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="713.45001875" magical="556.793" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="196.141924808093" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>300</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18101" level="80" type="FestivalMonster" name="Offering of Forbidden Path Archer">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="287" /> <!-- rhand: Bow of Peril -->
+		<acquire exp="7899" sp="955" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3010.8929976" hpRegen="8.772" mp="1777.86" mpRegen="3.0906" />
+			<attack physical="2225.9562" magical="705.7121259456" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="314.4751494" magical="224.12052" evasion="14" />
+			<speed>
+				<walk ground="45" />
+				<run ground="70" />
+			</speed>
+			<hitTime>910</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="18102" level="80" type="FestivalMonster" name="Offering of Forbidden Path Warrior">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="DDMagic" id="4087" level="9" /> <!-- NPC Blaze -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" /> <!-- rhand: Sword of Damascus -->
+		<acquire exp="7301" sp="862" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2937.9838056" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.2025" magical="210.933802353999" evasion="2" />
+			<speed>
+				<walk ground="36" />
+				<run ground="130" />
+			</speed>
+			<hitTime>540</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4087" level="9" /> <!-- NPC Blaze -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="24" grown="28.8" />
+		</collision>
+	</npc>
+	<npc id="18103" level="80" type="FestivalMonster" name="Offering of Forbidden Path Follower">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="private_name" value="18318" /> <!-- Offering of Forbidden Path, Evoked Spirit -->
+			<param name="private_ai" value="dawn_5_2_light_prv" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="9" /> <!-- NPC Windstrike - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
+		<acquire exp="8732" sp="1031" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2937.9838056" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<attack physical="798.57199695" magical="635.688655236" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="295.972125" magical="210.933802353999" evasion="12" />
+			<speed>
+				<walk ground="10" />
+				<run ground="180" />
+			</speed>
+			<hitTime>340</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4151" level="9" /> <!-- NPC Windstrike - Magic -->
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4225" level="5" /> <!-- Resist Shock Attacks -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18104" level="80" type="FestivalMonster" name="Offering of Forbidden Path Berserker">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="IsStrong" value="1" />
+			<skill name="DDMagic" id="4244" level="9" /> <!-- NPC Wild Sweep -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="305" /> <!-- rhand: Tallum Glaive -->
+		<acquire exp="10373" sp="1239" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="135" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4244" level="9" /> <!-- NPC Wild Sweep -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="13" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="18105" level="78" type="FestivalMonster" name="Offering of Forbidden Path Zealot">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="private_name" value="18318" /> <!-- Offering of Forbidden Path, Evoked Spirit -->
+			<param name="private_ai" value="dawn_5_2_light_prv" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4032" level="8" /> <!-- NPC Strike -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="175" /> <!-- rhand: Art of Battle Axe -->
+		<acquire exp="8687" sp="951" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="748.83713625" magical="584.40994" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="282.7955185" magical="201.543082943943" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="195" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4225" level="5" /> <!-- Resist Shock Attacks -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="14" />
+			<height normal="34.8" />
+		</collision>
+	</npc>
+	<npc id="18106" level="76" type="FestivalMonster" name="Offering of Forbidden Path Marksman">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="289" /> <!-- rhand: Soul Bow -->
+		<acquire exp="7139" sp="763" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="1811.7553619" magical="556.793" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="275.2168675" magical="196.141924808093" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="150" />
+			</speed>
+			<hitTime>910</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="32.4" />
+		</collision>
+	</npc>
+	<npc id="18107" level="78" type="FestivalMonster" name="Offering of Forbidden Path Disciple">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="PhysicalSpecial" id="4032" level="8" /> <!-- NPC Strike -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="151" /> <!-- rhand: Sword of Miracles -->
+		<acquire exp="8687" sp="951" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="201.543082943943" />
+			<speed>
+				<walk ground="33" />
+				<run ground="195" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="18108" level="83" type="FestivalMonster" name="Offering of Forbidden Path Saint">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4073" level="9" /> <!-- Stun -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2500" /> <!-- rhand: Dark Legion's Edge -->
+		<acquire exp="8687" sp="1144" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3044.88717" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
+			<attack physical="1045.99572" magical="742.0569674364" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="380.7902964" magical="230.674836" evasion="5" />
+			<speed>
+				<walk ground="33" />
+				<run ground="195" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="14" />
+			<height normal="28.8" />
+		</collision>
+	</npc>
+	<npc id="18109" level="30" type="FestivalMonster" name="Treasures of the Festival">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="90" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="632.8549633" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<attack physical="0" magical="0" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="118.46" magical="71.7656545291881" />
+			<speed>
+				<walk ground="80" />
+				<run ground="195" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="11.7">
+					<item id="955" min="1" max="1" chance="1.7094" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="12.8205" /> <!-- Scroll: Enchant Armor (Grade D) -->
+					<item id="1060" min="1" max="1" chance="42.735" /> <!-- Lesser Healing Potion -->
+					<item id="1061" min="1" max="1" chance="42.735" /> <!-- Healing Potion -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18110" level="41" type="FestivalMonster" name="Treasures of the Festival">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="168" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="942.3925179" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
+			<attack physical="0" magical="0" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="160.69" magical="97.3459836250728" />
+			<speed>
+				<walk ground="80" />
+				<run ground="195" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="11.35">
+					<item id="951" min="1" max="1" chance="1.32159" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="1" max="1" chance="10.5727" /> <!-- Scroll: Enchant Armor (Grade C) -->
+					<item id="1061" min="1" max="1" chance="44.0529" /> <!-- Healing Potion -->
+					<item id="1832" min="1" max="1" chance="22.0264" /> <!-- Greater Antidote -->
+					<item id="1834" min="1" max="1" chance="22.0264" /> <!-- Emergency Dressing -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18111" level="52" type="FestivalMonster" name="Treasures of the Festival">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="270" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1302.758046" hpRegen="6.5" mp="804" mpRegen="2.4" />
+			<attack physical="0" magical="0" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="209.5" magical="126.908234441282" />
+			<speed>
+				<walk ground="80" />
+				<run ground="195" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="12">
+					<item id="734" min="1" max="1" chance="20.8333" /> <!-- Haste Potion -->
+					<item id="735" min="1" max="1" chance="20.8333" /> <!-- Potion of Alacrity -->
+					<item id="951" min="1" max="1" chance="1.66667" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Armor (Grade C) -->
+					<item id="1539" min="1" max="1" chance="41.6667" /> <!-- Greater Healing Potion -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18112" level="63" type="FestivalMonster" name="Treasures of the Festival">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="396" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1671.377796" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
+			<attack physical="0" magical="0" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="262.19" magical="158.829835915776" />
+			<speed>
+				<walk ground="80" />
+				<run ground="195" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="10.75">
+					<item id="734" min="1" max="1" chance="23.2558" /> <!-- Haste Potion -->
+					<item id="735" min="1" max="1" chance="23.2558" /> <!-- Potion of Alacrity -->
+					<item id="947" min="1" max="1" chance="0.46512" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+					<item id="948" min="1" max="1" chance="6.51163" /> <!-- Scroll: Enchant Armor (Grade B) -->
+					<item id="1539" min="1" max="1" chance="46.5116" /> <!-- Greater Healing Potion -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18113" level="72" type="FestivalMonster" name="Treasures of the Festival">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="518" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1938.889453" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="0" magical="0" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="305.36" magical="184.981376274429" />
+			<speed>
+				<walk ground="80" />
+				<run ground="195" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="10.28">
+					<item id="729" min="1" max="1" chance="0.29183" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+					<item id="730" min="1" max="1" chance="2.43191" /> <!-- Scroll: Enchant Armor (Grade A) -->
+					<item id="734" min="1" max="1" chance="24.3191" /> <!-- Haste Potion -->
+					<item id="735" min="1" max="1" chance="24.3191" /> <!-- Potion of Alacrity -->
+					<item id="1539" min="1" max="1" chance="48.6381" /> <!-- Greater Healing Potion -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18114" level="30" type="FestivalMonster" name="Treasures of the Festival">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="90" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="632.8549633" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<attack physical="0" magical="0" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="118.46" magical="71.7656545291881" />
+			<speed>
+				<walk ground="80" />
+				<run ground="195" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="11.7">
+					<item id="955" min="1" max="1" chance="1.7094" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="12.8205" /> <!-- Scroll: Enchant Armor (Grade D) -->
+					<item id="1060" min="1" max="1" chance="42.735" /> <!-- Lesser Healing Potion -->
+					<item id="1061" min="1" max="1" chance="42.735" /> <!-- Healing Potion -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18115" level="41" type="FestivalMonster" name="Treasures of the Festival">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="168" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="942.3925179" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
+			<attack physical="0" magical="0" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="160.69" magical="97.3459836250728" />
+			<speed>
+				<walk ground="80" />
+				<run ground="195" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="11.35">
+					<item id="951" min="1" max="1" chance="1.32159" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="1" max="1" chance="10.5727" /> <!-- Scroll: Enchant Armor (Grade C) -->
+					<item id="1061" min="1" max="1" chance="44.0529" /> <!-- Healing Potion -->
+					<item id="1832" min="1" max="1" chance="22.0264" /> <!-- Greater Antidote -->
+					<item id="1834" min="1" max="1" chance="22.0264" /> <!-- Emergency Dressing -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18116" level="52" type="FestivalMonster" name="Treasures of the Festival">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="270" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1302.758046" hpRegen="6.5" mp="804" mpRegen="2.4" />
+			<attack physical="0" magical="0" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="209.5" magical="126.908234441282" />
+			<speed>
+				<walk ground="80" />
+				<run ground="195" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="12">
+					<item id="734" min="1" max="1" chance="20.8333" /> <!-- Haste Potion -->
+					<item id="735" min="1" max="1" chance="20.8333" /> <!-- Potion of Alacrity -->
+					<item id="951" min="1" max="1" chance="1.66667" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Armor (Grade C) -->
+					<item id="1539" min="1" max="1" chance="41.6667" /> <!-- Greater Healing Potion -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18117" level="63" type="FestivalMonster" name="Treasures of the Festival">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="396" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1671.377796" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
+			<attack physical="0" magical="0" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="262.19" magical="158.829835915776" />
+			<speed>
+				<walk ground="80" />
+				<run ground="195" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="10.75">
+					<item id="734" min="1" max="1" chance="23.2558" /> <!-- Haste Potion -->
+					<item id="735" min="1" max="1" chance="23.2558" /> <!-- Potion of Alacrity -->
+					<item id="947" min="1" max="1" chance="0.46512" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+					<item id="948" min="1" max="1" chance="6.51163" /> <!-- Scroll: Enchant Armor (Grade B) -->
+					<item id="1539" min="1" max="1" chance="46.5116" /> <!-- Greater Healing Potion -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18118" level="72" type="FestivalMonster" name="Treasures of the Festival">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="518" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1938.889453" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="0" magical="0" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="305.36" magical="184.981376274429" />
+			<speed>
+				<walk ground="80" />
+				<run ground="195" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="200" isAggressive="false">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="10.28">
+					<item id="729" min="1" max="1" chance="0.29183" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+					<item id="730" min="1" max="1" chance="2.43191" /> <!-- Scroll: Enchant Armor (Grade A) -->
+					<item id="734" min="1" max="1" chance="24.3191" /> <!-- Haste Potion -->
+					<item id="735" min="1" max="1" chance="24.3191" /> <!-- Potion of Alacrity -->
+					<item id="1539" min="1" max="1" chance="48.6381" /> <!-- Greater Healing Potion -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18119" level="63" type="Monster" name="Corpse of Deadman">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2089.92274" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
+			<attack physical="541.44774" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="262.19426" magical="158.831806262641" />
+			<speed>
+				<walk ground="15" />
+				<run ground="1" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Attack Weak Point -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<corpseTime>240</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="18120" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfBuff1" id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill name="SelfBuff2" id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+			<skill name="SelfBuff3" id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="54325" sp="6648" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+			<skill id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18121" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfDeBuff1" id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff2" id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff3" id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="51522" sp="6306" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18122" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="SelfRangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="DeBuff" id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill name="DDMagic" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="39348" sp="4818" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18123" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfBuff1" id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill name="SelfBuff2" id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+			<skill name="SelfBuff3" id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="54325" sp="6648" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+			<skill id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18124" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfDeBuff1" id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff2" id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff3" id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="51522" sp="6306" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18125" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="SelfRangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="DeBuff" id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill name="DDMagic" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="39348" sp="4818" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18126" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfBuff1" id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill name="SelfBuff2" id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+			<skill name="SelfBuff3" id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="54325" sp="6648" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+			<skill id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18127" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfDeBuff1" id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff2" id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff3" id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="51522" sp="6306" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18128" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="SelfRangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="DeBuff" id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill name="DDMagic" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="39348" sp="4818" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18129" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfBuff1" id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill name="SelfBuff2" id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+			<skill name="SelfBuff3" id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="54325" sp="6648" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+			<skill id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18130" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfDeBuff1" id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff2" id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff3" id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="51522" sp="6306" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18131" level="81" type="Monster" name="Halisha's Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="SelfRangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="DeBuff" id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill name="DDMagic" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="39348" sp="4818" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="-3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="39" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="18132" level="81" type="Monster" name="Imperial Healer">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<skill name="W_SelfRangeDDMagic" id="4569" level="9" /> <!-- NPC AE Solar Flare - Magic -->
+			<skill name="W_RangeDeBuff" id="4640" level="9" /> <!-- Sleep -->
+			<skill name="W_RangeHeal" id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="55355" sp="6774" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="791.661474" magical="457.930728288" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="478.1237352" magical="289.637364" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<hitTime>590</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4569" level="9" /> <!-- NPC AE Solar Flare - Magic -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4640" level="9" /> <!-- Sleep -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="19" />
+			<height normal="54.5" />
+		</collision>
+	</npc>
+	<npc id="18133" level="81" type="Monster" name="Imperial Mosaic">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="SelfBuff" value="0" />
+			<skill name="PhysicalSpecial" id="4582" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="51131" sp="6258" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="838.171536" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="170" />
+			</speed>
+			<hitTime>540</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="66" />
+		</collision>
+	</npc>
+	<npc id="18134" level="81" type="Monster" name="Imperial Mosaic">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<skill name="PhysicalSpecial1" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="38424" sp="4704" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="838.171536" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="170" />
+			</speed>
+			<hitTime>540</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="66" />
+		</collision>
+	</npc>
+	<npc id="18135" level="81" type="Monster" name="Imperial Mosaic">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<skill name="PhysicalSpecial1" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill name="PhysicalSpecial2" id="4032" level="9" /> <!-- NPC Strike -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="50905" sp="6234" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="838.171536" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="170" />
+			</speed>
+			<hitTime>540</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="66" />
+		</collision>
+	</npc>
+	<npc id="18136" level="81" type="Monster" name="Imperial Mosaic">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<skill name="PhysicalSpecial" id="4582" level="9" /> <!-- Poison -->
+			<!-- <skill name="SelfBuff" id="4091" level="1" /> --> <!-- NPC Ogre Spirit Totem -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="51131" sp="6258" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="761.97417" magical="554.0961810204" random="7" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="170" />
+			</speed>
+			<hitTime>540</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="66" />
+		</collision>
+	</npc>
+	<npc id="18137" level="81" type="Monster" name="Imperial Mosaic">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="W_LongRangeDDMagic" id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="37902" sp="4638" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18138" level="81" type="Monster" name="Imperial Mosaic">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="W_LongRangeDDMagic" id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="W_ClanBuff" id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="50459" sp="6174" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+			<skill id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18139" level="81" type="Monster" name="Imperial Mosaic">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="W_LongRangeDDMagic" id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="W_RangeDeBuff" id="4587" level="9" /> <!-- Decrease P. Atk. -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="49711" sp="6084" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+			<skill id="4587" level="9" /> <!-- Decrease P.Atk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18140" level="81" type="Monster" name="Imperial Mosaic">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="W_SelfRangeDDMagic" id="4033" level="9" /> <!-- NPC Burn -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="50434" sp="6174" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4033" level="9" /> <!-- NPC Burn -->
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18141" level="81" type="Monster" name="Beetle of Grave">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4568" level="9" /> <!-- NPC AE Solar Flare -->
+			<skill name="ClanBuff1" id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="32437" sp="3972" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="34.884" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1542.7245" magical="1738.991176812" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="245.3530746" magical="148.62981" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4568" level="9" /> <!-- NPC AE Solar Flare -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18142" level="81" type="Monster" name="Beetle of Grave">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4568" level="9" /> <!-- NPC AE Solar Flare -->
+			<skill name="ClanBuff1" id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="32437" sp="3972" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="34.884" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1542.7245" magical="1738.991176812" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="245.3530746" magical="148.62981" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4568" level="9" /> <!-- NPC AE Solar Flare -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18143" level="81" type="Monster" name="Beetle of Grave">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4568" level="9" /> <!-- NPC AE Solar Flare -->
+			<skill name="ClanBuff1" id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="32437" sp="3972" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="34.884" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1542.7245" magical="1738.991176812" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="245.3530746" magical="148.62981" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4568" level="9" /> <!-- NPC AE Solar Flare -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18144" level="81" type="Monster" name="Beetle of Grave">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="RangeDDMagic1" id="4568" level="9" /> <!-- NPC AE Solar Flare -->
+			<skill name="ClanBuff1" id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="32437" sp="3972" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="34.884" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1542.7245" magical="1738.991176812" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="245.3530746" magical="148.62981" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4568" level="9" /> <!-- NPC AE Solar Flare -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18145" level="81" type="Monster" name="Beetle of Grave">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="W_LongRangeDDMagic" id="4155" level="9" /> <!-- NPC Twister - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="W_ClanBuff" id="4031" level="3" /> <!-- NPC Clan Aegis -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="27444" sp="3360" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="34.884" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
+			<skill id="4155" level="9" /> <!-- NPC Twister - Magic -->
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18146" level="81" type="Monster" name="Beetle of Grave">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="PhysicalSpecial1" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill name="PhysicalSpecial2" id="4032" level="9" /> <!-- NPC Strike -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="28072" sp="3436" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="34.884" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18147" level="81" type="Monster" name="Beetle of Grave">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="W_LongRangeDDMagic" id="4155" level="9" /> <!-- NPC Twister - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="26134" sp="3200" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="34.884" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4155" level="9" /> <!-- NPC Twister - Magic -->
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18148" level="81" type="Monster" name="Beetle of Grave">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="PhysicalSpecial" id="4581" level="9" /> <!-- Hold -->
+			<!-- <skill name="SelfBuff" id="4074" level="2" /> --> <!-- NPC Haste -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="30427" sp="3724" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="34.884" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4581" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18149" level="81" type="Monster" name="Beetle of Grave">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="SelfRangeDDMagic" id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="26882" sp="3292" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="34.884" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18150" level="81" type="Monster" name="Victim">
+		<parameters>
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<param name="StrongNPC" value="18158" /> <!-- Executioner of Halisha -->
+			<param name="StrongNPC_AI" value="r31_roomboss1" />
+			<skill name="MobHate" id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18151" level="81" type="Monster" name="Victim">
+		<parameters>
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<param name="StrongNPC" value="18159" /> <!-- Executioner of Halisha -->
+			<param name="StrongNPC_AI" value="r31_roomboss2" />
+			<skill name="MobHate" id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18152" level="81" type="Monster" name="Victim">
+		<parameters>
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<param name="StrongNPC" value="18160" /> <!-- Executioner of Halisha -->
+			<param name="StrongNPC_AI" value="r32_roomboss1" />
+			<skill name="MobHate" id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18153" level="81" type="Monster" name="Victim">
+		<parameters>
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<param name="StrongNPC" value="18161" /> <!-- Executioner of Halisha -->
+			<param name="StrongNPC_AI" value="r32_roomboss2" />
+			<skill name="MobHate" id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18154" level="81" type="Monster" name="Victim">
+		<parameters>
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<param name="StrongNPC" value="18162" /> <!-- Executioner of Halisha -->
+			<param name="StrongNPC_AI" value="r33_roomboss1" />
+			<skill name="MobHate" id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18155" level="81" type="Monster" name="Victim">
+		<parameters>
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<param name="StrongNPC" value="18163" /> <!-- Executioner of Halisha -->
+			<param name="StrongNPC_AI" value="r33_roomboss2" />
+			<skill name="MobHate" id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18156" level="81" type="Monster" name="Victim">
+		<parameters>
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<param name="StrongNPC" value="18164" /> <!-- Executioner of Halisha -->
+			<param name="StrongNPC_AI" value="r34_roomboss1" />
+			<skill name="MobHate" id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18157" level="81" type="Monster" name="Victim">
+		<parameters>
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<param name="StrongNPC" value="18165" /> <!-- Executioner of Halisha -->
+			<param name="StrongNPC_AI" value="r34_roomboss2" />
+			<skill name="MobHate" id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4697" level="9" /> <!-- NPC Monster Hate -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18158" level="81" type="Monster" name="Executioner of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="PhysicalSpecial1" id="4582" level="9" /> <!-- Poison -->
+			<!-- <skill name="SelfBuff" id="4318" level="1" /> --> <!-- Ultimate Buff -->
+			<skill name="SelfRangeDDMagic1" id="4621" level="9" /> <!-- NPC AE - 80% HP Drain -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17851.4215128" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="629.5247322" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+			<skill id="4621" level="9" /> <!-- NPC AE - 80% HP Drain -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+	</npc>
+	<npc id="18159" level="81" type="Monster" name="Executioner of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="PhysicalSpecial1" id="4582" level="9" /> <!-- Poison -->
+			<!-- <skill name="SelfBuff" id="4318" level="1" /> --> <!-- Ultimate Buff -->
+			<skill name="DDMagic1" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17851.4215128" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="381.352908" evasion="3" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+	</npc>
+	<npc id="18160" level="81" type="Monster" name="Executioner of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="PhysicalSpecial1" id="4582" level="9" /> <!-- Poison -->
+			<!-- <skill name="SelfBuff" id="4318" level="1" /> --> <!-- Ultimate Buff -->
+			<skill name="SelfRangeDDMagic1" id="4621" level="9" /> <!-- NPC AE - 80% HP Drain -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17851.4215128" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="629.5247322" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+			<skill id="4621" level="9" /> <!-- NPC AE - 80% HP Drain -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+	</npc>
+	<npc id="18161" level="81" type="Monster" name="Executioner of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="PhysicalSpecial1" id="4582" level="9" /> <!-- Poison -->
+			<!-- <skill name="SelfBuff" id="4318" level="1" /> --> <!-- Ultimate Buff -->
+			<skill name="DDMagic1" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17851.4215128" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="381.352908" evasion="3" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+	</npc>
+	<npc id="18162" level="81" type="Monster" name="Executioner of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="PhysicalSpecial1" id="4582" level="9" /> <!-- Poison -->
+			<!-- <skill name="SelfBuff" id="4318" level="1" /> --> <!-- Ultimate Buff -->
+			<skill name="SelfRangeDDMagic1" id="4621" level="9" /> <!-- NPC AE - 80% HP Drain -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17851.4215128" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="629.5247322" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+			<skill id="4621" level="9" /> <!-- NPC AE - 80% HP Drain -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+	</npc>
+	<npc id="18163" level="81" type="Monster" name="Executioner of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="PhysicalSpecial1" id="4582" level="9" /> <!-- Poison -->
+			<!-- <skill name="SelfBuff" id="4318" level="1" /> --> <!-- Ultimate Buff -->
+			<skill name="DDMagic1" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17851.4215128" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="381.352908" evasion="3" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+	</npc>
+	<npc id="18164" level="81" type="Monster" name="Executioner of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="PhysicalSpecial1" id="4582" level="9" /> <!-- Poison -->
+			<!-- <skill name="SelfBuff" id="4318" level="1" /> --> <!-- Ultimate Buff -->
+			<skill name="SelfRangeDDMagic1" id="4621" level="9" /> <!-- NPC AE - 80% HP Drain -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17851.4215128" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="629.5247322" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+			<skill id="4621" level="9" /> <!-- NPC AE - 80% HP Drain -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+	</npc>
+	<npc id="18165" level="81" type="Monster" name="Executioner of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="PhysicalSpecial1" id="4582" level="9" /> <!-- Poison -->
+			<!-- <skill name="SelfBuff" id="4318" level="1" /> --> <!-- Ultimate Buff -->
+			<skill name="DDMagic1" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17851.4215128" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="381.352908" evasion="3" />
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+	</npc>
+	<npc id="18166" level="81" type="Monster" name="Imperial Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="74" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="MoveAroundSocial2" value="74" />
+			<param name="WeaponID" value="5286" /> <!-- Berserker Blade -->
+			<param name="SelfBuff" value="0" />
+			<skill name="PhysicalSpecial" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
+		<acquire exp="38975" sp="4770" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+	</npc>
+	<npc id="18167" level="81" type="Monster" name="Imperial Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="74" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="MoveAroundSocial2" value="74" />
+			<param name="WeaponID" value="5286" /> <!-- Berserker Blade -->
+			<skill name="PhysicalSpecial1" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
+		<acquire exp="38424" sp="4704" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+	</npc>
+	<npc id="18168" level="81" type="Monster" name="Imperial Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="74" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="MoveAroundSocial2" value="74" />
+			<param name="WeaponID" value="5286" /> <!-- Berserker Blade -->
+			<skill name="PhysicalSpecial1" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill name="PhysicalSpecial2" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
+		<acquire exp="39497" sp="4836" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+	</npc>
+	<npc id="18169" level="81" type="Monster" name="Imperial Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="74" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="MoveAroundSocial2" value="74" />
+			<param name="WeaponID" value="5286" /> <!-- Berserker Blade -->
+			<skill name="PhysicalSpecial" id="4574" level="9" /> <!-- NPC Sonic Storm -->
+			<!-- <skill name="SelfBuff" id="4091" level="1" /> --> <!-- NPC Ogre Spirit Totem -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
+		<acquire exp="38234" sp="4680" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="27" />
+				<run ground="110" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4574" level="9" /> <!-- NPC Sonic Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+	</npc>
+	<npc id="18170" level="81" type="Monster" name="Imperial Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_LongRangeDDMagic" id="4603" level="9" /> <!-- Decrease P. Atk. -->
+			<skill name="W_ShortRangeDDMagic" id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="38274" sp="4686" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1115.60664" magical="1187.754369768" random="7" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4603" level="9" /> <!-- Decrease P.Atk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18171" level="81" type="Monster" name="Imperial Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_LongRangeDDMagic" id="4603" level="9" /> <!-- Decrease P. Atk. -->
+			<skill name="W_ShortRangeDDMagic" id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill name="W_ClanBuff" id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="39764" sp="4866" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="692.703828" magical="457.930728288" random="7" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="478.1237352" magical="289.637364" evasion="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4603" level="9" /> <!-- Decrease P.Atk -->
+			<skill id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18172" level="81" type="Monster" name="Imperial Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_SelfRangeDDMagic" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="W_ShortRangeDDMagic" id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="37902" sp="4638" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="838.171536" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18173" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="RangeDDMagic1" id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill name="ClanBuff1" id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18174" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfDeBuff1" id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff2" id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff3" id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18175" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="SelfRangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="DeBuff" id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill name="DDMagic" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18176" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="RangeDDMagic1" id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill name="ClanBuff1" id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18177" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfDeBuff1" id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff2" id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff3" id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18178" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="SelfRangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="DeBuff" id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill name="DDMagic" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18179" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="RangeDDMagic1" id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill name="ClanBuff1" id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18180" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfDeBuff1" id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff2" id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff3" id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18181" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="SelfRangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="DeBuff" id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill name="DDMagic" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18182" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="RangeDDMagic1" id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill name="ClanBuff1" id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18183" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="SelfDeBuff1" id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff2" id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill name="SelfDeBuff3" id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51861" sp="6348" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4694" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4695" level="1" /> <!-- Ultimate Debuff -->
+			<skill id="4696" level="1" /> <!-- Ultimate Debuff -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18184" level="81" type="Monster" name="Halisha's Foreman">
+		<parameters>
+			<param name="MoveAroundSocial" value="108" />
+			<param name="MoveAroundSocial1" value="108" />
+			<param name="MoveAroundSocial2" value="108" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4073" level="9" /> <!-- Stun -->
+			<skill name="SelfRangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="DeBuff" id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill name="DDMagic" id="4657" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="39687" sp="4860" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="160" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4618" level="1" /> <!-- NPC Cancel PC Target -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18185" level="81" type="Monster" name="Evil Astrologer">
+		<parameters>
+			<param name="MoveAroundSocial" value="50" />
+			<param name="MoveAroundSocial1" value="50" />
+			<param name="MoveAroundSocial2" value="50" />
+			<skill name="W_SelfRangeDDMagic" id="4033" level="9" /> <!-- NPC Burn -->
+			<skill name="W_RangeDeBuff" id="4036" level="9" /> <!-- Poison -->
+			<skill name="W_RangeHeal" id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5129" lhand="5129" /> <!-- rhand: Doll Knife lhand: Doll Knife -->
+		<acquire exp="52372" sp="6414" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" shield="185" />
+			<speed>
+				<walk ground="22" />
+				<run ground="150" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4033" level="9" /> <!-- NPC Burn -->
+			<skill id="4036" level="9" /> <!-- Poison -->
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="6" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="18186" level="81" type="Monster" name="Evil Astrologer">
+		<parameters>
+			<param name="MoveAroundSocial" value="50" />
+			<param name="MoveAroundSocial1" value="50" />
+			<param name="MoveAroundSocial2" value="50" />
+			<skill name="W_SelfRangeDDMagic" id="4033" level="9" /> <!-- NPC Burn -->
+			<skill name="W_LongRangeDDMagic" id="4597" level="9" /> <!-- Bleed -->
+			<skill name="W_SelfRangeDeBuff" id="4657" level="9" /> <!-- Hold -->
+			<skill name="W_RangeHeal" id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5129" lhand="5129" /> <!-- rhand: Doll Knife lhand: Doll Knife -->
+		<acquire exp="52672" sp="6450" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" shield="185" />
+			<speed>
+				<walk ground="22" />
+				<run ground="150" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4033" level="9" /> <!-- NPC Burn -->
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4597" level="9" /> <!-- Bleed -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="6" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="18187" level="81" type="Monster" name="Knight of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SelfBuff" value="0" />
+			<skill name="PhysicalSpecial" id="4582" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="78" /> <!-- rhand: Great Sword -->
+		<acquire exp="51131" sp="6258" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="160" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="25" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18188" level="81" type="Monster" name="Knight of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="PhysicalSpecial1" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="78" /> <!-- rhand: Great Sword -->
+		<acquire exp="38424" sp="4704" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="160" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="25" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18189" level="81" type="Monster" name="Knight of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="PhysicalSpecial1" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill name="PhysicalSpecial2" id="4032" level="9" /> <!-- NPC Strike -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="78" /> <!-- rhand: Great Sword -->
+		<acquire exp="50905" sp="6234" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="160" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="25" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18190" level="81" type="Monster" name="Knight of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="PhysicalSpecial" id="4582" level="9" /> <!-- Poison -->
+			<!-- <skill name="SelfBuff" id="4091" level="1" /> --> <!-- NPC Ogre Spirit Totem -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="78" /> <!-- rhand: Great Sword -->
+		<acquire exp="51131" sp="6258" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="160" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="25" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="18191" level="81" type="Monster" name="Witch of dust">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_LongRangeDDMagic" id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
+		<acquire exp="37902" sp="4638" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18192" level="81" type="Monster" name="Witch of dust">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_LongRangeDDMagic" id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="W_ClanBuff" id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
+		<acquire exp="50459" sp="6174" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+			<skill id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18193" level="81" type="Monster" name="Witch of dust">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_LongRangeDDMagic" id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="W_RangeDeBuff" id="4587" level="9" /> <!-- Decrease P. Atk. -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
+		<acquire exp="49711" sp="6084" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
+			<skill id="4587" level="9" /> <!-- Decrease P.Atk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18194" level="81" type="Monster" name="Witch of dust">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_SelfRangeDDMagic" id="4033" level="9" /> <!-- NPC Burn -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
+		<acquire exp="50434" sp="6174" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="326.5649442" magical="197.826246" evasion="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4033" level="9" /> <!-- NPC Burn -->
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18195" level="81" type="Monster" name="Signet of Emperor">
+		<parameters>
+			<param name="MoveAroundSocial" value="115" />
+			<param name="MoveAroundSocial1" value="115" />
+			<param name="MoveAroundSocial2" value="115" />
+			<skill name="SelfRangeDDMagic" id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="38647" sp="4728" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1542.7245" magical="1738.991176812" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="245.3530746" magical="148.62981" evasion="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="60" />
+			</speed>
+			<hitTime>350</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
+	</npc>
+	<npc id="18196" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="conquerors_weakness" />
+			<param name="type" value="0" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18197" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="conquerors_pddown" />
+			<param name="type" value="1" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18198" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="conquerors_poison" />
+			<param name="type" value="2" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18199" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="conquerors_nonheal" />
+			<param name="type" value="3" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+</list>

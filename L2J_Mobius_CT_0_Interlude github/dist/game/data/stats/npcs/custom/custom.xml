@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<npc id="50007" displayId="31324" name="Andromeda" usingServerSideName="true" title="Wedding Manager" usingServerSideTitle="true" type="Folk">
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="900100" displayId="20432" level="1" name="Elpy" type="EventMonster">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="40" hpRegen="3" mp="36" mpRegen="1" />
+			<attack physical="8" magical="7" />
+			<defence physical="25" magical="40" />
+		</stats>
+		<status undying="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="4.5" />
+		</collision>
+	</npc>
+	<npc id="900102" displayId="13098" level="80" name="Event Treasure Chest" type="Monster">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2880" mp="1524" />
+			<defence physical="1499" magical="1035.28" />
+		</stats>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="900103" displayId="30425" name="Start" usingServerSideName="true" title="Race Manager" usingServerSideTitle="true" type="Folk">
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="900104" displayId="30425" name="Finish" usingServerSideName="true" title="Race Manager" usingServerSideTitle="true" type="Folk">
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+</list>

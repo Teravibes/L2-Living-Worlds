@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event name="Heavy Medal" active="27 02 2007-28 02 2007" dropPeriod="27 02 2007-20 02 2007" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
+	<droplist>
+		<add item="6392" min="1" max="1" chance="45%" /> <!-- Event - Medal -->
+		<add item="6393" min="1" max="1" chance="5%" /> <!-- Event - Glittering Medal -->
+	</droplist>
+	<spawnlist>
+		<!-- Roy -->
+		<add npc="31228" x="-44337" y="-113669" z="-224" heading="0" />
+		<add npc="31228" x="-44628" y="-115409" z="-240" heading="22500" />
+		<add npc="31228" x="-13073" y="122801" z="-3117" heading="0" />
+		<add npc="31228" x="-13949" y="121934" z="-2988" heading="32768" />
+		<add npc="31228" x="-14786" y="123686" z="-3117" heading="8192" />
+		<add npc="31228" x="11281" y="15652" z="-4584" heading="25000" />
+		<add npc="31228" x="11303" y="17732" z="-4574" heading="57344" />
+		<add npc="31228" x="18178" y="145149" z="-3054" heading="7400" />
+		<add npc="31228" x="19208" y="144380" z="-3097" heading="32768" />
+		<add npc="31228" x="19508" y="145775" z="-3086" heading="48000" />
+		<add npc="31228" x="17396" y="170259" z="-3507" heading="36000" />
+		<add npc="31228" x="47151" y="49436" z="-3059" heading="32000" />
+		<add npc="31228" x="44122" y="50784" z="-3059" heading="57344" />
+		<add npc="31228" x="79806" y="55570" z="-1560" heading="0" />
+		<add npc="31228" x="83328" y="55824" z="-1525" heading="32768" />
+		<add npc="31228" x="80986" y="54504" z="-1525" heading="32768" />
+		<add npc="31228" x="83332" y="149160" z="-3405" heading="49152" />
+		<add npc="31228" x="82277" y="148598" z="-3467" heading="0" />
+		<add npc="31228" x="81621" y="148725" z="-3467" heading="32768" />
+		<add npc="31228" x="81680" y="145656" z="-3467" heading="32768" />
+		<add npc="31228" x="114733" y="-178691" z="-821" heading="0" />
+		<add npc="31228" x="115708" y="-182362" z="-1449" heading="0" />
+		<add npc="31228" x="-80789" y="151073" z="-3043" heading="28672" />
+		<add npc="31228" x="-84049" y="150176" z="-3129" heading="4096" />
+		<add npc="31228" x="-82623" y="151666" z="-3129" heading="49152" />
+		<add npc="31228" x="117498" y="76630" z="-2695" heading="38000" />
+		<add npc="31228" x="115914" y="76449" z="-2711" heading="59000" />
+		<add npc="31228" x="119536" y="76988" z="-2275" heading="40960" />
+		<add npc="31228" x="-84516" y="242971" z="-3730" heading="34000" />
+		<add npc="31228" x="-86003" y="243205" z="-3730" heading="60000" />
+		<add npc="31228" x="147184" y="27405" z="-2192" heading="17000" />
+		<add npc="31228" x="147920" y="25664" z="-2000" heading="16384" />
+		<add npc="31228" x="111776" y="221104" z="-3543" heading="16384" />
+		<add npc="31228" x="107904" y="218096" z="-3675" heading="0" />
+		<add npc="31228" x="114920" y="220020" z="-3632" heading="32768" />
+		<add npc="31228" x="147888" y="-58048" z="-2979" heading="49000" />
+		<add npc="31228" x="147262" y="-56450" z="-2776" heading="33000" />
+		<add npc="31228" x="44176" y="-48732" z="-800" heading="33000" />
+		<add npc="31228" x="44319" y="-47640" z="-792" heading="50000" />
+		<!-- Winnie -->
+		<add npc="31229" x="-44342" y="-113726" z="-240" heading="0" />
+		<add npc="31229" x="-44671" y="-115437" z="-240" heading="22500" />
+		<add npc="31229" x="-13073" y="122841" z="-3117" heading="0" />
+		<add npc="31229" x="-13972" y="121893" z="-2988" heading="32768" />
+		<add npc="31229" x="-14843" y="123710" z="-3117" heading="8192" />
+		<add npc="31229" x="11327" y="15682" z="-4584" heading="25000" />
+		<add npc="31229" x="11243" y="17712" z="-4574" heading="57344" />
+		<add npc="31229" x="18154" y="145192" z="-3054" heading="7400" />
+		<add npc="31229" x="19214" y="144327" z="-3097" heading="32768" />
+		<add npc="31229" x="19459" y="145775" z="-3086" heading="48000" />
+		<add npc="31229" x="17418" y="170217" z="-3507" heading="36000" />
+		<add npc="31229" x="47146" y="49382" z="-3059" heading="32000" />
+		<add npc="31229" x="44157" y="50827" z="-3059" heading="57344" />
+		<add npc="31229" x="79798" y="55629" z="-1560" heading="0" />
+		<add npc="31229" x="83328" y="55769" z="-1525" heading="32768" />
+		<add npc="31229" x="80986" y="54452" z="-1525" heading="32768" />
+		<add npc="31229" x="83329" y="149095" z="-3405" heading="49152" />
+		<add npc="31229" x="82277" y="148564" z="-3467" heading="0" />
+		<add npc="31229" x="81620" y="148689" z="-3464" heading="32768" />
+		<add npc="31229" x="81691" y="145610" z="-3467" heading="32768" />
+		<add npc="31229" x="114719" y="-178742" z="-821" heading="0" />
+		<add npc="31229" x="115708" y="-182422" z="-1449" heading="0" />
+		<add npc="31229" x="-80731" y="151152" z="-3043" heading="28672" />
+		<add npc="31229" x="-84097" y="150171" z="-3129" heading="4096" />
+		<add npc="31229" x="-82678" y="151666" z="-3129" heading="49152" />
+		<add npc="31229" x="117459" y="76664" z="-2695" heading="38000" />
+		<add npc="31229" x="115936" y="76488" z="-2711" heading="59000" />
+		<add npc="31229" x="119576" y="76940" z="-2275" heading="40960" />
+		<add npc="31229" x="-84516" y="243015" z="-3730" heading="34000" />
+		<add npc="31229" x="-86031" y="243153" z="-3730" heading="60000" />
+		<add npc="31229" x="147124" y="27401" z="-2192" heading="40960" />
+		<add npc="31229" x="147985" y="25664" z="-2000" heading="16384" />
+		<add npc="31229" x="111724" y="221111" z="-3543" heading="16384" />
+		<add npc="31229" x="107899" y="218149" z="-3675" heading="0" />
+		<add npc="31229" x="114920" y="220080" z="-3632" heading="32768" />
+		<add npc="31229" x="147924" y="-58052" z="-2979" heading="49000" />
+		<add npc="31229" x="147285" y="-56461" z="-2776" heading="33000" />
+		<add npc="31229" x="44176" y="-48688" z="-800" heading="33000" />
+		<add npc="31229" x="44294" y="-47642" z="-792" heading="50000" />
+	</spawnlist>
+	<messages>
+		<add type="onEnd" text="Heavy Medal: Event end!" />
+		<add type="onEnter" text="Heavy Medal Event: Collect Medals and trade them for prizes at Event Cats in every town! Hurry up, since the event will end at Feb 28th!" />
+	</messages>
+</event>

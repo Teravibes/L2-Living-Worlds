@@ -1,0 +1,23 @@
+<html><title>Shutdown Server</title><body>
+<table width=270><tr>
+<td width=45><button value="Main" action="bypass admin_admin" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td width=180><center>Server Management</center></td>
+<td width=45><button value="Back" action="bypass admin_admin4" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr></table><br>
+<table width=270><tr>
+<td width=100>Shutdown time:</td>
+<td><edit var="qbox" width=120 height=12></td>
+<td><button value="Help" action="bypass admin_html help/shutdown.htm" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr></table><br><br>
+<table width=270>	
+<tr><td>Players Online:</td><td>%count%</td></tr>
+<tr><td>Used Memory:</td><td>%used% bytes</td></tr>
+<tr><td>Game Time:</td><td>%time%</td></tr>
+</table><br><br>
+<center>
+<table width="240"><tr><td>
+<button value="Shutdown" action="bypass -h admin_server_shutdown $qbox" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td><td>			
+<button value="Restart" action="bypass -h admin_server_restart $qbox" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td><td>			
+<button value="Abort" action="bypass -h admin_server_abort" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td></tr>
+</table></center>
+</body></html>

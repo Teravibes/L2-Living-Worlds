@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-25">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="dist/libs/HikariCP-7.0.2.jar" sourcepath="dist/libs/HikariCP-7.0.2-sources.jar"/>
+	<classpathentry kind="lib" path="dist/libs/mysql-connector-j-9.5.0.jar" sourcepath="dist/libs/mysql-connector-j-9.5.0-sources.jar"/>
+	<classpathentry kind="lib" path="dist/libs/slf4j-api-2.0.17.jar" sourcepath="dist/libs/slf4j-api-2.0.17-sources.jar"/>
+	<classpathentry kind="lib" path="dist/libs/slf4j-simple-2.0.17.jar" sourcepath="dist/libs/slf4j-simple-2.0.17-sources.jar"/>
+	<classpathentry including="**/*.java" kind="src" path="dist/game/data/scripts"/>
+	<classpathentry kind="src" path="java"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

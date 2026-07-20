@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence maxOccurs="1" minOccurs="1">
+				<xs:element name="option" maxOccurs="100" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence maxOccurs="1" minOccurs="1">
+							<xs:element name="stats" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded" minOccurs="1">
+										<xs:element name="add" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="order" type="xs:byte" use="optional" />
+												<xs:attribute name="stat" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="accCombat" />
+															<xs:enumeration value="critDmgAdd" />
+															<xs:enumeration value="CON" />
+															<xs:enumeration value="darkRes" />
+															<xs:enumeration value="DEX" />
+															<xs:enumeration value="earthRes" />
+															<xs:enumeration value="fireRes" />
+															<xs:enumeration value="holyRes" />
+															<xs:enumeration value="INT" />
+															<xs:enumeration value="mAtk" />
+															<xs:enumeration value="maxCp" />
+															<xs:enumeration value="maxHp" />
+															<xs:enumeration value="maxMp" />
+															<xs:enumeration value="mCritRate" />
+															<xs:enumeration value="mDef" />
+															<xs:enumeration value="MEN" />
+															<xs:enumeration value="pAtk" />
+															<xs:enumeration value="pDef" />
+															<xs:enumeration value="physicalSkillPower" />
+															<xs:enumeration value="critRate" />
+															<xs:enumeration value="regCp" />
+															<xs:enumeration value="regHp" />
+															<xs:enumeration value="regMp" />
+															<xs:enumeration value="rEvas" />
+															<xs:enumeration value="runSpd" />
+															<xs:enumeration value="STR" />
+															<xs:enumeration value="waterRes" />
+															<xs:enumeration value="windRes" />
+															<xs:enumeration value="WIT" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute type="xs:decimal" name="val" use="required" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="mul" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="order" type="xs:byte" use="optional" />
+												<xs:attribute name="stat" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="mpConsume" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="val" type="xs:decimal" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="active_skill" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="65535" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="level" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="99" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="passive_skill" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="65535" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="level" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="99" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="attack_skill" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="65535" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="level" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="99" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="chance" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:decimal">
+												<xs:minInclusive value="1.0" />
+												<xs:maxInclusive value="100.0" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="critical_skill" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="65535" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="level" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="99" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="chance" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:decimal">
+												<xs:minInclusive value="1.0" />
+												<xs:maxInclusive value="100.0" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="magic_skill" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="id" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="65535" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="level" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="99" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="chance" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:decimal">
+												<xs:minInclusive value="1.0" />
+												<xs:maxInclusive value="100.0" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="65535" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute type="xs:token" name="name" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

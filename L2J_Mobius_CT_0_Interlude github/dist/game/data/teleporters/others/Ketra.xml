@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="31376"> <!-- Kurfa -->
+		<teleport name="list1" type="OTHER">
+			<location name="Town of Goddard" x="148024" y="-55281" z="-2728" feeCount="2400" castleId="7" />
+			<location name="Town of Rune" x="43835" y="-47749" z="-792" feeCount="11000" castleId="8" />
+			<location name="Wall of Argos" x="165054" y="-47861" z="-3560" feeCount="4200" />
+			<location name="Hot Springs" x="144880" y="-113468" z="-2560" feeCount="5400" />
+		</teleport>
+		<teleport name="list2" type="OTHER">
+			<location name="Town of Goddard" x="148024" y="-55281" z="-2728" feeCount="2400" castleId="7" />
+			<location name="Town of Rune" x="43835" y="-47749" z="-792" feeCount="11000" castleId="8" />
+			<location name="Town of Aden" x="146783" y="25808" z="-2000" feeCount="10000" castleId="5" />
+			<location name="Town of Schuttgart" x="87126" y="-143520" z="-1288" feeCount="8900" castleId="9" />
+			<location name="Wall of Argos" x="165054" y="-47861" z="-3560" feeCount="4200" />
+			<location name="Hot Springs" x="144880" y="-113468" z="-2560" feeCount="5400" />
+		</teleport>
+	</npc>
+</list>

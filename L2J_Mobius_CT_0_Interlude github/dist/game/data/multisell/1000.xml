@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30731</npc> <!-- Martin (Pet Manager) -->
+		<npc>30827</npc> <!-- Lundy (Pet Manager ) -->
+		<npc>30828</npc> <!-- Waters (Pet Manager ) -->
+		<npc>30829</npc> <!-- Cooper (Pet Manager ) -->
+		<npc>30830</npc> <!-- Joey (Pet Manager ) -->
+		<npc>30831</npc> <!-- Nelson (Pet Manager ) -->
+		<npc>30869</npc> <!-- Lemper (Pet Manager) -->
+		<npc>31067</npc> <!-- Rood (Pet Manager) -->
+		<npc>31265</npc> <!-- Annette (Pet Manager) -->
+		<npc>31309</npc> <!-- Woods (Pet Manager) -->
+		<npc>31954</npc> <!-- Saroyan (Pet Manager) -->
+	</npcs>
+	<item>
+		<!-- Iron Canine -->
+		<ingredient count="1" id="2505" />
+		<!-- Gemstone D -->
+		<ingredient count="12" id="2130" />
+		<!-- Adena -->
+		<ingredient count="12000" id="57" />
+		<!-- Shining Canine -->
+		<production count="1" id="3439" />
+	</item>
+	<item>
+		<!-- Shining Canine -->
+		<ingredient count="1" id="3439" />
+		<!-- Gemstone D -->
+		<ingredient count="16" id="2130" />
+		<!-- Adena -->
+		<ingredient count="16200" id="57" />
+		<!-- Ghost Canine -->
+		<production count="1" id="3902" />
+	</item>
+	<item>
+		<!-- Ghost Canine -->
+		<ingredient count="1" id="3902" />
+		<!-- Gemstone D -->
+		<ingredient count="24" id="2130" />
+		<!-- Adena -->
+		<ingredient count="23400" id="57" />
+		<!-- Mithril Canine -->
+		<production count="1" id="3903" />
+	</item>
+	<item>
+		<!-- Mithril Canine -->
+		<ingredient count="1" id="3903" />
+		<!-- Gemstone D -->
+		<ingredient count="36" id="2130" />
+		<!-- Adena -->
+		<ingredient count="36000" id="57" />
+		<!-- Sylvan Canine -->
+		<production count="1" id="3904" />
+	</item>
+	<item>
+		<!-- Sylvan Canine -->
+		<ingredient count="1" id="3904" />
+		<!-- Gemstone D -->
+		<ingredient count="48" id="2130" />
+		<!-- Adena -->
+		<ingredient count="48000" id="57" />
+		<!-- Orikarukon Canine -->
+		<production count="1" id="3905" />
+	</item>
+	<item>
+		<!-- Orikarukon Canine -->
+		<ingredient count="1" id="3905" />
+		<!-- Gemstone D -->
+		<ingredient count="66" id="2130" />
+		<!-- Adena -->
+		<ingredient count="66000" id="57" />
+		<!-- Fang of Saltydog -->
+		<production count="1" id="3906" />
+	</item>
+	<item>
+		<!-- Fang of Saltydog -->
+		<ingredient count="1" id="3906" />
+		<!-- Gemstone D -->
+		<ingredient count="60" id="2130" />
+		<!-- Adena -->
+		<ingredient count="60000" id="57" />
+		<!-- Fang of Cerberus -->
+		<production count="1" id="3907" />
+	</item>
+	<item>
+		<!-- Fang of Cerberus -->
+		<ingredient count="1" id="3907" />
+		<!-- Gemstone C -->
+		<ingredient count="24" id="2131" />
+		<!-- Adena -->
+		<ingredient count="72000" id="57" />
+		<!-- Fang of Coyote -->
+		<production count="1" id="3908" />
+	</item>
+	<item>
+		<!-- Fang of Coyote -->
+		<ingredient count="1" id="3908" />
+		<!-- Gemstone C -->
+		<ingredient count="30" id="2131" />
+		<!-- Adena -->
+		<ingredient count="90000" id="57" />
+		<!-- Crystallized Ice Canine -->
+		<production count="1" id="3909" />
+	</item>
+	<item>
+		<!-- Crystallized Ice Canine -->
+		<ingredient count="1" id="3909" />
+		<!-- Gemstone C -->
+		<ingredient count="76" id="2131" />
+		<!-- Adena -->
+		<ingredient count="228000" id="57" />
+		<!-- Fang of the Blue Wolf -->
+		<production count="1" id="3910" />
+	</item>
+	<item>
+		<!-- Fang of the Blue Wolf -->
+		<ingredient count="1" id="3910" />
+		<!-- Gemstone C -->
+		<ingredient count="80" id="2131" />
+		<!-- Adena -->
+		<ingredient count="240000" id="57" />
+		<!-- Fang of Fenrir -->
+		<production count="1" id="3911" />
+	</item>
+	<item>
+		<!-- Serpent Fang -->
+		<ingredient count="1" id="3919" />
+		<!-- Gemstone D -->
+		<ingredient count="66" id="2130" />
+		<!-- Adena -->
+		<ingredient count="66000" id="57" />
+		<!-- Viperbite -->
+		<production count="1" id="3920" />
+	</item>
+	<item>
+		<!-- Viperbite -->
+		<ingredient count="1" id="3920" />
+		<!-- Gemstone D -->
+		<ingredient count="66" id="2130" />
+		<!-- Adena -->
+		<ingredient count="66000" id="57" />
+		<!-- Shadow Fang -->
+		<production count="1" id="3921" />
+	</item>
+	<item>
+		<!-- Shadow Fang -->
+		<ingredient count="1" id="3921" />
+		<!-- Gemstone C -->
+		<ingredient count="30" id="2131" />
+		<!-- Adena -->
+		<ingredient count="90000" id="57" />
+		<!-- Alya Fang -->
+		<production count="1" id="3922" />
+	</item>
+	<item>
+		<!-- Alya Fang -->
+		<ingredient count="1" id="3922" />
+		<!-- Gemstone C -->
+		<ingredient count="38" id="2131" />
+		<!-- Adena -->
+		<ingredient count="114000" id="57" />
+		<!-- Torturer -->
+		<production count="1" id="3923" />
+	</item>
+	<item>
+		<!-- Torturer -->
+		<ingredient count="1" id="3923" />
+		<!-- Gemstone C -->
+		<ingredient count="68" id="2131" />
+		<!-- Adena -->
+		<ingredient count="204000" id="57" />
+		<!-- Unuk Alhay Fang -->
+		<production count="1" id="3924" />
+	</item>
+	<item>
+		<!-- Unuk Alhay Fang -->
+		<ingredient count="1" id="3924" />
+		<!-- Gemstone C -->
+		<ingredient count="100" id="2131" />
+		<!-- Adena -->
+		<ingredient count="300000" id="57" />
+		<!-- Antiplague -->
+		<production count="1" id="3925" />
+	</item>
+	<item>
+		<!-- Antiplague -->
+		<ingredient count="1" id="3925" />
+		<!-- Gemstone B -->
+		<ingredient count="42" id="2132" />
+		<!-- Adena -->
+		<ingredient count="420000" id="57" />
+		<!-- Serpentine Grinder -->
+		<production count="1" id="5187" />
+	</item>
+	<item>
+		<!-- Serpentine Grinder -->
+		<ingredient count="1" id="5187" />
+		<!-- Gemstone B -->
+		<ingredient count="66" id="2132" />
+		<!-- Adena -->
+		<ingredient count="660000" id="57" />
+		<!-- Fang of Dahak -->
+		<production count="1" id="5188" />
+	</item>
+	<item>
+		<!-- Fang of Dahak -->
+		<ingredient count="1" id="5188" />
+		<!-- Gemstone B -->
+		<ingredient count="90" id="2132" />
+		<!-- Adena -->
+		<ingredient count="900000" id="57" />
+		<!-- Crimson Blood Fang -->
+		<production count="1" id="5189" />
+	</item>
+	<item>
+		<!-- Crimson Blood Fang -->
+		<ingredient count="1" id="5189" />
+		<!-- Gemstone B -->
+		<ingredient count="144" id="2132" />
+		<!-- Adena -->
+		<ingredient count="1440000" id="57" />
+		<!-- Draconic Chopper -->
+		<production count="1" id="5190" />
+	</item>
+	<item>
+		<!-- Draconic Chopper -->
+		<ingredient count="1" id="5190" />
+		<!-- Gemstone B -->
+		<ingredient count="162" id="2132" />
+		<!-- Adena -->
+		<ingredient count="1620000" id="57" />
+		<!-- Diabolic Grinder -->
+		<production count="1" id="5191" />
+	</item>
+	<item>
+		<!-- Serpentine Spike -->
+		<ingredient count="1" id="5176" />
+		<!-- Gemstone B -->
+		<ingredient count="42" id="2132" />
+		<!-- Adena -->
+		<ingredient count="420000" id="57" />
+		<!-- Drake Horn -->
+		<production count="1" id="5177" />
+	</item>
+	<item>
+		<!-- Drake Horn -->
+		<ingredient count="1" id="5177" />
+		<!-- Gemstone B -->
+		<ingredient count="66" id="2132" />
+		<!-- Adena -->
+		<ingredient count="660000" id="57" />
+		<!-- Assault Alicorn -->
+		<production count="1" id="5178" />
+	</item>
+	<item>
+		<!-- Assault Alicorn -->
+		<ingredient count="1" id="5178" />
+		<!-- Gemstone B -->
+		<ingredient count="90" id="2132" />
+		<!-- Adena -->
+		<ingredient count="900000" id="57" />
+		<!-- Draconic Slicer -->
+		<production count="1" id="5179" />
+	</item>
+	<item>
+		<!-- Draconic Slicer -->
+		<ingredient count="1" id="5179" />
+		<!-- Gemstone B -->
+		<ingredient count="144" id="2132" />
+		<!-- Adena -->
+		<ingredient count="1440000" id="57" />
+		<!-- Ohpdian Lance -->
+		<production count="1" id="5180" />
+	</item>
+	<item>
+		<!-- Ohpdian Lance -->
+		<ingredient count="1" id="5180" />
+		<!-- Gemstone B -->
+		<ingredient count="162" id="2132" />
+		<!-- Adena -->
+		<ingredient count="1620000" id="57" />
+		<!-- Diamond Drill -->
+		<production count="1" id="5181" />
+	</item>
+	<item>
+		<!-- Wolf's Leather Armor -->
+		<ingredient count="1" id="2506" />
+		<!-- Gemstone D -->
+		<ingredient count="7" id="2130" />
+		<!-- Adena -->
+		<ingredient count="6600" id="57" />
+		<!-- Wolf's Hide Armor -->
+		<production count="1" id="3891" />
+	</item>
+	<item>
+		<!-- Wolf's Hide Armor -->
+		<ingredient count="1" id="3891" />
+		<!-- Gemstone D -->
+		<ingredient count="9" id="2130" />
+		<!-- Adena -->
+		<ingredient count="8400" id="57" />
+		<!-- Wolf's Hard Leather Armor -->
+		<production count="1" id="3892" />
+	</item>
+	<item>
+		<!-- Wolf's Hard Leather Armor -->
+		<ingredient count="1" id="3892" />
+		<!-- Gemstone D -->
+		<ingredient count="14" id="2130" />
+		<!-- Adena -->
+		<ingredient count="13800" id="57" />
+		<!-- Wolf's Wooden Armor -->
+		<production count="1" id="3893" />
+	</item>
+	<item>
+		<!-- Wolf's Wooden Armor -->
+		<ingredient count="1" id="3893" />
+		<!-- Gemstone D -->
+		<ingredient count="19" id="2130" />
+		<!-- Adena -->
+		<ingredient count="19200" id="57" />
+		<!-- Wolf's Ring Mail -->
+		<production count="1" id="3894" />
+	</item>
+	<item>
+		<!-- Wolf's Ring Mail -->
+		<ingredient count="1" id="3894" />
+		<!-- Gemstone D -->
+		<ingredient count="26" id="2130" />
+		<!-- Adena -->
+		<ingredient count="25800" id="57" />
+		<!-- Wolf's Bone Armor -->
+		<production count="1" id="3895" />
+	</item>
+	<item>
+		<!-- Wolf's Bone Armor -->
+		<ingredient count="1" id="3895" />
+		<!-- Gemstone D -->
+		<ingredient count="42" id="2130" />
+		<!-- Adena -->
+		<ingredient count="42000" id="57" />
+		<!-- Wolf's Scale Mail -->
+		<production count="1" id="3896" />
+	</item>
+	<item>
+		<!-- Wolf's Scale Mail -->
+		<ingredient count="1" id="3896" />
+		<!-- Gemstone D -->
+		<ingredient count="36" id="2130" />
+		<!-- Adena -->
+		<ingredient count="36000" id="57" />
+		<!-- Wolf's Bronze Armor -->
+		<production count="1" id="3897" />
+	</item>
+	<item>
+		<!-- Wolf's Bronze Armor -->
+		<ingredient count="1" id="3897" />
+		<!-- Gemstone D -->
+		<ingredient count="42" id="2130" />
+		<!-- Adena -->
+		<ingredient count="42000" id="57" />
+		<!-- Wolf's Plate Mail -->
+		<production count="1" id="3898" />
+	</item>
+	<item>
+		<!-- Wolf's Plate Mail -->
+		<ingredient count="1" id="3898" />
+		<!-- Gemstone C -->
+		<ingredient count="16" id="2131" />
+		<!-- Adena -->
+		<ingredient count="54000" id="57" />
+		<!-- Wolf's Steel Armor -->
+		<production count="1" id="3899" />
+	</item>
+	<item>
+		<!-- Wolf's Steel Armor -->
+		<ingredient count="1" id="3899" />
+		<!-- Gemstone C -->
+		<ingredient count="44" id="2131" />
+		<!-- Adena -->
+		<ingredient count="132000" id="57" />
+		<!-- Wolf's Luxury Plate -->
+		<production count="1" id="3900" />
+	</item>
+	<item>
+		<!-- Wolf's Luxury Plate -->
+		<ingredient count="1" id="3900" />
+		<!-- Gemstone C -->
+		<ingredient count="60" id="2131" />
+		<!-- Adena -->
+		<ingredient count="180000" id="57" />
+		<!-- Wolf's Mithril Armor -->
+		<production count="1" id="3901" />
+	</item>
+	<item>
+		<!-- Hatchling's Soft Leather -->
+		<ingredient count="1" id="3912" />
+		<!-- Gemstone D -->
+		<ingredient count="66" id="2130" />
+		<!-- Adena -->
+		<ingredient count="66000" id="57" />
+		<!-- Hatchling's Scale Mail -->
+		<production count="1" id="3913" />
+	</item>
+	<item>
+		<!-- Hatchling's Scale Mail -->
+		<ingredient count="1" id="3913" />
+		<!-- Gemstone D -->
+		<ingredient count="66" id="2130" />
+		<!-- Adena -->
+		<ingredient count="66000" id="57" />
+		<!-- Hatchling's Brigandine -->
+		<production count="1" id="3914" />
+	</item>
+	<item>
+		<!-- Hatchling's Brigandine -->
+		<ingredient count="1" id="3914" />
+		<!-- Gemstone C -->
+		<ingredient count="30" id="2131" />
+		<!-- Adena -->
+		<ingredient count="90000" id="57" />
+		<!-- Hatchling's Bronze Coat -->
+		<production count="1" id="3915" />
+	</item>
+	<item>
+		<!-- Hatchling's Bronze Coat -->
+		<ingredient count="1" id="3915" />
+		<!-- Gemstone C -->
+		<ingredient count="38" id="2131" />
+		<!-- Adena -->
+		<ingredient count="114000" id="57" />
+		<!-- Hatchling's Steel Coat -->
+		<production count="1" id="3916" />
+	</item>
+	<item>
+		<!-- Hatchling's Steel Coat -->
+		<ingredient count="1" id="3916" />
+		<!-- Gemstone C -->
+		<ingredient count="68" id="2131" />
+		<!-- Adena -->
+		<ingredient count="204000" id="57" />
+		<!-- Hatchling's Shadowplate -->
+		<production count="1" id="3917" />
+	</item>
+	<item>
+		<!-- Hatchling's Shadowplate -->
+		<ingredient count="1" id="3917" />
+		<!-- Gemstone C -->
+		<ingredient count="100" id="2131" />
+		<!-- Adena -->
+		<ingredient count="300000" id="57" />
+		<!-- Hatchling's Mithril Coat -->
+		<production count="1" id="3918" />
+	</item>
+	<item>
+		<!-- Hatchling's Mithril Coat -->
+		<ingredient count="1" id="3918" />
+		<!-- Gemstone B -->
+		<ingredient count="42" id="2132" />
+		<!-- Adena -->
+		<ingredient count="420000" id="57" />
+		<!-- Hatchling's Gorgon Coat -->
+		<production count="1" id="5182" />
+	</item>
+	<item>
+		<!-- Hatchling's Gorgon Coat -->
+		<ingredient count="1" id="5182" />
+		<!-- Gemstone B -->
+		<ingredient count="66" id="2132" />
+		<!-- Adena -->
+		<ingredient count="660000" id="57" />
+		<!-- Hatchling's Ophidian Plate -->
+		<production count="1" id="5183" />
+	</item>
+	<item>
+		<!-- Hatchling's Ophidian Plate -->
+		<ingredient count="1" id="5183" />
+		<!-- Gemstone B -->
+		<ingredient count="90" id="2132" />
+		<!-- Adena -->
+		<ingredient count="900000" id="57" />
+		<!-- Hatchling's Crimson Plate -->
+		<production count="1" id="5184" />
+	</item>
+	<item>
+		<!-- Hatchling's Crimson Plate -->
+		<ingredient count="1" id="5184" />
+		<!-- Gemstone B -->
+		<ingredient count="144" id="2132" />
+		<!-- Adena -->
+		<ingredient count="1440000" id="57" />
+		<!-- Hatchling's Draconic Plate -->
+		<production count="1" id="5185" />
+	</item>
+	<item>
+		<!-- Hatchling's Draconic Plate -->
+		<ingredient count="1" id="5185" />
+		<!-- Gemstone B -->
+		<ingredient count="162" id="2132" />
+		<!-- Adena -->
+		<ingredient count="1620000" id="57" />
+		<!-- Hatchling's Inferno Plate -->
+		<production count="1" id="5186" />
+	</item>
+	<item>
+		<!-- Mithril Panzer Coat -->
+		<ingredient count="1" id="5170" />
+		<!-- Gemstone C -->
+		<ingredient count="140" id="2131" />
+		<!-- Adena -->
+		<ingredient count="420000" id="57" />
+		<!-- Brigadine Panzer Coat -->
+		<production count="1" id="5171" />
+	</item>
+	<item>
+		<!-- Brigadine Panzer Coat -->
+		<ingredient count="1" id="5171" />
+		<!-- Gemstone B -->
+		<ingredient count="66" id="2132" />
+		<!-- Adena -->
+		<ingredient count="660000" id="57" />
+		<!-- Draconic Panzer Coat -->
+		<production count="1" id="5172" />
+	</item>
+	<item>
+		<!-- Draconic Panzer Coat -->
+		<ingredient count="1" id="5172" />
+		<!-- Gemstone B -->
+		<ingredient count="90" id="2132" />
+		<!-- Adena -->
+		<ingredient count="900000" id="57" />
+		<!-- Blood Panzer Coat -->
+		<production count="1" id="5173" />
+	</item>
+	<item>
+		<!-- Blood Panzer Coat -->
+		<ingredient count="1" id="5173" />
+		<!-- Gemstone B -->
+		<ingredient count="144" id="2132" />
+		<!-- Adena -->
+		<ingredient count="1440000" id="57" />
+		<!-- Ophidian Panzer Coat -->
+		<production count="1" id="5174" />
+	</item>
+	<item>
+		<!-- Ophidian Panzer Coat -->
+		<ingredient count="1" id="5174" />
+		<!-- Gemstone B -->
+		<ingredient count="162" id="2132" />
+		<!-- Adena -->
+		<ingredient count="1620000" id="57" />
+		<!-- Inferno Panzer Coat -->
+		<production count="1" id="5175" />
+	</item>
+</list>

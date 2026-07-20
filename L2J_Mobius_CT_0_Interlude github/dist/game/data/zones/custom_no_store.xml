@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Custom No Store Zones -->
+	<!-- Giran zones coords contributed by Nekys -->
+	<zone name="Giran northern coridor west" type="NoStoreZone" shape="Cuboid" minZ="-3400" maxZ="-3550">
+		<node X="81446" Y="143530" />
+		<node X="81635" Y="147720" />
+	</zone>
+	<zone name="Giran northern coridor east" type="NoStoreZone" shape="Cuboid" minZ="-3350" maxZ="-3450">
+		<node X="83790" Y="143495" />
+		<node X="84000" Y="147230" />
+	</zone>
+	<zone name="Giran western coridor (up to the Dusk Priestess)" type="NoStoreZone" shape="Cuboid" minZ="-3650" maxZ="-3400">
+		<node X="77080" Y="148525" />
+		<node X="81780" Y="148720" />
+	</zone>
+	<zone name="Giran southern coridor" type="NoStoreZone" shape="Cuboid" minZ="-3550" maxZ="-3400">
+		<node X="81435" Y="149530" />
+		<node X="81640" Y="152920" />
+	</zone>
+	<zone name="Giran northern path" type="NoStoreZone" shape="Cuboid" minZ="-3500" maxZ="-3400">
+		<node X="80930" Y="147680" />
+		<node X="82940" Y="147875" />
+	</zone>
+	<zone name="Giran western path" type="NoStoreZone" shape="Cuboid" minZ="-3500" maxZ="-3400">
+		<node X="80930" Y="147680" />
+		<node X="81115" Y="149540" />
+	</zone>
+	<zone name="Giran southern path" type="NoStoreZone" shape="Cuboid" minZ="-3500" maxZ="-3400">
+		<node X="80925" Y="149340" />
+		<node X="82940" Y="149535" />
+	</zone>
+	<zone name="Giran large temple area (gatekeeper and Priest of Dawn area)" type="NoStoreZone" shape="Cuboid" minZ="-3500" maxZ="-3350">
+		<node X="82735" Y="147000" />
+		<node X="84320" Y="149780" />
+	</zone>
+	<zone name="Giran olympiad manager" type="NoStoreZone" shape="Cuboid" minZ="-3500" maxZ="-3400">
+		<node X="81985" Y="147450" />
+		<node X="82205" Y="147710" />
+	</zone>
+	<zone name="Giran manor manager" type="NoStoreZone" shape="Cuboid" minZ="-3500" maxZ="-3400">
+		<node X="81865" Y="149530" />
+		<node X="82030" Y="149680" />
+	</zone>
+	<zone name="Giran auctioneer and gabrielle" type="NoStoreZone" shape="Cuboid" minZ="-3500" maxZ="-3400">
+		<node X="81205" Y="149520" />
+		<node X="81510" Y="149830" />
+	</zone>
+	<zone name="Giran path to taurin" type="NoStoreZone" shape="Cuboid" minZ="-3550" maxZ="-3450">
+		<node X="81055" Y="146820" />
+		<node X="81455" Y="147000" />
+	</zone>
+	<zone name="Giran path to warehouse" type="NoStoreZone" shape="Cuboid" minZ="-3550" maxZ="-3450">
+		<node X="81620" Y="146465" />
+		<node X="82035" Y="146680" />
+	</zone>
+	<zone name="Giran Taurin" type="NoStoreZone" shape="Cuboid" minZ="-3550" maxZ="-3450">
+		<node X="80655" Y="146350" />
+		<node X="80855" Y="146460" />
+	</zone>
+	<zone name="Giran Collob" type="NoStoreZone" shape="Cuboid" minZ="-3550" maxZ="-3450">
+		<node X="79200" Y="149455" />
+		<node X="79300" Y="149645" />
+	</zone>
+	<zone name="Aden olympiad manager square" type="NoStoreZone" shape="Cuboid" minZ="-2250" maxZ="-2150">
+		<node X="146841" Y="26541" />
+		<node X="148071" Y="27425" />
+	</zone>
+	<zone name="Aden central stairs" type="NoStoreZone" shape="Cuboid" minZ="-2250" maxZ="-1950">
+		<node X="147273" Y="25941" />
+		<node X="147645" Y="26538" />
+	</zone>
+	<zone name="Aden temple square" type="NoStoreZone" shape="Cuboid" minZ="-2050" maxZ="-1950">
+		<node X="146233" Y="25938" />
+		<node X="148729" Y="25553" />
+	</zone>
+	<!-- EXTRA -->
+	<zone name="Giran - Luxury noshop" type="NoStoreZone" shape="Cuboid" minZ="-3700" maxZ="-2700">
+		<node X="79195" Y="146333" />
+		<node X="81220" Y="144785" />
+	</zone>
+	<zone name="Giran - Luxury noshop entrance" type="NoStoreZone" shape="Cuboid" minZ="-3700" maxZ="-2700">
+		<node X="81204" Y="145667" />
+		<node X="81477" Y="145428" />
+	</zone>
+	<zone name="Giran - Church noshop" type="NoStoreZone" shape="Cuboid" minZ="-3350" maxZ="-3450">
+		<node X="83743" Y="149247" />
+		<node X="85810" Y="147964" />
+	</zone>
+	<zone name="Aden - Square mid noshop" type="NoStoreZone" shape="Cuboid" minZ="-2150" maxZ="-2300">
+		<node X="147222" Y="27368" />
+		<node X="147703" Y="27805" />
+	</zone>
+	<zone name="Aden - Church stairs noshop" type="NoStoreZone" shape="Cuboid" minZ="-1900" maxZ="-2150">
+		<node X="146832" Y="22534" />
+		<node X="148199" Y="25661" />
+	</zone>
+	<!-- GIRAN HARBOR -->
+	<!-- <zone name="Giran Harbor - Square" type="NoStoreZone" shape="NPoly" minZ="-3750" maxZ="-3330">
+		<node X="46005" Y="187291" />
+		<node X="46211" Y="187695" />
+		<node X="48611" Y="186414" />
+		<node X="49067" Y="185820" />
+		<node X="49168" Y="185913" />
+		<node X="50197" Y="184704" />
+		<node X="49266" Y="183908" />
+		<node X="47791" Y="185642" />
+		<node X="46130" Y="186520" />
+		<node X="46226" Y="186672" />
+		<node X="45798" Y="186897" />
+		<node X="45855" Y="187023" />
+		<node X="45667" Y="186988" />
+		<node X="45482" Y="186626" />
+		<node X="47714" Y="185410" />
+		<node X="49281" Y="183657" />
+		<node X="50403" Y="184666" />
+		<node X="48642" Y="186655" />
+		<node X="46183" Y="187946" />
+		<node X="45940" Y="187486" />
+	</zone> -->
+	<zone name="Giran Harbor - Main Entrance" type="NoStoreZone" shape="NPoly" minZ="-3750" maxZ="-3330">
+		<node X="47325" Y="185778" />
+		<node X="47627" Y="185615" />
+		<node X="47554" Y="185474" />
+		<node X="47250" Y="185631" />
+	</zone>
+	<zone name="Giran Harbor - Stairs 1" type="NoStoreZone" shape="NPoly" minZ="-3750" maxZ="-3330">
+		<node X="49353" Y="186074" />
+		<node X="50206" Y="185119" />
+		<node X="50049" Y="184978" />
+		<node X="49189" Y="185924" />
+	</zone>
+	<zone name="Giran Harbor - Stairs 2" type="NoStoreZone" shape="NPoly" minZ="-3750" maxZ="-3330">
+		<node X="47710" Y="187094" />
+		<node X="46586" Y="187701" />
+		<node X="46671" Y="187870" />
+		<node X="47799" Y="187265" />
+	</zone>
+	<zone name="Giran Harbor - Docks 1" type="NoStoreZone" shape="NPoly" minZ="-3750" maxZ="-3330">
+		<node X="49559" Y="185610" />
+		<node X="49763" Y="185382" />
+		<node X="52108" Y="187460" />
+		<node X="51891" Y="187699" />
+	</zone>
+	<zone name="Giran Harbor - Docks 2" type="NoStoreZone" shape="NPoly" minZ="-3750" maxZ="-3330">
+		<node X="47032" Y="187497" />
+		<node X="47304" Y="187361" />
+		<node X="48913" Y="190360" />
+		<node X="48638" Y="190508" />
+	</zone>
+</list>

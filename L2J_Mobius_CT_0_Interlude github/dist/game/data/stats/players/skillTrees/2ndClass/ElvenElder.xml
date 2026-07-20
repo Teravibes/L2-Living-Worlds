@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Elven Elder -->
+	<skillTree type="classSkillTree" classId="30" parentClassId="29">
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="10" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="11" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="12" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="9" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="10" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="11" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="9" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="10" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="11" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="13" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="14" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="15" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="10" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="11" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="12" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="5" getLevel="40" levelUpSp="17000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="6" getLevel="40" levelUpSp="17000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="1" getLevel="40" levelUpSp="17000" learnedByNpc="true">
+			<item id="3073" count="1" /> <!-- Spellbook: Might of Heaven -->
+		</skill>
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="2" getLevel="40" levelUpSp="17000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="3" getLevel="40" levelUpSp="34000" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLevel="2" getLevel="40" levelUpSp="34000" learnedByNpc="true" />
+		<skill skillName="Might" skillId="1068" skillLevel="3" getLevel="40" levelUpSp="34000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="6" getLevel="40" levelUpSp="34000" learnedByNpc="true" />
+		<skill skillName="Resist Poison" skillId="1033" skillLevel="2" getLevel="40" levelUpSp="34000" learnedByNpc="true" />
+		<skill skillName="Mental Shield" skillId="1035" skillLevel="2" getLevel="40" levelUpSp="34000" learnedByNpc="true" />
+		<skill skillName="Resurrection" skillId="1016" skillLevel="3" getLevel="40" levelUpSp="34000" learnedByNpc="true" />
+		<skill skillName="Bless Shield" skillId="1243" skillLevel="1" getLevel="40" levelUpSp="34000" learnedByNpc="true">
+			<item id="3102" count="1" /> <!-- Spellbook: Bless Shield -->
+		</skill>
+		<skill skillName="Resist Shock" skillId="1259" skillLevel="1" getLevel="40" levelUpSp="34000" learnedByNpc="true">
+			<item id="4201" count="1" /> <!-- Spellbook: Resist Shock -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="13" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="14" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="15" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="12" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="13" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="14" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="12" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="13" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="14" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="16" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="17" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="18" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="13" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="14" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="15" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="7" getLevel="44" levelUpSp="21000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="8" getLevel="44" levelUpSp="21000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="3" getLevel="44" levelUpSp="21000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="4" getLevel="44" levelUpSp="21000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="2" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="3" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="7" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="1" getLevel="44" levelUpSp="41000" learnedByNpc="true">
+			<item id="4914" count="1" /> <!-- Spellbook: Serenade of Eva -->
+		</skill>
+		<skill skillName="Resist Poison" skillId="1033" skillLevel="3" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Shield" skillId="1040" skillLevel="3" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Agility" skillId="1087" skillLevel="2" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Concentration" skillId="1078" skillLevel="3" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Return" skillId="1050" skillLevel="1" getLevel="44" levelUpSp="41000" learnedByNpc="true">
+			<item id="3098" count="1" /> <!-- Spellbook: Return -->
+		</skill>
+		<skill skillName="Decrease Weight" skillId="1257" skillLevel="2" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="16" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="17" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="18" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="15" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="16" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="17" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="15" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="16" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="17" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="19" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="20" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="21" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="16" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="17" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="18" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="1" getLevel="48" levelUpSp="22000" learnedByNpc="true">
+			<item id="3429" count="1" /> <!-- Spellbook: Greater Heal -->
+		</skill>
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="2" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="3" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="9" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="10" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="1" getLevel="48" levelUpSp="22000" learnedByNpc="true">
+			<item id="3068" count="1" /> <!-- Spellbook: Vitalize -->
+		</skill>
+		<skill skillName="Vitalize" skillId="1020" skillLevel="2" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="3" getLevel="48" levelUpSp="22000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="5" getLevel="48" levelUpSp="33000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="6" getLevel="48" levelUpSp="33000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="4" getLevel="48" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Quick Recovery" skillId="164" skillLevel="3" getLevel="48" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="8" getLevel="48" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="2" getLevel="48" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Resurrection" skillId="1016" skillLevel="4" getLevel="48" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Regeneration" skillId="1044" skillLevel="2" getLevel="48" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Bless Shield" skillId="1243" skillLevel="2" getLevel="48" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Mental Shield" skillId="1035" skillLevel="3" getLevel="48" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Party Recall" skillId="1255" skillLevel="1" getLevel="48" levelUpSp="67000" learnedByNpc="true">
+			<item id="3942" count="1" /> <!-- Spellbook: Party Return -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="21" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="18" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="18" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="22" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="23" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="24" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="21" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="4" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="5" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="6" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="4" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="5" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="6" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="11" getLevel="52" levelUpSp="44000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="12" getLevel="52" levelUpSp="44000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="7" getLevel="52" levelUpSp="44000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="8" getLevel="52" levelUpSp="44000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="3" getLevel="52" levelUpSp="89000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="4" getLevel="52" levelUpSp="89000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="9" getLevel="52" levelUpSp="89000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="3" getLevel="52" levelUpSp="89000" learnedByNpc="true" />
+		<skill skillName="Agility" skillId="1087" skillLevel="3" getLevel="52" levelUpSp="89000" learnedByNpc="true" />
+		<skill skillName="Concentration" skillId="1078" skillLevel="4" getLevel="52" levelUpSp="89000" learnedByNpc="true" />
+		<skill skillName="Kiss of Eva" skillId="1073" skillLevel="2" getLevel="52" levelUpSp="89000" learnedByNpc="true" />
+		<skill skillName="Decrease Weight" skillId="1257" skillLevel="3" getLevel="52" levelUpSp="89000" learnedByNpc="true" />
+		<skill skillName="Resist Shock" skillId="1259" skillLevel="2" getLevel="52" levelUpSp="89000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="22" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="23" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="24" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="21" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="22" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="23" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="21" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="22" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="23" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="25" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="26" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="27" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="22" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="23" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="24" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="7" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="8" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="9" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="13" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="14" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="7" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="8" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="9" getLevel="56" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="9" getLevel="56" levelUpSp="44000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="10" getLevel="56" levelUpSp="44000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="5" getLevel="56" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLevel="3" getLevel="56" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="10" getLevel="56" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="4" getLevel="56" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Resurrection" skillId="1016" skillLevel="5" getLevel="56" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Regeneration" skillId="1044" skillLevel="3" getLevel="56" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Bless Shield" skillId="1243" skillLevel="3" getLevel="56" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Mental Shield" skillId="1035" skillLevel="4" getLevel="56" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Return" skillId="1050" skillLevel="2" getLevel="56" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Party Recall" skillId="1255" skillLevel="2" getLevel="56" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Trance" skillId="1394" skillLevel="1" getLevel="56" levelUpSp="88000" learnedByNpc="true">
+			<item id="8394" count="1" /> <!-- Spellbook: Trance -->
+		</skill>
+		<skill skillName="Mana Burn" skillId="1398" skillLevel="1" getLevel="56" levelUpSp="88000" learnedByNpc="true">
+			<item id="8398" count="1" /> <!-- Spellbook: Mana Burn -->
+		</skill>
+		<skill skillName="Turn Undead" skillId="1400" skillLevel="1" getLevel="56" levelUpSp="88000" learnedByNpc="true">
+			<item id="8400" count="1" /> <!-- Spellbook: Turn Undead -->
+		</skill>
+		<skill skillName="Major Heal" skillId="1401" skillLevel="1" getLevel="56" levelUpSp="88000" learnedByNpc="true">
+			<item id="8401" count="1" /> <!-- Spellbook: Major Heal -->
+		</skill>
+		<skill skillName="Erase" skillId="1395" skillLevel="1" getLevel="56" levelUpSp="88000" learnedByNpc="true">
+			<item id="8395" count="1" /> <!-- Spellbook: Erase -->
+		</skill>
+		<skill skillName="Invocation" skillId="1430" skillLevel="1" getLevel="56" levelUpSp="88000" learnedByNpc="true">
+			<item id="8946" count="1" /> <!-- Spellbook: Invocation -->
+		</skill>
+
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="10" getLevel="58" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="11" getLevel="58" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="12" getLevel="58" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="25" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="26" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="24" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="25" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="28" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="29" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="24" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="25" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="25" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="26" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="15" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="16" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="10" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="11" getLevel="58" levelUpSp="52000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="4" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="11" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="11" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="5" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Advanced Block" skillId="1304" skillLevel="1" getLevel="58" levelUpSp="105000" learnedByNpc="true">
+			<item id="5816" count="1" /> <!-- Spellbook: Advanced Block -->
+		</skill>
+		<skill skillName="Cure Poison" skillId="1012" skillLevel="3" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Trance" skillId="1394" skillLevel="2" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Mana Burn" skillId="1398" skillLevel="2" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Turn Undead" skillId="1400" skillLevel="2" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Major Heal" skillId="1401" skillLevel="2" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Erase" skillId="1395" skillLevel="2" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Unholy Resistance" skillId="1393" skillLevel="1" getLevel="58" levelUpSp="105000" learnedByNpc="true">
+			<item id="8393" count="1" /> <!-- Spellbook: Unholy Resistance -->
+		</skill>
+		<skill skillName="Clarity" skillId="1397" skillLevel="1" getLevel="58" levelUpSp="110000" learnedByNpc="true">
+			<item id="8397" count="1" /> <!-- Spellbook: Clarity -->
+		</skill>
+
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="13" getLevel="60" levelUpSp="50000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="14" getLevel="60" levelUpSp="50000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="15" getLevel="60" levelUpSp="50000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="27" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="28" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="26" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="27" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="30" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="31" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="26" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="27" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="27" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="28" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="17" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="18" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="12" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="13" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="6" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="5" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="12" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="12" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="6" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Concentration" skillId="1078" skillLevel="5" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Trance" skillId="1394" skillLevel="3" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Mana Burn" skillId="1398" skillLevel="3" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Turn Undead" skillId="1400" skillLevel="3" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Major Heal" skillId="1401" skillLevel="3" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Erase" skillId="1395" skillLevel="3" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Invocation" skillId="1430" skillLevel="2" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="29" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="30" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="28" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="29" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="32" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="33" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="28" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="29" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="29" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="30" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="16" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="17" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="19" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="20" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="14" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="15" getLevel="62" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="13" getLevel="62" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="13" getLevel="62" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="7" getLevel="62" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Bless Shield" skillId="1243" skillLevel="4" getLevel="62" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Wild Magic" skillId="1303" skillLevel="1" getLevel="62" levelUpSp="220000" learnedByNpc="true">
+			<item id="5815" count="1" /> <!-- Spellbook: Wild Magic -->
+		</skill>
+		<skill skillName="Trance" skillId="1394" skillLevel="4" getLevel="62" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Mana Burn" skillId="1398" skillLevel="4" getLevel="62" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Turn Undead" skillId="1400" skillLevel="4" getLevel="62" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Major Heal" skillId="1401" skillLevel="4" getLevel="62" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Erase" skillId="1395" skillLevel="4" getLevel="62" levelUpSp="220000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="32" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="30" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="34" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="35" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="30" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="32" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="18" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="19" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="21" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="22" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="16" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="17" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="14" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="14" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="8" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Resurrection" skillId="1016" skillLevel="6" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Resist Shock" skillId="1259" skillLevel="3" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Trance" skillId="1394" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Mana Burn" skillId="1398" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Turn Undead" skillId="1400" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Major Heal" skillId="1401" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Erase" skillId="1395" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Invocation" skillId="1430" skillLevel="3" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="33" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="34" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="32" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="33" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="36" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="37" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="32" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="33" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="33" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="34" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="20" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="21" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="23" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="24" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="18" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="19" getLevel="66" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="7" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="15" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="15" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="9" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Bless Shield" skillId="1243" skillLevel="5" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Advanced Block" skillId="1304" skillLevel="2" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Trance" skillId="1394" skillLevel="6" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Mana Burn" skillId="1398" skillLevel="6" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Turn Undead" skillId="1400" skillLevel="6" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Major Heal" skillId="1401" skillLevel="6" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Erase" skillId="1395" skillLevel="6" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Unholy Resistance" skillId="1393" skillLevel="2" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+		<skill skillName="Clarity" skillId="1397" skillLevel="2" getLevel="66" levelUpSp="330000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="35" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="36" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="34" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="35" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="38" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="39" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="34" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="35" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="35" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="36" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="22" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="23" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="25" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="26" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="20" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="21" getLevel="68" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="6" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="16" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="16" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="10" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Concentration" skillId="1078" skillLevel="6" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Trance" skillId="1394" skillLevel="7" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Mana Burn" skillId="1398" skillLevel="7" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Turn Undead" skillId="1400" skillLevel="7" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Major Heal" skillId="1401" skillLevel="7" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Erase" skillId="1395" skillLevel="7" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Invocation" skillId="1430" skillLevel="4" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="37" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="38" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="36" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="37" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="40" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="41" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="36" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="37" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="37" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="38" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="24" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="25" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="27" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="28" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="22" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="23" getLevel="70" levelUpSp="260000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="17" getLevel="70" levelUpSp="520000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="17" getLevel="70" levelUpSp="520000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="11" getLevel="70" levelUpSp="520000" learnedByNpc="true" />
+		<skill skillName="Bless Shield" skillId="1243" skillLevel="6" getLevel="70" levelUpSp="520000" learnedByNpc="true" />
+		<skill skillName="Wild Magic" skillId="1303" skillLevel="2" getLevel="70" levelUpSp="520000" learnedByNpc="true" />
+		<skill skillName="Trance" skillId="1394" skillLevel="8" getLevel="70" levelUpSp="520000" learnedByNpc="true" />
+		<skill skillName="Mana Burn" skillId="1398" skillLevel="8" getLevel="70" levelUpSp="520000" learnedByNpc="true" />
+		<skill skillName="Turn Undead" skillId="1400" skillLevel="8" getLevel="70" levelUpSp="520000" learnedByNpc="true" />
+		<skill skillName="Major Heal" skillId="1401" skillLevel="8" getLevel="70" levelUpSp="520000" learnedByNpc="true" />
+		<skill skillName="Erase" skillId="1395" skillLevel="8" getLevel="70" levelUpSp="520000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="40" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="38" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="42" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="43" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="38" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="40" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="26" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="27" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="29" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="30" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="24" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="25" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="18" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="8" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="18" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="12" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Advanced Block" skillId="1304" skillLevel="3" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Resist Shock" skillId="1259" skillLevel="4" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Trance" skillId="1394" skillLevel="9" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Mana Burn" skillId="1398" skillLevel="9" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Turn Undead" skillId="1400" skillLevel="9" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Major Heal" skillId="1401" skillLevel="9" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Erase" skillId="1395" skillLevel="9" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Invocation" skillId="1430" skillLevel="5" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="41" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="42" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="40" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLevel="41" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="44" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="45" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="40" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLevel="41" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="41" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="42" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="28" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="29" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="31" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Recharge" skillId="1013" skillLevel="32" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="26" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Vitalize" skillId="1020" skillLevel="27" getLevel="74" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="6" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="7" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLevel="19" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLevel="19" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Serenade of Eva" skillId="1273" skillLevel="13" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Resurrection" skillId="1016" skillLevel="7" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Trance" skillId="1394" skillLevel="10" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Mana Burn" skillId="1398" skillLevel="10" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Turn Undead" skillId="1400" skillLevel="10" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Major Heal" skillId="1401" skillLevel="10" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Major Heal" skillId="1401" skillLevel="11" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Erase" skillId="1395" skillLevel="10" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Unholy Resistance" skillId="1393" skillLevel="3" getLevel="74" levelUpSp="1100000" learnedByNpc="true" />
+		<skill skillName="Clarity" skillId="1397" skillLevel="3" getLevel="74" levelUpSp="1110000" learnedByNpc="true" />
+	</skillTree>
+</list>

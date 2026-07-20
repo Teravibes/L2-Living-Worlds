@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FPC Editor — Fake Player Behavior</title>
+<style>
+	* { box-sizing: border-box; }
+	html, body { margin: 0; height: 100%; font-family: "Segoe UI", system-ui, sans-serif; background: #1e1f22; color: #e6e6e6; }
+	#app { display: flex; height: 100%; }
+	#mapWrap { position: relative; flex: 1; overflow: hidden; background: #15161a; }
+	#map { display: block; cursor: crosshair; }
+	#hud { position: absolute; top: 8px; left: 8px; background: rgba(0,0,0,.55); padding: 6px 10px; border-radius: 6px; font-size: 12px; pointer-events: none; }
+	#side { width: 340px; background: #25262b; border-left: 1px solid #34353b; display: flex; flex-direction: column; overflow-y: auto; }
+	#side h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: #9aa0aa; margin: 14px 12px 6px; }
+	button, input, select { font: inherit; }
+	button { background: #3a6df0; color: #fff; border: 0; border-radius: 5px; padding: 7px 10px; cursor: pointer; font-size: 12px; }
+	button.sec { background: #3a3b42; }
+	button:hover { filter: brightness(1.1); }
+	label { display: block; font-size: 11px; color: #9aa0aa; margin: 8px 12px 2px; }
+
+	/* top action bar */
+	#topbar { display: flex; gap: 8px; padding: 12px; border-bottom: 1px solid #34353b; }
+	#openFolder { flex: 1; padding: 10px; font-size: 13px; font-weight: 600; }
+	#saveXml { padding: 10px 14px; font-weight: 600; background: #2e9d62; }
+	#saveXml:disabled { background: #3a3b42; color: #777; cursor: not-allowed; filter: none; }
+
+	/* status chips */
+	#status { padding: 9px 12px; border-bottom: 1px solid #34353b; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+	.chip { font-size: 11px; padding: 3px 8px; border-radius: 10px; background: #2c2d33; color: #9aa0aa; border: 1px solid #34353b; }
+	.chip.ok { background: #1d3326; color: #6fcf97; border-color: #265038; }
+	#folderLine { width: 100%; font-size: 11px; color: #9aa0aa; display: flex; gap: 8px; align-items: center; }
+	#folderName { color: #cfd2da; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	.link { background: none; color: #6f9bff; padding: 0; font-size: 11px; text-decoration: underline; }
+	.link:hover { filter: none; color: #9cbcff; }
+
+	.quickbar { display: flex; gap: 8px; align-items: center; padding: 10px 12px; border-bottom: 1px solid #34353b; }
+	.quickbar label { margin: 0; display: flex; align-items: center; gap: 5px; color: #cfd2da; }
+	#modebar { display: flex; gap: 0; padding: 10px 12px 0; }
+	#modebar button { flex: 1; border-radius: 0; }
+	#modebar button:first-child { border-radius: 5px 0 0 5px; }
+	#modebar button:last-child { border-radius: 0 5px 5px 0; }
+
+	.row { display: flex; gap: 8px; padding: 0 12px; }
+	.row > div { flex: 1; }
+	input, select { width: 100%; background: #1b1c20; color: #e6e6e6; border: 1px solid #3a3b42; border-radius: 4px; padding: 6px 7px; }
+	#form.empty { display: none; }
+	#profForm.empty { display: none; }
+	#formHint { color: #9aa0aa; font-size: 12px; padding: 6px 12px 12px; line-height: 1.5; }
+	#profFormHint { color: #9aa0aa; font-size: 12px; padding: 6px 12px 12px; line-height: 1.5; }
+	#list { overflow-y: auto; padding: 4px 0 12px; }
+	#profList { overflow-y: auto; padding: 4px 0 12px; }
+	.item { padding: 6px 12px; font-size: 12px; cursor: pointer; border-left: 3px solid transparent; }
+	.item:hover { background: #2c2d33; }
+	.item.sel { background: #313340; border-left-color: #3a6df0; }
+	.item small { color: #9aa0aa; }
+	.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+	#del { background: #b5432f; }
+	#delProfile { background: #b5432f; }
+	.muted { color: #9aa0aa; font-size: 11px; padding: 4px 12px 10px; line-height: 1.5; }
+	.sectionHead { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 12px 6px; }
+	.sectionHead h2 { margin: 0 !important; }
+	.sectionHead button { padding: 5px 8px; }
+	.divider { border-top: 1px solid #34353b; padding-top: 2px; }
+
+	/* waypoint mode overlay */
+	#waypointBanner { display: none; position: absolute; top: 40px; left: 50%; transform: translateX(-50%); background: rgba(192,110,224,.9); color: #fff; padding: 5px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; pointer-events: none; white-space: nowrap; }
+	#waypointBanner.on { display: block; }
+
+	/* advanced (collapsed) image panel */
+	details.adv { border-top: 1px solid #34353b; margin-top: 6px; }
+	details.adv > summary { list-style: none; cursor: pointer; padding: 11px 12px; font-size: 12px; color: #9aa0aa; user-select: none; }
+	details.adv > summary::-webkit-details-marker { display: none; }
+	details.adv > summary::before { content: '▸ '; color: #6b6d76; }
+	details.adv[open] > summary::before { content: '▾ '; }
+	details.adv > summary:hover { color: #cfd2da; }
+
+	/* collapsible section headers */
+	details.section { border-top: 2px solid #3a6df0; margin-top: 8px; }
+	details.section > summary {
+		list-style: none; cursor: pointer; padding: 10px 12px 8px;
+		font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+		color: #7fb0f5; user-select: none; display: flex; align-items: center; gap: 6px;
+	}
+	details.section > summary::-webkit-details-marker { display: none; }
+	details.section > summary::before { content: '▸ '; color: #3a6df0; font-size: 13px; }
+	details.section[open] > summary::before { content: '▾ '; }
+	details.section > summary:hover { color: #b8d4ff; }
+	details.section > summary .sec-toggle { margin-left: auto; font-size: 11px; font-weight: 400; text-transform: none; letter-spacing: 0; color: #9aa0aa; cursor: pointer; padding: 2px 7px; background: #3a3b42; border: 0; border-radius: 4px; }
+	details.section > summary .sec-toggle:hover { color: #cfd2da; filter: brightness(1.1); }
+	.toolrow { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 0 12px; margin-top: 8px; }
+	.toolrow button { min-width: 0; }
+	.imageSelect { padding: 0 12px; margin-top: 8px; }
+	.imageSelect label { margin-left: 0; margin-right: 0; }
+	#mapWrap.dragover { outline: 2px solid #3a6df0; outline-offset: -2px; }
+
+	/* save confirmation toast */
+	#toast { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%) translateY(20px); background: #1d3326; color: #cfeede; border: 1px solid #2e9d62; padding: 10px 16px; border-radius: 8px; font-size: 13px; box-shadow: 0 6px 20px rgba(0,0,0,.45); opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; max-width: 80%; }
+	#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+<div id="app">
+	<div id="mapWrap">
+		<canvas id="map"></canvas>
+		<div id="hud">world: <span id="coord">0, 0</span></div>
+		<div id="waypointBanner">✦ Waypoint mode · click to place · drag to move · Esc to finish</div>
+		<div id="toast"></div>
+	</div>
+	<div id="side">
+		<!-- ONE open, ONE save -->
+		<div id="topbar">
+			<button id="openFolder">📂 Open data folder</button>
+			<button id="saveXml" disabled title="Load a folder first">💾 Save</button>
+		</div>
+		<div id="status">
+			<span class="chip" id="st_xml">XML</span>
+			<span class="chip" id="st_geo">Geodata</span>
+			<span class="chip" id="st_img">Images</span>
+			<div id="folderLine" hidden>folder: <span id="folderName"></span> <button id="changeFolder" class="link">change…</button></div>
+		</div>
+
+		<div id="modebar">
+			<button id="modeNpc">NPC fake players</button>
+			<button id="modePhantom" class="sec">Phantoms</button>
+			<button id="modeRaid" class="sec">Raid bosses</button>
+		</div>
+
+		<div class="quickbar" id="quickbar">
+			<button id="addBtn" class="sec">+ Population</button>
+			<label><input id="showMarks" type="checkbox" checked style="width:auto" /> landmarks</label>
+		</div>
+
+		<!-- hidden inputs -->
+		<input id="folderInput" type="file" multiple webkitdirectory hidden />
+
+		<!-- ====== POPULATION FORM ====== -->
+		<details class="section" id="popSection" open>
+		<summary>Selected population</summary>
+		<div id="formHint">Select a population from the list below, or double-click the map to add one.</div>
+		<div id="form" class="empty">
+			<label>name</label><input id="f_name" />
+			<div class="row">
+				<div><label>x</label><input id="f_x" type="number" /></div>
+				<div><label>y</label><input id="f_y" type="number" /></div>
+				<div><label>z</label><input id="f_z" type="number" /></div>
+			</div>
+			<div class="row">
+				<div><label>radius</label><input id="f_radius" type="number" /></div>
+				<div><label>count</label><input id="f_count" type="number" /></div>
+			</div>
+			<div class="row">
+				<div><label>minLevel</label><input id="f_minLevel" type="number" /></div>
+				<div><label>maxLevel</label><input id="f_maxLevel" type="number" /></div>
+			</div>
+			<div id="phantomOnly" style="display:none">
+				<label>role</label>
+				<select id="f_role">
+					<option value="">Field hunter (auto-hunt)</option>
+					<option value="BUDDY_ELDER">Buddy — Elven Elder (mage buffs, heals)</option>
+					<option value="BUDDY_PROPHET">Buddy — Prophet (fighter buffs)</option>
+					<option value="BUDDY_WARCRYER">Buddy — Warcryer (orc buffs)</option>
+				</select>
+				<div class="muted">A buddy idles where placed (no hunting). Whisper it to party up — it then buffs/heals/follows you and teleports on command. Use level 40+ for a full buff kit.</div>
+			</div>
+			<div id="npcOnly">
+				<label>behavior</label>
+				<select id="f_behavior">
+					<option value="IDLE">Idle / loiter — drift in an area</option>
+					<option value="RUNNER">Runner — roam a route (random)</option>
+					<option value="PATROL">Patrol — walk a route in order</option>
+					<option value="FARM">Farm — hunt monsters in an area</option>
+					<option value="SHOP">Shop — private-store vendors</option>
+				</select>
+				<div id="storeRow">
+					<label>store type</label>
+					<select id="f_store"><option>SELL</option><option>BUY</option><option>CRAFT</option><option>PACKAGE</option></select>
+					<label style="margin-top:6px"><input id="f_fullStock" type="checkbox" style="width:auto;margin-right:6px" />market hub — stock every grade (ignore level)</label>
+				</div>
+				<label>race (optional)</label>
+				<select id="f_race"><option value=""></option><option>HUMAN</option><option>ELF</option><option>DARK_ELF</option><option>ORC</option><option>DWARF</option></select>
+				<div id="routeRow" style="margin-top:8px">
+					<div class="row" style="margin-bottom:4px">
+						<label style="margin:0;line-height:28px;min-width:50px">Route</label>
+						<select id="f_routeName" style="flex:1;font-size:12px"><option value="">— manual waypoints —</option></select>
+						<button id="reloadRoutesBtn" class="sec" style="padding:0 8px;font-size:11px" title="Rescan routes folder">↺</button>
+					</div>
+					<div class="row">
+						<button id="routeBtn" class="sec" style="flex:2">✦ Draw route</button>
+						<button id="reverseRouteBtn" class="sec" style="flex:1">⇅ Reverse</button>
+						<button id="clearRouteBtn" class="sec" style="flex:1">✕ Clear</button>
+					</div>
+					<div id="routeCount" class="muted"></div>
+					<div id="routeWaypointList"></div>
+				</div>
+				<div id="behaviorHelp" class="muted"></div>
+				<details class="adv" style="border-top:0;margin-top:0">
+					<summary>Movement timing (advanced)</summary>
+					<label>run / walk</label>
+					<select id="f_run"><option value="false">walk</option><option value="true">run</option></select>
+					<div class="row">
+						<div><label>pause min (s)</label><input id="f_pauseMin" type="number" min="1" /></div>
+						<div><label>pause max (s)</label><input id="f_pauseMax" type="number" min="1" /></div>
+					</div>
+				</details>
+			</div>
+			<label><input id="f_respawn" type="checkbox" style="width:auto;margin-right:6px" /><span id="respawnText">respawn (field hunters)</span></label>
+			<div class="row" style="margin-top:10px"><button id="zoneBtn" class="sec" style="flex:2">Draw zone</button><button id="clearZone" class="sec" style="flex:1">Clear zone</button></div>
+			<div class="row" style="margin-top:10px"><button id="formSaveBtn" style="flex:1;background:#2e9d62">💾 Save</button></div>
+			<div class="row" style="margin-top:6px"><button id="del" style="flex:1">Delete population</button></div>
+			<div class="muted"><b>Draw zone:</b> outline a spawn area on the map (click points, Esc/double-click to finish). For Idle, bots drift inside it. <b>Draw route:</b> drop waypoints the Runner/Patrol bots will follow — drag a waypoint to move it, Esc to finish.</div>
+		</div>
+		</details>
+
+		<!-- ====== LISTS ====== -->
+		<details class="section" id="listSection" open>
+		<summary><span id="popSectionTitle">Populations</span><button class="sec-toggle" id="toggleAll" onclick="event.stopPropagation()">Hide all</button></summary>
+		<div id="list" style="min-height:160px"></div>
+		</details>
+
+		<!-- ====== FRIENDS (phantom mode only) ====== -->
+		<details class="section" id="friendSection" style="display:none" open>
+		<summary>Friends (crafted companions)</summary>
+		<div class="muted" style="margin-bottom:6px">Craft a permanent friend to your own spec — e.g. recreate an old friend. Saved as
+		<b>&lt;friend&gt;</b> entries in PhantomPopulations.xml; the server creates it next to the owner the next time they're online
+		(then befriends it — always-online, chats in its own stable persona). An entry whose name already exists in game is ignored,
+		so this list is safe to leave in place. <b>Adding or removing a friend saves the file immediately</b> — no separate Save
+		click. Apply live with <b>//phantom reload</b>.</div>
+		<label>owner (your character's name)</label><input id="fr_owner" placeholder="e.g. MyMain" />
+		<label>friend name</label><input id="fr_name" placeholder="e.g. Halvard (1-16 letters/digits)" />
+		<label>race / class</label>
+		<select id="fr_class">
+			<option value="">Fighter — random race &amp; melee class</option>
+			<option value="mage">Mage — random race &amp; nuker class</option>
+		</select>
+		<div class="muted" style="margin:2px 0 4px;font-size:11px">Race is set by the class you pick (grouped below the random options). Classes marked (buddy)
+		become an idle support buddy — buffs on whisper — instead of a hunter. Summoner classes are omitted (phantoms can't drive pets).</div>
+		<div class="row">
+			<div><label>level (0 = match owner)</label><input id="fr_level" type="number" min="0" max="80" value="0" /></div>
+			<div><label>sex</label><select id="fr_sex"><option value="">random</option><option value="m">male</option><option value="f">female</option></select></div>
+		</div>
+		<div class="row">
+			<div><label>face</label><select id="fr_face"><option value="-1">random</option><option>0</option><option>1</option><option>2</option></select></div>
+			<div><label>hair style</label><select id="fr_hairStyle"><option value="-1">random</option><option>0</option><option>1</option><option>2</option></select></div>
+			<div><label>hair color</label><select id="fr_hairColor"><option value="-1">random</option><option>0</option><option>1</option><option>2</option><option>3</option></select></div>
+		</div>
+		<div class="row" style="margin-top:8px"><button id="fr_add" style="flex:1;background:#2e9d62">+ Add friend</button></div>
+		<div id="friendList" style="margin-top:8px"></div>
+		</details>
+
+		<!-- ====== RAID BOSS STRENGTH (raid mode only) ====== -->
+		<details class="section" id="raidSection" style="display:none" open>
+		<summary>Raid boss strength (global)</summary>
+		<div class="muted" style="margin-bottom:8px">Scales <b>every</b> raid boss at once via <b>game/config/NPC.ini</b> — values are percent, <b>100 = retail default</b>, lower = weaker. Pick your live server's <code>NPC.ini</code>, adjust, Save — then <b>restart the server</b> to apply (this config is read only at startup).</div>
+		<div class="row" style="margin-bottom:8px"><button id="ri_pick" class="sec" style="flex:1">📄 Pick NPC.ini…</button></div>
+		<div id="ri_fileLine" class="muted" hidden style="margin-bottom:10px">file: <span id="ri_fileName" style="color:#cfd2da"></span></div>
+
+		<label>Physical attack — <code>RaidPAttackMultiplier</code></label>
+		<div class="row"><input id="ri_patk" type="number" min="0" step="5" placeholder="100" style="flex:1" /><span id="ri_patk_fx" class="muted" style="flex:1;line-height:28px"></span></div>
+		<label>Magic attack — <code>RaidMAttackMultiplier</code></label>
+		<div class="row"><input id="ri_matk" type="number" min="0" step="5" placeholder="100" style="flex:1" /><span id="ri_matk_fx" class="muted" style="flex:1;line-height:28px"></span></div>
+		<label>Physical defense — <code>RaidPDefenceMultiplier</code></label>
+		<div class="row"><input id="ri_pdef" type="number" min="0" step="5" placeholder="100" style="flex:1" /><span id="ri_pdef_fx" class="muted" style="flex:1;line-height:28px"></span></div>
+		<label>Magic defense — <code>RaidMDefenceMultiplier</code></label>
+		<div class="row"><input id="ri_mdef" type="number" min="0" step="5" placeholder="100" style="flex:1" /><span id="ri_mdef_fx" class="muted" style="flex:1;line-height:28px"></span></div>
+		<label>HP regen — <code>RaidHpRegenMultiplier</code></label>
+		<div class="row"><input id="ri_hpreg" type="number" min="0" step="5" placeholder="100" style="flex:1" /><span id="ri_hpreg_fx" class="muted" style="flex:1;line-height:28px"></span></div>
+		<label>MP regen — <code>RaidMpRegenMultiplier</code></label>
+		<div class="row"><input id="ri_mpreg" type="number" min="0" step="5" placeholder="100" style="flex:1" /><span id="ri_mpreg_fx" class="muted" style="flex:1;line-height:28px"></span></div>
+
+		<div class="row" style="margin-top:10px"><button id="ri_reset" class="sec" style="flex:1">Reset all to 100 (retail)</button></div>
+		<div class="row" style="margin-top:6px"><button id="ri_save" disabled style="flex:1;background:#2e9d62">💾 Save NPC.ini</button></div>
+		<div class="muted" style="margin-top:8px">These six scale attack, defense and regen — <b>not</b> the boss's HP pool. To shrink a specific boss's HP, edit its <code>&lt;vitals hp="…"/&gt;</code> in <code>data/stats/npcs</code>.</div>
+		</details>
+
+		<details class="section" id="imgSection">
+			<summary>Map image layers</summary>
+			<label><input id="editImages" type="checkbox" style="width:auto;margin-right:6px" />edit images (drag / resize)</label>
+			<label>opacity</label>
+			<input id="imgOpacity" type="range" min="0" max="100" value="70" style="margin:0 12px;width:calc(100% - 24px)" />
+			<div class="row" style="margin-top:8px">
+				<button id="loadWorldMap" class="sec" style="flex:1">Load world map</button>
+			</div>
+			<div class="imageSelect">
+				<label>Cities</label>
+				<select id="cityImageSelect" disabled><option value="">Open data folder first</option></select>
+			</div>
+			<div class="imageSelect">
+				<label>World locations</label>
+				<select id="locationImageSelect" disabled><option value="">Open data folder first</option></select>
+			</div>
+			<div class="toolrow">
+				<button id="fitImg" class="sec">Fit selected</button>
+				<button id="removeImg" class="sec">Remove selected</button>
+			</div>
+			<div id="imageLayerHead" class="sectionHead" hidden><h2>Loaded images</h2><button id="toggleImages" class="sec">Hide all</button></div>
+			<div id="imageLayerList"></div>
+			<div id="imgStatus" class="muted">Open a data folder. Use the world map button or category dropdowns to load images.</div>
+		</details>
+	</div>
+</div>
+
+<script>
+const cv = document.getElementById('map');
+const ctx = cv.getContext('2d');
+const wrap = document.getElementById('mapWrap');
+
+// ---- state ----
+let pops = [];            // editable population objects (the ACTIVE mode's list)
+let preserved = { assigns: [], def: null }; // assign/default entries kept verbatim
+let selected = -1;
+let waypointMode = false;  // placing route waypoints for the selected population
+// Named routes loaded from data/routes/*.xml — keyed by route name, value = [{x,y,z}]
+let loadedRoutes = {};
+
+// ---- mode: NPC fake players vs real-Player phantoms ----
+let mode = 'npc';
+const stores = {
+	npc:     { pops: [], preserved: { assigns: [], def: null }, fileName: 'FakePlayerBehavior.xml', handle: null, loaded: false },
+	phantom: { pops: [], preserved: { assigns: [], def: null }, fileName: 'PhantomPopulations.xml', handle: null, loaded: false }
+};
+function snapshot(){ const s = stores[mode]; s.pops = pops; s.preserved = preserved; s.handle = xmlFileHandle; s.fileName = xmlFileName; s.loaded = xmlLoaded; }
+function activate(m){ mode = m; const s = stores[m]; pops = s.pops; preserved = s.preserved; xmlFileHandle = s.handle; xmlFileName = s.fileName; xmlLoaded = s.loaded; }
+function applyModeUi(){
+	const raid = (mode === 'raid');
+	document.getElementById('modeNpc').classList.toggle('sec', mode !== 'npc');
+	document.getElementById('modePhantom').classList.toggle('sec', mode !== 'phantom');
+	document.getElementById('modeRaid').classList.toggle('sec', mode !== 'raid');
+	// Raid mode is a config editor, not a population editor: hide the pop/list/friends/images UI and show the raid tab.
+	document.getElementById('quickbar').style.display = raid ? 'none' : '';
+	document.getElementById('popSection').style.display = raid ? 'none' : '';
+	document.getElementById('listSection').style.display = raid ? 'none' : '';
+	document.getElementById('imgSection').style.display = raid ? 'none' : '';
+	document.getElementById('raidSection').style.display = raid ? '' : 'none';
+	document.getElementById('npcOnly').style.display = (mode === 'phantom') ? 'none' : '';
+	document.getElementById('phantomOnly').style.display = (mode === 'phantom') ? '' : 'none';
+	document.getElementById('friendSection').style.display = (mode === 'phantom') ? '' : 'none';
+	document.getElementById('respawnText').textContent = (mode === 'phantom') ? 'respawn (replace on death)' : 'respawn (field hunters)';
+	document.getElementById('popSectionTitle').textContent = (mode === 'phantom') ? 'Phantom populations' : 'Populations';
+}
+function switchMode(m){
+	if (m === mode) return;
+	if (drawMode) setDrawMode(false);
+	if (waypointMode) setWaypointMode(false);
+	if (mode !== 'raid') snapshot();       // pop state only exists for npc/phantom
+	if (m !== 'raid') activate(m); else mode = 'raid';
+	selected = -1;
+	applyModeUi();
+	if (m !== 'raid'){ renderList(); syncForm(); }
+	updateStatus(); draw();
+}
+document.getElementById('modeNpc').onclick = () => switchMode('npc');
+document.getElementById('modePhantom').onclick = () => switchMode('phantom');
+document.getElementById('modeRaid').onclick = () => switchMode('raid');
+
+let mapImages = []; // { img, name, path, x1, y1, x2, y2 }
+let selectedImage = -1;
+let imageCatalog = { worldMap: null, cities: [], locations: [], layout: null };
+let geoRegions = []; // { rx, ry, canvas } rendered geodata tiles
+let xmlFileHandle = null;
+let xmlFileName = 'FakePlayerBehavior.xml';
+let xmlLoaded = false;
+let geoDirName = '';
+let rememberedHandle = null;
+// Raid boss strength tab: its own file handle for game/config/NPC.ini (that config lives outside the data folder
+// this tool opens, so it gets its own picker). npcIniText is the raw file kept verbatim so a Save rewrites only
+// the six Raid*Multiplier values and preserves every comment and unrelated key.
+let npcIniHandle = null, npcIniText = '', npcIniName = 'NPC.ini';
+const RAID_KEYS = [
+	{ key: 'RaidPAttackMultiplier',  id: 'ri_patk',  kind: 'atk' },
+	{ key: 'RaidMAttackMultiplier',  id: 'ri_matk',  kind: 'atk' },
+	{ key: 'RaidPDefenceMultiplier', id: 'ri_pdef',  kind: 'def' },
+	{ key: 'RaidMDefenceMultiplier', id: 'ri_mdef',  kind: 'def' },
+	{ key: 'RaidHpRegenMultiplier',  id: 'ri_hpreg', kind: 'reg' },
+	{ key: 'RaidMpRegenMultiplier',  id: 'ri_mpreg', kind: 'reg' }
+];
+const cam = { x: -135000, y: -135000, scale: 0.0035 };
+
+// Geodata constants
+const WORLD_MIN_X = -655360, WORLD_MIN_Y = -589824, REGION_WORLD = 32768, REGION_BLOCKS = 256;
+const IMAGE_HANDLE_SIZE = 9;
+
+// Town centers plus a few key NPC spots (real Interlude coords) so you can drop route
+// waypoints straight onto landmarks. Sub-spots are drawn small and labelled when zoomed in.
+const LANDMARKS = [
+	{ n: 'Talking Island', x: -84318, y: 244294, spots: [
+		{ n: 'Gatekeeper', x: -84108, y: 244604 },
+		{ n: 'Warehouse', x: -81895, y: 243917 },
+		{ n: 'Blacksmith', x: -85026, y: 242689 }
+	] },
+	{ n: 'Gludin', x: -80684, y: 149770, spots: [
+		{ n: 'Gatekeeper', x: -80752, y: 149776 },
+		{ n: 'Warehouse', x: -81857, y: 153545 },
+		{ n: 'Blacksmith', x: -83172, y: 155483 },
+		{ n: 'Mammon', x: -84745, y: 151732 }
+	] },
+	{ n: 'Gludio', x: -14053, y: 123808, spots: [
+		{ n: 'Gatekeeper', x: -12736, y: 122816 },
+		{ n: 'Warehouse', x: -13049, y: 124737 },
+		{ n: 'Blacksmith', x: -15190, y: 124756 },
+		{ n: 'Mammon', x: -12345, y: 121695 }
+	] },
+	{ n: 'Dion', x: 15670, y: 142983, spots: [
+		{ n: 'Gatekeeper', x: 15631, y: 142885 },
+		{ n: 'Warehouse', x: 20750, y: 144432 },
+		{ n: 'Blacksmith', x: 19737, y: 143122 },
+		{ n: 'Mammon', x: 16393, y: 144916 }
+	] },
+	{ n: 'Giran', x: 83400, y: 147943, spots: [
+		{ n: 'Gatekeeper', x: 83396, y: 147904 },
+		{ n: 'Warehouse', x: 83264, y: 146602 },
+		{ n: 'Blacksmith', x: 77458, y: 148169 },
+		{ n: 'Grocer', x: 80518, y: 147873 },
+		{ n: 'Mammon', x: 81360, y: 150016 }
+	] },
+	{ n: 'Oren', x: 82309, y: 53122, spots: [
+		{ n: 'Gatekeeper', x: 82992, y: 53171 },
+		{ n: 'Warehouse', x: 81777, y: 55123 },
+		{ n: 'Blacksmith', x: 83741, y: 55410 },
+		{ n: 'Mammon', x: 80129, y: 56947 }
+	] },
+	{ n: 'Aden', x: 146783, y: 25808, spots: [
+		{ n: 'Gatekeeper', x: 146737, y: 25807 },
+		{ n: 'Warehouse', x: 148859, y: 27258 },
+		{ n: 'Blacksmith', x: 150608, y: 28510 },
+		{ n: 'Mammon', x: 146986, y: 29566 }
+	] },
+	{ n: 'Heine', x: 111409, y: 219364, spots: [
+		{ n: 'Gatekeeper', x: 111386, y: 219413 },
+		{ n: 'Warehouse', x: 109623, y: 220091 },
+		{ n: 'Blacksmith', x: 108003, y: 218963 },
+		{ n: 'Mammon', x: 113481, y: 218450 }
+	] },
+	{ n: 'Goddard', x: 147945, y: -55280, spots: [
+		{ n: 'Gatekeeper', x: 147966, y: -55228 },
+		{ n: 'Warehouse', x: 146440, y: -57500 },
+		{ n: 'Blacksmith', x: 146428, y: -58880 },
+		{ n: 'Mammon', x: 144400, y: -54048 }
+	] },
+	{ n: 'Rune', x: 43835, y: -47749, spots: [
+		{ n: 'Gatekeeper', x: 43824, y: -47664 },
+		{ n: 'Warehouse', x: 43556, y: -48640 },
+		{ n: 'Blacksmith', x: 45072, y: -48784 },
+		{ n: 'Mammon', x: 42924, y: -41424 }
+	] },
+	{ n: 'Schuttgart', x: 87383, y: -143246, spots: [
+		{ n: 'Gatekeeper', x: 87048, y: -143448 },
+		{ n: 'Warehouse', x: 88626, y: -141206 },
+		{ n: 'Blacksmith', x: 88447, y: -139675 },
+		{ n: 'Mammon', x: 89894, y: -143791 }
+	] },
+	{ n: 'Elven Village', x: 46934, y: 51467, spots: [
+		{ n: 'Gatekeeper', x: 46926, y: 51511 },
+		{ n: 'Warehouse', x: 47868, y: 50167 },
+		{ n: 'Blacksmith', x: 44476, y: 47153 }
+	] },
+	{ n: 'Dark Elf Village', x: 11258, y: 14431, spots: [
+		{ n: 'Gatekeeper', x: 9670, y: 15537 },
+		{ n: 'Warehouse', x: 13464, y: 17751 },
+		{ n: 'Blacksmith', x: 10580, y: 17574 }
+	] },
+	{ n: 'Dwarven Village', x: 115113, y: -178224, spots: [
+		{ n: 'Gatekeeper', x: 115072, y: -178176 },
+		{ n: 'Warehouse', x: 114716, y: -180018 },
+		{ n: 'Blacksmith', x: 115271, y: -182692 }
+	] },
+	{ n: 'Orc Village', x: -45186, y: -112459, spots: [
+		{ n: 'Gatekeeper', x: -45264, y: -112512 },
+		{ n: 'Warehouse', x: -43114, y: -113404 },
+		{ n: 'Blacksmith', x: -43264, y: -112532 }
+	] }
+];
+
+// ---- behaviors ----
+// Each population owns its behavior. Underneath, the editor writes a matching movement <profile>
+// per population on save and reads it back on load — the user never touches profiles directly.
+//   IDLE   -> WANDER  (drift within radius / drawn area)   blue
+//   RUNNER -> VISIT   (route, next waypoint chosen at random) purple
+//   PATROL -> PATROL  (route, walked in order)               purple
+//   FARM   -> FARM    (hunt monsters within radius)          red
+//   SHOP   -> WANDER  (private-store vendors, small drift)   gold
+const BEHAVIORS = ['IDLE','RUNNER','PATROL','FARM','SHOP'];
+const BEHAVIOR_DEFAULTS = {
+	IDLE:   { type: 'WANDER', run: false, pauseMin: 25, pauseMax: 80, roam: 'pop'  },
+	SHOP:   { type: 'WANDER', run: false, pauseMin: 25, pauseMax: 80, roam: 120    },
+	RUNNER: { type: 'VISIT',  run: false, pauseMin: 25, pauseMax: 70, roam: null   },
+	PATROL: { type: 'PATROL', run: false, pauseMin: 10, pauseMax: 30, roam: null   },
+	FARM:   { type: 'FARM',   run: true,  pauseMin: 2,  pauseMax: 6,  roam: 'pop'  }
+};
+const BEHAVIOR_HELP = {
+	IDLE:   'Bots drift around at random within the radius (or the drawn zone) — the standing-around-town crowd.',
+	RUNNER: 'Bots roam between the route waypoints you place, picking the next one at RANDOM. Use "Draw route".',
+	PATROL: 'Bots walk the route waypoints IN ORDER and loop, like guards or travellers. Use "Draw route".',
+	FARM:   'Bots seek out and fight monsters within the radius (field hunters).',
+	SHOP:   'Bots open private stores. Pick a store type; they barely move around the spawn.'
+};
+function isRouteBehavior(b){ return b === 'RUNNER' || b === 'PATROL'; }
+function effectiveWaypoints(p){
+	const base = (p.routeName && loadedRoutes[p.routeName]) ? loadedRoutes[p.routeName] : (p.route || []);
+	return p.routeReversed ? [...base].reverse() : base;
+}
+function behaviorFromProfile(prof, store){
+	if (store) return 'SHOP';
+	if (!prof) return 'IDLE';
+	switch (prof.type){
+		case 'VISIT':  return 'RUNNER';
+		case 'PATROL': return 'PATROL';
+		case 'FARM':   return 'FARM';
+		default:       return 'IDLE';
+	}
+}
+function popColor(p){
+	if (mode === 'phantom') return '#46c6c0';
+	switch (p.behavior){
+		case 'SHOP':   return '#e8c24a';
+		case 'FARM':   return '#e0563b';
+		case 'RUNNER':
+		case 'PATROL': return '#c06ee0';
+		default:       return '#4a8de8'; // IDLE
+	}
+}
+
+// ---- transforms ----
+function w2s(x, y){ return [ (x - cam.x) * cam.scale, (y - cam.y) * cam.scale ]; }
+function s2w(x, y){ return [ x / cam.scale + cam.x, y / cam.scale + cam.y ]; }
+
+function resize(){ cv.width = wrap.clientWidth; cv.height = wrap.clientHeight; draw(); }
+window.addEventListener('resize', resize);
+
+// ---- status chips ----
+function setChip(id, ok, text){ const el = document.getElementById(id); el.textContent = text; el.classList.toggle('ok', ok); }
+function updateStatus(){
+	const unit = (mode === 'phantom') ? ' phantoms' : ' pops';
+	setChip('st_xml', xmlLoaded || pops.length > 0, (xmlLoaded || pops.length) ? 'XML ✓ ' + pops.length + unit : 'XML —');
+	setChip('st_geo', geoRegions.length > 0, geoRegions.length ? 'Geodata ✓ ' + geoRegions.length : 'Geodata —');
+	const catalogCount = (imageCatalog.worldMap ? 1 : 0) + imageCatalog.cities.length + imageCatalog.locations.length;
+	setChip('st_img', mapImages.length > 0 || catalogCount > 0, mapImages.length ? 'Images ✓ ' + mapImages.length : catalogCount ? 'Images catalog ' + catalogCount : 'Images —');
+	document.getElementById('saveXml').disabled = !(xmlLoaded || rememberedHandle);
+	const fl = document.getElementById('folderLine');
+	if (rememberedHandle){ fl.hidden = false; document.getElementById('folderName').textContent = rememberedHandle.name; }
+	else fl.hidden = true;
+}
+
+// Render one .l2j region to a high-res tile
+const TILE_RES = 1024, SUB = TILE_RES / 256;
+function renderRegionHi(buf){
+	const dv = new DataView(buf); let pos = 0;
+	const c = document.createElement('canvas'); c.width = TILE_RES; c.height = TILE_RES;
+	const cx = c.getContext('2d'); const img = cx.createImageData(TILE_RES, TILE_RES); const d = img.data;
+	const put = (px, py, h, t) => {
+		let v = Math.round((h + 4000) / 6000 * 200) + 40; v = v < 20 ? 20 : v > 255 ? 255 : v;
+		let r = v, g = v, b = v; if (t === 1){ g = Math.min(255, v + 12); } else if (t === 2){ b = Math.min(255, v + 30); g = Math.min(255, v + 8); }
+		const idx = (py * TILE_RES + px) * 4; d[idx] = r; d[idx + 1] = g; d[idx + 2] = b; d[idx + 3] = 255;
+	};
+	const cells = new Int16Array(64);
+	for (let i = 0; i < 65536; i++){
+		const bx = i >> 8, by = i & 255; const type = dv.getUint8(pos); pos += 1;
+		if (type === 0){ const h = dv.getInt16(pos, true); pos += 2; for (let sx = 0; sx < SUB; sx++) for (let sy = 0; sy < SUB; sy++) put(bx * SUB + sx, by * SUB + sy, h, 0); }
+		else if (type === 1){ for (let k = 0; k < 64; k++){ cells[k] = dv.getInt16(pos, true) >> 1; pos += 2; } cellFill(put, bx, by, cells, 1); }
+		else if (type === 2){ for (let k = 0; k < 64; k++){ const n = dv.getUint8(pos); pos += 1; cells[k] = n > 0 ? (dv.getInt16(pos, true) >> 1) : 0; pos += n * 2; } cellFill(put, bx, by, cells, 2); }
+		else throw new Error('bad block type ' + type);
+	}
+	cx.putImageData(img, 0, 0); return c;
+}
+function cellFill(put, bx, by, cells, t){
+	for (let sx = 0; sx < SUB; sx++) for (let sy = 0; sy < SUB; sy++){
+		const cxi = (sx * 8 / SUB) | 0, cyi = (sy * 8 / SUB) | 0;
+		put(bx * SUB + sx, by * SUB + sy, cells[cxi * 8 + cyi], t);
+	}
+}
+async function loadGeodataFiles(fileList, label){
+	const files = [...fileList].filter(f => /(\d+)_(\d+)\.l2j$/i.test(f.name));
+	if (!files.length){ return; }
+	geoDirName = label || 'selected folder';
+	geoRegions = []; let ok = 0, bad = 0;
+	for (const f of files){
+		const m = f.name.match(/(\d+)_(\d+)\.l2j$/i);
+		document.getElementById('coord').textContent = 'parsing geodata ' + (ok + bad + 1) + '/' + files.length + '...';
+		await new Promise(r => setTimeout(r, 0));
+		try { const buf = await f.arrayBuffer(); geoRegions.push({ rx: +m[1], ry: +m[2], canvas: renderRegionHi(buf) }); ok++; }
+		catch (err){ bad++; }
+	}
+	document.getElementById('coord').textContent = 'geodata: ' + ok + ' regions' + (bad ? ' (' + bad + ' failed)' : '');
+	updateStatus();
+	draw();
+}
+
+// ---- workspace ----
+function isImageName(name){ return /\.(png|jpe?g|gif|webp|bmp|avif)$/i.test(name); }
+function normPath(path){ return String(path || '').replace(/\\/g, '/'); }
+function imageTitle(name){ return String(name || '').replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' '); }
+function isCitiesPath(path){ return normPath(path).split('/').some(p => p.toLowerCase() === 'cities'); }
+function isLocationsPath(path){ return normPath(path).split('/').some(p => ['world locations','worldlocations','world_locations','world-locations'].includes(p.toLowerCase())); }
+function isWorldMapPath(path){
+	const p = normPath(path).toLowerCase();
+	const base = p.split('/').pop();
+	return !isCitiesPath(p) && !isLocationsPath(p) && (/world.*map|map.*world|worldmap|l2.*map/.test(base) || p.split('/').some(s => ['world map','worldmap','world_map','world-map'].includes(s)));
+}
+function layoutEntries(){ return imageCatalog.layout && Array.isArray(imageCatalog.layout.images) ? imageCatalog.layout.images : []; }
+function placementForEntry(entry, category){
+	const p = normPath(entry.path).toLowerCase();
+	const key = imageKey(entry.path);
+	return layoutEntries().find(rec => (rec.category === category) && (normPath(rec.path || '').toLowerCase() === p)) ||
+		layoutEntries().find(rec => (rec.category === category) && (imageKey(rec.path || rec.name) === key)) ||
+		layoutEntries().find(rec => normPath(rec.path || '').toLowerCase() === p) ||
+		layoutEntries().find(rec => imageKey(rec.path || rec.name) === key);
+}
+function imageOptionLabel(entry){ return imageTitle(entry.name); }
+function populateImageSelect(id, entries, label){
+	const sel = document.getElementById(id);
+	sel.innerHTML = '';
+	sel.disabled = !entries.length;
+	if (!entries.length){ const o = document.createElement('option'); o.value = ''; o.textContent = 'No ' + label + ' images found'; sel.appendChild(o); return; }
+	const all = document.createElement('option'); all.value = '__all'; all.textContent = 'Load all'; sel.appendChild(all);
+	entries.forEach((entry, i) => { const o = document.createElement('option'); o.value = String(i); o.textContent = imageOptionLabel(entry); sel.appendChild(o); });
+	sel.selectedIndex = -1;
+}
+function updateImageCatalogUi(){
+	populateImageSelect('cityImageSelect', imageCatalog.cities, 'Cities');
+	populateImageSelect('locationImageSelect', imageCatalog.locations, 'world locations');
+	updateWorldMapButton();
+	renderImageLayerList();
+	updateImageStatus();
+}
+function worldMapIndex(){ return mapImages.findIndex(layer => layer.category === 'world-map'); }
+function updateWorldMapButton(){
+	const btn = document.getElementById('loadWorldMap');
+	const i = worldMapIndex();
+	btn.disabled = !imageCatalog.worldMap && (i < 0);
+	if (i >= 0) btn.textContent = mapImages[i].visible === false ? 'Show world map' : 'Hide world map';
+	else btn.textContent = 'Load world map';
+}
+function listedImageIndexes(){
+	return mapImages.map((layer, i) => ({ layer, i })).filter(x => x.layer.category === 'city' || x.layer.category === 'world-location').map(x => x.i);
+}
+function imageLayerColor(layer){ return layer.category === 'city' ? '#e8c24a' : '#54c06e'; }
+function panToImage(layer){
+	const x = (layer.x1 + layer.x2) / 2, y = (layer.y1 + layer.y2) / 2;
+	cam.x = x - (cv.width / 2) / cam.scale; cam.y = y - (cv.height / 2) / cam.scale; draw();
+}
+function renderImageLayerList(){
+	const indexes = listedImageIndexes();
+	const head = document.getElementById('imageLayerHead');
+	const list = document.getElementById('imageLayerList');
+	head.hidden = !indexes.length;
+	list.innerHTML = '';
+	if (!indexes.length) return;
+	const anyVisible = indexes.some(i => mapImages[i].visible !== false);
+	document.getElementById('toggleImages').textContent = anyVisible ? 'Hide all' : 'Show all';
+	indexes.forEach(i => {
+		const layer = mapImages[i];
+		const d = document.createElement('div'); d.className = 'item' + (i === selectedImage ? ' sel' : '');
+		const eye = document.createElement('span'); eye.textContent = layer.visible === false ? '🚫' : '👁'; eye.title = 'show/hide'; eye.style.cssText = 'cursor:pointer;margin-right:6px;opacity:' + (layer.visible === false ? '.4' : '1');
+		eye.onclick = ev => { ev.stopPropagation(); layer.visible = layer.visible === false; selectImage(i); renderImageLayerList(); updateImageStatus(); updateStatus(); draw(); };
+		const txt = document.createElement('span'); txt.innerHTML = '<span class="dot" style="background:' + imageLayerColor(layer) + '"></span>' + imageTitle(layer.name) + ' <small>' + (layer.category === 'city' ? 'city' : 'world location') + (layer.visible === false ? ' · hidden' : '') + '</small>';
+		txt.onclick = () => { selectImage(i); panToImage(layer); };
+		d.appendChild(eye); d.appendChild(txt); list.appendChild(d);
+	});
+}
+function buildImageCatalog(entries){
+	const imageEntries = entries.filter(e => isImageName(e.name));
+	const cities = imageEntries.filter(e => isCitiesPath(e.path)).sort((a, b) => imageTitle(a.name).localeCompare(imageTitle(b.name)));
+	const locations = imageEntries.filter(e => isLocationsPath(e.path)).sort((a, b) => imageTitle(a.name).localeCompare(imageTitle(b.name)));
+	const worldCandidates = imageEntries.filter(e => isWorldMapPath(e.path));
+	const rootImages = imageEntries.filter(e => !isCitiesPath(e.path) && !isLocationsPath(e.path));
+	imageCatalog = {
+		worldMap: worldCandidates[0] || (rootImages.length === 1 ? rootImages[0] : null),
+		cities,
+		locations,
+		layout: null
+	};
+}
+function findCatalogEntryByLayoutRecord(rec){
+	const all = [imageCatalog.worldMap, ...imageCatalog.cities, ...imageCatalog.locations].filter(Boolean);
+	const recPath = normPath(rec.path || '').toLowerCase();
+	const recName = imageKey(rec.path || rec.name);
+	return all.find(e => normPath(e.path).toLowerCase() === recPath) || all.find(e => imageKey(e.path) === recName);
+}
+
+// IndexedDB key/value
+function idbReq(mode, fn){
+	return new Promise((res, rej) => {
+		const open = indexedDB.open('fpc-editor', 1);
+		open.onupgradeneeded = () => open.result.createObjectStore('kv');
+		open.onerror = () => rej(open.error);
+		open.onsuccess = () => { const tx = open.result.transaction('kv', mode); const r = fn(tx.objectStore('kv')); tx.oncomplete = () => res(r && r.result); tx.onerror = () => rej(tx.error); };
+	});
+}
+const idbGet = key => idbReq('readonly', s => s.get(key)).catch(() => null);
+const idbSet = (key, val) => idbReq('readwrite', s => s.put(val, key)).catch(() => {});
+
+async function collectHandles(dirHandle, prefix = '', out = []){
+	for await (const entry of dirHandle.values()){
+		const path = prefix + entry.name;
+		if (entry.kind === 'file') out.push({ name: entry.name, path, handle: entry, file: null });
+		else if (entry.kind === 'directory') await collectHandles(entry, path + '/', out);
+	}
+	return out;
+}
+async function entryFile(e){ return e.file || (e.file = await e.handle.getFile()); }
+
+async function loadRoutes(entries){
+	loadedRoutes = {};
+	const routeFiles = entries.filter(e => /^routes\/[^/]+\.xml$/i.test(e.path));
+	for (const e of routeFiles){
+		try {
+			const text = await (await entryFile(e)).text();
+			const doc = new DOMParser().parseFromString(text, 'application/xml');
+			const routeEl = doc.querySelector('route');
+			if (!routeEl) continue;
+			const name = routeEl.getAttribute('name') || e.name.replace(/\.xml$/i, '');
+			const points = [...routeEl.querySelectorAll('point')].map(p => ({
+				x: +p.getAttribute('x'), y: +p.getAttribute('y'), z: +p.getAttribute('z')
+			}));
+			if (points.length) loadedRoutes[name] = points;
+		} catch(_){}
+	}
+	rebuildRouteDropdown();
+}
+
+function rebuildRouteDropdown(){
+	const sel = document.getElementById('f_routeName');
+	if (!sel) return;
+	const cur = sel.value;
+	sel.innerHTML = '<option value="">— manual waypoints —</option>';
+	Object.keys(loadedRoutes).sort().forEach(name => {
+		const opt = document.createElement('option');
+		opt.value = name; opt.textContent = name + ' (' + loadedRoutes[name].length + ' pts)';
+		sel.appendChild(opt);
+	});
+	sel.value = cur;
+}
+
+async function loadWorkspace(entries, label){
+	mapImages = [];
+	selectedImage = -1;
+	imageCatalog = { worldMap: null, cities: [], locations: [], layout: null };
+	renderImageLayerList();
+	stores.npc = { pops: [], preserved: { assigns: [], def: null }, fileName: 'FakePlayerBehavior.xml', handle: null, loaded: false };
+	stores.phantom = { pops: [], preserved: { assigns: [], def: null }, fileName: 'PhantomPopulations.xml', handle: null, loaded: false };
+	phantomFriends = []; renderFriendList();
+	activate('npc'); applyModeUi();
+	await loadRoutes(entries);
+	const geo = entries.filter(e => /(\d+)_(\d+)\.l2j$/i.test(e.name));
+	const phantomE = entries.find(e => e.name.toLowerCase() === 'phantompopulations.xml');
+	let xmlE = entries.find(e => e.name.toLowerCase() === 'fakeplayerbehavior.xml');
+	if (!xmlE){
+		for (const c of entries.filter(e => e.name.toLowerCase().endsWith('.xml') && e.name.toLowerCase() !== 'phantompopulations.xml')){
+			const t = await (await entryFile(c)).text();
+			if (/<population\b|FakePlayerBehavior/.test(t)){ xmlE = c; xmlE._text = t; break; }
+		}
+	}
+	const layoutE = entries.find(e => e.name.toLowerCase() === 'fpc-map-images.json');
+	buildImageCatalog(entries);
+	if (layoutE){
+		try { imageCatalog.layout = parseImageLayout(await (await entryFile(layoutE)).text()); }
+		catch (err){ imageCatalog.layout = null; }
+	}
+	if (!imageCatalog.worldMap && imageCatalog.layout){
+		const rec = layoutEntries().find(img => img.category === 'world-map');
+		imageCatalog.worldMap = rec ? findCatalogEntryByLayoutRecord(rec) : null;
+	}
+	updateImageCatalogUi();
+
+	const loaded = [];
+	if (xmlE){
+		const file = await entryFile(xmlE);
+		await loadXmlText(xmlE._text || await file.text(), file.name, xmlE.handle || null);
+		loaded.push('XML');
+	}
+	if (phantomE){
+		const pf = await entryFile(phantomE);
+		const ptext = await pf.text();
+		stores.phantom.pops = parsePhantomText(ptext);
+		phantomFriends = parsePhantomFriends(ptext);
+		renderFriendList();
+		stores.phantom.handle = phantomE.handle || null;
+		stores.phantom.fileName = pf.name;
+		stores.phantom.loaded = true;
+		loaded.push('phantoms');
+	}
+	snapshot();
+	if (geo.length){
+		const files = [];
+		for (const e of geo) files.push(await entryFile(e));
+		await loadGeodataFiles(files, label);
+		loaded.push('geodata');
+	}
+	updateStatus();
+	if (!loaded.length && !imageCatalog.worldMap && !imageCatalog.cities.length && !imageCatalog.locations.length) alert('That folder has no FakePlayerBehavior.xml, geodata (.l2j), world map, Cities, or world locations images.\nPick the folder that contains them (e.g. your server\'s game/data).');
+}
+
+async function ensurePerm(handle){
+	const opts = { mode: 'readwrite' };
+	if ((await handle.queryPermission(opts)) === 'granted') return true;
+	if ((await handle.requestPermission(opts)) === 'granted') return true;
+	return false;
+}
+
+async function openFolder(forcePick){
+	if (window.showDirectoryPicker){
+		let dir = (!forcePick && rememberedHandle) ? rememberedHandle : null;
+		if (!dir){
+			try { dir = await window.showDirectoryPicker({ id: 'fpc-workspace', mode: 'readwrite' }); }
+			catch (err){ if (err.name === 'AbortError') return; throw err; }
+		}
+		if (!(await ensurePerm(dir))){ alert('Permission to read that folder was denied.'); return; }
+		rememberedHandle = dir; updateStatus();
+		await idbSet('workspace', dir);
+		document.getElementById('coord').textContent = 'reading folder...';
+		await loadWorkspace(await collectHandles(dir), dir.name);
+	} else {
+		document.getElementById('folderInput').click();
+	}
+}
+document.getElementById('openFolder').onclick = () => openFolder(false);
+document.getElementById('changeFolder').onclick = () => openFolder(true);
+document.getElementById('folderInput').onchange = e => {
+	if (!e.target.files.length) return;
+	const files = [...e.target.files];
+	const label = (files[0].webkitRelativePath || '').split('/')[0] || 'folder';
+	const entries = files.map(f => ({ name: f.name, path: f.webkitRelativePath || f.name, handle: null, file: f }));
+	loadWorkspace(entries, label);
+	e.target.value = '';
+};
+
+// ---- draw ----
+function draw(){
+	ctx.clearRect(0, 0, cv.width, cv.height);
+	// geodata tiles
+	if (geoRegions.length){
+		ctx.imageSmoothingEnabled = cam.scale < 0.03;
+		geoRegions.forEach(g => {
+			const ox = g.rx * REGION_WORLD + WORLD_MIN_X, oy = g.ry * REGION_WORLD + WORLD_MIN_Y;
+			const [sx, sy] = w2s(ox, oy); const [ex, ey] = w2s(ox + REGION_WORLD, oy + REGION_WORLD);
+			if (ex < 0 || ey < 0 || sx > cv.width || sy > cv.height) return;
+			ctx.drawImage(g.canvas, sx, sy, ex - sx, ey - sy);
+		});
+	}
+	// map images
+	if (mapImages.length){
+		ctx.globalAlpha = (+document.getElementById('imgOpacity').value) / 100;
+		mapImages.forEach(layer => {
+			if (layer.visible === false) return;
+			const [sx, sy] = w2s(layer.x1, layer.y1); const [ex, ey] = w2s(layer.x2, layer.y2);
+			if (ex < 0 || ey < 0 || sx > cv.width || sy > cv.height) return;
+			ctx.drawImage(layer.img, sx, sy, ex - sx, ey - sy);
+		});
+		ctx.globalAlpha = 1;
+	}
+	// grid
+	ctx.strokeStyle = '#2a2c32'; ctx.lineWidth = 1; ctx.fillStyle = '#5a5c66'; ctx.font = '10px monospace';
+	const step = 20000;
+	const [w0x, w0y] = s2w(0, 0); const [w1x, w1y] = s2w(cv.width, cv.height);
+	for (let gx = Math.floor(w0x / step) * step; gx < w1x; gx += step){ const [sx] = w2s(gx, 0); ctx.beginPath(); ctx.moveTo(sx, 0); ctx.lineTo(sx, cv.height); ctx.stroke(); ctx.fillText(gx, sx + 2, 10); }
+	for (let gy = Math.floor(w0y / step) * step; gy < w1y; gy += step){ const [, sy] = w2s(0, gy); ctx.beginPath(); ctx.moveTo(0, sy); ctx.lineTo(cv.width, sy); ctx.stroke(); ctx.fillText(gy, 2, sy - 2); }
+	// landmarks (town centers + key NPC spots)
+	if (document.getElementById('showMarks').checked){
+		const showSpots = cam.scale > 0.006;
+		LANDMARKS.forEach(m => {
+			const [mx, my] = w2s(m.x, m.y);
+			if (!(mx < -40 || my < -10 || mx > cv.width + 40 || my > cv.height + 10)){
+				ctx.fillStyle = '#d8a0ff'; ctx.strokeStyle = '#241a2e'; ctx.lineWidth = 1;
+				ctx.beginPath(); ctx.moveTo(mx, my - 6); ctx.lineTo(mx + 6, my); ctx.lineTo(mx, my + 6); ctx.lineTo(mx - 6, my); ctx.closePath(); ctx.fill(); ctx.stroke();
+				ctx.fillStyle = '#d8a0ff'; ctx.font = '11px sans-serif'; ctx.fillText(m.n, mx + 8, my + 4);
+			}
+			if (showSpots && m.spots){
+				m.spots.forEach(s => {
+					const [sx, sy] = w2s(s.x, s.y);
+					if (sx < -40 || sy < -10 || sx > cv.width + 40 || sy > cv.height + 10) return;
+					ctx.fillStyle = '#b98edd'; ctx.strokeStyle = '#241a2e'; ctx.lineWidth = 1;
+					ctx.beginPath(); ctx.arc(sx, sy, 3, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+					ctx.fillStyle = '#caa6e6'; ctx.font = '10px sans-serif'; ctx.fillText(s.n, sx + 5, sy + 3);
+				});
+			}
+		});
+	}
+	// populations
+	pops.forEach((p, i) => {
+		if (p.visible === false) return;
+		const col = popColor(p);
+		if (p.poly && p.poly.length){
+			ctx.beginPath();
+			p.poly.forEach((v, k) => { const [sx, sy] = w2s(v.x, v.y); k ? ctx.lineTo(sx, sy) : ctx.moveTo(sx, sy); });
+			if (!(drawMode && i === selected)) ctx.closePath();
+			ctx.fillStyle = col + '22'; if (p.poly.length > 2) ctx.fill();
+			ctx.lineWidth = i === selected ? 2.5 : 1.5; ctx.strokeStyle = col; ctx.stroke();
+			if (i === selected){ p.poly.forEach(v => { const [sx, sy] = w2s(v.x, v.y); ctx.beginPath(); ctx.arc(sx, sy, 4, 0, 7); ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = col; ctx.stroke(); }); }
+			const c = polyCentroid(p.poly); const [cx, cy] = w2s(c.x, c.y);
+			ctx.beginPath(); ctx.arc(cx, cy, 3, 0, 7); ctx.fillStyle = col; ctx.fill();
+			if (cam.scale > 0.0015 || i === selected){ ctx.fillStyle = '#cfd2da'; ctx.font = '11px sans-serif'; ctx.fillText((p.name || '?') + ' ×' + (p.count || 0) + ' [zone]', cx + 6, cy + 3); }
+			return;
+		}
+		const [cx, cy] = w2s(p.x, p.y); const r = Math.max(3, (p.radius || 200) * cam.scale);
+		ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2);
+		ctx.fillStyle = col + '22'; ctx.fill();
+		ctx.lineWidth = i === selected ? 3 : 1.5; ctx.strokeStyle = col; ctx.stroke();
+		ctx.beginPath(); ctx.arc(cx, cy, 3, 0, Math.PI * 2); ctx.fillStyle = col; ctx.fill();
+		if (cam.scale > 0.0015 || i === selected){ ctx.fillStyle = '#cfd2da'; ctx.font = '11px sans-serif'; ctx.fillText((p.name || '?') + ' ×' + (p.count || 0), cx + r + 3, cy + 3); }
+	});
+
+	// ---- population routes (RUNNER / PATROL waypoints) ----
+	if (mode === 'npc'){
+		pops.forEach((p, pi) => {
+			if (p.visible === false || !isRouteBehavior(p.behavior)) return;
+			const isSel = pi === selected;
+			const col = isSel ? '#ff9944' : '#c06ee0';
+			const wpts = effectiveWaypoints(p);
+			if (!wpts.length) return;
+			const anchor = popAnchor(p);
+			const [ax, ay] = w2s(anchor.x, anchor.y);
+			// spawn -> route connectors plus the route chain (dashed)
+			ctx.beginPath();
+			ctx.moveTo(ax, ay);
+			wpts.forEach(w => { const [sx, sy] = w2s(w.x, w.y); ctx.lineTo(sx, sy); });
+			if (p.behavior === 'PATROL' && wpts.length > 1){ const [sx, sy] = w2s(wpts[0].x, wpts[0].y); ctx.lineTo(sx, sy); } // close the loop
+			ctx.strokeStyle = col + (isSel ? 'cc' : '66');
+			ctx.lineWidth = isSel ? 2 : 1.5;
+			ctx.setLineDash([5, 4]); ctx.stroke(); ctx.setLineDash([]);
+			// waypoint dots + order numbers
+			wpts.forEach((w, k) => {
+				const [sx, sy] = w2s(w.x, w.y);
+				const r = isSel ? 6 : 4;
+				ctx.beginPath(); ctx.arc(sx, sy, r, 0, Math.PI * 2);
+				ctx.fillStyle = col; ctx.fill();
+				ctx.strokeStyle = '#15161a'; ctx.lineWidth = 1; ctx.stroke();
+				ctx.fillStyle = isSel ? '#fff' : col;
+				ctx.font = (isSel ? 'bold ' : '') + '9px monospace';
+				ctx.fillText(k + 1, sx + r + 2, sy + 3);
+			});
+		});
+	}
+
+	drawImageSelection();
+	// empty-state hint
+	if (!geoRegions.length && !mapImages.length && !pops.length){
+		ctx.fillStyle = '#6b6d76'; ctx.font = '14px "Segoe UI", sans-serif'; ctx.textAlign = 'center';
+		ctx.fillText('Click "Open data folder" to load your XML, geodata and images.', cv.width / 2, cv.height / 2);
+		ctx.textAlign = 'left';
+	}
+}
+function polyCentroid(poly){ let x = 0, y = 0; poly.forEach(p => { x += p.x; y += p.y; }); return { x: Math.round(x / poly.length), y: Math.round(y / poly.length) }; }
+function polyRadius(poly, c){ let r = 0; poly.forEach(p => r = Math.max(r, Math.hypot(p.x - c.x, p.y - c.y))); return Math.round(r); }
+function pointInPoly(px, py, poly){ let inside = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++){ const xi = poly[i].x, yi = poly[i].y, xj = poly[j].x, yj = poly[j].y; if (((yi > py) !== (yj > py)) && (px < (xj - xi) * (py - yi) / (yj - yi) + xi)) inside = !inside; } return inside; }
+
+function imageScreenRect(layer){
+	const [sx, sy] = w2s(layer.x1, layer.y1); const [ex, ey] = w2s(layer.x2, layer.y2);
+	return { x: sx, y: sy, w: ex - sx, h: ey - sy };
+}
+function imageHandles(layer){
+	const r = imageScreenRect(layer);
+	return [
+		{ corner: 'nw', x: r.x, y: r.y, cursor: 'nwse-resize' },
+		{ corner: 'ne', x: r.x + r.w, y: r.y, cursor: 'nesw-resize' },
+		{ corner: 'sw', x: r.x, y: r.y + r.h, cursor: 'nesw-resize' },
+		{ corner: 'se', x: r.x + r.w, y: r.y + r.h, cursor: 'nwse-resize' }
+	];
+}
+function drawImageSelection(){
+	if ((selectedImage < 0) || !mapImages[selectedImage] || (mapImages[selectedImage].visible === false) || !document.getElementById('editImages').checked) return;
+	const r = imageScreenRect(mapImages[selectedImage]);
+	ctx.save();
+	ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 1.5; ctx.setLineDash([6, 4]); ctx.strokeRect(r.x, r.y, r.w, r.h);
+	ctx.setLineDash([]);
+	imageHandles(mapImages[selectedImage]).forEach(h => {
+		ctx.fillStyle = '#15161a'; ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 1.5;
+		ctx.fillRect(h.x - IMAGE_HANDLE_SIZE / 2, h.y - IMAGE_HANDLE_SIZE / 2, IMAGE_HANDLE_SIZE, IMAGE_HANDLE_SIZE);
+		ctx.strokeRect(h.x - IMAGE_HANDLE_SIZE / 2, h.y - IMAGE_HANDLE_SIZE / 2, IMAGE_HANDLE_SIZE, IMAGE_HANDLE_SIZE);
+	});
+	ctx.restore();
+}
+function pointInImageRect(mx, my, layer){
+	const r = imageScreenRect(layer);
+	return mx >= Math.min(r.x, r.x + r.w) && mx <= Math.max(r.x, r.x + r.w) && my >= Math.min(r.y, r.y + r.h) && my <= Math.max(r.y, r.y + r.h);
+}
+function pickImageHit(mx, my){
+	if (!document.getElementById('editImages').checked) return null;
+	if ((selectedImage >= 0) && mapImages[selectedImage] && (mapImages[selectedImage].visible !== false)){
+		for (const h of imageHandles(mapImages[selectedImage])){
+			if (Math.abs(mx - h.x) <= IMAGE_HANDLE_SIZE && Math.abs(my - h.y) <= IMAGE_HANDLE_SIZE) return { mode: 'image-resize', i: selectedImage, corner: h.corner, cursor: h.corner.includes('w') === h.corner.includes('n') ? 'nwse-resize' : 'nesw-resize' };
+		}
+	}
+	for (let i = mapImages.length - 1; i >= 0; i--){
+		if (mapImages[i].visible === false) continue;
+		for (const h of imageHandles(mapImages[i])){
+			if (Math.abs(mx - h.x) <= IMAGE_HANDLE_SIZE && Math.abs(my - h.y) <= IMAGE_HANDLE_SIZE) return { mode: 'image-resize', i, corner: h.corner, cursor: h.cursor };
+		}
+		if (pointInImageRect(mx, my, mapImages[i])) return { mode: 'image-move', i, cursor: 'move' };
+	}
+	return null;
+}
+function fitImageToViewport(layer){
+	const maxW = cv.width * 0.7, maxH = cv.height * 0.7;
+	let sw = maxW, sh = sw * (layer.img.height / layer.img.width);
+	if (sh > maxH){ sh = maxH; sw = sh * (layer.img.width / layer.img.height); }
+	const [cx, cy] = s2w(cv.width / 2, cv.height / 2);
+	const ww = sw / cam.scale, wh = sh / cam.scale;
+	layer.x1 = Math.round(cx - ww / 2); layer.y1 = Math.round(cy - wh / 2);
+	layer.x2 = Math.round(cx + ww / 2); layer.y2 = Math.round(cy + wh / 2);
+}
+function selectImage(i){
+	selectedImage = i;
+	if (i >= 0){ selected = -1; syncFormClear(); }
+	updateImageStatus();
+	updateWorldMapButton();
+	renderImageLayerList();
+	renderList();
+	draw();
+}
+function updateImageStatus(){
+	const el = document.getElementById('imgStatus');
+	if (!mapImages.length){ el.textContent = `Catalog: ${imageCatalog.worldMap ? 'world map found' : 'no world map'} · ${imageCatalog.cities.length} cities · ${imageCatalog.locations.length} world locations.`; return; }
+	const layer = mapImages[selectedImage];
+	el.textContent = layer ? `${selectedImage + 1}/${mapImages.length}: ${layer.name} (${layer.category || 'manual'}${layer.visible === false ? ', hidden' : ''})` : `${mapImages.length} map image${mapImages.length === 1 ? '' : 's'} loaded.`;
+}
+function imageKey(path){ return String(path || '').replace(/\\/g, '/').split('/').pop().toLowerCase(); }
+function imagePath(layer){ return layer.path || layer.name; }
+function isImageFile(file){ return file.type.startsWith('image/') || /\.(png|jpe?g|gif|webp|bmp|avif)$/i.test(file.name); }
+function imageRecord(layer){
+	return {
+		name: layer.name,
+		path: imagePath(layer),
+		category: layer.category || 'manual',
+		visible: layer.visible !== false,
+		x1: Math.round(layer.x1),
+		y1: Math.round(layer.y1),
+		x2: Math.round(layer.x2),
+		y2: Math.round(layer.y2),
+		width: layer.img.naturalWidth || layer.img.width,
+		height: layer.img.naturalHeight || layer.img.height
+	};
+}
+function makeImageLayout(){
+	return { version: 1, opacity: +document.getElementById('imgOpacity').value, images: mapImages.map(imageRecord) };
+}
+function applyImagePlacement(layer, placement){
+	layer.x1 = Math.round(+placement.x1); layer.y1 = Math.round(+placement.y1);
+	layer.x2 = Math.round(+placement.x2); layer.y2 = Math.round(+placement.y2);
+	if (placement.visible !== undefined) layer.visible = placement.visible !== false;
+}
+function parseImageLayout(text){
+	const layout = JSON.parse(text);
+	if (!layout || !Array.isArray(layout.images)) throw new Error('Layout must contain an images array.');
+	return layout;
+}
+function loadMapImageFile(file, placement){
+	return new Promise(resolve => {
+		if (!isImageFile(file)){ resolve(false); return; }
+		const img = new Image();
+		img.onload = () => {
+			const layer = { img, name: file.name, path: file.webkitRelativePath || file.name, category: 'manual', visible: true, x1: 0, y1: 0, x2: 0, y2: 0 };
+			if (placement) applyImagePlacement(layer, placement);
+			else fitImageToViewport(layer);
+			mapImages.push(layer);
+			selectImage(mapImages.length - 1);
+			resolve(true);
+		};
+		img.onerror = () => resolve(false);
+		img.src = URL.createObjectURL(file);
+	});
+}
+function existingImageIndex(path, category){
+	const p = normPath(path).toLowerCase();
+	return mapImages.findIndex(layer => (normPath(imagePath(layer)).toLowerCase() === p) && ((layer.category || 'manual') === category));
+}
+async function loadCatalogImage(entry, category){
+	if (!entry) return false;
+	const existing = existingImageIndex(entry.path, category);
+	if (existing >= 0){ mapImages[existing].visible = true; selectImage(existing); return true; }
+	const file = await entryFile(entry);
+	const placement = placementForEntry(entry, category);
+	return new Promise(resolve => {
+		const img = new Image();
+		img.onload = () => {
+			const layer = { img, name: entry.name, path: entry.path, category, visible: true, x1: 0, y1: 0, x2: 0, y2: 0 };
+			if (placement) applyImagePlacement(layer, placement);
+			else fitImageToViewport(layer);
+			mapImages.push(layer);
+			selectImage(mapImages.length - 1);
+			updateStatus();
+			resolve(true);
+		};
+		img.onerror = () => resolve(false);
+		img.src = URL.createObjectURL(file);
+	});
+}
+async function loadCatalogImages(entries, category){
+	let loaded = 0;
+	for (const entry of entries) loaded += await loadCatalogImage(entry, category) ? 1 : 0;
+	if (loaded) toast('Loaded ' + loaded + ' ' + category.replace('-', ' ') + ' image' + (loaded === 1 ? '' : 's'));
+	renderImageLayerList();
+	updateImageStatus(); updateStatus(); draw();
+}
+async function loadMapImageFiles(files){
+	let loaded = 0;
+	for (const file of [...files]) loaded += await loadMapImageFile(file) ? 1 : 0;
+	if (loaded) updateImageStatus();
+	renderImageLayerList();
+	updateStatus();
+	draw();
+}
+async function loadImageFolder(files){
+	const all = [...files];
+	const layoutFile = all.find(f => f.name.toLowerCase() === 'fpc-map-images.json') || all.find(f => f.name.toLowerCase().endsWith('.json'));
+	const imageFiles = all.filter(isImageFile);
+	if (!imageFiles.length){ alert('No image files found in that folder.'); return; }
+	if (!layoutFile){ await loadMapImageFiles(imageFiles); return; }
+	let layout;
+	try { layout = parseImageLayout(await layoutFile.text()); }
+	catch (err){ alert('Could not read image layout JSON: ' + err.message); return; }
+	if (layout.opacity !== undefined) document.getElementById('imgOpacity').value = Math.max(0, Math.min(100, +layout.opacity || 0));
+	const filesByPath = new Map(imageFiles.map(f => [String(f.webkitRelativePath || f.name).toLowerCase(), f]));
+	const filesByName = new Map(imageFiles.map(f => [imageKey(f.webkitRelativePath || f.name), f]));
+	mapImages = [];
+	selectedImage = -1;
+	let loaded = 0, missing = 0;
+	for (const rec of layout.images){
+		const file = filesByPath.get(String(rec.path || rec.name || '').toLowerCase()) || filesByName.get(imageKey(rec.path || rec.name));
+		if (!file){ missing++; continue; }
+		loaded += await loadMapImageFile(file, rec) ? 1 : 0;
+	}
+	if (!loaded){ await loadMapImageFiles(imageFiles); return; }
+	document.getElementById('imgStatus').textContent = `Folder loaded: ${loaded} image${loaded === 1 ? '' : 's'} restored${missing ? `, ${missing} missing` : ''}.`;
+	renderImageLayerList();
+	updateStatus();
+	draw();
+}
+function resizeImageLayer(layer, corner, wx, wy){
+	const minWorld = Math.max(1, 24 / cam.scale);
+	wx = Math.round(wx); wy = Math.round(wy);
+	if (corner === 'nw' || corner === 'sw') layer.x1 = Math.min(wx, layer.x2 - minWorld);
+	if (corner === 'ne' || corner === 'se') layer.x2 = Math.max(wx, layer.x1 + minWorld);
+	if (corner === 'nw' || corner === 'ne') layer.y1 = Math.min(wy, layer.y2 - minWorld);
+	if (corner === 'sw' || corner === 'se') layer.y2 = Math.max(wy, layer.y1 + minWorld);
+	layer.x1 = Math.round(layer.x1); layer.y1 = Math.round(layer.y1); layer.x2 = Math.round(layer.x2); layer.y2 = Math.round(layer.y2);
+}
+function updateCanvasCursor(mx, my){
+	if (waypointMode){ cv.style.cursor = 'copy'; return; }
+	if (drawMode){ cv.style.cursor = 'copy'; return; }
+	const imgHit = pickImageHit(mx, my);
+	if (imgHit){ cv.style.cursor = imgHit.cursor; return; }
+	if (pickVertex(mx, my) >= 0){ cv.style.cursor = 'grab'; return; }
+	if (pickWaypoint(mx, my)){ cv.style.cursor = 'grab'; return; }
+	if (pickPop(mx, my) >= 0){ cv.style.cursor = 'move'; return; }
+	cv.style.cursor = 'crosshair';
+}
+
+// ---- interaction ----
+let drag = null, drawMode = false;
+cv.addEventListener('mousedown', e => {
+	const mx = e.offsetX, my = e.offsetY; const [wx, wy] = s2w(mx, my);
+
+	// Waypoint mode: click places a new route waypoint on the selected population
+	if (waypointMode && selected >= 0){
+		const p = pops[selected];
+		if (isRouteBehavior(p.behavior)){
+			// Seed z from the population's elevation so the server snaps the waypoint to the right
+			// geodata layer; the 2D map can't supply z itself.
+			(p.route = p.route || []).push({ x: Math.round(wx), y: Math.round(wy), z: p.z | 0 });
+			syncForm();
+			draw();
+		}
+		return;
+	}
+
+	// Zone drawing
+	if (drawMode && selected >= 0){ const p = pops[selected]; (p.poly = p.poly || []).push({ x: Math.round(wx), y: Math.round(wy) }); draw(); return; }
+
+	const imgHit = pickImageHit(mx, my);
+	if (imgHit){ selectImage(imgHit.i); drag = { mode: imgHit.mode, i: imgHit.i, corner: imgHit.corner, px: wx, py: wy }; cv.style.cursor = imgHit.cursor; return; }
+	if (document.getElementById('editImages').checked && (selectedImage >= 0)){ selectedImage = -1; updateImageStatus(); draw(); }
+
+	// Drag a route waypoint
+	const wpHit = pickWaypoint(mx, my);
+	if (wpHit){ if (wpHit.pi !== selected) select(wpHit.pi); drag = { mode: 'waypoint', pi: wpHit.pi, wi: wpHit.wi }; return; }
+
+	// Drag polygon vertex
+	const vi = pickVertex(mx, my);
+	if (vi >= 0){ drag = { mode: 'vertex', i: selected, v: vi }; return; }
+
+	const hit = pickPop(mx, my);
+	if (hit >= 0){ select(hit); drag = { mode: 'move', i: hit, px: wx, py: wy }; }
+	else { drag = { mode: 'pan', sx: mx, sy: my, cx: cam.x, cy: cam.y }; }
+});
+cv.addEventListener('mousemove', e => {
+	const [wx, wy] = s2w(e.offsetX, e.offsetY);
+	document.getElementById('coord').textContent = Math.round(wx) + ', ' + Math.round(wy);
+	if (!drag){ updateCanvasCursor(e.offsetX, e.offsetY); return; }
+	if (drag.mode === 'pan'){ cam.x = drag.cx - (e.offsetX - drag.sx) / cam.scale; cam.y = drag.cy - (e.offsetY - drag.sy) / cam.scale; draw(); }
+	else if (drag.mode === 'vertex'){ const v = pops[drag.i].poly[drag.v]; v.x = Math.round(wx); v.y = Math.round(wy); draw(); }
+	else if (drag.mode === 'move'){ const p = pops[drag.i];
+		if (p.poly && p.poly.length){ const dx = wx - drag.px, dy = wy - drag.py; p.poly.forEach(v => { v.x = Math.round(v.x + dx); v.y = Math.round(v.y + dy); }); drag.px = wx; drag.py = wy; }
+		else { p.x = Math.round(wx); p.y = Math.round(wy); }
+		syncForm(); draw();
+	}
+	else if (drag.mode === 'waypoint'){
+		const p = pops[drag.pi];
+		const pts = (p.routeName && loadedRoutes[p.routeName]) ? loadedRoutes[p.routeName] : (p.route || []);
+		const w = pts[drag.wi];
+		if (w){ w.x = Math.round(wx); w.y = Math.round(wy); }
+		draw();
+	}
+	else if (drag.mode === 'image-move'){ const layer = mapImages[drag.i]; const dx = wx - drag.px, dy = wy - drag.py; layer.x1 = Math.round(layer.x1 + dx); layer.y1 = Math.round(layer.y1 + dy); layer.x2 = Math.round(layer.x2 + dx); layer.y2 = Math.round(layer.y2 + dy); drag.px = wx; drag.py = wy; draw(); }
+	else if (drag.mode === 'image-resize'){ resizeImageLayer(mapImages[drag.i], drag.corner, wx, wy); updateImageStatus(); draw(); }
+});
+window.addEventListener('mouseup', () => {
+	if (drag && drag.mode === 'waypoint'){
+		const p = pops[drag.pi];
+		renderWaypointList(p);
+		if (p.routeName && loadedRoutes[p.routeName]) saveRouteFile(p.routeName);
+	}
+	drag = null;
+});
+window.addEventListener('keydown', e => {
+	if (e.key === 'Escape'){
+		if (waypointMode){ setWaypointMode(false); return; }
+		if (drawMode){ setDrawMode(false); }
+	}
+});
+cv.addEventListener('wheel', e => { e.preventDefault(); const f = e.deltaY < 0 ? 1.15 : 1 / 1.15; const [wx, wy] = s2w(e.offsetX, e.offsetY); cam.scale *= f; cam.x = wx - e.offsetX / cam.scale; cam.y = wy - e.offsetY / cam.scale; draw(); }, { passive: false });
+cv.addEventListener('dblclick', e => { if (drawMode){ setDrawMode(false); return; } if (waypointMode) return; const [wx, wy] = s2w(e.offsetX, e.offsetY); addPop(Math.round(wx), Math.round(wy)); });
+
+// ---- pick helpers ----
+function pickPop(mx, my){
+	for (let i = pops.length - 1; i >= 0; i--){ const p = pops[i];
+		if (p.poly && p.poly.length){ const c = polyCentroid(p.poly); const [cx, cy] = w2s(c.x, c.y); if (Math.hypot(mx - cx, my - cy) < 9) return i; const [wx, wy] = s2w(mx, my); if (p.poly.length > 2 && pointInPoly(wx, wy, p.poly)) return i; }
+		else { const [cx, cy] = w2s(p.x, p.y); if (Math.hypot(mx - cx, my - cy) < 9) return i; }
+	}
+	return -1;
+}
+function pickVertex(mx, my){
+	if (selected < 0) return -1; const p = pops[selected]; if (!p.poly) return -1;
+	for (let k = 0; k < p.poly.length; k++){ const [sx, sy] = w2s(p.poly[k].x, p.poly[k].y); if (Math.hypot(mx - sx, my - sy) < 7) return k; }
+	return -1;
+}
+function pickWaypoint(mx, my){
+	if (mode !== 'npc') return null;
+	for (let pi = 0; pi < pops.length; pi++){
+		const p = pops[pi];
+		if (p.visible === false || !isRouteBehavior(p.behavior)) continue;
+		const pts = (p.routeName && loadedRoutes[p.routeName]) ? loadedRoutes[p.routeName] : (p.route || []);
+		for (let wi = 0; wi < pts.length; wi++){
+			const [sx, sy] = w2s(pts[wi].x, pts[wi].y);
+			if (Math.hypot(mx - sx, my - sy) < 8) return { pi, wi, named: !!(p.routeName && loadedRoutes[p.routeName]) };
+		}
+	}
+	return null;
+}
+function setDrawMode(on){ drawMode = on; cv.style.cursor = on ? 'copy' : 'crosshair'; document.getElementById('zoneBtn').textContent = on ? 'Finish zone (Esc)' : 'Draw zone'; document.getElementById('zoneBtn').classList.toggle('sec', !on); }
+function setWaypointMode(on){
+	waypointMode = on;
+	document.getElementById('waypointBanner').classList.toggle('on', on);
+	const btn = document.getElementById('routeBtn');
+	if (btn){ btn.textContent = on ? 'Finish route (Esc)' : '✦ Draw route'; btn.classList.toggle('sec', !on); }
+	cv.style.cursor = on ? 'copy' : 'crosshair';
+}
+
+// ---- population model ops ----
+function defaultPop(x, y){
+	if (mode === 'phantom') return { name: 'new_phantoms', x, y, z: -3000, radius: 800, count: 10, minLevel: 1, maxLevel: 20, respawn: true, role: '', poly: [] };
+	const d = BEHAVIOR_DEFAULTS.IDLE;
+	return { name: 'new_population', x, y, z: -3000, radius: 600, count: 10, minLevel: 1, maxLevel: 40,
+		behavior: 'IDLE', run: d.run, pauseMin: d.pauseMin, pauseMax: d.pauseMax, route: [], routeName: null, race: '', store: '', respawn: false, poly: [], waypointDelays: {}, routeReversed: false, fullStock: false };
+}
+function addPop(x, y){
+	pops.push(defaultPop(x, y));
+	select(pops.length - 1); renderList(); draw(); updateStatus();
+}
+function select(i){ if (waypointMode) setWaypointMode(false); selected = i; selectedImage = -1; updateImageStatus(); syncForm(); renderList(); }
+function syncForm(){
+	const p = pops[selected];
+	document.getElementById('form').classList.toggle('empty', !p);
+	document.getElementById('formHint').textContent = p ? 'Editing: ' + (p.name || '(unnamed)') : 'Select a population from the list below, or double-click the map to add one.';
+	if (!p) return;
+	for (const k of ['name','x','y','z','radius','count','minLevel','maxLevel']) document.getElementById('f_' + k).value = p[k] ?? '';
+	document.getElementById('f_respawn').checked = !!p.respawn;
+	if (mode === 'phantom') { document.getElementById('f_role').value = p.role || ''; return; }
+	document.getElementById('f_behavior').value = p.behavior || 'IDLE';
+	document.getElementById('f_race').value = p.race || '';
+	rebuildRouteDropdown();
+	document.getElementById('f_routeName').value = p.routeName || '';
+	document.getElementById('f_store').value = p.store || 'SELL';
+	document.getElementById('f_fullStock').checked = !!p.fullStock;
+	document.getElementById('f_run').value = p.run ? 'true' : 'false';
+	document.getElementById('f_pauseMin').value = p.pauseMin ?? 25;
+	document.getElementById('f_pauseMax').value = p.pauseMax ?? 80;
+	applyBehaviorUi(p);
+}
+// Show only the controls relevant to the chosen behavior.
+function applyBehaviorUi(p){
+	const route = isRouteBehavior(p.behavior);
+	document.getElementById('routeRow').style.display = route ? '' : 'none';
+	document.getElementById('storeRow').style.display = (p.behavior === 'SHOP') ? '' : 'none';
+	document.getElementById('behaviorHelp').textContent = BEHAVIOR_HELP[p.behavior] || '';
+	renderWaypointList(p);
+}
+let selectedWaypoint = -1; // index of waypoint with open delay editor
+
+async function saveRouteFile(name){
+	const pts = loadedRoutes[name];
+	if (!pts) return;
+	let xml = '<?xml version="1.0" encoding="UTF-8"?>\n<route name="' + name + '">\n';
+	pts.forEach(w => { xml += '\t<point x="' + w.x + '" y="' + w.y + '" z="' + (w.z || 0) + '"/>\n'; });
+	xml += '</route>\n';
+	if (rememberedHandle){
+		try {
+			const routesDir = await rememberedHandle.getDirectoryHandle('routes', { create: true });
+			const fh = await routesDir.getFileHandle(name + '.xml', { create: true });
+			const wr = await fh.createWritable(); await wr.write(xml); await wr.close();
+		} catch(e){ console.warn('saveRouteFile failed:', e); }
+	}
+}
+
+function renderWaypointList(p){
+	const wrap = document.getElementById('routeWaypointList');
+	wrap.innerHTML = '';
+	if (!p || !isRouteBehavior(p.behavior)){ document.getElementById('routeCount').textContent = ''; return; }
+	const isNamed = !!(p.routeName && loadedRoutes[p.routeName]);
+	const route = effectiveWaypoints(p);
+	const n = route.length;
+	if (isNamed){
+		document.getElementById('routeCount').textContent = 'Route "' + p.routeName + '": ' + n + ' waypoints. Click row for delay, drag on map to move.';
+	} else {
+		document.getElementById('routeCount').textContent = n + ' waypoint' + (n === 1 ? '' : 's') + ' placed. Click a row to set a delay.';
+	}
+	route.forEach((w, wi) => {
+		const isOpen = wi === selectedWaypoint;
+		const delay = p.waypointDelays && p.waypointDelays[wi];
+		const row = document.createElement('div');
+		row.style.cssText = 'display:flex;flex-direction:column;padding:2px 12px 2px 8px;font-size:11px;border-left:2px solid ' + (isOpen ? '#4ea8c2' : 'transparent') + ';margin-bottom:1px;';
+
+		// Main row: number + coords + delay badge + delete
+		const main = document.createElement('div');
+		main.style.cssText = 'display:flex;align-items:center;gap:5px;cursor:pointer;';
+
+		const num = document.createElement('span');
+		num.style.cssText = 'color:#5a7a8a;min-width:16px;text-align:right;font-size:10px;';
+		num.textContent = (wi + 1) + '.';
+
+		const coords = document.createElement('span');
+		coords.style.cssText = 'flex:1;color:#cfd2da;';
+		coords.textContent = w.x + ', ' + w.y;
+
+		// Delay badge (shown if delay is set)
+		const badge = document.createElement('span');
+		if (delay){ badge.style.cssText = 'color:#f0c060;font-size:10px;'; badge.textContent = delay + 's'; }
+
+		const panBtn = document.createElement('button');
+		panBtn.textContent = '⊙'; panBtn.title = 'Pan map to this waypoint';
+		panBtn.style.cssText = 'padding:1px 5px;font-size:10px;background:#2a3040;border:1px solid #444;border-radius:3px;color:#aaa;cursor:pointer;';
+		panBtn.onclick = e => { e.stopPropagation(); cam.x = w.x - (cv.width / 2) / cam.scale; cam.y = w.y - (cv.height / 2) / cam.scale; draw(); };
+
+		const del = document.createElement('button');
+		del.textContent = '✕'; del.title = 'Delete this waypoint';
+		del.style.cssText = 'padding:1px 5px;font-size:10px;background:#b5432f;border:0;border-radius:3px;color:#fff;cursor:pointer;';
+		del.onclick = e => {
+			e.stopPropagation();
+			if (selectedWaypoint === wi) selectedWaypoint = -1; else if (selectedWaypoint > wi) selectedWaypoint--;
+			const base = (p.routeName && loadedRoutes[p.routeName]) ? loadedRoutes[p.routeName] : p.route;
+			const origIdx = p.routeReversed ? base.length - 1 - wi : wi;
+			base.splice(origIdx, 1);
+			if (p.routeName && loadedRoutes[p.routeName]) saveRouteFile(p.routeName);
+			delete p.waypointDelays[wi];
+			const nd = {};
+			Object.entries(p.waypointDelays).forEach(([k,v]) => { const ki = +k; if (ki > wi) nd[ki-1] = v; else nd[ki] = v; });
+			p.waypointDelays = nd;
+			renderWaypointList(p); draw();
+		};
+
+		main.onclick = () => { selectedWaypoint = isOpen ? -1 : wi; renderWaypointList(p); };
+		main.appendChild(num); main.appendChild(coords); main.appendChild(badge); main.appendChild(panBtn); main.appendChild(del);
+		row.appendChild(main);
+
+		// Inline delay editor (expanded when this waypoint is selected)
+		if (isOpen){
+			const editor = document.createElement('div');
+			editor.style.cssText = 'display:flex;align-items:center;gap:6px;padding:4px 0 2px 18px;';
+			const lbl = document.createElement('label');
+			lbl.style.cssText = 'color:#8ab4c2;font-size:10px;white-space:nowrap;';
+			lbl.textContent = 'Pause here (s):';
+			const inp = document.createElement('input');
+			inp.type = 'number'; inp.min = '0'; inp.step = '1';
+			inp.value = delay != null ? delay : '';
+			inp.placeholder = 'none';
+			inp.style.cssText = 'width:60px;font-size:11px;padding:2px 4px;background:#1a1c22;border:1px solid #444;border-radius:3px;color:#eee;';
+			inp.oninput = () => { const v = parseInt(inp.value); if (isNaN(v) || v <= 0) delete p.waypointDelays[wi]; else p.waypointDelays[wi] = v; renderWaypointList(p); };
+			const clr = document.createElement('button');
+			clr.textContent = 'clear'; clr.style.cssText = 'font-size:10px;padding:1px 6px;background:#2a3040;border:1px solid #555;border-radius:3px;color:#aaa;cursor:pointer;';
+			clr.onclick = () => { delete p.waypointDelays[wi]; inp.value = ''; renderWaypointList(p); };
+			editor.appendChild(lbl); editor.appendChild(inp); editor.appendChild(clr);
+			row.appendChild(editor);
+			setTimeout(() => inp.focus(), 0);
+		}
+
+		wrap.appendChild(row);
+	});
+}
+function syncFormClear(){ document.getElementById('form').classList.add('empty'); }
+document.querySelectorAll('#form input, #form select').forEach(el => el.addEventListener('input', () => {
+	const p = pops[selected]; if (!p) return;
+	const id = el.id.slice(2);
+	if (id === 'respawn') p.respawn = el.checked;
+	else if (id === 'fullStock') p.fullStock = el.checked;
+	else if (id === 'behavior'){
+		p.behavior = el.value;
+		if (p.behavior === 'SHOP' && !p.store) p.store = 'SELL';
+		if (p.behavior !== 'SHOP') p.store = '';
+		// adopt this behavior's movement defaults so it "has its own rules"
+		const d = BEHAVIOR_DEFAULTS[p.behavior] || BEHAVIOR_DEFAULTS.IDLE;
+		p.run = d.run; p.pauseMin = d.pauseMin; p.pauseMax = d.pauseMax;
+		if (waypointMode && !isRouteBehavior(p.behavior)) setWaypointMode(false);
+		syncForm();
+	}
+	else if (id === 'routeName'){
+		p.routeName = el.value || null;
+		// When a named route is selected, preview its waypoints in the list (read-only).
+		renderWaypointList(p);
+		draw();
+		return;
+	}
+	else if (id === 'run') p.run = el.value === 'true';
+	else if (['x','y','z','radius','count','minLevel','maxLevel','pauseMin','pauseMax'].includes(id)) p[id] = +el.value;
+	else p[id] = el.value;
+	renderList(); draw();
+}));
+document.getElementById('del').onclick = () => { if (selected < 0) return; if (waypointMode) setWaypointMode(false); pops.splice(selected, 1); selected = -1; renderList(); draw(); syncForm(); updateStatus(); };
+document.getElementById('zoneBtn').onclick = () => { if (selected < 0){ alert('Select or add a population first, then draw its zone.'); return; } pops[selected].poly = pops[selected].poly || []; setDrawMode(!drawMode); };
+document.getElementById('clearZone').onclick = () => { if (selected < 0) return; pops[selected].poly = []; setDrawMode(false); draw(); };
+document.getElementById('addBtn').onclick = () => { const [wx, wy] = s2w(cv.width / 2, cv.height / 2); addPop(Math.round(wx), Math.round(wy)); };
+
+// "Draw route" — place this population's waypoints directly on the map (RUNNER / PATROL only).
+document.getElementById('routeBtn').onclick = () => {
+	if (selected < 0) return;
+	const p = pops[selected];
+	if (!isRouteBehavior(p.behavior)){ alert('Set this population\'s behavior to Runner or Patrol first, then draw its route.'); return; }
+	p.route = p.route || [];
+	setWaypointMode(!waypointMode);
+};
+document.getElementById('clearRouteBtn').onclick = () => { if (selected < 0) return; if (waypointMode) setWaypointMode(false); pops[selected].route = []; pops[selected].routeName = null; selectedWaypoint = -1; syncForm(); draw(); };
+document.getElementById('reverseRouteBtn').onclick = () => {
+	if (selected < 0) return;
+	const p = pops[selected];
+	const len = effectiveWaypoints(p).length;
+	if (len < 2) return;
+	// remap delays to new display positions
+	const nd = {};
+	Object.entries(p.waypointDelays || {}).forEach(([k,v]) => { nd[len - 1 - +k] = v; });
+	p.waypointDelays = nd;
+	p.routeReversed = !p.routeReversed;
+	selectedWaypoint = -1;
+	renderWaypointList(p);
+	draw();
+};
+document.getElementById('reloadRoutesBtn').onclick = async () => {
+	if (!rememberedHandle){ alert('Open a data folder first.'); return; }
+	await loadRoutes(await collectHandles(rememberedHandle));
+	const p = pops[selected]; if (p) syncForm();
+	alert('Routes reloaded: ' + Object.keys(loadedRoutes).length + ' found.');
+};
+
+
+function renderList(){
+	const el = document.getElementById('list'); el.innerHTML = '';
+	pops.forEach((p, i) => {
+		const d = document.createElement('div'); d.className = 'item' + (i === selected ? ' sel' : '');
+		const eye = document.createElement('span'); eye.textContent = p.visible === false ? '🚫' : '👁'; eye.title = 'show/hide'; eye.style.cssText = 'cursor:pointer;margin-right:6px;opacity:' + (p.visible === false ? '.4' : '1');
+		eye.onclick = ev => { ev.stopPropagation(); p.visible = p.visible === false; renderList(); draw(); };
+		const tag = (mode === 'phantom') ? '' : (p.store ? p.store : (p.behavior || 'IDLE'));
+		const txt = document.createElement('span'); txt.innerHTML = '<span class="dot" style="background:' + popColor(p) + '"></span>' + (p.name || '?') + ' <small>×' + (p.count || 0) + (tag ? ' · ' + tag : '') + ' · L' + p.minLevel + '-' + p.maxLevel + '</small>';
+		txt.onclick = () => { select(i); panToPop(p); };
+		d.appendChild(eye); d.appendChild(txt); el.appendChild(d);
+	});
+}
+function popAnchor(p){ return (p.poly && p.poly.length) ? polyCentroid(p.poly) : { x: p.x, y: p.y }; }
+function panToPop(p){ const a = popAnchor(p); cam.x = a.x - (cv.width / 2) / cam.scale; cam.y = a.y - (cv.height / 2) / cam.scale; draw(); }
+document.getElementById('toggleAll').onclick = () => { const anyVisible = pops.some(p => p.visible !== false); pops.forEach(p => p.visible = !anyVisible); document.getElementById('toggleAll').textContent = anyVisible ? 'Show all' : 'Hide all'; renderList(); draw(); };
+document.getElementById('imgOpacity').addEventListener('input', draw);
+
+// ---- XML load/save ----
+async function loadXmlText(text, name, handle){
+	xmlFileName = name || 'FakePlayerBehavior.xml';
+	xmlFileHandle = handle || null;
+	parseXml(text);
+	xmlLoaded = true;
+	updateStatus();
+}
+
+function parseXml(text){
+	const doc = new DOMParser().parseFromString(text, 'application/xml');
+	const list = doc.querySelector('list'); if (!list){ alert('No <list> root found.'); return; }
+	pops = []; preserved = { assigns: [], def: null };
+	const ser = new XMLSerializer();
+	// First pass: collect movement profiles by name so we can fold each into the population that uses it.
+	const profiles = {};
+	for (const node of list.children){
+		if (node.tagName !== 'profile') continue;
+		const waypoints = [...node.children].filter(n => n.tagName === 'point')
+			.map(n => { const d = n.getAttribute('delay'); return { x: +n.getAttribute('x'), y: +n.getAttribute('y'), z: +(n.getAttribute('z') || 0), ...(d ? { delay: +d } : {}) }; });
+		profiles[node.getAttribute('name') || ''] = {
+			type:     (node.getAttribute('type') || 'WANDER').toUpperCase(),
+			run:      node.getAttribute('run') === 'true',
+			pauseMin: +(node.getAttribute('pauseMin') || 10),
+			pauseMax: +(node.getAttribute('pauseMax') || 30),
+			waypoints
+		};
+	}
+	for (const node of list.children){
+		const tag = node.tagName;
+		if (tag === 'assign'){ preserved.assigns.push(ser.serializeToString(node)); }
+		else if (tag === 'default'){ preserved.def = ser.serializeToString(node); }
+		else if (tag === 'population'){
+			const g = a => node.getAttribute(a);
+			const poly = [...node.children].filter(n => n.tagName === 'point').map(n => ({ x: +n.getAttribute('x'), y: +n.getAttribute('y') }));
+			const store = g('store') || '';
+			const prof = profiles[g('profile') || ''];
+			const behavior = behaviorFromProfile(prof, store);
+			const d = BEHAVIOR_DEFAULTS[behavior];
+			const waypointDelays = {};
+			if (prof && isRouteBehavior(behavior)){
+				prof.waypoints.forEach((w, i) => { if (w.delay != null) waypointDelays[i] = w.delay; });
+			}
+			pops.push({
+				name: g('name') || '', x: +g('x'), y: +g('y'), z: +g('z'),
+				radius: +(g('radius') || 600), count: +(g('count') || 0),
+				minLevel: +(g('minLevel') || 1), maxLevel: +(g('maxLevel') || 40),
+				behavior,
+				run:      prof ? prof.run : d.run,
+				pauseMin: prof ? prof.pauseMin : d.pauseMin,
+				pauseMax: prof ? prof.pauseMax : d.pauseMax,
+				route:    (prof && isRouteBehavior(behavior)) ? prof.waypoints.map(w => ({ x: w.x, y: w.y, z: w.z })) : [],
+				routeName: g('route') || null,
+				race: g('race') || '', store, respawn: g('respawn') === 'true', poly,
+				waypointDelays, routeReversed: g('reversed') === 'true',
+				fullStock: g('fullStock') === 'true'
+			});
+		}
+	}
+	renderList(); selected = -1; syncForm(); draw();
+}
+
+// ---- phantom populations (PhantomPopulations.xml) ----
+function parsePhantomText(text){
+	const doc = new DOMParser().parseFromString(text, 'application/xml');
+	const list = doc.querySelector('list'); if (!list) return [];
+	const arr = [];
+	for (const node of list.children){
+		if (node.tagName !== 'population') continue;
+		const g = a => node.getAttribute(a);
+		const poly = [...node.children].filter(n => n.tagName === 'point').map(n => ({ x: +n.getAttribute('x'), y: +n.getAttribute('y') }));
+		arr.push({ name: g('name') || '', x: +g('x'), y: +g('y'), z: +g('z'), radius: +(g('radius') || 800), count: +(g('count') || 0), minLevel: +(g('minLevel') || 1), maxLevel: +(g('maxLevel') || 1), respawn: g('respawn') !== 'false', role: g('role') || '', poly });
+	}
+	return arr;
+}
+// Crafted-friend orders (<friend> entries): kept alongside the populations and re-emitted on save.
+let phantomFriends = [];
+// Interlude class catalog for the race/class picker (ids match the server's PlayerClass enum). Buddy-role
+// classes (Prophet 17, Elven Elder 30, Warcryer 52) become idle support buddies server-side. Summoners
+// (Warlock 14, Elemental Summoner 28, Phantom Summoner 41) are omitted - phantom AI can't drive pets.
+const FRIEND_CLASSES = [
+	['Human — fighters', [[0,'Human Fighter'],[1,'Warrior'],[2,'Gladiator'],[3,'Warlord'],[4,'Knight'],[5,'Paladin'],[6,'Dark Avenger'],[7,'Rogue'],[8,'Treasure Hunter'],[9,'Hawkeye']]],
+	['Human — mystics', [[10,'Human Mage'],[11,'Wizard'],[12,'Sorcerer'],[13,'Necromancer'],[15,'Cleric'],[16,'Bishop'],[17,'Prophet (buddy)']]],
+	['Elf — fighters', [[18,'Elven Fighter'],[19,'Elven Knight'],[20,'Temple Knight'],[21,'Swordsinger'],[22,'Elven Scout'],[23,'Plains Walker'],[24,'Silver Ranger']]],
+	['Elf — mystics', [[25,'Elven Mage'],[26,'Elven Wizard'],[27,'Spellsinger'],[29,'Elven Oracle'],[30,'Elven Elder (buddy)']]],
+	['Dark Elf — fighters', [[31,'Dark Fighter'],[32,'Palus Knight'],[33,'Shillien Knight'],[34,'Bladedancer'],[35,'Assassin'],[36,'Abyss Walker'],[37,'Phantom Ranger']]],
+	['Dark Elf — mystics', [[38,'Dark Mage'],[39,'Dark Wizard'],[40,'Spellhowler'],[42,'Shillien Oracle'],[43,'Shillien Elder']]],
+	['Orc — fighters', [[44,'Orc Fighter'],[45,'Orc Raider'],[46,'Destroyer'],[47,'Orc Monk'],[48,'Tyrant']]],
+	['Orc — mystics', [[49,'Orc Mage'],[50,'Orc Shaman'],[51,'Overlord'],[52,'Warcryer (buddy)']]],
+	['Dwarf', [[53,'Dwarven Fighter'],[54,'Scavenger'],[55,'Bounty Hunter'],[56,'Artisan'],[57,'Warsmith']]]
+];
+const FRIEND_CLASS_NAMES = {};
+FRIEND_CLASSES.forEach(([, items]) => items.forEach(([id, n]) => { FRIEND_CLASS_NAMES[id] = n; }));
+(function populateFriendClassSelect(){
+	const sel = document.getElementById('fr_class');
+	FRIEND_CLASSES.forEach(([race, items]) => {
+		const og = document.createElement('optgroup'); og.label = race;
+		items.forEach(([id, n]) => { const o = document.createElement('option'); o.value = id; o.textContent = n; og.appendChild(o); });
+		sel.appendChild(og);
+	});
+})();
+// Human-readable label for a stored class value: '' / 'mage', a legacy keyword, or a class id.
+function friendClassLabel(cls){
+	if (!cls) return 'random fighter';
+	const kw = { mage: 'random mage', elder: 'Elven Elder (buddy)', healer: 'Elven Elder (buddy)', prophet: 'Prophet (buddy)', buffer: 'Prophet (buddy)', warcryer: 'Warcryer (buddy)' };
+	return kw[cls] || FRIEND_CLASS_NAMES[cls] || ('class ' + cls);
+}
+function parsePhantomFriends(text){
+	const doc = new DOMParser().parseFromString(text, 'application/xml');
+	const list = doc.querySelector('list'); if (!list) return [];
+	const arr = [];
+	for (const node of list.children){
+		if (node.tagName !== 'friend') continue;
+		const g = a => node.getAttribute(a);
+		arr.push({
+			owner: g('owner') || '', name: g('name') || '', cls: g('class') || '',
+			level: +(g('level') || 0), sex: g('sex') || '',
+			face: (g('face') != null) ? +g('face') : -1,
+			hairStyle: (g('hairStyle') != null) ? +g('hairStyle') : -1,
+			hairColor: (g('hairColor') != null) ? +g('hairColor') : -1
+		});
+	}
+	return arr;
+}
+function renderFriendList(){
+	const el = document.getElementById('friendList');
+	if (!phantomFriends.length){ el.innerHTML = '<div class="muted">No crafted friends yet.</div>'; return; }
+	el.innerHTML = phantomFriends.map((f, i) => {
+		const cls = friendClassLabel(f.cls);
+		const lvl = f.level > 0 ? ('lvl ' + f.level) : 'owner’s lvl';
+		return `<div class="row" style="align-items:center;margin-bottom:4px">
+			<div style="flex:1;font-size:12px"><b>${f.name}</b> → ${f.owner} <span class="muted">(${cls}, ${lvl}${f.sex ? ', ' + f.sex : ''})</span></div>
+			<button class="sec" style="padding:0 8px" onclick="removeFriend(${i})">✕</button>
+		</div>`;
+	}).join('');
+}
+function removeFriend(i){ phantomFriends.splice(i, 1); renderFriendList(); saveXml(); } // persists immediately, like add
+document.getElementById('fr_add').onclick = () => {
+	const owner = document.getElementById('fr_owner').value.trim();
+	const name = document.getElementById('fr_name').value.trim();
+	if (!owner){ alert('Enter the owner: your in-game character name.'); return; }
+	if (!/^[A-Za-z0-9]{1,16}$/.test(name)){ alert('Friend name must be 1-16 letters/digits.'); return; }
+	if (phantomFriends.some(f => f.name.toLowerCase() === name.toLowerCase())){ alert('A friend with that name is already in the list.'); return; }
+	phantomFriends.push({
+		owner, name,
+		cls: document.getElementById('fr_class').value,
+		level: Math.max(0, Math.min(80, +document.getElementById('fr_level').value || 0)),
+		sex: document.getElementById('fr_sex').value,
+		face: +document.getElementById('fr_face').value,
+		hairStyle: +document.getElementById('fr_hairStyle').value,
+		hairColor: +document.getElementById('fr_hairColor').value
+	});
+	document.getElementById('fr_name').value = '';
+	renderFriendList();
+	saveXml(); // write PhantomPopulations.xml right away - no separate Save click needed for friends
+};
+renderFriendList(); // initial empty-state hint
+function buildPhantomXml(){
+	const esc = s => String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+	let out = '<?xml version="1.0" encoding="UTF-8"?>\n<list>\n';
+	pops.forEach(p => {
+		const hasPoly = p.poly && p.poly.length >= 3;
+		let ax = p.x, ay = p.y, ar = p.radius;
+		if (hasPoly){ const c = polyCentroid(p.poly); ax = c.x; ay = c.y; ar = polyRadius(p.poly, c); }
+		let a = `name="${esc(p.name)}" x="${ax}" y="${ay}" z="${p.z}" radius="${ar}" count="${p.count}" minLevel="${p.minLevel}" maxLevel="${p.maxLevel}"`;
+		if (!p.respawn) a += ` respawn="false"`;
+		if (p.role) a += ` role="${esc(p.role)}"`;
+		if (hasPoly){
+			out += `\t<population ${a}>\n`;
+			p.poly.forEach(v => out += `\t\t<point x="${v.x}" y="${v.y}" z="${p.z}" />\n`);
+			out += `\t</population>\n`;
+		} else out += `\t<population ${a} />\n`;
+	});
+	phantomFriends.forEach(f => {
+		let a = `owner="${esc(f.owner)}" name="${esc(f.name)}"`;
+		if (f.cls) a += ` class="${esc(f.cls)}"`;
+		if (f.level > 0) a += ` level="${f.level}"`;
+		if (f.sex) a += ` sex="${esc(f.sex)}"`;
+		if (f.face >= 0) a += ` face="${f.face}"`;
+		if (f.hairStyle >= 0) a += ` hairStyle="${f.hairStyle}"`;
+		if (f.hairColor >= 0) a += ` hairColor="${f.hairColor}"`;
+		out += `\t<friend ${a} />\n`;
+	});
+	out += '</list>\n';
+	return out;
+}
+
+function buildXml(){
+	const esc = s => String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+	let out = '<?xml version="1.0" encoding="UTF-8"?>\n';
+	out += '<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/FakePlayerBehavior.xsd">\n';
+
+	// Each population owns its behavior; generate one matching <profile> per population and
+	// reference it by a unique name. This keeps the file 100% compatible with the server while
+	// the user only ever thinks in terms of populations + behaviors.
+	const usedNames = new Set();
+	const profileFor = p => {
+		let base = 'mv_' + (p.name || 'pop').replace(/[^a-zA-Z0-9_]/g, '_').toLowerCase().replace(/^_+|_+$/g, '');
+		if (!base || base === 'mv_') base = 'mv_pop';
+		let name = base, i = 2;
+		while (usedNames.has(name)) name = base + '_' + (i++);
+		usedNames.add(name);
+		return name;
+	};
+	// Pre-assign each population a profile name + the profile XML so we can emit profiles first.
+	const profileBlocks = [];
+	pops.forEach(p => {
+		const d = BEHAVIOR_DEFAULTS[p.behavior] || BEHAVIOR_DEFAULTS.IDLE;
+		const name = profileFor(p);
+		p._profName = name;
+		const run = (p.run != null) ? p.run : d.run;
+		const pMin = (p.pauseMin != null) ? p.pauseMin : d.pauseMin;
+		const pMax = (p.pauseMax != null) ? p.pauseMax : d.pauseMax;
+		let a = `name="${esc(name)}" type="${d.type}"`;
+		const route = isRouteBehavior(p.behavior);
+		if (!route){
+			// WANDER/FARM roam distance: the population's own radius for IDLE/FARM, a small fixed drift for SHOP.
+			const hasPoly = p.poly && p.poly.length >= 3;
+			const roam = (d.roam === 'pop') ? (hasPoly ? polyRadius(p.poly, polyCentroid(p.poly)) : p.radius) : d.roam;
+			if (roam != null) a += ` radius="${roam}"`;
+		}
+		a += ` run="${run}" pauseMin="${pMin}" pauseMax="${pMax}"`;
+		// Resolve waypoints using effectiveWaypoints (respects routeReversed).
+		const wpts = effectiveWaypoints(p);
+		if (route && wpts.length){
+			let b = `\t<profile ${a}>\n`;
+			wpts.forEach((w, di) => {
+				const wdelay = p.waypointDelays && p.waypointDelays[di];
+				let pt = `\t\t<point x="${w.x}" y="${w.y}" z="${w.z != null ? w.z : (p.z | 0)}"${wdelay ? ` delay="${wdelay}"` : ''}/>\n`;
+				b += pt;
+			});
+			b += `\t</profile>\n`;
+			profileBlocks.push(b);
+		} else {
+			profileBlocks.push(`\t<profile ${a}/>\n`);
+		}
+	});
+	// Keep any profile names still referenced by preserved <assign>/<default> entries resolvable:
+	// emit a minimal WANDER profile for each one we didn't already generate.
+	const referenced = new Set();
+	[...preserved.assigns, preserved.def || ''].forEach(s => { const m = /profile="([^"]+)"/.exec(s); if (m) referenced.add(m[1]); });
+	referenced.forEach(name => { if (!usedNames.has(name)){ usedNames.add(name); profileBlocks.push(`\t<profile name="${esc(name)}" type="WANDER" radius="150" run="false" pauseMin="25" pauseMax="80"/>\n`); } });
+
+	profileBlocks.forEach(b => out += b);
+	if (profileBlocks.length) out += '\n';
+
+	pops.forEach(p => {
+		const hasPoly = p.poly && p.poly.length >= 3;
+		let ax = p.x, ay = p.y, ar = p.radius;
+		if (hasPoly){ const c = polyCentroid(p.poly); ax = c.x; ay = c.y; ar = polyRadius(p.poly, c); }
+		let a = `name="${esc(p.name)}" x="${ax}" y="${ay}" z="${p.z}" radius="${ar}" count="${p.count}" minLevel="${p.minLevel}" maxLevel="${p.maxLevel}"`;
+		a += ` profile="${esc(p._profName)}"`;
+		if (p.routeName) a += ` route="${esc(p.routeName)}"`;
+		if (p.routeReversed) a += ` reversed="true"`;
+		if (p.race) a += ` race="${esc(p.race)}"`;
+		if (p.store) a += ` store="${esc(p.store)}"`;
+		if (p.store && p.fullStock) a += ` fullStock="true"`;
+		if (p.respawn) a += ` respawn="true"`;
+		if (hasPoly){
+			out += `\t<population ${a}>\n`;
+			p.poly.forEach(v => out += `\t\t<point x="${v.x}" y="${v.y}" z="${p.z}" />\n`);
+			out += `\t</population>\n`;
+		} else out += `\t<population ${a} />\n`;
+	});
+
+	if (preserved.assigns.length || preserved.def) out += '\n';
+	preserved.assigns.forEach(s => out += '\t' + s + '\n');
+	if (preserved.def) out += '\t' + preserved.def + '\n';
+	out += '</list>\n';
+	return out;
+}
+
+let toastTimer = null;
+function toast(msg, bad){
+	const el = document.getElementById('toast');
+	el.innerHTML = msg;
+	el.style.background = bad ? '#33201d' : '#1d3326';
+	el.style.borderColor = bad ? '#b5432f' : '#2e9d62';
+	el.style.color = bad ? '#f0cfca' : '#cfeede';
+	el.classList.add('show');
+	clearTimeout(toastTimer);
+	toastTimer = setTimeout(() => el.classList.remove('show'), 4000);
+}
+function downloadBlob(text, name, mime){
+	const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type: mime })); a.download = name; a.click();
+}
+async function writeFileToFolder(name, text){
+	if (!(rememberedHandle && rememberedHandle.getFileHandle)) return false;
+	const fh = await rememberedHandle.getFileHandle(name, { create: true });
+	const w = await fh.createWritable(); await w.write(text); await w.close();
+	return true;
+}
+// ---- Raid boss strength tab (global NPC.ini multipliers) ----
+function parseNpcIni(text){
+	const out = {};
+	for (const k of RAID_KEYS){
+		const m = text.match(new RegExp('^[ \\t]*' + k.key + '[ \\t]*=[ \\t]*([0-9]+(?:\\.[0-9]+)?)', 'm'));
+		out[k.key] = m ? m[1] : null;
+	}
+	return out;
+}
+function raidEffect(kind, vStr){
+	if (vStr === '' || vStr == null) return '';
+	const v = parseFloat(vStr);
+	if (isNaN(v)) return '';
+	if (v === 100) return 'default (unchanged)';
+	const d = Math.abs(Math.round(v - 100));
+	if (kind === 'atk') return v < 100 ? 'hits ' + d + '% softer' : 'hits ' + d + '% harder';
+	if (kind === 'def') return v < 100 ? 'dies ' + d + '% faster' : d + '% tankier';
+	return v < 100 ? d + '% slower' : d + '% faster'; // regen
+}
+function updateRaidEffects(){
+	for (const k of RAID_KEYS){
+		document.getElementById(k.id + '_fx').textContent = raidEffect(k.kind, document.getElementById(k.id).value.trim());
+	}
+}
+function fillRaidInputs(parsed){
+	for (const k of RAID_KEYS) document.getElementById(k.id).value = (parsed[k.key] != null) ? parsed[k.key] : '';
+	updateRaidEffects();
+}
+async function loadNpcIniHandle(handle, silent){
+	const text = await (await handle.getFile()).text();
+	if (!/Raid[PM](Attack|Defence)Multiplier/.test(text)){
+		if (silent) return false;
+		if (!confirm('That file has no Raid*Multiplier keys — is it really NPC.ini? Load it anyway?')) return false;
+	}
+	npcIniHandle = handle; npcIniText = text; npcIniName = handle.name;
+	await idbSet('npcIni', handle);
+	fillRaidInputs(parseNpcIni(text));
+	document.getElementById('ri_fileLine').hidden = false;
+	document.getElementById('ri_fileName').textContent = handle.name;
+	document.getElementById('ri_save').disabled = false;
+	if (!silent) toast('✓ Loaded ' + handle.name);
+	return true;
+}
+async function pickNpcIni(){
+	if (!window.showOpenFilePicker){ alert('This needs the File System Access API — open the editor in Chrome or Edge.'); return; }
+	let handle;
+	try { [handle] = await window.showOpenFilePicker({ id: 'fpc-npc-ini', types: [{ description: 'NPC config (.ini)', accept: { 'text/plain': ['.ini'] } }] }); }
+	catch (err){ if (err.name === 'AbortError') return; throw err; }
+	if (!(await ensurePerm(handle))){ alert('Permission to that file was denied.'); return; }
+	await loadNpcIniHandle(handle, false);
+}
+async function saveNpcIni(){
+	if (!npcIniHandle){ alert('Pick your NPC.ini first (the button in the Raid bosses tab).'); return; }
+	if (!(await ensurePerm(npcIniHandle))){ alert('Permission to write that file was denied.'); return; }
+	let out = npcIniText;
+	const missing = [];
+	for (const k of RAID_KEYS){
+		let v = document.getElementById(k.id).value.trim();
+		if (v === '') v = '100';
+		if (!/^[0-9]+(\.[0-9]+)?$/.test(v)){ alert(k.key + ': enter a number (percent, 100 = default).'); return; }
+		const re = new RegExp('^([ \\t]*' + k.key + '[ \\t]*=[ \\t]*).*$', 'm');
+		if (re.test(out)) out = out.replace(re, '$1' + v); else missing.push(k);
+	}
+	if (missing.length){
+		if (!confirm('These keys were not in the file and will be appended:\n' + missing.map(k => k.key).join(', ') + '\n\nContinue?')) return;
+		out = out.replace(/\s*$/, '\n') + '\n# Raid boss multipliers added by fpc-editor\n'
+			+ missing.map(k => k.key + ' = ' + (document.getElementById(k.id).value.trim() || '100')).join('\n') + '\n';
+	}
+	const w = await npcIniHandle.createWritable(); await w.write(out); await w.close();
+	npcIniText = out;
+	document.getElementById('coord').textContent = 'saved ' + new Date().toLocaleTimeString();
+	toast('✓ Saved ' + npcIniName + ' &nbsp;·&nbsp; restart the server to apply');
+}
+document.getElementById('ri_pick').onclick = pickNpcIni;
+document.getElementById('ri_save').onclick = saveNpcIni;
+document.getElementById('ri_reset').onclick = () => { RAID_KEYS.forEach(k => document.getElementById(k.id).value = '100'); updateRaidEffects(); };
+RAID_KEYS.forEach(k => document.getElementById(k.id).addEventListener('input', updateRaidEffects));
+
+async function saveXml(){
+	if (mode === 'raid'){ await saveNpcIni(); return; }
+	if (!(xmlLoaded || rememberedHandle || xmlFileHandle)){ alert('Open your data folder first.'); return; }
+	const saved = [];
+	let direct = false;
+	const out = (mode === 'phantom') ? buildPhantomXml() : buildXml();
+	const name = (mode === 'phantom') ? 'PhantomPopulations.xml' : (xmlFileName || 'FakePlayerBehavior.xml');
+	if (xmlFileHandle && xmlFileHandle.createWritable){
+		try { const writable = await xmlFileHandle.createWritable(); await writable.write(out); await writable.close(); direct = true; saved.push(name); }
+		catch (err){ /* fall through */ }
+	}
+	if (!direct){
+		try { if (await writeFileToFolder(name, out)){ direct = true; saved.push(name); } } catch (err){ /* ignore */ }
+	}
+	if (!direct){ downloadBlob(out, name, 'application/xml'); saved.push(name + ' (downloaded)'); }
+
+	if (mapImages.length){
+		const layoutText = JSON.stringify(makeImageLayout(), null, 2) + '\n';
+		const count = mapImages.length + ' image' + (mapImages.length === 1 ? '' : 's');
+		let wrote = false;
+		if (direct){ try { wrote = await writeFileToFolder('fpc-map-images.json', layoutText); } catch (err){ wrote = false; } }
+		if (wrote) saved.push('fpc-map-images.json (' + count + ')');
+		else { downloadBlob(layoutText, 'fpc-map-images.json', 'application/json'); saved.push('fpc-map-images.json — ' + count + ' (downloaded)'); }
+	}
+	document.getElementById('coord').textContent = 'saved ' + new Date().toLocaleTimeString();
+	toast('✓ Saved &nbsp;·&nbsp; ' + saved.join(' &nbsp;·&nbsp; '));
+}
+document.getElementById('saveXml').onclick = saveXml;
+document.getElementById('formSaveBtn').onclick = saveXml;
+
+// image layer controls
+document.getElementById('loadWorldMap').onclick = async () => {
+	const existing = worldMapIndex();
+	if (existing >= 0){
+		mapImages[existing].visible = mapImages[existing].visible === false;
+		selectImage(existing);
+		updateWorldMapButton(); updateImageStatus(); updateStatus(); draw();
+		return;
+	}
+	if (!imageCatalog.worldMap){ alert('No world map image found.'); return; }
+	await loadCatalogImage(imageCatalog.worldMap, 'world-map');
+	updateWorldMapButton(); updateImageStatus(); updateStatus(); draw();
+};
+document.getElementById('cityImageSelect').onchange = async e => {
+	const value = e.target.value;
+	if (value === '__all') await loadCatalogImages(imageCatalog.cities, 'city');
+	else if (value !== '') await loadCatalogImage(imageCatalog.cities[+value], 'city');
+	e.target.selectedIndex = -1;
+	updateImageStatus(); updateStatus(); draw();
+};
+document.getElementById('locationImageSelect').onchange = async e => {
+	const value = e.target.value;
+	if (value === '__all') await loadCatalogImages(imageCatalog.locations, 'world-location');
+	else if (value !== '') await loadCatalogImage(imageCatalog.locations[+value], 'world-location');
+	e.target.selectedIndex = -1;
+	updateImageStatus(); updateStatus(); draw();
+};
+document.getElementById('toggleImages').onclick = () => {
+	const indexes = listedImageIndexes();
+	const anyVisible = indexes.some(i => mapImages[i].visible !== false);
+	indexes.forEach(i => mapImages[i].visible = !anyVisible);
+	renderImageLayerList(); updateImageStatus(); updateStatus(); draw();
+};
+document.getElementById('editImages').addEventListener('change', e => { if (e.target.checked && (selectedImage < 0) && mapImages.length) selectImage(mapImages.length - 1); else draw(); });
+document.getElementById('fitImg').onclick = () => { if ((selectedImage < 0) || !mapImages[selectedImage]) return; fitImageToViewport(mapImages[selectedImage]); draw(); };
+document.getElementById('removeImg').onclick = () => {
+	if ((selectedImage < 0) || !mapImages[selectedImage]) return;
+	mapImages.splice(selectedImage, 1);
+	selectedImage = Math.min(selectedImage, mapImages.length - 1);
+	updateWorldMapButton(); renderImageLayerList(); updateImageStatus(); updateStatus(); draw();
+};
+wrap.addEventListener('dragover', e => { e.preventDefault(); wrap.classList.add('dragover'); });
+wrap.addEventListener('dragleave', () => wrap.classList.remove('dragover'));
+wrap.addEventListener('drop', e => { e.preventDefault(); wrap.classList.remove('dragover'); if (e.dataTransfer.files.length) loadMapImageFiles(e.dataTransfer.files); });
+document.getElementById('showMarks').addEventListener('change', draw);
+
+// ---- startup: restore the remembered folder ----
+(async () => {
+	applyModeUi();
+	updateStatus();
+	resize();
+	try {
+		rememberedHandle = await idbGet('workspace');
+		if (rememberedHandle){
+			updateStatus();
+			if ((await rememberedHandle.queryPermission({ mode: 'readwrite' })) === 'granted'){
+				document.getElementById('coord').textContent = 'reloading last folder...';
+				await loadWorkspace(await collectHandles(rememberedHandle), rememberedHandle.name);
+			}
+		}
+	} catch (err){ /* no remembered folder */ }
+	try {
+		const iniHandle = await idbGet('npcIni');
+		if (iniHandle && (await iniHandle.queryPermission({ mode: 'readwrite' })) === 'granted'){
+			await loadNpcIniHandle(iniHandle, true); // silent: fills the Raid bosses tab without stealing focus
+		}
+	} catch (err){ /* no remembered NPC.ini */ }
+})();
+</script>
+</body>
+</html>

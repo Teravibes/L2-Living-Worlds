@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- PVP Zones -->
+	<!-- CTF (Capture The Flag event zone -->
+	<!-- zone 2 (rectangle) team Blue zone -->
+	<zone name="blue_team_spawn" type="ArenaZone" shape="Cuboid" minZ="-3468" maxZ="-3268">
+		<node X="147559" Y="46879" />
+		<node X="147336" Y="46559" />
+	</zone>
+	<!-- zone 1 (rectangle) team Red zone -->
+	<zone name="red_team_spawn" type="ArenaZone" shape="Cuboid" minZ="-3472" maxZ="-3272">
+		<node X="151424" Y="46561" />
+		<node X="151648" Y="46880" />
+	</zone>
+</list>

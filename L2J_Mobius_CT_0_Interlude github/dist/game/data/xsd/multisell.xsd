@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="npcs" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="npc" minOccurs="1" maxOccurs="unbounded">
+								<xs:simpleType>
+									<xs:restriction base="xs:integer" />
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="item" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="ingredient" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="id" type="xs:integer" use="required" />
+									<xs:attribute name="enchantmentLevel" type="xs:integer" />
+									<xs:attribute name="maintainIngredient" type="xs:boolean" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="production" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="id" type="xs:integer" use="required" />
+									<xs:attribute name="enchantmentLevel" type="xs:integer" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="applyTaxes" type="xs:boolean" />
+			<xs:attribute name="maintainEnchantment" type="xs:boolean" />
+			<xs:attribute name="useRate" type="xs:token" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

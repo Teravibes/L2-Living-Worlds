@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn zone="dion15_2022_07">
+		<territory minZ="-3289" maxZ="-2489">
+			<node x="25435" y="135929" />
+			<node x="29046" y="134625" />
+			<node x="30512" y="136326" />
+			<node x="26279" y="136646" />
+		</territory>
+		<npc id="20205" count="4" respawnDelay="24" /> <!-- Dire Wolf -->
+	</spawn>
+	<spawn zone="dion15_2022_08">
+		<territory minZ="-3237" maxZ="-2537">
+			<node x="29087" y="134594" />
+			<node x="31029" y="133256" />
+			<node x="32066" y="133765" />
+			<node x="30590" y="136240" />
+		</territory>
+		<npc id="20205" count="3" respawnDelay="24" /> <!-- Dire Wolf -->
+	</spawn>
+	<spawn zone="dion15_2022_09">
+		<territory minZ="-3280" maxZ="-2680">
+			<node x="30475" y="137105" />
+			<node x="32576" y="134728" />
+			<node x="32484" y="139815" />
+			<node x="31555" y="139893" />
+		</territory>
+		<npc id="20205" count="4" respawnDelay="24" /> <!-- Dire Wolf -->
+	</spawn>
+	<spawn zone="dion15_2022_10">
+		<territory minZ="-3335" maxZ="-2835">
+			<node x="31537" y="139996" />
+			<node x="32502" y="139884" />
+			<node x="32520" y="143531" />
+			<node x="30580" y="143553" />
+		</territory>
+		<npc id="20205" count="2" respawnDelay="24" /> <!-- Dire Wolf -->
+		<npc id="20266" count="5" respawnDelay="24" /> <!-- Monster Eye Gazer -->
+	</spawn>
+	<spawn zone="dion15_2022_11">
+		<territory minZ="-3335" maxZ="-2535">
+			<node x="28269" y="141141" />
+			<node x="31458" y="139969" />
+			<node x="30500" y="143533" />
+			<node x="27985" y="144857" />
+		</territory>
+		<npc id="20205" count="4" respawnDelay="24" /> <!-- Dire Wolf -->
+	</spawn>
+	<spawn zone="dion15_2022_12">
+		<territory minZ="-3335" maxZ="-2635">
+			<node x="27233" y="137465" />
+			<node x="30407" y="137097" />
+			<node x="31479" y="139940" />
+			<node x="28216" y="141043" />
+		</territory>
+		<npc id="20205" count="4" respawnDelay="24" /> <!-- Dire Wolf -->
+	</spawn>
+	<spawn zone="dion15_2022_19">
+		<territory minZ="-3334" maxZ="-2534">
+			<node x="26574" y="155654" />
+			<node x="20812" y="149386" />
+			<node x="26556" y="149717" />
+			<node x="27751" y="151791" />
+		</territory>
+		<npc id="20205" count="7" respawnDelay="24" /> <!-- Dire Wolf -->
+	</spawn>
+	<spawn zone="dion15_2022_20">
+		<territory minZ="-3246" maxZ="-2446">
+			<node x="30750" y="157297" />
+			<node x="27076" y="154608" />
+			<node x="27873" y="151778" />
+			<node x="31918" y="152428" />
+		</territory>
+		<npc id="20205" count="6" respawnDelay="24" /> <!-- Dire Wolf -->
+		<npc id="20266" count="9" respawnDelay="24" /> <!-- Monster Eye Gazer -->
+	</spawn>
+	<spawn zone="dion15_2122_01">
+		<territory minZ="-3401" maxZ="-2401">
+			<node x="32971" y="135013" />
+			<node x="37333" y="134255" />
+			<node x="38373" y="136115" />
+			<node x="33005" y="143452" />
+		</territory>
+		<npc id="20205" count="5" respawnDelay="24" /> <!-- Dire Wolf -->
+		<npc id="20266" count="6" respawnDelay="24" /> <!-- Monster Eye Gazer -->
+	</spawn>
+	<spawn zone="dion15_2122_02">
+		<territory minZ="-3567" maxZ="-2667">
+			<node x="37534" y="134310" />
+			<node x="42190" y="133128" />
+			<node x="44103" y="134234" />
+			<node x="38581" y="136035" />
+		</territory>
+		<npc id="20205" count="2" respawnDelay="24" /> <!-- Dire Wolf -->
+		<npc id="20266" count="4" respawnDelay="24" /> <!-- Monster Eye Gazer -->
+	</spawn>
+	<spawn zone="dion15_2122_03s">
+		<territory minZ="-3341" maxZ="-2741">
+			<node x="33268" y="136204" />
+			<node x="35377" y="135291" />
+			<node x="35754" y="137587" />
+			<node x="33163" y="140018" />
+		</territory>
+		<npc id="20266" count="2" respawnDelay="24" /> <!-- Monster Eye Gazer -->
+	</spawn>
+	<spawn zone="dion17_2023_01">
+		<territory minZ="-3818" maxZ="-3018">
+			<node x="36" y="163888" />
+			<node x="2656" y="163911" />
+			<node x="3457" y="166490" />
+			<node x="2192" y="167759" />
+			<node x="40" y="167682" />
+		</territory>
+		<npc id="20205" count="5" respawnDelay="29" /> <!-- Dire Wolf -->
+		<npc id="20206" count="4" respawnDelay="29" /> <!-- Kadif Werewolf -->
+		<npc id="20068" count="2" respawnDelay="29" /> <!-- Monster Eye Destroyer -->
+	</spawn>
+	<spawn zone="dion17_2023_02">
+		<territory minZ="-3824" maxZ="-3224">
+			<node x="3282" y="164268" />
+			<node x="4442" y="163943" />
+			<node x="6486" y="167119" />
+			<node x="4342" y="166428" />
+		</territory>
+		<npc id="20068" count="3" respawnDelay="29" /> <!-- Monster Eye Destroyer -->
+		<npc id="20251" count="3" respawnDelay="29" /> <!-- Delu Lizardman -->
+	</spawn>
+	<spawn zone="dion17_2023_03">
+		<territory minZ="-3702" maxZ="-2702">
+			<node x="52" y="167760" />
+			<node x="2399" y="167885" />
+			<node x="2638" y="171293" />
+			<node x="103" y="172564" />
+		</territory>
+		<npc id="20205" count="6" respawnDelay="29" /> <!-- Dire Wolf -->
+		<npc id="20206" count="6" respawnDelay="29" /> <!-- Kadif Werewolf -->
+	</spawn>
+	<spawn zone="dion17_2023_04">
+		<territory minZ="-3824" maxZ="-3024">
+			<node x="4317" y="166544" />
+			<node x="7702" y="167699" />
+			<node x="8116" y="169491" />
+			<node x="5803" y="171192" />
+			<node x="4081" y="171111" />
+			<node x="3249" y="167840" />
+		</territory>
+		<npc id="20068" count="6" respawnDelay="29" /> <!-- Monster Eye Destroyer -->
+		<npc id="20251" count="6" respawnDelay="29" /> <!-- Delu Lizardman -->
+		<npc id="20250" count="6" respawnDelay="29" /> <!-- Glass Jaguar -->
+	</spawn>
+	<spawn zone="dion17_2023_05">
+		<territory minZ="-3833" maxZ="-2733">
+			<node x="129" y="173225" />
+			<node x="5864" y="171994" />
+			<node x="9993" y="176834" />
+			<node x="191" y="177689" />
+		</territory>
+		<npc id="20205" count="9" respawnDelay="29" /> <!-- Dire Wolf -->
+		<npc id="20206" count="9" respawnDelay="29" /> <!-- Kadif Werewolf -->
+		<npc id="20068" count="9" respawnDelay="29" /> <!-- Monster Eye Destroyer -->
+	</spawn>
+	<spawn zone="dion17_2023_06">
+		<territory minZ="-3821" maxZ="-2821">
+			<node x="156" y="177874" />
+			<node x="8775" y="177266" />
+			<node x="4840" y="183002" />
+			<node x="164" y="183726" />
+		</territory>
+		<npc id="20205" count="8" respawnDelay="29" /> <!-- Dire Wolf -->
+		<npc id="20206" count="8" respawnDelay="29" /> <!-- Kadif Werewolf -->
+		<npc id="20068" count="8" respawnDelay="29" /> <!-- Monster Eye Destroyer -->
+	</spawn>
+	<spawn zone="dion17_2023_07">
+		<territory minZ="-3821" maxZ="-2821">
+			<node x="253" y="183960" />
+			<node x="4011" y="183353" />
+			<node x="7287" y="189726" />
+			<node x="180" y="193207" />
+		</territory>
+		<npc id="20206" count="8" respawnDelay="29" /> <!-- Kadif Werewolf -->
+		<npc id="20068" count="8" respawnDelay="29" /> <!-- Monster Eye Destroyer -->
+		<npc id="20250" count="9" respawnDelay="29" /> <!-- Glass Jaguar -->
+	</spawn>
+	<spawn zone="dion17_2023_08">
+		<territory minZ="-3701" maxZ="-2701">
+			<node x="8593" y="178056" />
+			<node x="10708" y="177570" />
+			<node x="13101" y="180155" />
+			<node x="11312" y="181322" />
+		</territory>
+		<npc id="20252" count="5" respawnDelay="29" /> <!-- Delu Lizardman Scout -->
+		<npc id="20168" count="6" respawnDelay="29" /> <!-- Silenos -->
+	</spawn>
+	<spawn zone="dion17_2023_09">
+		<territory minZ="-3550" maxZ="-2550">
+			<node x="6668" y="181790" />
+			<node x="9664" y="179975" />
+			<node x="11012" y="181366" />
+			<node x="9969" y="182608" />
+		</territory>
+		<npc id="20254" count="2" respawnDelay="29" /> <!-- Skeleton Axeman -->
+		<npc id="20190" count="1" respawnDelay="29" /> <!-- Skeleton Marauder -->
+		<npc id="20168" count="4" respawnDelay="29" /> <!-- Silenos -->
+	</spawn>
+	<spawn zone="dion17_2023_10">
+		<territory minZ="-2994" maxZ="-1994">
+			<node x="5930" y="184576" />
+			<node x="6674" y="182033" />
+			<node x="9966" y="182723" />
+			<node x="10072" y="184235" />
+			<node x="7875" y="186586" />
+		</territory>
+		<npc id="20254" count="6" respawnDelay="29" /> <!-- Skeleton Axeman -->
+		<npc id="20190" count="3" respawnDelay="29" /> <!-- Skeleton Marauder -->
+		<npc id="20168" count="5" respawnDelay="29" /> <!-- Silenos -->
+	</spawn>
+	<spawn zone="dion17_2023_11">
+		<territory minZ="-3793" maxZ="-2593">
+			<node x="8852" y="186629" />
+			<node x="10288" y="184646" />
+			<node x="13457" y="185224" />
+			<node x="11704" y="187587" />
+		</territory>
+		<npc id="20252" count="4" respawnDelay="29" /> <!-- Delu Lizardman Scout -->
+		<npc id="20253" count="5" respawnDelay="29" /> <!-- Delu Lizardman Warrior -->
+	</spawn>
+	<spawn zone="dion17_2023_12">
+		<territory minZ="-3788" maxZ="-3088">
+			<node x="7397" y="189688" />
+			<node x="6662" y="187882" />
+			<node x="11486" y="187990" />
+			<node x="11997" y="189567" />
+		</territory>
+		<npc id="20190" count="2" respawnDelay="29" /> <!-- Skeleton Marauder -->
+		<npc id="20252" count="4" respawnDelay="29" /> <!-- Delu Lizardman Scout -->
+		<npc id="20253" count="4" respawnDelay="29" /> <!-- Delu Lizardman Warrior -->
+	</spawn>
+	<spawn zone="dion17_2023_13s">
+		<territory minZ="-3596" maxZ="-2896">
+			<node x="4193" y="169825" />
+			<node x="4016" y="167461" />
+			<node x="6003" y="167625" />
+			<node x="6194" y="169655" />
+		</territory>
+		<npc id="20250" count="2" respawnDelay="29" /> <!-- Glass Jaguar -->
+		<npc id="20251" count="2" respawnDelay="29" /> <!-- Delu Lizardman -->
+	</spawn>
+	<spawn zone="dion17_2023_14s">
+		<territory minZ="-3661" maxZ="-2661">
+			<node x="3880" y="174991" />
+			<node x="1859" y="173079" />
+			<node x="4768" y="172506" />
+			<node x="6769" y="173673" />
+		</territory>
+		<npc id="20206" count="2" respawnDelay="29" /> <!-- Kadif Werewolf -->
+		<npc id="20068" count="2" respawnDelay="29" /> <!-- Monster Eye Destroyer -->
+	</spawn>
+	<spawn zone="dion17_2023_15s">
+		<territory minZ="-3749" maxZ="-2749">
+			<node x="6879" y="179306" />
+			<node x="4246" y="176908" />
+			<node x="6561" y="174994" />
+			<node x="8955" y="176806" />
+		</territory>
+		<npc id="20206" count="2" respawnDelay="29" /> <!-- Kadif Werewolf -->
+		<npc id="20068" count="2" respawnDelay="29" /> <!-- Monster Eye Destroyer -->
+	</spawn>
+	<spawn zone="dion17_2023_16s">
+		<territory minZ="-3821" maxZ="-3121">
+			<node x="3591" y="182824" />
+			<node x="1058" y="180151" />
+			<node x="3031" y="178424" />
+			<node x="5139" y="180225" />
+		</territory>
+		<npc id="20068" count="2" respawnDelay="29" /> <!-- Monster Eye Destroyer -->
+		<npc id="20250" count="2" respawnDelay="29" /> <!-- Glass Jaguar -->
+	</spawn>
+	<spawn zone="dion17_2023_17s">
+		<territory minZ="-3821" maxZ="-3121">
+			<node x="578" y="187476" />
+			<node x="545" y="184462" />
+			<node x="3619" y="183704" />
+			<node x="4141" y="185186" />
+		</territory>
+		<npc id="20250" count="2" respawnDelay="29" /> <!-- Glass Jaguar -->
+		<npc id="20251" count="2" respawnDelay="29" /> <!-- Delu Lizardman -->
+	</spawn>
+	<spawn zone="dion17_2023_18s">
+		<territory minZ="-3849" maxZ="-3149">
+			<node x="913" y="190840" />
+			<node x="880" y="188365" />
+			<node x="3689" y="187123" />
+			<node x="4949" y="189200" />
+		</territory>
+		<npc id="20250" count="1" respawnDelay="29" /> <!-- Glass Jaguar -->
+		<npc id="20251" count="3" respawnDelay="29" /> <!-- Delu Lizardman -->
+	</spawn>
+	<spawn zone="dion17_2023_19s">
+		<territory minZ="-2816" maxZ="-2116">
+			<node x="7845" y="185057" />
+			<node x="7113" y="182874" />
+			<node x="8618" y="182744" />
+			<node x="9494" y="184378" />
+		</territory>
+		<npc id="20251" count="3" respawnDelay="29" /> <!-- Delu Lizardman -->
+	</spawn>
+</list>

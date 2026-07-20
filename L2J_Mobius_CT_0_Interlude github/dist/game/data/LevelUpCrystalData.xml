@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/LevelUpCrystalData.xsd">
+	<crystal>
+		<item itemId="4629" level="0" leveledItemId="4630" /> <!-- RED 0 - 1 -->
+		<item itemId="4630" level="1" leveledItemId="4631" /> <!-- RED 1 - 2 -->
+		<item itemId="4631" level="2" leveledItemId="4632" /> <!-- RED 2 - 3 -->
+		<item itemId="4632" level="3" leveledItemId="4633" /> <!-- RED 3 - 4 -->
+		<item itemId="4633" level="4" leveledItemId="4634" /> <!-- RED 4 - 5 -->
+		<item itemId="4634" level="5" leveledItemId="4635" /> <!-- RED 5 - 6 -->
+		<item itemId="4635" level="6" leveledItemId="4636" /> <!-- RED 6 - 7 -->
+		<item itemId="4636" level="7" leveledItemId="4637" /> <!-- RED 7 - 8 -->
+		<item itemId="4637" level="8" leveledItemId="4638" /> <!-- RED 8 - 9 -->
+		<item itemId="4638" level="9" leveledItemId="4639" /> <!-- RED 9 - 10 -->
+		<item itemId="4639" level="10" leveledItemId="5577" /> <!-- RED 10 - 11 -->
+		<item itemId="5577" level="11" leveledItemId="5580" /> <!-- RED 11 - 12 -->
+		<item itemId="5580" level="12" leveledItemId="5908" /> <!-- RED 12 - 13 -->
+
+		<item itemId="4640" level="0" leveledItemId="4641" /> <!-- GREEN 0 - 1 -->
+		<item itemId="4641" level="1" leveledItemId="4642" /> <!-- GREEN 1 - 2 -->
+		<item itemId="4642" level="2" leveledItemId="4643" /> <!-- GREEN 2 - 3 -->
+		<item itemId="4643" level="3" leveledItemId="4644" /> <!-- GREEN 3 - 4 -->
+		<item itemId="4644" level="4" leveledItemId="4645" /> <!-- GREEN 4 - 5 -->
+		<item itemId="4645" level="5" leveledItemId="4646" /> <!-- GREEN 5 - 6 -->
+		<item itemId="4646" level="6" leveledItemId="4647" /> <!-- GREEN 6 - 7 -->
+		<item itemId="4647" level="7" leveledItemId="4648" /> <!-- GREEN 7 - 8 -->
+		<item itemId="4648" level="8" leveledItemId="4649" /> <!-- GREEN 8 - 9 -->
+		<item itemId="4649" level="9" leveledItemId="4650" /> <!-- GREEN 9 - 10 -->
+		<item itemId="4650" level="10" leveledItemId="5578" /> <!-- GREEN 10 - 11 -->
+		<item itemId="5578" level="11" leveledItemId="5581" /> <!-- GREEN 11 - 12 -->
+		<item itemId="5581" level="12" leveledItemId="5911" /> <!-- GREEN 12 - 13 -->
+
+		<item itemId="4651" level="0" leveledItemId="4652" /> <!-- BLUE 0 - 1 -->
+		<item itemId="4652" level="1" leveledItemId="4653" /> <!-- BLUE 1 - 2 -->
+		<item itemId="4653" level="2" leveledItemId="4654" /> <!-- BLUE 2 - 3 -->
+		<item itemId="4654" level="3" leveledItemId="4655" /> <!-- BLUE 3 - 4 -->
+		<item itemId="4655" level="4" leveledItemId="4656" /> <!-- BLUE 4 - 5 -->
+		<item itemId="4656" level="5" leveledItemId="4657" /> <!-- BLUE 5 - 6 -->
+		<item itemId="4657" level="6" leveledItemId="4658" /> <!-- BLUE 6 - 7 -->
+		<item itemId="4658" level="7" leveledItemId="4659" /> <!-- BLUE 7 - 8 -->
+		<item itemId="4659" level="8" leveledItemId="4660" /> <!-- BLUE 8 - 9 -->
+		<item itemId="4660" level="9" leveledItemId="4661" /> <!-- BLUE 9 - 10 -->
+		<item itemId="4661" level="10" leveledItemId="5579" /> <!-- BLUE 10 - 11 -->
+		<item itemId="5579" level="11" leveledItemId="5582" /> <!-- BLUE 11 - 12 -->
+		<item itemId="5582" level="12" leveledItemId="5914" /> <!-- BLUE 12 - 13 -->
+	</crystal>
+	<npc>
+		<!-- Mobs that level up crystal from Level 1 up to 10 -->
+		<item npcId="20583"> <!-- Timak Orc -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20584"> <!-- Timak Orc Archer -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20585"> <!-- Timak Orc Soldier -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20586"> <!-- Timak Orc Warrior -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20587"> <!-- Timak Orc Shaman -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="20588"> <!-- Timak Orc Overlord -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="20625"> <!-- Malruk Knight -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20626"> <!-- Malruk Berserker -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20627"> <!-- Malruk Lord -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20628"> <!-- Limal Karinness -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20629"> <!-- Karik -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20636"> <!-- Forest of Mirrors Ghost -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="20637"> <!-- Forest of Mirrors Ghost -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="20638"> <!-- Forest of Mirrors Ghost -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="20639"> <!-- Mirror -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="20640"> <!-- Harit Lizardman -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="20641"> <!-- Harit Lizardman Grunt -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="20642"> <!-- Harit Lizardman Archer -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="20646"> <!-- Halingka -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="20647"> <!-- Yintzu -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="20648"> <!-- Paliote -->
+			<detail chance="9" skill="true" maxLevel="6" />
+		</item>
+		<item npcId="20649"> <!-- Hamrut -->
+			<detail chance="9" skill="true" maxLevel="6" />
+		</item>
+		<item npcId="20650"> <!-- Kranrot -->
+			<detail chance="9" skill="true" maxLevel="7" />
+		</item>
+		<item npcId="20674"> <!-- Doom Knight -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20761"> <!-- Pytan -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20762"> <!-- Pytan Knight -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20767"> <!-- Timak Orc Troop Leader -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="20768"> <!-- Timak Orc Troop Shaman -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="20769"> <!-- Timak Orc Troop Warrior -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20770"> <!-- Timak Orc Troop Archer -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20793"> <!-- Nos -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20794"> <!-- Blade Stakato -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20795"> <!-- Blade Stakato Worker -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20796"> <!-- Blade Stakato Warrior -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20797"> <!-- Blade Stakato Drone -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="20798"> <!-- Water Giant -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="20799"> <!-- Queen Undine Lad -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="20800"> <!-- Eva's Seeker -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="20801"> <!-- Theeder Piker -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="20802"> <!-- Theeder Mage -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="20803"> <!-- Doll Master -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="20821"> <!-- Erin Ediunce -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20823"> <!-- Platinum Tribe Soldier -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20826"> <!-- Platinum Tribe Archer -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20827"> <!-- Platinum Tribe Warrior -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20828"> <!-- Platinum Tribe Shaman -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20829"> <!-- Platinum Tribe Overlord -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20830"> <!-- Guardian Angel -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20831"> <!-- Seal Angel -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20839"> <!-- Unpleasant Humming -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="20840"> <!-- Death Flyer -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="20841"> <!-- Fiend Archer -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="20842"> <!-- Musveren -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="20843"> <!-- Zaken's Royal Guard -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="20844"> <!-- Kaim Vanul -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="20845"> <!-- Pirate's Zombie Captain -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="20846"> <!-- Doll Blader -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="20847"> <!-- Vale Master -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="20848"> <!-- Light Bringer -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="20849"> <!-- Light Worm -->
+			<detail chance="9" skill="true" maxLevel="1" />
+		</item>
+		<item npcId="20860"> <!-- Seal Angel -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="20986"> <!-- Sairon -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="20987"> <!-- Sairon's Doll -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="20988"> <!-- Sairon's Puppet -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="20994"> <!-- Garden Guard Leader -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="20995"> <!-- Garden Guard -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="21006"> <!-- Doom Servant -->
+			<detail chance="9" skill="true" maxLevel="7" />
+		</item>
+		<item npcId="21007"> <!-- Doom Guard -->
+			<detail chance="9" skill="true" maxLevel="8" />
+		</item>
+		<item npcId="21008"> <!-- Doom Archer -->
+			<detail chance="9" skill="true" maxLevel="8" />
+		</item>
+		<item npcId="21009"> <!-- Doom Trooper -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21010"> <!-- Doom Warrior -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21062"> <!-- Messenger Angel -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21063"> <!-- Messenger Angel -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21064"> <!-- Platinum Guardian Archer -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21065"> <!-- Platinum Guardian Warrior -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21066"> <!-- Platinum Guardian Shaman -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21067"> <!-- Guardian Archangel -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21068"> <!-- Guardian Archangel -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21069"> <!-- Platinum Guardian Prefect -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21070"> <!-- Seal Archangel -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21071"> <!-- Seal Archangel -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21072"> <!-- Platinum Guardian Chief -->
+			<detail chance="9" skill="true" maxLevel="9" />
+		</item>
+		<item npcId="21611"> <!-- Unpleasant Humming -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="21612"> <!-- Unpleasant Humming -->
+			<detail chance="9" skill="true" maxLevel="2" />
+		</item>
+		<item npcId="21614"> <!-- Death Flyer -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="21615"> <!-- Death Flyer -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="21617"> <!-- Fiend Archer -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="21620"> <!-- Musveren -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="21621"> <!-- Musveren -->
+			<detail chance="9" skill="true" maxLevel="3" />
+		</item>
+		<item npcId="21623"> <!-- Zaken's Guard -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="21624"> <!-- Zaken's Guard -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="21626"> <!-- Kaim Vanul -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="21627"> <!-- Kaim Vanul -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="21629"> <!-- Pirate Zombie Captain -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="21630"> <!-- Pirate Zombie Captain -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="21632"> <!-- Doll Blader -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="21633"> <!-- Doll Blader -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="21635"> <!-- Vale Master -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="21636"> <!-- Vale Master -->
+			<detail chance="9" skill="true" maxLevel="5" />
+		</item>
+		<item npcId="29026"> <!-- Pirate Zombie Captain -->
+			<detail chance="9" skill="true" maxLevel="4" />
+		</item>
+		<item npcId="35412"> <!-- Doom Guard -->
+			<detail chance="9" skill="true" maxLevel="8" />
+		</item>
+		<item npcId="35413"> <!-- Doom Archer -->
+			<detail chance="9" skill="true" maxLevel="8" />
+		</item>
+
+		<!-- RaidBosses or GrandBosses that level up crystal from Level 10 up to 13 -->
+		<item npcId="29022"> <!-- Zaken -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="10, 11" />
+		</item>
+		<item npcId="25337"> <!-- Anakazel -->
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="25163"> <!-- Roaring Skylancer -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="25269"> <!-- Beast Lord Behemoth -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="25453"> <!-- Meanas Anor -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="25328"> <!-- Eilhalder von Hellmann -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="25109"> <!-- Antharas Priest Cloe -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="25202"> <!-- Krokian Padisha Sobekk -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="29020"> <!-- Baium -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="10, 11" />
+		</item>
+		<item npcId="25338"> <!-- Anakazel -->
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12" />
+		</item>
+		<item npcId="29065"> <!-- Sailren -->
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="25283"> <!-- Lilith -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="10, 11" />
+		</item>
+		<item npcId="25286"> <!-- Anakim -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="10, 11" />
+		</item>
+		<item npcId="25319"> <!-- Ember -->
+			<detail chance="10" absorbType="FULL_PARTY" levelList="12" />
+		</item>
+		<item npcId="22215"> <!-- Tyrannosaurus -->
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="22216"> <!-- Tyrannosaurus -->
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="22217"> <!-- Tyrannosaurus -->
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		</item>
+		<item npcId="29047"> <!-- Scarlet van Halisha -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="12" />
+		</item>
+		<item npcId="29019"> <!-- Antharas -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="12" />
+		</item>
+		<item npcId="29066"> <!-- Antharas -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="12" />
+		</item>
+		<item npcId="29067"> <!-- Antharas -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="12" />
+		</item>
+		<item npcId="29068"> <!-- Antharas -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="12" />
+		</item>
+		<item npcId="29028"> <!-- Valakas -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="12" />
+		</item>
+	</npc>
+</list>

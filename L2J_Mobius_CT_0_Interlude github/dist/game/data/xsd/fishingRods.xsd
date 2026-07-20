@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence maxOccurs="1" minOccurs="1">
+				<xs:element name="fishingRod" maxOccurs="6" minOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="fishingRodDamage" type="xs:decimal" use="required" />
+						<xs:attribute name="fishingRodLevel" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="fishingRodName" type="xs:normalizedString" use="required" />
+						<xs:attribute name="fishingRodId" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="fishingRodItemId" type="xs:positiveInteger" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,1780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="7700" type="EtcItem" name="Recipe: Daisy Hairpin (100%)">
+		<!-- This technique for creating a Daisy Hairpin can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="100000" />
+		<set name="recipe_id" val="782" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="7701" type="Weapon" name="Stick of Faith - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. -->
+		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1160" />
+		<set name="price" val="2290000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">85</stat>
+			<stat type="mAtk">81</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3014" level="1" /> <!-- Special Ability: Mana Up -->
+		</skills>
+	</item>
+	<item id="7702" type="Weapon" name="Stick of Faith - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Casts Dryad Root magic against the target with a 10% chance of success when using bad magic. Effect 1. -->
+		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1160" />
+		<set name="price" val="2290000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">85</stat>
+			<stat type="mAtk">81</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1201" level="16" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
+		</skills>
+	</item>
+	<item id="7703" type="Weapon" name="Stick of Faith - Magic Shield">
+		<!-- <Soul Crystal Enhancement>. Casts Mental Shield magic upon the target with a 50% chance of success when using good magic. Effect 2. -->
+		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="916" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1160" />
+		<set name="price" val="2290000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">85</stat>
+			<stat type="mAtk">81</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1035" level="2" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
+		</skills>
+	</item>
+	<item id="7704" type="Weapon" name="Stick of Eternity - Empower">
+		<!-- <Soul Crystal Enhancement>. Increases M. Atk. by 24. -->
+		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1130" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3076" level="3" /> <!-- Special Ability: Empower -->
+		</skills>
+	</item>
+	<item id="7705" type="Weapon" name="Stick of Eternity - Rsk. Evasion">
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 7 when HP becomes 60% or lower. -->
+		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1130" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3030" level="3" /> <!-- Special Ability: Rsk. Evasion -->
+		</skills>
+	</item>
+	<item id="7706" type="Weapon" name="Stick of Eternity - Blessed Body">
+		<!-- <Soul Crystal Enhancement>. Casts Blessed Body upon the target with a 20% chance of success when using good magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1130" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1045" level="3" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Blessed Body -->
+		</skills>
+	</item>
+	<item id="7707" type="Weapon" name="Nirvana Axe - M. Atk.">
+		<!-- <Soul Crystal Enhancement>. When using magic, the amount of MP consumption increases by 15% and M. Atk. also increases by 99. -->
+		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1150" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3077" level="3" /> <!-- Special Ability: Magic Power -->
+		</skills>
+	</item>
+	<item id="7708" type="Weapon" name="Nirvana Axe - Magic Poison">
+		<!-- <Soul Crystal Enhancement>. Casts Curse Poison against the target with a 7% chance of success when using bad magic. Effect 7. -->
+		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1150" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1168" level="6" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse: Poison -->
+		</skills>
+	</item>
+	<item id="7709" type="Weapon" name="Nirvana Axe - Magic Weakness">
+		<!-- <Soul Crystal Enhancement>. Casts Curse Weakness against the target with a 7% chance of success when using bad magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1150" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1164" level="9" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse: Weakness -->
+		</skills>
+	</item>
+	<item id="7710" type="Weapon" name="Club of Nature - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
+		<set name="icon" val="icon.weapon_club_of_nature_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1100" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
+		</skills>
+	</item>
+	<item id="7711" type="Weapon" name="Club of Nature - Mental Shield">
+		<!-- <Soul Crystal Enhancement>. Casts Mental Shield magic upon the target with a 50% chance of success when using good magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_club_of_nature_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1100" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1035" level="3" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
+		</skills>
+	</item>
+	<item id="7712" type="Weapon" name="Club of Nature - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Casts Dryad Root magic against the target with a 10% chance of success when using bad magic. Effect 1. -->
+		<set name="icon" val="icon.weapon_club_of_nature_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1100" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1201" level="21" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
+		</skills>
+	</item>
+	<item id="7713" type="Weapon" name="Mace of Underworld - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30% -->
+		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1090" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3014" level="1" /> <!-- Special Ability: Mana Up -->
+		</skills>
+	</item>
+	<item id="7714" type="Weapon" name="Mace of Underworld - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. When using bad magic against a target, casts Silence upon target with a 10% chance of success. Effect 1. -->
+		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1090" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3078" level="3" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
+		</skills>
+	</item>
+	<item id="7715" type="Weapon" name="Mace of Underworld - Conversion">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 60% and decreases maximum HP by 40%. -->
+		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1090" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">111</stat>
+			<stat type="mAtk">101</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3048" level="1" /> <!-- Special Ability: Conversion -->
+		</skills>
+	</item>
+	<item id="7716" type="Weapon" name="Inferno Staff - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1000" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">135</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
+		</skills>
+	</item>
+	<item id="7717" type="Weapon" name="Inferno Staff - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. When using bad magic against a target, casts Silence upon target with a 10% chance of success. Effect 1. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1000" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">135</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3078" level="3" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
+		</skills>
+	</item>
+	<item id="7718" type="Weapon" name="Inferno Staff - Magic Paralyze">
+		<!-- <Soul Crystal Enhancement>. When using bad magic, paralyzes target with a 5% chance of success. Effect 1. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1000" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">135</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3079" level="3" type_chance="5" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Paralyze -->
+		</skills>
+	</item>
+	<item id="7719" type="Weapon" name="Poleaxe - Critical Stun">
+		<!-- <Soul Crystal Enhancement>. During a critical attack, produces a stun effect at the rate of about 25%. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="3016" level="3" type_chance="31" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Stun -->
+		</skills>
+	</item>
+	<item id="7720" type="Weapon" name="Poleaxe - Towering Blow">
+		<!-- <Soul Crystal Enhancement>. Increases attack range. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;80;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+	</item>
+	<item id="7721" type="Weapon" name="Poleaxe - Wide Blow">
+		<!-- <Soul Crystal Enhancement>. Broadens angle of attack. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;180" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1720" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="price" val="4300000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">139</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+	</item>
+	<item id="7722" type="Weapon" name="Sword of Valhalla - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
+		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="900" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">140</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
+		</skills>
+	</item>
+	<item id="7723" type="Weapon" name="Sword of Valhalla - Magic Weakness">
+		<!-- <Soul Crystal Enhancement>. Casts Curse Weakness against the target with a 7% chance of success when using bad magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="900" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">140</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1164" level="11" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse: Weakness -->
+		</skills>
+	</item>
+	<item id="7724" type="Weapon" name="Sword of Valhalla - Magic Regeneration">
+		<!-- <Soul Crystal Enhancement>. Casts Regeneration upon the target with a 30% chance of success when using good magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="900" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">140</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1044" level="3" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Regeneration -->
+		</skills>
+	</item>
+	<item id="7725" type="EtcItem" name="Loot - Gray Pouch">
+		<!-- An item recovered from the swampland. It is a dirty and worn out gray pouch that is ripped here and there. It seems to contain an object that looks like a water bottle. If you double-click it, you can view what it contains. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2218" level="3" /> <!-- Item - Quest Sac -->
+		</skills>
+	</item>
+	<item id="7726" type="EtcItem" name="Small Nimble Green Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="69" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2220" level="1" /> <!-- Item - Easy Green Fish -->
+		</skills>
+	</item>
+	<item id="7727" type="EtcItem" name="Small Ugly Green Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="71" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2220" level="2" /> <!-- Item - Easy Green Fish -->
+		</skills>
+	</item>
+	<item id="7728" type="EtcItem" name="Small Pudgy Green Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="77" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2220" level="3" /> <!-- Item - Easy Green Fish -->
+		</skills>
+	</item>
+	<item id="7729" type="EtcItem" name="Nimble Green Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="84" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2220" level="4" /> <!-- Item - Easy Green Fish -->
+		</skills>
+	</item>
+	<item id="7730" type="EtcItem" name="Ugly Green Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="94" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2220" level="5" /> <!-- Item - Easy Green Fish -->
+		</skills>
+	</item>
+	<item id="7731" type="EtcItem" name="Pudgy Green Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="104" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2220" level="6" /> <!-- Item - Easy Green Fish -->
+		</skills>
+	</item>
+	<item id="7732" type="EtcItem" name="Large Nimble Green Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="113" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2220" level="7" /> <!-- Item - Easy Green Fish -->
+		</skills>
+	</item>
+	<item id="7733" type="EtcItem" name="Large Ugly Green Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="124" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2220" level="8" /> <!-- Item - Easy Green Fish -->
+		</skills>
+	</item>
+	<item id="7734" type="EtcItem" name="Large Pudgy Green Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i06" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="133" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2220" level="9" /> <!-- Item - Easy Green Fish -->
+		</skills>
+	</item>
+	<item id="7735" type="EtcItem" name="Small Jade Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="143" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2221" level="1" /> <!-- Item - Easy Jade Fish -->
+		</skills>
+	</item>
+	<item id="7736" type="EtcItem" name="Small Jade Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="167" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2221" level="2" /> <!-- Item - Easy Jade Fish -->
+		</skills>
+	</item>
+	<item id="7737" type="EtcItem" name="Small Jade Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="167" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2221" level="3" /> <!-- Item - Easy Jade Fish -->
+		</skills>
+	</item>
+	<item id="7738" type="EtcItem" name="Jade Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="166" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2221" level="4" /> <!-- Item - Easy Jade Fish -->
+		</skills>
+	</item>
+	<item id="7739" type="EtcItem" name="Jade Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="165" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2221" level="5" /> <!-- Item - Easy Jade Fish -->
+		</skills>
+	</item>
+	<item id="7740" type="EtcItem" name="Jade Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="165" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2221" level="6" /> <!-- Item - Easy Jade Fish -->
+		</skills>
+	</item>
+	<item id="7741" type="EtcItem" name="Large Jade Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="164" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2221" level="7" /> <!-- Item - Easy Jade Fish -->
+		</skills>
+	</item>
+	<item id="7742" type="EtcItem" name="Large Jade Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="164" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2221" level="8" /> <!-- Item - Easy Jade Fish -->
+		</skills>
+	</item>
+	<item id="7743" type="EtcItem" name="Large Jade Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i07" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="163" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2221" level="9" /> <!-- Item - Easy Jade Fish -->
+		</skills>
+	</item>
+	<item id="7744" type="EtcItem" name="Small Blue Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="163" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2222" level="1" /> <!-- Item - Easy Blue Fish -->
+		</skills>
+	</item>
+	<item id="7745" type="EtcItem" name="Small Blue Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="163" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2222" level="2" /> <!-- Item - Easy Blue Fish -->
+		</skills>
+	</item>
+	<item id="7746" type="EtcItem" name="Small Blue Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="198" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2222" level="3" /> <!-- Item - Easy Blue Fish -->
+		</skills>
+	</item>
+	<item id="7747" type="EtcItem" name="Blue Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="202" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2222" level="4" /> <!-- Item - Easy Blue Fish -->
+		</skills>
+	</item>
+	<item id="7748" type="EtcItem" name="Blue Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="197" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2222" level="5" /> <!-- Item - Easy Blue Fish -->
+		</skills>
+	</item>
+	<item id="7749" type="EtcItem" name="Blue Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="210" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2222" level="6" /> <!-- Item - Easy Blue Fish -->
+		</skills>
+	</item>
+	<item id="7750" type="EtcItem" name="Large Blue Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="213" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2222" level="7" /> <!-- Item - Easy Blue Fish -->
+		</skills>
+	</item>
+	<item id="7751" type="EtcItem" name="Large Blue Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="216" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2222" level="8" /> <!-- Item - Easy Blue Fish -->
+		</skills>
+	</item>
+	<item id="7752" type="EtcItem" name="Large Blue Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="218" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2222" level="9" /> <!-- Item - Easy Blue Fish -->
+		</skills>
+	</item>
+	<item id="7753" type="EtcItem" name="Small Yellow Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="221" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2223" level="1" /> <!-- Item - Easy Yellow Fish -->
+		</skills>
+	</item>
+	<item id="7754" type="EtcItem" name="Small Yellow Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="224" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2223" level="2" /> <!-- Item - Easy Yellow Fish -->
+		</skills>
+	</item>
+	<item id="7755" type="EtcItem" name="Small Yellow Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="226" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2223" level="3" /> <!-- Item - Easy Yellow Fish -->
+		</skills>
+	</item>
+	<item id="7756" type="EtcItem" name="Yellow Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="270" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2223" level="4" /> <!-- Item - Easy Yellow Fish -->
+		</skills>
+	</item>
+	<item id="7757" type="EtcItem" name="Yellow Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="277" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2223" level="5" /> <!-- Item - Easy Yellow Fish -->
+		</skills>
+	</item>
+	<item id="7758" type="EtcItem" name="Yellow Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="284" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2223" level="6" /> <!-- Item - Easy Yellow Fish -->
+		</skills>
+	</item>
+	<item id="7759" type="EtcItem" name="Large Yellow Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="290" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2223" level="7" /> <!-- Item - Easy Yellow Fish -->
+		</skills>
+	</item>
+	<item id="7760" type="EtcItem" name="Large Yellow Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="297" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2223" level="8" /> <!-- Item - Easy Yellow Fish -->
+		</skills>
+	</item>
+	<item id="7761" type="EtcItem" name="Large Yellow Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="304" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2223" level="9" /> <!-- Item - Easy Yellow Fish -->
+		</skills>
+	</item>
+	<item id="7762" type="EtcItem" name="Small Orange Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="311" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2224" level="1" /> <!-- Item - Easy Orange Fish -->
+		</skills>
+	</item>
+	<item id="7763" type="EtcItem" name="Small Orange Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="318" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2224" level="2" /> <!-- Item - Easy Orange Fish -->
+		</skills>
+	</item>
+	<item id="7764" type="EtcItem" name="Small Orange Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="325" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2224" level="3" /> <!-- Item - Easy Orange Fish -->
+		</skills>
+	</item>
+	<item id="7765" type="EtcItem" name="Orange Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="332" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2224" level="4" /> <!-- Item - Easy Orange Fish -->
+		</skills>
+	</item>
+	<item id="7766" type="EtcItem" name="Orange Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="388" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2224" level="5" /> <!-- Item - Easy Orange Fish -->
+		</skills>
+	</item>
+	<item id="7767" type="EtcItem" name="Orange Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="396" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2224" level="6" /> <!-- Item - Easy Orange Fish -->
+		</skills>
+	</item>
+	<item id="7768" type="EtcItem" name="Large Orange Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="408" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2224" level="7" /> <!-- Item - Easy Orange Fish -->
+		</skills>
+	</item>
+	<item id="7769" type="EtcItem" name="Large Orange Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="420" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2224" level="8" /> <!-- Item - Easy Orange Fish -->
+		</skills>
+	</item>
+	<item id="7770" type="EtcItem" name="Large Orange Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="429" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2224" level="9" /> <!-- Item - Easy Orange Fish -->
+		</skills>
+	</item>
+	<item id="7771" type="EtcItem" name="Small Purple Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="438" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2225" level="1" /> <!-- Item - Easy Violet Fish -->
+		</skills>
+	</item>
+	<item id="7772" type="EtcItem" name="Small Purple Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="447" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2225" level="2" /> <!-- Item - Easy Violet Fish -->
+		</skills>
+	</item>
+	<item id="7773" type="EtcItem" name="Small Purple Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="455" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2225" level="3" /> <!-- Item - Easy Violet Fish -->
+		</skills>
+	</item>
+	<item id="7774" type="EtcItem" name="Purple Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="465" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2225" level="4" /> <!-- Item - Easy Violet Fish -->
+		</skills>
+	</item>
+	<item id="7775" type="EtcItem" name="Purple Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="474" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2225" level="5" /> <!-- Item - Easy Violet Fish -->
+		</skills>
+	</item>
+	<item id="7776" type="EtcItem" name="Purple Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="545" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2225" level="6" /> <!-- Item - Easy Violet Fish -->
+		</skills>
+	</item>
+	<item id="7777" type="EtcItem" name="Large Purple Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="556" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2225" level="7" /> <!-- Item - Easy Violet Fish -->
+		</skills>
+	</item>
+	<item id="7778" type="EtcItem" name="Large Purple Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="567" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2225" level="8" /> <!-- Item - Easy Violet Fish -->
+		</skills>
+	</item>
+	<item id="7779" type="EtcItem" name="Large Purple Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="579" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2225" level="9" /> <!-- Item - Easy Violet Fish -->
+		</skills>
+	</item>
+	<item id="7780" type="EtcItem" name="Small Red Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="639" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2226" level="1" /> <!-- Item - Easy Red Fish -->
+		</skills>
+	</item>
+	<item id="7781" type="EtcItem" name="Small Red Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="651" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2226" level="2" /> <!-- Item - Easy Red Fish -->
+		</skills>
+	</item>
+	<item id="7782" type="EtcItem" name="Small Red Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="663" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2226" level="3" /> <!-- Item - Easy Red Fish -->
+		</skills>
+	</item>
+	<item id="7783" type="EtcItem" name="Red Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="676" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2226" level="4" /> <!-- Item - Easy Red Fish -->
+		</skills>
+	</item>
+	<item id="7784" type="EtcItem" name="Red Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="688" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2226" level="5" /> <!-- Item - Easy Red Fish -->
+		</skills>
+	</item>
+	<item id="7785" type="EtcItem" name="Red Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="701" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2226" level="6" /> <!-- Item - Easy Red Fish -->
+		</skills>
+	</item>
+	<item id="7786" type="EtcItem" name="Large Red Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="789" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2226" level="7" /> <!-- Item - Easy Red Fish -->
+		</skills>
+	</item>
+	<item id="7787" type="EtcItem" name="Large Red Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="804" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2226" level="8" /> <!-- Item - Easy Red Fish -->
+		</skills>
+	</item>
+	<item id="7788" type="EtcItem" name="Large Red Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="858" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2226" level="9" /> <!-- Item - Easy Red Fish -->
+		</skills>
+	</item>
+	<item id="7789" type="EtcItem" name="Small White Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="874" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2227" level="1" /> <!-- Item - Easy White Fish -->
+		</skills>
+	</item>
+	<item id="7790" type="EtcItem" name="Small White Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="891" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2227" level="2" /> <!-- Item - Easy White Fish -->
+		</skills>
+	</item>
+	<item id="7791" type="EtcItem" name="Small White Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="907" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2227" level="3" /> <!-- Item - Easy White Fish -->
+		</skills>
+	</item>
+	<item id="7792" type="EtcItem" name="White Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="925" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2227" level="4" /> <!-- Item - Easy White Fish -->
+		</skills>
+	</item>
+	<item id="7793" type="EtcItem" name="White Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="944" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2227" level="5" /> <!-- Item - Easy White Fish -->
+		</skills>
+	</item>
+	<item id="7794" type="EtcItem" name="White Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="962" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2227" level="6" /> <!-- Item - Easy White Fish -->
+		</skills>
+	</item>
+	<item id="7795" type="EtcItem" name="Large White Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="981" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2227" level="7" /> <!-- Item - Easy White Fish -->
+		</skills>
+	</item>
+	<item id="7796" type="EtcItem" name="Large White Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2227" level="8" /> <!-- Item - Easy White Fish -->
+		</skills>
+	</item>
+	<item id="7797" type="EtcItem" name="Large White Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1020" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2227" level="9" /> <!-- Item - Easy White Fish -->
+		</skills>
+	</item>
+	<item id="7798" type="EtcItem" name="Small Black Nimble Fish: For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1041" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2228" level="1" /> <!-- Item - Easy Black Fish -->
+		</skills>
+	</item>
+	<item id="7799" type="EtcItem" name="Small Black Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1062" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2228" level="2" /> <!-- Item - Easy Black Fish -->
+		</skills>
+	</item>
+</list>

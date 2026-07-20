@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+	<npcs>
+		<npc>-1</npc> <!-- CB -->
+	</npcs>
+	<item>
+		<!-- Adena -->
+		<ingredient count="250000" id="57" />
+		<!-- Ring of Seal -->
+		<production count="1" id="886" />
+		<production count="1" id="886" />
+		<!-- Earring of Seal -->
+		<production count="1" id="854" />
+		<production count="1" id="854" />
+		<!-- Necklace of Seal -->
+		<production count="1" id="119" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="500000" id="57" />
+		<!-- Earring of Aid -->
+		<production count="1" id="873" />
+		<production count="1" id="873" />
+		<!-- Ring of Aid -->
+		<production count="1" id="904" />
+		<production count="1" id="904" />
+		<!-- Necklace of Aid -->
+		<production count="1" id="935" />
+	</item>
+</list>

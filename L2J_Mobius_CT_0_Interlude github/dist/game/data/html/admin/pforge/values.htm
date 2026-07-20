@@ -1,0 +1,26 @@
+<html><body>
+<table width=270 cellspacing=0 cellpadding=0>
+	<tr>
+		<td width=45><button value="Main" action="bypass admin_admin" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+		<td width=180><center>Packet Forge Panel</center></td>
+		<td width=45><button value="Back" action="bypass admin_forge" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	</tr>
+</table><br><br>
+
+<center>
+	OP Codes: %opcodes%<br1>
+	Format: %opformat% %format%<br>
+
+	<table width=180 cellspacing=0 cellpadding=0>
+		%editors%
+	</table><br>
+
+	<table width=180 cellspacing=0 cellpadding=0>
+		<tr>
+			<td><button value="To Client" action="bypass -h admin_forge_send sc %send_bypass%" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+			<td><button value="Broadcast" action="bypass -h admin_forge_send sb %send_bypass%" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+			<td><button value="To Server" action="bypass -h admin_forge_send cs %send_bypass%" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		</tr>
+	</table>
+</center>
+</body></html>

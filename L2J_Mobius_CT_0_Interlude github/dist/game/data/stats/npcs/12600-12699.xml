@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="12621" level="70" type="Pet" name="Wyvern">
+		<parameters>
+			<skill name="DDMagic" id="4289" level="1" /> <!-- Wyvern Breath -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4289" level="1" /> <!-- Wyvern Breath -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<corpseTime>86400</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
+		<collision>
+			<radius normal="60" />
+			<height normal="80" />
+		</collision>
+	</npc>
+</list>

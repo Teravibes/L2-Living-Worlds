@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="crystal" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="item" minOccurs="39" maxOccurs="39">
+								<xs:complexType>
+									<xs:attribute name="itemId" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="level" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:integer">
+												<xs:minInclusive value="0" />
+												<xs:maxInclusive value="17" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="leveledItemId" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="npc" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="item" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence minOccurs="1" maxOccurs="1">
+										<xs:element name="detail" minOccurs="1" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="absorbType">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="FULL_PARTY" />
+															<xs:enumeration value="PARTY_ONE_RANDOM" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="chance" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:integer">
+															<xs:minInclusive value="1" />
+															<xs:maxInclusive value="100" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="levelList" type="xs:normalizedString" />
+												<xs:attribute name="maxLevel">
+													<xs:simpleType>
+														<xs:restriction base="xs:integer">
+															<xs:minInclusive value="1" />
+															<xs:maxInclusive value="9" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="skill" type="xs:boolean" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="npcId" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

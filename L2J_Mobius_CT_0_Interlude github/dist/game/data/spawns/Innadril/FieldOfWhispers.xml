@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn zone="innadril04_2224_01">
+		<territory minZ="-3871" maxZ="-2971">
+			<node x="85910" y="197679" />
+			<node x="88096" y="201882" />
+			<node x="83248" y="205126" />
+			<node x="77709" y="202082" />
+		</territory>
+		<npc id="20788" count="10" respawnDelay="30" /> <!-- Rakul -->
+		<npc id="20789" count="10" respawnDelay="30" /> <!-- Crokian -->
+	</spawn>
+	<spawn zone="innadril04_2224_02">
+		<territory minZ="-3871" maxZ="-2871">
+			<node x="77718" y="202262" />
+			<node x="83119" y="205189" />
+			<node x="77833" y="208302" />
+			<node x="75144" y="204526" />
+		</territory>
+		<npc id="20788" count="7" respawnDelay="30" /> <!-- Rakul -->
+		<npc id="20789" count="7" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="4" respawnDelay="30" /> <!-- Dailaon -->
+	</spawn>
+	<spawn zone="innadril04_2224_03">
+		<territory minZ="-3871" maxZ="-2971">
+			<node x="77195" y="210468" />
+			<node x="79246" y="211114" />
+			<node x="78503" y="214105" />
+			<node x="73622" y="214673" />
+		</territory>
+		<npc id="20789" count="2" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="4" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="3" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="1" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril04_2224_04">
+		<territory minZ="-3871" maxZ="-2971">
+			<node x="73718" y="214780" />
+			<node x="78504" y="214277" />
+			<node x="77180" y="220090" />
+			<node x="71282" y="219802" />
+		</territory>
+		<npc id="20789" count="4" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="8" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="3" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20793" count="1" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20793" count="1" respawnDelay="30" /> <!-- Nos -->
+	</spawn>
+	<spawn zone="innadril04_2224_05">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="78658" y="214339" />
+			<node x="81581" y="219068" />
+			<node x="78414" y="220778" />
+			<node x="77401" y="220133" />
+		</territory>
+		<npc id="20790" count="5" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20793" count="2" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20793" count="2" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20989" count="5" respawnDelay="45" /> <!-- Lageos -->
+	</spawn>
+	<spawn zone="innadril04_2224_06">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="79477" y="223645" />
+			<node x="83308" y="227867" />
+			<node x="79579" y="228027" />
+			<node x="77606" y="225613" />
+		</territory>
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20793" count="4" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20793" count="4" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20989" count="5" respawnDelay="45" /> <!-- Lageos -->
+	</spawn>
+	<spawn zone="innadril04_2224_07">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="83895" y="222043" />
+			<node x="86245" y="227883" />
+			<node x="83558" y="227947" />
+			<node x="79734" y="223654" />
+		</territory>
+		<npc id="20790" count="3" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20792" count="3" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20793" count="3" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20793" count="3" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20989" count="5" respawnDelay="45" /> <!-- Lageos -->
+	</spawn>
+	<spawn zone="innadril04_2224_08">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="81664" y="219168" />
+			<node x="83874" y="221923" />
+			<node x="79541" y="223537" />
+			<node x="78720" y="220808" />
+		</territory>
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20793" count="1" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20793" count="1" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20989" count="4" respawnDelay="45" /> <!-- Lageos -->
+	</spawn>
+	<spawn zone="innadril04_2224_09">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="87203" y="218754" />
+			<node x="89429" y="222235" />
+			<node x="84973" y="223986" />
+			<node x="83219" y="220845" />
+		</territory>
+		<npc id="20790" count="4" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20989" count="5" respawnDelay="45" /> <!-- Lageos -->
+	</spawn>
+	<spawn zone="innadril04_2224_10">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="89495" y="222377" />
+			<node x="90803" y="225927" />
+			<node x="86388" y="227773" />
+			<node x="84908" y="224180" />
+		</territory>
+		<npc id="20791" count="1" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20793" count="3" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20793" count="3" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20989" count="5" respawnDelay="45" /> <!-- Lageos -->
+	</spawn>
+	<spawn zone="innadril04_2224_11">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="95134" y="221529" />
+			<node x="93589" y="224873" />
+			<node x="90998" y="225869" />
+			<node x="89683" y="222400" />
+		</territory>
+		<npc id="20790" count="3" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20793" count="2" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20793" count="2" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20989" count="3" respawnDelay="45" /> <!-- Lageos -->
+	</spawn>
+	<spawn zone="innadril04_2224_12">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="92558" y="217636" />
+			<node x="95114" y="221296" />
+			<node x="89615" y="222224" />
+			<node x="88712" y="220838" />
+		</territory>
+		<npc id="20790" count="6" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20792" count="3" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20793" count="3" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20793" count="3" respawnDelay="30" /> <!-- Nos -->
+	</spawn>
+	<spawn zone="innadril04_2224_13">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="87623" y="215567" />
+			<node x="92496" y="217499" />
+			<node x="88630" y="220608" />
+			<node x="87329" y="218646" />
+		</territory>
+		<npc id="20790" count="4" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20793" count="2" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20793" count="2" respawnDelay="30" /> <!-- Nos -->
+		<npc id="20989" count="3" respawnDelay="45" /> <!-- Lageos -->
+	</spawn>
+	<spawn zone="innadril04_2224_14">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="95004" y="215748" />
+			<node x="97984" y="215677" />
+			<node x="95298" y="221296" />
+			<node x="92666" y="217524" />
+		</territory>
+		<npc id="20789" count="3" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="4" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril04_2224_15">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="95829" y="211238" />
+			<node x="94956" y="215597" />
+			<node x="92612" y="217430" />
+			<node x="91940" y="213294" />
+		</territory>
+		<npc id="20789" count="3" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="3" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril04_2224_16">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="91808" y="213249" />
+			<node x="92473" y="217370" />
+			<node x="87780" y="215422" />
+			<node x="87890" y="213662" />
+		</territory>
+		<npc id="20789" count="4" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="3" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril04_2224_17">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="95142" y="211257" />
+			<node x="91933" y="213117" />
+			<node x="90917" y="209860" />
+			<node x="92982" y="206899" />
+		</territory>
+		<npc id="20789" count="4" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="5" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="3" respawnDelay="30" /> <!-- Crokian Warrior -->
+	</spawn>
+	<spawn zone="innadril04_2224_18">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="91822" y="213066" />
+			<node x="87842" y="213510" />
+			<node x="87202" y="210593" />
+			<node x="90774" y="209910" />
+		</territory>
+		<npc id="20789" count="3" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="3" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="1" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril04_2224_19">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="87462" y="215557" />
+			<node x="83894" y="216647" />
+			<node x="84152" y="213156" />
+			<node x="87705" y="213567" />
+		</territory>
+		<npc id="20789" count="3" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="3" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="1" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril04_2224_20">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="83694" y="216703" />
+			<node x="81292" y="218330" />
+			<node x="78752" y="214176" />
+			<node x="84009" y="213170" />
+		</territory>
+		<npc id="20790" count="4" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril04_2224_21">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="84075" y="212923" />
+			<node x="78768" y="214048" />
+			<node x="79420" y="211113" />
+			<node x="82613" y="209638" />
+		</territory>
+		<npc id="20789" count="2" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="3" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="1" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril04_2224_22">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="87713" y="213458" />
+			<node x="84137" y="213001" />
+			<node x="82724" y="209572" />
+			<node x="87066" y="210606" />
+		</territory>
+		<npc id="20789" count="3" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="3" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="1" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril04_2224_23">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="87123" y="210532" />
+			<node x="82583" y="209457" />
+			<node x="80873" y="206671" />
+			<node x="83671" y="204960" />
+		</territory>
+		<npc id="20789" count="5" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="5" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+	</spawn>
+	<spawn zone="innadril04_2224_24">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="90810" y="209769" />
+			<node x="87209" y="210462" />
+			<node x="83757" y="204993" />
+			<node x="89014" y="207238" />
+		</territory>
+		<npc id="20789" count="5" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="5" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+	</spawn>
+	<spawn zone="innadril04_2224_25">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="92915" y="206769" />
+			<node x="90897" y="209724" />
+			<node x="89051" y="207185" />
+			<node x="93085" y="203781" />
+		</territory>
+		<npc id="20788" count="2" respawnDelay="30" /> <!-- Rakul -->
+		<npc id="20789" count="2" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="2" respawnDelay="30" /> <!-- Dailaon -->
+	</spawn>
+	<spawn zone="innadril04_2224_26">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="97406" y="206525" />
+			<node x="94917" y="210308" />
+			<node x="93072" y="206805" />
+			<node x="96191" y="203476" />
+		</territory>
+		<npc id="20789" count="4" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="4" respawnDelay="30" /> <!-- Dailaon -->
+	</spawn>
+	<spawn zone="innadril04_2224_27">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="92929" y="203615" />
+			<node x="89047" y="207157" />
+			<node x="83862" y="204893" />
+			<node x="87566" y="202510" />
+		</territory>
+		<npc id="20788" count="6" respawnDelay="30" /> <!-- Rakul -->
+		<npc id="20789" count="6" respawnDelay="30" /> <!-- Crokian -->
+		<npc id="20790" count="3" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="3" respawnDelay="30" /> <!-- Crokian Warrior -->
+	</spawn>
+	<spawn zone="innadril04_2224_28s">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="87170" y="201544" />
+			<node x="84105" y="204210" />
+			<node x="82299" y="203307" />
+			<node x="84100" y="200486" />
+		</territory>
+		<npc id="20788" count="1" respawnDelay="30" /> <!-- Rakul -->
+		<npc id="20790" count="1" respawnDelay="30" /> <!-- Dailaon -->
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+	</spawn>
+	<spawn zone="innadril04_2224_29s">
+		<territory minZ="-3902" maxZ="-2902">
+			<node x="76729" y="218035" />
+			<node x="74207" y="219409" />
+			<node x="72400" y="218506" />
+			<node x="73740" y="216446" />
+		</territory>
+		<npc id="20989" count="2" respawnDelay="45" /> <!-- Lageos -->
+	</spawn>
+</list>

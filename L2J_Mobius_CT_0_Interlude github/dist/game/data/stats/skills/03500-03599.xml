@@ -1,0 +1,1574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="3500" levels="1" name="Wooden Set">
+		<!-- Increases P. Def. and Max HP. -->
+		<icon>icon.armor_t06_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.022</mul> <!-- P. Def. +2.2% -->
+				<add stat="maxHp">41</add> <!-- HP +41 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3501" levels="1" name="Devotion Set">
+		<!-- Increases Casting Spd. -->
+		<icon>icon.armor_t55_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">1.15</mul> <!-- Casting Spd. +15% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3502" levels="1" name="Mithril Heavy Armor Set">
+		<!-- Increases resistance to poison attack. -->
+		<icon>icon.armor_t19_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<POISON>20</POISON>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3503" levels="1" name="Reinforced Leather Set">
+		<!-- Increases Maximum MP. -->
+		<icon>icon.armor_t13_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxMp">80</add> <!-- MP +80 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3504" levels="1" name="Knowledge Set">
+		<!-- Decreases MP regeneration and increases M. Atk. -->
+		<icon>icon.armor_t41_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtk">1.1025</mul> <!-- M. Atk. +10.25% -->
+				<mul stat="regMp">0.95</mul> <!-- MP Regeneration -5% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3505" levels="1" name="Manticore Set">
+		<!-- Increases Maximum MP. -->
+		<icon>icon.armor_t42_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxMp">91.81</add> <!-- MP +91.81 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3506" levels="1" name="Brigandine Set">
+		<!-- Increases P. Def. and Max HP. -->
+		<icon>icon.armor_t43_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.05</mul> <!-- P. Def. +5% -->
+				<add stat="maxHp">153</add> <!-- HP +153 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3507" levels="1" name="Elven Mithril Set">
+		<!-- Increases Speed. INT-1, WIT+1 -->
+		<icon>icon.armor_elven_tunic_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">7</add> <!-- Speed +7 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3508" levels="1" name="Mithril Light Armor Set">
+		<!-- Increases Evasion. -->
+		<icon>icon.armor_t47_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">4</add> <!-- Evasion +4 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3509" levels="1" name="Chain Mail Set">
+		<!-- Increases resistance to Dagger attacks. -->
+		<icon>icon.armor_t48_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<DAGGER>6</DAGGER>
+				<DUALDAGGER>6</DUALDAGGER>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3510" levels="1" name="Karmian Set">
+		<!-- Increases P. Def. and Casting Spd. -->
+		<icon>icon.armor_t53_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.0526</mul> <!-- P. Def. +5.26% -->
+				<mul stat="mAtkSpd">1.15</mul> <!-- Casting Spd. +15% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3511" levels="1" name="Plated Leather Set">
+		<!-- STR+4, CON-1 -->
+		<icon>icon.armor_t47_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="3512" levels="1" name="Composite Heavy Armor Set">
+		<!-- Increases your weight capacity. -->
+		<icon>icon.armor_t61_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="weightPenalty">5795</add> <!-- Point at which a weight penalty is applied +5795 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3513" levels="1" name="Demon's Set">
+		<!-- Reduces maximum HP. INT+4, WIT-1 -->
+		<icon>icon.armor_t54_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<sub stat="maxHp">269.65</sub> <!-- HP -269.65 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3514" levels="1" name="Theca Leather Light Armor Set">
+		<!-- Increases P. Def. -->
+		<icon>icon.armor_t63_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.0526</mul> <!-- P. Def. +5.26% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3515" levels="1" name="Drake Leather Set">
+		<!-- Increases M. Def. -->
+		<icon>icon.armor_t21_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mDef">1.0526</mul> <!-- M. Def. +5.26% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3516" levels="1" name="Full Plate Set">
+		<!-- Increases maximum HP. -->
+		<icon>icon.armor_t62_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxHp">269.65</add> <!-- HP +269.65 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3517" levels="1" name="Divine Set">
+		<!-- Increases P. Def. and Max MP. INT-1, WIT+1 -->
+		<icon>icon.armor_t57_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.0526</mul> <!-- P. Def. +5.26% -->
+				<add stat="maxMp">170.62</add> <!-- MP +170.62 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3518" levels="1" name="Zubei's Heavy Armor Set">
+		<!-- Increases P. Def. and Max HP. -->
+		<icon>icon.armor_t64_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.0526</mul> <!-- P. Def. +5.246 -->
+				<add stat="maxHp">294.49</add> <!-- HP +294.49 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3519" levels="1" name="Avadon Breastplate Heavy Armor Set">
+		<!-- Increases maximum HP. -->
+		<icon>icon.armor_t66_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxHp">294.49</add> <!-- HP +294.49 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3520" levels="1" name="Zubei's Leather Shirt Light Armor Set">
+		<!-- Increases Evasion. -->
+		<icon>icon.armor_t65_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">4</add> <!-- Evasion +4 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3521" levels="1" name="Avadon Light Armor Set">
+		<!-- Increases M. Def. and maximum weight limit. -->
+		<icon>icon.armor_t67_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mDef">1.0525</mul> <!-- M. Def. +5.25% -->
+				<add stat="weightPenalty">5795</add> <!-- Point at which a weight penalty is applied +5795 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3522" levels="1" name="Tunic of Zubei Robe Set">
+		<!-- Decreases MP regeneration and increases M. Atk. -->
+		<icon>icon.armor_t56_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtk">1.1025</mul> <!-- M. Atk. +10.25% -->
+				<mul stat="regMp">0.95</mul> <!-- MP Regeneration -5% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3523" levels="1" name="Avadon Robe Set">
+		<!-- Increases P. Def. and Casting Spd. -->
+		<icon>icon.armor_t59_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.0526</mul> <!-- P. Def. +5.26% -->
+				<mul stat="mAtkSpd">1.15</mul> <!-- Casting Spd. +15% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3524" levels="1" name="Blue Wolf Heavy Armor Set">
+		<!-- Increases Speed and HP recovery rate. STR+3, CON-1, DEX-2 -->
+		<icon>icon.armor_t68_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">7</add> <!-- Speed +7 -->
+				<mul stat="regHp">1.0526</mul> <!-- HP Regeneration +5.26% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3525" levels="1" name="Doom Heavy Armor Set">
+		<!-- Increases Max HP and lung capacity. STR-3, CON+3 -->
+		<icon>icon.armor_t71_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxHp">320</add> <!-- HP +320 -->
+				<add stat="breath">200</add> <!-- Breath Gauge increased +200 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3526" levels="1" name="Blue Wolf Light Armor Set">
+		<!-- Increases P. Def. and Casting Spd. INT-2, MEN+3, WIT-1 -->
+		<icon>icon.armor_t69_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.0526</mul> <!-- P. Def. +5.26% -->
+				<mul stat="mAtkSpd">1.15</mul> <!-- Casting Spd. +15% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3527" levels="1" name="Doom Light Armor Set">
+		<!-- Increases lung capacity, P. Atk., MP recovery rate and resistance to poison attacks. STR-1, CON-2, DEX+3 -->
+		<icon>icon.armor_t72_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="breath">200</add> <!-- Breath Gauge increased +200 -->
+				<mul stat="pAtk">1.027</mul> <!-- P. Atk. +2.7% -->
+				<mul stat="regMp">1.025</mul> <!-- MP Regeneration +2.5% -->
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>20</POISON>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3528" levels="1" name="Blue Wolf Robe Set">
+		<!-- Increases Max MP and MP recovery rate. INT-2, MEN-1, WIT+3 -->
+		<icon>icon.armor_t70_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxMp">206</add> <!-- MP +206 -->
+				<mul stat="regMp">1.0524</mul> <!-- MP Regeneration +5.24% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3529" levels="1" name="Doom Robe Set">
+		<!-- Increases Speed, lung capacity and MP recovery rate. INT+2, MEN+1, WIT-3 -->
+		<icon>icon.armor_t73_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">7</add> <!-- Speed + 7 -->
+				<add stat="breath">200</add> <!-- Breath Gauge increased +200 -->
+				<mul stat="regMp">1.0526</mul> <!-- MP Regeneration +5.26% -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3530" levels="1" name="Dark Crystal Breastplate Heavy Armor Set">
+		<!-- Increases resistance to paralysis attacks and improves effectiveness of HP recovery magic. STR-2, CON+2 -->
+		<icon>icon.armor_t74_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="healEffect">1.04</mul> <!-- Heal +4% -->
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>50</PARALYZE>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3531" levels="1" name="Tallum Heavy Armor Set">
+		<!-- Increases resistance to poison/bleeding attacks. Atk. Spd. and maximum weight limit are also increased. STR+2, CON-2 -->
+		<icon>icon.armor_t77_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.08</mul> <!-- Atk. Spd. +8% -->
+				<add stat="weightPenalty">5759</add> <!-- Point at which a weight penalty is applied +5759 -->
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>80</POISON>
+				<BLEED>80</BLEED>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3532" levels="1" name="Dark Crystal Light Armor Set">
+		<!-- Increases resistance to paralysis attacks. Atk. Spd. and P. Atk. are also increased. STR+1, CON-1 -->
+		<icon>icon.armor_t75_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.04</mul> <!-- Atk. Spd. +4% -->
+				<mul stat="pAtk">1.04</mul> <!-- P. Atk. +4% -->
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>50</PARALYZE>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3533" levels="1" name="Tallum Light Armor Set">
+		<!-- Increases resistance to poison/bleeding attacks. MP recovery rate and Max MP are also increased. MEN+2, WIT-2 -->
+		<icon>icon.armor_t78_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="regMp">1.08</mul> <!-- MP Regeneration +8% -->
+				<add stat="maxMp">222</add> <!-- MP +222 -->
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>80</POISON>
+				<BLEED>80</BLEED>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3534" levels="1" name="Tallum Robe Set">
+		<!-- Increases resistance to poison/bleeding attacks. Casting Spd. and M. Def. are also increased. INT-2, WIT+2 -->
+		<icon>icon.armor_t79_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">1.15</mul> <!-- Casting Spd. +15% -->
+				<mul stat="mDef">1.08</mul> <!-- M. Def. +8% -->
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>80</POISON>
+				<BLEED>80</BLEED>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3535" levels="1" name="Dark Crystal Robe Set">
+		<!-- Decreases magic cancel rate and increases resistance to paralysis attacks. P. Def., Casting Spd. and Speed are also increased. WIT+2, MEN-2 -->
+		<icon>icon.armor_t76_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.08</mul> <!-- P. Def. +8% -->
+				<mul stat="mAtkSpd">1.15</mul> <!-- Casting Spd. +15% -->
+				<add stat="runSpd">7</add> <!-- Speed +7 -->
+				<sub stat="cancel">50</sub> <!-- Small decrease in chance of spell interruption -->
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>50</PARALYZE>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3536" levels="1" name="Nightmare Heavy Armor Set">
+		<!-- Increases P. Atk. and resistance to Sleep/Hold attack.. CON+2, DEX-2 -->
+		<icon>icon.armor_t80_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">1.04</mul> <!-- P. Atk. +4% -->
+			</effect>
+			<effect name="DefenceTrait">
+				<SLEEP>70</SLEEP>
+				<HOLD>70</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3537" levels="1" name="Majestic Heavy Armor Set">
+		<!-- Increases resistance to shock attacks. P. Atk. and Accuracy are also increased. STR+2. CON-2 -->
+		<icon>icon.armor_t83_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">1.04</mul> <!-- P. Atk. +4% -->
+				<add stat="accCombat">3.1</add> <!-- Accuracy +3.1 -->
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>50</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3538" levels="1" name="Nightmarish Leather Light Armor Set">
+		<!-- Increases resistance to Sleep/Hold attack and M. Def. Restores HP by using part of the damage inflicted upon the enemy, excluding damage caused by skill or remote attack. DEX+1, CON-1 -->
+		<icon>icon.armor_t81_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mDef">1.04</mul> <!-- M. Def. +4% -->
+				<add stat="absorbDam">3</add> <!-- Restores 3% of melee damage inflicted on the enemy to oneself -->
+			</effect>
+			<effect name="DefenceTrait">
+				<SLEEP>70</SLEEP>
+				<HOLD>70</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3539" levels="1" name="Majestic Light Armor Set">
+		<!-- Increases resistance to shock attacks. P. Atk., Max MP and maximum weight limit are also increased. DEX+1, CON-1 -->
+		<icon>icon.armor_t84_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">
+					<value>1.08</value> <!-- Archery P. Atk. +8% -->
+					<using kind="BOW" />
+				</mul>
+				<add stat="maxMp">240</add> <!-- MP +240 -->
+				<add stat="weightPenalty">5759</add> <!-- Point at which a weight penalty is applied +5759 -->
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>50</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3540" levels="1" name="Nightmare Robe Set">
+		<!-- Increases MP regeneration, M. Atk. and resistance to sleep/hold attacks. INT+2, WIT-2 -->
+		<icon>icon.armor_t82_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="regMp">1.04</mul> <!-- MP Regeneration +4% -->
+				<mul stat="mAtk">1.08</mul> <!-- M. Atk. +8% -->
+			</effect>
+			<effect name="DefenceTrait">
+				<SLEEP>70</SLEEP>
+				<HOLD>70</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3541" levels="1" name="Majestic Robe Set">
+		<!-- Increases resistance to shock attacks. Max MP, Casting Spd. and MP recovery rate are also increased. MEN+1, INT-1 -->
+		<icon>icon.armor_t85_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxMp">240</add> <!-- MP +240 -->
+				<mul stat="mAtkSpd">1.15</mul> <!-- Casting Spd. +15% -->
+				<mul stat="regMp">1.08</mul> <!-- MP Regeneration +8% -->
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>50</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3542" levels="6" name="Special Ability: Critical Damage">
+		<!-- Inflicts additional damage during critical attacks. -->
+		<table name="#cAtkAdd">203.97 226.51 248.71 269.91 289.4 306.42</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill0193</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critDmgAdd">#cAtkAdd</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3543" levels="1" name="Equipped with Shield">
+		<!-- Increases maximum HP. -->
+		<icon>icon.skill0091</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxHp">126.13</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3544" levels="1" name="Equipped with Shield">
+		<!-- Increases maximum HP. -->
+		<icon>icon.skill0091</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxHp">20</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3545" levels="1" name="Equipped with Shield">
+		<!-- Increases maximum HP. -->
+		<icon>icon.skill0091</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="maxHp">198.21</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3546" levels="1" name="Equipped with Shield">
+		<!-- Increases M. Def. -->
+		<icon>icon.skill0091</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mDef">1.0526</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3547" levels="1" name="Equipped with Shield">
+		<!-- Increases shield defense rate. -->
+		<icon>icon.skill0091</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="rShld">1.0526</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3548" levels="1" name="Equipped with Shield">
+		<!-- Increases shield defense rate. -->
+		<icon>icon.skill0091</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="rShld">1.24</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3549" levels="1" name="Equipped with Shield">
+		<!-- Increases shield defense rate. -->
+		<icon>icon.skill0091</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="rShld">1.24</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3550" levels="1" name="Equipped with Shield">
+		<!-- Increases shield defense rate. -->
+		<icon>icon.skill0091</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="rShld">1.18</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3551" levels="1" name="Equipped with Shield">
+		<!-- Returns damage inflicted by enemy back upon him. Not applied to damage inflicted by a skill or remote attack. -->
+		<icon>icon.skill0091</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="reflectDam">5</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3552" levels="2" name="Special Ability: PvP Damage">
+		<!-- Level 1: Increases damage inflicted during PvP. -->
+		<!-- Level 2: Unleashes an attack that strikes multiple opponents, and inflicts additional damage during PvP. -->
+		<table name="#atkCountMax">0 4</table>
+		<table name="#bonus">1.05 1.05</table>
+		<table name="#magicLevel">64 64</table>
+		<icon>icon.skill0297</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="atkCountMax">#atkCountMax</add>
+				<mul stat="pvpPhysDmg">#bonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#bonus</mul>
+				<mul stat="pvpMagicalDmg">#bonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3553" levels="1" name="Imperial Crusader Heavy Armor Set">
+		<!-- Increases Max HP, P. Def and resistance to sleep/hold attacks. STR+2, DEX-2 -->
+		<icon>icon.armor_t88_u_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.08</mul> <!-- P Def. +8% -->
+				<add stat="maxHp">445</add> <!-- Maximum HP +445 -->
+			</effect>
+			<effect name="DefenceTrait">
+				<SLEEP>70</SLEEP>
+				<HOLD>70</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3554" levels="1" name="Equipped with Shield">
+		<!-- Additional resistance to Poison/Bleed. -->
+		<icon>icon.skill0091</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<POISON>80</POISON>
+				<BLEED>80</BLEED>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3555" levels="1" name="Draconic Light Armor Set">
+		<!-- Increases Max MP, Atk. Spd, P. Atk, and maximum weight limit. DEX+1, STR+1, CON-2 -->
+		<icon>icon.armor_t89_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.04</mul> <!-- Attack Speed +4% -->
+				<mul stat="pAtk">1.04</mul> <!-- P. Atk +4% -->
+				<add stat="maxMp">289</add> <!-- Maximum MP +289 -->
+				<add stat="weightPenalty">5759</add> <!-- Point at which a weight penalty is applied +5759 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3556" levels="1" name="Major Arcana Robe Set">
+		<!-- Decreases chance of magic casting being canceled. Increases resistance to shock attacks, M. Atk., Speed and maximum weight limit. WIT+1, INT+1, MEN-2 -->
+		<icon>icon.armor_t90_ul_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtk">1.17</mul> <!-- M. Atk +17% -->
+				<add stat="runSpd">7</add> <!-- Movement Speed +7 -->
+				<sub stat="cancel">50</sub> <!-- Casting Cancel Probability -50% -->
+				<add stat="weightPenalty">5759</add> <!-- Point at which a weight penalty is applied +5759 -->
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>50</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3557" levels="1" name="Necklace of Valakas">
+		<!-- Increases resistance to fire/water attacks, Max HP, P. Atk., M. Atk. and damage magic critical attack rate. Decreases skill re-use time. Reflects some of the physical damage received back upon the enemy (does not include damage from skill or range attacks). -->
+		<icon>icon.accessory_necklace_of_valakas_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="fireRes">15</add>
+				<add stat="maxHp">445</add>
+				<mul stat="pAtk">1.04</mul>
+				<mul stat="mAtk">1.08</mul>
+				<add stat="mCritRate">2</add>
+				<mul stat="pReuse">0.9</mul>
+				<mul stat="mReuse">0.9</mul>
+				<add stat="reflectDam">5</add>
+			</effect>
+			<effect name="AttackTrait">
+				<SLEEP>40</SLEEP>
+			</effect>
+			<effect name="DefenceTrait">
+				<SLEEP>40</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3558" levels="1" name="Earring of Antharas">
+		<!-- Increases resistance to earth attacks and bleed/shock/mental attacks, and improves the effectiveness of HP recovery magic. Decreases skill MP consumption and restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks). -->
+		<icon>icon.accessory_earring_of_antaras_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="earthRes">15</add>
+				<mul stat="healEffect">1.1</mul>
+				<mul stat="magicalMpConsumeRate">0.95</mul>
+				<mul stat="physicalMpConsumeRate">0.95</mul>
+				<add stat="absorbDam">4</add> <!-- absorb 4% HP from damage inflicted on enemies -->
+			</effect>
+			<effect name="AttackTrait">
+				<BLEED>40</BLEED>
+				<SHOCK>30</SHOCK>
+				<DERANGEMENT>30</DERANGEMENT>
+			</effect>
+			<effect name="DefenceTrait">
+				<BLEED>40</BLEED>
+				<SHOCK>30</SHOCK>
+				<DERANGEMENT>30</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3559" levels="1" name="Earring of Zaken">
+		<!-- Increases resistance to bleed/shock/mental attacks, improves the effect of HP regeneration magic and restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks). -->
+		<icon>icon.accessory_earring_of_zaken_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="healEffect">1.1</mul>
+				<add stat="absorbDam">4</add>
+			</effect>
+			<effect name="AttackTrait">
+				<BLEED>30</BLEED>
+				<SHOCK>20</SHOCK>
+				<DERANGEMENT>20</DERANGEMENT>
+			</effect>
+			<effect name="DefenceTrait">
+				<BLEED>30</BLEED>
+				<SHOCK>20</SHOCK>
+				<DERANGEMENT>20</DERANGEMENT>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3560" levels="1" name="Earring of Orfen">
+		<!-- Increases healing from heal spells and resistance to Bleed attack. -->
+		<icon>icon.accessory_earring_of_orfen_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="healEffect">1.06</mul>
+			</effect>
+			<effect name="AttackTrait">
+				<BLEED>20</BLEED>
+			</effect>
+			<effect name="DefenceTrait">
+				<BLEED>20</BLEED>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3561" levels="1" name="Ring of Baium">
+		<!-- Increases resistance to poison/hold attacks and critical attack damage. Also increases Accuracy, Atk. Spd. and Casting Spd. -->
+		<icon>icon.accessory_ring_of_baium_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">2</add>
+				<mul stat="critDmg">1.15</mul>
+				<mul stat="pAtkSpd">1.04</mul>
+				<mul stat="mAtkSpd">1.04</mul>
+			</effect>
+			<effect name="AttackTrait">
+				<POISON>40</POISON>
+				<HOLD>30</HOLD>
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>40</POISON>
+				<HOLD>30</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3562" levels="1" name="Ring of Ant Queen">
+		<!-- Increases resistance to poison/hold attacks and critical attack damage. Also increases Accuracy. -->
+		<icon>icon.accessory_ring_of_queen_ant_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">2</add>
+				<mul stat="critDmg">1.15</mul>
+			</effect>
+			<effect name="AttackTrait">
+				<POISON>30</POISON>
+				<HOLD>20</HOLD>
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>30</POISON>
+				<HOLD>20</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3563" levels="1" name="Ring of Core">
+		<!-- Increases Accuracy, and resistance to Poison attack. -->
+		<icon>icon.accessory_ring_of_core_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">1</add>
+			</effect>
+			<effect name="AttackTrait">
+				<POISON>20</POISON>
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>20</POISON>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3564" levels="1" name="Special Ability: Haste">
+		<!-- Increases Atk.Speed and enhances damage to target during PvP. -->
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.07</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3565" levels="1" name="Special Ability: Focus">
+		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critRate">80.6</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3566" levels="1" name="Special Ability: Focus">
+		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critRate">84.3</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3567" levels="2" name="Special Ability: Focus">
+		<!-- Level 1: Increases critical attack success rate and damage inflicted during PvP. -->
+		<!-- Level 2: Increases critical attack success rate. Increases damage inflicted during PvP. -->
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critRate">88.1</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3568" levels="1" name="Special Ability: HP Drain">
+		<!-- Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or range attack. Enhances damage to target during PvP. -->
+		<icon>icon.skill1268</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="absorbDam">3</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3569" levels="1" name="Special Ability: HP Regeneration">
+		<!-- Increases HP regeneration rate and enhances damage to target during PvP. -->
+		<icon>icon.skill1044</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="regHp">2.04</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3570" levels="1" name="Special Ability: Robust Health">
+		<!-- Increases Max HP, Max MP, Max CP and enhances damage to target during PvP. -->
+		<icon>icon.skill1311</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.15</mul>
+				<mul stat="maxMp">1.2</mul>
+				<mul stat="maxCp">1.3</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3571" levels="1" name="Special Ability: Crt. Stun">
+		<!-- Temporarily stuns and paralyzes target. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>27</activateRate>
+		<basicProperty>CON</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>75</magicLevel>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="3572" levels="1" name="Special Ability: Crt. Damage">
+		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
+		<icon>icon.skill0193</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critDmgAdd">265</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3573" levels="1" name="Special Ability: Guidance">
+		<!-- Increases Accuracy and enhances damage to target during PvP. -->
+		<icon>icon.skill1240</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">5.27</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3574" levels="1" name="Special Ability: Crt. Slow">
+		<!-- Temporarily decreases Speed. Effect 3. -->
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>16</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">0.7</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3575" levels="1" name="Special Ability: Empower Option">
+		<!-- Increases M. Atk. Enhances damage to target during PvP. -->
+		<icon>icon.skill1059</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="mAtk">60.09</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3576" levels="1" name="Special Ability: MP Regeneration">
+		<!-- Increases MP regeneration rate and enhances damage to target during PvP. -->
+		<icon>icon.skill1047</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="regMp">0.54</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3577" levels="1" name="Special Ability: Magic Hold">
+		<!-- Magically immobilizes target. -->
+		<icon>icon.skill1201</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>84</magicLevel>
+		<trait>HOLD</trait>
+		<effects>
+			<effect name="Root" />
+		</effects>
+	</skill>
+	<skill id="3578" levels="1" name="Special Ability: Infinity Blade">
+		<!-- Decreases enemy's P. Def. during critical attacks. Also increases Max HP, Max MP, Max CP, shield defense capability and damage inflicted during PvP. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks). -->
+		<icon>icon.weapon_the_sword_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.25</mul>
+				<mul stat="maxMp">1.3</mul>
+				<mul stat="maxCp">1.5</mul>
+				<mul stat="sDef">1.33</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<add stat="reflectDam">9</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3579" levels="1" name="Decrease P. Def.">
+		<!-- Temporarily decreases P. Def. Effect 3 -->
+		<icon>icon.skill0122</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>4</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pDef">0.77</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3580" levels="1" name="Special Ability: Infinity Axe">
+		<!-- Dazzles the enemy to distraction during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability and damage inflicted during PvP. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks). -->
+		<icon>icon.weapon_the_axe_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.25</mul>
+				<mul stat="maxMp">1.3</mul>
+				<mul stat="maxCp">1.5</mul>
+				<mul stat="rShld">1.39</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<add stat="reflectDam">9</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3581" levels="1" name="Discord">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<!-- FIXME: this should be "Distrust" effect -->
+			<effect name="Confuse" abnormalTime="20">
+				<chance>20</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
+		<!-- Increases critical attack success rate/power, Max HP, Max CP and damage inflicted during PvP. Inflicts extra damage on critical attack. Reflects debuff attack back on enemy. -->
+		<icon>icon.weapon_the_two_handed_sword_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critDmgAdd">504</add>
+				<mul stat="maxHp">1.25</mul>
+				<mul stat="maxCp">1.5</mul>
+				<add stat="critRate">78.7</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<add stat="reflectSkillPhysic">10</add>
+				<add stat="reflectSkillMagic">10</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3583" levels="1" name="Special Ability: Infinity Crusher">
+		<!-- Throws enemy into a state of shock during a critical attack. Increases Max HP, Max CP, Atk. Spd. and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
+		<icon>icon.weapon_the_hammer_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.25</mul>
+				<mul stat="maxCp">1.5</mul>
+				<mul stat="pAtkSpd">1.07</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<add stat="reflectSkillPhysic">10</add>
+				<add stat="reflectSkillMagic">10</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3584" levels="1" name="Shock">
+		<!-- Instantly throws enemy into a state of shock, immobilizing them. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>25</activateRate>
+		<basicProperty>CON</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>80</magicLevel>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="3585" levels="1" name="Infinity Wing">
+		<!-- Blocks enemy's ability to use physical skills during a critical attack. Increases Max HP, Max MP, Max CP, critical attack rate and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
+		<icon>icon.weapon_the_dualsword_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.25</mul>
+				<mul stat="maxMp">1.3</mul>
+				<mul stat="maxCp">1.5</mul>
+				<add stat="critRate">78.7</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<add stat="reflectSkillPhysic">10</add>
+				<add stat="reflectSkillMagic">10</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3586" levels="1" name="Physical Skill Restraint">
+		<!-- Temporarily blocks opponent's ability to use physical skills. -->
+		<icon>icon.skill1064</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SILENCE_PHYSICAL</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>10</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>80</magicLevel>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="PhysicalMute" />
+		</effects>
+	</skill>
+	<skill id="3587" levels="1" name="Special Ability: Infinity Fang">
+		<!-- Throws the enemy into a state of shock during a critical attack. Increases Max HP, Max MP, Max CP, Evasion and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
+		<icon>icon.weapon_the_fist_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.25</mul>
+				<mul stat="maxMp">1.3</mul>
+				<mul stat="maxCp">1.5</mul>
+				<add stat="rEvas">3.15</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<add stat="reflectSkillPhysic">10</add>
+				<add stat="reflectSkillMagic">10</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3588" levels="1" name="Shock">
+		<!-- Instantly throws enemy into a state of shock, immobilizing them. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>25</activateRate>
+		<basicProperty>CON</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>80</magicLevel>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
+		<!-- Blocks enemy's ability to use magic skills during a critical attack. Increases Max MP, Max CP, Atk. Spd., MP regeneration rate, critical attack rate when attacking the enemy from behind, and damage inflicted during PvP. Restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks). -->
+		<icon>icon.weapon_the_dagger_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxMp">1.3</mul>
+				<mul stat="maxCp">1.5</mul>
+				<mul stat="pAtkSpd">1.03</mul>
+				<add stat="regMp">0.51</add>
+				<mul stat="critRatePos">
+					<value>1.22</value>
+					<player behind="true" />
+				</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<add stat="absorbDam">2</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3590" levels="1" name="Silence">
+		<!-- Temporarily blocks the use of magic skills. -->
+		<icon>icon.skill1064</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>5</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>80</magicLevel>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="Mute" />
+		</effects>
+	</skill>
+	<skill id="3591" levels="1" name="Special Ability: Infinity Spear">
+		<!-- During a critical attack, this ability removes one or more of the enemy's buffs. It increases the character's Maximum HP, Maximum CP, Atk. Spd., and Accuracy, and gives a bonus to damage inflicted on an enemy during PvP. It reflects debuffs targeted upon the character back upon the enemy. It enables the character to attack multiple enemies. -->
+		<icon>icon.weapon_the_pole_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.25</mul>
+				<mul stat="maxCp">1.5</mul>
+				<mul stat="pAtkSpd">1.07</mul>
+				<add stat="accCombat">4.89</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<add stat="reflectSkillPhysic">10</add>
+				<add stat="reflectSkillMagic">10</add>
+				<add stat="atkCountMax">4</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3592" levels="1" name="Dispell">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>buff</slot>
+				<rate>10</rate>
+				<max>5</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3593" levels="1" name="Special Ability: Infinity Bow">
+		<!-- Decreases enemy's Speed during a critical attack. Increases Max MP, Max CP and damage inflicted during PvP. The skill re-use time is shortened, and MP consumption is reduced. -->
+		<icon>icon.weapon_the_bow_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxMp">1.3</mul>
+				<mul stat="maxCp">1.5</mul>
+				<mul stat="pvpPhysDmg">1.07</mul>
+				<mul stat="pvpMagicalDmg">1.07</mul>
+				<mul stat="pvpPhysSkillsDmg">1.07</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3594" levels="1" name="Slow">
+		<!-- Temporarily reduces target's Speed. Effect 3. -->
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>7</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">0.7</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
+		<!-- When using good magic, regenerates HP by 100%. Also increases Max HP, Max CP, M. Atk., damage magic critical attack rate and damage inflicted during PvP. When casting magic, reduces MP consumption and cancel rate. -->
+		<icon>icon.weapon_the_staff_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxMp">1.3</mul>
+				<mul stat="maxCp">1.5</mul>
+				<add stat="mAtk">29.67</add>
+				<add stat="mCritRate">1</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="magicalMpConsumeRate">0.96</mul>
+				<sub stat="cancel">106</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3596" levels="1" name="Full Recover">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<effectPoint>100</effectPoint>
+		<magicLevel>80</magicLevel>
+		<conditions msgId="113" addName="1">
+			<not>
+				<target npcType="Attackable" />
+			</not>
+		</conditions>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
+		<!-- When using good magic, regenerates HP by 100%. Also increases Max HP, Max CP, Casting Spd., MP regeneration rate and damage inflicted during PvP. -->
+		<icon>icon.weapon_the_mace_of_hero_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>80</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxMp">1.3</mul>
+				<mul stat="maxCp">1.5</mul>
+				<mul stat="mAtkSpd">1.15</mul>
+				<add stat="regMp">0.51</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3598" levels="1" name="Full Recover">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<effectPoint>100</effectPoint>
+		<magicLevel>80</magicLevel>
+		<conditions>
+			<not>
+				<target npcType="Attackable" />
+			</not>
+		</conditions>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3599" levels="1" name="Polearm Multi-attack">
+		<!-- Enables the character to attack multiple opponents. -->
+		<icon>icon.skill0216</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="atkCountMax">4</add>
+			</effect>
+		</effects>
+	</skill>
+</list>

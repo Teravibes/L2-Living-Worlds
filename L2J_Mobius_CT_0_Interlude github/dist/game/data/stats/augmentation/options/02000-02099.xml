@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="2000" name="o_f_49_1r_89">
+		<!-- Evasion increases by 1.03. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="rEvas" val="1.030617" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2001" name="o_f_49_1r_90">
+		<!-- Evasion increases by 1.03. Critical increases by 11.16. -->
+		<stats>
+			<add stat="rEvas" val="1.030617" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2002" name="o_f_49_1r_91">
+		<!-- Accuracy increases by 1.03. Critical increases by 11.16. -->
+		<stats>
+			<add stat="accCombat" val="1.030617" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2003" name="o_f_52_1r_1">
+		<!-- P. Def. increases by 28.47. -->
+		<stats>
+			<add stat="pDef" val="28.474" />
+		</stats>
+	</option>
+	<option id="2004" name="o_f_52_1r_2">
+		<!-- M. Def. increases by 22.91. -->
+		<stats>
+			<add stat="mDef" val="22.908" />
+		</stats>
+	</option>
+	<option id="2005" name="o_f_52_1r_3">
+		<!-- Max HP increases by 112.84 -->
+		<stats>
+			<add stat="maxHp" val="112.838" />
+		</stats>
+	</option>
+	<option id="2006" name="o_f_52_1r_4">
+		<!-- Max HP increases by 35.56. -->
+		<stats>
+			<add stat="maxMp" val="35.558" />
+		</stats>
+	</option>
+	<option id="2007" name="o_f_52_1r_5">
+		<!-- Max CP increases by 155.83. -->
+		<stats>
+			<add stat="maxCp" val="155.825" />
+		</stats>
+	</option>
+	<option id="2008" name="o_f_52_1r_6">
+		<!-- P. Atk. increases by 13.71. -->
+		<stats>
+			<add stat="pAtk" val="13.708" />
+		</stats>
+	</option>
+	<option id="2009" name="o_f_52_1r_7">
+		<!-- M. Atk. increases by 15.73. -->
+		<stats>
+			<add stat="mAtk" val="15.732" />
+		</stats>
+	</option>
+	<option id="2010" name="o_f_52_1r_8">
+		<!-- HP Regen increases by 0.66. -->
+		<stats>
+			<add stat="regHp" val="0.66378" />
+		</stats>
+	</option>
+	<option id="2011" name="o_f_52_1r_9">
+		<!-- MP Regen increases by 0.29. -->
+		<stats>
+			<add stat="regMp" val="0.287132" />
+		</stats>
+	</option>
+	<option id="2012" name="o_f_52_1r_10">
+		<!-- CP Regen increases by 0.66. -->
+		<stats>
+			<add stat="regCp" val="0.66378" />
+		</stats>
+	</option>
+	<option id="2013" name="o_f_52_1r_11">
+		<!-- Evasion increases by 2.06. -->
+		<stats>
+			<add stat="rEvas" val="2.061234" />
+		</stats>
+	</option>
+	<option id="2014" name="o_f_52_1r_12">
+		<!-- Accuracy increases by 2.06. -->
+		<stats>
+			<add stat="accCombat" val="2.061234" />
+		</stats>
+	</option>
+	<option id="2015" name="o_f_52_1r_13">
+		<!-- Critical increases by 22.32. -->
+		<stats>
+			<add stat="critRate" val="22.319041752" />
+		</stats>
+	</option>
+	<option id="2016" name="o_f_52_1r_14">
+		<!-- P. Def. increases by 14.24. M. Def. increases by 11.45. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="mDef" val="11.454" />
+		</stats>
+	</option>
+	<option id="2017" name="o_f_52_1r_15">
+		<!-- P. Def. increases by 14.24. Max HP increases by 56.42 -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="maxHp" val="56.419" />
+		</stats>
+	</option>
+	<option id="2018" name="o_f_52_1r_16">
+		<!-- P. Def. increases by 14.24. Max HP increases by 17.78. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="maxMp" val="17.779" />
+		</stats>
+	</option>
+	<option id="2019" name="o_f_52_1r_17">
+		<!-- P. Def. increases by 14.24. Max CP increases by 77.91. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="maxCp" val="77.9125" />
+		</stats>
+	</option>
+	<option id="2020" name="o_f_52_1r_18">
+		<!-- P. Def. increases by 14.24. P. Atk. increases by 6.85. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="pAtk" val="6.854" />
+		</stats>
+	</option>
+	<option id="2021" name="o_f_52_1r_19">
+		<!-- P. Def. increases by 14.24. M. Atk. increases by 7.87. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="mAtk" val="7.866" />
+		</stats>
+	</option>
+	<option id="2022" name="o_f_52_1r_20">
+		<!-- P. Def. increases by 14.24. HP Regen increases by 0.33. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="regHp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2023" name="o_f_52_1r_21">
+		<!-- P. Def. increases by 14.24. MP Regen increases by 0.14. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="regMp" val="0.143566" />
+		</stats>
+	</option>
+	<option id="2024" name="o_f_52_1r_22">
+		<!-- P. Def. increases by 14.24. CP Regen increases by 0.33. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="regCp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2025" name="o_f_52_1r_23">
+		<!-- P. Def. increases by 14.24. Evasion increases by 1.03. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="rEvas" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2026" name="o_f_52_1r_24">
+		<!-- P. Def. increases by 14.24. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2027" name="o_f_52_1r_25">
+		<!-- P. Def. increases by 14.24. Critical increases by 11.16. -->
+		<stats>
+			<add stat="pDef" val="14.237" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2028" name="o_f_52_1r_26">
+		<!-- M. Def. increases by 11.45. Max HP increases by 56.42 -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="maxHp" val="56.419" />
+		</stats>
+	</option>
+	<option id="2029" name="o_f_52_1r_27">
+		<!-- M. Def. increases by 11.45. Max HP increases by 17.78. -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="maxMp" val="17.779" />
+		</stats>
+	</option>
+	<option id="2030" name="o_f_52_1r_28">
+		<!-- M. Def. increases by 11.45. Max CP increases by 77.91. -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="maxCp" val="77.9125" />
+		</stats>
+	</option>
+	<option id="2031" name="o_f_52_1r_29">
+		<!-- M. Def. increases by 11.45. P. Atk. increases by 6.85. -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="pAtk" val="6.854" />
+		</stats>
+	</option>
+	<option id="2032" name="o_f_52_1r_30">
+		<!-- M. Def. increases by 11.45. M. Atk. increases by 7.87. -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="mAtk" val="7.866" />
+		</stats>
+	</option>
+	<option id="2033" name="o_f_52_1r_31">
+		<!-- M. Def. increases by 11.45. HP Regen increases by 0.33. -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="regHp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2034" name="o_f_52_1r_32">
+		<!-- M. Def. increases by 11.45. MP Regen increases by 0.14. -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="regMp" val="0.143566" />
+		</stats>
+	</option>
+	<option id="2035" name="o_f_52_1r_33">
+		<!-- M. Def. increases by 11.45. CP Regen increases by 0.33. -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="regCp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2036" name="o_f_52_1r_34">
+		<!-- M. Def. increases by 11.45. Evasion increases by 1.03. -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="rEvas" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2037" name="o_f_52_1r_35">
+		<!-- M. Def. increases by 11.45. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2038" name="o_f_52_1r_36">
+		<!-- M. Def. increases by 11.45. Critical increases by 11.16. -->
+		<stats>
+			<add stat="mDef" val="11.454" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2039" name="o_f_52_1r_37">
+		<!-- Max HP increases by 56.42 Max HP increases by 17.78. -->
+		<stats>
+			<add stat="maxHp" val="56.419" />
+			<add stat="maxMp" val="17.779" />
+		</stats>
+	</option>
+	<option id="2040" name="o_f_52_1r_38">
+		<!-- Max HP increases by 56.42 Max CP increases by 77.91. -->
+		<stats>
+			<add stat="maxHp" val="56.419" />
+			<add stat="maxCp" val="77.9125" />
+		</stats>
+	</option>
+	<option id="2041" name="o_f_52_1r_39">
+		<!-- Max HP increases by 56.42 P. Atk. increases by 6.85. -->
+		<stats>
+			<add stat="maxHp" val="56.419" />
+			<add stat="pAtk" val="6.854" />
+		</stats>
+	</option>
+	<option id="2042" name="o_f_52_1r_40">
+		<!-- Max HP increases by 56.42 M. Atk. increases by 7.87. -->
+		<stats>
+			<add stat="maxHp" val="56.419" />
+			<add stat="mAtk" val="7.866" />
+		</stats>
+	</option>
+	<option id="2043" name="o_f_52_1r_41">
+		<!-- Max HP increases by 56.42 HP Regen increases by 0.33. -->
+		<stats>
+			<add stat="maxHp" val="56.419" />
+			<add stat="regHp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2044" name="o_f_52_1r_42">
+		<!-- Max HP increases by 56.42 MP Regen increases by 0.14. -->
+		<stats>
+			<add stat="maxHp" val="56.419" />
+			<add stat="regMp" val="0.143566" />
+		</stats>
+	</option>
+	<option id="2045" name="o_f_52_1r_43">
+		<!-- Max HP increases by 56.42 CP Regen increases by 0.33. -->
+		<stats>
+			<add stat="maxHp" val="56.419" />
+			<add stat="regCp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2046" name="o_f_52_1r_44">
+		<!-- Max HP increases by 56.42 Evasion increases by 1.03. -->
+		<stats>
+			<add stat="maxHp" val="56.419" />
+			<add stat="rEvas" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2047" name="o_f_52_1r_45">
+		<!-- Max HP increases by 56.42 Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="maxHp" val="56.419" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2048" name="o_f_52_1r_46">
+		<!-- Max HP increases by 56.42 Critical increases by 11.16. -->
+		<stats>
+			<add stat="maxHp" val="56.419" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2049" name="o_f_52_1r_47">
+		<!-- Max HP increases by 17.78. Max CP increases by 77.91. -->
+		<stats>
+			<add stat="maxMp" val="17.779" />
+			<add stat="maxCp" val="77.9125" />
+		</stats>
+	</option>
+	<option id="2050" name="o_f_52_1r_48">
+		<!-- Max HP increases by 17.78. P. Atk. increases by 6.85. -->
+		<stats>
+			<add stat="maxMp" val="17.779" />
+			<add stat="pAtk" val="6.854" />
+		</stats>
+	</option>
+	<option id="2051" name="o_f_52_1r_49">
+		<!-- Max HP increases by 17.78. M. Atk. increases by 7.87. -->
+		<stats>
+			<add stat="maxMp" val="17.779" />
+			<add stat="mAtk" val="7.866" />
+		</stats>
+	</option>
+	<option id="2052" name="o_f_52_1r_50">
+		<!-- Max HP increases by 17.78. HP Regen increases by 0.33. -->
+		<stats>
+			<add stat="maxMp" val="17.779" />
+			<add stat="regHp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2053" name="o_f_52_1r_51">
+		<!-- Max HP increases by 17.78. MP Regen increases by 0.14. -->
+		<stats>
+			<add stat="maxMp" val="17.779" />
+			<add stat="regMp" val="0.143566" />
+		</stats>
+	</option>
+	<option id="2054" name="o_f_52_1r_52">
+		<!-- Max HP increases by 17.78. CP Regen increases by 0.33. -->
+		<stats>
+			<add stat="maxMp" val="17.779" />
+			<add stat="regCp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2055" name="o_f_52_1r_53">
+		<!-- Max HP increases by 17.78. Evasion increases by 1.03. -->
+		<stats>
+			<add stat="maxMp" val="17.779" />
+			<add stat="rEvas" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2056" name="o_f_52_1r_54">
+		<!-- Max HP increases by 17.78. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="maxMp" val="17.779" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2057" name="o_f_52_1r_55">
+		<!-- Max HP increases by 17.78. Critical increases by 11.16. -->
+		<stats>
+			<add stat="maxMp" val="17.779" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2058" name="o_f_52_1r_56">
+		<!-- Max CP increases by 77.91. P. Atk. increases by 6.85. -->
+		<stats>
+			<add stat="maxCp" val="77.9125" />
+			<add stat="pAtk" val="6.854" />
+		</stats>
+	</option>
+	<option id="2059" name="o_f_52_1r_57">
+		<!-- Max CP increases by 77.91. M. Atk. increases by 7.87. -->
+		<stats>
+			<add stat="maxCp" val="77.9125" />
+			<add stat="mAtk" val="7.866" />
+		</stats>
+	</option>
+	<option id="2060" name="o_f_52_1r_58">
+		<!-- Max CP increases by 77.91. HP Regen increases by 0.33. -->
+		<stats>
+			<add stat="maxCp" val="77.9125" />
+			<add stat="regHp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2061" name="o_f_52_1r_59">
+		<!-- Max CP increases by 77.91. MP Regen increases by 0.14. -->
+		<stats>
+			<add stat="maxCp" val="77.9125" />
+			<add stat="regMp" val="0.143566" />
+		</stats>
+	</option>
+	<option id="2062" name="o_f_52_1r_60">
+		<!-- Max CP increases by 77.91. CP Regen increases by 0.33. -->
+		<stats>
+			<add stat="maxCp" val="77.9125" />
+			<add stat="regCp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2063" name="o_f_52_1r_61">
+		<!-- Max CP increases by 77.91. Evasion increases by 1.03. -->
+		<stats>
+			<add stat="maxCp" val="77.9125" />
+			<add stat="rEvas" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2064" name="o_f_52_1r_62">
+		<!-- Max CP increases by 77.91. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="maxCp" val="77.9125" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2065" name="o_f_52_1r_63">
+		<!-- Max CP increases by 77.91. Critical increases by 11.16. -->
+		<stats>
+			<add stat="maxCp" val="77.9125" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2066" name="o_f_52_1r_64">
+		<!-- P. Atk. increases by 6.85. M. Atk. increases by 7.87. -->
+		<stats>
+			<add stat="pAtk" val="6.854" />
+			<add stat="mAtk" val="7.866" />
+		</stats>
+	</option>
+	<option id="2067" name="o_f_52_1r_65">
+		<!-- P. Atk. increases by 6.85. HP Regen increases by 0.33. -->
+		<stats>
+			<add stat="pAtk" val="6.854" />
+			<add stat="regHp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2068" name="o_f_52_1r_66">
+		<!-- P. Atk. increases by 6.85. MP Regen increases by 0.14. -->
+		<stats>
+			<add stat="pAtk" val="6.854" />
+			<add stat="regMp" val="0.143566" />
+		</stats>
+	</option>
+	<option id="2069" name="o_f_52_1r_67">
+		<!-- P. Atk. increases by 6.85. CP Regen increases by 0.33. -->
+		<stats>
+			<add stat="pAtk" val="6.854" />
+			<add stat="regCp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2070" name="o_f_52_1r_68">
+		<!-- P. Atk. increases by 6.85. Evasion increases by 1.03. -->
+		<stats>
+			<add stat="pAtk" val="6.854" />
+			<add stat="rEvas" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2071" name="o_f_52_1r_69">
+		<!-- P. Atk. increases by 6.85. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="pAtk" val="6.854" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2072" name="o_f_52_1r_70">
+		<!-- P. Atk. increases by 6.85. Critical increases by 11.16. -->
+		<stats>
+			<add stat="pAtk" val="6.854" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2073" name="o_f_52_1r_71">
+		<!-- M. Atk. increases by 7.87. HP Regen increases by 0.33. -->
+		<stats>
+			<add stat="mAtk" val="7.866" />
+			<add stat="regHp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2074" name="o_f_52_1r_72">
+		<!-- M. Atk. increases by 7.87. MP Regen increases by 0.14. -->
+		<stats>
+			<add stat="mAtk" val="7.866" />
+			<add stat="regMp" val="0.143566" />
+		</stats>
+	</option>
+	<option id="2075" name="o_f_52_1r_73">
+		<!-- M. Atk. increases by 7.87. CP Regen increases by 0.33. -->
+		<stats>
+			<add stat="mAtk" val="7.866" />
+			<add stat="regCp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2076" name="o_f_52_1r_74">
+		<!-- M. Atk. increases by 7.87. Evasion increases by 1.03. -->
+		<stats>
+			<add stat="mAtk" val="7.866" />
+			<add stat="rEvas" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2077" name="o_f_52_1r_75">
+		<!-- M. Atk. increases by 7.87. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="mAtk" val="7.866" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2078" name="o_f_52_1r_76">
+		<!-- M. Atk. increases by 7.87. Critical increases by 11.16. -->
+		<stats>
+			<add stat="mAtk" val="7.866" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2079" name="o_f_52_1r_77">
+		<!-- HP Regen increases by 0.33. MP Regen increases by 0.14. -->
+		<stats>
+			<add stat="regHp" val="0.33189" />
+			<add stat="regMp" val="0.143566" />
+		</stats>
+	</option>
+	<option id="2080" name="o_f_52_1r_78">
+		<!-- HP Regen increases by 0.33. CP Regen increases by 0.33. -->
+		<stats>
+			<add stat="regHp" val="0.33189" />
+			<add stat="regCp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2081" name="o_f_52_1r_79">
+		<!-- HP Regen increases by 0.33. Evasion increases by 1.03. -->
+		<stats>
+			<add stat="regHp" val="0.33189" />
+			<add stat="rEvas" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2082" name="o_f_52_1r_80">
+		<!-- HP Regen increases by 0.33. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="regHp" val="0.33189" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2083" name="o_f_52_1r_81">
+		<!-- HP Regen increases by 0.33. Critical increases by 11.16. -->
+		<stats>
+			<add stat="regHp" val="0.33189" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2084" name="o_f_52_1r_82">
+		<!-- MP Regen increases by 0.14. CP Regen increases by 0.33. -->
+		<stats>
+			<add stat="regMp" val="0.143566" />
+			<add stat="regCp" val="0.33189" />
+		</stats>
+	</option>
+	<option id="2085" name="o_f_52_1r_83">
+		<!-- MP Regen increases by 0.14. Evasion increases by 1.03. -->
+		<stats>
+			<add stat="regMp" val="0.143566" />
+			<add stat="rEvas" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2086" name="o_f_52_1r_84">
+		<!-- MP Regen increases by 0.14. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="regMp" val="0.143566" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2087" name="o_f_52_1r_85">
+		<!-- MP Regen increases by 0.14. Critical increases by 11.2. -->
+		<stats>
+			<add stat="regMp" val="0.143566" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2088" name="o_f_52_1r_86">
+		<!-- CP Regen increases by 0.33. Evasion increases by 1.03. -->
+		<stats>
+			<add stat="regCp" val="0.33189" />
+			<add stat="rEvas" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2089" name="o_f_52_1r_87">
+		<!-- CP Regen increases by 0.33. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="regCp" val="0.33189" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2090" name="o_f_52_1r_88">
+		<!-- CP Regen increases by 0.33. Critical increases by 11.16. -->
+		<stats>
+			<add stat="regCp" val="0.33189" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2091" name="o_f_52_1r_89">
+		<!-- Evasion increases by 1.03. Accuracy increases by 1.03. -->
+		<stats>
+			<add stat="rEvas" val="1.030617" />
+			<add stat="accCombat" val="1.030617" />
+		</stats>
+	</option>
+	<option id="2092" name="o_f_52_1r_90">
+		<!-- Evasion increases by 1.03. Critical increases by 11.16. -->
+		<stats>
+			<add stat="rEvas" val="1.030617" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2093" name="o_f_52_1r_91">
+		<!-- Accuracy increases by 1.03. Critical increases by 11.16. -->
+		<stats>
+			<add stat="accCombat" val="1.030617" />
+			<add stat="critRate" val="11.159520876" />
+		</stats>
+	</option>
+	<option id="2094" name="o_f_55_1r_1">
+		<!-- P. Def. increases by 28.98. -->
+		<stats>
+			<add stat="pDef" val="28.982" />
+		</stats>
+	</option>
+	<option id="2095" name="o_f_55_1r_2">
+		<!-- M. Def. increases by 23.09. -->
+		<stats>
+			<add stat="mDef" val="23.091" />
+		</stats>
+	</option>
+	<option id="2096" name="o_f_55_1r_3">
+		<!-- Max HP increases by 115.93 -->
+		<stats>
+			<add stat="maxHp" val="115.928" />
+		</stats>
+	</option>
+	<option id="2097" name="o_f_55_1r_4">
+		<!-- Max HP increases by 36.81. -->
+		<stats>
+			<add stat="maxMp" val="36.808" />
+		</stats>
+	</option>
+	<option id="2098" name="o_f_55_1r_5">
+		<!-- Max CP increases by 160.1. -->
+		<stats>
+			<add stat="maxCp" val="160.0976" />
+		</stats>
+	</option>
+	<option id="2099" name="o_f_55_1r_6">
+		<!-- P. Atk. increases by 14.75. -->
+		<stats>
+			<add stat="pAtk" val="14.749" />
+		</stats>
+	</option>
+</list>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>32020</npc> <!-- Rafforty -->
+	</npcs>
+	<item>
+		<!-- Silver Ice Crystal -->
+		<ingredient count="23" id="8077" />
+		<!-- Crafted Leather -->
+		<production count="1" id="1894" />
+	</item>
+	<item>
+		<!-- Silver Ice Crystal -->
+		<ingredient count="6" id="8077" />
+		<!-- Coarse Bone Powder -->
+		<production count="1" id="1881" />
+	</item>
+	<item>
+		<!-- Silver Ice Crystal -->
+		<ingredient count="8" id="8077" />
+		<!-- Steel -->
+		<production count="1" id="1880" />
+	</item>
+	<item>
+		<!-- Black Ice Crystal -->
+		<ingredient count="1800" id="8078" />
+		<!-- Scroll: Enchant Weapon (A-Grade) -->
+		<production count="1" id="729" />
+	</item>
+	<item>
+		<!-- Black Ice Crystal -->
+		<ingredient count="240" id="8078" />
+		<!-- Scroll: Enchant Armor (A-Grade) -->
+		<production count="1" id="730" />
+	</item>
+	<item>
+		<!-- Black Ice Crystal -->
+		<ingredient count="500" id="8078" />
+		<!-- Scroll: Enchant Weapon (B-Grade) -->
+		<production count="1" id="947" />
+	</item>
+	<item>
+		<!-- Black Ice Crystal -->
+		<ingredient count="80" id="8078" />
+		<!-- Scroll: Enchant Armor (B-Grade) -->
+		<production count="1" id="948" />
+	</item>
+</list>

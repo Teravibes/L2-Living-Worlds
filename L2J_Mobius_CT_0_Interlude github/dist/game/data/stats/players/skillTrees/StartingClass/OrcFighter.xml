@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Orc Fighter -->
+	<skillTree type="classSkillTree" classId="44">
+		<skill skillName="Lucky" skillId="194" skillLevel="1" getLevel="1" autoGet="true" />
+		<skill skillName="Toughness" skillId="134" skillLevel="1" getLevel="1" autoGet="true" />
+		<skill skillName="Common Craft" skillId="1322" skillLevel="1" getLevel="1" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="1" getLevel="5" autoGet="true" />
+		<skill skillName="Weapon Mastery" skillId="141" skillLevel="1" getLevel="5" levelUpSp="190" learnedByNpc="true" />
+		<skill skillName="Armor Mastery" skillId="142" skillLevel="1" getLevel="5" levelUpSp="190" learnedByNpc="true" />
+		<skill skillName="Power Strike" skillId="3" skillLevel="1" getLevel="5" levelUpSp="60" learnedByNpc="true" />
+		<skill skillName="Power Strike" skillId="3" skillLevel="2" getLevel="5" levelUpSp="60" learnedByNpc="true" />
+		<skill skillName="Power Strike" skillId="3" skillLevel="3" getLevel="5" levelUpSp="60" learnedByNpc="true" />
+		<skill skillName="Iron Punch" skillId="29" skillLevel="1" getLevel="5" levelUpSp="60" learnedByNpc="true" />
+		<skill skillName="Iron Punch" skillId="29" skillLevel="2" getLevel="5" levelUpSp="60" learnedByNpc="true" />
+		<skill skillName="Iron Punch" skillId="29" skillLevel="3" getLevel="5" levelUpSp="60" learnedByNpc="true" />
+		<skill skillName="Relax" skillId="226" skillLevel="1" getLevel="5" levelUpSp="190" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="141" skillLevel="2" getLevel="10" levelUpSp="1300" learnedByNpc="true" />
+		<skill skillName="Armor Mastery" skillId="142" skillLevel="2" getLevel="10" levelUpSp="690" learnedByNpc="true" />
+		<skill skillName="Armor Mastery" skillId="142" skillLevel="3" getLevel="10" levelUpSp="690" learnedByNpc="true" />
+		<skill skillName="Power Strike" skillId="3" skillLevel="4" getLevel="10" levelUpSp="460" learnedByNpc="true" />
+		<skill skillName="Power Strike" skillId="3" skillLevel="5" getLevel="10" levelUpSp="460" learnedByNpc="true" />
+		<skill skillName="Power Strike" skillId="3" skillLevel="6" getLevel="10" levelUpSp="460" learnedByNpc="true" />
+		<skill skillName="Iron Punch" skillId="29" skillLevel="4" getLevel="10" levelUpSp="460" learnedByNpc="true" />
+		<skill skillName="Iron Punch" skillId="29" skillLevel="5" getLevel="10" levelUpSp="460" learnedByNpc="true" />
+		<skill skillName="Iron Punch" skillId="29" skillLevel="6" getLevel="10" levelUpSp="460" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="141" skillLevel="3" getLevel="15" levelUpSp="4000" learnedByNpc="true" />
+		<skill skillName="Armor Mastery" skillId="142" skillLevel="4" getLevel="15" levelUpSp="2000" learnedByNpc="true" />
+		<skill skillName="Armor Mastery" skillId="142" skillLevel="5" getLevel="15" levelUpSp="2000" learnedByNpc="true" />
+		<skill skillName="Power Strike" skillId="3" skillLevel="7" getLevel="15" levelUpSp="1300" learnedByNpc="true" />
+		<skill skillName="Power Strike" skillId="3" skillLevel="8" getLevel="15" levelUpSp="1300" learnedByNpc="true" />
+		<skill skillName="Power Strike" skillId="3" skillLevel="9" getLevel="15" levelUpSp="1300" learnedByNpc="true" />
+		<skill skillName="Iron Punch" skillId="29" skillLevel="7" getLevel="15" levelUpSp="1300" learnedByNpc="true" />
+		<skill skillName="Iron Punch" skillId="29" skillLevel="8" getLevel="15" levelUpSp="1300" learnedByNpc="true" />
+		<skill skillName="Iron Punch" skillId="29" skillLevel="9" getLevel="15" levelUpSp="1300" learnedByNpc="true" />
+		<skill skillName="Iron Body" skillId="295" skillLevel="1" getLevel="15" levelUpSp="4000" learnedByNpc="true" />
+
+		<skill skillName="Expertise D" skillId="239" skillLevel="1" getLevel="20" autoGet="true" />
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="2" getLevel="20" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="3" getLevel="28" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="4" getLevel="36" autoGet="true" />
+
+		<skill skillName="Expertise C" skillId="239" skillLevel="2" getLevel="40" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="5" getLevel="43" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="6" getLevel="49" autoGet="true" />
+
+		<skill skillName="Expertise B" skillId="239" skillLevel="3" getLevel="52" autoGet="true" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="1" getLevel="52" learnedByNpc="true">
+			<item id="8618" count="1" /> <!-- Ancient Book - Divine Inspiration (Modern Language Version) -->
+		</skill>
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="7" getLevel="55" autoGet="true" />
+
+		<skill skillName="Expertise A" skillId="239" skillLevel="4" getLevel="61" autoGet="true" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="2" getLevel="61" learnedByNpc="true">
+			<item id="8619" count="1" /> <!-- Ancient Book - Divine Inspiration (Original Language Version) -->
+		</skill>
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="8" getLevel="62" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="9" getLevel="70" autoGet="true" />
+
+		<skill skillName="Expertise S" skillId="239" skillLevel="5" getLevel="76" autoGet="true" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" learnedByNpc="true">
+			<item id="8620" count="1" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" learnedByNpc="true">
+			<item id="8621" count="1" /> <!-- Ancient Book - Divine Inspiration (Original Version) -->
+		</skill>
+	</skillTree>
+</list>

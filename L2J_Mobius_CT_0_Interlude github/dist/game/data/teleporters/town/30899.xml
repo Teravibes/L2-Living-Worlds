@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30899"> <!-- Flauen -->
+		<teleport type="NORMAL">
+			<location name="The Town of Giran" x="83314" y="148012" z="-3400" feeCount="7600" castleId="3" />
+			<location name="Town of Oren" x="83011" y="53207" z="-1470" feeCount="50000" castleId="4" />
+			<location name="The Town of Dion" x="15472" y="142880" z="-2699" feeCount="12000" castleId="2" />
+			<location name="Town of Aden" x="146705" y="25840" z="-2000" feeCount="59000" castleId="5" />
+			<location name="Town of Goddard" x="147596" y="-56294" z="-2776" feeCount="83000" castleId="7" />
+			<location name="Rune Township" x="43835" y="-47749" z="-792" feeCount="82000" castleId="8" />
+			<location name="Town of Schuttgart" x="87478" y="-142297" z="-1352" feeCount="100000" castleId="9" />
+			<location name="The Town of Gludio" x="-12694" y="122776" z="-3114" feeCount="47000" castleId="1" />
+			<location name="Giran Harbor" x="47935" y="186810" z="-3420" feeCount="7100" castleId="3" />
+			<location name="Field of Silence" x="91088" y="182384" z="-3192" feeCount="2500" />
+			<location name="Field of Whispers" x="74592" y="207656" z="-3032" feeCount="2300" />
+			<location name="Alligator Island" x="115583" y="192261" z="-3488" feeCount="2100" />
+			<location name="Garden of Eva" x="84413" y="234334" z="-3656" feeCount="2400" />
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeId="6651" feeCount="1" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeId="6651" feeCount="1" />
+			<location name="Field of Silence (Western Section)" x="69748" y="186111" z="-2872" feeId="6651" feeCount="1" />
+			<location name="Field of Whispers (Eastern Section)" x="97786" y="209303" z="-3040" feeId="6651" feeCount="1" />
+			<location name="The Center of Alligator Island" x="113708" y="178387" z="-3232" feeId="6651" feeCount="1" />
+			<location name="Inside the Garden of Eva" x="82693" y="242220" z="-6712" feeId="6651" feeCount="1" />
+			<location name="Garden of Eva - 2nd Level" x="79248" y="247390" z="-8816" feeId="6651" feeCount="1" />
+			<location name="Garden of Eva - 3rd Level" x="77868" y="250400" z="-9328" feeId="6651" feeCount="1" />
+			<location name="Garden of Eva - 4th Level" x="78721" y="253309" z="-9840" feeId="6651" feeCount="1" />
+			<location name="Garden of Eva - 5th Level" x="82570" y="252464" z="-10592" feeId="6651" feeCount="1" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeId="6651" feeCount="1" />
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeCount="1000" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeCount="1000" />
+			<location name="Field of Silence (Western Section)" x="69748" y="186111" z="-2872" feeCount="1000" />
+			<location name="Field of Whispers (Eastern Section)" x="97786" y="209303" z="-3040" feeCount="1000" />
+			<location name="The Center of Alligator Island" x="113708" y="178387" z="-3232" feeCount="1000" />
+			<location name="Inside the Garden of Eva" x="82693" y="242220" z="-6712" feeCount="1000" />
+			<location name="Garden of Eva - 2nd level" x="79248" y="247390" z="-8816" feeCount="1000" />
+			<location name="Garden of Eva - 3rd Level" x="77868" y="250400" z="-9328" feeCount="1000" />
+			<location name="Garden of Eva - 4th Level" x="78721" y="253309" z="-9840" feeCount="1000" />
+			<location name="Garden of Eva - 5th level" x="82570" y="252464" z="-10592" feeCount="1000" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeCount="1000" />
+		</teleport>
+	</npc>
+</list>

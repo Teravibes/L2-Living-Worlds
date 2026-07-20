@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance id="3050" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
+	<PvPInstance val="true" />
+	<exitPoint x="83425" y="148585" z="-3406" />
+	<doorlist>
+		<door id="24190001" />
+		<door id="24190002" />
+		<door id="24190003" />
+		<door id="24190004" />
+	</doorlist>
+	<spawnlist>
+		<group name="blue_team_spawn">
+			<npc id="82018" x="148487" y="46703" z="-3414" heading="297" /> <!-- Blue Team Spot -->
+		</group>
+		<group name="red_team_spawn">
+			<npc id="82018" x="150452" y="46714" z="-3414" heading="34490" /> <!-- Red Team Spot -->
+		</group>
+	</spawnlist>
+</instance>

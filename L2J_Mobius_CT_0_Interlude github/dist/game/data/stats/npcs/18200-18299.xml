@@ -1,0 +1,4022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="18200" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="lords_weakness" />
+			<param name="type" value="0" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18201" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="lords_pddown" />
+			<param name="type" value="1" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18202" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="lords_poison" />
+			<param name="type" value="2" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18203" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="lords_nonheal" />
+			<param name="type" value="3" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18204" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="savants_weakness" />
+			<param name="type" value="0" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18205" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="savants_pddown" />
+			<param name="type" value="1" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18206" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="savants_poison" />
+			<param name="type" value="2" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18207" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="savants_nonheal" />
+			<param name="type" value="3" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18208" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="magistrates_weakness" />
+			<param name="type" value="0" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18209" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="magistrates_pddown" />
+			<param name="type" value="1" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18210" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="magistrates_poison" />
+			<param name="type" value="2" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18211" level="81" type="Monster" name="Charm of Corner">
+		<parameters>
+			<param name="AreaName" value="magistrates_nonheal" />
+			<param name="type" value="3" />
+			<skill name="StatusEffect" id="4628" level="1" /> <!-- Mysterious Aura -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="126242" sp="15456" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="654.265638" magical="312.7728489192" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="578.52972" magical="350.461188" evasion="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4628" level="1" /> <!-- Mysterious Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="18212" level="81" type="Monster" name="Archon of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="ClanBuff1" id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" /> <!-- rhand: Monster Only(Ahrimanes) -->
+		<acquire exp="160990" sp="19710" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="791.661474" magical="457.930728288" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="478.1237352" magical="289.637364" evasion="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="185" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+	</npc>
+	<npc id="18213" level="81" type="Monster" name="Archon of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="ClanBuff1" id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" /> <!-- rhand: Monster Only(Ahrimanes) -->
+		<acquire exp="160990" sp="19710" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="791.661474" magical="457.930728288" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="478.1237352" magical="289.637364" evasion="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="185" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+	</npc>
+	<npc id="18214" level="81" type="Monster" name="Archon of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="ClanBuff1" id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" /> <!-- rhand: Monster Only(Ahrimanes) -->
+		<acquire exp="160990" sp="19710" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="791.661474" magical="457.930728288" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="478.1237352" magical="289.637364" evasion="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="185" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+	</npc>
+	<npc id="18215" level="81" type="Monster" name="Archon of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="ClanBuff1" id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" /> <!-- rhand: Monster Only(Ahrimanes) -->
+		<acquire exp="160990" sp="19710" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="791.661474" magical="457.930728288" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="478.1237352" magical="289.637364" evasion="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="185" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+	</npc>
+	<npc id="18216" level="81" type="Monster" name="Archon of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="ClanBuff1" id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" /> <!-- rhand: Monster Only(Ahrimanes) -->
+		<acquire exp="160990" sp="19710" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="791.661474" magical="457.930728288" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="478.1237352" magical="289.637364" evasion="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="185" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+	</npc>
+	<npc id="18217" level="81" type="Monster" name="Archon of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="ClanBuff1" id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" /> <!-- rhand: Monster Only(Ahrimanes) -->
+		<acquire exp="160990" sp="19710" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="791.661474" magical="457.930728288" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="478.1237352" magical="289.637364" evasion="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="185" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+	</npc>
+	<npc id="18218" level="81" type="Monster" name="Archon of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="ClanBuff1" id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" /> <!-- rhand: Monster Only(Ahrimanes) -->
+		<acquire exp="160990" sp="19710" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="791.661474" magical="457.930728288" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="478.1237352" magical="289.637364" evasion="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="185" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+	</npc>
+	<npc id="18219" level="81" type="Monster" name="Archon of Halisha">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="KeyBox" value="31455" /> <!-- Key Box -->
+			<skill name="PhysicalSpecial1" id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill name="RangeDDMagic1" id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill name="ClanBuff1" id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" /> <!-- rhand: Monster Only(Ahrimanes) -->
+		<acquire exp="160990" sp="19710" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="791.661474" magical="457.930728288" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="478.1237352" magical="289.637364" evasion="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="185" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4589" level="9" /> <!-- Decrease Speed -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+	</npc>
+	<npc id="18220" level="81" type="Monster" name="Shaman of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_SelfRangeDDMagic" id="4033" level="9" /> <!-- NPC Burn -->
+			<skill name="W_RangeDeBuff" id="4587" level="9" /> <!-- Decrease P. Atk. -->
+			<skill name="W_RangeHeal" id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
+		<acquire exp="52672" sp="6450" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1053.70182" magical="811.2522194028" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4033" level="9" /> <!-- NPC Burn -->
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4587" level="9" /> <!-- Decrease P.Atk -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18221" level="81" type="Monster" name="Shaman of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_SelfRangeDDMagic" id="4033" level="9" /> <!-- NPC Burn -->
+			<skill name="W_LongRangeDDMagic" id="4597" level="9" /> <!-- Bleed -->
+			<skill name="W_SelfRangeDeBuff" id="4600" level="9" /> <!-- Reducing P. Def Stun -->
+			<skill name="W_RangeHeal" id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
+		<acquire exp="54084" sp="6618" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1053.70182" magical="811.2522194028" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4033" level="9" /> <!-- NPC Burn -->
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4597" level="9" /> <!-- Bleed -->
+			<skill id="4600" level="9" /> <!-- Reducing P. Def Shock -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18222" level="81" type="Monster" name="Assassin of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="SelfBuff" value="0" />
+			<skill name="PhysicalSpecial" id="4560" level="9" /> <!-- NPC Fire Burn -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51241" sp="6270" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="41" />
+				<run ground="190" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4560" level="9" /> <!-- NPC Fire Burn -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="18223" level="81" type="Monster" name="Assassin of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<skill name="PhysicalSpecial1" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="38424" sp="4704" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="41" />
+				<run ground="190" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="18224" level="81" type="Monster" name="Assassin of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<skill name="PhysicalSpecial1" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill name="PhysicalSpecial2" id="4560" level="9" /> <!-- NPC Fire Burn -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51759" sp="6336" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="41" />
+				<run ground="190" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4560" level="9" /> <!-- NPC Fire Burn -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="18225" level="81" type="Monster" name="Assassin of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<skill name="PhysicalSpecial" id="4560" level="9" /> <!-- NPC Fire Burn -->
+			<!-- <skill name="SelfBuff" id="4091" level="1" /> --> <!-- NPC Ogre Spirit Totem -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="51241" sp="6270" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="41" />
+				<run ground="190" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4560" level="9" /> <!-- NPC Fire Burn -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="18226" level="81" type="Monster" name="Caster of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="114" />
+			<param name="MoveAroundSocial1" value="114" />
+			<param name="MoveAroundSocial2" value="114" />
+			<skill name="W_LongRangeDDMagic" id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="37902" sp="4638" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="70" />
+				<run ground="155" />
+			</speed>
+			<hitTime>740</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="18227" level="81" type="Monster" name="Caster of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="114" />
+			<param name="MoveAroundSocial1" value="114" />
+			<param name="MoveAroundSocial2" value="114" />
+			<skill name="W_LongRangeDDMagic" id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill name="W_ClanBuff" id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="65130" sp="7974" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="70" />
+				<run ground="155" />
+			</speed>
+			<hitTime>740</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="18228" level="81" type="Monster" name="Caster of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="114" />
+			<param name="MoveAroundSocial1" value="114" />
+			<param name="MoveAroundSocial2" value="114" />
+			<skill name="W_LongRangeDDMagic" id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill name="W_RangeDeBuff" id="4102" level="2" /> <!-- Surrender To Fire -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="48966" sp="5994" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="70" />
+				<run ground="155" />
+			</speed>
+			<hitTime>740</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4102" level="2" /> <!-- Surrender To Fire -->
+			<skill id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="18229" level="81" type="Monster" name="Caster of Darkness">
+		<parameters>
+			<param name="MoveAroundSocial" value="114" />
+			<param name="MoveAroundSocial1" value="114" />
+			<param name="MoveAroundSocial2" value="114" />
+			<skill name="W_SelfRangeDDMagic" id="4033" level="9" /> <!-- NPC Burn -->
+			<skill name="W_ShortRangeDDMagic" id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="50434" sp="6174" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="70" />
+				<run ground="155" />
+			</speed>
+			<hitTime>740</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4033" level="9" /> <!-- NPC Burn -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="18230" level="81" type="Monster" name="Signet of Emperor">
+		<parameters>
+			<param name="MoveAroundSocial" value="115" />
+			<param name="MoveAroundSocial1" value="115" />
+			<param name="MoveAroundSocial2" value="115" />
+			<skill name="SelfRangeDDMagic" id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="20851" sp="2553" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1542.7245" magical="1738.991176812" random="7" critical="8" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="245.3530746" magical="148.62981" evasion="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="60" />
+			</speed>
+			<hitTime>350</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB5</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
+	</npc>
+	<npc id="18231" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18232" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18233" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18234" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18235" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18236" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18237" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18238" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18239" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18240" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18241" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18242" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18243" level="81" type="Monster" name="Statue of Protection">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="PhysicalSpecial" id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill name="DeBuff" id="4620" level="9" /> <!-- Paralysis -->
+			<skill name="SelfRangeDDMagic" id="4072" level="9" /> <!-- Stun -->
+			<skill name="SelfBuff1" id="4616" level="1" /> <!-- Fake Petrificiation -->
+			<skill name="SelfBuff2" id="4383" level="1" /> <!-- NPC Hate Stone -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<equipment rhand="5795" /> <!-- rhand: Tomb Guard A -->
+		<acquire exp="62031" sp="7596" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow Weapons -->
+			<skill id="4072" level="9" /> <!-- Shock -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4383" level="1" /> <!-- NPC Hate Stone -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4616" level="1" /> <!-- Fake Petrificiation -->
+			<skill id="4620" level="9" /> <!-- Paralysis -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="18244" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18245" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18246" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB1</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18247" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18248" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18249" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB2</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18250" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18251" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18252" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB3</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18253" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="1274.97858" magical="1187.754369768" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.877222" magical="179.842014" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18254" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="870.827652" magical="554.0961810204" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="434.6579448" magical="263.306676" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18255" level="81" type="Monster" name="Watchman of Grave">
+		<parameters>
+			<skill name="afflict_skill1" id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill name="afflict_skill2" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="afflict_skill3" id="4606" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2975.2369188" hpRegen="26.163" mp="1742.976" mpRegen="3.0702" />
+			<attack physical="957.910356" magical="670.4563793364" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.2214376" magical="217.60884" evasion="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="1" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4606" level="9" /> <!-- Poison -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>TOMB4</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18256" level="85" type="Monster" name="Halisha's Treasure Box">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1.07" mp="1.07" />
+			<attack physical="1.07" magical="1.1449" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1.07" magical="1.07" evasion="7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="1370" max="2743" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0006">
+					<item id="2500" min="1" max="1" chance="33.3333" /> <!-- Dark Legion's Edge -->
+					<item id="151" min="1" max="1" chance="33.3333" /> <!-- Sword of Miracles -->
+					<item id="81" min="1" max="1" chance="33.3333" /> <!-- Dragon Slayer -->
+				</group>
+				<group chance="6.9672">
+					<item id="5545" min="1" max="1" chance="0.63153" /> <!-- Dark Legion's Edge Blade -->
+					<item id="5529" min="1" max="1" chance="0.63153" /> <!-- Dragon Slayer Edge -->
+					<item id="5546" min="1" max="1" chance="0.69325" /> <!-- Sword of Miracles Edge -->
+					<item id="1895" min="1" max="1" chance="78.7375" /> <!-- Metallic Fiber -->
+					<item id="959" min="1" max="1" chance="0.01148" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="4042" min="1" max="1" chance="4.59439" /> <!-- Enria -->
+					<item id="4043" min="1" max="1" chance="9.18733" /> <!-- Asofe -->
+					<item id="4040" min="1" max="1" chance="5.51298" /> <!-- Mold Lubricant -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18257" level="52" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3365.21163635201" hpRegen="3.21" mp="1976.076" mpRegen="3.21" />
+			<attack physical="1051.86125409763" magical="768.56482605536" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.609375916493" magical="242.075013751218" evasion="7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18258" level="52" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3365.21163635201" hpRegen="3.21" mp="1976.076" mpRegen="3.21" />
+			<attack physical="1051.86125409763" magical="768.56482605536" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.609375916493" magical="242.075013751218" evasion="7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18259" level="52" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3365.21163635201" hpRegen="3.21" mp="1976.076" mpRegen="3.21" />
+			<attack physical="1051.86125409763" magical="768.56482605536" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.609375916493" magical="242.075013751218" evasion="7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18260" level="52" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3365.21163635201" hpRegen="3.21" mp="1976.076" mpRegen="3.21" />
+			<attack physical="1051.86125409763" magical="768.56482605536" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.609375916493" magical="242.075013751218" evasion="7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18261" level="52" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3365.21163635201" hpRegen="3.21" mp="1976.076" mpRegen="3.21" />
+			<attack physical="1051.86125409763" magical="768.56482605536" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.609375916493" magical="242.075013751218" evasion="7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18262" level="52" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3365.21163635201" hpRegen="3.21" mp="1976.076" mpRegen="3.21" />
+			<attack physical="1051.86125409763" magical="768.56482605536" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.609375916493" magical="242.075013751218" evasion="7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18263" level="52" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3365.21163635201" hpRegen="3.21" mp="1976.076" mpRegen="3.21" />
+			<attack physical="1051.86125409763" magical="768.56482605536" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.609375916493" magical="242.075013751218" evasion="7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18264" level="52" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3365.21163635201" hpRegen="3.21" mp="1976.076" mpRegen="3.21" />
+			<attack physical="1051.86125409763" magical="768.56482605536" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.609375916493" magical="242.075013751218" evasion="7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18265" level="21" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="376.063268689487" hpRegen="1.5" mp="205.2" mpRegen="1.5" />
+			<attack physical="47.919244061454" magical="32.7226319401133" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="92.6271011629928" magical="56.1115632895055" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="480" max="858" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.4902">
+					<item id="955" min="1" max="1" chance="10.7157" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="89.2843" /> <!-- Scroll: Enchant Armor (Grade D) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1864" min="1" max="1" chance="100" /> <!-- Stem -->
+				<item id="1864" min="1" max="1" chance="87.9656" /> <!-- Stem -->
+				<item id="1869" min="1" max="1" chance="93.9828" /> <!-- Iron Ore -->
+				<item id="1926" min="1" max="1" chance="9.4932" /> <!-- Piece Bone Breastplate Fragment -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18266" level="24" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="449.397334531729" hpRegen="1.5" mp="245.52" mpRegen="1.5" />
+			<attack physical="60.1968712618897" magical="41.1066597737442" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="101.895537364058" magical="61.7261883679349" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="483" max="891" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.5977">
+					<item id="955" min="1" max="1" chance="10.7152" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="89.2848" /> <!-- Scroll: Enchant Armor (Grade D) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="2151" min="1" max="1" chance="30.5968" /> <!-- Recipe: Necklace of Devotion -->
+				<item id="1928" min="1" max="1" chance="16.0004" /> <!-- Piece Bone Gaiters Fragment -->
+				<item id="2176" min="1" max="1" chance="52.5564" /> <!-- Recipe: Leather Boots -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18267" level="27" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="531.808581237041" hpRegen="1.5" mp="286.92" mpRegen="1.5" />
+			<attack physical="74.9912095047522" magical="51.2092750090322" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="111.783212013997" magical="67.7159351522403" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="484" max="932" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.6446">
+					<item id="955" min="1" max="1" chance="10.7145" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="89.2855" /> <!-- Scroll: Enchant Armor (Grade D) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1899" min="1" max="1" chance="19.8352" /> <!-- Necklace of Devotion Chain -->
+				<item id="1871" min="1" max="1" chance="100" /> <!-- Charcoal -->
+				<item id="1871" min="1" max="1" chance="26.9448" /> <!-- Charcoal -->
+				<item id="5220" min="1" max="1" chance="5.078" /> <!-- Metal Hardener -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18268" level="30" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="623.584092631874" hpRegen="1.5" mp="329.4" mpRegen="1.5" />
+			<attack physical="92.6422612424255" magical="63.2626552465637" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="122.288315384748" magical="74.0797073634453" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="708" max="1417" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="5.4171">
+					<item id="955" min="1" max="1" chance="10.7142" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="89.2858" /> <!-- Scroll: Enchant Armor (Grade D) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1061" min="1" max="1" chance="88.5052" /> <!-- Healing Potion -->
+				<item id="1900" min="1" max="1" chance="15.9772" /> <!-- Enchanted Necklace Chain -->
+				<item id="2250" min="1" max="1" chance="36.5084" /> <!-- Recipe: Bone Arrow -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18269" level="33" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="724.871874675055" hpRegen="1.8" mp="372.96" mpRegen="1.8" />
+			<attack physical="113.490654511985" magical="77.4994052801751" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="133.402537046416" magical="80.8124707220912" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="732" max="1465" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="5.5432">
+					<item id="955" min="1" max="1" chance="10.7158" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="89.2842" /> <!-- Scroll: Enchant Armor (Grade D) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1901" min="1" max="1" chance="24.0608" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="2154" min="1" max="1" chance="18.6508" /> <!-- Recipe: Elven Earring -->
+				<item id="1938" min="1" max="1" chance="11.7108" /> <!-- Mithril Banded Mail Material -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18270" level="36" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="835.657991997797" hpRegen="1.8" mp="417.6" mpRegen="1.8" />
+			<attack physical="137.864667408402" magical="94.1436964941632" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="145.110489684918" magical="87.9049039361612" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="758" max="1520" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="5.752">
+					<item id="955" min="1" max="1" chance="10.7145" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="89.2855" /> <!-- Scroll: Enchant Armor (Grade D) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1864" min="2" max="6" chance="100" /> <!-- Stem -->
+				<item id="1864" min="1" max="3" chance="4.9668" /> <!-- Stem -->
+				<item id="1880" min="1" max="1" chance="20.4968" /> <!-- Steel -->
+				<item id="1939" min="1" max="1" chance="18.0032" /> <!-- Mithril Banded Gaiters Material -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18271" level="39" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="955.745616539336" hpRegen="1.8" mp="463.32" mpRegen="1.8" />
+			<attack physical="166.064758291296" magical="113.400702999844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="157.389194069391" magical="95.3430865027814" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="789" max="1572" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="5.9154">
+					<item id="955" min="1" max="1" chance="10.7144" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="89.2856" /> <!-- Scroll: Enchant Armor (Grade D) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="2157" min="1" max="1" chance="19.7684" /> <!-- Recipe: Omen Beast's Eye Earring -->
+				<item id="1902" min="1" max="1" chance="24.2352" /> <!-- Elven Earring Beads -->
+				<item id="2158" min="1" max="1" chance="29.604" /> <!-- Recipe: Mithril Ring -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18272" level="42" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1084.73699369686" hpRegen="2.1" mp="531" mpRegen="2.1" />
+			<attack physical="198.345907305602" magical="135.444543183224" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="170.207642394119" magical="103.108234870087" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="1257" max="2519" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.8025">
+					<item id="951" min="1" max="1" chance="12" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="1" max="1" chance="88" /> <!-- Scroll: Enchant Armor (Grade C) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1905" min="1" max="1" chance="26.8516" /> <!-- Omen Beast's Eye Earring Gemstone -->
+				<item id="1871" min="2" max="2" chance="100" /> <!-- Charcoal -->
+				<item id="1871" min="1" max="1" chance="76.0332" /> <!-- Charcoal -->
+				<item id="1866" min="1" max="1" chance="100" /> <!-- Suede -->
+				<item id="1866" min="1" max="1" chance="84.0224" /> <!-- Suede -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18273" level="45" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1222.01933711761" hpRegen="2.1" mp="610.8" mpRegen="2.1" />
+			<attack physical="234.898291890002" magical="160.405083582293" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="183.526457130741" magical="111.176494647742" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="1293" max="2582" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.836">
+					<item id="951" min="1" max="1" chance="12.0021" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="1" max="1" chance="87.9979" /> <!-- Scroll: Enchant Armor (Grade C) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="4553" min="1" max="1" chance="1.2688" /> <!-- Greater Dye of STR <Str+1 Con-1> -->
+				<item id="1908" min="1" max="1" chance="30.038" /> <!-- Moonstone Earring Wire -->
+				<item id="2163" min="1" max="1" chance="16.1836" /> <!-- Recipe: Earring of Protection -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18274" level="48" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1366.75562200403" hpRegen="2.1" mp="692.4" mpRegen="2.1" />
+			<attack physical="275.827045436369" magical="188.354116675298" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="197.297661947999" magical="119.518802878289" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="1330" max="2656" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.8763">
+					<item id="951" min="1" max="1" chance="12.0011" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="1" max="1" chance="87.9989" /> <!-- Scroll: Enchant Armor (Grade C) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1966" min="1" max="1" chance="13.1788" /> <!-- Plated Leather Fragment -->
+				<item id="2166" min="1" max="1" chance="12.236" /> <!-- Recipe: Earrings of Binding (100%) -->
+				<item id="1967" min="1" max="1" chance="19.6872" /> <!-- Plated Leather Gaiters Material -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18275" level="51" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1517.88115502146" hpRegen="2.4" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.132066836175" magical="219.291573418222" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="211.464580155089" magical="128.100826028764" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="1952" max="3909" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="5.5982">
+					<item id="951" min="1" max="1" chance="12.0003" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="1" max="1" chance="87.9997" /> <!-- Scroll: Enchant Armor (Grade C) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1878" min="1" max="1" chance="100" /> <!-- Braided Hemp -->
+				<item id="1878" min="1" max="1" chance="63.6268" /> <!-- Braided Hemp -->
+				<item id="1884" min="2" max="2" chance="100" /> <!-- Cord -->
+				<item id="1884" min="1" max="1" chance="51.7332" /> <!-- Cord -->
+				<item id="4601" min="1" max="1" chance="0.9092" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18276" level="54" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1674.10665553836" hpRegen="2.4" mp="861" mpRegen="2.4" />
+			<attack physical="370.689038937507" magical="253.132561311492" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="225.961874482666" magical="136.882984193537" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="1997" max="3995" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.0644">
+					<item id="947" min="1" max="1" chance="13.7918" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+					<item id="948" min="1" max="1" chance="86.2082" /> <!-- Scroll: Enchant Armor (Grade B) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1984" min="1" max="1" chance="9.8744" /> <!-- Theca Leather Armor Pattern -->
+				<item id="4126" min="1" max="1" chance="7.6012" /> <!-- Recipe: Adamantite Earrings -->
+				<item id="1985" min="1" max="1" chance="15.884" /> <!-- Theca Leather Gaiters Pattern -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18277" level="57" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1833.9283898078" hpRegen="2.4" mp="948" mpRegen="2.4" />
+			<attack physical="424.232953977617" magical="289.696114406012" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.715739831843" magical="145.820567650029" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="2049" max="4095" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.039">
+					<item id="947" min="1" max="1" chance="13.7921" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+					<item id="948" min="1" max="1" chance="86.2079" /> <!-- Scroll: Enchant Armor (Grade B) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="4129" min="1" max="1" chance="5.5856" /> <!-- Recipe: Earrings of Black Ore -->
+				<item id="4049" min="1" max="1" chance="27.0704" /> <!-- Adamantite Earring Gemstone -->
+				<item id="947" min="1" max="1" chance="0.2064" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18278" level="60" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1995.64566170597" hpRegen="2.4" mp="1036.8" mpRegen="2.4" />
+			<attack physical="481.345512250945" magical="328.696588226919" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="255.644257913984" magical="154.86395213652" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="2683" max="5361" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.3609">
+					<item id="947" min="1" max="1" chance="13.7923" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+					<item id="948" min="1" max="1" chance="86.2077" /> <!-- Scroll: Enchant Armor (Grade B) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1867" min="2" max="10" chance="100" /> <!-- Animal Skin -->
+				<item id="1867" min="1" max="5" chance="55.5704" /> <!-- Animal Skin -->
+				<item id="1872" min="2" max="10" chance="100" /> <!-- Animal Bone -->
+				<item id="1872" min="1" max="5" chance="55.5704" /> <!-- Animal Bone -->
+				<item id="4613" min="1" max="1" chance="0.7932" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18279" level="63" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2157.38568876994" hpRegen="2.7" mp="1127.4" mpRegen="2.7" />
+			<attack physical="541.447737693314" magical="369.738617174833" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="270.657919510939" magical="163.958914671767" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="2736" max="5473" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.3885">
+					<item id="947" min="1" max="1" chance="13.7991" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+					<item id="948" min="1" max="1" chance="86.2009" /> <!-- Scroll: Enchant Armor (Grade B) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="4052" min="1" max="1" chance="22.614" /> <!-- Earring of Black Ore Piece -->
+				<item id="5230" min="1" max="1" chance="0.8516" /> <!-- Recipe: Mithril Arrow (100%) -->
+				<item id="4053" min="1" max="1" chance="27.378" /> <!-- Ring of Black Ore Gemstone -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18280" level="66" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2317.13559141445" hpRegen="2.7" mp="1219.8" mpRegen="2.7" />
+			<attack physical="603.799026906932" magical="412.316465133206" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="285.660316465035" magical="173.047053464993" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="2790" max="5576" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.461">
+					<item id="729" min="1" max="1" chance="11.7787" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+					<item id="730" min="1" max="1" chance="88.2213" /> <!-- Scroll: Enchant Armor (Grade A) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="5438" min="1" max="1" chance="0.3864" /> <!-- Recipe: Meteor Shower(60%) -->
+				<item id="4054" min="1" max="1" chance="13.9208" /> <!-- Necklace of Black Ore Beads -->
+				<item id="5550" min="1" max="1" chance="9.4236" /> <!-- Durable Metal Plate -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18281" level="69" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2472.78090975059" hpRegen="2.7" mp="1314" mpRegen="2.7" />
+			<attack physical="667.503610065512" magical="455.818437428996" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="300.549001539213" magical="182.066307912763" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="2849" max="5701" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.4712">
+					<item id="729" min="1" max="1" chance="11.7784" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+					<item id="730" min="1" max="1" chance="88.2216" /> <!-- Scroll: Enchant Armor (Grade A) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1874" min="1" max="1" chance="51.9132" /> <!-- Oriharukon Ore -->
+				<item id="5478" min="1" max="1" chance="6.548" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5434" min="1" max="1" chance="0.2884" /> <!-- Recipe: Dragon Slayer(60%) -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18282" level="72" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2622.14975164374" hpRegen="3" mp="1410" mpRegen="3" />
+			<attack physical="731.525056113249" magical="499.536786003261" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="315.216510067462" magical="190.951578227804" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4789" level="2" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="4009" max="8028" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.6635">
+					<item id="729" min="1" max="1" chance="11.7709" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+					<item id="730" min="1" max="1" chance="88.2291" /> <!-- Scroll: Enchant Armor (Grade A) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="5479" min="1" max="1" chance="5.0588" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="5440" min="1" max="1" chance="0.3168" /> <!-- Recipe: Elysian(60%) -->
+				<item id="5482" min="1" max="1" chance="11.2844" /> <!-- Sealed Dark Crystal Leggings Design -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18283" level="75" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2763.06138388172" hpRegen="3" mp="1507.8" mpRegen="3" />
+			<attack physical="794.709014189014" magical="542.683238855925" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="329.551532957763" magical="199.635435691959" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4789" level="4" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="4078" max="8168" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.3146">
+					<item id="959" min="1" max="1" chance="9.09091" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (Grade S) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="1" chance="62.3424" /> <!-- Stone of Purity -->
+				<item id="4041" min="1" max="1" chance="8.1316" /> <!-- Mold Hardener -->
+				<item id="5480" min="1" max="1" chance="4.196" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18284" level="78" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2893.37782205212" hpRegen="3" mp="1607.4" mpRegen="3" />
+			<attack physical="855.813872406402" magical="584.409936018261" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="343.440226241281" magical="208.048916072236" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4789" level="5" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="4146" max="8295" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.3195">
+					<item id="959" min="1" max="1" chance="9.10798" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="90.892" /> <!-- Scroll: Enchant Armor (Grade S) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="6901" min="1" max="1" chance="1.0188" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="5481" min="1" max="1" chance="4.5716" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="1808" min="1" max="1" chance="0.4528" /> <!-- Recipe: Soulshot: S Grade -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18285" level="81" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3101.38847262351" hpRegen="3.09" mp="1760.064" mpRegen="3.1003" />
+			<attack physical="967.301634" magical="683.6670250269" random="50" critical="1" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="374.4526066" magical="226.835561" evasion="4" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5312" max="10638" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.4097">
+					<item id="959" min="1" max="1" chance="9.10422" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="90.8958" /> <!-- Scroll: Enchant Armor (Grade S) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="5487" min="1" max="1" chance="4.98" /> <!-- Sealed Nightmare Robe Fabric -->
+				<item id="4039" min="1" max="1" chance="36.8624" /> <!-- Mold Glue -->
+				<item id="4041" min="1" max="1" chance="9.6164" /> <!-- Mold Hardener -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18286" level="84" type="Chest" name="Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3301.05636251825" hpRegen="3.18" mp="1920.72" mpRegen="3.18" />
+			<attack physical="1024.61236488433" magical="741.658070600305" random="50" critical="1" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="391.584384310193" magical="237.213641422467" evasion="6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4789" level="8" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5393" max="10798" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.4158">
+					<item id="959" min="1" max="1" chance="9.09091" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (Grade S) -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="6688" min="1" max="1" chance="2.5784" /> <!-- Forgotten Blade Edge -->
+				<item id="6689" min="1" max="1" chance="2.53" /> <!-- Basalt Battlehammer Head -->
+				<item id="6690" min="1" max="1" chance="2.5836" /> <!-- Imperial Staff Head -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18287" level="33" type="Chest" name="Otherworldly Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
+			<attack physical="113.49065" magical="77.49941" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="129.23095" magical="78.2854098527333" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="186" max="372" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.4068">
+					<item id="955" min="1" max="1" chance="10.7194" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="89.2806" /> <!-- Scroll: Enchant Armor (Grade D) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18288" level="35" type="Chest" name="Otherworldly Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
+			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="136.72948" magical="82.8278636923005" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="207" max="413" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.5677">
+					<item id="955" min="1" max="1" chance="10.7163" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+					<item id="956" min="1" max="1" chance="89.2837" /> <!-- Scroll: Enchant Armor (Grade D) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18289" level="43" type="Chest" name="Dimension Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
+			<attack physical="210.04832" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="169.13417" magical="102.457951526758" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="308" max="617" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.9324">
+					<item id="951" min="1" max="1" chance="12.0013" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="1" max="1" chance="87.9987" /> <!-- Scroll: Enchant Armor (Grade C) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18290" level="45" type="Chest" name="Dimension Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="177.78746" magical="107.69993220446" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="338" max="676" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.0038">
+					<item id="951" min="1" max="1" chance="12.0044" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="1" max="1" chance="87.9956" /> <!-- Scroll: Enchant Armor (Grade C) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18291" level="53" type="Chest" name="Purgatory Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
+			<attack physical="353.71092" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="214.18326" magical="129.747742025171" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="472" max="944" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.2515">
+					<item id="947" min="1" max="1" chance="13.7972" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+					<item id="948" min="1" max="1" chance="86.2028" /> <!-- Scroll: Enchant Armor (Grade B) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18292" level="55" type="Chest" name="Purgatory Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="135.474142874948" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="519" max="1010" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.2717">
+					<item id="947" min="1" max="1" chance="13.802" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+					<item id="948" min="1" max="1" chance="86.198" /> <!-- Scroll: Enchant Armor (Grade B) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18293" level="63" type="Chest" name="Forbidden Path Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2089.92274" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
+			<attack physical="541.44774" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="262.19426" magical="158.831806262641" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="681" max="1361" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.1126">
+					<item id="729" min="1" max="1" chance="11.8117" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+					<item id="730" min="1" max="1" chance="88.1883" /> <!-- Scroll: Enchant Armor (Grade A) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18294" level="65" type="Chest" name="Forbidden Path Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="271.89033" magical="164.705480236154" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="728" max="1457" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.1205">
+					<item id="729" min="1" max="1" chance="11.7842" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+					<item id="730" min="1" max="1" chance="88.2158" /> <!-- Scroll: Enchant Armor (Grade A) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18295" level="73" type="Chest" name="Dark Omen Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
+			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="310.02959" magical="187.809451297099" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="938" max="1879" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.1553">
+					<item id="729" min="1" max="1" chance="11.7836" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+					<item id="730" min="1" max="1" chance="88.2164" /> <!-- Scroll: Enchant Armor (Grade A) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18296" level="75" type="Chest" name="Dark Omen Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="193.392693413113" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="995" max="1993" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0768">
+					<item id="959" min="1" max="1" chance="9.11458" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="90.8854" /> <!-- Scroll: Enchant Armor (Grade S) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18297" level="83" type="Chest" name="Messenger Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3134.442675" hpRegen="8.925" mp="1866.27" mpRegen="3.15" />
+			<attack physical="997.0002105" magical="714.862995525" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="371.554512" magical="225.079967926901" evasion="5" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="1239" max="2481" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0956">
+					<item id="959" min="1" max="1" chance="9.10042" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="90.8996" /> <!-- Scroll: Enchant Armor (Grade S) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18298" level="85" type="Chest" name="Messenger Invader Food">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3259.9791329" hpRegen="9.095" mp="1976.076" mpRegen="3.21" />
+			<attack physical="1051.861253" magical="768.564821172" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="387.1133098" magical="234.505158381112" evasion="7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SSQ</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="1301" max="2604" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.1004">
+					<item id="959" min="1" max="1" chance="9.16335" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="90.8367" /> <!-- Scroll: Enchant Armor (Grade S) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18299" level="35" type="Folk" name="Flame of the Branded">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4614" level="4" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="4893" sp="288" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2318.21406" hpRegen="13.5" mp="402.6" mpRegen="1.8" />
+			<attack physical="129.32896" magical="88.31491" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="136.72948" magical="82.8278636923005" />
+			<speed>
+				<walk ground="48" />
+				<run ground="30" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4444" level="2" /> <!-- Greater Resist Bow Weapons -->
+			<skill id="4614" level="4" /> <!-- NPC Death Bomb -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="13" />
+		</collision>
+	</npc>
+</list>

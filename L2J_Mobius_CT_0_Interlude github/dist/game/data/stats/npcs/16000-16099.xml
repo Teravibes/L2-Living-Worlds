@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="16013" level="67" type="TamedBeast" name="Trained Buffalo">
+		<parameters>
+			<skill name="Buff1" id="5186" level="1" /> <!-- Pet Haste -->
+			<skill name="Buff2" id="5187" level="1" /> <!-- Pet Vampiric Rage -->
+			<skill name="Buff3" id="5188" level="1" /> <!-- Pet Regeneration -->
+			<skill name="Buff4" id="5189" level="1" /> <!-- Pet Blessed Body -->
+			<skill name="Buff5" id="5191" level="1" /> <!-- Pet Guidance -->
+			<skill name="DeBuff1" id="5196" level="2" /> <!-- Pet Wind Shackle -->
+			<skill name="DeBuff2" id="5197" level="2" /> <!-- Pet Hex -->
+			<skill name="Heal" id="5195" level="3" /> <!-- Pet Greater Heal -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="5197" level="2" /> <!-- Pet Hex -->
+			<skill id="5188" level="1" /> <!-- Pet Regeneration -->
+			<skill id="5189" level="1" /> <!-- Pet Blessed Body -->
+			<skill id="5186" level="1" /> <!-- Pet Haste -->
+			<skill id="5196" level="2" /> <!-- Pet Wind Shackle -->
+			<skill id="5195" level="3" /> <!-- Pet Greater Heal -->
+			<skill id="5191" level="1" /> <!-- Pet Guidance -->
+			<skill id="5187" level="1" /> <!-- Pet Vampiric Rage -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="22" grown="27" />
+			<height normal="31" grown="38" />
+		</collision>
+	</npc>
+	<npc id="16014" level="67" type="TamedBeast" name="Trained Buffalo">
+		<parameters>
+			<skill name="Buff1" id="5192" level="1" /> <!-- Pet Wind Walk -->
+			<skill name="Buff2" id="5193" level="1" /> <!-- Pet Acumen -->
+			<skill name="Buff3" id="5201" level="1" /> <!-- Pet Concentration -->
+			<skill name="Buff4" id="5194" level="1" /> <!-- Pet Empower -->
+			<skill name="Buff5" id="5190" level="1" /> <!-- Pet Blessed Soul -->
+			<skill name="DeBuff1" id="5198" level="2" /> <!-- Pet Slow -->
+			<skill name="DeBuff2" id="5199" level="2" /> <!-- Pet Curse Gloom -->
+			<skill name="Heal" id="5200" level="2" /> <!-- Pet Recharge -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="5200" level="2" /> <!-- Pet Recharge -->
+			<skill id="5190" level="1" /> <!-- Pet Blessed Soul -->
+			<skill id="5194" level="1" /> <!-- Pet Empower -->
+			<skill id="5201" level="1" /> <!-- Pet Concentration -->
+			<skill id="5193" level="1" /> <!-- Pet Acumen -->
+			<skill id="5198" level="2" /> <!-- Pet Slow -->
+			<skill id="5192" level="1" /> <!-- Pet Wind Walk -->
+			<skill id="5199" level="2" /> <!-- Pet Curse Gloom -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="22" grown="27" />
+			<height normal="31" grown="38" />
+		</collision>
+	</npc>
+	<npc id="16015" level="69" type="TamedBeast" name="Trained Cougar">
+		<parameters>
+			<skill name="Buff1" id="5186" level="1" /> <!-- Pet Haste -->
+			<skill name="Buff2" id="5187" level="1" /> <!-- Pet Vampiric Rage -->
+			<skill name="Buff3" id="5188" level="1" /> <!-- Pet Regeneration -->
+			<skill name="Buff4" id="5189" level="1" /> <!-- Pet Blessed Body -->
+			<skill name="Buff5" id="5191" level="1" /> <!-- Pet Guidance -->
+			<skill name="DeBuff1" id="5196" level="3" /> <!-- Pet Wind Shackle -->
+			<skill name="DeBuff2" id="5197" level="3" /> <!-- Pet Hex -->
+			<skill name="Heal" id="5195" level="3" /> <!-- Pet Greater Heal -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="213.05139" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="5197" level="3" /> <!-- Pet Hex -->
+			<skill id="5188" level="1" /> <!-- Pet Regeneration -->
+			<skill id="5189" level="1" /> <!-- Pet Blessed Body -->
+			<skill id="5186" level="1" /> <!-- Pet Haste -->
+			<skill id="5196" level="3" /> <!-- Pet Wind Shackle -->
+			<skill id="5195" level="3" /> <!-- Pet Greater Heal -->
+			<skill id="5191" level="1" /> <!-- Pet Guidance -->
+			<skill id="5187" level="1" /> <!-- Pet Vampiric Rage -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="34" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="16016" level="69" type="TamedBeast" name="Trained Cougar">
+		<parameters>
+			<skill name="Buff1" id="5192" level="1" /> <!-- Pet Wind Walk -->
+			<skill name="Buff2" id="5193" level="1" /> <!-- Pet Acumen -->
+			<skill name="Buff3" id="5201" level="2" /> <!-- Pet Concentration -->
+			<skill name="Buff4" id="5194" level="1" /> <!-- Pet Empower -->
+			<skill name="Buff5" id="5190" level="1" /> <!-- Pet Blessed Soul -->
+			<skill name="DeBuff1" id="5198" level="3" /> <!-- Pet Slow -->
+			<skill name="DeBuff2" id="5199" level="3" /> <!-- Pet Curse Gloom -->
+			<skill name="Heal" id="5200" level="3" /> <!-- Pet Recharge -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="213.05139" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="5200" level="3" /> <!-- Pet Recharge -->
+			<skill id="5190" level="1" /> <!-- Pet Blessed Soul -->
+			<skill id="5194" level="1" /> <!-- Pet Empower -->
+			<skill id="5201" level="2" /> <!-- Pet Concentration -->
+			<skill id="5193" level="1" /> <!-- Pet Acumen -->
+			<skill id="5198" level="3" /> <!-- Pet Slow -->
+			<skill id="5192" level="1" /> <!-- Pet Wind Walk -->
+			<skill id="5199" level="3" /> <!-- Pet Curse Gloom -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="34" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="16017" level="65" type="TamedBeast" name="Trained Kookaburra">
+		<parameters>
+			<skill name="Buff1" id="5186" level="1" /> <!-- Pet Haste -->
+			<skill name="Buff2" id="5187" level="1" /> <!-- Pet Vampiric Rage -->
+			<skill name="Buff3" id="5188" level="1" /> <!-- Pet Regeneration -->
+			<skill name="Buff4" id="5189" level="1" /> <!-- Pet Blessed Body -->
+			<skill name="Buff5" id="5191" level="1" /> <!-- Pet Guidance -->
+			<skill name="DeBuff1" id="5196" level="1" /> <!-- Pet Wind Shackle -->
+			<skill name="DeBuff2" id="5197" level="1" /> <!-- Pet Hex -->
+			<skill name="Heal" id="5195" level="3" /> <!-- Pet Greater Heal -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<attack physical="582.81759" magical="397.98887" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="271.89033" magical="198.95754" />
+			<speed>
+				<walk ground="23" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="5197" level="1" /> <!-- Pet Hex -->
+			<skill id="5188" level="1" /> <!-- Pet Regeneration -->
+			<skill id="5189" level="1" /> <!-- Pet Blessed Body -->
+			<skill id="5186" level="1" /> <!-- Pet Haste -->
+			<skill id="5196" level="1" /> <!-- Pet Wind Shackle -->
+			<skill id="5195" level="3" /> <!-- Pet Greater Heal -->
+			<skill id="5191" level="1" /> <!-- Pet Guidance -->
+			<skill id="5187" level="1" /> <!-- Pet Vampiric Rage -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="16018" level="65" type="TamedBeast" name="Trained Kookaburra">
+		<parameters>
+			<skill name="Buff1" id="5192" level="1" /> <!-- Pet Wind Walk -->
+			<skill name="Buff2" id="5193" level="1" /> <!-- Pet Acumen -->
+			<skill name="Buff3" id="5201" level="1" /> <!-- Pet Concentration -->
+			<skill name="Buff4" id="5194" level="1" /> <!-- Pet Empower -->
+			<skill name="Buff5" id="5190" level="1" /> <!-- Pet Blessed Soul -->
+			<skill name="DeBuff1" id="5198" level="1" /> <!-- Pet Slow -->
+			<skill name="DeBuff2" id="5199" level="1" /> <!-- Pet Curse Gloom -->
+			<skill name="Heal" id="5200" level="1" /> <!-- Pet Recharge -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<attack physical="582.81759" magical="397.98887" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="271.89033" magical="198.95754" />
+			<speed>
+				<walk ground="23" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="5200" level="1" /> <!-- Pet Recharge -->
+			<skill id="5190" level="1" /> <!-- Pet Blessed Soul -->
+			<skill id="5194" level="1" /> <!-- Pet Empower -->
+			<skill id="5201" level="1" /> <!-- Pet Concentration -->
+			<skill id="5193" level="1" /> <!-- Pet Acumen -->
+			<skill id="5198" level="1" /> <!-- Pet Slow -->
+			<skill id="5192" level="1" /> <!-- Pet Wind Walk -->
+			<skill id="5199" level="1" /> <!-- Pet Curse Gloom -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="16019" level="99" type="Monster" name="Tiny Baby Buffalo">
+		<parameters>
+			<param name="MoveAroundSocial" value="70" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="70" />
+			<skill name="FeedID1" id="2188" level="1" /> <!-- Golden Spice -->
+			<param name="silhouette1" value="16019" /> <!-- Tiny Baby Buffalo -->
+			<param name="ai_type1" value="mon_tiny_buffalo" />
+			<param name="silhouette2" value="16019" /> <!-- Tiny Baby Buffalo -->
+			<param name="ai_type2" value="mon_tiny_buffalo" />
+			<param name="silhouette_ex" value="16020" /> <!-- Trained Tiny Baby Buffalo -->
+			<param name="ai_type_ex" value="tnpc_tiny_buffalo" />
+			<param name="silhouette_ex2" value="16020" /> <!-- Trained Tiny Baby Buffalo -->
+			<param name="ai_type_ex2" value="tnpc_tiny_buffalo" />
+			<param name="TakeSocial" value="30" />
+			<skill name="PhysicalSpecial" id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill name="SelfRangeDDMagic" id="4072" level="6" /> <!-- Stun -->
+			<!-- <skill name="SelfBuff" id="4074" level="2" /> --> <!-- NPC Haste -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="2145" sp="200" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="253165" hpRegen="13.43" mp="9999" mpRegen="3.09" />
+			<attack physical="4500" magical="3240" random="50" critical="4" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3000" magical="2820" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="16020" level="99" type="Monster" name="Tame Tiny Baby Buffalo">
+		<parameters>
+			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
+			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
+			<skill name="Buff3" id="5188" level="3" /> <!-- Pet Regeneration -->
+			<skill name="Buff4" id="5189" level="6" /> <!-- Pet Blessed Body -->
+			<skill name="Buff5" id="5191" level="3" /> <!-- Pet Guidance -->
+			<skill name="DeBuff1" id="5196" level="2" /> <!-- Pet Wind Shackle -->
+			<skill name="DeBuff2" id="5197" level="2" /> <!-- Pet Hex -->
+			<skill name="Heal" id="5195" level="6" /> <!-- Pet Greater Heal -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="2145" sp="200" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="253165" hpRegen="13.43" mp="9999" mpRegen="3.09" />
+			<attack physical="4500" magical="3240" random="50" critical="4" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3000" magical="2820" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="16021" level="99" type="Monster" name="Tiny Baby Cougar">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="120" />
+			<skill name="FeedID1" id="2188" level="1" /> <!-- Golden Spice -->
+			<param name="silhouette1" value="16021" /> <!-- Tiny Baby Cougar -->
+			<param name="ai_type1" value="mon_tiny_cougar" />
+			<param name="silhouette2" value="16021" /> <!-- Tiny Baby Cougar -->
+			<param name="ai_type2" value="mon_tiny_cougar" />
+			<param name="silhouette_ex" value="16022" /> <!-- Trained Tiny Baby Cougar -->
+			<param name="ai_type_ex" value="tnpc_tiny_cougar" />
+			<param name="silhouette_ex2" value="16022" /> <!-- Trained Tiny Baby Cougar -->
+			<param name="ai_type_ex2" value="tnpc_tiny_cougar" />
+			<param name="TakeSocial" value="30" />
+			<skill name="PhysicalSpecial" id="4073" level="6" /> <!-- Stun -->
+			<skill name="SelfRangeDDMagic" id="4232" level="6" /> <!-- NPC AE Strike -->
+			<!-- <skill name="SelfBuff" id="4074" level="2" /> --> <!-- NPC Haste -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="2275" sp="218" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="253165" hpRegen="13.43" mp="9999" mpRegen="3.09" />
+			<attack physical="4500" magical="3240" random="50" critical="4" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3000" magical="2820" />
+			<speed>
+				<walk ground="28" />
+				<run ground="120" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="15.7" />
+		</collision>
+	</npc>
+	<npc id="16022" level="99" type="Monster" name="Tame Tiny Baby Cougar">
+		<parameters>
+			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
+			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
+			<skill name="Buff3" id="5188" level="3" /> <!-- Pet Regeneration -->
+			<skill name="Buff4" id="5189" level="6" /> <!-- Pet Blessed Body -->
+			<skill name="Buff5" id="5191" level="3" /> <!-- Pet Guidance -->
+			<skill name="DeBuff1" id="5196" level="3" /> <!-- Pet Wind Shackle -->
+			<skill name="DeBuff2" id="5197" level="3" /> <!-- Pet Hex -->
+			<skill name="Heal" id="5195" level="6" /> <!-- Pet Greater Heal -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="2275" sp="218" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="253165" hpRegen="13.43" mp="9999" mpRegen="3.09" />
+			<attack physical="4500" magical="3240" random="50" critical="4" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3000" magical="2820" />
+			<speed>
+				<walk ground="28" />
+				<run ground="120" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="15.7" />
+		</collision>
+	</npc>
+	<npc id="16023" level="99" type="Monster" name="Tiny Baby Kookaburra">
+		<parameters>
+			<param name="MoveAroundSocial" value="78" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="78" />
+			<skill name="FeedID1" id="2188" level="1" /> <!-- Golden Spice -->
+			<param name="silhouette1" value="16023" /> <!-- Tiny Baby Kookaburra -->
+			<param name="ai_type1" value="mon_tiny_kukaburo" />
+			<param name="silhouette2" value="16023" /> <!-- Tiny Baby Kookaburra -->
+			<param name="ai_type2" value="mon_tiny_kukaburo" />
+			<param name="silhouette_ex" value="16024" /> <!-- Trained Tiny Baby Kookaburra -->
+			<param name="ai_type_ex" value="tnpc_tiny_kukaburo" />
+			<param name="silhouette_ex2" value="16024" /> <!-- Trained Tiny Baby Kookaburra -->
+			<param name="ai_type_ex2" value="tnpc_tiny_kukaburo" />
+			<param name="TakeSocial" value="30" />
+			<skill name="W_LongRangeDDMagic" id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="SelfRangeDDMagic" id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<!-- <skill name="SelfBuff" id="4633" level="3" /> --> <!-- NPC Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="2019" sp="183" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="253165" hpRegen="13.43" mp="9999" mpRegen="3.09" />
+			<attack physical="4500" magical="3240" random="50" critical="4" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3000" magical="2820" />
+			<speed>
+				<walk ground="13" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="16024" level="99" type="Monster" name="Tame Tiny Baby Kookaburra">
+		<parameters>
+			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
+			<skill name="Buff2" id="5193" level="3" /> <!-- Pet Acumen -->
+			<skill name="Buff3" id="5201" level="1" /> <!-- Pet Concentration -->
+			<skill name="Buff4" id="5194" level="3" /> <!-- Pet Empower -->
+			<skill name="Buff5" id="5190" level="6" /> <!-- Pet Blessed Soul -->
+			<skill name="DeBuff1" id="5198" level="1" /> <!-- Pet Slow -->
+			<skill name="DeBuff2" id="5199" level="1" /> <!-- Pet Curse Gloom -->
+			<skill name="Heal" id="5200" level="1" /> <!-- Pet Recharge -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="2019" sp="183" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="253165" hpRegen="13.43" mp="9999" mpRegen="3.09" />
+			<attack physical="4500" magical="3240" random="50" critical="4" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3000" magical="2820" />
+			<speed>
+				<walk ground="13" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>NONPET</clan>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+</list>

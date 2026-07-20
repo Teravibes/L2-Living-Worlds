@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn zone="innadril13_2324_01">
+		<territory minZ="-3753" maxZ="-2953">
+			<node x="104812" y="201853" />
+			<node x="106386" y="201898" />
+			<node x="106134" y="204477" />
+			<node x="103123" y="203007" />
+		</territory>
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20135" count="3" respawnDelay="30" /> <!-- Alligator -->
+	</spawn>
+	<spawn zone="innadril13_2324_02">
+		<territory minZ="-3814" maxZ="-3014">
+			<node x="109022" y="198572" />
+			<node x="111677" y="199916" />
+			<node x="109883" y="201624" />
+			<node x="106772" y="201334" />
+		</territory>
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20135" count="3" respawnDelay="30" /> <!-- Alligator -->
+	</spawn>
+	<spawn zone="innadril13_2324_03">
+		<territory minZ="-3814" maxZ="-3014">
+			<node x="112870" y="198916" />
+			<node x="113997" y="199265" />
+			<node x="112526" y="201064" />
+			<node x="110681" y="200917" />
+		</territory>
+		<npc id="20135" count="4" respawnDelay="30" /> <!-- Alligator -->
+	</spawn>
+	<spawn zone="innadril13_2324_04">
+		<territory minZ="-3819" maxZ="-3019">
+			<node x="113733" y="200706" />
+			<node x="116145" y="200194" />
+			<node x="115379" y="202202" />
+			<node x="112944" y="202817" />
+		</territory>
+		<npc id="20792" count="3" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20135" count="2" respawnDelay="30" /> <!-- Alligator -->
+	</spawn>
+	<spawn zone="innadril13_2324_05">
+		<territory minZ="-3819" maxZ="-3019">
+			<node x="118960" y="201481" />
+			<node x="121673" y="201026" />
+			<node x="122432" y="202430" />
+			<node x="121041" y="204985" />
+			<node x="118691" y="204479" />
+		</territory>
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="2" respawnDelay="30" /> <!-- Farhite -->
+		<npc id="20135" count="2" respawnDelay="30" /> <!-- Alligator -->
+	</spawn>
+	<spawn zone="innadril13_2324_06">
+		<territory minZ="-3819" maxZ="-3019">
+			<node x="121376" y="204634" />
+			<node x="123344" y="205468" />
+			<node x="124212" y="207017" />
+			<node x="123703" y="208198" />
+			<node x="121285" y="208310" />
+		</territory>
+		<npc id="20791" count="2" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="3" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril13_2324_07">
+		<territory minZ="-3816" maxZ="-3016">
+			<node x="117679" y="211677" />
+			<node x="121408" y="208460" />
+			<node x="123515" y="208312" />
+			<node x="122186" y="210758" />
+			<node x="118246" y="212386" />
+		</territory>
+		<npc id="20791" count="3" respawnDelay="30" /> <!-- Crokian Warrior -->
+		<npc id="20792" count="3" respawnDelay="30" /> <!-- Farhite -->
+	</spawn>
+	<spawn zone="innadril01_qm2324_01">
+		<territory minZ="-4236" maxZ="-4036">
+			<node x="106252" y="197068" />
+			<node x="106452" y="197068" />
+			<node x="106452" y="197268" />
+			<node x="106252" y="197268" />
+		</territory>
+		<npc id="20314" count="3" respawnDelay="180" /> <!-- Great White Shark -->
+	</spawn>
+</list>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence maxOccurs="1" minOccurs="1">
+				<xs:element name="fish" maxOccurs="278" minOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="cheatingProb" type="xs:decimal" use="required" />
+						<xs:attribute name="combatDuration" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="fishBiteRate" type="xs:decimal" use="required" />
+						<xs:attribute name="fishGrade" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="fish_easy" />
+									<xs:enumeration value="fish_hard" />
+									<xs:enumeration value="fish_normal" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="fishGroup" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="easy_swift" />
+									<xs:enumeration value="easy_ugly" />
+									<xs:enumeration value="easy_wide" />
+									<xs:enumeration value="fish_box" />
+									<xs:enumeration value="hard_swift" />
+									<xs:enumeration value="hard_ugly" />
+									<xs:enumeration value="hard_wide" />
+									<xs:enumeration value="hs_fish" />
+									<xs:enumeration value="swift" />
+									<xs:enumeration value="ugly" />
+									<xs:enumeration value="wide" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="fishGuts" type="xs:decimal" use="required" />
+						<xs:attribute name="fishHp" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="fishId" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="278" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="fishLengthRate" type="xs:decimal" use="required" />
+						<xs:attribute name="fishLevel" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="fishMaxLength" type="xs:nonNegativeInteger" use="required" />
+						<xs:attribute name="gutsCheckProbability" type="xs:decimal" use="required" />
+						<xs:attribute name="gutsCheckTime" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="hpRegen" type="xs:decimal" use="required" />
+						<xs:attribute name="itemId" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="itemName" type="xs:normalizedString" use="required" />
+						<xs:attribute name="startCombatTime" type="xs:positiveInteger" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

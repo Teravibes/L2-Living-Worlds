@@ -1,0 +1,2975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="35010" level="50" type="Defender" name="Mercenary">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="128" lhand="628" /> <!-- rhand: Knight's Sword lhand: Hoplon -->
+		<acquire exp="449" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35011" level="50" type="Defender" name="Mercenary">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
+		<acquire exp="449" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35012" level="50" type="Defender" name="Mercenary">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
+		<acquire exp="449" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35013" level="50" type="Defender" name="Mercenary">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
+		<acquire exp="449" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35014" level="50" type="Defender" name="Mercenary">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="179" /> <!-- rhand: Mace of Prayer -->
+		<acquire exp="449" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35015" level="50" type="Defender" name="Mercenary">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="128" lhand="628" /> <!-- rhand: Knight's Sword lhand: Hoplon -->
+		<acquire exp="449" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35016" level="50" type="Defender" name="Mercenary">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
+		<acquire exp="449" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35017" level="50" type="Defender" name="Mercenary">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
+		<acquire exp="449" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35018" level="50" type="Defender" name="Mercenary">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
+		<acquire exp="449" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35019" level="50" type="Defender" name="Mercenary">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="179" /> <!-- rhand: Mace of Prayer -->
+		<acquire exp="449" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35020" level="70" type="Defender" name="Mercenary of Dawn">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="150" /> <!-- rhand: Elemental Sword -->
+		<acquire exp="640" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35021" level="70" type="Defender" name="Mercenary of Dawn">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="97" /> <!-- rhand: Lance -->
+		<acquire exp="640" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35022" level="70" type="Defender" name="Mercenary of Dawn">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
+		<acquire exp="640" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35023" level="70" type="Defender" name="Mercenary of Dawn">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
+		<acquire exp="640" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35024" level="70" type="Defender" name="Mercenary of Dawn">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="196" /> <!-- rhand: Stick of Eternity -->
+		<acquire exp="640" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35025" level="70" type="Defender" name="Mercenary of Dawn">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="150" /> <!-- rhand: Elemental Sword -->
+		<acquire exp="640" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35026" level="70" type="Defender" name="Mercenary of Dawn">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="97" /> <!-- rhand: Lance -->
+		<acquire exp="640" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35027" level="70" type="Defender" name="Mercenary of Dawn">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
+		<acquire exp="640" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35028" level="70" type="Defender" name="Mercenary of Dawn">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
+		<acquire exp="640" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35029" level="70" type="Defender" name="Mercenary of Dawn">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="196" /> <!-- rhand: Stick of Eternity -->
+		<acquire exp="640" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35030" level="60" type="Defender" name="Elite Mercenary Guild Member">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
+		<acquire exp="578" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="824.422073095" magical="562.9734023" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35031" level="60" type="Defender" name="Elite Mercenary Guild Member">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="301" /> <!-- rhand: Scorpion -->
+		<acquire exp="578" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="824.422073095" magical="562.9734023" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35032" level="60" type="Defender" name="Elite Mercenary Guild Member">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
+		<acquire exp="578" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="824.422073095" magical="562.9734023" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35033" level="60" type="Defender" name="Elite Mercenary Guild Member">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
+		<acquire exp="578" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="824.422073095" magical="562.9734023" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="35034" level="60" type="Defender" name="Elite Mercenary Guild Member">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
+		<acquire exp="578" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="824.422073095" magical="562.9734023" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="35035" level="60" type="Defender" name="Elite Mercenary Guild Member">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
+		<acquire exp="578" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="824.422073095" magical="562.9734023" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35036" level="60" type="Defender" name="Elite Mercenary Guild Member">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="301" /> <!-- rhand: Scorpion -->
+		<acquire exp="578" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="824.422073095" magical="562.9734023" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35037" level="60" type="Defender" name="Elite Mercenary Guild Member">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="280" /> <!-- rhand: Light Crossbow -->
+		<acquire exp="578" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="824.422073095" magical="562.9734023" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35038" level="60" type="Defender" name="Elite Mercenary Guild Member">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
+		<acquire exp="578" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="824.422073095" magical="562.9734023" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="35039" level="60" type="Defender" name="Elite Mercenary Guild Member">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
+		<acquire exp="578" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="824.422073095" magical="562.9734023" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="35040" level="55" type="Defender" name="Greater Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="66" lhand="20" /> <!-- rhand: Gladius lhand: Buckler -->
+		<acquire exp="517" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35041" level="55" type="Defender" name="Greater Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="16" /> <!-- rhand: Great Spear -->
+		<acquire exp="517" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35042" level="55" type="Defender" name="Greater Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="274" /> <!-- rhand: Reinforced Bow -->
+		<acquire exp="517" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35043" level="55" type="Defender" name="Greater Recruit">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
+		<acquire exp="517" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35044" level="55" type="Defender" name="Greater Recruit">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="154" /> <!-- rhand: Dwarven Mace -->
+		<acquire exp="517" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35045" level="55" type="Defender" name="Greater Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="66" lhand="20" /> <!-- rhand: Gladius lhand: Buckler -->
+		<acquire exp="517" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35046" level="55" type="Defender" name="Greater Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="16" /> <!-- rhand: Great Spear -->
+		<acquire exp="517" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35047" level="55" type="Defender" name="Greater Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="274" /> <!-- rhand: Reinforced Bow -->
+		<acquire exp="517" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35048" level="55" type="Defender" name="Greater Recruit">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
+		<acquire exp="517" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35049" level="55" type="Defender" name="Greater Recruit">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="154" /> <!-- rhand: Dwarven Mace -->
+		<acquire exp="517" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35050" level="45" type="Defender" name="Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="66" /> <!-- rhand: Gladius -->
+		<acquire exp="409" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35051" level="45" type="Defender" name="Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="16" /> <!-- rhand: Great Spear -->
+		<acquire exp="409" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35052" level="45" type="Defender" name="Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="14" /> <!-- rhand: Bow -->
+		<acquire exp="409" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35053" level="45" type="Defender" name="Recruit">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="6" /> <!-- rhand: Apprentice's Wand -->
+		<acquire exp="409" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24.5" />
+		</collision>
+	</npc>
+	<npc id="35054" level="45" type="Defender" name="Recruit">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="99" /> <!-- rhand: Apprentice's Spellbook -->
+		<acquire exp="409" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35055" level="45" type="Defender" name="Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="66" /> <!-- rhand: Gladius -->
+		<acquire exp="409" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35056" level="45" type="Defender" name="Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="16" /> <!-- rhand: Great Spear -->
+		<acquire exp="409" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35057" level="45" type="Defender" name="Recruit">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="14" /> <!-- rhand: Bow -->
+		<acquire exp="409" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35058" level="45" type="Defender" name="Recruit">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="6" /> <!-- rhand: Apprentice's Wand -->
+		<acquire exp="409" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24.5" />
+		</collision>
+	</npc>
+	<npc id="35059" level="45" type="Defender" name="Recruit">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="99" /> <!-- rhand: Apprentice's Spellbook -->
+		<acquire exp="409" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="50" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35060" level="75" type="Folk" name="Nephilim Mercenary">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="2500" lhand="6377" /> <!-- rhand: Dark Legion's Edge lhand: Imperial Crusader Shield -->
+		<acquire exp="722" sp="1" />
+		<stats str="84" int="76" dex="73" wit="70" con="71" men="80">
+			<vitals hp="596964.367482148" hpRegen="981" mp="1662.64929543826" mpRegen="3" />
+			<attack physical="2920.46741860649" magical="5982.90187463237" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="36.48" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="1200">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="24.5" />
+		</collision>
+	</npc>
+	<npc id="35061" level="72" type="Folk" name="Nephilim Mercenary">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="8687" /> <!-- rhand: Cabrio's Hand -->
+		<acquire exp="672" sp="1" />
+		<stats str="84" int="76" dex="73" wit="70" con="71" men="80">
+			<vitals hp="585703.507797897" hpRegen="989" mp="1561.39135959339" mpRegen="3" />
+			<attack physical="2704.10327154869" magical="5539.65578417714" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="349.77477" magical="255.95" />
+			<speed>
+				<walk ground="33" />
+				<run ground="195" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="6.5" />
+			<height normal="21.957" />
+		</collision>
+	</npc>
+	<npc id="35062" level="1" type="Folk" name="Headquarters">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="100000.0" hpRegen="3.16" mp="989.0" mpRegen="0.91" />
+			<attack physical="547.68" magical="773.28" random="7" critical="4" accuracy="4.75" attackSpeed="376" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="753.0" magical="271.4" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" canMove="false" />
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<corpseTime>7</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="1000" />
+		<collision>
+			<radius normal="21" />
+			<height normal="82" />
+		</collision>
+	</npc>
+	<npc id="35063" level="20" type="Artefact" name="Gludio Holy Artifact">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<attack physical="44.32863" magical="30.2707" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="86.87049" magical="63.56806" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="98" />
+		</collision>
+	</npc>
+	<npc id="35064" level="65" type="Defender" name="Baron Lewin Waldner">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" /> <!-- rhand: Sword of Damascus -->
+		<acquire exp="688" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="38355.9060587002" hpRegen="8.5" mp="5332.2" mpRegen="3" />
+			<attack physical="3298.27085008098" magical="750.763809564873" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35065" level="62" type="Defender" name="Cronenberg" title="Sir">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
+		<acquire exp="655" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="34617.7253215841" hpRegen="8.5" mp="5126.4" mpRegen="3" />
+			<attack physical="3036.96805390282" magical="691.285164307598" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35066" level="60" type="Defender" name="Royal Knight" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
+		<acquire exp="624" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3127.82459333517" hpRegen="8.5" mp="1641" mpRegen="3" />
+			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35067" level="58" type="Defender" name="Court Sorcerer" title="Gludio">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
+		<acquire exp="592" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="35068" level="58" type="Defender" name="Court Sorcerer" title="Gludio">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>CASTLE_GUARD</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
+		<acquire exp="592" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35069" level="58" type="Defender" name="Court Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
+		<acquire exp="592" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35070" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="16" /> <!-- rhand: Great Spear -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35071" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35072" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35073" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="16" /> <!-- rhand: Great Spear -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="35074" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="2" /> <!-- rhand: Long Sword -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="35075" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="14" /> <!-- rhand: Bow -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="35076" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="16" /> <!-- rhand: Great Spear -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35077" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" /> <!-- rhand: Long Sword -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35078" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="14" /> <!-- rhand: Bow -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35079" level="60" type="Defender" name="Royal Knight" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
+		<acquire exp="624" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3127.82459333517" hpRegen="8.5" mp="1641" mpRegen="3" />
+			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35080" level="58" type="Defender" name="Court Sorcerer" title="Gludio">
+		<parameters>
+			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
+		</parameters>
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
+		<acquire exp="592" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4026" level="1" /> <!-- Gludio Flame -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="35081" level="58" type="Defender" name="Court Sorcerer" title="Gludio">
+		<parameters>
+			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
+		</parameters>
+		<race>CASTLE_GUARD</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
+		<acquire exp="592" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4027" level="1" /> <!-- Gludio Heal -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="35082" level="58" type="Defender" name="Court Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
+		<acquire exp="592" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35083" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35084" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35085" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="35086" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="16" /> <!-- rhand: Great Spear -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="35087" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="2" /> <!-- rhand: Long Sword -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="35088" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="14" /> <!-- rhand: Bow -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="35089" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="16" /> <!-- rhand: Great Spear -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="-3.75" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35090" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" /> <!-- rhand: Long Sword -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35091" level="56" type="Defender" name="Guard" title="Gludio">
+		<race>CASTLE_GUARD</race>
+		<sex>MALE</sex>
+		<equipment rhand="14" /> <!-- rhand: Bow -->
+		<acquire exp="561" sp="1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="-3.75" attackSpeed="253" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="22" /> <!-- Defending Army -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35092" level="56" type="CastleDoorman" name="Gatekeeper" title="Gludio">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+			<param name="pos_x01" value="-18123" />
+			<param name="pos_y01" value="109927" />
+			<param name="pos_z01" value="-2492" />
+			<param name="pos_x02" value="-18103" />
+			<param name="pos_y02" value="109947" />
+			<param name="pos_z02" value="-2492" />
+			<param name="pos_x03" value="-18123" />
+			<param name="pos_y03" value="109947" />
+			<param name="pos_z03" value="-2492" />
+			<param name="pos_x11" value="-18635" />
+			<param name="pos_y11" value="108298" />
+			<param name="pos_z11" value="-2556" />
+			<param name="pos_x12" value="-18615" />
+			<param name="pos_y12" value="108298" />
+			<param name="pos_z12" value="-2556" />
+			<param name="pos_x13" value="-18635" />
+			<param name="pos_y13" value="108298" />
+			<param name="pos_z13" value="-2556" />
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="12" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35093" level="56" type="CastleDoorman" name="Gatekeeper" title="Gludio">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+			<param name="pos_x21" value="-18988" />
+			<param name="pos_y21" value="112081" />
+			<param name="pos_z21" value="-2724" />
+			<param name="pos_x22" value="-18968" />
+			<param name="pos_y22" value="112101" />
+			<param name="pos_z22" value="-2724" />
+			<param name="pos_x23" value="-18988" />
+			<param name="pos_y23" value="112101" />
+			<param name="pos_z23" value="-2724" />
+			<param name="pos_x11" value="-18635" />
+			<param name="pos_y11" value="108298" />
+			<param name="pos_z11" value="-2556" />
+			<param name="pos_x12" value="-18615" />
+			<param name="pos_y12" value="108298" />
+			<param name="pos_z12" value="-2556" />
+			<param name="pos_x13" value="-18635" />
+			<param name="pos_y13" value="108298" />
+			<param name="pos_z13" value="-2556" />
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="12" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35094" level="56" type="CastleDoorman" name="Gatekeeper" title="Gludio">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+			<param name="pos_x21" value="-18988" />
+			<param name="pos_y21" value="112081" />
+			<param name="pos_z21" value="-2724" />
+			<param name="pos_x22" value="-18968" />
+			<param name="pos_y22" value="112101" />
+			<param name="pos_z22" value="-2724" />
+			<param name="pos_x23" value="-18988" />
+			<param name="pos_y23" value="112101" />
+			<param name="pos_z23" value="-2724" />
+			<param name="pos_x01" value="-18123" />
+			<param name="pos_y01" value="109927" />
+			<param name="pos_z01" value="-2492" />
+			<param name="pos_x02" value="-18103" />
+			<param name="pos_y02" value="109947" />
+			<param name="pos_z02" value="-2492" />
+			<param name="pos_x03" value="-18123" />
+			<param name="pos_y03" value="109947" />
+			<param name="pos_z03" value="-2492" />
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="12" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>GLUDIO_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35095" level="70" type="Folk" name="Mass Gatekeeper" title="Gludio">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+			<param name="pos_x1" value="-18099" />
+			<param name="pos_y1" value="109297" />
+			<param name="pos_z1" value="-2475" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="12" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35096" level="70" type="CastleDoorman" name="Outer Doorman" title="Gludio">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+			<param name="DoorName1" value="gludio_castle_outter_001" />
+			<param name="DoorName2" value="gludio_castle_outter_002" />
+			<param name="pos_x01" value="-18372" />
+			<param name="pos_y01" value="113315" />
+			<param name="pos_z01" value="-2760" />
+			<param name="pos_x02" value="-18395" />
+			<param name="pos_y02" value="112831" />
+			<param name="pos_z02" value="-2768" />
+			<param name="dominion_id" value="81" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="12" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35097" level="70" type="CastleDoorman" name="Inner Doorman" title="Gludio">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+			<param name="DoorName1" value="gludio_castle_inner_001" />
+			<param name="DoorName2" value="gludio_castle_inner_002" />
+			<param name="pos_x01" value="-18115" />
+			<param name="pos_y01" value="110679" />
+			<param name="pos_z01" value="-2528" />
+			<param name="pos_x02" value="-18123" />
+			<param name="pos_y02" value="110210" />
+			<param name="pos_z02" value="-2512" />
+			<param name="dominion_id" value="81" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="12" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="35098" level="70" type="Folk" name="Blacksmith" title="Gludio">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="93" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="89" /> <!-- rhand: Big Hammer -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="12" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="16.5" />
+		</collision>
+	</npc>
+	<npc id="35099" level="70" type="Warehouse" name="Warehouse Keeper" title="Gludio">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="150" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="7" critical="12" accuracy="-3.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" canMove="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+</list>

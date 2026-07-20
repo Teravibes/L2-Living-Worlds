@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="50009"> <!-- Fiorella - Global Basic Gatekeeper -->
+		<teleport name="list1" type="OTHER"> <!-- global towns -->
+			<location name="The Town of Gludio" x="-12787" y="122779" z="-3114" feeCount="3400" castleId="1" />
+			<location name="The Town of Giran" x="83336" y="147972" z="-3404" feeCount="6800" castleId="3" />
+			<location name="The Town of Dion" x="15671" y="142994" z="-2704" feeCount="6800" castleId="2" />
+			<location name="Town of Aden" x="146705" y="25840" z="-2000" feeCount="52000" castleId="5" />
+			<location name="Town of Oren" x="83011" y="53207" z="-1470" feeCount="33000" castleId="4" />
+			<location name="Heine" x="111455" y="219400" z="-3546" feeCount="12000" castleId="6" />
+			<location name="Town of Goddard" x="148024" y="-55281" z="-2728" feeCount="71000" castleId="7" />
+			<location name="Rune Township" x="43835" y="-47749" z="-792" feeCount="57000" castleId="8" />
+			<location name="Town of Schuttgart" x="87478" y="-142297" z="-1352" feeCount="88000" castleId="9" />
+		</teleport>
+		<teleport name="list2" type="OTHER"> <!-- global villages -->
+			<location name="The Village of Gludin" x="-80749" y="149834" z="-3043" feeCount="18000" />
+			<location name="Hunter's Village" x="117110" y="76883" z="-2670" feeCount="3400" />
+			<location name="Talking Island Village" x="-84141" y="244623" z="-3729" feeCount="24000" />
+			<location name="Dark Elf Village" x="9716" y="15502" z="-4500" feeCount="24000" />
+			<location name="Dwarven Village" x="115120" y="-178112" z="-916" feeCount="46000" />
+			<location name="Elven Village" x="46890" y="51531" z="-2976" feeCount="23000" />
+			<location name="Orc Village" x="-45186" y="-112459" z="-236" feeCount="35000" />
+		</teleport>
+		<teleport name="list3" type="OTHER"> <!-- arenas -->
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeCount="2000" />
+		</teleport>
+		<teleport name="list4" type="OTHER"> <!-- 30080 Clarissa - Giran -->
+			<location name="Giran Harbor" x="47938" y="186864" z="-3480" feeCount="5200" />
+			<location name="Hardin's Private Academy" x="105918" y="109759" z="-3170" feeCount="4400" castleId="3" />
+			<location name="Dragon Valley" x="73024" y="118485" z="-3688" feeCount="1800" />
+			<location name="Antharas' Lair" x="131557" y="114509" z="-3712" feeCount="7000" />
+			<location name="Devil's Isle" x="43408" y="206881" z="-3752" feeCount="5700" />
+			<location name="Breka's Stronghold" x="85546" y="131328" z="-3672" feeCount="1000" />
+		</teleport>
+		<teleport name="list5" type="OTHER"> <!-- 30848 Elisa - Aden -->
+			<location name="Forsaken Plains" x="168217" y="37990" z="-4072" feeCount="1900" />
+			<location name="Seal of Shilen" x="184742" y="19745" z="-3168" feeCount="3000" />
+			<location name="Forest of Mirrors" x="142065" y="81300" z="-3000" feeCount="4400" />
+			<location name="Blazing Swamp" x="155310" y="-16339" z="-3320" feeCount="6800" />
+			<location name="Fields of Massacre" x="183543" y="-14974" z="-2776" feeCount="6500" />
+			<location name="Ancient Battleground" x="106517" y="-2871" z="-3416" feeCount="5900" />
+			<location name="Silent Valley" x="170838" y="55776" z="-5280" feeCount="6100" />
+			<location name="Tower of Insolence" x="114649" y="11115" z="-5120" feeCount="4200" />
+		</teleport>
+		<teleport name="list6" type="OTHER"> <!-- 30177 Valentina - Oren -->
+			<location name="Ivory Tower" x="85391" y="16228" z="-3640" feeCount="3700" castleId="4" />
+			<location name="Hardin's Private Academy" x="105884" y="109744" z="-3170" feeCount="6100" castleId="3" />
+			<location name="Skyshadow Meadow" x="89914" y="46276" z="-3616" feeCount="780" />
+			<location name="Plains of the Lizardmen" x="87252" y="85514" z="-3056" feeCount="1900" />
+			<location name="Outlaw Forest" x="91539" y="-12204" z="-2440" feeCount="5200" />
+			<location name="Sea of Spores" x="64328" y="26803" z="-3768" feeCount="2500" />
+		</teleport>
+		<teleport name="list7" type="OTHER"> <!-- 30256 Bella - Gludio -->
+			<location name="Ruins of Agony" x="-41248" y="122848" z="-2904" feeCount="790" />
+			<location name="Ruins of Despair" x="-19120" y="136816" z="-3752" feeCount="610" />
+			<location name="The Ant Nest" x="-9959" y="176184" z="-4160" feeCount="2100" />
+			<location name="Windawood Manor" x="-28327" y="155125" z="-3496" feeCount="1400" />
+		</teleport>
+		<teleport name="list8" type="OTHER"> <!-- 30320 Richlin - Gludin -->
+			<location name="Langk Lizardman Dwellings" x="-44763" y="203497" z="-3592" feeCount="1800" />
+			<location name="Windmill Hill" x="-75437" y="168800" z="-3632" feeCount="550" />
+			<location name="Fellmere Harvesting Grounds" x="-63736" y="101522" z="-3552" feeCount="1400" />
+			<location name="Forgotten Temple" x="-53001" y="191425" z="-3568" feeCount="2000" />
+			<location name="Orc Barracks" x="-89763" y="105359" z="-3576" feeCount="1800" />
+			<location name="Windy Hill" x="-88539" y="83389" z="-2864" feeCount="2600" />
+			<location name="Abandoned Camp" x="-49853" y="147089" z="-2784" feeCount="1200" />
+			<location name="Wastelands" x="-16526" y="208032" z="-3664" feeCount="3400" />
+			<location name="Red Rock Ridge" x="-42256" y="198333" z="-2800" feeCount="3700" />
+		</teleport>
+		<teleport name="list9" type="OTHER"> <!-- 30059 Trisha - Dion -->
+			<location name="Cruma Marshlands" x="5106" y="126916" z="-3664" feeCount="760" />
+			<location name="Cruma Tower" x="17225" y="114173" z="-3440" feeCount="2300" />
+			<location name="Fortress of Resistance" x="47382" y="111278" z="-2104" feeCount="1700" />
+			<location name="Plains of Dion" x="630" y="179184" z="-3720" feeCount="1500" />
+			<location name="Bee Hive" x="34475" y="188095" z="-2976" feeCount="2900" />
+			<location name="Tanor Canyon" x="60374" y="164301" z="-2856" feeCount="3900" />
+		</teleport>
+		<teleport name="list10" type="OTHER"> <!-- 30006 Roxxy - Talking Island Village -->
+			<location name="Elven Ruins" x="-112367" y="234703" z="-3688" feeCount="830" />
+			<location name="Singing Waterfall" x="-111728" y="244330" z="-3448" feeCount="770" />
+			<location name="Talking Island, Western Territory (Northern Area)" x="-106696" y="214691" z="-3424" feeCount="1000" />
+			<location name="Obelisk of Victory" x="-99586" y="237637" z="-3568" feeCount="470" />
+		</teleport>
+		<teleport name="list11" type="OTHER"> <!-- 30576 Tamil - Orc Village -->
+			<location name="The Immortal Plateau, Southern Region" x="-4190" y="-80040" z="-2696" feeCount="2000" />
+			<location name="The Immortal Plateau" x="-10983" y="-117484" z="-2464" feeCount="960" />
+			<location name="Cave of Trials" x="9340" y="-112509" z="-2536" feeCount="1500" />
+			<location name="Frozen Waterfall" x="8652" y="-139941" z="-1144" feeCount="1600" />
+		</teleport>
+		<teleport name="list12" type="OTHER"> <!-- 30146 Mirabel - Elven Village -->
+			<location name="Elven Forest" x="21362" y="51122" z="-3688" feeCount="710" />
+			<location name="Elven Fortress" x="29294" y="74968" z="-3776" feeCount="820" />
+			<location name="Neutral Zone" x="-10612" y="75881" z="-3592" feeCount="1700" />
+		</teleport>
+		<teleport name="list13" type="OTHER"> <!-- 30134 Jasmine - Dark Elf Village -->
+			<location name="Dark Forest" x="-22224" y="14168" z="-3232" feeCount="890" />
+			<location name="Swampland" x="-21966" y="40544" z="-3192" feeCount="1100" />
+			<location name="Spider Nest" x="-61095" y="75104" z="-3352" feeCount="3600" />
+			<location name="Neutral Zone" x="-10612" y="75881" z="-3592" feeCount="1700" />
+		</teleport>
+		<teleport name="list14" type="OTHER"> <!-- 30540 Wirphy - Dwarven Village -->
+			<location name="Mithril Mines" x="171946" y="-173352" z="3440" feeCount="2200" />
+			<location name="Abandoned Coal Mines" x="139714" y="-177456" z="-1536" feeCount="690" />
+			<location name="Eastern Mining Zone (Northeastern Shore)" x="169008" y="-208272" z="-3496" feeCount="2400" />
+			<location name="Western Mining Zone (Central Shore)" x="136910" y="-205082" z="-3664" feeCount="970" />
+		</teleport>
+		<teleport name="list15" type="OTHER"> <!-- 30233 Esmeralda - Hunter's Village -->
+			<location name="Hardin's Private Academy" x="105846" y="109762" z="-3170" feeCount="3400" castleId="3" />
+			<location name="Enchanted Valley, Southern Region" x="124904" y="61992" z="-3973" feeCount="1300" />
+			<location name="Enchanted Valley, Northern Region" x="104426" y="33746" z="-3825" feeCount="3600" />
+			<location name="Forest of Mirrors" x="142065" y="81300" z="-3000" feeCount="2000" />
+		</teleport>
+		<teleport name="list16" type="OTHER"> <!-- 30899 Flauen - Heine -->
+			<location name="Giran Harbor" x="47935" y="186810" z="-3420" feeCount="7100" castleId="3" />
+			<location name="Field of Silence" x="91088" y="182384" z="-3192" feeCount="2500" />
+			<location name="Field of Whispers" x="74592" y="207656" z="-3032" feeCount="2300" />
+			<location name="Alligator Island" x="115583" y="192261" z="-3488" feeCount="2100" />
+			<location name="Garden of Eva" x="84413" y="234334" z="-3656" feeCount="2400" />
+		</teleport>
+		<teleport name="list17" type="OTHER"> <!-- 31275 Tatiana - Goddard -->
+			<location name="Varka Silenos Stronghold" x="125740" y="-40864" z="-3736" feeCount="4200" />
+			<location name="Ketra Orc Outpost" x="146990" y="-67128" z="-3640" feeCount="1800" />
+			<location name="Hot Springs" x="144880" y="-113468" z="-2560" feeCount="9300" />
+			<location name="Wall of Argos" x="164564" y="-48145" z="-3536" feeCount="2200" />
+			<location name="Monastery of Silence" x="106414" y="-87799" z="-2920" feeCount="10000" />
+		</teleport>
+		<teleport name="list18" type="OTHER"> <!-- 31320 Ilyana - Rune Township -->
+			<location name="Wild Beast Pastures" x="43805" y="-88010" z="-2752" feeCount="4800" />
+			<location name="Valley of Saints" x="65307" y="-71445" z="-3688" feeCount="3800" />
+			<location name="Forest of the Dead" x="52107" y="-54328" z="-3158" feeCount="1200" />
+			<location name="Swamp of Screams" x="69340" y="-50203" z="-3314" feeCount="3000" />
+			<location name="Monastery of Silence" x="106414" y="-87799" z="-2920" feeCount="14000" />
+		</teleport>
+		<teleport name="list19" type="OTHER"> <!-- 31964 Bilia - Schuttgart -->
+			<location name="Den of Evil" x="68693" y="-110438" z="-1904" feeCount="3000" />
+			<location name="Plunderous Plains" x="111965" y="-154172" z="-1528" feeCount="1600" />
+			<location name="Frozen Labyrinth" x="113903" y="-108752" z="-848" feeCount="3500" />
+			<location name="Crypts of Disgrace" x="47692" y="-115745" z="-3744" feeCount="1900" />
+			<location name="Pavel Ruins" x="91280" y="-117152" z="-3928" feeCount="2100" />
+		</teleport>
+	</npc>
+</list>

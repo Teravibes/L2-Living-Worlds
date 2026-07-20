@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Warlock -->
+	<skillTree type="classSkillTree" classId="14" parentClassId="11">
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="10" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="11" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="12" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="9" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="10" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="11" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="1" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="2" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="3" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="13" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="14" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="15" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="13" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="14" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="15" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="7" getLevel="40" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="8" getLevel="40" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="3" getLevel="40" levelUpSp="32000" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLevel="2" getLevel="40" levelUpSp="32000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="5" getLevel="40" levelUpSp="32000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="5" getLevel="40" levelUpSp="32000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="1" getLevel="40" levelUpSp="32000" learnedByNpc="true">
+			<item id="4918" count="1" /> <!-- Spellbook: Summon Kai the Cat -->
+		</skill>
+		<skill skillName="Servitor Physical Shield" skillId="1140" skillLevel="1" getLevel="40" levelUpSp="32000" learnedByNpc="true">
+			<item id="3092" count="1" /> <!-- Spellbook: Servitor Physical Shield -->
+		</skill>
+		<skill skillName="Transfer Pain" skillId="1262" skillLevel="1" getLevel="40" levelUpSp="32000" learnedByNpc="true">
+			<item id="4206" count="1" /> <!-- Spellbook: Transfer Pain -->
+		</skill>
+		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="1" getLevel="40" levelUpSp="32000" learnedByNpc="true">
+			<item id="3039" count="1" /> <!-- Spellbook: Summon Storm Cubic -->
+		</skill>
+		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="1" getLevel="40" levelUpSp="32000" learnedByNpc="true">
+			<item id="4922" count="1" /> <!-- Spellbook: Summon Binding Cubic -->
+		</skill>
+		<skill skillName="Servitor Cure" skillId="1300" skillLevel="1" getLevel="40" levelUpSp="32000" learnedByNpc="true">
+			<item id="5813" count="1" /> <!-- Spellbook: Servitor Cure -->
+		</skill>
+		<skill skillName="Mass Summon Storm Cubic" skillId="1328" skillLevel="1" getLevel="40" levelUpSp="32000" learnedByNpc="true">
+			<item id="7638" count="1" /> <!-- Spellbook - Mass Summon Storm Cubic -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="13" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="14" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="15" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="12" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="13" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="14" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="4" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="5" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="6" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="16" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="17" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="18" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="16" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="17" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="18" getLevel="44" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="9" getLevel="44" levelUpSp="21000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="10" getLevel="44" levelUpSp="21000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="2" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="3" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Cubic Mastery" skillId="143" skillLevel="1" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="6" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="6" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Servitor Magic Shield" skillId="1139" skillLevel="1" getLevel="44" levelUpSp="41000" learnedByNpc="true">
+			<item id="3091" count="1" /> <!-- Spellbook: Servitor Magic Shield -->
+		</skill>
+		<skill skillName="Servitor Haste" skillId="1141" skillLevel="1" getLevel="44" levelUpSp="41000" learnedByNpc="true">
+			<item id="3093" count="1" /> <!-- Spellbook: Servitor Haste -->
+		</skill>
+		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="2" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="2" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="2" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Mass Summon Storm Cubic" skillId="1328" skillLevel="2" getLevel="44" levelUpSp="41000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="16" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="17" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="18" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="15" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="16" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="17" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="7" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="8" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="9" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="19" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="20" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="21" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="19" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="20" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="21" getLevel="48" levelUpSp="25000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="11" getLevel="48" levelUpSp="38000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="12" getLevel="48" levelUpSp="38000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="4" getLevel="48" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Quick Recovery" skillId="164" skillLevel="3" getLevel="48" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="7" getLevel="48" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="7" getLevel="48" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="3" getLevel="48" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Servitor Physical Shield" skillId="1140" skillLevel="2" getLevel="48" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Servitor Wind Walk" skillId="1144" skillLevel="2" getLevel="48" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Transfer Pain" skillId="1262" skillLevel="2" getLevel="48" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="3" getLevel="48" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Servitor Cure" skillId="1300" skillLevel="2" getLevel="48" levelUpSp="75000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="19" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="20" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="21" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="18" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="19" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="20" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="10" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="11" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="12" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="22" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="23" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="24" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="22" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="23" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="24" getLevel="52" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="13" getLevel="52" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="14" getLevel="52" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="3" getLevel="52" levelUpSp="106000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="4" getLevel="52" levelUpSp="106000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="8" getLevel="52" levelUpSp="106000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="8" getLevel="52" levelUpSp="106000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="4" getLevel="52" levelUpSp="106000" learnedByNpc="true" />
+		<skill skillName="Servitor Magic Shield" skillId="1139" skillLevel="2" getLevel="52" levelUpSp="106000" learnedByNpc="true" />
+		<skill skillName="Servitor Haste" skillId="1141" skillLevel="2" getLevel="52" levelUpSp="106000" learnedByNpc="true" />
+		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="3" getLevel="52" levelUpSp="106000" learnedByNpc="true" />
+		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="4" getLevel="52" levelUpSp="106000" learnedByNpc="true" />
+		<skill skillName="Servitor Empowerment" skillId="1299" skillLevel="1" getLevel="52" levelUpSp="106000" learnedByNpc="true">
+			<item id="5812" count="1" /> <!-- Spellbook: Servitor Empowerment -->
+		</skill>
+		<skill skillName="Mass Summon Storm Cubic" skillId="1328" skillLevel="3" getLevel="52" levelUpSp="106000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="22" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="23" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="24" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="21" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="22" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="23" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="13" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="14" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="15" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="25" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="26" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="27" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="25" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="26" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="27" getLevel="56" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="15" getLevel="56" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="16" getLevel="56" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="5" getLevel="56" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLevel="3" getLevel="56" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Cubic Mastery" skillId="143" skillLevel="2" getLevel="56" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="9" getLevel="56" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="9" getLevel="56" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="5" getLevel="56" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Servitor Physical Shield" skillId="1140" skillLevel="3" getLevel="56" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Transfer Pain" skillId="1262" skillLevel="3" getLevel="56" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="5" getLevel="56" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="1" getLevel="56" levelUpSp="105000" learnedByNpc="true">
+			<item id="7641" count="1" /> <!-- Spellbook - Summon Feline Queen -->
+		</skill>
+		<skill skillName="Arcane Disruption" skillId="1386" skillLevel="1" getLevel="56" levelUpSp="105000" learnedByNpc="true">
+			<item id="8386" count="1" /> <!-- Spellbook - Arcane Disruption -->
+		</skill>
+		<skill skillName="Betray" skillId="1380" skillLevel="1" getLevel="56" levelUpSp="105000" learnedByNpc="true">
+			<item id="8380" count="1" /> <!-- Spellbook: Betray -->
+		</skill>
+		<skill skillName="Summon Friend" skillId="1403" skillLevel="1" getLevel="56" levelUpSp="105000" learnedByNpc="true">
+			<item id="8616" count="1" /> <!-- Spellbook: Summon Friend -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="25" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="26" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="24" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="25" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="28" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="29" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="16" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="17" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="28" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="29" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="17" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="18" getLevel="58" levelUpSp="65000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="4" getLevel="58" levelUpSp="129000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="10" getLevel="58" levelUpSp="129000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="10" getLevel="58" levelUpSp="129000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="6" getLevel="58" levelUpSp="129000" learnedByNpc="true" />
+		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="4" getLevel="58" levelUpSp="129000" learnedByNpc="true" />
+		<skill skillName="Transfer Pain" skillId="1262" skillLevel="4" getLevel="58" levelUpSp="129000" learnedByNpc="true" />
+		<skill skillName="Mass Summon Storm Cubic" skillId="1328" skillLevel="4" getLevel="58" levelUpSp="129000" learnedByNpc="true" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="2" getLevel="58" levelUpSp="129000" learnedByNpc="true" />
+		<skill skillName="Arcane Disruption" skillId="1386" skillLevel="2" getLevel="58" levelUpSp="129000" learnedByNpc="true" />
+		<skill skillName="Betray" skillId="1380" skillLevel="2" getLevel="58" levelUpSp="129000" learnedByNpc="true" />
+		<skill skillName="Mass Surrender to Fire" skillId="1383" skillLevel="1" getLevel="58" levelUpSp="129000" learnedByNpc="true">
+			<item id="8383" count="1" /> <!-- Spellbook: Mass Surrender to Fire -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="27" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="28" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="26" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="27" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="30" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="31" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="18" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="19" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="30" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="31" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="19" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="20" getLevel="60" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="6" getLevel="60" levelUpSp="188000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="5" getLevel="60" levelUpSp="188000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="11" getLevel="60" levelUpSp="188000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="11" getLevel="60" levelUpSp="188000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="7" getLevel="60" levelUpSp="188000" learnedByNpc="true" />
+		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="6" getLevel="60" levelUpSp="188000" learnedByNpc="true" />
+		<skill skillName="Servitor Cure" skillId="1300" skillLevel="3" getLevel="60" levelUpSp="188000" learnedByNpc="true" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="3" getLevel="60" levelUpSp="188000" learnedByNpc="true" />
+		<skill skillName="Arcane Disruption" skillId="1386" skillLevel="3" getLevel="60" levelUpSp="188000" learnedByNpc="true" />
+		<skill skillName="Betray" skillId="1380" skillLevel="3" getLevel="60" levelUpSp="188000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="29" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="30" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="28" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="29" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="32" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="33" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="20" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="21" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="32" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="33" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="21" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="22" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="12" getLevel="62" levelUpSp="250000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="12" getLevel="62" levelUpSp="250000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="8" getLevel="62" levelUpSp="250000" learnedByNpc="true" />
+		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="5" getLevel="62" levelUpSp="250000" learnedByNpc="true" />
+		<skill skillName="Servitor Blessing" skillId="1301" skillLevel="1" getLevel="62" levelUpSp="250000" learnedByNpc="true">
+			<item id="5814" count="1" /> <!-- Spellbook: Servitor Blessing -->
+		</skill>
+		<skill skillName="Mass Summon Storm Cubic" skillId="1328" skillLevel="5" getLevel="62" levelUpSp="250000" learnedByNpc="true" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="4" getLevel="62" levelUpSp="250000" learnedByNpc="true" />
+		<skill skillName="Arcane Disruption" skillId="1386" skillLevel="4" getLevel="62" levelUpSp="250000" learnedByNpc="true" />
+		<skill skillName="Betray" skillId="1380" skillLevel="4" getLevel="62" levelUpSp="250000" learnedByNpc="true" />
+		<skill skillName="Mass Surrender to Fire" skillId="1383" skillLevel="2" getLevel="62" levelUpSp="250000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="31" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="32" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="30" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="31" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="34" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="35" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="22" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="23" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="34" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="35" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="23" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="24" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="5" getLevel="64" levelUpSp="340000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="13" getLevel="64" levelUpSp="340000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="13" getLevel="64" levelUpSp="340000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="9" getLevel="64" levelUpSp="340000" learnedByNpc="true" />
+		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="7" getLevel="64" levelUpSp="340000" learnedByNpc="true" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="5" getLevel="64" levelUpSp="340000" learnedByNpc="true" />
+		<skill skillName="Arcane Disruption" skillId="1386" skillLevel="5" getLevel="64" levelUpSp="340000" learnedByNpc="true" />
+		<skill skillName="Betray" skillId="1380" skillLevel="5" getLevel="64" levelUpSp="340000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="33" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="34" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="32" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="33" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="36" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="37" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="24" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="25" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="36" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="37" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="25" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="26" getLevel="66" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="7" getLevel="66" levelUpSp="440000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="14" getLevel="66" levelUpSp="440000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="14" getLevel="66" levelUpSp="440000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="10" getLevel="66" levelUpSp="440000" learnedByNpc="true" />
+		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="6" getLevel="66" levelUpSp="440000" learnedByNpc="true" />
+		<skill skillName="Mass Summon Storm Cubic" skillId="1328" skillLevel="6" getLevel="66" levelUpSp="440000" learnedByNpc="true" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="6" getLevel="66" levelUpSp="440000" learnedByNpc="true" />
+		<skill skillName="Arcane Disruption" skillId="1386" skillLevel="6" getLevel="66" levelUpSp="440000" learnedByNpc="true" />
+		<skill skillName="Betray" skillId="1380" skillLevel="6" getLevel="66" levelUpSp="440000" learnedByNpc="true" />
+		<skill skillName="Mass Surrender to Fire" skillId="1383" skillLevel="3" getLevel="66" levelUpSp="440000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="35" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="36" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="34" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="35" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="38" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="39" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="26" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="27" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="38" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="39" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="27" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="28" getLevel="68" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="6" getLevel="68" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="15" getLevel="68" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="15" getLevel="68" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="11" getLevel="68" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="8" getLevel="68" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="7" getLevel="68" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Arcane Disruption" skillId="1386" skillLevel="7" getLevel="68" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Betray" skillId="1380" skillLevel="7" getLevel="68" levelUpSp="550000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="37" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="38" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="36" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="37" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="40" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="41" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="28" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="29" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="40" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="41" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="29" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="30" getLevel="70" levelUpSp="280000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="16" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="16" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="12" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="7" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Transfer Pain" skillId="1262" skillLevel="5" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Servitor Empowerment" skillId="1299" skillLevel="2" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Mass Summon Storm Cubic" skillId="1328" skillLevel="7" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="8" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Arcane Disruption" skillId="1386" skillLevel="8" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Betray" skillId="1380" skillLevel="8" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Mass Surrender to Fire" skillId="1383" skillLevel="4" getLevel="70" levelUpSp="550000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="39" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="40" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="38" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="39" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="42" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="43" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="30" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="31" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="42" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="43" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="31" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="32" getLevel="72" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="8" getLevel="72" levelUpSp="1070000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="17" getLevel="72" levelUpSp="1070000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="17" getLevel="72" levelUpSp="1070000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="13" getLevel="72" levelUpSp="1070000" learnedByNpc="true" />
+		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="9" getLevel="72" levelUpSp="1070000" learnedByNpc="true" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="9" getLevel="72" levelUpSp="1070000" learnedByNpc="true" />
+		<skill skillName="Arcane Disruption" skillId="1386" skillLevel="9" getLevel="72" levelUpSp="1070000" learnedByNpc="true" />
+		<skill skillName="Betray" skillId="1380" skillLevel="9" getLevel="72" levelUpSp="1070000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="41" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="42" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="40" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="41" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="44" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="45" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="32" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="33" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="44" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Servitor Heal" skillId="1127" skillLevel="45" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="33" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="34" getLevel="74" levelUpSp="680000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="6" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="7" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+		<skill skillName="Summon Kat the Cat" skillId="1111" skillLevel="18" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="18" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="14" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="8" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+		<skill skillName="Mass Summon Storm Cubic" skillId="1328" skillLevel="8" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="10" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+		<skill skillName="Arcane Disruption" skillId="1386" skillLevel="10" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+		<skill skillName="Betray" skillId="1380" skillLevel="10" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+		<skill skillName="Mass Surrender to Fire" skillId="1383" skillLevel="5" getLevel="74" levelUpSp="1350000" learnedByNpc="true" />
+	</skillTree>
+</list>

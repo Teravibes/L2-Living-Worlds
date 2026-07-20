@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Soultaker -->
+	<skillTree type="classSkillTree" classId="95" parentClassId="13">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true" />
+		<skill skillName="Health" skillId="329" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true" />
+		<skill skillName="Dark Vortex" skillId="1343" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true">
+			<item id="7653" count="1" /> <!-- Spellbook - Dark Vortex -->
+		</skill>
+
+		<skill skillName="Skill Mastery" skillId="331" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true" />
+		<skill skillName="Curse of Doom" skillId="1336" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true">
+			<item id="7646" count="1" /> <!-- Spellbook - Curse of Doom -->
+		</skill>
+		<skill skillName="Mass Warrior Bane" skillId="1344" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true">
+			<item id="7654" count="1" /> <!-- Spellbook - Mass Warrior Bane -->
+		</skill>
+		<skill skillName="Spell Force" skillId="427" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true" />
+
+		<skill skillName="Arcane Power" skillId="337" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true" />
+		<skill skillName="Curse of Abyss" skillId="1337" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true">
+			<item id="7647" count="1" /> <!-- Spellbook - Curse of Abyss -->
+		</skill>
+		<skill skillName="Mass Mage Bane" skillId="1345" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true">
+			<item id="7655" count="1" /> <!-- Spellbook - Mass Mage Bane -->
+		</skill>
+		<skill skillName="Necromancy" skillId="434" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true" />
+
+		<skill skillName="Day of Doom" skillId="1422" skillLevel="1" getLevel="80" levelUpSp="75000000" learnedByNpc="true">
+			<item id="8902" count="1" /> <!-- Ancient Spellbook: Day of Doom -->
+		</skill>
+		<skill skillName="Gehenna" skillId="1423" skillLevel="1" getLevel="80" levelUpSp="75000000" learnedByNpc="true">
+			<item id="8903" count="1" /> <!-- Ancient Spellbook: Gehenna -->
+		</skill>
+	</skillTree>
+</list>

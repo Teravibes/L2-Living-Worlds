@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/classMaster.xsd">
+	<classMaster classChangeEnabled="false" spawnClassMasters="false" showPopupWindow="false">
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>FIRST_CLASS_GROUP</category>
+			</appliesTo>
+		</classChangeOption>
+		<classChangeOption name="1,000,000 Adena">
+			<appliesTo>
+				<category>SECOND_CLASS_GROUP</category>
+			</appliesTo>
+			<conditions>
+				<item id="57" count="1000000" />
+			</conditions>
+		</classChangeOption>
+		<!-- Example:
+		<classChangeOption name="Pay Adena and Ancient Adena">
+			<appliesTo>
+				<category>THIRD_CLASS_GROUP</category>
+			</appliesTo>
+			<rewards>
+				<item id="6622" count="1" /> Book of Giants
+			</rewards>
+			<conditions>
+				<item id="57" count="3000000" />3 million Adena for third class
+				<item id="5575" count="300000" />300k Ancient Adena for third class
+			</conditions>
+		</classChangeOption> -->
+	</classMaster>
+</list>

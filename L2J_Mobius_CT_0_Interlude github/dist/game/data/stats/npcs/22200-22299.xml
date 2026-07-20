@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="22200" level="84" type="Monster" name="Ornithomimus">
+		<parameters>
+			<param name="ag_type" value="0" />
+			<param name="ProbSelfRangeBuff1" value="50" />
+			<param name="ProbPhysicalSpecial1" value="33" />
+			<param name="ProbPhysicalSpecial2" value="5" />
+			<minions name="Privates">
+				<npc id="22201" count="1" max="1" respawnTime="0" />
+				<npc id="22202" count="1" max="1" respawnTime="0" />
+				<npc id="22219" count="1" max="1" respawnTime="0" />
+			</minions>
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5080" level="1" /> <!-- NPC Mighty Haste -->
+			<skill name="PhysicalSpecial1" id="5084" level="1" /> <!-- NPC Blinding Blow -->
+			<skill name="PhysicalSpecial2" id="5083" level="1" /> <!-- Stun -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7788" hpRegen="13.43" mp="2211" mpRegen="3.09" />
+			<attack physical="1149" magical="699.84" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.2" magical="235.94" />
+			<speed>
+				<walk ground="36" />
+				<run ground="170" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500">
+			<clanList>
+				<clan>ORNITHOMIMUS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="6036" max="12300" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.3719">
+					<item id="5533" min="1" max="1" chance="20.0052" /> <!-- Elysian Head -->
+					<item id="5544" min="1" max="1" chance="40.0109" /> <!-- Branch of The Mother Tree Head -->
+					<item id="8342" min="1" max="1" chance="35.0095" /> <!-- Flaming Dragon Skull Piece -->
+					<item id="8349" min="1" max="1" chance="4.9744" /> <!-- Doom Crusher Head -->
+				</group>
+				<group chance="1.77">
+					<item id="8955" min="1" max="1" chance="4.2033" /> <!-- Green Primeval Crystal -->
+					<item id="8954" min="1" max="1" chance="5.2542" /> <!-- Blue Primeval Crystal -->
+					<item id="8888" min="1" max="1" chance="9.4632" /> <!-- Amulet: Pa'agrio's Fist -->
+					<item id="8886" min="1" max="1" chance="3.1525" /> <!-- Amulet: Victories of Pa'agrio -->
+					<item id="8879" min="1" max="1" chance="3.3898" /> <!-- Spellbook: Summon Magnus the Unicorn -->
+					<item id="8633" min="1" max="1" chance="36.6841" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8627" min="1" max="1" chance="35.757" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8956" min="1" max="1" chance="2.0959" /> <!-- Red Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="15" />
+			<height normal="37.2" />
+		</collision>
+	</npc>
+	<npc id="22201" level="84" type="Monster" name="Ornithomimus">
+		<parameters>
+			<param name="ag_type" value="0" />
+			<param name="IsSayPrivate" value="0" />
+			<param name="BroadCastReception" value="1" />
+			<skill name="PhysicalSpecial" id="5084" level="1" /> <!-- NPC Blinding Blow -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7788" hpRegen="13.43" mp="2211" mpRegen="3.09" />
+			<attack physical="1149" magical="699.84" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.2" magical="235.94" />
+			<speed>
+				<walk ground="36" />
+				<run ground="200" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500" isAggressive="false">
+			<clanList>
+				<clan>ORNITHOMIMUS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="6034" max="12320" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.2201">
+					<item id="8342" min="1" max="1" chance="66.6971" /> <!-- Flaming Dragon Skull Piece -->
+					<item id="8349" min="1" max="1" chance="33.3029" /> <!-- Doom Crusher Head -->
+				</group>
+				<group chance="1.6038">
+					<item id="8627" min="1" max="1" chance="36.6752" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="41.2899" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8879" min="1" max="1" chance="3.741" /> <!-- Spellbook: Summon Magnus the Unicorn -->
+					<item id="8882" min="1" max="1" chance="4.5703" /> <!-- Spellbook: Salvation -->
+					<item id="8889" min="1" max="1" chance="9.1531" /> <!-- Amulet: Gate Chant -->
+					<item id="8954" min="1" max="1" chance="4.5705" /> <!-- Blue Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="15" />
+			<height normal="37.2" />
+		</collision>
+	</npc>
+	<npc id="22202" level="84" type="Monster" name="Ornithomimus">
+		<parameters>
+			<param name="ag_type" value="0" />
+			<param name="mobile_type" value="1" />
+			<param name="ProbSelfRangeBuff1" value="50" />
+			<param name="ProbPhysicalSpecial1" value="33" />
+			<param name="ProbPhysicalSpecial2" value="5" />
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5080" level="1" /> <!-- NPC Mighty Haste -->
+			<skill name="PhysicalSpecial1" id="5084" level="1" /> <!-- NPC Blinding Blow -->
+			<skill name="PhysicalSpecial2" id="5083" level="1" /> <!-- Stun -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7788" hpRegen="13.43" mp="2211" mpRegen="3.09" />
+			<attack physical="1149" magical="699.84" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.2" magical="235.94" />
+			<speed>
+				<walk ground="36" />
+				<run ground="160" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="false">
+			<clanList>
+				<clan>ORNITHOMIMUS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="4475" max="13610" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.5145">
+					<item id="5533" min="1" max="1" chance="7.6773" /> <!-- Elysian Head -->
+					<item id="5544" min="1" max="1" chance="30.7872" /> <!-- Branch of The Mother Tree Head -->
+					<item id="8342" min="1" max="1" chance="46.1614" /> <!-- Flaming Dragon Skull Piece -->
+					<item id="8349" min="1" max="1" chance="15.3741" /> <!-- Doom Crusher Head -->
+				</group>
+				<group chance="1.6843">
+					<item id="8954" min="1" max="1" chance="9.4044" /> <!-- Blue Primeval Crystal -->
+					<item id="8896" min="1" max="1" chance="4.6963" /> <!-- Ancient Tactical Manual: Symbol of Energy -->
+					<item id="8879" min="1" max="1" chance="3.5622" /> <!-- Spellbook: Summon Magnus the Unicorn -->
+					<item id="8633" min="1" max="1" chance="18.7851" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8627" min="1" max="1" chance="61.2068" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8955" min="1" max="1" chance="2.3452" /> <!-- Green Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="15" />
+			<height normal="37.2" />
+		</collision>
+	</npc>
+	<npc id="22203" level="83" type="Monster" name="Deinonychus">
+		<parameters>
+			<param name="ag_type" value="0" />
+			<param name="ProbSelfRangeBuff1" value="100" />
+			<param name="ProbPhysicalSpecial1" value="33" />
+			<param name="ProbPhysicalSpecial2" value="20" />
+			<minions name="Privates">
+				<npc id="22204" count="1" max="1" respawnTime="0" />
+				<npc id="22205" count="1" max="1" respawnTime="0" />
+				<npc id="22220" count="1" max="1" respawnTime="0" />
+			</minions>
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5079" level="1" /> <!-- NPC Focused Haste -->
+			<skill name="PhysicalSpecial1" id="5084" level="1" /> <!-- NPC Blinding Blow -->
+			<skill name="PhysicalSpecial2" id="5082" level="1" /> <!-- NPC Spinning, Slashing Trick -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7711" hpRegen="13.43" mp="2168" mpRegen="3.09" />
+			<attack physical="1347.5" magical="679.32" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="342.6" magical="232.18" />
+			<speed>
+				<walk ground="24" />
+				<run ground="160" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500">
+			<clanList>
+				<clan>DEINONYCHUS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5953" max="12100" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.3378">
+					<item id="5534" min="1" max="1" chance="100.0" /> <!-- Soul Bow Stave -->
+				</group>
+				<group chance="1.5892">
+					<item id="8627" min="1" max="1" chance="35.1475" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="44.6238" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8883" min="1" max="1" chance="5.3231" /> <!-- Spellbook: Mystic Immunity -->
+					<item id="8954" min="1" max="1" chance="11.7157" /> <!-- Blue Primeval Crystal -->
+					<item id="8955" min="1" max="1" chance="2.1267" /> <!-- Green Primeval Crystal -->
+					<item id="8956" min="1" max="1" chance="1.0632" /> <!-- Red Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="14" />
+			<height normal="14.3" />
+		</collision>
+	</npc>
+	<npc id="22204" level="83" type="Monster" name="Deinonychus">
+		<parameters>
+			<param name="ag_type" value="0" />
+			<param name="IsSayPrivate" value="0" />
+			<param name="BroadCastReception" value="1" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7711" hpRegen="13.43" mp="2168" mpRegen="3.09" />
+			<attack physical="1347.5" magical="679.32" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="342.6" magical="232.18" />
+			<speed>
+				<walk ground="24" />
+				<run ground="190" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500" isAggressive="false">
+			<clanList>
+				<clan>DEINONYCHUS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5790" max="11810" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.2506">
+					<item id="5534" min="1" max="1" chance="100.0" /> <!-- Soul Bow Stave -->
+				</group>
+				<group chance="2.422">
+					<item id="8627" min="1" max="1" chance="27.5227" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="44.8764" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8887" min="1" max="1" chance="10.3468" /> <!-- Amulet: Pa'agrio's Emblem -->
+					<item id="8954" min="1" max="1" chance="13.8067" /> <!-- Blue Primeval Crystal -->
+					<item id="8955" min="1" max="1" chance="3.4474" /> <!-- Green Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="14" />
+			<height normal="14.3" />
+		</collision>
+	</npc>
+	<npc id="22205" level="83" type="Monster" name="Deinonychus">
+		<parameters>
+			<param name="ag_type" value="0" />
+			<param name="mobile_type" value="1" />
+			<param name="ProbSelfRangeBuff1" value="100" />
+			<param name="ProbPhysicalSpecial1" value="33" />
+			<param name="ProbPhysicalSpecial2" value="20" />
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5079" level="1" /> <!-- NPC Focused Haste -->
+			<skill name="PhysicalSpecial1" id="5084" level="1" /> <!-- NPC Blinding Blow -->
+			<skill name="PhysicalSpecial2" id="5082" level="1" /> <!-- NPC Spinning, Slashing Trick -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7711" hpRegen="13.43" mp="2168" mpRegen="3.09" />
+			<attack physical="1347.5" magical="679.32" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="342.6" magical="232.18" />
+			<speed>
+				<walk ground="24" />
+				<run ground="160" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500" isAggressive="false">
+			<clanList>
+				<clan>DEINONYCHUS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5987" max="12110" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.2247">
+					<item id="5534" min="1" max="1" chance="100.0" /> <!-- Soul Bow Stave -->
+				</group>
+				<group chance="1.0289">
+					<item id="8627" min="1" max="1" chance="76.2661" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="10.9146" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8880" min="1" max="1" chance="7.367" /> <!-- Spellbook: Summon Spectral Knight -->
+					<item id="8954" min="1" max="1" chance="5.4523" /> <!-- Blue Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="14" />
+			<height normal="14.3" />
+		</collision>
+	</npc>
+	<npc id="22208" level="85" type="Monster" name="Pachycephalosaurus">
+		<parameters>
+			<param name="ag_type" value="1" />
+			<param name="ProbSelfRangeBuff1" value="50" />
+			<param name="ProbPhysicalSpecial1" value="33" />
+			<param name="ProbPhysicalSpecial2" value="5" />
+			<minions name="Privates">
+				<npc id="22209" count="1" max="1" respawnTime="0" />
+				<npc id="22210" count="1" max="1" respawnTime="0" />
+				<npc id="22221" count="1" max="1" respawnTime="0" />
+			</minions>
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5080" level="1" /> <!-- NPC Mighty Haste -->
+			<skill name="PhysicalSpecial1" id="4067" level="10" /> <!-- NPC Mortal Blow -->
+			<skill name="PhysicalSpecial2" id="5083" level="1" /> <!-- Stun -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7866" hpRegen="13.43" mp="2253" mpRegen="3.09" />
+			<attack physical="1064.5" magical="719.82" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="369" magical="240.17" />
+			<speed>
+				<walk ground="33" />
+				<run ground="150" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="6613" max="13420" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.2932">
+					<item id="5537" min="1" max="1" chance="100.0" /> <!-- Soul Separator Head -->
+				</group>
+				<group chance="0.2196">
+					<item id="960" min="1" max="1" chance="66.6667" /> <!-- Scroll: Enchant Armor (Grade S) -->
+					<item id="8954" min="1" max="1" chance="33.3333" /> <!-- Blue Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="22" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="22209" level="85" type="Monster" name="Pachycephalosaurus">
+		<parameters>
+			<param name="IsSayPrivate" value="0" />
+			<param name="ag_type" value="1" />
+			<param name="BroadCastReception" value="1" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7866" hpRegen="13.43" mp="2253" mpRegen="3.09" />
+			<attack physical="1064.5" magical="719.82" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="369" magical="240.17" />
+			<speed>
+				<walk ground="33" />
+				<run ground="170" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="6054" max="12340" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.1363">
+					<item id="5537" min="1" max="1" chance="100.0" /> <!-- Soul Separator Head -->
+				</group>
+				<group chance="0.7633">
+					<item id="8954" min="1" max="1" chance="100.0" /> <!-- Blue Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="22" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="22210" level="85" type="Monster" name="Pachycephalosaurus">
+		<parameters>
+			<param name="mobile_type" value="1" />
+			<param name="ProbSelfRangeBuff1" value="50" />
+			<param name="ProbPhysicalSpecial1" value="33" />
+			<param name="ProbPhysicalSpecial2" value="5" />
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5080" level="1" /> <!-- NPC Mighty Haste -->
+			<skill name="PhysicalSpecial1" id="4067" level="10" /> <!-- NPC Mortal Blow -->
+			<skill name="PhysicalSpecial2" id="5083" level="1" /> <!-- Stun -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7866" hpRegen="13.43" mp="2253" mpRegen="3.09" />
+			<attack physical="1064.5" magical="719.82" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="369" magical="240.17" />
+			<speed>
+				<walk ground="33" />
+				<run ground="150" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="500" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="6608" max="13420" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.5247">
+					<item id="5537" min="1" max="1" chance="33.2918" /> <!-- Soul Separator Head -->
+					<item id="8954" min="1" max="1" chance="50.0623" /> <!-- Blue Primeval Crystal -->
+					<item id="8955" min="1" max="1" chance="16.6459" /> <!-- Green Primeval Crystal -->
+				</group>
+				<group chance="100">
+					<item id="8884" min="1" max="1" chance="2.1429" /> <!-- Spellbook: Spell Turning -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="22" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="22211" level="85" type="Monster" name="Wild Strider">
+		<parameters>
+			<param name="ag_type" value="1" />
+			<param name="ProbSelfRangeBuff1" value="100" />
+			<param name="ProbPhysicalSpecial1" value="3" />
+			<param name="ProbPhysicalSpecial2" value="33" />
+			<minions name="Privates">
+				<npc id="22212" count="1" max="1" respawnTime="0" />
+				<npc id="22213" count="1" max="1" respawnTime="0" />
+				<npc id="22222" count="1" max="1" respawnTime="0" />
+			</minions>
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5079" level="1" /> <!-- NPC Focused Haste -->
+			<skill name="PhysicalSpecial1" id="5081" level="1" /> <!-- Silence -->
+			<skill name="PhysicalSpecial2" id="4232" level="10" /> <!-- NPC AE Strike -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7866" hpRegen="13.43" mp="2253" mpRegen="3.09" />
+			<attack physical="1064.5" magical="719.82" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="369" magical="240.17" />
+			<speed>
+				<walk ground="50" />
+				<run ground="150" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="6423" max="12630" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.7495">
+					<item id="5538" min="1" max="1" chance="49.9666" /> <!-- Dragon Grinder Edge -->
+					<item id="960" min="1" max="1" chance="8.33889" /> <!-- Scroll: Enchant Armor (Grade S) -->
+					<item id="8954" min="1" max="1" chance="33.3556" /> <!-- Blue Primeval Crystal -->
+					<item id="8956" min="1" max="1" chance="8.33889" /> <!-- Red Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="32" />
+			<height normal="44.2" />
+		</collision>
+	</npc>
+	<npc id="22212" level="85" type="Monster" name="Wild Strider">
+		<parameters>
+			<param name="IsSayPrivate" value="0" />
+			<param name="ag_type" value="1" />
+			<param name="BroadCastReception" value="1" />
+			<skill name="PhysicalSpecial" id="4067" level="10" /> <!-- NPC Mortal Blow -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7866" hpRegen="13.43" mp="2253" mpRegen="3.09" />
+			<attack physical="1064.5" magical="719.82" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="369" magical="240.17" />
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5944" max="12130" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.9679">
+					<item id="5538" min="1" max="1" chance="57.7229" /> <!-- Dragon Grinder Edge -->
+					<item id="960" min="1" max="1" chance="3.84337" /> <!-- Scroll: Enchant Armor (Grade S) -->
+					<item id="8954" min="1" max="1" chance="26.9036" /> <!-- Blue Primeval Crystal -->
+					<item id="8955" min="1" max="1" chance="3.84337" /> <!-- Green Primeval Crystal -->
+					<item id="8956" min="1" max="1" chance="7.68674" /> <!-- Red Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="32" />
+			<height normal="44.2" />
+		</collision>
+	</npc>
+	<npc id="22213" level="85" type="Monster" name="Wild Strider">
+		<parameters>
+			<param name="mobile_type" value="1" />
+			<param name="ProbSelfRangeBuff1" value="100" />
+			<param name="ProbPhysicalSpecial1" value="3" />
+			<param name="ProbPhysicalSpecial2" value="33" />
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5079" level="1" /> <!-- NPC Focused Haste -->
+			<skill name="PhysicalSpecial1" id="5081" level="1" /> <!-- Silence -->
+			<skill name="PhysicalSpecial2" id="4232" level="10" /> <!-- NPC AE Strike -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7866" hpRegen="13.43" mp="2253" mpRegen="3.09" />
+			<attack physical="1064.5" magical="719.82" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="369" magical="240.17" />
+			<speed>
+				<walk ground="50" />
+				<run ground="150" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="500" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="6262" max="12640" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.4606">
+					<item id="5538" min="1" max="1" chance="72.8331" /> <!-- Dragon Grinder Edge -->
+					<item id="8954" min="1" max="1" chance="27.1669" /> <!-- Blue Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="32" />
+			<height normal="44.2" />
+		</collision>
+	</npc>
+	<npc id="22214" level="85" type="Monster" name="Elroki">
+		<parameters>
+			<param name="ag_type" value="1" />
+			<param name="ai_type1" value="pachycephalosaurus" />
+			<param name="silhouette1" value="22209" /> <!-- Pachycephalosaurus -->
+			<param name="ai_type2" value="wild_strider" />
+			<param name="silhouette2" value="22212" /> <!-- Wild Strider -->
+			<param name="LongRangeSkillDist" value="100" />
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="0" />
+			<param name="ProbSelfRangeBuff1" value="100" />
+			<param name="ProbSelfRangeDeBuff1" value="30" />
+			<param name="max_spawn_privates" value="5" />
+			<param name="max_concurrent_privates" value="2" />
+			<skill name="LongRangeDDMagic1" id="4151" level="10" /> <!-- NPC Windstrike - Magic -->
+			<skill name="SelfRangeDDMagic1" id="5178" level="1" /> <!-- NPC Burn -->
+			<skill name="SelfRangeBuff1" id="5080" level="1" /> <!-- NPC Mighty Haste -->
+			<skill name="SelfRangeDeBuff1" id="4486" level="10" /> <!-- Decrease P. Def. -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="15732" hpRegen="13.43" mp="2253" mpRegen="3.09" />
+			<attack physical="1064.5" magical="719.82" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="369" magical="240.17" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5873" max="11940" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="2.984">
+					<item id="5502" min="1" max="1" chance="36.4276" /> <!-- Sealed Boots of Nightmare Lining -->
+					<item id="5503" min="1" max="1" chance="13.6227" /> <!-- Sealed Majestic Boots Lining -->
+					<item id="5514" min="1" max="1" chance="9.08177" /> <!-- Sealed Gauntlets of Nightmare Design -->
+					<item id="5515" min="1" max="1" chance="27.2453" /> <!-- Sealed Majestic Gauntlets Design -->
+					<item id="8954" min="1" max="1" chance="13.6227" /> <!-- Blue Primeval Crystal -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1889" min="1" max="1" chance="51" /> <!-- Compound Braid -->
+				<item id="5549" min="1" max="1" chance="75" /> <!-- Metallic Thread -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="25" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="22215" level="87" type="Monster" name="Tyrannosaurus">
+		<parameters>
+			<param name="ag_type" value="1" />
+			<param name="ProbSelfBuff1" value="100" />
+			<param name="ProbSelfBuff2" value="100" />
+			<param name="ProbLongRangeDDMagic1" value="10" />
+			<param name="ProbPhysicalSpecial1" value="5" />
+			<param name="ProbPhysicalSpecial2" value="3" />
+			<param name="ProbPhysicalSpecial3" value="5" />
+			<param name="LongRangeSkillDist" value="100" />
+			<param name="BroadCastReception" value="0" />
+			<param name="CaptureCycle" value="20" />
+			<param name="CaptureCycleRand" value="4" />
+			<param name="Social1" value="1" />
+			<param name="Social2" value="2" />
+			<param name="Social3" value="3" />
+			<param name="Social1_Frame" value="2" />
+			<param name="Social2_Frame" value="2" />
+			<param name="Social3_Frame" value="2" />
+			<skill name="SelfBuff1" id="5087" level="1" /> <!-- Berserk -->
+			<skill name="SelfBuff2" id="5087" level="2" /> <!-- Berserk -->
+			<skill name="LongRangeDDMagic1" id="5120" level="1" /> <!-- Stun -->
+			<skill name="PhysicalSpecial1" id="5083" level="4" /> <!-- Stun -->
+			<skill name="PhysicalSpecial2" id="5081" level="4" /> <!-- Silence -->
+			<skill name="PhysicalSpecial3" id="5082" level="4" /> <!-- NPC Spinning, Slashing Trick -->
+			<skill name="DeBuff1" id="5098" level="1" /> <!-- Capture Penalty -->
+			<skill name="DeBuff2" id="5098" level="2" /> <!-- Capture Penalty -->
+			<skill name="CaptureCancel_a" id="5099" level="1" /> <!-- Cancel Capture A -->
+			<skill name="CaptureCancel_b" id="5100" level="1" /> <!-- Cancel Capture B -->
+			<skill name="CaptureCancel_c" id="5101" level="1" /> <!-- Cancel Capture C -->
+			<skill name="CaptureCancel_all" id="5102" level="1" /> <!-- Cancel All Capture -->
+			<skill name="DeBuff1Cancel" id="5102" level="1" /> <!-- Cancel All Capture -->
+			<skill name="DeBuff2Cancel" id="5102" level="1" /> <!-- Cancel All Capture -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="727609" sp="81666" />
+		<stats str="60" int="21" dex="35" wit="24" con="63" men="60">
+			<vitals hp="193928" hpRegen="13.43" mp="2339" mpRegen="3.09" />
+			<attack physical="3134.5" magical="763.02" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="60" distance="80" width="120" />
+			<defence physical="581" magical="449.57" />
+			<speed>
+				<walk ground="105" />
+				<run ground="220" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="80380" max="138860" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="6.6666">
+					<item id="5541" min="1" max="1" chance="100.0" /> <!-- Tallum Glaive Edge -->
+				</group>
+				<group chance="16.4284">
+					<item id="8627" min="1" max="1" chance="27.668" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="35.8058" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8894" min="1" max="1" chance="9.0849" /> <!-- Ancient Tactical Manual: Symbol of Resistance -->
+					<item id="8895" min="1" max="1" chance="5.9676" /> <!-- Ancient Tactical Manual: Symbol of Honor -->
+					<item id="8956" min="1" max="1" chance="3.0282" /> <!-- Red Primeval Crystal -->
+					<item id="8762" min="1" max="1" chance="18.4455" /> <!-- Top-Grade Life Stone: level 76 -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="60" />
+			<height normal="89.7" />
+		</collision>
+	</npc>
+	<npc id="22216" level="87" type="Monster" name="Tyrannosaurus">
+		<parameters>
+			<param name="ag_type" value="1" />
+			<param name="ProbSelfBuff1" value="100" />
+			<param name="ProbSelfBuff2" value="100" />
+			<param name="ProbLongRangeDDMagic1" value="10" />
+			<param name="ProbPhysicalSpecial1" value="5" />
+			<param name="ProbPhysicalSpecial2" value="3" />
+			<param name="ProbPhysicalSpecial3" value="5" />
+			<param name="LongRangeSkillDist" value="100" />
+			<param name="BroadCastReception" value="0" />
+			<param name="CaptureCycle" value="20" />
+			<param name="CaptureCycleRand" value="4" />
+			<param name="CollectGhost" value="1" />
+			<param name="CollectGhostDespawnTime" value="180" />
+			<param name="Social1" value="1" />
+			<param name="Social2" value="2" />
+			<param name="Social3" value="3" />
+			<param name="Social1_Frame" value="2" />
+			<param name="Social2_Frame" value="2" />
+			<param name="Social3_Frame" value="2" />
+			<skill name="SelfBuff1" id="5087" level="1" /> <!-- Berserk -->
+			<skill name="SelfBuff2" id="5087" level="2" /> <!-- Berserk -->
+			<skill name="LongRangeDDMagic1" id="5120" level="1" /> <!-- Stun -->
+			<skill name="PhysicalSpecial1" id="5083" level="4" /> <!-- Stun -->
+			<skill name="PhysicalSpecial2" id="5081" level="4" /> <!-- Silence -->
+			<skill name="PhysicalSpecial3" id="5082" level="4" /> <!-- NPC Spinning, Slashing Trick -->
+			<skill name="DeBuff1" id="5098" level="1" /> <!-- Capture Penalty -->
+			<skill name="DeBuff2" id="5098" level="2" /> <!-- Capture Penalty -->
+			<skill name="CaptureCancel_a" id="5099" level="1" /> <!-- Cancel Capture A -->
+			<skill name="CaptureCancel_b" id="5100" level="1" /> <!-- Cancel Capture B -->
+			<skill name="CaptureCancel_c" id="5101" level="1" /> <!-- Cancel Capture C -->
+			<skill name="CaptureCancel_all" id="5102" level="1" /> <!-- Cancel All Capture -->
+			<skill name="DeBuff1Cancel" id="5102" level="1" /> <!-- Cancel All Capture -->
+			<skill name="DeBuff2Cancel" id="5102" level="1" /> <!-- Cancel All Capture -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="727609" sp="81666" />
+		<stats str="60" int="21" dex="35" wit="24" con="63" men="60">
+			<vitals hp="193928" hpRegen="13.43" mp="2339" mpRegen="3.09" />
+			<attack physical="3134.5" magical="763.02" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="60" distance="80" width="120" />
+			<defence physical="581" magical="449.57" />
+			<speed>
+				<walk ground="105" />
+				<run ground="220" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="54300" max="110530" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="5.8823">
+					<item id="5541" min="1" max="1" chance="100.0" /> <!-- Tallum Glaive Edge -->
+				</group>
+				<group chance="43.3213">
+					<item id="8905" min="1" max="1" chance="5.63" /> <!-- Ancient Spellbook: Purification Field -->
+					<item id="8627" min="1" max="1" chance="80.7918" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="13.5782" /> <!-- Elixir of Mental Strength (S-Grade) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="60" />
+			<height normal="89.7" />
+		</collision>
+	</npc>
+	<npc id="22217" level="87" type="Monster" name="Tyrannosaurus">
+		<parameters>
+			<param name="ag_type" value="1" />
+			<param name="mobile_type" value="1" />
+			<param name="ProbSelfBuff1" value="100" />
+			<param name="ProbSelfBuff2" value="100" />
+			<param name="ProbLongRangeDDMagic1" value="10" />
+			<param name="ProbPhysicalSpecial1" value="5" />
+			<param name="ProbPhysicalSpecial2" value="3" />
+			<param name="ProbPhysicalSpecial3" value="5" />
+			<param name="LongRangeSkillDist" value="100" />
+			<param name="BroadCastReception" value="0" />
+			<param name="CaptureCycle" value="20" />
+			<param name="CaptureCycleRand" value="4" />
+			<param name="Social1" value="1" />
+			<param name="Social2" value="2" />
+			<param name="Social3" value="3" />
+			<param name="Social1_Frame" value="2" />
+			<param name="Social2_Frame" value="2" />
+			<param name="Social3_Frame" value="2" />
+			<skill name="SelfBuff1" id="5087" level="1" /> <!-- Berserk -->
+			<skill name="SelfBuff2" id="5087" level="2" /> <!-- Berserk -->
+			<skill name="LongRangeDDMagic1" id="5120" level="1" /> <!-- Stun -->
+			<skill name="PhysicalSpecial1" id="5083" level="4" /> <!-- Stun -->
+			<skill name="PhysicalSpecial2" id="5081" level="4" /> <!-- Silence -->
+			<skill name="PhysicalSpecial3" id="5082" level="4" /> <!-- NPC Spinning, Slashing Trick -->
+			<skill name="DeBuff1" id="5098" level="1" /> <!-- Capture Penalty -->
+			<skill name="DeBuff2" id="5098" level="2" /> <!-- Capture Penalty -->
+			<skill name="CaptureCancel_a" id="5099" level="1" /> <!-- Cancel Capture A -->
+			<skill name="CaptureCancel_b" id="5100" level="1" /> <!-- Cancel Capture B -->
+			<skill name="CaptureCancel_c" id="5101" level="1" /> <!-- Cancel Capture C -->
+			<skill name="CaptureCancel_all" id="5102" level="1" /> <!-- Cancel All Capture -->
+			<skill name="DeBuff1Cancel" id="5102" level="1" /> <!-- Cancel All Capture -->
+			<skill name="DeBuff2Cancel" id="5102" level="1" /> <!-- Cancel All Capture -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="727609" sp="81666" />
+		<stats str="60" int="21" dex="35" wit="24" con="63" men="60">
+			<vitals hp="193928" hpRegen="13.43" mp="2339" mpRegen="3.09" />
+			<attack physical="3134.5" magical="763.02" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="60" distance="80" width="120" />
+			<defence physical="581" magical="449.57" />
+			<speed>
+				<walk ground="105" />
+				<run ground="220" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="77220" max="132850" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="4.5454">
+					<item id="5541" min="1" max="1" chance="100.0" /> <!-- Tallum Glaive Edge -->
+				</group>
+				<group chance="15.7947">
+					<item id="8627" min="1" max="1" chance="21.1039" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="57.557" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8903" min="1" max="1" chance="7.113" /> <!-- Ancient Spellbook: Gehenna -->
+					<item id="8908" min="1" max="1" chance="7.113" /> <!-- Ancient Spellbook: Mass Recharge -->
+					<item id="8954" min="1" max="1" chance="7.1131" /> <!-- Blue Primeval Crystal -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="4042" min="1" max="3" chance="30" /> <!-- Enria -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="60" />
+			<height normal="89.7" />
+		</collision>
+	</npc>
+	<npc id="22218" level="86" type="Monster" name="Velociraptor">
+		<parameters>
+			<skill name="PhysicalSpecial" id="4032" level="10" /> <!-- NPC Strike -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="24829" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7945" hpRegen="13.43" mp="2296" mpRegen="3.09" />
+			<attack physical="1099.5" magical="741.42" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="375" magical="244.87" />
+			<speed>
+				<walk ground="33" />
+				<run ground="200" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500">
+			<clanList>
+				<clan>VELOCIRAPTOR</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="4524" max="12800" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="2.853">
+					<item id="5529" min="1" max="1" chance="22.4676" /> <!-- Dragon Slayer Edge -->
+					<item id="5546" min="1" max="1" chance="11.1952" /> <!-- Sword of Miracles Edge -->
+					<item id="8627" min="1" max="1" chance="11.1952" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="28.0407" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8906" min="1" max="1" chance="21.5037" /> <!-- Ancient Spellbook: Miracle -->
+					<item id="8954" min="1" max="1" chance="5.59762" /> <!-- Blue Primeval Crystal -->
+				</group>
+				<group chance="100">
+					<item id="8906" min="1" max="1" chance="0.2133" /> <!-- Ancient Spellbook: Miracle -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="22219" level="84" type="Monster" name="Ornithomimus">
+		<parameters>
+			<skill name="PhysicalSpecial" id="5084" level="1" /> <!-- NPC Blinding Blow -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7788" hpRegen="13.43" mp="2211" mpRegen="3.09" />
+			<attack physical="1149" magical="699.84" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.2" magical="235.94" />
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="100" isAggressive="false">
+			<clanList>
+				<clan>ORNITHOMIMUS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5493" max="11210" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.1678">
+					<item id="5533" min="1" max="1" chance="10.25" /> <!-- Elysian Head -->
+					<item id="5544" min="1" max="1" chance="5.58747" /> <!-- Branch of The Mother Tree Head -->
+					<item id="8342" min="1" max="1" chance="1.86249" /> <!-- Flaming Dragon Skull Piece -->
+					<item id="8349" min="1" max="1" chance="4.65623" /> <!-- Doom Crusher Head -->
+					<item id="8954" min="1" max="1" chance="1.86249" /> <!-- Blue Primeval Crystal -->
+					<item id="8896" min="1" max="1" chance="57.3963" /> <!-- Ancient Tactical Manual: Symbol of Energy -->
+					<item id="8633" min="1" max="1" chance="4.65623" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8627" min="1" max="1" chance="11.8663" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8955" min="1" max="1" chance="1.86249" /> <!-- Green Primeval Crystal -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="6901" min="1" max="1" chance="0.7812" /> <!-- Recipe: Shining Arrow (100%) -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="15" />
+			<height normal="37.2" />
+		</collision>
+	</npc>
+	<npc id="22220" level="83" type="Monster" name="Deinonychus">
+		<parameters>
+			<skill name="PhysicalSpecial" id="4067" level="10" /> <!-- NPC Mortal Blow -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7711" hpRegen="13.43" mp="2168" mpRegen="3.09" />
+			<attack physical="1347.5" magical="679.32" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="342.6" magical="232.18" />
+			<speed>
+				<walk ground="24" />
+				<run ground="180" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="100" isAggressive="false">
+			<clanList>
+				<clan>DEINONYCHUS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="4893" max="9986" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.1876">
+					<item id="5534" min="1" max="1" chance="16.5109" /> <!-- Soul Bow Stave -->
+					<item id="8627" min="1" max="1" chance="4.12222" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="6.8641" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8880" min="1" max="1" chance="61.5134" /> <!-- Spellbook: Summon Spectral Knight -->
+					<item id="8954" min="1" max="1" chance="5.49316" /> <!-- Blue Primeval Crystal -->
+					<item id="8955" min="1" max="1" chance="4.12222" /> <!-- Green Primeval Crystal -->
+					<item id="8956" min="1" max="1" chance="1.37407" /> <!-- Red Primeval Crystal -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="3" chance="68" /> <!-- Stone of Purity -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="14" />
+			<height normal="14.3" />
+		</collision>
+	</npc>
+	<npc id="22221" level="84" type="Monster" name="Pachycephalosaurus">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7788" hpRegen="13.43" mp="2211" mpRegen="3.09" />
+			<attack physical="1149" magical="699.84" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.2" magical="235.94" />
+			<speed>
+				<walk ground="33" />
+				<run ground="150" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="100" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5317" max="10840" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.9366">
+					<item id="5537" min="1" max="1" chance="20.4872" /> <!-- Soul Separator Head -->
+					<item id="8627" min="1" max="1" chance="8.35493" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="4.6436" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8884" min="1" max="1" chance="59.0764" /> <!-- Spellbook: Spell Turning -->
+					<item id="8954" min="1" max="1" chance="3.71895" /> <!-- Blue Primeval Crystal -->
+					<item id="8955" min="1" max="1" chance="3.71895" /> <!-- Green Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="22" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="22222" level="85" type="Monster" name="Wild Strider">
+		<parameters>
+			<skill name="PhysicalSpecial" id="4067" level="10" /> <!-- NPC Mortal Blow -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7866" hpRegen="13.43" mp="2253" mpRegen="3.09" />
+			<attack physical="1064.5" magical="719.82" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="369" magical="240.17" />
+			<speed>
+				<walk ground="50" />
+				<run ground="150" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="100" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5157" max="10520" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.8639">
+					<item id="5538" min="1" max="1" chance="60.6089" /> <!-- Dragon Grinder Edge -->
+					<item id="960" min="1" max="1" chance="2.63919" /> <!-- Scroll: Enchant Armor (Grade S) -->
+					<item id="8954" min="1" max="1" chance="26.3688" /> <!-- Blue Primeval Crystal -->
+					<item id="8955" min="1" max="1" chance="3.97037" /> <!-- Green Primeval Crystal -->
+					<item id="8956" min="1" max="1" chance="3.97037" /> <!-- Red Primeval Crystal -->
+					<item id="8752" min="1" max="1" chance="2.44241" /> <!-- High-Grade Life Stone: level 76 -->
+				</group>
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="1" chance="63" /> <!-- Stone of Purity -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="32" />
+			<height normal="44.2" />
+		</collision>
+	</npc>
+	<npc id="22223" level="86" type="Monster" name="Velociraptor">
+		<parameters>
+			<param name="ag_type" value="1" />
+			<param name="ProbSelfRangeBuff1" value="100" />
+			<param name="ProbPhysicalSpecial1" value="3" />
+			<param name="ProbPhysicalSpecial2" value="20" />
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5079" level="1" /> <!-- NPC Focused Haste -->
+			<skill name="PhysicalSpecial1" id="5081" level="1" /> <!-- Silence -->
+			<skill name="PhysicalSpecial2" id="5082" level="1" /> <!-- NPC Spinning, Slashing Trick -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="24829" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7945" hpRegen="13.43" mp="2296" mpRegen="3.09" />
+			<attack physical="1099.5" magical="741.42" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="375" magical="244.87" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500">
+			<clanList>
+				<clan>VELOCIRAPTOR</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="4413" max="13460" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="6.7171">
+					<item id="5545" min="1" max="1" chance="19.8493" /> <!-- Dark Legion's Edge Blade -->
+					<item id="8898" min="1" max="1" chance="70.8922" /> <!-- Ancient Tactical Manual: Symbol of the Assassin -->
+					<item id="8627" min="1" max="1" chance="3.08169" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="6.17677" /> <!-- Elixir of Mental Strength (S-Grade) -->
+				</group>
+				<group chance="100">
+					<item id="8898" min="1" max="1" chance="0.2571" /> <!-- Ancient Tactical Manual: Symbol of the Assassin -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="22224" level="84" type="Monster" name="Ornithomimus">
+		<parameters>
+			<param name="ag_type" value="0" />
+			<minions name="Privates">
+				<npc id="22201" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22202" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22219" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
+			<param name="ProbSelfRangeBuff1" value="50" />
+			<param name="ProbPhysicalSpecial1" value="33" />
+			<param name="ProbPhysicalSpecial2" value="5" />
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5080" level="1" /> <!-- NPC Mighty Haste -->
+			<skill name="PhysicalSpecial1" id="5084" level="1" /> <!-- NPC Blinding Blow -->
+			<skill name="PhysicalSpecial2" id="5083" level="1" /> <!-- Stun -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7788" hpRegen="13.43" mp="2211" mpRegen="3.09" />
+			<attack physical="1149" magical="699.84" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.2" magical="235.94" />
+			<speed>
+				<walk ground="36" />
+				<run ground="170" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500" isAggressive="false">
+			<clanList>
+				<clan>ORNITHOMIMUS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="56398" max="11510" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.1975">
+					<item id="960" min="1" max="1" chance="11.7578" /> <!-- Scroll: Enchant Armor (Grade S) -->
+					<item id="5533" min="1" max="1" chance="5.87891" /> <!-- Elysian Head -->
+					<item id="5544" min="1" max="1" chance="23.524" /> <!-- Branch of The Mother Tree Head -->
+					<item id="8342" min="1" max="1" chance="17.6534" /> <!-- Flaming Dragon Skull Piece -->
+					<item id="8349" min="1" max="1" chance="5.87891" /> <!-- Doom Crusher Head -->
+					<item id="8954" min="1" max="1" chance="17.6534" /> <!-- Blue Primeval Crystal -->
+					<item id="8955" min="1" max="1" chance="17.6534" /> <!-- Green Primeval Crystal -->
+				</group>
+				<group chance="100">
+					<item id="8897" min="1" max="1" chance="2.1429" /> <!-- Ancient Tactical Manual: Symbol of the Sniper -->
+				</group>
+				<group chance="100">
+					<item id="8878" min="1" max="1" chance="2.1429" /> <!-- Spellbook: Summon Feline King -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="15" />
+			<height normal="37.2" />
+		</collision>
+	</npc>
+	<npc id="22225" level="83" type="Monster" name="Deinonychus">
+		<parameters>
+			<param name="ag_type" value="0" />
+			<minions name="Privates">
+				<npc id="22204" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22205" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22220" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
+			<param name="ProbSelfRangeBuff1" value="100" />
+			<param name="ProbPhysicalSpecial1" value="33" />
+			<param name="ProbPhysicalSpecial2" value="20" />
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5079" level="1" /> <!-- NPC Focused Haste -->
+			<skill name="PhysicalSpecial1" id="5084" level="1" /> <!-- NPC Blinding Blow -->
+			<skill name="PhysicalSpecial2" id="5082" level="1" /> <!-- NPC Spinning, Slashing Trick -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7711" hpRegen="13.43" mp="2168" mpRegen="3.09" />
+			<attack physical="1347.5" magical="679.32" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="342.6" magical="232.18" />
+			<speed>
+				<walk ground="24" />
+				<run ground="160" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500">
+			<clanList>
+				<clan>DEINONYCHUS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="5361" max="10920" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="3.9761">
+					<item id="5534" min="1" max="1" chance="8.24677" /> <!-- Soul Bow Stave -->
+					<item id="8627" min="1" max="1" chance="14.4539" /> <!-- Elixir of Life (S-Grade) -->
+					<item id="8633" min="1" max="1" chance="10.3066" /> <!-- Elixir of Mental Strength (S-Grade) -->
+					<item id="8888" min="1" max="1" chance="62.8757" /> <!-- Amulet: Pa'agrio's Fist -->
+					<item id="8954" min="1" max="1" chance="4.1171" /> <!-- Blue Primeval Crystal -->
+				</group>
+				<group chance="100">
+					<item id="8879" min="1" max="1" chance="2.1429" /> <!-- Spellbook: Summon Magnus the Unicorn -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="14" />
+			<height normal="14.3" />
+		</collision>
+	</npc>
+	<npc id="22226" level="85" type="Monster" name="Pachycephalosaurus">
+		<parameters>
+			<param name="ag_type" value="1" />
+			<param name="ProbSelfRangeBuff1" value="50" />
+			<param name="ProbPhysicalSpecial1" value="33" />
+			<param name="ProbPhysicalSpecial2" value="5" />
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5080" level="1" /> <!-- NPC Mighty Haste -->
+			<skill name="PhysicalSpecial1" id="4067" level="10" /> <!-- NPC Mortal Blow -->
+			<skill name="PhysicalSpecial2" id="5083" level="1" /> <!-- Stun -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7866" hpRegen="13.43" mp="2253" mpRegen="3.09" />
+			<attack physical="1064.5" magical="719.82" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="369" magical="240.17" />
+			<speed>
+				<walk ground="33" />
+				<run ground="140" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="6613" max="13420" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.8232">
+					<item id="5537" min="1" max="1" chance="61.0423" /> <!-- Soul Separator Head -->
+					<item id="960" min="1" max="1" chance="17.7843" /> <!-- Scroll: Enchant Armor (Grade S) -->
+					<item id="8954" min="1" max="1" chance="7.81098" /> <!-- Blue Primeval Crystal -->
+					<item id="8955" min="1" max="1" chance="7.81098" /> <!-- Green Primeval Crystal -->
+					<item id="8752" min="1" max="1" chance="5.55151" /> <!-- High-Grade Life Stone: level 76 -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="22" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="22227" level="85" type="Monster" name="Wild Strider">
+		<parameters>
+			<param name="ag_type" value="1" />
+			<param name="ProbSelfRangeBuff1" value="100" />
+			<param name="ProbPhysicalSpecial1" value="3" />
+			<param name="ProbPhysicalSpecial2" value="33" />
+			<param name="BroadCastRange" value="100" />
+			<param name="BroadCastReception" value="1" />
+			<param name="HpChkRate5" value="80" />
+			<skill name="SelfRangeBuff1" id="5079" level="1" /> <!-- NPC Focused Haste -->
+			<skill name="PhysicalSpecial1" id="5081" level="1" /> <!-- Silence -->
+			<skill name="PhysicalSpecial2" id="4232" level="10" /> <!-- NPC AE Strike -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="14514" sp="2715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7866" hpRegen="13.43" mp="2253" mpRegen="3.09" />
+			<attack physical="1064.5" magical="719.82" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="369" magical="240.17" />
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="500" />
+		<dropLists>
+			<drop>
+				<group chance="70">
+					<item id="57" min="4700" max="14230" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.6937">
+					<item id="5538" min="1" max="1" chance="79.7839" /> <!-- Dragon Grinder Edge -->
+					<item id="8954" min="1" max="1" chance="10.1081" /> <!-- Blue Primeval Crystal -->
+					<item id="8955" min="1" max="1" chance="10.1081" /> <!-- Green Primeval Crystal -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="32" />
+			<height normal="44.2" />
+		</collision>
+	</npc>
+</list>

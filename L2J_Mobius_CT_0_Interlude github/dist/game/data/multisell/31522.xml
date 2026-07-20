@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>31522</npc> <!-- Mysterious Wizard -->
+	</npcs>
+	<item>
+		<!-- Zombie's Brain -->
+		<ingredient count="27" id="7543" />
+		<!-- Mold Lubricant -->
+		<production count="1" id="4040" />
+	</item>
+	<item>
+		<!-- Zombie's Brain -->
+		<ingredient count="32" id="7543" />
+		<!-- Enria -->
+		<production count="1" id="4042" />
+	</item>
+	<item>
+		<!-- Zombie's Brain -->
+		<ingredient count="62" id="7543" />
+		<!-- Mold Hardener -->
+		<production count="1" id="4041" />
+	</item>
+	<item>
+		<!-- Zombie's Brain -->
+		<ingredient count="13" id="7543" />
+		<!-- Adamantite Nugget -->
+		<production count="1" id="1877" />
+	</item>
+</list>

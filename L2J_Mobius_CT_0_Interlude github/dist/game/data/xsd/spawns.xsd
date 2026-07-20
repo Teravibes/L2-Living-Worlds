@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence maxOccurs="1" minOccurs="1">
+				<xs:element name="spawn" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="unbounded">
+							<xs:element name="AIData" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence minOccurs="1" maxOccurs="1">
+										<xs:element type="xs:nonNegativeInteger" name="aggroRange" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:boolean" name="disableRandomAnimation" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:boolean" name="disableRandomWalk" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:integer" name="fleeX" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:integer" name="fleeY" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:integer" name="fleeZ" minOccurs="0" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="territory" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="node" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:int" name="x" use="required" />
+														<xs:attribute type="xs:int" name="y" use="required" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:string" name="shape" use="optional" />
+									<xs:attribute type="xs:short" name="minZ" use="required" />
+									<xs:attribute type="xs:short" name="maxZ" use="required" />
+									<xs:attribute type="xs:int" name="rad" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="banned_territory" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="node" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:int" name="x" use="required" />
+														<xs:attribute type="xs:int" name="y" use="required" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:string" name="shape" use="optional" />
+									<xs:attribute type="xs:short" name="minZ" use="required" />
+									<xs:attribute type="xs:short" name="maxZ" use="required" />
+									<xs:attribute type="xs:int" name="rad" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="npc" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+											<xs:attribute name="x" type="xs:integer" use="optional" />
+											<xs:attribute name="y" type="xs:integer" use="optional" />
+											<xs:attribute name="z" type="xs:integer" use="optional" />
+											<xs:attribute name="heading" type="xs:integer" use="optional" />
+											<xs:attribute name="count" type="xs:positiveInteger" use="optional" />
+											<xs:attribute name="respawnDelay" type="xs:nonNegativeInteger" use="optional" />
+											<xs:attribute name="respawnRandom" type="xs:nonNegativeInteger" use="optional" />
+											<xs:attribute name="chaseRange" type="xs:nonNegativeInteger" use="optional" />
+											<xs:attribute name="periodOfDay" use="optional">
+												<xs:simpleType>
+													<xs:restriction base="xs:token">
+														<xs:enumeration value="day" />
+														<xs:enumeration value="night" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="name" use="optional" />
+						<xs:attribute type="xs:string" name="zone" use="optional" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="enabled" type="xs:boolean" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

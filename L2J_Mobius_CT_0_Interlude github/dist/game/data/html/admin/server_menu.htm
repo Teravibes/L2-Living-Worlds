@@ -1,0 +1,71 @@
+<html><title>Server Management Panel</title><body>
+<center>
+<table width=270 border=0 bgcolor="444444">
+<tr>
+<td><button value="Main" action="bypass admin_admin" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+<td><button value="Char" action="bypass admin_admin6" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+<td><button value="Game" action="bypass admin_admin2" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+<td><button value="GM" action="bypass admin_admin7" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+</tr>
+</table><br>
+<table width=270>
+<tr>
+<td><font color="LEVEL">QuickBox:</font></td>
+<td><edit var="qbox" width=120 height=12></td>
+<td><button value="Help" action="bypass admin_html help/server_menu.htm" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr>
+</table>
+<br>
+Development:<br1>
+<table width=190>
+<tr>
+<td><button value="Open All Doors" action="bypass -h admin_openall" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Close All Doors" action="bypass -h admin_closeall" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+</tr>
+<tr>
+<td><button value="System Message" action="bypass -h admin_msg $qbox" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Spawns Debug" action="bypass -h admin_spawn_debug_menu" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+</tr>
+</table><br><br>
+<table width=240>
+<tr>
+<td><button value="Fight Calc" action="bypass -h admin_fight_calculator_show" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Packet Forge" action="bypass -h admin_forge" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Mods" action="bypass admin_admin5" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+</tr>
+<tr>
+<td><button value="Skill Test" action="bypass -h admin_skill_test $qbox" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Zone Build" action="bypass -h admin_zone_build" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Zone Check" action="bypass -h admin_zone_check" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+</tr>
+<tr>
+<td><button value="Config" action="bypass -h admin_config_server" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Triggers" action="bypass admin_html event_triggers.htm" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Reload" action="bypass admin_html reload.htm" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Rates" action="bypass -h admin_rates" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+</tr>
+</table>
+<br>
+Maintenance:<br1>
+<table width=190>
+<tr>
+<td><button value="LoginServer" action="bypass -h admin_server_login" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="GameServer" action="bypass -h admin_server_shutdown" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+</tr>
+<tr>
+<td><button value="Server Info" action="bypass -h admin_serverinfo" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Announcements" action="bypass -h admin_announces list" width=95 height=21 back="bigbutton_over" fore="bigbutton"></td>
+</tr>
+</table>
+<br>
+Geodata:<br1>
+<table width=220><tr>
+<td><button value="Z" action="bypass -h admin_geo_z" width=50 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button value="Type" action="bypass -h admin_geo_type" width=50 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button value="NSWE" action="bypass -h admin_geo_nswe" width=50 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button value="LoS" action="bypass -h admin_geo_los" width=50 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td><button value="Pos" action="bypass -h admin_geo_position" width=50 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr>
+</table>
+</center>
+</body></html>

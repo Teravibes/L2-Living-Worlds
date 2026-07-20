@@ -1,0 +1,3317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="31900" level="65" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon3" />
+			<param name="RoomIndex" value="8" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="271.89033" magical="198.95754" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31901" level="75" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon4" />
+			<param name="RoomIndex" value="0" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31902" level="75" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon4" />
+			<param name="RoomIndex" value="1" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31903" level="75" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon4" />
+			<param name="RoomIndex" value="2" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31904" level="75" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon4" />
+			<param name="RoomIndex" value="3" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31905" level="75" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon4" />
+			<param name="RoomIndex" value="4" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31906" level="75" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon4" />
+			<param name="RoomIndex" value="5" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31907" level="75" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon4" />
+			<param name="RoomIndex" value="6" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31908" level="75" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon4" />
+			<param name="RoomIndex" value="7" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31909" level="75" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon4" />
+			<param name="RoomIndex" value="8" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31910" level="85" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon5" />
+			<param name="RoomIndex" value="0" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234.06312688557" hpRegen="8.5" mp="1846.8" mpRegen="3" />
+			<attack physical="1188.87259499001" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31911" level="85" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon5" />
+			<param name="RoomIndex" value="1" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234.06312688557" hpRegen="8.5" mp="1846.8" mpRegen="3" />
+			<attack physical="1188.87259499001" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31912" level="85" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon5" />
+			<param name="RoomIndex" value="2" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234.06312688557" hpRegen="8.5" mp="1846.8" mpRegen="3" />
+			<attack physical="1188.87259499001" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31913" level="85" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon5" />
+			<param name="RoomIndex" value="3" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234.06312688557" hpRegen="8.5" mp="1846.8" mpRegen="3" />
+			<attack physical="1188.87259499001" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31914" level="85" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon5" />
+			<param name="RoomIndex" value="4" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234.06312688557" hpRegen="8.5" mp="1846.8" mpRegen="3" />
+			<attack physical="1188.87259499001" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31915" level="85" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon5" />
+			<param name="RoomIndex" value="5" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234.06312688557" hpRegen="8.5" mp="1846.8" mpRegen="3" />
+			<attack physical="1188.87259499001" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31916" level="85" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon5" />
+			<param name="RoomIndex" value="6" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234.06312688557" hpRegen="8.5" mp="1846.8" mpRegen="3" />
+			<attack physical="1188.87259499001" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31917" level="85" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon5" />
+			<param name="RoomIndex" value="7" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234.06312688557" hpRegen="8.5" mp="1846.8" mpRegen="3" />
+			<attack physical="1188.87259499001" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31918" level="85" type="Folk" name="Guardian of Border">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="LevelName" value="TeleportDungeon5" />
+			<param name="RoomIndex" value="8" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234.06312688557" hpRegen="8.5" mp="1846.8" mpRegen="3" />
+			<attack physical="1188.87259499001" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="31919" level="70" type="Folk" name="Ghost Chamberlain of Elmoreden">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="TelPos_X1" value="178127" />
+			<param name="TelPos_Y1" value="-84435" />
+			<param name="TelPos_Z1" value="-7215" />
+			<param name="TelPos_X2" value="186699" />
+			<param name="TelPos_Y2" value="-75915" />
+			<param name="TelPos_Z2" value="-2826" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31920" level="70" type="Folk" name="Ghost Chamberlain of Elmoreden">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="TelPos_X1" value="178127" />
+			<param name="TelPos_Y1" value="-84435" />
+			<param name="TelPos_Z1" value="-7215" />
+			<param name="TelPos_X2" value="186699" />
+			<param name="TelPos_Y2" value="-75915" />
+			<param name="TelPos_Z2" value="-2826" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31921" level="70" type="Folk" name="Conquerors' Sepulcher Manager">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="room_trigger_1" value="1st_trigger_a" />
+			<param name="room_trigger_2" value="1st_trigger_b" />
+			<param name="room_trigger_3" value="1st_trigger_c" />
+			<param name="room_trigger_4" value="1st_trigger_d" />
+			<param name="room_trigger_5" value="1st_trigger_e" />
+			<param name="room_trigger_boss" value="1st_boss" />
+			<param name="StartTelPosX" value="181528" />
+			<param name="StartTelPosY" value="-85583" />
+			<param name="StartTelPosZ" value="-7216" />
+			<param name="EscapeTelPosX" value="170132" />
+			<param name="EscapeTelPosY" value="-88160" />
+			<param name="EscapeTelPosZ" value="-2912" />
+			<param name="ShoutMsg" value="1" />
+			<param name="lock_npc_id1" value="31925" /> <!-- Baron's Hall Gatekeeper -->
+			<param name="lock_npc_id2" value="31926" /> <!-- Viscount's Hall Gatekeeper -->
+			<param name="lock_npc_id3" value="31927" /> <!-- Count's Hall Gatekeeper -->
+			<param name="lock_npc_id4" value="31928" /> <!-- Marquis' Hall Gatekeeper -->
+			<param name="lock_npc_id5" value="31929" /> <!-- Duke's Hall Gatekeeper -->
+			<param name="lock_npc_ai1" value="conq_barons_lock" />
+			<param name="lock_npc_ai2" value="conq_viscounts_lock" />
+			<param name="lock_npc_ai3" value="conq_counts_lock" />
+			<param name="lock_npc_ai4" value="conq_marquis_lock" />
+			<param name="lock_npc_ai5" value="conq_dukes_lock" />
+			<param name="lock_x1" value="182727" />
+			<param name="lock_y1" value="-85493" />
+			<param name="lock_z1" value="-7200" />
+			<param name="lock_d1" value="-32584" />
+			<param name="lock_x2" value="184547" />
+			<param name="lock_y2" value="-85479" />
+			<param name="lock_z2" value="-7200" />
+			<param name="lock_d2" value="-32584" />
+			<param name="lock_x3" value="186349" />
+			<param name="lock_y3" value="-85473" />
+			<param name="lock_z3" value="-7200" />
+			<param name="lock_d3" value="-32584" />
+			<param name="lock_x4" value="188154" />
+			<param name="lock_y4" value="-85463" />
+			<param name="lock_z4" value="-7200" />
+			<param name="lock_d4" value="-32584" />
+			<param name="lock_x5" value="189947" />
+			<param name="lock_y5" value="-85466" />
+			<param name="lock_z5" value="-7200" />
+			<param name="lock_d5" value="-32584" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="31922" level="70" type="Folk" name="Emperors' Sepulcher Manager">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="room_trigger_1" value="2nd_trigger_a" />
+			<param name="room_trigger_2" value="2nd_trigger_b" />
+			<param name="room_trigger_3" value="2nd_trigger_c" />
+			<param name="room_trigger_4" value="2nd_trigger_d" />
+			<param name="room_trigger_5" value="2nd_trigger_e" />
+			<param name="room_trigger_boss" value="2nd_boss" />
+			<param name="StartTelPosX" value="179849" />
+			<param name="StartTelPosY" value="-88990" />
+			<param name="StartTelPosZ" value="-7216" />
+			<param name="EscapeTelPosX" value="170132" />
+			<param name="EscapeTelPosY" value="-88160" />
+			<param name="EscapeTelPosZ" value="-2912" />
+			<param name="ShoutMsg" value="0" />
+			<param name="lock_npc_id1" value="31930" /> <!-- Baron's Hall Gatekeeper -->
+			<param name="lock_npc_id2" value="31931" /> <!-- Viscount's Hall Gatekeeper -->
+			<param name="lock_npc_id3" value="31932" /> <!-- Count's Hall Gatekeeper -->
+			<param name="lock_npc_id4" value="31933" /> <!-- Marquis' Hall Gatekeeper -->
+			<param name="lock_npc_id5" value="31934" /> <!-- Duke's Hall Gatekeeper -->
+			<param name="lock_npc_ai1" value="lords_barons_lock" />
+			<param name="lock_npc_ai2" value="lords_viscounts_lock" />
+			<param name="lock_npc_ai3" value="lords_counts_lock" />
+			<param name="lock_npc_ai4" value="lords_marquis_lock" />
+			<param name="lock_npc_ai5" value="lords_dukes_lock" />
+			<param name="lock_x1" value="181030" />
+			<param name="lock_y1" value="-88868" />
+			<param name="lock_z1" value="-7200" />
+			<param name="lock_d1" value="-33272" />
+			<param name="lock_x2" value="182809" />
+			<param name="lock_y2" value="-88856" />
+			<param name="lock_z2" value="-7200" />
+			<param name="lock_d2" value="-33272" />
+			<param name="lock_x3" value="184626" />
+			<param name="lock_y3" value="-88859" />
+			<param name="lock_z3" value="-7200" />
+			<param name="lock_d3" value="-33272" />
+			<param name="lock_x4" value="186438" />
+			<param name="lock_y4" value="-88858" />
+			<param name="lock_z4" value="-7200" />
+			<param name="lock_d4" value="-33272" />
+			<param name="lock_x5" value="188236" />
+			<param name="lock_y5" value="-88854" />
+			<param name="lock_z5" value="-7200" />
+			<param name="lock_d5" value="-33272" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="31923" level="70" type="Folk" name="Great Sages' Sepulcher Manager">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="room_trigger_1" value="3rd_trigger_a" />
+			<param name="room_trigger_2" value="3rd_trigger_b" />
+			<param name="room_trigger_3" value="3rd_trigger_c" />
+			<param name="room_trigger_4" value="3rd_trigger_d" />
+			<param name="room_trigger_5" value="3rd_trigger_e" />
+			<param name="room_trigger_boss" value="3rd_boss" />
+			<param name="StartTelPosX" value="173216" />
+			<param name="StartTelPosY" value="-86195" />
+			<param name="StartTelPosZ" value="-7216" />
+			<param name="EscapeTelPosX" value="170132" />
+			<param name="EscapeTelPosY" value="-88160" />
+			<param name="EscapeTelPosZ" value="-2912" />
+			<param name="ShoutMsg" value="0" />
+			<param name="lock_npc_id1" value="31935" /> <!-- Baron's Hall Gatekeeper -->
+			<param name="lock_npc_id2" value="31936" /> <!-- Viscount's Hall Gatekeeper -->
+			<param name="lock_npc_id3" value="31937" /> <!-- Count's Hall Gatekeeper -->
+			<param name="lock_npc_id4" value="31938" /> <!-- Marquis' Hall Gatekeeper -->
+			<param name="lock_npc_id5" value="31939" /> <!-- Duke's Hall Gatekeeper -->
+			<param name="lock_npc_ai1" value="sav_barons_lock" />
+			<param name="lock_npc_ai2" value="sav_viscounts_lock" />
+			<param name="lock_npc_ai3" value="sav_counts_lock" />
+			<param name="lock_npc_ai4" value="sav_marquis_lock" />
+			<param name="lock_npc_ai5" value="sav_dukes_lock" />
+			<param name="lock_x1" value="173102" />
+			<param name="lock_y1" value="-85105" />
+			<param name="lock_z1" value="-7200" />
+			<param name="lock_d1" value="-16248" />
+			<param name="lock_x2" value="173101" />
+			<param name="lock_y2" value="-83280" />
+			<param name="lock_z2" value="-7200" />
+			<param name="lock_d2" value="-16248" />
+			<param name="lock_x3" value="173103" />
+			<param name="lock_y3" value="-81479" />
+			<param name="lock_z3" value="-7200" />
+			<param name="lock_d3" value="-16248" />
+			<param name="lock_x4" value="173086" />
+			<param name="lock_y4" value="-79698" />
+			<param name="lock_z4" value="-7200" />
+			<param name="lock_d4" value="-16248" />
+			<param name="lock_x5" value="173083" />
+			<param name="lock_y5" value="-77896" />
+			<param name="lock_z5" value="-7200" />
+			<param name="lock_d5" value="-16248" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="31924" level="70" type="Folk" name="Judges' Sepulcher Manager">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="room_trigger_1" value="4th_trigger_a" />
+			<param name="room_trigger_2" value="4th_trigger_b" />
+			<param name="room_trigger_3" value="4th_trigger_c" />
+			<param name="room_trigger_4" value="4th_trigger_d" />
+			<param name="room_trigger_5" value="4th_trigger_e" />
+			<param name="room_trigger_boss" value="4th_boss" />
+			<param name="StartTelPosX" value="175615" />
+			<param name="StartTelPosY" value="-82365" />
+			<param name="StartTelPosZ" value="-7216" />
+			<param name="EscapeTelPosX" value="170132" />
+			<param name="EscapeTelPosY" value="-88160" />
+			<param name="EscapeTelPosZ" value="-2912" />
+			<param name="ShoutMsg" value="0" />
+			<param name="lock_npc_id1" value="31940" /> <!-- Baron's Hall Gatekeeper -->
+			<param name="lock_npc_id2" value="31941" /> <!-- Viscount's Hall Gatekeeper -->
+			<param name="lock_npc_id3" value="31942" /> <!-- Count's Hall Gatekeeper -->
+			<param name="lock_npc_id4" value="31943" /> <!-- Marquis' Hall Gatekeeper -->
+			<param name="lock_npc_id5" value="31944" /> <!-- Duke's Hall Gatekeeper -->
+			<param name="lock_npc_ai1" value="mag_barons_lock" />
+			<param name="lock_npc_ai2" value="mag_viscounts_lock" />
+			<param name="lock_npc_ai3" value="mag_counts_lock" />
+			<param name="lock_npc_ai4" value="mag_marquis_lock" />
+			<param name="lock_npc_ai5" value="mag_dukes_lock" />
+			<param name="lock_x1" value="175497" />
+			<param name="lock_y1" value="-81265" />
+			<param name="lock_z1" value="-7200" />
+			<param name="lock_d1" value="-16248" />
+			<param name="lock_x2" value="175495" />
+			<param name="lock_y2" value="-79468" />
+			<param name="lock_z2" value="-7200" />
+			<param name="lock_d2" value="-16248" />
+			<param name="lock_x3" value="175488" />
+			<param name="lock_y3" value="-77652" />
+			<param name="lock_z3" value="-7200" />
+			<param name="lock_d3" value="-16248" />
+			<param name="lock_x4" value="175489" />
+			<param name="lock_y4" value="-75856" />
+			<param name="lock_z4" value="-7200" />
+			<param name="lock_d4" value="-16248" />
+			<param name="lock_x5" value="175478" />
+			<param name="lock_y5" value="-74049" />
+			<param name="lock_z5" value="-7200" />
+			<param name="lock_d5" value="-16248" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="31925" level="70" type="Folk" name="Baron's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="1" />
+			<param name="DoorName" value="royal_rush_door_1a" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="180338" />
+			<param name="SpawnY1" value="-88978" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="173222" />
+			<param name="SpawnY2" value="-85777" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175612" />
+			<param name="SpawnY3" value="-81930" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31926" level="70" type="Folk" name="Viscount's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="2" />
+			<param name="DoorName" value="royal_rush_door_1b" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="182153" />
+			<param name="SpawnY1" value="-88980" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="173207" />
+			<param name="SpawnY2" value="-83935" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175608" />
+			<param name="SpawnY3" value="-80107" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31927" level="70" type="Folk" name="Count's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="3" />
+			<param name="DoorName" value="royal_rush_door_1c" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="183959" />
+			<param name="SpawnY1" value="-88978" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="173208" />
+			<param name="SpawnY2" value="-82123" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175605" />
+			<param name="SpawnY3" value="-78305" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31928" level="70" type="Folk" name="Marquis' Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="4" />
+			<param name="DoorName" value="royal_rush_door_1d" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="185766" />
+			<param name="SpawnY1" value="-88974" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="173198" />
+			<param name="SpawnY2" value="-80306" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175601" />
+			<param name="SpawnY3" value="-76491" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31929" level="70" type="Folk" name="Duke's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="5" />
+			<param name="DoorName" value="royal_rush_door_1e" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="187583" />
+			<param name="SpawnY1" value="-88972" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="173197" />
+			<param name="SpawnY2" value="-78501" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175596" />
+			<param name="SpawnY3" value="-74683" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31930" level="70" type="Folk" name="Baron's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="1" />
+			<param name="DoorName" value="royal_rush_door_2a" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="182044" />
+			<param name="SpawnY1" value="-85579" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="173222" />
+			<param name="SpawnY2" value="-85777" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175612" />
+			<param name="SpawnY3" value="-81930" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31931" level="70" type="Folk" name="Viscount's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="2" />
+			<param name="DoorName" value="royal_rush_door_2b" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="183857" />
+			<param name="SpawnY1" value="-85576" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="173207" />
+			<param name="SpawnY2" value="-83935" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175608" />
+			<param name="SpawnY3" value="-80107" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31932" level="70" type="Folk" name="Count's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="3" />
+			<param name="DoorName" value="royal_rush_door_2c" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="185669" />
+			<param name="SpawnY1" value="-85577" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="173208" />
+			<param name="SpawnY2" value="-82123" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175605" />
+			<param name="SpawnY3" value="-78305" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31933" level="70" type="Folk" name="Marquis' Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="4" />
+			<param name="DoorName" value="royal_rush_door_2d" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="187474" />
+			<param name="SpawnY1" value="-85560" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="173198" />
+			<param name="SpawnY2" value="-80306" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175601" />
+			<param name="SpawnY3" value="-76491" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31934" level="70" type="Folk" name="Duke's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="5" />
+			<param name="DoorName" value="royal_rush_door_2e" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="189289" />
+			<param name="SpawnY1" value="-85573" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="173197" />
+			<param name="SpawnY2" value="-78501" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175596" />
+			<param name="SpawnY3" value="-74683" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31935" level="70" type="Folk" name="Baron's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="1" />
+			<param name="DoorName" value="royal_rush_door_3a" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="182044" />
+			<param name="SpawnY1" value="-85579" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="180338" />
+			<param name="SpawnY2" value="-88978" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175612" />
+			<param name="SpawnY3" value="-81930" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31936" level="70" type="Folk" name="Viscount's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="2" />
+			<param name="DoorName" value="royal_rush_door_3b" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="183857" />
+			<param name="SpawnY1" value="-85576" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="182153" />
+			<param name="SpawnY2" value="-88980" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175608" />
+			<param name="SpawnY3" value="-80107" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31937" level="70" type="Folk" name="Count's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="3" />
+			<param name="DoorName" value="royal_rush_door_3c" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="185669" />
+			<param name="SpawnY1" value="-85577" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="183959" />
+			<param name="SpawnY2" value="-88978" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175605" />
+			<param name="SpawnY3" value="-78305" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31938" level="70" type="Folk" name="Marquis' Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="4" />
+			<param name="DoorName" value="royal_rush_door_3d" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="187474" />
+			<param name="SpawnY1" value="-85560" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="185766" />
+			<param name="SpawnY2" value="-88974" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175601" />
+			<param name="SpawnY3" value="-76491" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31939" level="70" type="Folk" name="Duke's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="5" />
+			<param name="DoorName" value="royal_rush_door_3e" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="189289" />
+			<param name="SpawnY1" value="-85573" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="187583" />
+			<param name="SpawnY2" value="-88972" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="175596" />
+			<param name="SpawnY3" value="-74683" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31940" level="70" type="Folk" name="Baron's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="1" />
+			<param name="DoorName" value="royal_rush_door_4a" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="182044" />
+			<param name="SpawnY1" value="-85579" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="180338" />
+			<param name="SpawnY2" value="-88978" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="173222" />
+			<param name="SpawnY3" value="-85777" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31941" level="70" type="Folk" name="Viscount's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="2" />
+			<param name="DoorName" value="royal_rush_door_4b" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="183857" />
+			<param name="SpawnY1" value="-85576" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="182153" />
+			<param name="SpawnY2" value="-88980" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="173207" />
+			<param name="SpawnY3" value="-83935" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31942" level="70" type="Folk" name="Count's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="3" />
+			<param name="DoorName" value="royal_rush_door_4c" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="185669" />
+			<param name="SpawnY1" value="-85577" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="183959" />
+			<param name="SpawnY2" value="-88978" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="173208" />
+			<param name="SpawnY3" value="-82123" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31943" level="70" type="Folk" name="Marquis' Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="4" />
+			<param name="DoorName" value="royal_rush_door_4d" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="187474" />
+			<param name="SpawnY1" value="-85560" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="185766" />
+			<param name="SpawnY2" value="-88974" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="173198" />
+			<param name="SpawnY3" value="-80306" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31944" level="70" type="Folk" name="Duke's Hall Gatekeeper">
+		<parameters>
+			<param name="RoomIDX" value="5" />
+			<param name="DoorName" value="royal_rush_door_4e" />
+			<param name="AfflictMonster" value="18244" /> <!-- Watchman of Grave -->
+			<param name="SpawnX1" value="189289" />
+			<param name="SpawnY1" value="-85573" />
+			<param name="SpawnZ1" value="-7232" />
+			<param name="SpawnX2" value="187583" />
+			<param name="SpawnY2" value="-88972" />
+			<param name="SpawnZ2" value="-7232" />
+			<param name="SpawnX3" value="173197" />
+			<param name="SpawnY3" value="-78501" />
+			<param name="SpawnZ3" value="-7232" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="31945" level="70" type="Merchant" name="Auzendorff" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="104" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="31946" level="70" type="Merchant" name="Hombre" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="110" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="31947" level="70" type="Merchant" name="Owaki" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="180" />
+		</parameters>
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31948" level="70" type="Merchant" name="Adrian" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31949" level="70" type="Merchant" name="Rouge" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="31950" level="70" type="Merchant" name="Mailland" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="140" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="31951" level="70" type="Merchant" name="Jose" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="90" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="31952" level="70" type="Merchant" name="Pele" title="Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="31953" level="70" type="Folk" name="Rankar" title="Symbol Maker">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="90" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31954" level="70" type="PetManager" name="Saroyan" title="Pet Manager">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="HavePet" value="1" />
+			<param name="silhouette" value="31955" /> <!-- Ruby -->
+			<param name="item_baby_pet1" value="2375" /> <!-- Wolf Collar -->
+			<param name="item_grown_pet1" value="9882" /> <!-- Great Wolf Necklace -->
+			<param name="id_grown_pet1" value="12" />
+			<param name="class_id_baby_pet1" value="12077" /> <!-- Wolf -->
+			<param name="min_lv_pet1" value="55" />
+			<param name="check_min_lv_pet1" value="1" />
+			<param name="item_baby_pet2" value="6648" /> <!-- Baby Buffalo Panpipe -->
+			<param name="item_grown_pet2" value="10311" /> <!-- Improved Buffalo Panpipe -->
+			<param name="id_grown_pet2" value="18" />
+			<param name="class_id_baby_pet2" value="12780" /> <!-- Baby Buffalo -->
+			<param name="min_lv_pet2" value="55" />
+			<param name="check_min_lv_pet2" value="1" />
+			<param name="item_baby_pet3" value="6650" /> <!-- Baby Kookaburra Ocarina -->
+			<param name="item_grown_pet3" value="10313" /> <!-- Improved Kookaburra Ocarina -->
+			<param name="id_grown_pet3" value="19" />
+			<param name="class_id_baby_pet3" value="12781" /> <!-- Baby Kookaburra -->
+			<param name="min_lv_pet3" value="55" />
+			<param name="check_min_lv_pet3" value="1" />
+			<param name="item_baby_pet4" value="6649" /> <!-- Baby Cougar Chime -->
+			<param name="item_grown_pet4" value="10312" /> <!-- Improved Cougar Chime -->
+			<param name="id_grown_pet4" value="20" />
+			<param name="class_id_baby_pet4" value="12782" /> <!-- Baby Cougar -->
+			<param name="min_lv_pet4" value="55" />
+			<param name="check_min_lv_pet4" value="1" />
+			<param name="item_baby_pet5" value="9882" /> <!-- Great Wolf Necklace -->
+			<param name="item_grown_pet5" value="10426" /> <!-- Fenrir Necklace -->
+			<param name="id_grown_pet5" value="21" />
+			<param name="class_id_baby_pet5" value="16025" /> <!-- Great Wolf -->
+			<param name="min_lv_pet5" value="70" />
+			<param name="check_min_lv_pet5" value="1" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="31955" level="70" type="Folk" name="Ruby">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="28" />
+				<run ground="120" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status attackable="false" talkable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" />
+		<collision>
+			<radius normal="11" />
+			<height normal="15.7" />
+		</collision>
+	</npc>
+	<npc id="31956" level="70" type="Warehouse" name="Rydel" title="Warehouse Keeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="74" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="31957" level="70" type="Warehouse" name="Cherbal" title="Warehouse Keeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="150" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="31958" level="70" type="VillageMasterDwarf" name="Yasheni" title="Warehouse Chief">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="chk_my_cat" value="SUB_GROUP_WARE" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="31959" level="70" type="Warehouse" name="Axel" title="Warehouse Keeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="93" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="31960" level="70" type="Trainer" name="Byron" title="Blacksmith">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="87" /> <!-- rhand: Iron Hammer -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="31961" level="70" type="VillageMasterDwarf" name="Newyear" title="Head Blacksmith">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="chk_my_cat" value="SUB_GROUP_BLACK" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="89" /> <!-- rhand: Big Hammer -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="16.5" />
+		</collision>
+	</npc>
+	<npc id="31962" level="70" type="Merchant" name="Altair" title="Blueprint Seller">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="93" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="31963" level="70" type="Merchant" name="Hitchi" title="Mineral Trader">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="140" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="31964" level="70" type="Teleporter" name="Bilia" title="Gatekeeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="134" />
+			<param name="IsGateKeeperForCoreTime" value="1" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="31965" level="70" type="VillageMasterFighter" name="Hector" title="Grand Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="63" />
+			<param name="chk_my_cat" value="SUB_GROUP_HEF" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="76" /> <!-- rhand: Sword of Delusion -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31966" level="70" type="Trainer" name="Karamon" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="130" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="125" lhand="20" /> <!-- rhand: Spinebone Sword lhand: Buckler -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31967" level="70" type="Trainer" name="Euline" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="123" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="130" /> <!-- rhand: Elven Sword -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="31968" level="70" type="VillageMasterPriest" name="Baryl" title="High Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="chk_my_cat" value="SUB_GROUP_HEC" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="31969" level="70" type="Trainer" name="Evelyn" title="Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="skill_sharing_item" value="15307" /> <!-- Holy Pomander - Cardinal -->
+			<param name="token_num" value="1" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31970" level="70" type="Trainer" name="Sinis" title="Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="187" />
+			<param name="skill_sharing_item" value="15308" /> <!-- Holy Pomander - Eva's Saint -->
+			<param name="token_num" value="1" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="22.2" />
+		</collision>
+	</npc>
+	<npc id="31971" level="70" type="Trainer" name="Otillo" title="Magister">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="90" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31972" level="70" type="Trainer" name="Atraxia" title="Magister">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="100" />
+		</parameters>
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21.2" />
+		</collision>
+	</npc>
+	<npc id="31973" level="70" type="Merchant" name="Raheel" title="Spellbook Seller">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31974" level="70" type="VillageMasterDElf" name="Drizzit" title="Grand Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="103" />
+			<param name="chk_my_cat" value="SUB_GROUP_DE" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="143" /> <!-- rhand: Sword of Mystic -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31975" level="70" type="Trainer" name="Aerina" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="143" /> <!-- rhand: Sword of Mystic -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31976" level="70" type="Trainer" name="Talia" title="Magister">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="skill_sharing_item" value="15309" /> <!-- Holy Pomander - Shillien Saint -->
+			<param name="token_num" value="4" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="204" /> <!-- rhand: Deadman's Staff -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31977" level="70" type="VillageMasterOrc" name="Shaka" title="High Prefect">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="95" />
+			<param name="chk_my_cat" value="SUB_GROUP_ORC" />
+		</parameters>
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="31978" level="70" type="Trainer" name="Tazeer" title="Prefect">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<equipment rhand="161" /> <!-- rhand: Silver Axe -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="28.5" />
+		</collision>
+	</npc>
+	<npc id="31979" level="70" type="Trainer" name="Moira" title="Seer">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<equipment rhand="202" /> <!-- rhand: Mace of Underworld -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="31980" level="70" type="Merchant" name="Rumba" title="Amulet Seller">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="31981" level="80" type="Guard" name="Vishotsky" title="Captain">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+			<param name="enter_type" value="1" />
+			<param name="inzone_id1" value="69" />
+			<param name="inzone_id2" value="70" />
+			<param name="inzone_id3" value="71" />
+			<param name="inzone_id4" value="77" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="133" lhand="632" /> <!-- rhand: Raid Sword lhand: Knight's Shield -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31982" level="80" type="Guard" name="Glen" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="126" lhand="628" /> <!-- rhand: Artisan's Sword lhand: Hoplon -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31983" level="80" type="Guard" name="Friggar" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31984" level="80" type="Guard" name="Sherring" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="126" lhand="628" /> <!-- rhand: Artisan's Sword lhand: Hoplon -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31985" level="80" type="Guard" name="Kosmos" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31986" level="80" type="Guard" name="Erstack" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="126" lhand="628" /> <!-- rhand: Artisan's Sword lhand: Hoplon -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31987" level="80" type="Guard" name="Gotter" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31988" level="80" type="Guard" name="Singa" title="Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="92" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="126" lhand="628" /> <!-- rhand: Artisan's Sword lhand: Hoplon -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="31989" level="70" type="Fisherman" name="Batidae" title="Fishing Guild Member">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="7560" /> <!-- rhand: Monster Only (Fishing Rod) -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="31990" level="70" type="Trainer" name="Siger" title="Blacksmith">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="93" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<collision>
+			<radius normal="7" />
+			<height normal="16.5" />
+		</collision>
+	</npc>
+	<npc id="31991" level="70" type="Adventurer" name="Adventure Guildsman">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="70" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="31992" level="70" type="Adventurer" name="Adventure Guildsman">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="90" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution lhand: Round Shield -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="31993" level="70" type="Adventurer" name="Adventure Guildsman">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="165" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="99" /> <!-- rhand: Apprentice's Spellbook -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="31994" level="70" type="Adventurer" name="Adventure Guildsman">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="188" />
+		</parameters>
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="31995" level="70" type="Adventurer" name="Adventure Guildsman">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="120" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="156" lhand="20" /> <!-- rhand: Hand Axe lhand: Buckler -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="31996" level="70" type="VillageMasterMystic" name="Javier" title="Grand Magister">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="130" />
+			<param name="chk_my_cat" value="SUB_GROUP_HEW" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="31997" level="70" type="DawnPriest" name="Priest of Dawn">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="ssq_priest_type" value="2" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment lhand="5802" /> <!-- lhand: For NPC (Dawn) -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="30.5" />
+		</collision>
+	</npc>
+	<npc id="31998" level="70" type="DuskPriest" name="Dusk Priestess">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="ssq_priest_type" value="1" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="5801" /> <!-- rhand: For NPC (Dusk) -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="31999" level="70" type="Folk" name="Preacher of Doom">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<speed>
+				<walk ground="100" />
+				<run ground="120" />
+			</speed>
+			<hitTime>370</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+	</npc>
+</list>

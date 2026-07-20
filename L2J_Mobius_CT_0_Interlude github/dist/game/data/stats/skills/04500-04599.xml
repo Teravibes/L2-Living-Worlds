@@ -1,0 +1,2166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="4500" levels="1" name="Treasure Chest - Level 27">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4501" levels="1" name="Treasure Chest - Level 29">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4502" levels="1" name="Treasure Chest - Level 31">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4503" levels="1" name="Treasure Chest - Level 32">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4504" levels="1" name="Treasure Chest - Level 33">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4505" levels="1" name="Treasure Chest - Level 35">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4506" levels="1" name="Treasure Chest - Level 39">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4507" levels="1" name="Treasure Chest - Level 42">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4508" levels="1" name="Treasure Chest - Level 43">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4509" levels="1" name="Treasure Chest - Level 45">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4510" levels="1" name="Treasure Chest - Level 47">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4511" levels="1" name="Treasure Chest - Level 49">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4512" levels="1" name="Treasure Chest - Level 52">
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4513" levels="1" name="Squash - Level up">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4514" levels="1" name="Squash - Poisoned">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="4515" levels="1" name="Raid Curse">
+		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse cannot be undone and is cast when trying to slay a raid monster whose is 9 or more levels below that of the attacker. -->
+		<icon>icon.skill4111</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>99</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>TURN_STONE</abnormalType>
+		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<canBeDispeled>false</canBeDispeled>
+		<castRange>1500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>2000</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>-1</magicLevel>
+		<effects>
+			<effect name="Petrification" />
+		</effects>
+	</skill>
+	<skill id="4516" levels="1" name="Orfen Heal">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>99</magicLevel>
+		<mpConsume>64</mpConsume>
+		<mpInitialConsume>16</mpInitialConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Heal">
+				<power>5600</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4517" levels="1" name="Quest - BOSS Defend">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="runSpd">0.5</mul>
+				<mul stat="pAtk">0.5</mul>
+				<mul stat="pDef">10</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4518" levels="1" name="Quest - BOSS Rampage">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.3</mul>
+				<mul stat="pAtk">1.3</mul>
+				<mul stat="pDef">0.5</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4519" levels="1" name="Quest - BOSS Defend">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="runSpd">0.5</mul>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>90</BOW>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4520" levels="1" name="Quest - BOSS Rampage">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="runSpd">0.7</mul>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>-10</BOW>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4521" levels="1" name="Quest - BOSS Resist non Bow Weapon">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SWORD>100</SWORD>
+				<BLUNT>100</BLUNT>
+				<DAGGER>100</DAGGER>
+				<POLE>100</POLE>
+				<DUALFIST>100</DUALFIST>
+				<DUAL>100</DUAL>
+				<DUALDAGGER>100</DUALDAGGER>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4522" levels="1" name="Eye of Assassin">
+		<!-- Greatly increases critical chance and the success rate of dagger skills. -->
+		<icon>icon.skill0016</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRatePos">
+					<value>2</value>
+					<player behind="true" />
+				</mul>
+				<!-- TODO: Missing bonus for Rapier -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4523" levels="1" name="Quest - BOSS Evasion">
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<hitTime>10000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">30</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4524" levels="1" name="Quest - BOSS Bluff">
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<hitTime>10000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="Buff" />
+		</effects>
+	</skill>
+	<skill id="4525" levels="1" name="Quest - BOSS Defend">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">10</mul>
+				<mul stat="mDef">10</mul>
+			</effect>
+			<effect name="DefenceTrait">
+				<SLEEP>70</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4526" levels="1" name="Quest - BOSS Summon">
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="HealPercent">
+				<power>10</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4527" levels="1" name="Quest - BOSS Inc HP to Summoned">
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="MaxHp">
+				<power>30</power>
+				<type>PER</type>
+				<heal>true</heal>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4528" levels="1" name="Quest - BOSS Movement to Summoned">
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">33</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4529" levels="1" name="Quest - Summoned Explosion">
+		<operateType>A1</operateType>
+		<targetType>AURA</targetType>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<power>56</power>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4530" levels="1" name="Quest - Summoned HP Heal">
+		<operateType>A1</operateType>
+		<targetType>AURA</targetType>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="HealPercent">
+				<power>5</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4531" levels="1" name="Quest - Summoned MP Heal">
+		<operateType>A1</operateType>
+		<targetType>AURA</targetType>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="ManaHealPercent">
+				<power>5</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4532" levels="1" name="Quest - BOSS Reflect">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="reflectDam">100</add>
+				<mul stat="mDef">10</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4533" levels="1" name="Dance of Resistance">
+		<!-- Temporarily decreases Speed and Accuracy significantly. Dance of Inspiration can remove the curse. -->
+		<icon>icon.skill0272</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>DANCE_OF_INSPIRATION</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">0.5</mul>
+				<sub stat="accCombat">40</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4534" levels="1" name="Dance of Nihil">
+		<!-- Temporarily decreases Atk. Spd. and Evasion significantly. Dance of Fury can remove the curse. -->
+		<icon>icon.skill0275</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>DANCE_OF_FURY</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd">0.7</mul>
+				<sub stat="rEvas">40</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4535" levels="1" name="Dance of Weakness">
+		<!-- Temporarily decreases P. Def. and P. Atk. significantly. Dance of the Vampire can remove the curse. -->
+		<icon>icon.skill0310</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pDef">0.5</mul>
+				<mul stat="pAtk">0.5</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4536" levels="1" name="Song of Seduce">
+		<!-- Temporarily decreases Speed and Accuracy significantly. Song of Wind can remove the curse. -->
+		<icon>icon.skill0268</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>SONG_OF_WIND</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">0.5</mul>
+				<sub stat="accCombat">40</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4537" levels="1" name="Song of Sweet Whisper">
+		<!-- Temporarily decreases Atk. Spd. and Evasion significantly. Song of Water can remove the curse. -->
+		<icon>icon.skill0266</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>SONG_OF_WATER</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd">0.7</mul>
+				<sub stat="rEvas">40</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4538" levels="1" name="Song of Temptation">
+		<!-- Temporarily decreases P. Def. and P. Atk. significantly. Song of Vengeance can remove the curse. -->
+		<icon>icon.skill0305</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>SONG_OF_VENGEANCE</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pDef">0.5</mul>
+				<mul stat="pAtk">0.5</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4539" levels="1" name="Curse of Vague">
+		<!-- Temporarily decreases Speed and Accuracy significantly. Guidance spell can remove the curse. -->
+		<icon>icon.skill1240</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>HIT_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">0.5</mul>
+				<sub stat="accCombat">40</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4540" levels="1" name="Curse of Weakness">
+		<!-- Temporarily decreases P. Def. and Speed significantly. Shield spell can remove the curse. -->
+		<icon>icon.skill1040</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pDef">0.5</mul>
+				<mul stat="runSpd">0.5</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4541" levels="1" name="Curse of Nihil">
+		<!-- Temporarily decreases P. Atk., M. Atk. and Atk. Spd. significantly. Might spell can remove the curse. -->
+		<icon>icon.skill1068</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtk">0.5</mul>
+				<mul stat="pAtkSpd">0.5</mul>
+				<mul stat="mAtk">0.5</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4542" levels="1" name="Quest - Henchman 90% Sleep and Shock Weakness">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SLEEP>90</SLEEP>
+				<SHOCK>-90</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4543" levels="1" name="Quest - BOSS Shock Weakness">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>-10</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4544" levels="3" name="Quest - BOSS Weakness">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#pAtk">0.7 0.6 0.5</table>
+		<table name="#pAtkSpd">0.9 0.8 0.6</table>
+		<table name="#pDef">0.8 0.6 0.7</table>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="pAtk">#pAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4545" levels="1" name="Quest - BOSS Reflect">
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<abnormalVisualEffect>NONE</abnormalVisualEffect>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="reflectDam">100</add>
+				<mul stat="pDef">10</mul>
+				<mul stat="runSpd">0.7</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4546" levels="1" name="Quest - Commune to Slate">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>1000</castRange>
+		<effectRange>1500</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>99</magicLevel>
+	</skill>
+	<skill id="4547" levels="1" name="Gaze of Watcher">
+		<icon>icon.skill0131</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>WATCHER_GAZE</abnormalType>
+		<castRange>1000</castRange>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>-1</magicLevel>
+		<effects>
+			<effect name="Debuff" />
+		</effects>
+	</skill>
+	<skill id="4548" levels="1" name="Quest - Dispel Watcher Gaze">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>1000</castRange>
+		<effectRange>1500</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>99</magicLevel>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>WATCHER_GAZE,1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4549" levels="1" name="Quest - Unsealed Altar">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>99</magicLevel>
+	</skill>
+	<skill id="4550" levels="1" name="Quest - Cursed Altar">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>99</magicLevel>
+	</skill>
+	<skill id="4551" levels="10" name="Hot Springs Rheumatism">
+		<!-- Level 1: Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased. Effect 1. -->
+		<!-- Level 2: Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased but P. Def. is decreased. Effect 2. -->
+		<!-- Level 3: Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased but P. Def. is decreased. Effect 3. -->
+		<!-- Level 4: Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased but P. Def. is decreased. Effect 4. -->
+		<!-- Level 5: Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased but P. Def. is decreased. Effect 5. -->
+		<!-- Level 6: Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased but P. Def. is decreased. Effect 6. -->
+		<!-- Level 7: Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased but P. Def. is decreased. Effect 7. -->
+		<!-- Level 8: Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased but P. Def. is decreased. Effect 8. -->
+		<!-- Level 9: Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased but P. Def. is decreased. Effect 9. -->
+		<!-- Level 10: Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased but P. Def. is decreased. Effect 10. -->
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8 9 10</table>
+		<table name="#pDef">1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85</table>
+		<table name="#critRate">30 50 80 100 50 0 0 0 0 0</table>
+		<icon>icon.skill1164</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SPA_DISEASE_A</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>75</magicLevel>
+		<mpConsume>55</mpConsume>
+		<mpInitialConsume>14</mpInitialConsume>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pDef">#pDef</mul>
+				<add stat="critRate">#critRate</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4552" levels="10" name="Hot Springs Cholera">
+		<!-- Level 1: Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased. Effect 1. -->
+		<!-- Level 2: Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased but Evasion is decreased. Effect 2. -->
+		<!-- Level 3: Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased but Evasion is decreased. Effect 3. -->
+		<!-- Level 4: Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased but Evasion is decreased. Effect 4. -->
+		<!-- Level 5: Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased but Evasion is decreased. Effect 5. -->
+		<!-- Level 6: Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased but Evasion is decreased. Effect 6. -->
+		<!-- Level 7: Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased but Evasion is decreased. Effect 7. -->
+		<!-- Level 8: Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased but Evasion is decreased. Effect 8. -->
+		<!-- Level 9: Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased but Evasion is decreased. Effect 9. -->
+		<!-- Level 10: Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased but Evasion is decreased. Effect 10. -->
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8 9 10</table>
+		<table name="#accCombat">3 6 8 10 6 0 0 0 0 0</table>
+		<table name="#rEvas">0 3 3 3 5 5 5 8 8 10</table>
+		<icon>icon.skill1164</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SPA_DISEASE_B</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>75</magicLevel>
+		<mpConsume>55</mpConsume>
+		<mpInitialConsume>14</mpInitialConsume>
+		<effects>
+			<effect name="Debuff">
+				<sub stat="rEvas">#rEvas</sub>
+				<add stat="accCombat">#accCombat</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4553" levels="10" name="Hot Springs Flu">
+		<!-- Level 1: Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased. Effect 1. -->
+		<!-- Level 2: Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased but P. Atk. is decreased. Effect 2. -->
+		<!-- Level 3: Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased but P. Atk. is decreased. Effect 3. -->
+		<!-- Level 4: Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased but P. Atk. is decreased. Effect 4. -->
+		<!-- Level 5: Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased but P. Atk. is decreased. Effect 5. -->
+		<!-- Level 6: Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased but P. Atk. is decreased. Effect 6. -->
+		<!-- Level 7: Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased but P. Atk. is decreased. Effect 7. -->
+		<!-- Level 8: Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased but P. Atk. is decreased. Effect 8. -->
+		<!-- Level 9: Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased but P. Atk. is decreased. Effect 9. -->
+		<!-- Level 10: Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased but P. Atk. is decreased. Effect 10. -->
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8 9 10</table>
+		<table name="#pAtk">1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85</table>
+		<table name="#pAtkSpd">1.04 1.08 1.12 1.16 1.08 1 1 1 1 1</table>
+		<icon>icon.skill1164</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SPA_DISEASE_C</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>75</magicLevel>
+		<mpConsume>55</mpConsume>
+		<mpInitialConsume>14</mpInitialConsume>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="pAtk">#pAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4554" levels="10" name="Hot Spring Malaria">
+		<!-- Level 1: Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased. Effect 1. -->
+		<!-- Level 2: Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased and MP consumption is decreased. Effect 2. -->
+		<!-- Level 3: Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased and MP consumption is decreased. Effect 3. -->
+		<!-- Level 4: Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased and MP consumption is decreased. Effect 4. -->
+		<!-- Level 5: Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased and MP consumption is decreased. Effect 5. -->
+		<!-- Level 6: Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased and MP consumption is decreased. Effect 6. -->
+		<!-- Level 7: Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased and MP consumption is decreased. Effect 7. -->
+		<!-- Level 8: Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased and MP consumption is decreased. Effect 8. -->
+		<!-- Level 9: Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased and MP consumption is decreased. Effect 9. -->
+		<!-- Level 10: Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased and MP consumption is decreased. Effect 10. -->
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8 9 10</table>
+		<table name="#mAtkSpd">1.04 1.08 1.12 1.16 1.08 1 1 1 1 1</table>
+		<table name="#MpConsumeRate">1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.84</table>
+		<icon>icon.skill1164</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SPA_DISEASE_D</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<castRange>3600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>75</magicLevel>
+		<mpConsume>55</mpConsume>
+		<mpInitialConsume>14</mpInitialConsume>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<mul stat="magicalMpConsumeRate">#MpConsumeRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4555" levels="1" name="NPC Resist Mutant">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="DefenceTrait">
+				<POISON>20</POISON>
+				<BLEED>20</BLEED>
+				<HOLD>20</HOLD>
+				<SHOCK>20</SHOCK>
+				<PARALYZE>20</PARALYZE>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4556" levels="1" name="Dispel Hot Spring Disease A_D">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>75</magicLevel>
+		<mpConsume>55</mpConsume>
+		<mpInitialConsume>14</mpInitialConsume>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SPA_DISEASE_A,10;SPA_DISEASE_D,10</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4557" levels="1" name="Dispel Hot Spring Disease B_D">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>75</magicLevel>
+		<mpConsume>55</mpConsume>
+		<mpInitialConsume>14</mpInitialConsume>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SPA_DISEASE_B,10;SPA_DISEASE_D,10</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4558" levels="1" name="Dispel Hot Spring Disease C_D">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>75</magicLevel>
+		<mpConsume>55</mpConsume>
+		<mpInitialConsume>14</mpInitialConsume>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SPA_DISEASE_C,10;SPA_DISEASE_D,10</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4559" levels="1" name="Hot Spring Illusion">
+		<!-- Temporary optical illusion caused by the Hot Spring. -->
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BIG_HEAD</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<activateRate>0</activateRate>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<magicLevel>75</magicLevel>
+		<effects>
+			<effect name="Buff" />
+		</effects>
+	</skill>
+	<skill id="4560" levels="12" name="NPC Fire Burn">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
+		<table name="#power">13 15 18 20 23 26 29 32 35 38 42 44</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>150</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>650</effectRange>
+		<element>0</element> <!-- Fire -->
+		<elementPower>20</elementPower>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4561" levels="12" name="NPC Fire Burn - Magic">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">4 5 8 9 12 14 17 18 19 19 20 20</table>
+		<table name="#power">13 15 18 20 23 26 29 32 35 38 42 44</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>150</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>650</effectRange>
+		<element>0</element> <!-- Fire -->
+		<elementPower>20</elementPower>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4562" levels="12" name="NPC Solar Flare">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">12 19 26 35 45 55 65 69 72 75 77 78</table>
+		<table name="#mpInitialConsume">3 5 7 9 12 14 17 18 18 19 20 20</table>
+		<table name="#power">22 33 47 65 85 107 127 137 145 152 157 161</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<element>4</element> <!-- Holy -->
+		<elementPower>20</elementPower>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4563" levels="12" name="NPC Solar Flare - Magic">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">12 19 26 35 45 55 65 69 72 75 77 78</table>
+		<table name="#mpInitialConsume">3 5 7 9 12 14 17 18 18 19 20 20</table>
+		<table name="#power">22 33 47 65 85 107 127 137 145 152 157 161</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<element>4</element> <!-- Holy -->
+		<elementPower>20</elementPower>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4564" levels="12" name="NPC Solar Flare - Slow">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">12 19 26 35 45 55 65 69 72 75 77 78</table>
+		<table name="#mpInitialConsume">3 5 7 9 12 14 17 18 18 19 20 20</table>
+		<table name="#power">11 17 24 33 43 54 64 69 73 76 79 81</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<element>4</element> <!-- Holy -->
+		<elementPower>20</elementPower>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4565" levels="12" name="NPC Eruption">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
+		<table name="#power">37 39 41 43 45 46 48 50 51 53 54 56</table>
+		<operateType>A1</operateType>
+		<targetType>AREA</targetType>
+		<affectRange>100</affectRange>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<element>0</element> <!-- Fire -->
+		<elementPower>20</elementPower>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>20000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4566" levels="12" name="NPC Eruption - Magic">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
+		<table name="#power">37 39 41 43 45 46 48 50 51 53 54 56</table>
+		<operateType>A1</operateType>
+		<targetType>AREA</targetType>
+		<affectRange>100</affectRange>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<element>0</element> <!-- Fire -->
+		<elementPower>20</elementPower>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4567" levels="12" name="NPC Eruption - Slow">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
+		<table name="#power">37 39 41 43 45 46 48 50 51 53 54 56</table>
+		<operateType>A1</operateType>
+		<targetType>AREA</targetType>
+		<affectRange>100</affectRange>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<element>0</element> <!-- Fire -->
+		<elementPower>20</elementPower>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4568" levels="12" name="NPC AE Solar Flare">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">17 29 39 53 67 83 97 103 108 112 115 116</table>
+		<table name="#mpInitialConsume">5 8 10 14 17 21 25 26 27 28 29 29</table>
+		<table name="#power">11 17 24 33 43 54 64 69 73 76 79 81</table>
+		<operateType>A1</operateType>
+		<targetType>AREA</targetType>
+		<affectRange>200</affectRange>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<element>4</element> <!-- Holy -->
+		<elementPower>20</elementPower>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4569" levels="12" name="NPC AE Solar Flare - Magic">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">17 29 39 53 67 83 97 103 108 112 115 116</table>
+		<table name="#mpInitialConsume">5 8 10 14 17 21 25 26 27 28 29 29</table>
+		<table name="#power">11 17 24 33 43 54 64 69 73 76 79 81</table>
+		<operateType>A1</operateType>
+		<targetType>AREA</targetType>
+		<affectRange>200</affectRange>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<element>4</element> <!-- Holy -->
+		<elementPower>20</elementPower>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4570" levels="12" name="NPC AE Solar Flare - Slow">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">17 29 39 53 67 83 97 103 108 112 115 116</table>
+		<table name="#mpInitialConsume">5 8 10 14 17 21 25 26 27 28 29 29</table>
+		<table name="#power">6 9 12 17 22 27 32 35 37 38 40 41</table>
+		<operateType>A1</operateType>
+		<targetType>AREA</targetType>
+		<affectRange>200</affectRange>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<element>4</element> <!-- Holy -->
+		<elementPower>20</elementPower>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<power>#power</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4571" levels="12" name="NPC Blazing Circle">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">18 29 40 53 68 83 98 104 109 113 115 117</table>
+		<table name="#power">42 44 46 48 50 52 55 57 58 60 62 64</table>
+		<operateType>A1</operateType>
+		<targetType>AURA</targetType>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<element>0</element> <!-- Fire -->
+		<elementPower>20</elementPower>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>15000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4572" levels="12" name="NPC Triple Sonic Slash">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">25 40 56 76 99 121 142 151 159 165 168 170</table>
+		<table name="#power">92 210 438 833 1443 2272 3252 3752 4224 4640 4974 5233</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1800</hitTime>
+		<ignoreShld>true</ignoreShld>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4573" levels="12" name="NPC Sonic Blaster">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 20 28 38 50 61 71 76 80 83 84 85</table>
+		<table name="#power">46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1900</hitTime>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>15000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4574" levels="12" name="NPC Sonic Storm">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">9 14 19 26 33 41 48 51 53 55 56 57</table>
+		<table name="#power">31 70 146 278 481 758 1084 1251 1408 1547 1658 1745</table>
+		<operateType>A1</operateType>
+		<targetType>AREA</targetType>
+		<affectRange>150</affectRange>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<hitTime>1900</hitTime>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>20000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage" />
+		</effects>
+	</skill>
+	<skill id="4575" levels="2" name="NPC Clan Buff - Haste">
+		<table name="#abnormalLevels">1 2</table>
+		<table name="#magicLevel">30 70</table>
+		<table name="#mpConsume">16 39</table>
+		<table name="#mpInitialConsume">4 10</table>
+		<table name="#pAtkSpd">1.15 1.33</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4576" levels="3" name="NPC Clan Buff - Damage Shield">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#mpConsume">12 22 39</table>
+		<table name="#mpInitialConsume">3 5 10</table>
+		<table name="#reflectDam">10 15 20</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>DMG_SHIELD</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="reflectDam">#reflectDam</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4577" levels="12" name="Decrease Accuracy">
+		<!-- Level 1: Temporarily decreases Accuracy. Effect 1. -->
+		<!-- Level 2: Temporarily decreases Accuracy. Effect 2. -->
+		<!-- Level 3: Temporarily decreases Accuracy. Effect 2. -->
+		<!-- Level 4: Temporarily decreases Accuracy. Effect 3. -->
+		<!-- Level 5: Temporarily decreases Accuracy. Effect 3. -->
+		<!-- Level 6: Temporarily decreases Accuracy. Effect 3. -->
+		<!-- Level 7: Temporarily decreases Accuracy. Effect 3. -->
+		<!-- Level 8: Temporarily decreases Accuracy. Effect 3. -->
+		<!-- Level 9: Temporarily decreases Accuracy. Effect 3. -->
+		<!-- Level 10: Temporarily decreases Accuracy. Effect 3. -->
+		<!-- Level 11: Temporarily decreases Accuracy. Effect 3. -->
+		<!-- Level 12: Temporarily decreases Accuracy. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#accCombat">1 2 3 4 5 6 7 8 9 10 11 12</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">18 29 40 53 68 83 98 104 109 113 115 117</table>
+		<table name="#time">5 10 10 15 15 15 15 15 15 15 15 15</table>
+		<icon>icon.skill1222</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>HIT_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<sub stat="accCombat">#accCombat</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4578" levels="1" name="Petrification">
+		<!-- Petrified. Total immobilization. -->
+		<icon>icon.skill4111</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>TURN_STONE</abnormalType>
+		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>500</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>80</magicLevel>
+		<mpConsume>58</mpConsume>
+		<mpInitialConsume>15</mpInitialConsume>
+		<power>100</power>
+		<effects>
+			<effect name="Petrification" />
+		</effects>
+	</skill>
+	<skill id="4579" levels="12" name="Bleed">
+		<!-- Level 1: Inflicts a wound that continually reduces HP. Effect 2. -->
+		<!-- Level 2: Inflicts a wound that continually reduces HP. Effect 3. -->
+		<!-- Level 3: Inflicts a wound that continually reduces HP. Effect 4. -->
+		<!-- Level 4: Inflicts a wound that continually reduces HP. Effect 5. -->
+		<!-- Level 5: Inflicts a wound that continually reduces HP. Effect 6. -->
+		<!-- Level 6: Inflicts a wound that continually reduces HP. Effect 7. -->
+		<!-- Level 7: Inflicts a wound that continually reduces HP. Effect 8. -->
+		<!-- Level 8: Inflicts a wound that continually reduces HP. Effect 8. -->
+		<!-- Level 9: Inflicts a wound that continually reduces HP. Effect 9. -->
+		<!-- Level 10: Inflicts a wound that continually reduces HP. Effect 9. -->
+		<!-- Level 11: Inflicts a wound that continually reduces HP. Effect 10. -->
+		<!-- Level 12: Inflicts a wound that continually reduces HP. Effect 10. -->
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#damage">18 25 34 44 54 62 67 67 70 70 71 71</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">25 40 56 76 99 121 142 151 159 165 168 170</table>
+		<table name="#power">137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850</table>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<basicProperty>CON</basicProperty>
+		<blowChance>20</blowChance>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<power>#power</power>
+		<reuseDelay>6000</reuseDelay>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="FatalBlow" />
+			<effect name="DamOverTime" ticks="5">
+				<power>#damage</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4580" levels="12" name="Decrease P.Atk">
+		<!-- Level 1: Reduces P. Atk. Effect 1. -->
+		<!-- Level 2: Reduces P. Atk. Effect 2. -->
+		<!-- Level 3: Reduces P. Atk. Effect 2. -->
+		<!-- Level 4: Reduces P. Atk. Effect 3. -->
+		<!-- Level 5: Reduces P. Atk. Effect 3. -->
+		<!-- Level 6: Reduces P. Atk. Effect 3. -->
+		<!-- Level 7: Reduces P. Atk. Effect 3. -->
+		<!-- Level 8: Reduces P. Atk. Effect 3. -->
+		<!-- Level 9: Reduces P. Atk. Effect 3. -->
+		<!-- Level 10: Reduces P. Atk. Effect 3. -->
+		<!-- Level 11: Reduces P. Atk. Effect 3. -->
+		<!-- Level 12: Reduces P. Atk. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">24 39 54 73 94 116 136 144 152 158 161 163</table>
+		<table name="#pAtk">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<table name="#time">5 10 10 15 15 15 15 15 15 15 15 15</table>
+		<icon>icon.skill4037</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtk">#pAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4581" levels="12" name="Hold">
+		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">24 39 54 73 94 116 136 144 152 158 161 163</table>
+		<icon>icon.skill4047</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<trait>HOLD</trait>
+		<effects>
+			<effect name="Root" />
+		</effects>
+	</skill>
+	<skill id="4582" levels="12" name="Poison">
+		<!-- Level 1: A toxin that gradually reduces HP. Effect 2. -->
+		<!-- Level 2: A toxin that gradually reduces HP. Effect 3. -->
+		<!-- Level 3: A toxin that gradually reduces HP. Effect 4. -->
+		<!-- Level 4: A toxin that gradually reduces HP. Effect 5. -->
+		<!-- Level 5: A toxin that gradually reduces HP. Effect 6. -->
+		<!-- Level 6: A toxin that gradually reduces HP. Effect 7. -->
+		<!-- Level 7: A toxin that gradually reduces HP. Effect 8. -->
+		<!-- Level 8: A toxin that gradually reduces HP. Effect 8. -->
+		<!-- Level 9: A toxin that gradually reduces HP. Effect 9. -->
+		<!-- Level 10: A toxin that gradually reduces HP. Effect 9. -->
+		<!-- Level 11: A toxin that gradually reduces HP. Effect 10. -->
+		<!-- Level 12: A toxin that gradually reduces HP. Effect 10. -->
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#dmg">16 24 32 41 50 58 63 63 66 66 68 68</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">24 39 54 73 94 116 136 144 152 158 161 163</table>
+		<icon>icon.skill4035</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>70</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<trait>POISON</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="5">
+				<power>#dmg</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4583" levels="12" name="Decrease Speed">
+		<!-- Level 1: Instantly reduces Speed. Effect 1. -->
+		<!-- Level 2: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 3: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 4: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 5: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 6: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 7: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 8: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 9: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 10: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 11: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 12: Instantly reduces Speed. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">36 59 82 111 143 176 206 220 231 239 244 247</table>
+		<table name="#runSpd">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>17000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">#runSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4584" levels="12" name="Reducing P. Def Shock">
+		<!-- Level 1: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 1. -->
+		<!-- Level 2: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 2. -->
+		<!-- Level 3: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 2. -->
+		<!-- Level 4: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 5: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 6: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 7: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 8: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 9: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 10: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 11: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<!-- Level 12: Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 3. -->
+		<table name="#abnormalLevels">11 12 12 13 13 13 13 13 13 13 13 13</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">24 39 54 73 94 116 136 144 152 158 161 163</table>
+		<table name="#pDef">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<icon>icon.skill0100</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="PhysicalDamage" />
+			<effect name="Stun">
+				<mul stat="pDef">#pDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4585" levels="3" name="NPC Clan Buff - Berserk Might">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#mAtk">1.1 1.1 1.16</table>
+		<table name="#mAtkSpd">1.05 1.05 1.08</table>
+		<table name="#mDef">0.9 0.9 0.84</table>
+		<table name="#mpConsume">23 42 78</table>
+		<table name="#mpInitialConsume">6 11 20</table>
+		<table name="#pAtk">1.13 1.18 1.24</table>
+		<table name="#pAtkSpd">1.05 1.05 1.08</table>
+		<table name="#pDef">0.95 0.95 0.92</table>
+		<table name="#runSpd">5 5 8</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Grow">
+				<mul stat="pAtk">#pAtk</mul>
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<add stat="runSpd">#runSpd</add>
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="mDef">#mDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4586" levels="12" name="Decrease Evasion">
+		<!-- Level 1: Reduces Evasion. Effect 1. -->
+		<!-- Level 2: Reduces Evasion. Effect 2. -->
+		<!-- Level 3: Reduces Evasion. Effect 2. -->
+		<!-- Level 4: Reduces Evasion. Effect 3. -->
+		<!-- Level 5: Reduces Evasion. Effect 3. -->
+		<!-- Level 6: Reduces Evasion. Effect 3. -->
+		<!-- Level 7: Reduces Evasion. Effect 3. -->
+		<!-- Level 8: Reduces Evasion. Effect 3. -->
+		<!-- Level 9: Reduces Evasion. Effect 3. -->
+		<!-- Level 10: Reduces Evasion. Effect 3. -->
+		<!-- Level 11: Reduces Evasion. Effect 3. -->
+		<!-- Level 12: Reduces Evasion. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 77 78 83</table>
+		<table name="#rEvas">1 2 3 4 5 6 7 8 9 10 11 12</table>
+		<icon>icon.skill1222</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>AVOID_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<sub stat="rEvas">#rEvas</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4587" levels="12" name="Decrease P.Atk">
+		<!-- Level 1: Instantly reduces P. Atk. Effect 1. -->
+		<!-- Level 2: Instantly reduces P. Atk. Effect 2. -->
+		<!-- Level 3: Instantly reduces P. Atk. Effect 2. -->
+		<!-- Level 4: Instantly reduces P. Atk. Effect 3. -->
+		<!-- Level 5: Instantly reduces P. Atk. Effect 3. -->
+		<!-- Level 6: Instantly reduces P. Atk. Effect 3. -->
+		<!-- Level 7: Instantly reduces P. Atk. Effect 3. -->
+		<!-- Level 8: Instantly reduces P. Atk. Effect 3. -->
+		<!-- Level 9: Instantly reduces P. Atk. Effect 3. -->
+		<!-- Level 10: Instantly reduces P. Atk. Effect 3. -->
+		<!-- Level 11: Instantly reduces P. Atk. Effect 3. -->
+		<!-- Level 12: Instantly reduces P. Atk. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">18 29 40 53 68 83 98 104 109 113 115 117</table>
+		<table name="#pAtk">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<table name="#time">5 10 10 15 15 15 15 15 15 15 15 15</table>
+		<icon>icon.skill4037</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtk">#pAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4588" levels="2" name="NPC Clan Buff - Berserk Haste">
+		<table name="#abnormalLevels">1 2</table>
+		<table name="#magicLevel">30 70</table>
+		<table name="#mAtk">1.1 1.16</table>
+		<table name="#mAtkSpd">1.05 1.08</table>
+		<table name="#mDef">0.9 0.84</table>
+		<table name="#mpConsume">32 78</table>
+		<table name="#mpInitialConsume">8 20</table>
+		<table name="#pAtk">1.05 1.08</table>
+		<table name="#pAtkSpd">1.2 1.44</table>
+		<table name="#pDef">0.95 0.92</table>
+		<table name="#runSpd">5 8</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">#pAtk</mul>
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="mAtk">#mAtk</mul>
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<add stat="runSpd">#runSpd</add>
+				<mul stat="pDef">#pDef</mul>
+				<mul stat="mDef">#mDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4589" levels="12" name="Decrease Speed">
+		<!-- Level 1: Instantly reduces Speed. Effect 1. -->
+		<!-- Level 2: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 3: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 4: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 5: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 6: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 7: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 8: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 9: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 10: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 11: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 12: Instantly reduces Speed. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">35 58 79 105 135 165 194 207 217 224 229 233</table>
+		<table name="#runSpd">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">#runSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4590" levels="12" name="Decrease Speed">
+		<!-- Level 1: Instantly reduces Speed. Effect 1. -->
+		<!-- Level 2: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 3: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 4: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 5: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 6: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 7: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 8: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 9: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 10: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 11: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 12: Instantly reduces Speed. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">35 58 79 105 135 165 194 207 217 224 229 233</table>
+		<table name="#runSpd">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">#runSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4591" levels="12" name="Decrease Speed">
+		<!-- Level 1: Instantly reduces Speed. Effect 1. -->
+		<!-- Level 2: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 3: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 4: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 5: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 6: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 7: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 8: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 9: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 10: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 11: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 12: Instantly reduces Speed. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">35 58 79 105 135 165 194 207 217 224 229 233</table>
+		<table name="#runSpd">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1300</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">#runSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4592" levels="12" name="Decrease P. Def">
+		<!-- Level 1: Reduces P. Def. Effect 1. -->
+		<!-- Level 2: Reduces P. Def. Effect 2. -->
+		<!-- Level 3: Reduces P. Def. Effect 2. -->
+		<!-- Level 4: Reduces P. Def. Effect 3. -->
+		<!-- Level 5: Reduces P. Def. Effect 3. -->
+		<!-- Level 6: Reduces P. Def. Effect 3. -->
+		<!-- Level 7: Reduces P. Def. Effect 3. -->
+		<!-- Level 8: Reduces P. Def. Effect 3. -->
+		<!-- Level 9: Reduces P. Def. Effect 3. -->
+		<!-- Level 10: Reduces P. Def. Effect 3. -->
+		<!-- Level 11: Reduces P. Def. Effect 3. -->
+		<!-- Level 12: Reduces P. Def. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">24 39 53 70 90 110 130 138 145 150 153 155</table>
+		<table name="#pDef">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<table name="#time">5 10 10 15 15 15 15 15 15 15 15 15</table>
+		<icon>icon.skill0122</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pDef">#pDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4593" levels="12" name="Decrease P. Def">
+		<!-- Level 1: Reduces P. Def. Effect 1. -->
+		<!-- Level 2: Reduces P. Def. Effect 2. -->
+		<!-- Level 3: Reduces P. Def. Effect 2. -->
+		<!-- Level 4: Reduces P. Def. Effect 3. -->
+		<!-- Level 5: Reduces P. Def. Effect 3. -->
+		<!-- Level 6: Reduces P. Def. Effect 3. -->
+		<!-- Level 7: Reduces P. Def. Effect 3. -->
+		<!-- Level 8: Reduces P. Def. Effect 3. -->
+		<!-- Level 9: Reduces P. Def. Effect 3. -->
+		<!-- Level 10: Reduces P. Def. Effect 3. -->
+		<!-- Level 11: Reduces P. Def. Effect 3. -->
+		<!-- Level 12: Reduces P. Def. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">24 39 53 70 90 110 130 138 145 150 153 155</table>
+		<table name="#pDef">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<table name="#time">5 10 10 15 15 15 15 15 15 15 15 15</table>
+		<icon>icon.skill0122</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pDef">#pDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4594" levels="12" name="Decrease P. Def">
+		<!-- Level 1: Reduces P. Def. Effect 1. -->
+		<!-- Level 2: Reduces P. Def. Effect 2. -->
+		<!-- Level 3: Reduces P. Def. Effect 2. -->
+		<!-- Level 4: Reduces P. Def. Effect 3. -->
+		<!-- Level 5: Reduces P. Def. Effect 3. -->
+		<!-- Level 6: Reduces P. Def. Effect 3. -->
+		<!-- Level 7: Reduces P. Def. Effect 3. -->
+		<!-- Level 8: Reduces P. Def. Effect 3. -->
+		<!-- Level 9: Reduces P. Def. Effect 3. -->
+		<!-- Level 10: Reduces P. Def. Effect 3. -->
+		<!-- Level 11: Reduces P. Def. Effect 3. -->
+		<!-- Level 12: Reduces P. Def. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">24 39 53 70 90 110 130 138 145 150 153 155</table>
+		<table name="#pDef">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<table name="#time">5 10 10 15 15 15 15 15 15 15 15 15</table>
+		<icon>icon.skill0122</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1300</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pDef">#pDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4595" levels="3" name="NPC Clan Buff - Acumen Shield">
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#mAtkSpd">1.15 1.23 1.3</table>
+		<table name="#mpConsume">23 42 78</table>
+		<table name="#mpInitialConsume">6 11 20</table>
+		<table name="#pDef">1.08 1.12 1.15</table>
+		<operateType>A2</operateType>
+		<targetType>CLAN</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<affectRange>900</affectRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">#mAtkSpd</mul>
+				<mul stat="pDef">#pDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4596" levels="12" name="Bleed">
+		<!-- Level 1: Inflicts a wound that continually reduces HP. Effect 2. -->
+		<!-- Level 2: Inflicts a wound that continually reduces HP. Effect 3. -->
+		<!-- Level 3: Inflicts a wound that continually reduces HP. Effect 4. -->
+		<!-- Level 4: Inflicts a wound that continually reduces HP. Effect 5. -->
+		<!-- Level 5: Inflicts a wound that continually reduces HP. Effect 6. -->
+		<!-- Level 6: Inflicts a wound that continually reduces HP. Effect 7. -->
+		<!-- Level 7: Inflicts a wound that continually reduces HP. Effect 8. -->
+		<!-- Level 8: Inflicts a wound that continually reduces HP. Effect 8. -->
+		<!-- Level 9: Inflicts a wound that continually reduces HP. Effect 9. -->
+		<!-- Level 10: Inflicts a wound that continually reduces HP. Effect 9. -->
+		<!-- Level 11: Inflicts a wound that continually reduces HP. Effect 10. -->
+		<!-- Level 12: Inflicts a wound that continually reduces HP. Effect 10. -->
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#damage">18 25 34 44 54 62 67 67 70 70 71 71</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">29 47 64 88 113 138 162 173 180 188 192 194</table>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>8000</reuseDelay>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="5">
+				<power>#damage</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4597" levels="12" name="Bleed">
+		<!-- Level 1: Inflicts a wound that continually reduces HP. Effect 2. -->
+		<!-- Level 2: Inflicts a wound that continually reduces HP. Effect 3. -->
+		<!-- Level 3: Inflicts a wound that continually reduces HP. Effect 4. -->
+		<!-- Level 4: Inflicts a wound that continually reduces HP. Effect 5. -->
+		<!-- Level 5: Inflicts a wound that continually reduces HP. Effect 6. -->
+		<!-- Level 6: Inflicts a wound that continually reduces HP. Effect 7. -->
+		<!-- Level 7: Inflicts a wound that continually reduces HP. Effect 8. -->
+		<!-- Level 8: Inflicts a wound that continually reduces HP. Effect 8. -->
+		<!-- Level 9: Inflicts a wound that continually reduces HP. Effect 9. -->
+		<!-- Level 10: Inflicts a wound that continually reduces HP. Effect 9. -->
+		<!-- Level 11: Inflicts a wound that continually reduces HP. Effect 10. -->
+		<!-- Level 12: Inflicts a wound that continually reduces HP. Effect 10. -->
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#damage">18 25 34 44 54 62 67 67 70 70 71 71</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">20 34 47 63 82 100 117 124 130 135 138 140</table>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="5">
+				<power>#damage</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4598" levels="12" name="Bleed">
+		<!-- Level 1: Inflicts a wound that continually reduces HP. Effect 2. -->
+		<!-- Level 2: Inflicts a wound that continually reduces HP. Effect 3. -->
+		<!-- Level 3: Inflicts a wound that continually reduces HP. Effect 4. -->
+		<!-- Level 4: Inflicts a wound that continually reduces HP. Effect 5. -->
+		<!-- Level 5: Inflicts a wound that continually reduces HP. Effect 6. -->
+		<!-- Level 6: Inflicts a wound that continually reduces HP. Effect 7. -->
+		<!-- Level 7: Inflicts a wound that continually reduces HP. Effect 8. -->
+		<!-- Level 8: Inflicts a wound that continually reduces HP. Effect 8. -->
+		<!-- Level 9: Inflicts a wound that continually reduces HP. Effect 9. -->
+		<!-- Level 10: Inflicts a wound that continually reduces HP. Effect 9. -->
+		<!-- Level 11: Inflicts a wound that continually reduces HP. Effect 10. -->
+		<!-- Level 12: Inflicts a wound that continually reduces HP. Effect 10. -->
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#damage">18 25 34 44 54 62 67 67 70 70 71 71</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">20 34 47 63 82 100 117 124 130 135 138 140</table>
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1300</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="5">
+				<power>#damage</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4599" levels="12" name="Decrease Speed">
+		<!-- Level 1: Instantly reduces Speed. Effect 1. -->
+		<!-- Level 2: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 3: Instantly reduces Speed. Effect 2. -->
+		<!-- Level 4: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 5: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 6: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 7: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 8: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 9: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 10: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 11: Instantly reduces Speed. Effect 3. -->
+		<!-- Level 12: Instantly reduces Speed. Effect 3. -->
+		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">35 58 81 109 141 174 203 216 227 235 241 244</table>
+		<table name="#runSpd">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1800</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">#runSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+</list>

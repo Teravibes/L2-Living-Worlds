@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Effects of %targetName%</title>
+	</head>
+	<body>
+		<table width="100%">
+			<tr>
+				<td width=45>
+					<button value="Main" action="bypass admin_admin" width=45 height=15 back="sek.cbui94" fore="sek.cbui92">
+				</td>
+				<td width=180>
+					<center><font color="LEVEL">Effects of %targetName%</font></center>
+				</td>
+				<td width=45>
+					<button value="Back" action="bypass admin_current_player" width=45 height=15 back="sek.cbui94" fore="sek.cbui92">
+				</td>
+				<td width=15></td>
+			</tr>
+		</table>
+		<table width="100%">
+		<tr><td>
+			%buffs%
+		</td></tr>
+		</table>
+		<br><br>%pages%<br>
+		<center>
+		<button value="%buffsText%" action="bypass admin_getbuffs%passives% %targetName%" width="95" height="21" back="bigbutton_over" fore="bigbutton"><br>
+		<button value="Remove All" action="bypass admin_stopallbuffs %targetObjId%" width="95" height="21" back="bigbutton_over" fore="bigbutton"><br>
+		<br>
+		Total skill count: %skillSize%
+		</center>
+	</body>
+</html>

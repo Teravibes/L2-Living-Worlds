@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Mystic Muse -->
+	<skillTree type="classSkillTree" classId="103" parentClassId="27">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="12500000" learnedByNpc="true" />
+		<skill skillName="Light Vortex" skillId="1342" skillLevel="1" getLevel="76" levelUpSp="12500000" learnedByNpc="true">
+			<item id="7652" count="1" /> <!-- Spellbook - Light Vortex -->
+		</skill>
+
+		<skill skillName="Skill Mastery" skillId="331" skillLevel="1" getLevel="77" levelUpSp="14670000" learnedByNpc="true" />
+		<skill skillName="Ice Vortex" skillId="1340" skillLevel="1" getLevel="77" levelUpSp="14670000" learnedByNpc="true">
+			<item id="7650" count="1" /> <!-- Spellbook - Ice Vortex -->
+		</skill>
+		<skill skillName="Spell Force" skillId="427" skillLevel="1" getLevel="77" levelUpSp="14670000" learnedByNpc="true" />
+
+		<skill skillName="Arcane Power" skillId="337" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+		<skill skillName="Arcane Chaos" skillId="1338" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true">
+			<item id="7648" count="1" /> <!-- Spellbook - Arcane Chaos -->
+		</skill>
+		<skill skillName="Arcane Roar" skillId="433" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+
+		<skill skillName="Raging Waves" skillId="1421" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8901" count="1" /> <!-- Ancient Spellbook: Raging Waves -->
+		</skill>
+	</skillTree>
+</list>

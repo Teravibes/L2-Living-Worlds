@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documentation: -->
+<!-- defaultPriceConfig -> ID of one of the price configs defined to be used when NPC has no price config. Can be ANY of the defined priceConfigs. Cannot be ommited, althrough you can emulate this by creating a dummy priceConfig. -->
+<!-- id -> Defines the ID for relational references. -->
+<!-- name -> Name of the area, for human-friendlyness and debugging, cannot be ommited. -->
+<!-- baseTax -> Used on merchant item price calculation (see formula in the end), cannot be ommited. -->
+<!-- castleId -> ID of the castle that controls merchants of this config, castle tax will apply to merchants price. Can be ommited (causes it to assume that no castle controls this config). -->
+<!-- zoneId -> Attaches a given Town Zone to this priceConfig for convenience. -->
+<!-- Merchant NPCs that dont explicit define an priceConfig will check if they are inside of the zone of an priceConfig, if yes that priceConfig is used for that npc. Can be ommited, then no NPC will be added based on zone (ie priceConfig direct assigned to NPCs through config or when used as the default priceConfig). -->
+<!-- Merchant Price Formula price = baseItemPrice * (1 + baseTax/100 + castleTax/100) -->
+<merchantPriceConfig defaultPriceConfig="18" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/MerchantPriceConfig.xsd">
+	<priceConfig id="0" name="Giran Town" baseTax="10" castleId="3" zoneId="11020" />
+	<priceConfig id="1" name="DE Village" baseTax="15" castleId="4" zoneId="11021" />
+	<priceConfig id="2" name="Talking Island" baseTax="15" castleId="1" zoneId="11022" />
+	<priceConfig id="3" name="Elven Village" baseTax="15" castleId="4" zoneId="11023" />
+	<priceConfig id="4" name="Orc Village" baseTax="15" castleId="9" zoneId="11024" />
+	<priceConfig id="5" name="Gludin Village" baseTax="20" castleId="1" zoneId="11025" />
+	<priceConfig id="6" name="Dwarven Village" baseTax="15" castleId="9" zoneId="11026" />
+	<priceConfig id="7" name="Gludio Town" baseTax="20" castleId="1" zoneId="11027" />
+	<priceConfig id="8" name="Dion Town" baseTax="20" castleId="2" zoneId="11028" />
+	<priceConfig id="9" name="Oren Town" baseTax="15" castleId="4" zoneId="11029" />
+	<priceConfig id="10" name="Hunters Village" baseTax="30" castleId="5" zoneId="11030" />
+	<priceConfig id="11" name="Aden Town" baseTax="20" castleId="5" zoneId="11031" />
+	<priceConfig id="12" name="Goddard Town" baseTax="20" castleId="7" zoneId="11032" />
+	<priceConfig id="13" name="Rune Town" baseTax="20" castleId="8" zoneId="11033" />
+	<priceConfig id="14" name="Heine Town" baseTax="20" castleId="6" zoneId="11034" />
+	<priceConfig id="15" name="Schuttgart Town" baseTax="20" castleId="9" zoneId="11035" />
+	<priceConfig id="16" name="Floran Village" baseTax="50" castleId="2" zoneId="11036" />
+	<priceConfig id="17" name="Neutral Territory" baseTax="50" />
+	<priceConfig id="18" name="Gludio Castle" baseTax="10" castleId="1" zoneId="11200" />
+	<priceConfig id="19" name="Dion Castle" baseTax="10" castleId="2" zoneId="11201" />
+	<priceConfig id="20" name="Giran Castle" baseTax="10" castleId="3" zoneId="11202" />
+	<priceConfig id="21" name="Oren Castle" baseTax="10" castleId="4" zoneId="11203" />
+	<priceConfig id="22" name="Aden Castle" baseTax="10" castleId="5" zoneId="11204" />
+	<priceConfig id="23" name="Innadril Castle" baseTax="10" castleId="6" zoneId="11205" />
+	<priceConfig id="24" name="Goddard Castle" baseTax="10" castleId="7" zoneId="11206" />
+	<priceConfig id="25" name="Rune Castle" baseTax="10" castleId="8" zoneId="11207" />
+	<priceConfig id="26" name="Schuttgart Castle" baseTax="10" castleId="9" zoneId="11208" />
+</merchantPriceConfig>

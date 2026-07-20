@@ -1,0 +1,4241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="2200" levels="3" name="Item - Jade Treasure Box">
+		<table name="#itemConsumeId">6495 6496 6497</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="28.5">
+							<item id="6908" count="24" /> <!-- Fish Oil -->
+						</item>
+						<item chance="26.0572">
+							<item id="7609" count="26" /> <!-- Proof of Catching a Fish -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="31.5">
+							<item id="6908" count="24" /> <!-- Fish Oil -->
+						</item>
+						<item chance="28.8">
+							<item id="7609" count="26" /> <!-- Proof of Catching a Fish -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="34.5">
+							<item id="6908" count="24" /> <!-- Fish Oil -->
+						</item>
+						<item chance="31.5428">
+							<item id="7609" count="26" /> <!-- Proof of Catching a Fish -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2201" levels="3" name="Item - Blue Treasure Box">
+		<table name="#itemConsumeId">6498 6499 6500</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="39.5">
+							<item id="6908" count="24" /> <!-- Fish Oil -->
+						</item>
+						<item chance="36.1144">
+							<item id="7609" count="26" /> <!-- Proof of Catching a Fish -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="5.028">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="17.957">
+							<item id="6908" count="28" /> <!-- Fish Oil -->
+						</item>
+						<item chance="16.76">
+							<item id="6909" count="8" /> <!-- Greater Fish Oil -->
+						</item>
+						<item chance="16.76">
+							<item id="7609" count="30" /> <!-- Proof of Catching a Fish -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="5.22">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="18.6428">
+							<item id="6908" count="28" /> <!-- Fish Oil -->
+						</item>
+						<item chance="17.3999">
+							<item id="6909" count="8" /> <!-- Greater Fish Oil -->
+						</item>
+						<item chance="17.4">
+							<item id="7609" count="30" /> <!-- Proof of Catching a Fish -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2202" levels="3" name="Item - Yellow Treasure Box">
+		<table name="#itemConsumeId">6501 6502 6503</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="5.424">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="19.3714">
+							<item id="6908" count="28" /> <!-- Fish Oil -->
+						</item>
+						<item chance="18.0799">
+							<item id="6909" count="8" /> <!-- Greater Fish Oil -->
+						</item>
+						<item chance="18.08">
+							<item id="7609" count="30" /> <!-- Proof of Catching a Fish -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="6.816">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="24.3428">
+							<item id="6908" count="28" /> <!-- Fish Oil -->
+						</item>
+						<item chance="22.7199">
+							<item id="6909" count="8" /> <!-- Greater Fish Oil -->
+						</item>
+						<item chance="22.72">
+							<item id="7609" count="30" /> <!-- Proof of Catching a Fish -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="7.296">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="13.0286">
+							<item id="6908" count="56" /> <!-- Fish Oil -->
+						</item>
+						<item chance="10.8088">
+							<item id="6909" count="14" /> <!-- Greater Fish Oil -->
+						</item>
+						<item chance="24.32">
+							<item id="7609" count="30" /> <!-- Proof of Catching a Fish -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2203" levels="3" name="Item - Orange Treasure Box">
+		<table name="#itemConsumeId">6504 6505 6506</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="7.788">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="13.9072">
+							<item id="6908" count="56" /> <!-- Fish Oil -->
+						</item>
+						<item chance="11.5376">
+							<item id="6909" count="14" /> <!-- Greater Fish Oil -->
+						</item>
+						<item chance="12.98">
+							<item id="7609" count="60" /> <!-- Proof of Catching a Fish -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="50.688">
+							<item id="6910" count="3" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="54.912">
+							<item id="6910" count="3" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2204" levels="3" name="Item - Violet Treasure Box">
+		<table name="#itemConsumeId">6507 6508 6509</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="58.24">
+							<item id="6910" count="3" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="69.76">
+							<item id="6910" count="3" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="74.048">
+							<item id="6910" count="3" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2205" levels="3" name="Item - Red Treasure Box">
+		<table name="#itemConsumeId">6510 6511 6512</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="84.864">
+							<item id="6910" count="3" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="89.728">
+							<item id="6910" count="3" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="54.88">
+							<item id="6910" count="6" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2206" levels="3" name="Item - White Treasure Box">
+		<table name="#itemConsumeId">6513 6514 6515</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="58.048">
+							<item id="6910" count="6" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="61.536">
+							<item id="6910" count="6" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="65.248">
+							<item id="6910" count="6" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2207" levels="3" name="Item - Black Treasure Box">
+		<table name="#itemConsumeId">6516 6517 6518</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="69.312">
+							<item id="6910" count="6" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="76.896">
+							<item id="6910" count="6" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="81.664">
+							<item id="6910" count="6" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2208" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2209" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2210" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2211" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2212" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2213" levels="21" name="Escape - Talking Island Village">
+		<table name="#coordX">-84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 149800 107946</table>
+		<table name="#coordY">244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 -79999 -52280</table>
+		<table name="#coordZ">-3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 -5568 -2408</table>
+		<table name="#itemConsumeId">7117 7118 7119 7120 7121 7122 7123 7124 7125 7126 7127 7128 7129 7130 7131 7132 7133 7134 7135 7618 7619</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>20000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>#coordX</x>
+				<y>#coordY</y>
+				<z>#coordZ</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2214" levels="10" name="Scroll of Escape to Giran Castle Town">
+		<table name="#coordX">-84200 46915 9723 -45208 115158 -118092 0 0 0 83378</table>
+		<table name="#coordY">244566 51441 15576 -112502 -178170 46955 0 0 0 147999</table>
+		<table name="#coordZ">-3728 -2976 -4568 -240 -880 342 0 0 0 -3400</table>
+		<table name="#itemConsumeId">7554 7555 7556 7557 7558 9716 0 0 0 7559</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>20000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>#coordX</x>
+				<y>#coordY</y>
+				<z>#coordZ</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2215" levels="4" name="Item - Quest Special Box">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="8">
+							<item id="57" count="100000" /> <!-- Adena -->
+						</item>
+						<item chance="10">
+							<item id="3456" count="1" /> <!-- Imperial Diamond -->
+						</item>
+						<item chance="5.5">
+							<item id="3454" count="1" /> <!-- Avellan Silk Frock -->
+						</item>
+						<item chance="5.5">
+							<item id="3455" count="1" /> <!-- Feriotic Porcelain Urn -->
+						</item>
+						<item chance="17.6">
+							<item id="3448" count="1" /> <!-- Gludio Wheat Flour -->
+						</item>
+						<item chance="17">
+							<item id="3449" count="1" /> <!-- Spidersilk Rope -->
+						</item>
+						<item chance="18">
+							<item id="3446" count="1" /> <!-- Dire Wolf Pelts -->
+						</item>
+						<item chance="18.4">
+							<item id="3468" count="1" /> <!-- Ancient Crown -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="7.5">
+							<item id="57" count="100000" /> <!-- Adena -->
+						</item>
+						<item chance="6">
+							<item id="3456" count="1" /> <!-- Imperial Diamond -->
+						</item>
+						<item chance="7">
+							<item id="3454" count="1" /> <!-- Avellan Silk Frock -->
+						</item>
+						<item chance="7.4">
+							<item id="3455" count="1" /> <!-- Feriotic Porcelain Urn -->
+						</item>
+						<item chance="10">
+							<item id="3448" count="1" /> <!-- Gludio Wheat Flour -->
+						</item>
+						<item chance="22">
+							<item id="3449" count="1" /> <!-- Spidersilk Rope -->
+						</item>
+						<item chance="19.6">
+							<item id="3446" count="1" /> <!-- Dire Wolf Pelts -->
+						</item>
+						<item chance="20.4">
+							<item id="3468" count="1" /> <!-- Ancient Crown -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="12">
+							<item id="57" count="100000" /> <!-- Adena -->
+						</item>
+						<item chance="10">
+							<item id="3456" count="1" /> <!-- Imperial Diamond -->
+						</item>
+						<item chance="12">
+							<item id="3470" count="1" /> <!-- Gold Bar -->
+						</item>
+						<item chance="6">
+							<item id="3454" count="1" /> <!-- Avellan Silk Frock -->
+						</item>
+						<item chance="6.5">
+							<item id="3455" count="1" /> <!-- Feriotic Porcelain Urn -->
+						</item>
+						<item chance="10">
+							<item id="3450" count="1" /> <!-- Alexandrite -->
+						</item>
+						<item chance="19.5">
+							<item id="3452" count="1" /> <!-- Mechanic Golem Spare Parts -->
+						</item>
+						<item chance="24">
+							<item id="3447" count="1" /> <!-- Moonstone -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="19">
+							<item id="57" count="100000" /> <!-- Adena -->
+						</item>
+						<item chance="10">
+							<item id="3456" count="1" /> <!-- Imperial Diamond -->
+						</item>
+						<item chance="5.9">
+							<item id="3470" count="1" /> <!-- Gold Bar -->
+						</item>
+						<item chance="4">
+							<item id="3454" count="1" /> <!-- Avellan Silk Frock -->
+						</item>
+						<item chance="6.5">
+							<item id="3455" count="1" /> <!-- Feriotic Porcelain Urn -->
+						</item>
+						<item chance="10">
+							<item id="3450" count="1" /> <!-- Alexandrite -->
+						</item>
+						<item chance="19.6">
+							<item id="3452" count="1" /> <!-- Mechanic Golem Spare Parts -->
+						</item>
+						<item chance="25">
+							<item id="3447" count="1" /> <!-- Moonstone -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2216" levels="4" name="Item - Quest Special Fish">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="34">
+							<item id="57" count="100" /> <!-- Adena -->
+						</item>
+						<item chance="33">
+							<item id="1867" count="1" /> <!-- Animal Skin -->
+						</item>
+						<item chance="33">
+							<item id="1872" count="1" /> <!-- Animal Bone -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="34">
+							<item id="57" count="100" /> <!-- Adena -->
+						</item>
+						<item chance="33">
+							<item id="1867" count="1" /> <!-- Animal Skin -->
+						</item>
+						<item chance="33">
+							<item id="1872" count="1" /> <!-- Animal Bone -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="34">
+							<item id="57" count="100" /> <!-- Adena -->
+						</item>
+						<item chance="33">
+							<item id="1867" count="1" /> <!-- Animal Skin -->
+						</item>
+						<item chance="33">
+							<item id="1872" count="1" /> <!-- Animal Bone -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="34">
+							<item id="57" count="100" /> <!-- Adena -->
+						</item>
+						<item chance="33">
+							<item id="1867" count="1" /> <!-- Animal Skin -->
+						</item>
+						<item chance="33">
+							<item id="1872" count="1" /> <!-- Animal Bone -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2217" levels="5" name="Item - Quest Treasure Box">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="9">
+							<item id="6697" count="1" /> <!-- Arcana Mace Head -->
+						</item>
+						<item chance="9">
+							<item id="6693" count="1" /> <!-- Dragon Hunter Axe Blade -->
+						</item>
+						<item chance="9">
+							<item id="6694" count="1" /> <!-- Saint Spear Blade -->
+						</item>
+						<item chance="9">
+							<item id="6696" count="1" /> <!-- Heavens Divider Edge -->
+						</item>
+						<item chance="9">
+							<item id="7579" count="1" /> <!-- Draconic Bow Shaft -->
+						</item>
+						<item chance="9">
+							<item id="6690" count="1" /> <!-- Imperial Staff Head -->
+						</item>
+						<item chance="9">
+							<item id="6688" count="1" /> <!-- Forgotten Blade Edge -->
+						</item>
+						<item chance="9">
+							<item id="6691" count="1" /> <!-- Angel Slayer Blade -->
+						</item>
+						<item chance="9">
+							<item id="6689" count="1" /> <!-- Basalt Battlehammer Head -->
+						</item>
+						<item chance="9">
+							<item id="6695" count="1" /> <!-- Demon Splinter Blade -->
+						</item>
+						<item chance="10">
+							<item id="57" count="330000" /> <!-- Adena -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="8.5">
+							<item id="6706" count="1" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
+						</item>
+						<item chance="8.5">
+							<item id="6710" count="1" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+						</item>
+						<item chance="8.5">
+							<item id="6714" count="1" /> <!-- Sealed Major Arcana Circlet Pattern -->
+						</item>
+						<item chance="8.5">
+							<item id="6703" count="1" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
+						</item>
+						<item chance="8.5">
+							<item id="6704" count="1" /> <!-- Sealed Imperial Crusader Boots Design -->
+						</item>
+						<item chance="8.5">
+							<item id="6708" count="1" /> <!-- Sealed Draconic Leather Gloves Fabric -->
+						</item>
+						<item chance="8.5">
+							<item id="6709" count="1" /> <!-- Sealed Draconic Leather Boots Design -->
+						</item>
+						<item chance="8.5">
+							<item id="6712" count="1" /> <!-- Sealed Major Arcana Gloves fabric -->
+						</item>
+						<item chance="8.5">
+							<item id="6713" count="1" /> <!-- Sealed Major Arcana Boots Design -->
+						</item>
+						<item chance="8.5">
+							<item id="6705" count="1" /> <!-- Sealed Imperial Crusader Shield Part -->
+						</item>
+						<item chance="8.5">
+							<item id="13099" count="1" />
+						</item>
+						<item chance="15">
+							<item id="57" count="292000" /> <!-- Adena -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="20">
+							<item id="6702" count="1" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+						</item>
+						<item chance="20">
+							<item id="6701" count="1" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+						</item>
+						<item chance="20">
+							<item id="6707" count="1" /> <!-- Sealed Draconic Leather Armor Part -->
+						</item>
+						<item chance="20">
+							<item id="6711" count="1" /> <!-- Sealed Major Arcana Robe Part -->
+						</item>
+						<item chance="20">
+							<item id="57" count="93000" /> <!-- Adena -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="8.5">
+							<item id="6857" count="1" /> <!-- Recipe: Sealed Imperial Crusader Gauntlets (60%) -->
+						</item>
+						<item chance="8.5">
+							<item id="6859" count="1" /> <!-- Recipe: Sealed Imperial Crusader Boots (60%) -->
+						</item>
+						<item chance="8.5">
+							<item id="6867" count="1" /> <!-- Recipe: Sealed Draconic Leather Gloves (60%) -->
+						</item>
+						<item chance="8.5">
+							<item id="6869" count="1" /> <!-- Recipe: Sealed Draconic Leather Boots (60%) -->
+						</item>
+						<item chance="8.5">
+							<item id="6875" count="1" /> <!-- Recipe: Sealed Major Arcana Gloves (60%) -->
+						</item>
+						<item chance="8.5">
+							<item id="6877" count="1" /> <!-- Recipe: Sealed Major Arcana Boots (60%) -->
+						</item>
+						<item chance="8.5">
+							<item id="6861" count="1" /> <!-- Recipe: Sealed Imperial Crusader Shield (60%) -->
+						</item>
+						<item chance="8.5">
+							<item id="13100" count="1" />
+						</item>
+						<item chance="8.5">
+							<item id="6863" count="1" /> <!-- Recipe: Sealed Imperial Crusader Helmet (60%) -->
+						</item>
+						<item chance="8.5">
+							<item id="6871" count="1" /> <!-- Recipe: Sealed Draconic Leather Helmet (60%) -->
+						</item>
+						<item chance="8.5">
+							<item id="6879" count="1" /> <!-- Recipe: Sealed Major Arcana Circlet (60%) -->
+						</item>
+						<item chance="15">
+							<item id="57" count="340000" /> <!-- Adena -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="20">
+							<item id="6855" count="1" /> <!-- Recipe: Sealed Imperial Crusader Gaiters (60%) -->
+						</item>
+						<item chance="20">
+							<item id="6853" count="1" /> <!-- Recipe: Sealed Imperial Crusader Breastplate (60%) -->
+						</item>
+						<item chance="20">
+							<item id="6865" count="1" /> <!-- Recipe: Sealed Draconic Leather Armor (60%) -->
+						</item>
+						<item chance="20">
+							<item id="6873" count="1" /> <!-- Recipe: Sealed Major Arcana Robe (60%) -->
+						</item>
+						<item chance="20">
+							<item id="57" count="850000" /> <!-- Adena -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2218" levels="3" name="Item - Quest Sac">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="20">
+							<item id="1882" count="3" /> <!-- Leather -->
+						</item>
+						<item chance="16">
+							<item id="1876" count="6" /> <!-- Mithril Ore -->
+						</item>
+						<item chance="12">
+							<item id="1879" count="3" /> <!-- Cokes -->
+						</item>
+						<item chance="12">
+							<item id="1881" count="1" /> <!-- Coarse Bone Powder -->
+						</item>
+						<item chance="10">
+							<item id="1880" count="4" /> <!-- Steel -->
+						</item>
+						<item chance="10">
+							<item id="1874" count="1" /> <!-- Oriharukon Ore -->
+						</item>
+						<item chance="10">
+							<item id="1875" count="3" /> <!-- Stone of Purity -->
+						</item>
+						<item chance="10">
+							<item id="1877" count="3" /> <!-- Adamantite Nugget -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="20">
+							<item id="4039" count="4" /> <!-- Mold Glue -->
+						</item>
+						<item chance="20">
+							<item id="4043" count="4" /> <!-- Asofe -->
+						</item>
+						<item chance="20">
+							<item id="4044" count="4" /> <!-- Thons -->
+						</item>
+						<item chance="15">
+							<item id="4040" count="2" /> <!-- Mold Lubricant -->
+						</item>
+						<item chance="15">
+							<item id="4042" count="2" /> <!-- Enria -->
+						</item>
+						<item chance="10">
+							<item id="4041" count="1" /> <!-- Mold Hardener -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="39">
+							<item id="1060" count="1" /> <!-- Lesser Healing Potion -->
+						</item>
+						<item chance="11.8">
+							<item id="1061" count="1" /> <!-- Healing Potion -->
+						</item>
+						<item chance="32.2">
+							<item id="1539" count="1" /> <!-- Greater Healing Potion -->
+						</item>
+						<item chance="3">
+							<item id="1540" count="1" /> <!-- Quick Healing Potion -->
+						</item>
+						<item chance="7">
+							<item id="735" count="1" /> <!-- Potion of Alacrity -->
+						</item>
+						<item chance="7">
+							<item id="6035" count="1" /> <!-- Magic Haste Potion -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2219" levels="2" name="Item - Quest Sac">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="18">
+							<item id="1882" count="20" /> <!-- Leather -->
+						</item>
+						<item chance="16">
+							<item id="1876" count="20" /> <!-- Mithril Ore -->
+						</item>
+						<item chance="10">
+							<item id="1879" count="20" /> <!-- Cokes -->
+						</item>
+						<item chance="10">
+							<item id="1881" count="20" /> <!-- Coarse Bone Powder -->
+						</item>
+						<item chance="5">
+							<item id="1880" count="20" /> <!-- Steel -->
+						</item>
+						<item chance="10">
+							<item id="1874" count="20" /> <!-- Oriharukon Ore -->
+						</item>
+						<item chance="10">
+							<item id="1875" count="20" /> <!-- Stone of Purity -->
+						</item>
+						<item chance="11">
+							<item id="1877" count="20" /> <!-- Adamantite Nugget -->
+						</item>
+						<item chance="10">
+							<item id="57" count="150000" /> <!-- Adena -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="20">
+							<item id="4039" count="4" /> <!-- Mold Glue -->
+						</item>
+						<item chance="20">
+							<item id="4043" count="4" /> <!-- Asofe -->
+						</item>
+						<item chance="20">
+							<item id="4044" count="4" /> <!-- Thons -->
+						</item>
+						<item chance="10">
+							<item id="4040" count="4" /> <!-- Mold Lubricant -->
+						</item>
+						<item chance="10">
+							<item id="4042" count="4" /> <!-- Enria -->
+						</item>
+						<item chance="10">
+							<item id="4041" count="4" /> <!-- Mold Hardener -->
+						</item>
+						<item chance="10">
+							<item id="57" count="160000" /> <!-- Adena -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2220" levels="9" name="Item - Easy Green Fish">
+		<table name="#itemConsumeId">7726 7727 7728 7729 7730 7731 7732 7733 7734</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="55.2">
+							<item id="6908" count="3" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="56.8">
+							<item id="6908" count="3" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="61.6">
+							<item id="6908" count="3" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="67.2">
+							<item id="6908" count="3" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="75.2">
+							<item id="6908" count="3" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="83.2">
+							<item id="6908" count="3" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="90.4">
+							<item id="6908" count="3" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="99.2">
+							<item id="6908" count="3" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="53.2">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2221" levels="9" name="Item - Easy Jade Fish">
+		<table name="#itemConsumeId">7735 7736 7737 7738 7739 7740 7741 7742 7743</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="57.2">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="66.8">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="66.8">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="66.4">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="66">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="66">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="65.6">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="65.6">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="65.2">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2222" levels="9" name="Item - Easy Blue Fish">
+		<table name="#itemConsumeId">7744 7745 7746 7747 7748 7749 7750 7751 7752</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="65.2">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="65.2">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="79.2">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="1.616">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="26.9331">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+						<item chance="16.1598">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="1.576">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="26.2665">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+						<item chance="15.7598">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="1.68">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="27.9998">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+						<item chance="16.7998">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="1.704">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="28.3998">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+						<item chance="17.0398">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="1.728">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="28.7998">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+						<item chance="17.2798">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="1.744">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="29.0665">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+						<item chance="17.4398">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2223" levels="9" name="Item - Easy Yellow Fish">
+		<table name="#itemConsumeId">7753 7754 7755 7756 7757 7758 7759 7760 7761</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="1.768">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="29.4664">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+						<item chance="17.6798">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="1.792">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="29.8664">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+						<item chance="17.9198">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="1.808">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="30.1331">
+							<item id="6908" count="6" /> <!-- Fish Oil -->
+						</item>
+						<item chance="18.0798">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="2.16">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="17.9998">
+							<item id="6908" count="12" /> <!-- Fish Oil -->
+						</item>
+						<item chance="21.5998">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="2.216">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="29.5464">
+							<item id="6908" count="8" /> <!-- Fish Oil -->
+						</item>
+						<item chance="22.16">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="2.272">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="30.2932">
+							<item id="6908" count="8" /> <!-- Fish Oil -->
+						</item>
+						<item chance="22.72">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="2.32">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="30.9332">
+							<item id="6908" count="8" /> <!-- Fish Oil -->
+						</item>
+						<item chance="23.2">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="2.376">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="31.68">
+							<item id="6908" count="8" /> <!-- Fish Oil -->
+						</item>
+						<item chance="23.76">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="2.432">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="32.4264">
+							<item id="6908" count="8" /> <!-- Fish Oil -->
+						</item>
+						<item chance="24.32">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2224" levels="9" name="Item - Easy Orange Fish">
+		<table name="#itemConsumeId">7762 7763 7764 7765 7766 7767 7768 7769 7770</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="2.488">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="33.1732">
+							<item id="6908" count="8" /> <!-- Fish Oil -->
+						</item>
+						<item chance="24.88">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="2.544">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="16.96">
+							<item id="6908" count="16" /> <!-- Fish Oil -->
+						</item>
+						<item chance="25.44">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="2.6">
+							<item id="6904" count="1" /> <!-- Party Mask Fabric -->
+						</item>
+						<item chance="17.3332">
+							<item id="6908" count="16" /> <!-- Fish Oil -->
+						</item>
+						<item chance="26">
+							<item id="6909" count="2" /> <!-- Greater Fish Oil -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="31.872">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="37.248">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="38.016">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="39.168">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="40.32">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="41.184">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2225" levels="9" name="Item - Easy Violet Fish">
+		<table name="#itemConsumeId">7771 7772 7773 7774 7775 7776 7777 7778 7779</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="42.048">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="42.912">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="43.68">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="44.64">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="45.504">
+							<item id="6910" count="1" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="26.16">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="26.688">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="27.216">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="27.792">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2226" levels="9" name="Item - Easy Red Fish">
+		<table name="#itemConsumeId">7780 7781 7782 7783 7784 7785 7786 7787 7788</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="30.672">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="31.248">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="31.824">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="32.448">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="33.024">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="33.648">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="37.872">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="38.592">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="41.184">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2227" levels="9" name="Item - Easy White Fish">
+		<table name="#itemConsumeId">7789 7790 7791 7792 7793 7794 7795 7796 7797</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="41.952">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="42.768">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="43.536">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="44.4">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="45.312">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="46.176">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="47.088">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="48">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="48.96">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2228" levels="9" name="Item - Easy Black Fish">
+		<table name="#itemConsumeId">7798 7799 7800 7801 7802 7803 7804 7805 7806</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="49.968">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="67.968">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="69.312">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="73.92">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="75.456">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="76.928">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="78.464">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="80.064">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="81.664">
+							<item id="6910" count="2" /> <!-- Premium Fish Oil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2229" levels="8" name="Treasure Chest Key - 1">
+		<table name="#effectPoints">-1 -2 -3 -4 -5 -6 -7 -8</table>
+		<table name="#itemConsumeId">6665 6666 6667 6668 6669 6670 6671 6672</table>
+		<operateType>A1</operateType>
+		<targetType>UNLOCKABLE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>10</magicLevel>
+		<reuseDelay>8000</reuseDelay>
+		<conditions msgId="109">
+			<target npcType="Chest" />
+		</conditions>
+		<effects>
+			<effect name="OpenChest" />
+		</effects>
+	</skill>
+	<skill id="2230" levels="1" name="Item - Theme Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2231" levels="1" name="Amulet: Protection of Valakas">
+		<!-- Amulet: Protection of Valakas. Increases one's resistance to attack when Valakas' attacks with its front claws. -->
+		<icon>icon.etc_blesscharm_ward_val_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VALAKAS_ITEM</abnormalType>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6652</itemConsumeId> <!-- Scroll: Protection of Valakas -->
+		<magicLevel>75</magicLevel>
+		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="DefenceTrait">
+				<VALAKAS>11</VALAKAS>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2232" levels="1" name="Amulet: Slay Valakas">
+		<!-- Amulet: Slay Valakas. Increases one's P. Atk. when fighting against Valakas. -->
+		<icon>icon.etc_blesscharm_slay_val_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VALAKAS_ITEM</abnormalType>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6655</itemConsumeId> <!-- Scroll: Slay Valakas -->
+		<magicLevel>75</magicLevel>
+		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="AttackTrait">
+				<VALAKAS>-20</VALAKAS>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2233" levels="1" name="Amulet: Flames of Valakas">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6654</itemConsumeId> <!-- Scroll: Flames of Valakas -->
+		<magicLevel>75</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>DRAGON_BREATH,1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2234" levels="1" name="Disrupting Arrow">
+		<!-- Shock temporarily Immobilizes target. -->
+		<icon>icon.etc_destory_soul_arrow_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<hitTime>500</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8192</itemConsumeId> <!-- Breaking Arrow -->
+		<magicLevel>85</magicLevel>
+		<power>2320</power>
+		<reuseDelay>30000</reuseDelay>
+		<trait>SHOCK</trait>
+		<conditions msgId="113" addName="1">
+			<and>
+				<using kind="BOW" />
+				<player insideZoneId="2234" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="PhysicalDamage" />
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="2235" levels="1" name="Anteroom Door Key">
+		<operateType>A1</operateType>
+		<targetType>UNLOCKABLE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>2000</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8273</itemConsumeId> <!-- Anteroom Key -->
+		<magicLevel>1</magicLevel>
+		<power>100</power>
+		<reuseDelay>3000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<target npcId="19160002,19160003,19160004,19160005,19160006,19160007,19160008,19160009" />
+		</conditions>
+		<effects>
+			<effect name="OpenDoor">
+				<chance>100</chance>
+				<isItem>true</isItem>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2236" levels="1" name="Chapel Door Key">
+		<castRange>1000</castRange> <!-- Epilogue Modification -->
+		<operateType>A1</operateType>
+		<targetType>UNLOCKABLE</targetType>
+		<effectPoint>-1</effectPoint>
+		<effectRange>2000</effectRange> <!-- Epilogue Modification -->
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8274</itemConsumeId> <!-- Chapel Key -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>3000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<target npcId="19160002,19160003,19160004,19160005,19160006,19160007,19160008,19160009,19160010,19160011" /> <!-- Epilogue Modification -->
+		</conditions>
+		<effects>
+			<effect name="OpenDoor">
+				<chance>100</chance>
+				<isItem>true</isItem>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2237" levels="1" name="Altar Door Key">
+		<operateType>A1</operateType>
+		<targetType>UNLOCKABLE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>2000</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8275</itemConsumeId> <!-- Key of Darkness -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>3000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<target npcId="19160012,19160013,19160014,19160015,19160016,19160017" /> <!-- Epilogue Modification -->
+		</conditions>
+		<effects>
+			<effect name="OpenDoor">
+				<chance>100</chance>
+				<isItem>true</isItem>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2238" levels="1" name="Room of Splendor Key">
+		<operateType>A1</operateType>
+		<targetType>UNLOCKABLE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8056</itemConsumeId> <!-- Key of Splendor Room -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>3000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<target npcId="23150003,23150004" />
+		</conditions>
+		<effects>
+			<effect name="OpenDoor">
+				<chance>100</chance>
+				<isItem>true</isItem>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2239" levels="1" name="Petrifaction Scroll">
+		<!-- Turns target to stone. -->
+		<icon>icon.ect_piece_of_paper_white_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>PARTY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>TURN_STONE</abnormalType>
+		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8379</itemConsumeId> <!-- Petrification Scroll -->
+		<magicLevel>99</magicLevel>
+		<conditions msgId="113" addName="1">
+			<player insideZoneId="2239" />
+		</conditions>
+		<effects>
+			<effect name="Petrification" />
+		</effects>
+	</skill>
+	<skill id="2240" levels="1" name="Hot Spring Nectar">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>300</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8030</itemConsumeId> <!-- Hot Spring Nectar -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player insideZoneId="2240123" />
+				<target race="HUMANOID" />
+			</and>
+		</conditions>
+	</skill>
+	<skill id="2241" levels="1" name="Hot Spring Mineral Water">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>300</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8031</itemConsumeId> <!-- Hot Spring Mineral Water -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player insideZoneId="2240123" />
+				<target race="HUMANOID" />
+			</and>
+		</conditions>
+	</skill>
+	<skill id="2242" levels="1" name="Hot Spring Fountain Water">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>300</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8032</itemConsumeId> <!-- Hot Spring Water -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player insideZoneId="2240123" />
+				<target race="HUMANOID" />
+			</and>
+		</conditions>
+	</skill>
+	<skill id="2243" levels="1" name="Hot Spring Sulfur">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>300</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8033</itemConsumeId> <!-- Hot Spring Sulfur -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player insideZoneId="2240123" />
+				<target race="HUMANOID" />
+			</and>
+		</conditions>
+	</skill>
+	<skill id="2244" levels="1" name="Herb of Life">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<isRecoveryHerb>true</isRecoveryHerb>
+		<magicLevel>40</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="Heal">
+				<power>60</power>
+			</effect>
+			<effect name="HealPercent">
+				<power>17</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2245" levels="1" name="Herb of Mana">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<isRecoveryHerb>true</isRecoveryHerb>
+		<magicLevel>40</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="ManaHeal">
+				<power>20</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>4</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2246" levels="1" name="Herb of Power">
+		<!-- Herb increases P. Atk. -->
+		<icon>icon.etc_herb_red_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PA_UP_HERB</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">
+					<value>1.25</value>
+					<using kind="FIST,SWORD,DAGGER,DUALDAGGER,DUALFIST,DUAL,BLUNT,ETC" />
+				</mul>
+				<mul stat="pAtk">
+					<value>1.15</value>
+					<using kind="BOW,POLE" />
+				</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2247" levels="1" name="Herb of Magic">
+		<!-- Herb increases M. Atk. -->
+		<icon>icon.etc_herb_blue_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MA_UP_HERB</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtk">1.75</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2248" levels="1" name="Bless of Fire">
+		<!-- Causes normal physical attacks to become fire attacks. -->
+		<icon>icon.etc_fire_crystal_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>HOLY_ATTACK</abnormalType>
+		<element>0</element> <!-- Fire -->
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7906</itemConsumeId> <!-- Blessing of Fire -->
+		<magicLevel>25</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="firePower">20</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2249" levels="1" name="Bless of Water">
+		<!-- Causes normal physical attacks to become water attacks. -->
+		<icon>icon.etc_water_crystal_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>HOLY_ATTACK</abnormalType>
+		<element>1</element> <!-- Water -->
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7907</itemConsumeId> <!-- Blessing of Water -->
+		<magicLevel>25</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="waterPower">20</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2250" levels="1" name="Bless of Wind">
+		<!-- Causes normal physical attacks to become wind attacks. -->
+		<icon>icon.etc_wind_crystal_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>HOLY_ATTACK</abnormalType>
+		<element>2</element> <!-- Wind -->
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7908</itemConsumeId> <!-- Blessing of Wind -->
+		<magicLevel>25</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="windPower">20</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2251" levels="1" name="Bless of Earth">
+		<!-- Causes normal physical attacks to become earth attacks. -->
+		<icon>icon.etc_earth_crystal_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>HOLY_ATTACK</abnormalType>
+		<element>3</element> <!-- Earth -->
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7909</itemConsumeId> <!-- Blessing of Earth -->
+		<magicLevel>25</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="earthPower">20</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2252" levels="1" name="Bless of Darkness">
+		<!-- Causes normal physical attacks to become dark attacks. -->
+		<icon>icon.etc_unholy_crystal_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>HOLY_ATTACK</abnormalType>
+		<element>5</element> <!-- Dark -->
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7910</itemConsumeId> <!-- Blessing of Darkness -->
+		<magicLevel>25</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="darkPower">20</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2253" levels="1" name="Bless of Sacredness">
+		<!-- Causes normal physical attacks to become sacred attacks. -->
+		<icon>icon.etc_holy_crystal_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>HOLY_ATTACK</abnormalType>
+		<element>4</element> <!-- Holy -->
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7911</itemConsumeId> <!-- Blessing of Sanctity -->
+		<magicLevel>25</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="holyPower">20</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2254" levels="3" name="Crystal of Fire">
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7912</itemConsumeId> <!-- Fire Crystal -->
+		<magicLevel>20</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="2255" levels="3" name="Crystal of Water">
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7913</itemConsumeId> <!-- Water Crystal -->
+		<magicLevel>20</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="2256" levels="3" name="Crystal of Wind">
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7914</itemConsumeId> <!-- Wind Crystal -->
+		<magicLevel>20</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="2257" levels="3" name="Crystal of Earth">
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7915</itemConsumeId> <!-- Earth Crystal -->
+		<magicLevel>20</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="2258" levels="3" name="Crystal of Darkness">
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7916</itemConsumeId> <!-- Dark Crystal -->
+		<magicLevel>20</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="2259" levels="3" name="Crystal of Sacredness">
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>7917</itemConsumeId> <!-- Sanctity Crystal -->
+		<magicLevel>20</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="2260" levels="1" name="Key of Riddles">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8058</itemConsumeId> <!-- Lockup Research Report -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="8059" count="1" /> <!-- Research Report -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2261" levels="9" name="Item - Hard Green Fish">
+		<table name="#itemConsumeId">8403 8404 8405 8406 8407 8408 8409 8410 8411</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="11.04">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="18.4">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="27.6">
+							<item id="8353" count="2" /> <!-- Green Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="11.28">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="18.8">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="28.2">
+							<item id="8353" count="2" /> <!-- Green Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="12.24">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="20.4">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="30.6">
+							<item id="8353" count="2" /> <!-- Green Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="13.36">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="22.2666">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="16.7">
+							<item id="8353" count="4" /> <!-- Green Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="14.96">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="24.9332">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="18.7">
+							<item id="8353" count="4" /> <!-- Green Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="16.64">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="27.7332">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="20.8">
+							<item id="8353" count="4" /> <!-- Green Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="18">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="30">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="22.5">
+							<item id="8353" count="4" /> <!-- Green Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="19.84">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="33.0666">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="24.8">
+							<item id="8353" count="4" /> <!-- Green Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="16.96">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="17.6667">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="26.5">
+							<item id="8353" count="4" /> <!-- Green Colored Fish Scale -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2262" levels="9" name="Item - Hard Jade Fish">
+		<table name="#itemConsumeId">8412 8413 8414 8415 8416 8417 8418 8419 8420</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="22.8">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="28.5">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="19">
+							<item id="8359" count="4" /> <!-- Jade Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="18.88">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="29.5">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="19.6666">
+							<item id="8359" count="4" /> <!-- Jade Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="19.84">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="31">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="20.6666">
+							<item id="8359" count="4" /> <!-- Jade Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="20.8">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="32.5">
+							<item id="6911" count="2" /> <!-- Fish Scale -->
+						</item>
+						<item chance="21.6666">
+							<item id="8359" count="4" /> <!-- Jade Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="21.76">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="17">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="22.6666">
+							<item id="8359" count="4" /> <!-- Jade Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="22.72">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="17.75">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="23.6666">
+							<item id="8359" count="4" /> <!-- Jade Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="23.36">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="18.25">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="24.3333">
+							<item id="8359" count="4" /> <!-- Jade Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="24">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="18.75">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="24.9999">
+							<item id="8359" count="4" /> <!-- Jade Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="24.64">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="19.25">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="25.6666">
+							<item id="8359" count="4" /> <!-- Jade Colored Fish Scale -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2263" levels="9" name="Item - Hard Blue Fish">
+		<table name="#itemConsumeId">8421 8422 8423 8424 8425 8426 8427 8428 8429</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="25.28">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="19.75">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="17.5556">
+							<item id="8355" count="4" /> <!-- Blue Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="25.6">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="20">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="17.7778">
+							<item id="8355" count="4" /> <!-- Blue Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="26.24">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="20.5">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="18.2223">
+							<item id="8355" count="4" /> <!-- Blue Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="26.56">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="20.75">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="18.4445">
+							<item id="8355" count="4" /> <!-- Blue Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="26.752">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="20.9">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="18.5778">
+							<item id="8355" count="4" /> <!-- Blue Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="26.88">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="21">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="18.6667">
+							<item id="8355" count="4" /> <!-- Blue Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="27.2">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="21.25">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="18.8889">
+							<item id="8355" count="4" /> <!-- Blue Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="27.584">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="21.55">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="19.1556">
+							<item id="8355" count="4" /> <!-- Blue Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="27.84">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="21.75">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="19.3334">
+							<item id="8355" count="4" /> <!-- Blue Colored Fish Scale -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2264" levels="9" name="Item - Hard Yellow Fish">
+		<table name="#itemConsumeId">8430 8431 8432 8433 8434 8435 8436 8437 8438</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="28.288">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="29.4666">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="22.1">
+							<item id="8354" count="2" /> <!-- Yellow Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="28.608">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="29.7998">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="22.35">
+							<item id="8354" count="2" /> <!-- Yellow Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="28.928">
+							<item id="6913" count="1" /> <!-- Fish Gem -->
+						</item>
+						<item chance="30.1332">
+							<item id="6911" count="4" /> <!-- Fish Scale -->
+						</item>
+						<item chance="22.6">
+							<item id="8354" count="2" /> <!-- Yellow Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="17.28">
+							<item id="6913" count="2" /> <!-- Fish Gem -->
+						</item>
+						<item chance="17.9999">
+							<item id="6911" count="8" /> <!-- Fish Scale -->
+						</item>
+						<item chance="27">
+							<item id="8354" count="2" /> <!-- Yellow Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="17.696">
+							<item id="6913" count="2" /> <!-- Fish Gem -->
+						</item>
+						<item chance="18.4333">
+							<item id="6911" count="8" /> <!-- Fish Scale -->
+						</item>
+						<item chance="27.65">
+							<item id="8354" count="2" /> <!-- Yellow Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="18.176">
+							<item id="6913" count="2" /> <!-- Fish Gem -->
+						</item>
+						<item chance="18.9333">
+							<item id="6911" count="8" /> <!-- Fish Scale -->
+						</item>
+						<item chance="28.4">
+							<item id="8354" count="2" /> <!-- Yellow Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="18.56">
+							<item id="6913" count="2" /> <!-- Fish Gem -->
+						</item>
+						<item chance="19.3333">
+							<item id="6911" count="8" /> <!-- Fish Scale -->
+						</item>
+						<item chance="29">
+							<item id="8354" count="2" /> <!-- Yellow Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="19.008">
+							<item id="6913" count="2" /> <!-- Fish Gem -->
+						</item>
+						<item chance="19.7999">
+							<item id="6911" count="8" /> <!-- Fish Scale -->
+						</item>
+						<item chance="29.7">
+							<item id="8354" count="2" /> <!-- Yellow Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="19.456">
+							<item id="6913" count="2" /> <!-- Fish Gem -->
+						</item>
+						<item chance="20.2666">
+							<item id="6911" count="8" /> <!-- Fish Scale -->
+						</item>
+						<item chance="30.4">
+							<item id="8354" count="2" /> <!-- Yellow Colored Fish Scale -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2265" levels="9" name="Item - Hard Orange Fish">
+		<table name="#itemConsumeId">8439 8440 8441 8442 8443 8444 8445 8446 8447</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="24.88">
+							<item id="6913" count="2" /> <!-- Fish Gem -->
+						</item>
+						<item chance="20.7333">
+							<item id="6911" count="8" /> <!-- Fish Scale -->
+						</item>
+						<item chance="19.904">
+							<item id="8357" count="2" /> <!-- Orange Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="25.4">
+							<item id="6913" count="2" /> <!-- Fish Gem -->
+						</item>
+						<item chance="21.1666">
+							<item id="6911" count="8" /> <!-- Fish Scale -->
+						</item>
+						<item chance="20.32">
+							<item id="8357" count="2" /> <!-- Orange Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="25.96">
+							<item id="6913" count="2" /> <!-- Fish Gem -->
+						</item>
+						<item chance="21.6333">
+							<item id="6911" count="8" /> <!-- Fish Scale -->
+						</item>
+						<item chance="20.768">
+							<item id="8357" count="2" /> <!-- Orange Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="21.216">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="22.1">
+							<item id="6912" count="4" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="17.68">
+							<item id="8357" count="4" /> <!-- Orange Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="18.624">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="19.4">
+							<item id="6912" count="4" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="4.656">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="15.5201">
+							<item id="8357" count="4" /> <!-- Orange Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="19.008">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="19.8">
+							<item id="6912" count="4" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="4.752">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="15.8401">
+							<item id="8357" count="4" /> <!-- Orange Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="26.112">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="27.2">
+							<item id="6912" count="4" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="21.76">
+							<item id="8357" count="4" /> <!-- Orange Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="20.16">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="21">
+							<item id="6912" count="4" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="5.04">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="16.8001">
+							<item id="8357" count="4" /> <!-- Orange Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="20.592">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="21.45">
+							<item id="6912" count="4" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="5.148">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="17.1601">
+							<item id="8357" count="4" /> <!-- Orange Colored Fish Scale -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2266" levels="9" name="Item - Hard Violet Fish">
+		<table name="#itemConsumeId">8448 8449 8450 8451 8452 8453 8454 8455 8456</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="28">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="19.4445">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="29.1666">
+							<item id="8358" count="2" /> <!-- Purple Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="21.432">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="14.8833">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="5.358">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="22.325">
+							<item id="8358" count="2" /> <!-- Purple Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="21.84">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="15.1667">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="5.46">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="22.75">
+							<item id="8358" count="2" /> <!-- Purple Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="29.76">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="20.6667">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="31">
+							<item id="8358" count="2" /> <!-- Purple Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="22.752">
+							<item id="6914" count="1" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="15.8">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="5.688">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="23.7">
+							<item id="8358" count="2" /> <!-- Purple Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="13.08">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="18.1667">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="6.54">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="13.625">
+							<item id="8358" count="4" /> <!-- Purple Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="17.776">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="16.4592">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="18.5167">
+							<item id="8358" count="4" /> <!-- Purple Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="13.596">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="18.8833">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="6.798">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="14.1625">
+							<item id="8358" count="4" /> <!-- Purple Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="13.884">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="19.2833">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="6.942">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="14.4625">
+							<item id="8358" count="4" /> <!-- Purple Colored Fish Scale -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2267" levels="9" name="Item - Hard Red Fish">
+		<table name="#itemConsumeId">8457 8458 8459 8460 8461 8462 8463 8464 8465</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="20.432">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="18.9184">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="18.2428">
+							<item id="8352" count="4" /> <!-- Red Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="15.612">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="14.4556">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="7.806">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="13.9393">
+							<item id="8352" count="4" /> <!-- Red Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="15.912">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="14.7332">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="7.956">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="14.2072">
+							<item id="8352" count="4" /> <!-- Red Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="16.212">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="22.5166">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="2.0265">
+							<item id="8373" count="1" /> <!-- Party Hat Fabric -->
+						</item>
+						<item chance="14.475">
+							<item id="8352" count="4" /> <!-- Red Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="13.2096">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="18.3466">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="6.6048">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="1.6512">
+							<item id="8374" count="1" /> <!-- Feathered Hat Fabric -->
+						</item>
+						<item chance="11.7942">
+							<item id="8352" count="4" /> <!-- Red Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="13.4592">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="18.6933">
+							<item id="6912" count="8" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="6.7296">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="1.6824">
+							<item id="8375" count="1" /> <!-- Artisan's Goggles Fabric -->
+						</item>
+						<item chance="12.0171">
+							<item id="8352" count="4" /> <!-- Red Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="18.924">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="17.5224">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="2.3655">
+							<item id="8373" count="1" /> <!-- Party Hat Fabric -->
+						</item>
+						<item chance="16.8964">
+							<item id="8352" count="4" /> <!-- Red Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="15.4368">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="14.2932">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="7.7184">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="1.9296">
+							<item id="8374" count="1" /> <!-- Feathered Hat Fabric -->
+						</item>
+						<item chance="13.7828">
+							<item id="8352" count="4" /> <!-- Red Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="16.464">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="15.2444">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="8.232">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="2.058">
+							<item id="8375" count="1" /> <!-- Artisan's Goggles Fabric -->
+						</item>
+						<item chance="14.6999">
+							<item id="8352" count="4" /> <!-- Red Colored Fish Scale -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2268" levels="9" name="Item - Hard White Fish">
+		<table name="#itemConsumeId">8466 8467 8468 8469 8470 8471 8472 8473 8474</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="20.964">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="19.4112">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="2.6205">
+							<item id="8373" count="1" /> <!-- Party Hat Fabric -->
+						</item>
+						<item chance="16.3781">
+							<item id="8356" count="4" /> <!-- White Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="17.0976">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="15.8312">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="8.5488">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="2.1372">
+							<item id="8374" count="1" /> <!-- Feathered Hat Fabric -->
+						</item>
+						<item chance="13.3575">
+							<item id="8356" count="4" /> <!-- White Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="17.4144">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="16.1244">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="8.7072">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="2.1768">
+							<item id="8375" count="1" /> <!-- Artisan's Goggles Fabric -->
+						</item>
+						<item chance="13.605">
+							<item id="8356" count="4" /> <!-- White Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="22.188">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="20.5444">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="2.7735">
+							<item id="8373" count="1" /> <!-- Party Hat Fabric -->
+						</item>
+						<item chance="17.3344">
+							<item id="8356" count="4" /> <!-- White Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="18.1152">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="16.7732">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="9.0576">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="2.2644">
+							<item id="8374" count="1" /> <!-- Feathered Hat Fabric -->
+						</item>
+						<item chance="14.1525">
+							<item id="8356" count="4" /> <!-- White Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="18.4608">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="17.0932">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="9.2304">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="2.3076">
+							<item id="8375" count="1" /> <!-- Artisan's Goggles Fabric -->
+						</item>
+						<item chance="14.4225">
+							<item id="8356" count="4" /> <!-- White Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="23.532">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="21.7888">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="2.9415">
+							<item id="8373" count="1" /> <!-- Party Hat Fabric -->
+						</item>
+						<item chance="18.3844">
+							<item id="8356" count="4" /> <!-- White Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="19.2">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="17.778">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="9.6">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="2.4">
+							<item id="8374" count="1" /> <!-- Feathered Hat Fabric -->
+						</item>
+						<item chance="15">
+							<item id="8356" count="4" /> <!-- White Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="19.5744">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="18.1244">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="9.7872">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="2.4468">
+							<item id="8375" count="1" /> <!-- Artisan's Goggles Fabric -->
+						</item>
+						<item chance="15.2925">
+							<item id="8356" count="4" /> <!-- White Colored Fish Scale -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2269" levels="9" name="Item - Hard Black Fish">
+		<table name="#itemConsumeId">8475 8476 8477 8478 8479 8480 8481 8482 8483</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="24.972">
+							<item id="6914" count="2" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="23.1224">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="3.1215">
+							<item id="8373" count="1" /> <!-- Party Hat Fabric -->
+						</item>
+						<item chance="17.3416">
+							<item id="8351" count="4" /> <!-- Black Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="10.1904">
+							<item id="6914" count="4" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="18.8712">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="10.1904">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="2.5476">
+							<item id="8374" count="1" /> <!-- Feathered Hat Fabric -->
+						</item>
+						<item chance="14.1534">
+							<item id="8351" count="4" /> <!-- Black Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="10.3968">
+							<item id="6914" count="4" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="19.2532">
+							<item id="6912" count="9" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="10.3968">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="2.5992">
+							<item id="8375" count="1" /> <!-- Artisan's Goggles Fabric -->
+						</item>
+						<item chance="14.44">
+							<item id="8351" count="4" /> <!-- Black Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="13.854">
+							<item id="6914" count="4" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="12.8278">
+							<item id="6912" count="18" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="3.4635">
+							<item id="8373" count="1" /> <!-- Party Hat Fabric -->
+						</item>
+						<item chance="19.2417">
+							<item id="8351" count="4" /> <!-- Black Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="11.3136">
+							<item id="6914" count="4" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="10.4756">
+							<item id="6912" count="18" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="11.3136">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="2.8284">
+							<item id="8374" count="1" /> <!-- Feathered Hat Fabric -->
+						</item>
+						<item chance="15.7134">
+							<item id="8351" count="4" /> <!-- Black Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="11.5344">
+							<item id="6914" count="4" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="10.68">
+							<item id="6912" count="18" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="11.5344">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="2.8836">
+							<item id="8375" count="1" /> <!-- Artisan's Goggles Fabric -->
+						</item>
+						<item chance="16.0201">
+							<item id="8351" count="4" /> <!-- Black Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="14.712">
+							<item id="6914" count="4" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="13.6222">
+							<item id="6912" count="18" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="3.678">
+							<item id="8373" count="1" /> <!-- Party Hat Fabric -->
+						</item>
+						<item chance="20.4333">
+							<item id="8351" count="4" /> <!-- Black Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="8">
+						<item chance="12.0096">
+							<item id="6914" count="4" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="11.12">
+							<item id="6912" count="18" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="12.0096">
+							<item id="8377" count="1" /> <!-- Little Angel Wings Piece -->
+						</item>
+						<item chance="3.0024">
+							<item id="8374" count="1" /> <!-- Feathered Hat Fabric -->
+						</item>
+						<item chance="16.6801">
+							<item id="8351" count="4" /> <!-- Black Colored Fish Scale -->
+						</item>
+					</value>
+					<value level="9">
+						<item chance="12.2496">
+							<item id="6914" count="4" /> <!-- Shiny Fish Gem -->
+						</item>
+						<item chance="11.3422">
+							<item id="6912" count="18" /> <!-- Shiny Fish Scale -->
+						</item>
+						<item chance="12.2496">
+							<item id="8378" count="1" /> <!-- Fairy Antennae Piece -->
+						</item>
+						<item chance="3.0624">
+							<item id="8375" count="1" /> <!-- Artisan's Goggles Fabric -->
+						</item>
+						<item chance="9.722">
+							<item id="8351" count="7" /> <!-- Black Colored Fish Scale -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2270" levels="7" name="Item - Adventurer Box">
+		<table name="#itemConsumeId">8534 8535 8536 8537 8538 8539 8540</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="14.1723">
+							<item id="853" count="1" /> <!-- Earring of Protection -->
+						</item>
+						<item chance="21.3675">
+							<item id="884" count="1" /> <!-- Ring of Protection -->
+						</item>
+						<item chance="10.6428">
+							<item id="916" count="1" /> <!-- Necklace of Protection -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="14.1242">
+							<item id="854" count="1" /> <!-- Earring of Binding -->
+						</item>
+						<item chance="21.2585">
+							<item id="885" count="1" /> <!-- Ring of Ages -->
+						</item>
+						<item chance="10.6022">
+							<item id="917" count="1" /> <!-- Necklace of Mermaid -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="9.8328">
+							<item id="119" count="1" /> <!-- Necklace of Binding -->
+						</item>
+						<item chance="13.1027">
+							<item id="855" count="1" /> <!-- Nassen's Earring -->
+						</item>
+						<item chance="19.7005">
+							<item id="886" count="1" /> <!-- Ring of Binding -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="13.7513">
+							<item id="856" count="1" /> <!-- Adamantite Earring -->
+						</item>
+						<item chance="20.6270">
+							<item id="887" count="1" /> <!-- Adamantite Ring -->
+						</item>
+						<item chance="10.3135">
+							<item id="918" count="1" /> <!-- Adamantite Necklace -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="12.0250">
+							<item id="864" count="1" /> <!-- Earring of Black Ore -->
+						</item>
+						<item chance="18.0375">
+							<item id="895" count="1" /> <!-- Ring of Black Ore -->
+						</item>
+						<item chance="9.0334">
+							<item id="926" count="1" /> <!-- Necklace of Black Ore -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="22.2222">
+							<item id="8177" count="1" /> <!-- Raid Challenger's Circlet -->
+						</item>
+						<item chance="18.5185">
+							<item id="8178" count="1" /> <!-- Raid Adventurer's Circlet -->
+						</item>
+						<item chance="15.8730">
+							<item id="8179" count="1" /> <!-- Raid Master's Circlet -->
+						</item>
+					</value>
+					<value level="7">
+						<item chance="16.6666">
+							<item id="8175" count="1" /> <!-- Cradle of Creation -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2271" levels="1" name="Item - Hot Spring Fish">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="85">
+						<item id="8034" count="3" /> <!-- Rainbow Springs Clan Hall War Decree -->
+					</item>
+					<item chance="4">
+						<item id="2134" count="3" /> <!-- Gemstone S -->
+					</item>
+					<item chance="11">
+						<item id="2133" count="7" /> <!-- Gemstone A -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2272" levels="1" name="Item - Fight Song Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="2273" levels="1" name="Item - Red Devil Support Box">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25">
+						<item id="8552" count="1" /> <!-- Mask of Spirits -->
+					</item>
+					<item chance="25">
+						<item id="8187" count="1" /> <!-- Demon Horns -->
+					</item>
+					<item chance="25">
+						<item id="8555" count="5" /> <!-- Echo Crystal - Viva Victory Korea -->
+					</item>
+					<item chance="15">
+						<item id="6406" count="10" /> <!-- Firework -->
+					</item>
+					<item chance="9.991">
+						<item id="6407" count="5" /> <!-- Large Firework -->
+					</item>
+					<item chance="0.002">
+						<item id="5577" count="1" /> <!-- Red Soul Crystal - Stage 11 -->
+					</item>
+					<item chance="0.002">
+						<item id="5578" count="1" /> <!-- Green Soul Crystal - Stage 11 -->
+					</item>
+					<item chance="0.002">
+						<item id="5579" count="1" /> <!-- Blue Soul Crystal - Stage 11 -->
+					</item>
+					<item chance="0.001">
+						<item id="5580" count="1" /> <!-- Red Soul Crystal - Stage 12 -->
+					</item>
+					<item chance="0.001">
+						<item id="5581" count="1" /> <!-- Green Soul Crystal - Stage 12 -->
+					</item>
+					<item chance="0.001">
+						<item id="5582" count="1" /> <!-- Blue Soul Crystal - Stage 12 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2274" levels="8" name="Fisherman's Potion – Green">
+		<!-- Level 1: Fisherman's Potion – Green. Fishing Mastery Level is now reduced.You can now catch green fish. -->
+		<!-- Level 2: Fisherman's Potion – Jade. Fishing Mastery Level is now reduced. You can now catch jade fish. -->
+		<!-- Level 3: Fisherman's Potion – Blue. Fishing Mastery Level is now reduced. You can now catch blue fish. -->
+		<!-- Level 4: Fisherman's Potion – Yellow. Fishing Mastery Level is now reduced. You can now catch yellow fish. -->
+		<!-- Level 5: Fisherman's Potion – Orange. Fishing Mastery Level is now reduced. You can now catch orange fish. -->
+		<!-- Level 6: Fisherman's Potion – Purple. Fishing Mastery Level is now reduced. You can now catch purple fish. -->
+		<!-- Level 7: Fisherman's Potion – Red. Fishing Mastery Level is now reduced. You can now catch red fish. -->
+		<!-- Level 8: Fisherman's Potion – White. Fishing Mastery Level is now reduced. You can now catch white fish. -->
+		<table name="#active_skill_id_lvl">1315,4 1315,7 1315,10 1315,13 1315,16 1315,19 1315,22 1315,25</table>
+		<table name="#icons">icon.etc_oblivion_green_i00 icon.etc_oblivion_jade_i00 icon.etc_oblivion_blue_i00 icon.etc_oblivion_yellow_i00 icon.etc_oblivion_orange_i00 icon.etc_oblivion_violet_i00 icon.etc_oblivion_red_i00 icon.etc_oblivion_white_i00</table>
+		<table name="#power">2 5 8 11 14 17 20 23</table>
+		<icon>#icons</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>FISHING_MASTERY_DOWN</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<power>#power</power>
+		<conditions msgId="113" addName="1">
+			<player active_skill_id_lvl="#active_skill_id_lvl" />
+		</conditions>
+		<effects>
+			<effect name="ChangeFishingMastery" />
+		</effects>
+	</skill>
+	<skill id="2275" levels="1" name="Fisherman's Recovery Potion">
+		<icon>icon.etc_oblivion_black_i00</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>FISHING_MASTERY_DOWN,1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2276" levels="1" name="Dewdrop of Destruction">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8556</itemConsumeId> <!-- Dewdrop of Destruction -->
+		<magicLevel>80</magicLevel>
+		<conditions msgId="113" addName="1">
+			<player insideZoneId="2276" />
+		</conditions>
+	</skill>
+	<skill id="2277" levels="6" name="Event Gift Box">
+		<table name="#itemConsumeId">8570 8571 8572 8573 8574 8575</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="50">
+							<item id="1539" count="10" /> <!-- Greater Healing Potion -->
+							<item id="8592" count="1" /> <!-- Weapon Exchange Coupon - No Grade -->
+						</item>
+						<item chance="50">
+							<item id="1539" count="10" /> <!-- Greater Healing Potion -->
+							<item id="8592" count="1" /> <!-- Weapon Exchange Coupon - No Grade -->
+						</item>
+					</value>
+					<value level="2">
+						<item chance="50">
+							<item id="1539" count="10" /> <!-- Greater Healing Potion -->
+							<item id="8593" count="1" /> <!-- Weapon Exchange Coupon - D Grade -->
+						</item>
+						<item chance="50">
+							<item id="1539" count="10" /> <!-- Greater Healing Potion -->
+							<item id="8593" count="1" /> <!-- Weapon Exchange Coupon - D Grade -->
+						</item>
+					</value>
+					<value level="3">
+						<item chance="87.00">
+							<item id="1539" count="20" /> <!-- Greater Healing Potion -->
+						</item>
+						<item chance="7.0">
+							<item id="952" count="1" /> <!-- Scroll: Enchant Armor (Grade C) -->
+						</item>
+						<item chance="2.05">
+							<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+						</item>
+						<item chance="2.00">
+							<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
+						</item>
+						<item chance="1.05">
+							<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
+						</item>
+						<item chance="0.3">
+							<item id="4637" count="1" /> <!-- Red Soul Crystal - Stage 8 -->
+						</item>
+						<item chance="0.3">
+							<item id="4659" count="1" /> <!-- Blue Soul Crystal - Stage 8 -->
+						</item>
+						<item chance="0.3">
+							<item id="4648" count="1" /> <!-- Green Soul Crystal - Stage 8 -->
+						</item>
+					</value>
+					<value level="4">
+						<item chance="90.70">
+							<item id="1539" count="20" /> <!-- Greater Healing Potion -->
+						</item>
+						<item chance="4.0">
+							<item id="948" count="1" /> <!-- Scroll: Enchant Armor (Grade B) -->
+						</item>
+						<item chance="1.5">
+							<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+						</item>
+						<item chance="2.00">
+							<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
+						</item>
+						<item chance="1.05">
+							<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
+						</item>
+						<item chance="0.25">
+							<item id="4638" count="1" /> <!-- Red Soul Crystal - Stage 9 -->
+						</item>
+						<item chance="0.25">
+							<item id="4660" count="1" /> <!-- Blue Soul Crystal - Stage 9 -->
+						</item>
+						<item chance="0.25">
+							<item id="4649" count="1" /> <!-- Green Soul Crystal - Stage 9 -->
+						</item>
+					</value>
+					<value level="5">
+						<item chance="93.00">
+							<item id="1539" count="20" /> <!-- Greater Healing Potion -->
+						</item>
+						<item chance="2.0">
+							<item id="730" count="1" /> <!-- Scroll: Enchant Armor (Grade A) -->
+						</item>
+						<item chance="0.50">
+							<item id="729" count="1" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+						</item>
+						<item chance="3.00">
+							<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
+						</item>
+						<item chance="1.41">
+							<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
+						</item>
+						<item chance="0.03">
+							<item id="4639" count="1" /> <!-- Red Soul Crystal - Stage 10 -->
+						</item>
+						<item chance="0.03">
+							<item id="4650" count="1" /> <!-- Green Soul Crystal - Stage 10 -->
+						</item>
+						<item chance="0.03">
+							<item id="4661" count="1" /> <!-- Blue Soul Crystal - Stage 10 -->
+						</item>
+					</value>
+					<value level="6">
+						<item chance="93.00">
+							<item id="1539" count="20" /> <!-- Greater Healing Potion -->
+						</item>
+						<item chance="2.0">
+							<item id="730" count="1" /> <!-- Scroll: Enchant Armor (Grade A) -->
+						</item>
+						<item chance="0.50">
+							<item id="729" count="1" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+						</item>
+						<item chance="3.00">
+							<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
+						</item>
+						<item chance="1.41">
+							<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
+						</item>
+						<item chance="0.03">
+							<item id="4639" count="1" /> <!-- Red Soul Crystal - Stage 10 -->
+						</item>
+						<item chance="0.03">
+							<item id="4650" count="1" /> <!-- Green Soul Crystal - Stage 10 -->
+						</item>
+						<item chance="0.03">
+							<item id="4661" count="1" /> <!-- Blue Soul Crystal - Stage 10 -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2278" levels="3" name="Superior Herb of Life">
+		<table name="#amount">15 25 100</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<isRecoveryHerb>true</isRecoveryHerb>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="HealPercent">
+				<power>#amount</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2279" levels="3" name="Superior Herb of Mana">
+		<table name="#amount">11 18 100</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<isRecoveryHerb>true</isRecoveryHerb>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="ManaHealPercent">
+				<power>#amount</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2280" levels="1" name="Herb of Power">
+		<!-- Temporarily increases P. Atk. Effect 3. -->
+		<icon>icon.etc_herb_red_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">1.15</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2281" levels="1" name="Herb of Magic">
+		<!-- Temporarily increases M. Atk. Effect 3. -->
+		<icon>icon.etc_herb_blue_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>52</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtk">1.75</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2282" levels="1" name="Herb of Atk. Spd.">
+		<!-- Temporarily increases Atk. Spd. Effect 2. -->
+		<icon>icon.etc_attack_sp_herb_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>52</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.33</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2283" levels="1" name="Herb of Casting Spd.">
+		<!-- Temporarily increases Casting Spd. Effect 3. -->
+		<icon>icon.etc_magic_sp_herb_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>48</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2284" levels="1" name="Herb of Critical Attack">
+		<!-- Temporarily increases critical attack rate. Effect 3. -->
+		<icon>icon.etc_critical_herb_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>52</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRate">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2285" levels="1" name="Herb of Speed">
+		<!-- Temporarily increases Speed. Effect 2. -->
+		<icon>icon.etc_move_herb_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>30</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">33</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2286" levels="6" name="Scroll: Recovery (Grade S)">
+		<table name="#levelRange">1;19 20;39 40;51 52;60 61;75 76;85</table>
+		<table name="#itemConsumeId">8594 8595 8596 8597 8598 8599</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>#itemConsumeId</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<simultaneousCast>true</simultaneousCast>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player chaotic="false" />
+				<player levelRange="#levelRange" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Recovery" />
+		</effects>
+	</skill>
+	<skill id="2287" levels="6" name="Elixir of Life (Grade S)">
+		<table name="#amount">250 650 1100 1500 1900 2300</table>
+		<table name="#levelRange">1;19 20;39 40;51 52;60 61;75 76;85</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>300000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<player levelRange="#levelRange" />
+		</conditions>
+		<effects>
+			<effect name="Heal">
+				<power>#amount</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2288" levels="6" name="Elixir of Mental Strength (Grade S)">
+		<table name="#amount">60 140 220 290 360 420</table>
+		<table name="#levelRange">1;19 20;39 40;51 52;60 61;75 76;85</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>300000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<player levelRange="#levelRange" />
+		</conditions>
+		<effects>
+			<effect name="ManaHeal">
+				<power>#amount</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2289" levels="6" name="Elixir of CP (Grade S)">
+		<table name="#amount">150 350 600 800 1000 1200</table>
+		<table name="#levelRange">1;19 20;39 40;51 52;60 61;75 76;85</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>300000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<player levelRange="#levelRange" />
+		</conditions>
+		<effects>
+			<effect name="CpHeal">
+				<power>#amount</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2290" levels="1" name="Coffer of Shadows">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<conditions msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="15">
+						<item id="8661" count="1" /> <!-- Mask of Spirits -->
+					</item>
+					<item chance="15">
+						<item id="8660" count="1" /> <!-- Demon Horns -->
+					</item>
+					<item chance="30">
+						<item id="5234" count="3" /> <!-- Mystery Potion -->
+					</item>
+					<item chance="20">
+						<item id="6406" count="10" /> <!-- Firework -->
+					</item>
+					<item chance="19.991">
+						<item id="6407" count="5" /> <!-- Large Firework -->
+					</item>
+					<item chance="0.002">
+						<item id="5577" count="1" /> <!-- Red Soul Crystal - Stage 11 -->
+					</item>
+					<item chance="0.002">
+						<item id="5578" count="1" /> <!-- Green Soul Crystal - Stage 11 -->
+					</item>
+					<item chance="0.002">
+						<item id="5579" count="1" /> <!-- Blue Soul Crystal - Stage 11 -->
+					</item>
+					<item chance="0.001">
+						<item id="5580" count="1" /> <!-- Red Soul Crystal - Stage 12 -->
+					</item>
+					<item chance="0.001">
+						<item id="5581" count="1" /> <!-- Green Soul Crystal - Stage 12 -->
+					</item>
+					<item chance="0.001">
+						<item id="5582" count="1" /> <!-- Blue Soul Crystal - Stage 12 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2291" levels="1" name="Facelifting Potion">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8664</itemConsumeId> <!-- Masking Oil -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ChangeFace" />
+		</effects>
+	</skill>
+	<skill id="2292" levels="1" name="Facelifting Potion">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8665</itemConsumeId> <!-- Masking Oil -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ChangeFace">
+				<value>1</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2293" levels="1" name="Facelifting Potion">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8666</itemConsumeId> <!-- Masking Oil -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ChangeFace">
+				<value>2</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2294" levels="1" name="Dye Potion">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8667</itemConsumeId> <!-- Chameleon Oil -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ChangeHairColor" />
+		</effects>
+	</skill>
+	<skill id="2295" levels="1" name="Dye Potion">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8668</itemConsumeId> <!-- Chameleon Oil -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ChangeHairColor">
+				<value>1</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2296" levels="1" name="Dye Potion">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8669</itemConsumeId> <!-- Chameleon Oil -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ChangeHairColor">
+				<value>2</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2297" levels="1" name="Dye Potion">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8670</itemConsumeId> <!-- Chameleon Oil -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ChangeHairColor">
+				<value>3</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="2298" levels="1" name="Hair Style Change Potion">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8671</itemConsumeId> <!-- Luxury Oil -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ChangeHairStyle" />
+		</effects>
+	</skill>
+	<skill id="2299" levels="1" name="Hair Style Change Potion">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8672</itemConsumeId> <!-- Luxury Oil -->
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ChangeHairStyle">
+				<value>1</value>
+			</effect>
+		</effects>
+	</skill>
+</list>

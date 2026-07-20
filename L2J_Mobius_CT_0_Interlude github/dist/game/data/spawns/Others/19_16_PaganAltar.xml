@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<!-- Pagan Temple altar 3rd floor: stage controllers (Triol's Revelations 32058-32067). -->
+	<!-- Boss 29062 spawned via raidboss_spawnlist.sql; balcony royal guards already spawned in 19_16.xml. -->
+	<!-- AI handles balcony cleanup -> ritual cinematic + door swap. AltarGatekeepers spawned ephemerally by AI. -->
+	<spawn name="19_16_pagan_altar">
+		<npc id="32058" x="-20117" y="-52683" z="-10974" heading="0" respawnDelay="60" /> <!-- Triol's Revelation -->
+		<npc id="32059" x="-20137" y="-54371" z="-11170" heading="0" respawnDelay="60" /> <!-- Triol's Revelation -->
+		<npc id="32060" x="-12710" y="-52677" z="-10974" heading="0" respawnDelay="60" /> <!-- Triol's Revelation -->
+		<npc id="32061" x="-12660" y="-54379" z="-11170" heading="0" respawnDelay="60" /> <!-- Triol's Revelation -->
+		<npc id="32062" x="-17826" y="-53426" z="-11624" heading="0" respawnDelay="60" /> <!-- Triol's Revelation -->
+		<npc id="32063" x="-17068" y="-53440" z="-11624" heading="0" respawnDelay="60" /> <!-- Triol's Revelation -->
+		<npc id="32064" x="-16353" y="-53549" z="-11624" heading="0" respawnDelay="60" /> <!-- Triol's Revelation -->
+		<npc id="32065" x="-15655" y="-53869" z="-11624" heading="0" respawnDelay="60" /> <!-- Triol's Revelation -->
+		<npc id="32066" x="-15005" y="-53132" z="-11624" heading="0" respawnDelay="60" /> <!-- Triol's Revelation -->
+		<npc id="32067" x="-16316" y="-56842" z="-10900" heading="0" respawnDelay="60" /> <!-- Triol's Revelation -->
+	</spawn>
+</list>

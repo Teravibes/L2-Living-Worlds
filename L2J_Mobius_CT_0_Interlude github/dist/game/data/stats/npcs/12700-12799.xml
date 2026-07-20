@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="12774" level="1" type="Folk" name="Young Squash">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" />
+		<collision>
+			<radius normal="10" />
+			<height normal="10.5" />
+		</collision>
+	</npc>
+	<npc id="12775" level="1" type="Folk" name="High Quality Squash">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" />
+		<collision>
+			<radius normal="23" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="12776" level="1" type="Folk" name="Low Quality Squash">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" />
+		<collision>
+			<radius normal="15" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="12777" level="1" type="Folk" name="Large Young Squash">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" />
+		<collision>
+			<radius normal="23" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="12778" level="1" type="Folk" name="High Quality Large Squash">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" />
+		<collision>
+			<radius normal="34" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="12779" level="1" type="Folk" name="Low Quality Large Squash">
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" />
+		<collision>
+			<radius normal="28" />
+			<height normal="31" />
+		</collision>
+	</npc>
+	<npc id="12780" level="25" type="BabyPet" name="Baby Buffalo">
+		<parameters>
+			<skill name="Heal1" id="4717" level="1" /> <!-- Heal Trick -->
+			<skill name="Heal2" id="4718" level="1" /> <!-- Greater Heal Trick -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="460.96247" hpRegen="3.5" mp="259.2" mpRegen="1.5" />
+			<attack physical="64.83203" magical="44.27187" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="101.83533" magical="74.51868" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4717" level="1" /> <!-- Heal Trick -->
+			<skill id="4718" level="1" /> <!-- Greater Heal Trick -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<corpseTime>86400</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
+		<collision>
+			<radius normal="12" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="12781" level="25" type="BabyPet" name="Baby Kookaburra">
+		<parameters>
+			<skill name="Heal1" id="4717" level="1" /> <!-- Heal Trick -->
+			<skill name="Heal2" id="4718" level="1" /> <!-- Greater Heal Trick -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="460.96247" hpRegen="3.5" mp="259.2" mpRegen="1.5" />
+			<attack physical="64.83203" magical="44.27187" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="101.83533" magical="74.51868" />
+			<speed>
+				<walk ground="13" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4717" level="1" /> <!-- Heal Trick -->
+			<skill id="4718" level="1" /> <!-- Greater Heal Trick -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<corpseTime>86400</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
+		<collision>
+			<radius normal="7" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="12782" level="25" type="BabyPet" name="Baby Cougar">
+		<parameters>
+			<skill name="Heal1" id="4717" level="1" /> <!-- Heal Trick -->
+			<skill name="Heal2" id="4718" level="1" /> <!-- Greater Heal Trick -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="460.96247" hpRegen="3.5" mp="259.2" mpRegen="1.5" />
+			<attack physical="64.83203" magical="44.27187" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="101.83533" magical="74.51868" />
+			<speed>
+				<walk ground="28" />
+				<run ground="120" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4717" level="1" /> <!-- Heal Trick -->
+			<skill id="4718" level="1" /> <!-- Greater Heal Trick -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<corpseTime>86400</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
+		<collision>
+			<radius normal="11" />
+			<height normal="15.7" />
+		</collision>
+	</npc>
+</list>

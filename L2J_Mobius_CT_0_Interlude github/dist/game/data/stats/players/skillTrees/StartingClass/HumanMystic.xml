@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Human Mystic -->
+	<skillTree type="classSkillTree" classId="10">
+		<skill skillName="Lucky" skillId="194" skillLevel="1" getLevel="1" autoGet="true" />
+		<skill skillName="Spellcraft" skillId="163" skillLevel="1" getLevel="1" autoGet="true" />
+		<skill skillName="Magician's Movement" skillId="118" skillLevel="1" getLevel="1" autoGet="true" />
+		<skill skillName="Mana Recovery" skillId="214" skillLevel="1" getLevel="1" autoGet="true" />
+		<skill skillName="Common Craft" skillId="1322" skillLevel="1" getLevel="1" autoGet="true" />
+		<skill skillName="Wind Strike" skillId="1177" skillLevel="1" getLevel="1" autoGet="true" />
+		<skill skillName="Self Heal" skillId="1216" skillLevel="1" getLevel="1" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="1" getLevel="5" autoGet="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="1" getLevel="7" levelUpSp="470" learnedByNpc="true" />
+		<skill skillName="Armor Mastery" skillId="244" skillLevel="1" getLevel="7" levelUpSp="470" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="1" getLevel="7" levelUpSp="240" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="2" getLevel="7" levelUpSp="240" learnedByNpc="true" />
+		<skill skillName="Wind Strike" skillId="1177" skillLevel="2" getLevel="7" levelUpSp="240" learnedByNpc="true" />
+		<skill skillName="Wind Strike" skillId="1177" skillLevel="3" getLevel="7" levelUpSp="240" learnedByNpc="true" />
+		<skill skillName="Ice Bolt" skillId="1184" skillLevel="1" getLevel="7" levelUpSp="240" learnedByNpc="true">
+			<item id="1049" count="1" /> <!-- Spellbook: Ice Bolt -->
+		</skill>
+		<skill skillName="Ice Bolt" skillId="1184" skillLevel="2" getLevel="7" levelUpSp="240" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="1" getLevel="7" levelUpSp="160" learnedByNpc="true">
+			<item id="1152" count="1" /> <!-- Spellbook: Heal -->
+		</skill>
+		<skill skillName="Heal" skillId="1011" skillLevel="2" getLevel="7" levelUpSp="160" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="3" getLevel="7" levelUpSp="160" learnedByNpc="true" />
+		<skill skillName="Might" skillId="1068" skillLevel="1" getLevel="7" levelUpSp="470" learnedByNpc="true">
+			<item id="1048" count="1" /> <!-- Spellbook: Might -->
+		</skill>
+		<skill skillName="Shield" skillId="1040" skillLevel="1" getLevel="7" levelUpSp="470" learnedByNpc="true">
+			<item id="1058" count="1" /> <!-- Spellbook: Shield -->
+		</skill>
+		<skill skillName="Cure Poison" skillId="1012" skillLevel="1" getLevel="7" levelUpSp="470" learnedByNpc="true">
+			<item id="1053" count="1" /> <!-- Spellbook: Cure Poison -->
+		</skill>
+		<skill skillName="Curse: Poison" skillId="1168" skillLevel="1" getLevel="7" levelUpSp="470" learnedByNpc="true">
+			<item id="1055" count="1" /> <!-- Spellbook: Curse: Poison -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="2" getLevel="14" levelUpSp="2100" learnedByNpc="true" />
+		<skill skillName="Armor Mastery" skillId="244" skillLevel="2" getLevel="14" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Armor Mastery" skillId="244" skillLevel="3" getLevel="14" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="3" getLevel="14" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="4" getLevel="14" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Wind Strike" skillId="1177" skillLevel="4" getLevel="14" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Wind Strike" skillId="1177" skillLevel="5" getLevel="14" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Ice Bolt" skillId="1184" skillLevel="3" getLevel="14" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Ice Bolt" skillId="1184" skillLevel="4" getLevel="14" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="4" getLevel="14" levelUpSp="700" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="5" getLevel="14" levelUpSp="700" learnedByNpc="true" />
+		<skill skillName="Heal" skillId="1011" skillLevel="6" getLevel="14" levelUpSp="700" learnedByNpc="true" />
+		<skill skillName="Vampiric Touch" skillId="1147" skillLevel="1" getLevel="14" levelUpSp="1100" learnedByNpc="true">
+			<item id="1051" count="1" /> <!-- Spellbook: Vampiric Touch -->
+		</skill>
+		<skill skillName="Vampiric Touch" skillId="1147" skillLevel="2" getLevel="14" levelUpSp="1100" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="1" getLevel="14" levelUpSp="700" learnedByNpc="true">
+			<item id="1050" count="1" /> <!-- Spellbook: Battle Heal -->
+		</skill>
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="2" getLevel="14" levelUpSp="700" learnedByNpc="true" />
+		<skill skillName="Battle Heal" skillId="1015" skillLevel="3" getLevel="14" levelUpSp="700" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="1" getLevel="14" levelUpSp="700" learnedByNpc="true">
+			<item id="1054" count="1" /> <!-- Spellbook: Group Heal -->
+		</skill>
+		<skill skillName="Group Heal" skillId="1027" skillLevel="2" getLevel="14" levelUpSp="700" learnedByNpc="true" />
+		<skill skillName="Group Heal" skillId="1027" skillLevel="3" getLevel="14" levelUpSp="700" learnedByNpc="true" />
+		<skill skillName="Curse: Weakness" skillId="1164" skillLevel="1" getLevel="14" levelUpSp="2100" learnedByNpc="true">
+			<item id="1056" count="1" /> <!-- Spellbook: Curse: Weakness -->
+		</skill>
+
+		<skill skillName="Expertise D" skillId="239" skillLevel="1" getLevel="20" autoGet="true" />
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="2" getLevel="20" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="3" getLevel="28" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="4" getLevel="36" autoGet="true" />
+
+		<skill skillName="Expertise C" skillId="239" skillLevel="2" getLevel="40" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="5" getLevel="43" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="6" getLevel="49" autoGet="true" />
+
+		<skill skillName="Expertise B" skillId="239" skillLevel="3" getLevel="52" autoGet="true" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="1" getLevel="52" learnedByNpc="true">
+			<item id="8618" count="1" /> <!-- Ancient Book - Divine Inspiration (Modern Language Version) -->
+		</skill>
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="7" getLevel="55" autoGet="true" />
+
+		<skill skillName="Expertise A" skillId="239" skillLevel="4" getLevel="61" autoGet="true" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="2" getLevel="61" learnedByNpc="true">
+			<item id="8619" count="1" /> <!-- Ancient Book - Divine Inspiration (Original Language Version) -->
+		</skill>
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="8" getLevel="62" autoGet="true" />
+
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="9" getLevel="70" autoGet="true" />
+
+		<skill skillName="Expertise S" skillId="239" skillLevel="5" getLevel="76" autoGet="true" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" learnedByNpc="true">
+			<item id="8620" count="1" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" learnedByNpc="true">
+			<item id="8621" count="1" /> <!-- Ancient Book - Divine Inspiration (Original Version) -->
+		</skill>
+	</skillTree>
+</list>

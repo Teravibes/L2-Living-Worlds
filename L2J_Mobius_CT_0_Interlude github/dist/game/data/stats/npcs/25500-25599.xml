@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="25500" level="44" type="Monster" name="Alligator of Istary" title="Raid Fighter">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="9189.10331002134" hpRegen="41.3470424277186" mp="584" mpRegen="2.1" />
+			<attack physical="624.124257296051" magical="130.530898435504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="260.15328" magical="253.82" evasion="-18" />
+			<speed>
+				<walk ground="70" />
+				<run ground="190" />
+			</speed>
+			<hitTime>410</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="11.5" />
+		</collision>
+	</npc>
+	<npc id="25501" level="30" type="RaidBoss" name="Boss Akata" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25502" count="3" respawnTime="360" weightPoint="1" /> <!-- Akata's Thug -->
+				<npc id="25503" count="2" respawnTime="360" weightPoint="1" /> <!-- Akata's Lackey -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="8528" /> <!-- rhand: For Monsters Only (Doom Hammer) -->
+		<acquire exp="440000" sp="40000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="53690.0336885106" hpRegen="21.714038575401" mp="329.4" mpRegen="1.5" />
+			<attack physical="111.218777383212" magical="7.21487767094488" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="355.39281" magical="173.38" evasion="-18" />
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<hitTime>630</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4739" level="3" /> <!-- BOSS Strike -->
+			<skill id="5025" level="1" /> <!-- Raid Boss - Level 30 -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" />
+		<dropLists>
+			<drop>
+				<group chance="60.65">
+					<item id="395" min="1" max="1" chance="32.8894" /> <!-- Manticore Skin Shirt -->
+					<item id="417" min="4" max="12" chance="6.5657" /> <!-- Manticore Skin Gaiters -->
+					<item id="1942" min="53" max="157" chance="13.7404" /> <!-- Manticore Skin Shirt Texture -->
+					<item id="1943" min="24" max="72" chance="46.8045" /> <!-- Manticore Skin Gaiters Pattern -->
+				</group>
+				<group chance="61.6941">
+					<item id="224" min="1" max="1" chance="7.7671" /> <!-- Maingauche -->
+					<item id="1660" min="1" max="1" chance="7.7671" /> <!-- Cursed Maingauche -->
+					<item id="2038" min="4" max="12" chance="55.0864" /> <!-- Maingauche Edge -->
+					<item id="2044" min="8" max="22" chance="29.3794" /> <!-- Cursed Maingauche Edge -->
+				</group>
+				<group chance="75.9788">
+					<item id="4553" min="1" max="3" chance="43.9024" /> <!-- Greater Dye of STR <Str+1 Con-1> -->
+					<item id="4554" min="2" max="4" chance="29.2683" /> <!-- Greater Dye of STR <Str+1 Dex-1> -->
+					<item id="4555" min="2" max="6" chance="21.9512" /> <!-- Greater Dye of CON <Con+1 Str-1> -->
+					<item id="6575" min="1" max="1" chance="4.8781" /> <!-- Blessed Scroll: Enchant Weapon (Grade D) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="11" />
+			<height normal="23.6" />
+		</collision>
+	</npc>
+	<npc id="25502" level="30" type="Monster" name="Akata's Thug" title="Raid Fighter">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="8527" /> <!-- rhand: For Monsters Only (Reinforced Bow) -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5755.57161140834" hpRegen="21.714038575401" mp="329.4" mpRegen="1.5" />
+			<attack physical="222.437554766423" magical="28.8595106837795" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="177.696405" magical="173.38" evasion="-18" />
+			<speed>
+				<walk ground="49" />
+				<run ground="190" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4754" level="2" /> <!-- BOSS Power Shot -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="25503" level="30" type="Monster" name="Akata's Lackey" title="Raid Fighter">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="8529" /> <!-- rhand: For Monsters Only (Knife) -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4295.20269508085" hpRegen="21.714038575401" mp="329.4" mpRegen="1.5" />
+			<attack physical="222.437554766423" magical="28.8595106837795" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="177.696405" magical="173.38" evasion="-18" />
+			<speed>
+				<walk ground="45" />
+				<run ground="190" />
+			</speed>
+			<hitTime>630</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.4" />
+		</collision>
+	</npc>
+	<npc id="25504" level="39" type="RaidBoss" name="Nellis' Vengeful Spirit" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25505" count="3" respawnTime="360" weightPoint="1" /> <!-- Nellis' Follower -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="RangeHold_a" id="4197" level="3" /> <!-- Hold -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="8532" /> <!-- rhand: For Monsters Only (Spinebone Sword) -->
+		<acquire exp="440000" sp="40000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="86871.3492917109" hpRegen="32.4117473308651" mp="463.32" mpRegen="1.8" />
+			<attack physical="219.969353828243" magical="17.2993902271801" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="457.40256" magical="223.14" evasion="-18" />
+			<speed>
+				<walk ground="50" />
+				<run ground="190" />
+			</speed>
+			<hitTime>630</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4197" level="1" /> <!-- Hold -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Resist Dark Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5026" level="1" /> <!-- Raid Boss - Level 39 -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" />
+		<dropLists>
+			<drop>
+				<group chance="77.6035">
+					<item id="62" min="11" max="33" chance="0.6042" /> <!-- Mithril Boots -->
+					<item id="2429" min="12" max="34" chance="0.5779" /> <!-- Chain Boots -->
+					<item id="2430" min="12" max="36" chance="0.5538" /> <!-- Karmian Boots -->
+					<item id="2431" min="13" max="37" chance="0.5317" /> <!-- Plated Leather Boots -->
+					<item id="2432" min="13" max="39" chance="0.5112" /> <!-- Dwarven Chain Boots -->
+					<item id="2433" min="1" max="1" chance="13.2923" /> <!-- Boots of Seal -->
+					<item id="2452" min="1" max="1" chance="13.2923" /> <!-- Reinforced Mithril Gloves -->
+					<item id="2453" min="1" max="1" chance="13.2923" /> <!-- Chain Gloves -->
+					<item id="2454" min="1" max="1" chance="13.2923" /> <!-- Karmian Gloves -->
+					<item id="1958" min="220" max="660" chance="1.3184" /> <!-- Mithril Boots Design -->
+					<item id="2937" min="378" max="1134" chance="0.7673" /> <!-- Chain Boots Part -->
+					<item id="2938" min="26" max="78" chance="11.1554" /> <!-- Karmian Boots Fabric -->
+					<item id="2939" min="35" max="105" chance="8.2869" /> <!-- Plate Leather Boot Lining -->
+					<item id="2940" min="45" max="135" chance="6.4454" /> <!-- Dwarven Chain Boots Part -->
+					<item id="2941" min="56" max="168" chance="5.1793" /> <!-- Boots of Seal Pattern -->
+					<item id="2942" min="68" max="204" chance="4.2653" /> <!-- Reinforced Mithril Gloves Design -->
+					<item id="2943" min="81" max="243" chance="3.5808" /> <!-- Chain Gloves Design -->
+					<item id="2944" min="95" max="285" chance="3.0532" /> <!-- Karmian Gloves Fabric -->
+				</group>
+				<group chance="79.3555">
+					<item id="96" min="1" max="1" chance="3.2219" /> <!-- Scythe -->
+					<item id="298" min="1" max="1" chance="3.2219" /> <!-- Orcish Glaive -->
+					<item id="302" min="1" max="1" chance="3.2219" /> <!-- Body Slasher -->
+					<item id="2062" min="5" max="15" chance="22.2742" /> <!-- Scythe Edge -->
+					<item id="2075" min="9" max="27" chance="12.3746" /> <!-- Orcish Glaive Blade -->
+					<item id="2076" min="2" max="6" chance="55.6855" /> <!-- Body Slasher Blade -->
+				</group>
+				<group chance="71.2939">
+					<item id="951" min="1" max="1" chance="74.5033" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="952" min="12" max="36" chance="22.7649" /> <!-- Scroll: Enchant Armor (Grade C) -->
+					<item id="6573" min="1" max="1" chance="2.7318" /> <!-- Blessed Scroll: Enchant Weapon (Grade C) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="10" />
+			<height normal="28.1" />
+		</collision>
+	</npc>
+	<npc id="25505" level="38" type="Monster" name="Nellis' Follower" title="Raid Fighter">
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4723" level="3" /> <!-- BOSS Strike -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13134.2483912668" hpRegen="30.8726873073006" mp="447.96" mpRegen="1.8" />
+			<attack physical="818.216874587137" magical="258.363037300478" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="222.664305" magical="217.24" evasion="-18" />
+			<speed>
+				<walk ground="80" />
+				<run ground="190" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="3" /> <!-- Resist Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4723" level="1" /> <!-- BOSS Strike -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="16.5" />
+		</collision>
+	</npc>
+	<npc id="25506" level="37" type="RaidBoss" name="Rayito the Looter" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25507" count="1" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
+				<npc id="25508" count="3" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="RangeHold_a" id="4197" level="3" /> <!-- Hold -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="67" lhand="633" /> <!-- rhand: Orcish Sword lhand: Zubei's Shield -->
+		<acquire exp="440000" sp="40000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="77592.6570606263" hpRegen="29.4232868171158" mp="432.72" mpRegen="1.8" />
+			<attack physical="190.062213768403" magical="15.0683165832128" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="433.43274" magical="211.44" evasion="-18" />
+			<speed>
+				<walk ground="50" />
+				<run ground="190" />
+			</speed>
+			<hitTime>630</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4197" level="1" /> <!-- Hold -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5027" level="1" /> <!-- Raid Boss - Level 37 -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" />
+		<dropLists>
+			<drop>
+				<group chance="66.2453">
+					<item id="397" min="1" max="1" chance="21.4917" /> <!-- Mithril Shirt -->
+					<item id="2387" min="1" max="1" chance="34.3442" /> <!-- Tempered Mithril Gaiters -->
+					<item id="1961" min="53" max="157" chance="9.53" /> <!-- Mithril Shirt Fabric -->
+					<item id="2935" min="24" max="72" chance="34.6341" /> <!-- Tempered Mithril Gaiters Fragment -->
+				</group>
+				<group chance="25.3902">
+					<item id="281" min="1" max="1" chance="27.7681" /> <!-- Crystallized Ice Bow -->
+					<item id="2074" min="12" max="36" chance="72.2319" /> <!-- Crystallized Ice Bow Shaft -->
+				</group>
+				<group chance="46.0338">
+					<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (Grade C) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="16" />
+			<height normal="33.2" />
+		</collision>
+	</npc>
+	<npc id="25507" level="36" type="Monster" name="Rayito's Henchman" title="Raid Fighter">
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4728" level="3" /> <!-- Stun -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="123" lhand="19" /> <!-- rhand: Saber lhand: Small Shield -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="11740.9478361138" hpRegen="28.0640450927111" mp="417.6" mpRegen="1.8" />
+			<attack physical="705.82254740059" magical="224.63891832048" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="210.85917" magical="205.74" evasion="-18" />
+			<speed>
+				<walk ground="50" />
+				<run ground="190" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4728" level="1" /> <!-- Shock -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="14.5" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="25508" level="36" type="Monster" name="Rayito's Henchman" title="Raid Fighter">
+		<parameters>
+			<skill name="DDMagic_a" id="4194" level="3" /> <!-- BOSS Aura Burn -->
+			<skill name="Debuff_a" id="4202" level="3" /> <!-- Hold -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="66" lhand="102" /> <!-- rhand: Gladius lhand: Round Shield -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7866.43505019625" hpRegen="28.0640450927111" mp="417.6" mpRegen="1.8" />
+			<attack physical="470.536601224603" magical="99.8351512745791" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="210.85917" magical="205.74" evasion="-18" />
+			<speed>
+				<walk ground="30" />
+				<run ground="190" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4194" level="1" /> <!-- BOSS Aura Burn -->
+			<skill id="4202" level="1" /> <!-- Hold -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="6" />
+			<height normal="16.6" />
+		</collision>
+	</npc>
+	<npc id="25509" level="53" type="RaidBoss" name="Dark Shaman Varangka" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25511" count="4" respawnTime="360" weightPoint="1" /> <!-- Varangka's Page -->
+				<npc id="25510" count="1" respawnTime="360" weightPoint="1" /> <!-- Varangka's Descendant -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="DDMagic_a" id="4195" level="5" /> <!-- BOSS Twister -->
+			<skill name="SelfRangeDebuff_a" id="4182" level="5" /> <!-- Poison -->
+			<skill name="SelfRangeDebuffAnother_a" id="4186" level="5" /> <!-- Hold -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- rhand: Sage's Blood -->
+		<acquire exp="440000" sp="40000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="175997.603312156" hpRegen="60.1633937196702" mp="832.4" mpRegen="2.4" />
+			<attack physical="546.57712453747" magical="80.622272933299" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="642.54978" magical="313.46" evasion="-18" />
+			<speed>
+				<walk ground="50" />
+				<run ground="190" />
+			</speed>
+			<hitTime>300</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4182" level="1" /> <!-- Poison -->
+			<skill id="4186" level="1" /> <!-- Hold -->
+			<skill id="4195" level="1" /> <!-- BOSS Twister -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5028" level="1" /> <!-- Raid Boss - Level 53 -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" />
+		<dropLists>
+			<drop>
+				<group chance="62.1185">
+					<item id="2397" min="1" max="1" chance="5.6807" /> <!-- Tunic of Zubei -->
+					<item id="2402" min="1" max="1" chance="9.0869" /> <!-- Stockings of Zubei -->
+					<item id="2406" min="1" max="1" chance="3.4942" /> <!-- Avadon Robe -->
+					<item id="4069" min="9" max="27" chance="44.5318" /> <!-- Tunic of Zubei Fabric -->
+					<item id="4070" min="40" max="120" chance="15.2133" /> <!-- Stockings of Zubei Fabric -->
+					<item id="4071" min="14" max="42" chance="21.9931" /> <!-- Avadon Robe Fabric -->
+				</group>
+				<group chance="78.5373">
+					<item id="91" min="1" max="1" chance="0.9057" /> <!-- Heavy War Axe -->
+					<item id="92" min="1" max="1" chance="0.9057" /> <!-- Sprite's Staff -->
+					<item id="7892" min="1" max="1" chance="0.9057" /> <!-- Spell Breaker -->
+					<item id="7900" min="1" max="1" chance="0.9057" /> <!-- Ice Storm Hammer -->
+					<item id="4105" min="6" max="18" chance="14.427" /> <!-- Heavy War Axe Head -->
+					<item id="4106" min="2" max="6" chance="42.5708" /> <!-- Sprite's Staff Head -->
+					<item id="8339" min="11" max="31" chance="8.244" /> <!-- Spell Breaker Head -->
+					<item id="8347" min="3" max="7" chance="31.1354" /> <!-- Ice Storm Hammer Head -->
+				</group>
+				<group chance="90.2035">
+					<item id="4613" min="1" max="3" chance="23.5479" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
+					<item id="4614" min="2" max="4" chance="15.6986" /> <!-- Greater Dye of STR <Str+4 Dex-4> -->
+					<item id="4615" min="1" max="1" chance="47.0958" /> <!-- Greater Dye of CON <Con+4 Str-4> -->
+					<item id="947" min="1" max="1" chance="13.6577" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="13" />
+			<height normal="20.8" />
+		</collision>
+	</npc>
+	<npc id="25510" level="52" type="Monster" name="Varangka's Descendant" title="Raid Fighter">
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4731" level="5" /> <!-- BOSS Mortal Blow -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="74" /> <!-- rhand: Katana -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="27046.6646315983" hpRegen="58.0887964751743" mp="804" mpRegen="2.4" />
+			<attack physical="2064.60480792455" magical="1172.3638146132" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.25159" magical="306.6" evasion="-18" />
+			<speed>
+				<walk ground="80" />
+				<run ground="190" />
+			</speed>
+			<hitTime>280</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4731" level="1" /> <!-- BOSS Mortal Blow -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26.9" />
+		</collision>
+	</npc>
+	<npc id="25511" level="52" type="Monster" name="Varangka's Page" title="Raid Fighter">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="179" /> <!-- rhand: Mace of Prayer -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13523.3323157991" hpRegen="58.0887964751743" mp="804" mpRegen="2.4" />
+			<attack physical="1032.30240396227" magical="293.0909536533" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.25159" magical="306.6" evasion="-18" />
+			<speed>
+				<walk ground="50" />
+				<run ground="190" />
+			</speed>
+			<hitTime>300</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="18.8" />
+		</collision>
+	</npc>
+	<npc id="25512" level="52" type="GrandBoss" name="Gigantic Chaos Golem" title="Raid Boss">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="SelfRangeCancel_a" id="4177" level="5" /> <!-- BOSS Cancel Magic -->
+			<skill name="SelfBuff_a" id="4173" level="5" /> <!-- BOSS Might -->
+			<skill name="PhysicalSpecial_a" id="4726" level="5" /> <!-- Stun -->
+			<skill name="SelfRangePhysicalSpecial_a" id="4171" level="5" /> <!-- BOSS Spinning Slash -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="440000" sp="40000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="338083.307894979" hpRegen="145.221991187936" mp="804" mpRegen="2.4" />
+			<attack physical="1032.30240396227" magical="293.0909536533" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="628.50318" magical="306.6" evasion="-18" />
+			<speed>
+				<walk ground="18" />
+				<run ground="190" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4171" level="1" /> <!-- BOSS Spinning Slash -->
+			<skill id="4173" level="1" /> <!-- BOSS Might -->
+			<skill id="4177" level="1" /> <!-- BOSS Cancel Magic -->
+			<skill id="4273" level="5" /> <!-- Resist Daggers -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4726" level="1" /> <!-- Shock -->
+			<skill id="5029" level="1" /> <!-- Raid Boss - Level 52 -->
+		</skillList>
+		<corpseTime>8</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>GOLEM</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="48.829">
+					<item id="357" min="1" max="1" chance="3.9351" /> <!-- Zubei's Breastplate -->
+					<item id="383" min="1" max="1" chance="6.295" /> <!-- Zubei's Gaiters -->
+					<item id="2376" min="1" max="1" chance="3.9351" /> <!-- Avadon Breastplate -->
+					<item id="2379" min="1" max="1" chance="6.295" /> <!-- Avadon Gaiters -->
+					<item id="4056" min="16" max="48" chance="17.7615" /> <!-- Zubei's Breastplate Part -->
+					<item id="4057" min="60" max="180" chance="7.3199" /> <!-- Zubei's Gaiter Material -->
+					<item id="4064" min="23" max="67" chance="12.6304" /> <!-- Avadon Breastplate Part -->
+					<item id="4065" min="11" max="31" chance="41.828" /> <!-- Avadon Gaiters Material -->
+				</group>
+				<group chance="73.0967">
+					<item id="78" min="1" max="1" chance="1.256" /> <!-- Great Sword -->
+					<item id="142" min="1" max="1" chance="1.256" /> <!-- Keshanberk -->
+					<item id="148" min="1" max="1" chance="1.256" /> <!-- Sword of Valhalla -->
+					<item id="4104" min="5" max="15" chance="24.0087" /> <!-- Great Sword Blade -->
+					<item id="4107" min="9" max="27" chance="13.1315" /> <!-- Keshanberk Blade -->
+					<item id="4108" min="2" max="6" chance="59.0918" /> <!-- Sword of Valhalla Blade -->
+				</group>
+				<group chance="50.3223">
+					<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
+					<item id="4605" min="3" max="7" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+					<item id="4606" min="3" max="9" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+					<item id="952" min="21" max="63" chance="18.8087" /> <!-- Scroll: Enchant Armor (Grade C) -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="31" />
+			<height normal="51.8" />
+		</collision>
+	</npc>
+	<npc id="25514" level="80" type="RaidBoss" name="Queen Shyeed" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25516" count="1" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
+				<npc id="25515" count="3" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="RangeHold_a" id="4197" level="8" /> <!-- Hold -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="3206477" sp="835990" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="300327.053710865" hpRegen="92.3387631310317" mp="1674.8" mpRegen="3" />
+			<attack physical="1445.33274686674" magical="280.52213944732" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1024.125" magical="499.6" evasion="-18" />
+			<speed>
+				<walk ground="45" />
+				<run ground="190" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4197" level="1" /> <!-- Hold -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5031" level="1" /> <!-- Raid Boss - Level 80 -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="15.9422">
+					<item id="6678" min="1" max="1" chance="36.7703" /> <!-- Sealed Imperial Crusader Shield -->
+					<item id="6683" min="1" max="1" chance="30.0467" /> <!-- Sealed Draconic Leather Helmet -->
+					<item id="6679" min="1" max="1" chance="33.183" /> <!-- Sealed Imperial Crusader Helmet -->
+				</group>
+				<group chance="98.2399">
+					<item id="6714" min="16" max="45" chance="15.1025" /> <!-- Sealed Major Arcana Circlet Pattern -->
+					<item id="6710" min="14" max="30" chance="18.8399" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+					<item id="6706" min="9" max="18" chance="4.02739" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
+					<item id="6705" min="3" max="6" chance="43.0773" /> <!-- Sealed Imperial Crusader Shield Part -->
+					<item id="6697" min="3" max="7" chance="18.9529" /> <!-- Arcana Mace Head -->
+				</group>
+				<group chance="98.0976">
+					<item id="6689" min="16" max="48" chance="4.66393" /> <!-- Basalt Battlehammer Head -->
+					<item id="6690" min="11" max="31" chance="7.25716" /> <!-- Imperial Staff Head -->
+					<item id="6691" min="3" max="9" chance="35.7026" /> <!-- Angel Slayer Blade -->
+					<item id="6693" min="6" max="18" chance="8.20652" /> <!-- Dragon Hunter Axe Blade -->
+					<item id="8732" min="1" max="1" chance="23.7257" /> <!-- Life Stone: level 76 -->
+					<item id="8742" min="1" max="1" chance="11.4499" /> <!-- Mid-Grade Life Stone: level 76 -->
+					<item id="8752" min="2" max="4" chance="8.99421" /> <!-- High-Grade Life Stone: level 76 -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="45" />
+			<height normal="50.8" />
+		</collision>
+	</npc>
+	<npc id="25515" level="79" type="Monster" name="Spiked Stakato" title="Raid Fighter">
+		<parameters>
+			<skill name="DDMagic_a" id="4195" level="8" /> <!-- BOSS Twister -->
+			<skill name="Debuff_a" id="4198" level="8" /> <!-- Poison -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="123" /> <!-- rhand: Saber -->
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="31866.8020137814" hpRegen="91.4930863014358" mp="1641" mpRegen="3" />
+			<attack physical="3798.33441413826" magical="1965.98254465502" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.60512" magical="493.3" evasion="-18" />
+			<speed>
+				<walk ground="23" />
+				<run ground="190" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4195" level="1" /> <!-- BOSS Twister -->
+			<skill id="4198" level="1" /> <!-- Poison -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="25516" level="79" type="Monster" name="Spiked Stakato" title="Raid Fighter">
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4726" level="8" /> <!-- Stun -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="47562.3910653454" hpRegen="91.4930863014358" mp="1641" mpRegen="3" />
+			<attack physical="5697.64406230895" magical="4423.65426034769" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.60512" magical="493.3" evasion="-18" />
+			<speed>
+				<walk ground="23" />
+				<run ground="190" />
+			</speed>
+			<hitTime>710</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4726" level="1" /> <!-- Shock -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="22.2" />
+		</collision>
+	</npc>
+	<npc id="25517" level="87" type="RaidBoss" name="Master Anays" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25519" count="3" respawnTime="360" weightPoint="1" /> <!-- Splendor Worshiper -->
+				<npc id="25518" count="2" respawnTime="360" weightPoint="1" /> <!-- Splendor Disciple -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<param name="doSummonNPC" value="1" />
+			<skill name="PhysicalSpecial_b" id="4180" level="10" /> <!-- Stun -->
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<equipment rhand="8214" /> <!-- rhand: Monster Only (Solina Priest Pole) -->
+		<acquire exp="8827525" sp="2036475" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="676989" hpRegen="355.43" mp="3718" mpRegen="9.81" />
+			<attack physical="3443.715" magical="4109.9562" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="842.4" magical="446.688" evasion="-11" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>SOLINA</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<group chance="71.5767">
+					<item id="6674" min="1" max="1" chance="1.1207" /> <!-- Sealed Imperial Crusader Breastplate -->
+					<item id="6675" min="1" max="1" chance="1.7887" /> <!-- Sealed Imperial Crusader Gaiters -->
+					<item id="6701" min="8" max="22" chance="28.4421" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+					<item id="6702" min="4" max="12" chance="68.6485" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				</group>
+				<group chance="73.4795">
+					<item id="6370" min="1" max="1" chance="1.1051" /> <!-- Saint Spear -->
+					<item id="6694" min="3" max="9" chance="98.8949" /> <!-- Saint Spear Blade -->
+				</group>
+				<group chance="52.3762">
+					<item id="959" min="1" max="1" chance="4.7244" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="47.2441" /> <!-- Scroll: Enchant Armor (Grade S) -->
+					<item id="6577" min="1" max="1" chance="0.7874" /> <!-- Blessed Scroll: Enchant Weapon (Grade S) -->
+					<item id="8920" min="1" max="1" chance="47.2441" /> <!-- Angel Halo -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="16" />
+			<height normal="41.8" />
+		</collision>
+	</npc>
+	<npc id="25518" level="86" type="Monster" name="Splendor Disciple" title="Raid Fighter">
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<equipment rhand="8221" /> <!-- rhand: Monster Only (Grail Apostle Spear) -->
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="35598" hpRegen="95.02" mp="1859" mpRegen="9.81" />
+			<attack physical="4917.6" magical="8830.836" random="7" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="767.7" magical="488.33" evasion="-12" />
+			<speed>
+				<walk ground="30" />
+				<run ground="190" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SOLINA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="47" />
+		</collision>
+	</npc>
+	<npc id="25519" level="86" type="Monster" name="Splendor Worshiper" title="Raid Fighter">
+		<parameters>
+			<skill name="LongRangePhysicalSpecial_a" id="4208" level="10" /> <!-- Stun -->
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="47702" hpRegen="95.02" mp="2110" mpRegen="9.81" />
+			<attack physical="3397.5" magical="7000.938" random="7" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="694.5" magical="505.25" evasion="-12" />
+			<speed>
+				<walk ground="30" />
+				<run ground="190" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SOLINA</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="47" />
+		</collision>
+	</npc>
+	<npc id="25523" level="73" type="RaidBoss" name="Plague Golem" title="Raid Boss">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="SelfRangeCancel_a" id="4177" level="7" /> <!-- BOSS Cancel Magic -->
+			<skill name="SelfBuff_a" id="4173" level="7" /> <!-- BOSS Might -->
+			<skill name="PhysicalSpecial_a" id="4730" level="7" /> <!-- BOSS Mortal Blow -->
+			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="7" /> <!-- Stun -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="440000" sp="40000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="776489.863367776" hpRegen="302.659981219819" mp="1442.4" mpRegen="3" />
+			<attack physical="4680.09940116917" magical="3338.16498534774" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="930.08877" magical="453.74" evasion="-18" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4172" level="1" /> <!-- Shock -->
+			<skill id="4173" level="1" /> <!-- BOSS Might -->
+			<skill id="4177" level="1" /> <!-- BOSS Cancel Magic -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4730" level="1" /> <!-- BOSS Mortal Blow -->
+			<skill id="5034" level="1" /> <!-- Raid Boss - Level 73 -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" />
+		<dropLists>
+			<drop>
+				<group chance="50">
+					<item id="8169" min="1" max="2" chance="50" /> <!-- False Nucleus of Life: A-Grade -->
+					<item id="8176" min="4" max="8" chance="50" /> <!-- Destruction Tombstone -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="35" />
+			<height normal="46.3765" />
+		</collision>
+	</npc>
+	<npc id="25524" level="76" type="RaidBoss" name="Flamestone Giant" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25525" count="2" respawnTime="360" weightPoint="1" /> <!-- Flame Spirit -->
+				<npc id="25526" count="2" respawnTime="360" weightPoint="1" /> <!-- Charged Spirit -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="RangeDDMagic_a" id="4178" level="8" /> <!-- BOSS Flamestrike -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="4888056" sp="961047" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="401886.766608773" hpRegen="124.302529182249" mp="1540.8" mpRegen="3" />
+			<attack physical="2501.79548333906" magical="888.048862829437" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="971.35365" magical="473.86" evasion="-18" />
+			<speed>
+				<walk ground="13" />
+				<run ground="190" />
+			</speed>
+			<hitTime>470</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4178" level="1" /> <!-- BOSS Flamestrike -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5035" level="1" /> <!-- Raid Boss - Level 76 -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="4.7397">
+					<item id="6725" min="1" max="1" chance="66.6667" /> <!-- Sealed Tateossian Ring -->
+					<item id="6726" min="1" max="1" chance="33.3333" /> <!-- Sealed Tateossian Necklace -->
+				</group>
+				<group chance="69.8994">
+					<item id="6700" min="25" max="37" chance="23.8693" /> <!-- Sealed Tateossian Necklace Chain -->
+					<item id="6699" min="43" max="108" chance="15.21" /> <!-- Sealed Tateossian Ring Gem -->
+					<item id="6698" min="11" max="27" chance="60.9207" /> <!-- Sealed Tateossian Earring Part -->
+				</group>
+				<group chance="86.398">
+					<item id="6689" min="2" max="6" chance="37.3751" /> <!-- Basalt Battlehammer Head -->
+					<item id="6697" min="3" max="6" chance="13.3377" /> <!-- Arcana Mace Head -->
+					<item id="6690" min="2" max="4" chance="49.2873" /> <!-- Imperial Staff Head -->
+				</group>
+				<group chance="75.1553">
+					<item id="8731" min="1" max="1" chance="68.2207" /> <!-- Life Stone: level 70 -->
+					<item id="8751" min="1" max="1" chance="20.3197" /> <!-- High-Grade Life Stone: level 70 -->
+					<item id="8761" min="1" max="1" chance="11.4596" /> <!-- Top-Grade Life Stone: level 70 -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="22" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="25525" level="75" type="Monster" name="Flame Spirit" title="Raid Fighter">
+		<parameters>
+			<skill name="HealMagic_a" id="4780" level="8" /> <!-- BOSS Heal -->
+			<skill name="SelfRangeBuff_a" id="4211" level="8" /> <!-- BOSS Might -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="63589.9602304145" hpRegen="123.216289543832" mp="1507.8" mpRegen="3" />
+			<attack physical="4902.4469608376" magical="3475.50410725631" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="478.869345" magical="467.22" evasion="-18" />
+			<speed>
+				<walk ground="90" />
+				<run ground="190" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4211" level="1" /> <!-- BOSS Might -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4780" level="1" /> <!-- BOSS Heal -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25526" level="75" type="Monster" name="Charged Spirit" title="Raid Fighter">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="31794.9801152072" hpRegen="123.216289543832" mp="1507.8" mpRegen="3" />
+			<attack physical="4902.4469608376" magical="3475.50410725631" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="478.869345" magical="467.22" evasion="-18" />
+			<speed>
+				<walk ground="90" />
+				<run ground="190" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="20" grown="24" />
+		</collision>
+	</npc>
+	<npc id="25527" level="86" type="RaidBoss" name="Uruka" title="Raid Boss">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="SelfRangeCancel_a" id="4177" level="10" /> <!-- BOSS Cancel Magic -->
+			<skill name="SelfBuff_a" id="4173" level="10" /> <!-- BOSS Might -->
+			<skill name="PhysicalSpecial_a" id="4721" level="10" /> <!-- BOSS Strike -->
+			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="10" /> <!-- Stun -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="3051180" sp="952059" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="675862.82488359" hpRegen="259.751563024682" mp="203.52" mpRegen="3.18" />
+			<attack physical="3068.49967024509" magical="1381.13520659718" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1162.672236" magical="567.1848" evasion="-12" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4172" level="5" /> <!-- Shock -->
+			<skill id="4173" level="4" /> <!-- BOSS Might -->
+			<skill id="4177" level="3" /> <!-- BOSS Cancel Magic -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4721" level="5" /> <!-- BOSS Strike -->
+			<skill id="5179" level="1" /> <!-- Raid Boss - Level 86 -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
+		<dropLists>
+			<drop>
+				<group chance="49.4563">
+					<item id="6724" min="1" max="1" chance="5.9961" /> <!-- Sealed Tateossian Earring -->
+					<item id="6725" min="1" max="1" chance="8.9942" /> <!-- Sealed Tateossian Ring -->
+					<item id="6726" min="1" max="1" chance="4.4961" /> <!-- Sealed Tateossian Necklace -->
+					<item id="6698" min="81" max="243" chance="11.8869" /> <!-- Sealed Tateossian Earring Part -->
+					<item id="6699" min="40" max="120" chance="26.71" /> <!-- Sealed Tateossian Ring Gem -->
+					<item id="6700" min="14" max="42" chance="41.9167" /> <!-- Sealed Tateossian Necklace Chain -->
+				</group>
+				<group chance="68.7123">
+					<item id="6365" min="1" max="1" chance="0.3713" /> <!-- Basalt Battlehammer -->
+					<item id="6366" min="1" max="1" chance="0.3713" /> <!-- Imperial Staff -->
+					<item id="6369" min="1" max="1" chance="0.3713" /> <!-- Dragon Hunter Axe -->
+					<item id="6579" min="1" max="1" chance="0.3713" /> <!-- Arcana Mace -->
+					<item id="6689" min="2" max="6" chance="42.0931" /> <!-- Basalt Battlehammer Head -->
+					<item id="6690" min="11" max="31" chance="8.1873" /> <!-- Imperial Staff Head -->
+					<item id="6693" min="6" max="18" chance="14.5597" /> <!-- Dragon Hunter Axe Blade -->
+					<item id="6697" min="3" max="7" chance="33.6747" /> <!-- Arcana Mace Head -->
+				</group>
+			</drop>
+		</dropLists>
+		<collision>
+			<radius normal="30" />
+			<height normal="42.5105" />
+		</collision>
+	</npc>
+</list>

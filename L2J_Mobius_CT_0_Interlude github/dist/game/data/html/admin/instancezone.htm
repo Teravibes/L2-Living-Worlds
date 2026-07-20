@@ -1,0 +1,43 @@
+<html><title>Instance Maintenance Menu</title><body>
+<center>
+<table width=270><tr>
+<td width=45><button value="Main" action="bypass admin_admin" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+<td width=180><center>Instance Creation Menu</center></td>
+<td width=45><button value="Back" action="bypass admin_admin7" width=45 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr></table><br>
+<table width=260>
+<tr>
+<td><button value="General" action="bypass admin_html instancezone.htm" width="95" height="21" back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Individual" action="bypass admin_html instancezone2.htm" width="95" height="21" back="bigbutton_over" fore="bigbutton"></td>
+<td><button value="Template IDs" action="bypass admin_html help/instancezone_list.htm" width="95" height="21" back="bigbutton_over" fore="bigbutton"></td>
+</tr>
+</table><br>
+Create Example:<br1>
+Instance: [ 1 ] - Template: [ demo.xml ]<br>
+<table width=260>
+<tr>
+<td></td>
+<td>Instance</td>
+<td>Template XML</td>
+</tr>
+<tr>
+<td><button value="Create" action="bypass -h admin_createinstance $instanceid_create $templateid" width="95" height="21" back="bigbutton_over" fore="bigbutton"></td>
+<td><edit var="instanceid_create" width=50></td>
+<td><edit var="templateid" width=80></td>
+</tr>
+<tr><td><br></td></tr>
+<tr>
+<td><button value="Destroy" action="bypass -h admin_destroyinstance $instanceid_destroy $templateid" width="95" height="21" back="bigbutton_over" fore="bigbutton"></td>
+<td><edit var="instanceid_destroy" width=50></td>
+</tr>
+<tr><td><br></td></tr>
+<tr>
+<td><button value="Set" action="bypass -h admin_setinstance $instanceid_set $templateid" width="95" height="21" back="bigbutton_over" fore="bigbutton"></td>
+<td><edit var="instanceid_set" width=50></td>
+</tr>
+</table>
+<br><br>
+<button value="List Instances" action="bypass -h admin_listinstances" width="95" height="21" back="bigbutton_over" fore="bigbutton"><br><br>
+<font color="LEVEL">IDs => 300000: reserved for dynamic instances!</font>
+</center>
+</body></html>

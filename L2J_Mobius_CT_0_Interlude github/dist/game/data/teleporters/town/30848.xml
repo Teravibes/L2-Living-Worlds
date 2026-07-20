@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30848"> <!-- Elisa -->
+		<teleport type="NORMAL">
+			<location name="Town of Goddard" x="148024" y="-55281" z="-2728" feeCount="8100" castleId="7" />
+			<location name="Town of Oren" x="82971" y="53207" z="-1470" feeCount="6900" castleId="4" />
+			<location name="The Town of Giran" x="83314" y="148012" z="-3400" feeCount="13000" castleId="3" />
+			<location name="Heine" x="111455" y="219400" z="-3546" feeCount="59000" castleId="6" />
+			<location name="Town of Schuttgart" x="87478" y="-142297" z="-1352" feeCount="53000" castleId="9" />
+			<location name="The Town of Dion" x="15671" y="142994" z="-2704" feeCount="52000" castleId="2" />
+			<location name="The Town of Gludio" x="-12694" y="122776" z="-3114" feeCount="56000" castleId="1" />
+			<location name="Rune Township" x="43835" y="-47749" z="-792" feeCount="37000" castleId="8" />
+			<location name="Hunters Village" x="117110" y="76883" z="-2670" feeCount="5900" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeCount="2000" />
+			<location name="Forsaken Plains" x="168217" y="37990" z="-4072" feeCount="1900" />
+			<location name="Seal of Shilen" x="184742" y="19745" z="-3168" feeCount="3000" />
+			<location name="Forest of Mirrors" x="142065" y="81300" z="-3000" feeCount="4400" />
+			<location name="Blazing Swamp" x="155310" y="-16339" z="-3320" feeCount="6800" />
+			<location name="Fields of Massacre" x="183543" y="-14974" z="-2776" feeCount="6500" />
+			<location name="Ancient Battleground" x="106517" y="-2871" z="-3416" feeCount="5900" />
+			<location name="Silent Valley" x="170838" y="55776" z="-5280" feeCount="6100" />
+			<location name="Tower of Insolence" x="114649" y="11115" z="-5120" feeCount="4200" />
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeId="6651" feeCount="1" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeId="6651" feeCount="1" />
+			<location name="Entrance to The Giant's Cave" x="181737" y="46469" z="-4352" feeId="6651" feeCount="1" />
+			<location name="Plains of Glory" x="135580" y="19467" z="-3424" feeId="6651" feeCount="1" />
+			<location name="War-Torn Plains" x="156898" y="11217" z="-4032" feeId="6651" feeCount="1" />
+			<location name="Tower of Insolence, 3rd Floor" x="110848" y="16154" z="-2120" feeId="6651" feeCount="1" />
+			<location name="Tower of Insolence, 5th Floor" x="118404" y="15988" z="832" feeId="6651" feeCount="1" />
+			<location name="Tower of Insolence, 7th Floor" x="115064" y="12181" z="2960" feeId="6651" feeCount="1" />
+			<location name="Tower of Insolence, 10th Floor" x="118525" y="16455" z="5984" feeId="6651" feeCount="1" />
+			<location name="Tower of Insolence, 13th Floor" x="115384" y="16820" z="9000" feeId="6651" feeCount="1" />
+			<location name="Hunters Valley" x="114306" y="86573" z="-3112" feeId="6651" feeCount="1" />
+			<location name="Anghel Waterfall" x="166182" y="91560" z="-3168" feeId="6651" feeCount="1" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeId="6651" feeCount="1" />
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeCount="1000" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeCount="1000" />
+			<location name="Entrance to The Giant's Cave" x="181737" y="46469" z="-4352" feeCount="1000" />
+			<location name="Plains of Glory" x="135580" y="19467" z="-3424" feeCount="1000" />
+			<location name="War-Torn Plains" x="156898" y="11217" z="-4032" feeCount="1000" />
+			<location name="Tower of Insolence, 3rd Floor" x="110848" y="16154" z="-2120" feeCount="1000" />
+			<location name="Tower of Insolence, 5th Floor" x="118404" y="15988" z="832" feeCount="1000" />
+			<location name="Tower of Insolence, 7th Floor" x="115064" y="12181" z="2960" feeCount="1000" />
+			<location name="Tower of Insolence, 10th Floor" x="118525" y="16455" z="5984" feeCount="1000" />
+			<location name="Tower of Insolence, 13th Floor" x="115384" y="16820" z="9000" feeCount="1000" />
+			<location name="Hunters Valley" x="114306" y="86573" z="-3112" feeCount="1000" />
+			<location name="Anghel Waterfall" x="166182" y="91560" z="-3168" feeCount="1000" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeCount="1000" />
+		</teleport>
+	</npc>
+</list>

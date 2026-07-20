@@ -1,0 +1,1570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="9100" type="Armor" name="Shadow Item: Majestic Boots">
+		<!-- This Shadow Item contains the mirrored power of Majestic Boots. It cannot be traded, dropped, crystallized, or given other functions. -->
+		<set name="icon" val="icon.armor_t84_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="370" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="600" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="9101" type="Armor" name="Shadow Item: Majestic Robe">
+		<!-- This Shadow Item contains the mirrored power of a Majestic Robe. It cannot be traded, dropped, crystallized, or given other functions. -->
+		<set name="icon" val="icon.armor_t85_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="777" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="600" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">147</stat>
+			<stat type="maxMp">718</stat>
+		</stats>
+	</item>
+	<item id="9102" type="Armor" name="Shadow Item: Majestic Gauntlet">
+		<!-- This Shadow Item contains the mirrored power of Majestic Gauntlets. It cannot be traded, dropped, crystallized, or given other functions. -->
+		<set name="icon" val="icon.armor_t85_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="180" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="600" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="9103" type="Armor" name="Shadow Item: Majestic Boots">
+		<!-- This Shadow Item contains the mirrored power of Majestic Boots. It cannot be traded, dropped, crystallized, or given other functions. -->
+		<set name="icon" val="icon.armor_t85_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="370" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="600" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="9104" type="EtcItem" name="Composition Bow and Wooden Arrow">
+		<!-- If you double-click on it, you can obtain a Composition Bow and a Wooden Arrow. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="1" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9105" type="EtcItem" name="Gastraphetes and Bone Arrow">
+		<!-- If you double-click on it, you can obtain a Gastraphetes and a Bone Arrow. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="2" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9106" type="EtcItem" name="Akat Long Bow and Steel Arrow">
+		<!-- If you double-click on it, you can obtain an Akat Long Bow and a Steel Arrow. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="3" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9107" type="EtcItem" name="Dark Elven Long Bow and Silver Arrow">
+		<!-- If you double-click on it, you can obtain a Dark Elven Long Bow and a Silver Arrow. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="4" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9108" type="EtcItem" name="Carnage Bow and Mithril Arrow">
+		<!-- If you double-click on it, you can obtain a Carnage Bow and a Mithril Arrow. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="5" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9109" type="EtcItem" name="Soul Bow and Mithril Arrow">
+		<!-- If you double-click on it, you can obtain a Soul Bow and a Mithril Arrow. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="6" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9110" type="EtcItem" name="No Grade Shadow Armor Set Box (Heavy Armor Use)">
+		<!-- If you double-click on it, you can obtain a No Grade Shadow Armor "Heavy Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="7" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9111" type="EtcItem" name="D-Grade Shadow Armor Set Box (Heavy Armor Use)">
+		<!-- If you double-click on it, you can obtain a D-Grade Shadow Armor "Heavy Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="8" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9112" type="EtcItem" name="C-Grade Shadow Armor Set Box (Heavy Armor Use)">
+		<!-- If you double-click on it, you can obtain a C-Grade Shadow Armor "Heavy Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="9" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9113" type="EtcItem" name="B-Grade Shadow Armor Set Box (Heavy Armor Use)">
+		<!-- If you double-click on it, you can obtain a B-Grade Shadow Armor "Heavy Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="10" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9114" type="EtcItem" name="Low A-Grade Shadow Armor Set Box (Heavy Armor Use)">
+		<!-- If you double-click on it, you can obtain a low A-Grade Shadow Armor "Heavy Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="11" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9115" type="EtcItem" name="High A-Grade Shadow Armor Set Box (Heavy Armor Use)">
+		<!-- If you double-click on it, you can obtain a high A-Grade Shadow Armor "Heavy Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="12" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9116" type="EtcItem" name="No Grade Shadow Armor Set Box (Light Armor Use)">
+		<!-- If you double-click on it, you can obtain a No Grade Shadow Armor "Light Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="13" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9117" type="EtcItem" name="D-Grade Shadow Armor Set Box (Light Armor Use)">
+		<!-- If you double-click on it, you can obtain a D-Grade Shadow Armor "Light Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="14" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9118" type="EtcItem" name="C-Grade Shadow Armor Set Box (Light Armor Use)">
+		<!-- If you double-click on it, you can obtain a C-Grade Shadow Armor "Light Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="15" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9119" type="EtcItem" name="B-Grade Shadow Armor Set Box (Light Armor Use)">
+		<!-- If you double-click on it, you can obtain a B-Grade Shadow Armor "Light Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="16" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9120" type="EtcItem" name="Low A-Grade Shadow Armor Set Box (Light Armor Use)">
+		<!-- If you double-click on it, you can obtain a low A-Grade Shadow Armor "Light Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="17" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9121" type="EtcItem" name="High A-Grade Shadow Armor Set Box (Light Armor Use)">
+		<!-- If you double-click on it, you can obtain a high A-Grade Shadow Armor "Light Armor Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="18" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9122" type="EtcItem" name="No Grade Shadow Armor Set Box (Robe Use)">
+		<!-- If you double-click on it, you can obtain a No Grade Shadow Armor "Robe Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="19" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9123" type="EtcItem" name="D-Grade Shadow Armor Set Box (Robe Use)">
+		<!-- If you double-click on it, you can obtain a D-Grade Shadow Armor "Robe Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="20" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9124" type="EtcItem" name="C-Grade Shadow Armor Set Box (Robe Use)">
+		<!-- If you double-click on it, you can obtain a C-Grade Shadow Armor "Robe Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="21" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9125" type="EtcItem" name="B-Grade Shadow Armor Set Box (Robe Use)">
+		<!-- If you double-click on it, you can obtain a B-Grade Shadow Armor "Robe Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="22" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9126" type="EtcItem" name="Low A-Grade Shadow Armor Set Box (Robe Use)">
+		<!-- If you double-click on it, you can obtain a low A-Grade Shadow Armor "Robe Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="23" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9127" type="EtcItem" name="High A-Grade Shadow Armor Set Box (Robe Use)">
+		<!-- If you double-click on it, you can obtain a high A-Grade Shadow Armor "Robe Use" Set. (This item can be used when the weight gauge is below 60% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="24" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9128" type="Armor" name="Shadow Item: Mithril Gauntlet">
+		<!-- This Shadow Item contains the mirrored power of Mithril Gauntlets. It cannot be traded, dropped, crystallized, or given other functions. -->
+		<set name="icon" val="icon.armor_t61_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="600" />
+		<stats>
+			<stat type="pDef">36</stat>
+		</stats>
+	</item>
+	<item id="9129" type="Armor" name="Shadow Item: Shield of Nightmare">
+		<!-- This Shadow Item contains the mirrored power of a Shield of Nightmare. It cannot be traded, dropped, crystallized, or given other functions. -->
+		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="400" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="600" />
+		<conditions msgId="1518">
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+		</conditions>
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">256</stat>
+		</stats>
+	</item>
+	<item id="9130" type="EtcItem" name="No Grade Item Set Box (Magic Use)">
+		<!-- If you double-click on it, you can obtain a Magic-Use No Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="31" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9131" type="EtcItem" name="D Grade Item Set Box (Magic Use)">
+		<!-- If you double-click on it, you can obtain a Magic-Use D-Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="32" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9132" type="EtcItem" name="C Grade Item Set Box (Magic Use)">
+		<!-- If you double-click on it, you can obtain a Magic-Use C-Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="33" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9133" type="EtcItem" name="B Grade Item Set Box (Magic Use)">
+		<!-- If you double-click on it, you can obtain a Magic-Use B-Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="34" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9134" type="EtcItem" name="A Grade Item Set Box (Magic Use)">
+		<!-- If you double-click on it, you can obtain a Magic-Use A-Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="35" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9135" type="EtcItem" name="A, S Grade Item Set Box (Magic Use)">
+		<!-- If you double-click on it, you can obtain a Magic-Use A- or S-Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2308" level="36" /> <!-- Event Item -->
+		</skills>
+	</item>
+	<item id="9136" type="Weapon" name="Sword of Valakas (1-Handed)">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">156</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="9137" type="Weapon" name="Sword of Valakas (2-Handed)">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2180" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">78</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="9138" type="Armor" name="Santa's Hat">
+		<!-- A Santa Claus hat that was created to celebrate the holidays. This hat can only be worn during the end-of-year holiday season. It uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="9139" type="EtcItem" name="Santa's Hat">
+		<!-- A Santa Claus hat that was created to celebrate the holidays. This hat can only be worn only during the end of year holiday season. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="9140" type="Weapon" name="Salvation Bow">
+		<!-- Zaken's Curse event souvenir item. Allows you to use the active skill Happiness. Warning: If you use this skill against a monster, it will flag you for PvP. -->
+		<set name="icon" val="icon.weapon_krono_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="900" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="3261" level="1" /> <!-- Happiness -->
+		</skills>
+	</item>
+	<item id="9141" type="Weapon" name="Redemption Bow">
+		<!-- Zaken's Curse event item. Enables you to free cursed pigs. Allows you to use the active skills Forgiveness and Pardon. -->
+		<set name="icon" val="icon.weapon_krono_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="230" />
+		<set name="useSkillDisTime" val="1" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="3260" level="1" /> <!-- Forgiveness -->
+			<skill id="3262" level="1" /> <!-- Pardon -->
+		</skills>
+	</item>
+	<item id="9142" type="EtcItem" name="Apiga">
+		<!-- A coin stolen from Zaken. Bring it to Bonny, Zaken's Granddaughter, for a reward. -->
+		<set name="icon" val="icon.etc_pig_adena_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="9143" type="EtcItem" name="Golden Apiga">
+		<!-- One of Zaken's prized possessions. Collect as many as a you can for a chance to obtain a special prize at the end of the event. This item cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.etc_pig_adena_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="9144" type="EtcItem" name="Pirate's Booty">
+		<!-- Double-click for a chance to receive Golden Apiga. If your luck is bad, you won't receive anything. (This item can't be used when your weight gauge is above 80%, or you have less than 10 empty inventory slots.) -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2309" level="1" /> <!-- Pig Chest -->
+		</skills>
+	</item>
+	<item id="9145" type="Armor" name="Little Angel Wings (Event)">
+		<!-- A wing-shaped hair accessory. This item is designed for use in events and cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_hair_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="9146" type="EtcItem" name="Scroll of Guidance (Event)">
+		<!-- Increases Accuracy. Effect 3. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2310" level="1" /> <!-- Scroll of Guidance - Event Use -->
+		</skills>
+	</item>
+	<item id="9147" type="EtcItem" name="Scroll of Death Whisper (Event)">
+		<!-- Increases Critical Attack Power. Effect 3. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2311" level="1" /> <!-- Scroll of Death Whisper - Event Use -->
+		</skills>
+	</item>
+	<item id="9148" type="EtcItem" name="Scroll of Focus (Event)">
+		<!-- Increases Critical Rate. Effect 3. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2312" level="1" /> <!-- Scroll of Focus - Event Use -->
+		</skills>
+	</item>
+	<item id="9149" type="EtcItem" name="Scroll of Acumen (Event)">
+		<!-- Increases Casting Spd. Effect 3. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2313" level="1" /> <!-- Scroll of Acumen - Event Use -->
+		</skills>
+	</item>
+	<item id="9150" type="EtcItem" name="Scroll of Haste (Event)">
+		<!-- Increases Atk. Spd. Effect 2. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2314" level="1" /> <!-- Scroll of Haste - Event Use -->
+		</skills>
+	</item>
+	<item id="9151" type="EtcItem" name="Scroll of Agility (Event)">
+		<!-- Increases Evasion. Effect 3. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2315" level="1" /> <!-- Scroll of Agility - Event Use -->
+		</skills>
+	</item>
+	<item id="9152" type="EtcItem" name="Scroll of Empower (Event)">
+		<!-- Increases Magic Power. Effect 3. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2316" level="1" /> <!-- Scroll of Empower - Event Use -->
+		</skills>
+	</item>
+	<item id="9153" type="EtcItem" name="Scroll of Might (Event)">
+		<!-- Increases Atk. Power. Effect 3. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2317" level="1" /> <!-- Scroll of Might - Event Use -->
+		</skills>
+	</item>
+	<item id="9154" type="EtcItem" name="Scroll of Wind Walk (Event)">
+		<!-- Increases Speed. Effect 2. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2318" level="1" /> <!-- Scroll of Wind Walk - Event Use -->
+		</skills>
+	</item>
+	<item id="9155" type="EtcItem" name="Scroll of Shield (Event)">
+		<!-- Increases Defense. Effect 3. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="2319" level="1" /> <!-- Scroll of Shield - Event Use -->
+		</skills>
+	</item>
+	<item id="9156" type="EtcItem" name="Blessed Scroll of Escape (Event)">
+		<!-- A magical scroll that relocates user to the nearest village. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="12" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2320" level="1" /> <!-- Blessed Scroll of Escape - Event Use -->
+		</skills>
+	</item>
+	<item id="9157" type="EtcItem" name="Blessed Scroll of Resurrection (Event)">
+		<!-- A magic scroll that resurrects a dead character and restores his or her Exp. completely. An event reward. -->
+		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="12" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2321" level="1" /> <!-- Blessed Scroll of Resurrection - Event Use -->
+		</skills>
+	</item>
+	<item id="9158" type="Armor" name="Gold Circlet of Redemption">
+		<!-- Gold circlet. Uses 2 hair accessory slots. Zaken's Curse event reward. -->
+		<set name="icon" val="icon.Accessary_gold_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="9159" type="Armor" name="Silver Circlet of Salvation">
+		<!-- Silver circlet. Uses 2 hair accessory slots. Zaken's Curse event reward. -->
+		<set name="icon" val="icon.Accessary_gold_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="9160" type="Armor" name="Pig Wrangler's Cap">
+		<!-- Leather cap. It's made from sturdy leather. Uses 2 hair accessory slots. Zaken's Curse event reward. -->
+		<set name="icon" val="icon.Accessary_middle_ages_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="9161" type="EtcItem" name="Santa's Antlers">
+		<!-- Festive Santa hat with antlers. Ideal for celebrating the holidays. This item can only be equipped during the year end. -->
+		<set name="icon" val="icon.accessory_santas_antler_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="9162" type="EtcItem" name="Red Philosopher's Stone Transmutation Circle">
+		<!-- Usable by all races. Double-click to add the Red Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item - Level 1. The success rate is 100%. -->
+		<set name="icon" val="icon.sign_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="recipe_id" val="866" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="9163" type="EtcItem" name="Blue Philosopher's Stone Transmutation Circle">
+		<!-- Usable by all races. Double-click to add the Blue Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item - Level 1. The success rate is 100%. -->
+		<set name="icon" val="icon.sign_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="recipe_id" val="867" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="9164" type="EtcItem" name="Orange Philosopher's Stone Transmutation Circle">
+		<!-- Usable by all races. Double-click to add the Orange Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item - Level 1. The success rate is 100%. -->
+		<set name="icon" val="icon.sign_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="recipe_id" val="868" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="9165" type="EtcItem" name="Black Philosopher's Stone Transmutation Circle">
+		<!-- Usable by all races. Double-click to add the Black Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item - Level 1. The success rate is 100%. -->
+		<set name="icon" val="icon.sign_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="recipe_id" val="869" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="9166" type="EtcItem" name="White Philosopher's Stone Transmutation Circle">
+		<!-- Usable by all races. Double-click to add the White Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item - Level 1. The success rate is 100%. -->
+		<set name="icon" val="icon.sign_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="recipe_id" val="870" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="9167" type="EtcItem" name="Green Philosopher's Stone Transmutation Circle">
+		<!-- Usable by all races. Double-click to add the Green Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item - Level 1. The success rate is 100%. -->
+		<set name="icon" val="icon.sign_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="recipe_id" val="871" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="9168" type="EtcItem" name="Philosopher's Stone Ore">
+		<!-- A material used to create a colored Philosopher's Stone. -->
+		<set name="icon" val="icon.stone_piece_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="9169" type="EtcItem" name="Philosopher's Stone Conversion Formula">
+		<!-- A material used to create a colored Philosopher's Stone. -->
+		<set name="icon" val="icon.trans_form_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="9170" type="EtcItem" name="Magic Reagents">
+		<!-- A material used to create a colored Philosopher's Stone. -->
+		<set name="icon" val="icon.madicine_bottle_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="9171" type="EtcItem" name="Red Philosopher's Stone">
+		<!-- Double-click to get a random item. -->
+		<set name="icon" val="icon.wise_man_stone_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2323" level="1" /> <!-- Red Sage's Stone -->
+		</skills>
+	</item>
+	<item id="9172" type="EtcItem" name="Blue Philosopher's Stone">
+		<!-- Double-click to get a random item. -->
+		<set name="icon" val="icon.wise_man_stone_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2324" level="1" /> <!-- Blue Sage's Stone -->
+		</skills>
+	</item>
+	<item id="9173" type="EtcItem" name="Orange Philosopher's Stone">
+		<!-- Double-click to get a random item. -->
+		<set name="icon" val="icon.wise_man_stone_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2325" level="1" /> <!-- Orange Sage's Stone -->
+		</skills>
+	</item>
+	<item id="9174" type="EtcItem" name="Black Philosopher's Stone">
+		<!-- Double-click to get a random item. -->
+		<set name="icon" val="icon.wise_man_stone_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2326" level="1" /> <!-- Black Sage's Stone -->
+		</skills>
+	</item>
+	<item id="9175" type="EtcItem" name="White Philosopher's Stone">
+		<!-- Double-click to get a random item. -->
+		<set name="icon" val="icon.wise_man_stone_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2327" level="1" /> <!-- White Sage's Stone -->
+		</skills>
+	</item>
+	<item id="9176" type="EtcItem" name="Green Philosopher's Stone">
+		<!-- Double-click to get a random item. -->
+		<set name="icon" val="icon.wise_man_stone_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2328" level="1" /> <!-- Green Sage's Stone -->
+		</skills>
+	</item>
+	<item id="9177" type="Armor" name="Shadow Item - Teddy Bear Hat - Resurrection">
+		<!-- A fun, bear-shaped shadow-type hair accessory. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_bear_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3263" level="1" /> <!-- Blessed Resurrection -->
+		</skills>
+	</item>
+	<item id="9178" type="Armor" name="Shadow Item - Piggy Hat - Resurrection">
+		<!-- A fun, piggy-shaped shadow-type hair accessory. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_pig_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3263" level="1" /> <!-- Blessed Resurrection -->
+		</skills>
+	</item>
+	<item id="9179" type="Armor" name="Shadow Item - Jester Hat - Resurrection">
+		<!-- A festive, shadow-type jester hat with 2 points. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_jester_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3263" level="1" /> <!-- Blessed Resurrection -->
+		</skills>
+	</item>
+	<item id="9180" type="Armor" name="Shadow Item - Wizard Hat - Resurrection">
+		<!-- A shadow-type wizard hat with a wide brim and bent tip. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_magic_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3263" level="1" /> <!-- Blessed Resurrection -->
+		</skills>
+	</item>
+	<item id="9181" type="Armor" name="Shadow Item - Dapper Cap - Resurrection">
+		<!-- A shadow-type hair accessory with a visor. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_dandy_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3263" level="1" /> <!-- Blessed Resurrection -->
+		</skills>
+	</item>
+	<item id="9182" type="Armor" name="Shadow Item - Romantic Chapeau - Resurrection">
+		<!-- A shadow-type hair accessory adorned with feathers. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3263" level="1" /> <!-- Blessed Resurrection -->
+		</skills>
+	</item>
+	<item id="9183" type="Armor" name="Shadow Item - Iron Circlet - Resurrection">
+		<!-- A shadow-type hair accessory made of iron. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_iron_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3263" level="1" /> <!-- Blessed Resurrection -->
+		</skills>
+	</item>
+	<item id="9184" type="Armor" name="Shadow Item - Teddy Bear Hat - Blessed Escape">
+		<!-- A fun, bear-shaped shadow-type hair accessory. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_bear_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3264" level="1" /> <!-- Blessed Escape -->
+		</skills>
+	</item>
+	<item id="9185" type="Armor" name="Shadow Item - Piggy Hat - Blessed Escape">
+		<!-- A fun, piggy-shaped shadow-type hair accessory. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_pig_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3264" level="1" /> <!-- Blessed Escape -->
+		</skills>
+	</item>
+	<item id="9186" type="Armor" name="Shadow Item - Jester Hat - Blessed Escape">
+		<!-- A festive, shadow-type jester hat with 2 points. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_jester_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3264" level="1" /> <!-- Blessed Escape -->
+		</skills>
+	</item>
+	<item id="9187" type="Armor" name="Shadow Item - Wizard Hat - Blessed Escape">
+		<!-- A shadow-type wizard hat with a wide brim and bent tip. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_magic_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3264" level="1" /> <!-- Blessed Escape -->
+		</skills>
+	</item>
+	<item id="9188" type="Armor" name="Shadow Item - Dapper Cap - Blessed Escape">
+		<!-- A shadow-type hair accessory with a visor. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_dandy_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3264" level="1" /> <!-- Blessed Escape -->
+		</skills>
+	</item>
+	<item id="9189" type="Armor" name="Shadow Item - Romantic Chapeau - Blessed Escape">
+		<!-- A shadow-type hair accessory adorned with feathers. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3264" level="1" /> <!-- Blessed Escape -->
+		</skills>
+	</item>
+	<item id="9190" type="Armor" name="Shadow Item - Iron Circlet - Blessed Escape">
+		<!-- A shadow-type hair accessory made of iron. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_iron_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="30" />
+		<skills>
+			<skill id="3264" level="1" /> <!-- Blessed Escape -->
+		</skills>
+	</item>
+	<item id="9191" type="Armor" name="Shadow Item - Teddy Bear Hat - Big Head">
+		<!-- A fun, bear-shaped shadow-type hair accessory. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_bear_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="10" />
+		<skills>
+			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
+		</skills>
+	</item>
+	<item id="9192" type="Armor" name="Shadow Item - Piggy Hat - Big Head">
+		<!-- A fun, piggy-shaped shadow-type hair accessory. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_pig_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="10" />
+		<skills>
+			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
+		</skills>
+	</item>
+	<item id="9193" type="Armor" name="Shadow Item - Jester Hat - Big Head">
+		<!-- A festive, shadow-type jester hat with 2 points. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_jester_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="10" />
+		<skills>
+			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
+		</skills>
+	</item>
+	<item id="9194" type="Armor" name="Shadow Item - Wizard Hat - Big Head">
+		<!-- A shadow-type wizard hat with a wide brim and bent tip. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_magic_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="10" />
+		<skills>
+			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
+		</skills>
+	</item>
+	<item id="9195" type="Armor" name="Shadow Item - Dapper Cap - Big Head">
+		<!-- A shadow-type hair accessory with a visor. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_dandy_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="10" />
+		<skills>
+			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
+		</skills>
+	</item>
+	<item id="9196" type="Armor" name="Shadow Item - Romantic Chapeau - Big Head">
+		<!-- A shadow-type hair accessory adorned with feathers. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="10" />
+		<skills>
+			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
+		</skills>
+	</item>
+	<item id="9197" type="Armor" name="Shadow Item - Iron Circlet - Big Head">
+		<!-- A shadow-type hair accessory made of iron. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_iron_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="10" />
+		<skills>
+			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
+		</skills>
+	</item>
+	<item id="9198" type="Armor" name="Shadow Item - Teddy Bear Hat - Firework">
+		<!-- A fun, bear-shaped shadow-type hair accessory. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_bear_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="5" />
+		<skills>
+			<skill id="3266" level="1" /> <!-- Large Fireworks Ability -->
+		</skills>
+	</item>
+	<item id="9199" type="Armor" name="Shadow Item - Piggy Hat - Firework">
+		<!-- A fun, piggy-shaped shadow-type hair accessory. Uses 2 hair accessory slots. An event hair accessory that grants a magical effect. This item cannot be exchanged, dropped, or sold. -->
+		<set name="icon" val="icon.accessory_pig_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="300" />
+		<set name="useSkillDisTime" val="5" />
+		<skills>
+			<skill id="3266" level="1" /> <!-- Large Fireworks Ability -->
+		</skills>
+	</item>
+</list>

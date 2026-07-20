@@ -1,0 +1,2168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="14800" level="51" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_action01" value="1087" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1617.457556" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.13207" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="204.85194" magical="149.90176" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="3" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14801" level="60" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2126.564484" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="481.34551" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="4" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14802" level="64" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2356.003397" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="4" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14803" level="68" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2580.343678" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="209.54692" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14804" level="72" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2794.168641" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14805" level="76" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2991.977472" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14806" level="78" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="860.08905" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14807" level="78" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="864.3681" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14808" level="78" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="868.64715" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14809" level="78" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="872.9262" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14810" level="78" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="877.20525" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14811" level="78" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="881.4843" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14812" level="78" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="885.76335" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14813" level="78" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="890.0424" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14814" level="78" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.32145" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14815" level="79" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="898.6005" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14816" level="79" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="902.87955" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14817" level="79" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="907.1586" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14818" level="79" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="911.43765" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14819" level="79" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="915.7167" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14820" level="79" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="919.99575" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14821" level="79" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="924.2748" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14822" level="79" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="928.55385" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14823" level="79" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="932.8329" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14824" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="937.11195" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14825" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="941.391" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14826" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="945.67005" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14827" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="949.9491" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14828" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="954.22815" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14829" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="958.5072" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14830" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="962.78625" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14831" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="967.0653" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14832" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="971.34435" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14833" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="975.6234" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14834" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="979.90245" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14835" level="80" type="Pet" name="Dark Panther">
+		<parameters>
+			<param name="step_skill_target01" value="0" />
+			<param name="step_skill_target02" value="0" />
+			<param name="step_skill_target03" value="0" />
+			<param name="step_skill_target04" value="1" />
+			<param name="step_action01" value="1087" />
+			<param name="step_action02" value="1088" />
+			<param name="step_action03" value="1086" />
+			<param name="step_action04" value="1085" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="984.1815" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
+			<speed>
+				<walk ground="25" />
+				<run ground="150" />
+			</speed>
+			<hitTime>200</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+		</skillList>
+		<shots soul="5" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="7" />
+			<height normal="13" />
+		</collision>
+	</npc>
+	<npc id="14836" level="80" type="Pet" name="Feline King">
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5135" level="1" /> <!-- Slash -->
+			<skill name="PhysicalSpecial2" id="5136" level="1" /> <!-- Spin Slash -->
+			<skill name="PhysicalSpecial3" id="5137" level="1" /> <!-- Hold of King -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="6" />
+			<attack physical="894.75854" magical="611.00409" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!-- HP High -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+			<skill id="5135" level="1" /> <!-- Slash -->
+			<skill id="5136" level="1" /> <!-- Spin Slash -->
+			<skill id="5137" level="1" /> <!-- Hold of King -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.0055" />
+		</collision>
+	</npc>
+	<npc id="14837" level="80" type="Pet" name="Magnus the Unicorn">
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5138" level="1" /> <!-- Whiplash -->
+			<skill name="PhysicalSpecial2" id="5139" level="1" /> <!-- Tidal Wave -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="6" />
+			<attack physical="894.75854" magical="611.00409" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!-- HP High -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+			<skill id="5138" level="1" /> <!-- Whiplash -->
+			<skill id="5139" level="1" /> <!-- Tidal Wave -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="13.5" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="14838" level="80" type="Pet" name="Spectral Lord">
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5142" level="1" /> <!-- Corpse Kaboom -->
+			<skill name="PhysicalSpecial2" id="5141" level="1" /> <!-- Dicing Death -->
+			<skill name="PhysicalSpecial3" id="5140" level="1" /> <!-- Dark Curse -->
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="6" />
+			<attack physical="894.75854" magical="611.00409" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<speed>
+				<walk ground="160" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="4" /> <!-- HP High -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+			<skill id="5140" level="1" /> <!-- Force Curse -->
+			<skill id="5141" level="1" /> <!-- Dicing Death -->
+			<skill id="5142" level="1" /> <!-- Corpse Kaboom -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="14839" level="68" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="12.475" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="837" magical="674" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="5110" level="1" /> <!-- Cannon Fodder -->
+			<skill id="5111" level="1" /> <!-- Big Bang -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14840" level="69" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="12.32" magical="291.04" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="880.38" magical="825.94" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14841" level="70" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11.44" magical="256.8" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="827.82" magical="731.16" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14842" level="71" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11.44" magical="256.8" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="827.82" magical="731.16" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14843" level="72" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11.44" magical="256.8" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="827.82" magical="731.16" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14844" level="73" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11.44" magical="256.8" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="827.82" magical="731.16" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14845" level="74" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11.44" magical="256.8" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="827.82" magical="731.16" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14846" level="75" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11.44" magical="256.8" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="827.82" magical="731.16" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14847" level="76" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11.44" magical="256.8" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="827.82" magical="731.16" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14848" level="77" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11.44" magical="256.8" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="827.82" magical="731.16" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14849" level="78" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11.44" magical="256.8" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="827.82" magical="731.16" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14850" level="79" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11.44" magical="256.8" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="827.82" magical="731.16" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14851" level="80" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="13.8353869" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="837" magical="674" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="5110" level="1" /> <!-- Cannon Fodder -->
+			<skill id="5111" level="1" /> <!-- Big Bang -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14852" level="81" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="14.3796875" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="837" magical="674" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="5110" level="1" /> <!-- Cannon Fodder -->
+			<skill id="5111" level="1" /> <!-- Big Bang -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14853" level="82" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14854" level="83" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14855" level="84" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14856" level="85" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14857" level="86" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14858" level="87" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14859" level="88" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14860" level="89" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14861" level="90" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14862" level="91" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14863" level="92" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14864" level="93" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14865" level="94" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14866" level="95" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14867" level="96" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14868" level="97" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="14869" level="98" type="Servitor" name="Swoop Cannon">
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="11" magical="231.12" random="50" critical="4" accuracy="9" attackSpeed="150" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="788.4" magical="636.38" />
+			<speed>
+				<walk ground="60" />
+				<run ground="40" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" isAggressive="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+</list>

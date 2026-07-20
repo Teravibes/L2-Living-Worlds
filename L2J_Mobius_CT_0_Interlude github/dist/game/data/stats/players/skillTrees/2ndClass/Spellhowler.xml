@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Spellhowler -->
+	<skillTree type="classSkillTree" classId="40" parentClassId="39">
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="10" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="11" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="12" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="9" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="10" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="11" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="13" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="14" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="15" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="10" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="11" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="12" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="9" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="10" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="1" getLevel="40" levelUpSp="14000" learnedByNpc="true">
+			<item id="3067" count="1" /> <!-- Spellbook: Vampiric Claw -->
+		</skill>
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="2" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="1" getLevel="40" levelUpSp="14000" learnedByNpc="true">
+			<item id="3090" count="1" /> <!-- Spellbook: Hurricane -->
+		</skill>
+		<skill skillName="Hurricane" skillId="1239" skillLevel="2" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="3" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLevel="2" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="1" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="4" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="2" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="1" getLevel="40" levelUpSp="28000" learnedByNpc="true">
+			<item id="3064" count="1" /> <!-- Spellbook: Silence -->
+		</skill>
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="3" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="2" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="1" getLevel="40" levelUpSp="28000" learnedByNpc="true">
+			<item id="4909" count="1" /> <!-- Spellbook: Shadow Flare -->
+		</skill>
+		<skill skillName="Body To Mind" skillId="1157" skillLevel="2" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="1" getLevel="40" levelUpSp="28000" learnedByNpc="true">
+			<item id="3074" count="1" /> <!-- Spellbook: Surrender to Wind -->
+		</skill>
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="1" getLevel="40" levelUpSp="28000" learnedByNpc="true">
+			<item id="3062" count="1" /> <!-- Spellbook: Curse Fear -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="14" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="15" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="12" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="14" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="16" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="17" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="18" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="11" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="12" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="14" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="15" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="3" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="4" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="3" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="4" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="2" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="3" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="5" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="3" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="2" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="4" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="1" getLevel="44" levelUpSp="37000" learnedByNpc="true">
+			<item id="3065" count="1" /> <!-- Spellbook: Death Spike -->
+		</skill>
+		<skill skillName="Slow" skillId="1160" skillLevel="3" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="2" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Curse: Poison" skillId="1168" skillLevel="4" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="2" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="2" getLevel="44" levelUpSp="37000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="17" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="18" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="15" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="17" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="19" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="20" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="21" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="17" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="18" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="13" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="14" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="5" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="6" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="5" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="6" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="1" getLevel="48" levelUpSp="29000" learnedByNpc="true">
+			<item id="3089" count="1" /> <!-- Spellbook: Tempest -->
+		</skill>
+		<skill skillName="Tempest" skillId="1176" skillLevel="2" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="4" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Quick Recovery" skillId="164" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="2" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="6" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="4" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="5" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="2" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="4" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Poisonous Cloud" skillId="1167" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="19" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="20" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="21" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="18" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="19" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="20" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="22" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="23" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="24" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="19" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="20" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="21" getLevel="52" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="15" getLevel="52" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="16" getLevel="52" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="7" getLevel="52" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="8" getLevel="52" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="7" getLevel="52" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="8" getLevel="52" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="3" getLevel="52" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="4" getLevel="52" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="1" getLevel="52" levelUpSp="41000" learnedByNpc="true">
+			<item id="3066" count="1" /> <!-- Spellbook: Curse Death Link -->
+		</skill>
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="2" getLevel="52" levelUpSp="41000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="3" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="4" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="7" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="5" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="4" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="6" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="3" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="5" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="4" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Curse: Poison" skillId="1168" skillLevel="5" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Body To Mind" skillId="1157" skillLevel="3" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="4" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="4" getLevel="52" levelUpSp="82000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="23" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="24" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="21" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="23" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="25" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="26" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="27" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="23" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="24" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="17" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="18" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="9" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="10" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="9" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="10" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="5" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="6" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="3" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="4" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLevel="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="8" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="6" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="7" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="4" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="6" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Poisonous Cloud" skillId="1167" skillLevel="4" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="25" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="26" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="24" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="25" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="28" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="29" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="11" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="12" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="25" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="26" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="11" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="12" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="5" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="6" getLevel="58" levelUpSp="53000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="19" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="4" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="7" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="9" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="7" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="6" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="8" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="5" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="7" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="6" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Body To Mind" skillId="1157" skillLevel="4" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="6" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="6" getLevel="58" levelUpSp="105000" learnedByNpc="true" />
+		<skill skillName="Aura Flash" skillId="1417" skillLevel="1" getLevel="58" levelUpSp="105000" learnedByNpc="true">
+			<item id="8891" count="1" /> <!-- Spellbook: Aura Flash -->
+		</skill>
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="27" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="28" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="26" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="27" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="30" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="31" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="13" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="14" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="27" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="28" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="13" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="14" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="7" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="8" getLevel="60" levelUpSp="75000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="20" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="6" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="5" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="8" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="10" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="8" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="7" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="9" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="6" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="8" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="7" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="7" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="7" getLevel="60" levelUpSp="150000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="30" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="28" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="32" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="33" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="15" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="16" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="30" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="15" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="16" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="9" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="10" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="21" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="4" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="9" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="11" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="9" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="8" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="10" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="7" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="9" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="8" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Curse: Poison" skillId="1168" skillLevel="6" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="8" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="8" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Aura Flash" skillId="1417" skillLevel="2" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="32" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="30" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="34" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="35" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="17" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="18" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="32" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="17" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="18" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="11" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="12" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="22" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="10" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="12" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="10" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="9" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="11" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="8" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="10" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="9" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Poisonous Cloud" skillId="1167" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="9" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="9" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="34" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="32" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="36" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="37" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="19" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="20" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="34" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="19" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="20" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="13" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="14" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="23" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="7" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="11" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="13" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="11" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="10" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="12" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="9" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="11" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="10" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Seed of Wind" skillId="1287" skillLevel="1" getLevel="66" levelUpSp="320000" learnedByNpc="true">
+			<item id="4930" count="1" /> <!-- Spellbook: Seed of Wind -->
+		</skill>
+		<skill skillName="Body To Mind" skillId="1157" skillLevel="5" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="10" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="10" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Aura Flash" skillId="1417" skillLevel="3" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="36" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="34" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="38" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="39" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="21" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="22" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="36" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="21" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="22" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="15" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="16" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="24" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="6" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="5" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="12" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="14" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="12" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="11" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="13" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="10" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="12" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="11" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Aura Symphony" skillId="1288" skillLevel="1" getLevel="68" levelUpSp="370000" learnedByNpc="true">
+			<item id="4931" count="1" /> <!-- Spellbook: Aura Symphony -->
+		</skill>
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="11" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="11" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="37" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="38" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="36" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="37" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="40" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="41" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="23" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="24" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="37" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="38" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="23" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="24" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="17" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="18" getLevel="70" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="25" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="13" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="15" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="13" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="12" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="14" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="11" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="13" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="12" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Demon Wind" skillId="1291" skillLevel="1" getLevel="70" levelUpSp="470000" learnedByNpc="true">
+			<item id="4934" count="1" /> <!-- Spellbook: Demon Wind -->
+		</skill>
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="12" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="12" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Aura Flash" skillId="1417" skillLevel="4" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="39" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="40" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="38" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="39" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="42" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="43" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="25" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="26" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="39" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="40" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="25" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="26" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="14" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="19" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="20" getLevel="72" levelUpSp="360000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="26" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLevel="8" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="16" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="14" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="13" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="15" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="12" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="14" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="13" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Elemental Storm" skillId="1294" skillLevel="1" getLevel="72" levelUpSp="710000" learnedByNpc="true">
+			<item id="5015" count="1" /> <!-- Spellbook: Elemental Storm -->
+		</skill>
+		<skill skillName="Curse: Poison" skillId="1168" skillLevel="7" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="13" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="13" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLevel="42" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="40" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLevel="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="44" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLevel="45" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="27" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Vampiric Claw" skillId="1234" skillLevel="28" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Sleep" skillId="1069" skillLevel="42" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="27" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Hurricane" skillId="1239" skillLevel="28" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="21" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Curse Death Link" skillId="1159" skillLevel="22" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Tempest" skillId="1176" skillLevel="15" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Surrender To Poison" skillId="1224" skillLevel="17" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="27" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLevel="6" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLevel="7" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLevel="6" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Curse Chaos" skillId="1222" skillLevel="15" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Silence" skillId="1064" skillLevel="14" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Corpse Life Drain" skillId="1151" skillLevel="16" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Death Spike" skillId="1148" skillLevel="13" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Slow" skillId="1160" skillLevel="15" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Shadow Flare" skillId="1267" skillLevel="14" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Poisonous Cloud" skillId="1167" skillLevel="6" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Surrender To Wind" skillId="1074" skillLevel="14" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Curse Fear" skillId="1169" skillLevel="14" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Aura Flash" skillId="1417" skillLevel="5" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+	</skillTree>
+</list>

@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Effects of %targetName%</title>
+	</head>
+	<body>
+		<table width="100%">
+			<tr>
+				<td width=45>
+					<button value="Main" action="bypass admin_admin" width=45 height=15 back="sek.cbui94" fore="sek.cbui92">
+				</td>
+				<td width=180>
+					<center><font color="LEVEL">Effects of %targetName%</font></center>
+				</td>
+				<td width=45>
+					<button value="Back" action="bypass admin_getbuffs" width=45 height=15 back="sek.cbui94" fore="sek.cbui92">
+				</td>
+				<td width=15></td>
+			</tr>
+		</table>
+		<br>
+		<table width="100%">
+			<tr>
+				<td width=80>Effect</td>
+				<td width=25>Time</td>
+			</tr>
+		</table>
+		<table><tr><td><img src="L2UI.SquareGray" height=1 width=295></td></tr></table>
+			%buffs%
+		<br>%pages%<br>
+		<center>
+		<button value="Blocked Effects" action="bypass admin_viewblockedeffects %targetObjId%" width="95" height="21" back="bigbutton_over" fore="bigbutton"><br>
+		<button value="Remove All" action="bypass admin_stopallbuffs %targetObjId%" width="95" height="21" back="bigbutton_over" fore="bigbutton"><br>
+		<br>
+		Total effect count: %effectSize%
+		</center>
+	</body>
+</html>

@@ -1,0 +1,1263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="3200" levels="3" name="Item Skill: Spell Refresh">
+		<!-- Active: Temporarily decreases the re-use time for magic skills. -->
+		<table name="#effectPoints">549 611 655</table>
+		<table name="#magicLevel">55 64 75</table>
+		<table name="#mpConsume">43 49 55</table>
+		<table name="#mpInitialConsume">11 13 14</table>
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<effectPoint>#effectPoints</effectPoint>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>180000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mReuse">0.85</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3201" levels="3" name="Item Skill: Music Refresh">
+		<!-- Active: Temporarily decreases the re-use time for song/dance skills. -->
+		<table name="#effectPoints">549 611 655</table>
+		<table name="#magicLevel">55 64 75</table>
+		<table name="#mpConsume">43 49 55</table>
+		<table name="#mpInitialConsume">11 13 14</table>
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<effectPoint>#effectPoints</effectPoint>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>180000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="dReuse">0.85</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3202" levels="3" name="Item Skill: Refresh">
+		<!-- Active: Temporarily decreases the re-use times for all skills. -->
+		<table name="#effectPoints">549 611 655</table>
+		<table name="#magicLevel">55 64 75</table>
+		<table name="#mpConsume">43 49 55</table>
+		<table name="#mpInitialConsume">11 13 14</table>
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<effectPoint>#effectPoints</effectPoint>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>180000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mReuse">0.85</mul>
+				<mul stat="pReuse">0.85</mul>
+				<mul stat="dReuse">0.85</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3203" levels="1" name="Item Skill: Mystery Skill">
+		<!-- Active: Increases your head size. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>0</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<activateRate>0</activateRate>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>10</mpConsume>
+		<reuseDelay>180000</reuseDelay>
+		<trait>ETC</trait>
+		<effects>
+			<effect name="Buff" />
+		</effects>
+	</skill>
+	<skill id="3204" levels="3" name="Item Skill: Reflect Damage">
+		<!-- Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks. -->
+		<table name="#abnormalLevels">1 2 3</table>
+		<table name="#effectPoints">379 438 495</table>
+		<table name="#magicLevel">55 64 75</table>
+		<table name="#mpConsume">20 24 28</table>
+		<table name="#mpInitialConsume">5 6 7</table>
+		<table name="#reflectDam">10 15 20</table>
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<effectPoint>#effectPoints</effectPoint>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>180000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<add stat="reflectDam">#reflectDam</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3205" levels="2" name="Item Skill: Party Recall">
+		<!-- Active: Teleports party members to a village. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<table name="#hitTime">20000 3500</table>
+		<table name="#magicLevel">48 56</table>
+		<table name="#mpConsume">171 244</table>
+		<table name="#mpInitialConsume">43 61</table>
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<targetType>PARTY</targetType>
+		<affectRange>1000</affectRange>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>#hitTime</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>180000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3206" levels="10" name="Item Skill: Music">
+		<!-- Active: Plays music. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>180000</reuseDelay>
+	</skill>
+	<skill id="3207" levels="10" name="Item Skill: Heal">
+		<!-- Chance: Restores your HP by using attack rate. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>2</chance>
+				<skillId>5146</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Heal -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3208" levels="10" name="Item Skill: Blessed Body">
+		<!-- Chance: Increases maximum HP by using attack rate for a certain amount of time. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5147</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Blessed Body -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3209" levels="10" name="Item Skill: Prayer">
+		<!-- Chance: Increases the effect of HP recovery magic by using attack rate for a certain amount of time. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5148</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Prayer -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3210" levels="10" name="Item Skill: Recharge">
+		<!-- Chance: Restores your MP by using attack rate. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5149</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Recharge -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3211" levels="10" name="Item Skill: Blessed Soul">
+		<!-- Chance: Increases maximum MP when under attack for a certain amount of time. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5150</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Blessed Soul -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3212" levels="10" name="Item Skill: Mana Gain">
+		<!-- Chance: Increases the recharge recovery rate of MP when under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5151</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Mana Gain -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3213" levels="10" name="Item Skill: Ritual">
+		<!-- Chance: Restores CP when under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>2</chance>
+				<skillId>5152</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Ritual -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3214" levels="10" name="Item Skill: Cheer">
+		<!-- Chance: Increases maximum CP when under attack for a certain amount of time. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>2</chance>
+				<skillId>5153</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Cheer -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3215" levels="10" name="Item Skill: Might">
+		<!-- Chance: Increases P. Atk. when under attack temporarily. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5154</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Might -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3216" levels="10" name="Item Skill: Empower">
+		<!-- Chance: Increases M. Atk. when under attack temporarily. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5156</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Empower -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3217" levels="10" name="Item Skill: Duel Might">
+		<!-- Chance: Increases PVP P. Atk. when under attack temporarily. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5157</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Duel Might -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3218" levels="10" name="Item Skill: Shield">
+		<!-- Chance: Increases P. Def. when under attack temporarily. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5158</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Shield -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3219" levels="10" name="Item Skill: Magic Barrier">
+		<!-- Chance: Increases M. Def. when under attack temporarily. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5159</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Magic Barrier -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3220" levels="10" name="Item Skill: Duel Weakness">
+		<!-- Level 1: Chance: Decreases the opponent's PVP P. Atk. when you are under attack temporarily. -->
+		<!-- Level 2: Chance: Decreases the opponent's PVP P. Atk. when you are under attack temporarily. -->
+		<!-- Level 3: Chance: Decreases the opponent's PVP P. Atk. when you are under attack temporarily. -->
+		<!-- Level 4: Chance: Decreases the opponent's PVP P. Atk. when you are under attack temporarily. -->
+		<!-- Level 5: Chance: Decreases the opponent's PVP P. Atk. when you are under attack temporarily. -->
+		<!-- Level 6: Chance: Decreases the opponent's PVP P. Atk. when you are under attack temporarily. -->
+		<!-- Level 7: Chance: Decreases the opponent's PVP P. Atk. when you are under attack temporarily. -->
+		<!-- Level 8: Chance: Decreases the opponent's PVP P. Atk. when under attack temporarily. -->
+		<!-- Level 9: Chance: Decreases the opponent's PVP P. Atk. when under attack temporarily. -->
+		<!-- Level 10: Chance: Decreases the opponent's PVP P. Atk. when you are under attack temporarily. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5160</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Duel Weakness -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3221" levels="10" name="Item Skill: Agility">
+		<!-- Chance: Increases Evasion when under attack temporarily. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5161</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Agility -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3222" levels="10" name="Item Skill: Guidance">
+		<!-- Chance: Increases Accuracy when under attack temporarily. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5162</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Guidance -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3223" levels="10" name="Item Skill: Focus">
+		<!-- Chance: Increases the critical attack rate when under attack temporarily. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5163</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Focus -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3224" levels="10" name="Item Skill: Wild Magic">
+		<!-- Chance: Increases the critical attack rate of magic attacks when under attack temporarily. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5164</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Wild Magic -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3225" levels="10" name="Item Skill: Charm">
+		<!-- Chance: Decreases the enemy's urge to attack when you are under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<skillId>5165</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Charm -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3226" levels="10" name="Item Skill: Slow">
+		<!-- Chance: Momentarily decreases a target's speed when you are under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>2</chance>
+				<skillId>5166</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Slow -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3227" levels="10" name="Item Skill: Winter">
+		<!-- Chance: Momentarily decreases a target's Atk. Spd. when you are under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5167</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Winter -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3228" levels="10" name="Item Skill: Stun">
+		<!-- Chance: Momentarily throws the target into a state of shock when you are under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5168</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Stun -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3229" levels="10" name="Item Skill: Hold">
+		<!-- Chance: Momentarily throws the target into a state of hold when you are under attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5169</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Hold -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3230" levels="10" name="Item Skill: Sleep">
+		<!-- Chance: Momentarily throws the target into a state of sleep when you are under attack. The target cannot be affected by any additional sleep attacks while the effect lasts. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5170</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Sleep -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3231" levels="10" name="Item Skill: Paralyze">
+		<!-- Chance: Momentarily throws the target into a state of paralysis when you are under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5171</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Paralyze -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3232" levels="10" name="Item Skill: Medusa">
+		<!-- Chance: Momentarily throws the target into a petrified state when you are under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5172</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Medusa -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3233" levels="10" name="Item Skill: Fear">
+		<!-- Chance: Momentarily throws the target into a state of fear and causes him to flee when you are under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5173</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Fear -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3234" levels="10" name="Item Skill: Poison">
+		<!-- Level 1: Chance: Momentarily throws the target into a poisoned state when you are under attack. Effect 5. -->
+		<!-- Level 2: Chance: Momentarily throws the target into a poisoned state when you are under attack. Effect 5. -->
+		<!-- Level 3: Chance: Momentarily throws the target into a poisoned state when you are under attack. Effect 6. -->
+		<!-- Level 4: Chance: Momentarily throws the target into a poisoned state when you are under attack. Effect 6. -->
+		<!-- Level 5: Chance: Momentarily throws the target into a poisoned state when you are under attack. Effect 6. -->
+		<!-- Level 6: Chance: Momentarily throws the target into a poisoned state when you are under attack. Effect 7. -->
+		<!-- Level 7: Chance: Momentarily throws the target into a poisoned state when you are under attack. Effect 7. -->
+		<!-- Level 8: Chance: Momentarily throws the target into a poisoned state when you are under attack. Effect 7. -->
+		<!-- Level 9: Chance: Momentarily throws the target into a poisoned state when you are under attack. Effect 8. -->
+		<!-- Level 10: Chance: Momentarily throws the target into a poisoned state when you are under attack. Effect 8. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5174</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Poison -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3235" levels="10" name="Item Skill: Bleed">
+		<!-- Level 1: Chance: Momentarily throws the target into a bleeding state when you are under attack. Effect 5. -->
+		<!-- Level 2: Chance: Momentarily throws the target into a bleeding state when you are under attack. Effect 5. -->
+		<!-- Level 3: Chance: Momentarily throws the target into a bleeding state when you are under attack. Effect 6. -->
+		<!-- Level 4: Chance: Momentarily throws the target into a bleeding state when you are under attack. Effect 6. -->
+		<!-- Level 5: Chance: Momentarily throws the target into a bleeding state when you are under attack. Effect 6. -->
+		<!-- Level 6: Chance: Momentarily throws the target into a bleeding state when you are under attack. Effect 7. -->
+		<!-- Level 7: Chance: Momentarily throws the target into a bleeding state when you are under attack. Effect 7. -->
+		<!-- Level 8: Chance: Momentarily throws the target into a bleeding state when you are under attack. Effect 7. -->
+		<!-- Level 9: Chance: Momentarily throws the target into a bleeding state when you are under attack. Effect 8. -->
+		<!-- Level 10: Chance: Momentarily throws the target into a bleeding state when you are under attack. Effect 8. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5175</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Bleed -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3236" levels="10" name="Item Skill: Silence">
+		<!-- Chance: Momentarily blocks the target's magic skill when you are under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5176</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Silence -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3237" levels="10" name="Item Skill: Doom">
+		<!-- Chance: Momentarily blocks all of the target's physical and magic skills when you are under attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByDamageReceived">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<skillId>5177</skillId>
+				<skillLevel>#triggeredLevel</skillLevel> <!-- Doom -->
+				<targetType>ONE</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3238" levels="10" name="Item Skill: Prayer">
+		<!-- Passive: Increases the effect of HP recovery magic when equipped. -->
+		<table name="#gainHp">1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="healEffect">#gainHp</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3239" levels="10" name="Item Skill: Mana Gain">
+		<!-- Passive: Increases the recharge recovery rate of MP when equipped. -->
+		<table name="#gainMp">1.05 1.10 1.15 1.20 1.25 1.30 1.35 1.40 1.45 1.50</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="manaCharge">#gainMp</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3240" levels="10" name="Item Skill: Might">
+		<!-- Level 1: Passive: Increases P. Atk. when equipped -->
+		<!-- Level 2: Passive: Increases P. Atk. when equipped. -->
+		<!-- Level 3: Passive: Increases P. Atk. when equipped. -->
+		<!-- Level 4: Passive: Increases P. Atk. when equipped. -->
+		<!-- Level 5: Passive: Increases P. Atk. when equipped. -->
+		<!-- Level 6: Passive: Increases P. Atk. when equipped. -->
+		<!-- Level 7: Passive: Increases P. Atk. when equipped. -->
+		<!-- Level 8: Passive: Increases P. Atk. when equipped. -->
+		<!-- Level 9: Passive: Increases P. Atk. when equipped. -->
+		<!-- Level 10: Passive: Increases P. Atk. when equipped. -->
+		<table name="#pAtk">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtk">#pAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3241" levels="10" name="Item Skill: Empower">
+		<!-- Passive: Increases M. Atk. when equipped. -->
+		<table name="#mAtk">1.05 1.10 1.15 1.20 1.25 1.30 1.35 1.40 1.45 1.50</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtk">#mAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3243" levels="10" name="Item Skill: Duel Might">
+		<!-- Passive: Increases PVP P. Atk. when equipped. -->
+		<table name="#pAtk">1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pvpPhysDmg">#pAtk</mul>
+				<mul stat="pvpPhysSkillsDmg">#pAtk</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3244" levels="10" name="Item Skill: Shield">
+		<!-- Passive: Increases P. Def. when equipped. -->
+		<table name="#pDef">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">#pDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3245" levels="10" name="Item Skill: Magic Barrier">
+		<!-- Passive: Increases M. Def. when equipped. -->
+		<table name="#mDef">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mDef">#mDef</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3246" levels="10" name="Item Skill: Heal Empower">
+		<!-- Passive: Increases the power of HP recovery magic when equipped. -->
+		<table name="#healEffect">10 11 12 13 14 15 16 17 18 19</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="healEffect">#healEffect</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3247" levels="10" name="Item Skill: Agility">
+		<!-- Passive: Increases evasion when equipped. -->
+		<table name="#rEvas">0.4 0.8 1.2 1.6 2.0 2.4 2.8 3.2 3.6 4.0</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">#rEvas</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3248" levels="10" name="Item Skill: Guidance">
+		<!-- Passive: Increases accuracy when equipped. -->
+		<table name="#accCombat">0.4 0.8 1.2 1.6 2.0 2.4 2.8 3.2 3.6 4.0</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">#accCombat</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3249" levels="10" name="Item Skill: Focus">
+		<!-- Passive: Increases critical attack rate when equipped. -->
+		<table name="#critRate">1.05 1.10 1.15 1.20 1.25 1.30 1.35 1.40 1.45 1.50</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRate">#critRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3250" levels="10" name="Item Skill: Wild Magic">
+		<!-- Passive: Increases the critical attack rate of magic attacks when equipped. -->
+		<table name="#mCritRate">1.05 1.10 1.15 1.20 1.25 1.30 1.35 1.40 1.45 1.50</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mCritRate">#mCritRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3251" levels="10" name="Item Skill: Weight Limit">
+		<!-- Passive: Increases the weapon weight limit by 2 times when equipped. -->
+		<table name="#weightLimit">1.05 1.10 1.15 1.20 1.25 1.30 1.35 1.40 1.45 1.50</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="weightLimit">#weightLimit</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3252" levels="10" name="Item Skill: Kiss of Eva">
+		<!-- Passive: Increases lung capacity when equipped. -->
+		<table name="#breath">1.05 1.10 1.20 1.30 1.40 1.50 1.60 1.70 1.80 2</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="breath">#breath</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3253" levels="10" name="Item Skill: Acrobatics">
+		<!-- Passive: Increases the height from which you can jump without sustaining damage when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<sub stat="fall">60</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3254" levels="10" name="Item Skill: Iron Body">
+		<!-- Passive: Raises resistance to damage from falling when equipped. -->
+		<table name="#damageZoneVuln">0.95 0.90 0.85 0.80 0.75 0.70 0.65 0.60 0.55 0.50</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="damageZoneVuln">#damageZoneVuln</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3255" levels="3" name="Item Skill: Skill Clarity">
+		<!-- Passive: Decreases the MP consumption rate for physical skills when equipped. -->
+		<table name="#PhysicalMpConsumeRate">0.90 0.85 0.80</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="physicalMpConsumeRate">#PhysicalMpConsumeRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3256" levels="3" name="Item Skill: Spell Clarity">
+		<!-- Passive: Decreases the MP consumption rate for magic skills when equipped. -->
+		<table name="#MagicalMpConsumeRate">0.9 0.85 0.8</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate">#MagicalMpConsumeRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3257" levels="3" name="Item Skill: Music Clarity">
+		<!-- Passive: Decreases the MP consumption rate for song/dance skills when equipped. -->
+		<table name="#DanceMpConsumeRate">0.9 0.85 0.8</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="danceMpConsumeRate">#DanceMpConsumeRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3258" levels="3" name="Item Skill: Clarity">
+		<!-- Passive: Decreases the MP consumption rate for all skills when equipped. -->
+		<table name="#MagicalMpConsumeRate">0.96 0.93 0.9</table>
+		<table name="#PhysicalMpConsumeRate">0.9 0.85 0.8</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate">#MagicalMpConsumeRate</mul>
+				<mul stat="physicalMpConsumeRate">#PhysicalMpConsumeRate</mul>
+				<mul stat="danceMpConsumeRate">0.9</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3259" levels="3" name="Item Skill: Reflect Damage">
+		<!-- Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks. -->
+		<table name="#reflectDam">0.96 0.93 0.90</table>
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="reflectDam">#reflectDam</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3260" levels="1" name="Forgiveness">
+		<!-- Taps into the magic of the bow to fire a curse-removing bolt. -->
+		<icon>icon.skill3260</icon>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>500</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-1</effectPoint>
+		<effectRange>700</effectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>1</mpConsume>
+		<reuseDelay>3000</reuseDelay>
+		<conditions msgId="109">
+			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
+		</conditions>
+		<effects>
+			<effect name="StaticDamage">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3261" levels="1" name="Happiness">
+		<!-- Taps into the magic of the bow to fire a harmless bolt. Warning: If you use this skill against a monster, it will flag you for PvP. -->
+		<icon>icon.skill3260</icon>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>500</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>1</effectPoint>
+		<effectRange>700</effectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>1</mpConsume>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="3262" levels="1" name="Pardon">
+		<!-- Taps into the magic of the bow to fire two curse-removing bolts. There is a low chance that a targeted huge cursed pig will transform into a super huge cursed pig. -->
+		<icon>icon.skill3260</icon>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>500</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-1</effectPoint>
+		<effectRange>700</effectRange>
+		<hitTime>3200</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>1</mpConsume>
+		<reuseDelay>40000</reuseDelay>
+		<conditions msgId="109">
+			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
+		</conditions>
+		<effects>
+			<effect name="StaticDamage">
+				<power>200</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3263" levels="1" name="Blessed Resurrection">
+		<!-- Allows the use of Blessed Resurrection. -->
+		<operateType>A1</operateType>
+		<targetType>PC_BODY</targetType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>65</mpConsume>
+		<mpInitialConsume>17</mpInitialConsume>
+		<reuseDelay>3600000</reuseDelay>
+		<conditions>
+			<player canResurrect="true" />
+		</conditions>
+		<effects>
+			<effect name="Resurrection">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3264" levels="1" name="Blessed Escape">
+		<!-- Allows the use of Blessed Escape. -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>200</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<mpConsume>122</mpConsume>
+		<mpInitialConsume>31</mpInitialConsume>
+		<reuseDelay>3600000</reuseDelay>
+		<conditions msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3265" levels="1" name="Mysterious Ability">
+		<!-- Increases the size of your head. -->
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>0</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BIG_HEAD</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>3600000</reuseDelay>
+		<trait>ETC</trait>
+		<effects>
+			<effect name="Buff" />
+		</effects>
+	</skill>
+	<skill id="3266" levels="1" name="Large Fireworks Ability">
+		<!-- Allows the use of Large Fireworks. -->
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>3600000</reuseDelay>
+	</skill>
+</list>

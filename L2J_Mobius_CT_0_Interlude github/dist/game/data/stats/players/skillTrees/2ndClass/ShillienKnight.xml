@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Shillien Knight -->
+	<skillTree type="classSkillTree" classId="33" parentClassId="32">
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="9" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="10" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="11" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="16" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="17" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="18" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="15" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="16" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="17" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="13" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="14" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="15" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="1" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="2" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="3" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="17" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="18" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="19" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="13" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="14" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="15" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="3" getLevel="40" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="4" getLevel="40" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="1" getLevel="40" levelUpSp="26000" learnedByNpc="true">
+			<item id="4203" count="1" /> <!-- Spellbook: Life Leech -->
+		</skill>
+		<skill skillName="Shield Mastery" skillId="153" skillLevel="3" getLevel="40" levelUpSp="26000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="5" getLevel="40" levelUpSp="26000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="3" getLevel="40" levelUpSp="26000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="1" getLevel="40" levelUpSp="26000" learnedByNpc="true">
+			<item id="3050" count="1" /> <!-- Spellbook: Hex -->
+		</skill>
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="1" getLevel="40" levelUpSp="26000" learnedByNpc="true">
+			<item id="3041" count="1" /> <!-- Spellbook: Summon Phantom Cubic -->
+		</skill>
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="12" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="13" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="14" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="19" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="20" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="21" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="18" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="19" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="20" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="16" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="17" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="18" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="4" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="5" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="6" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="20" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="21" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="22" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="16" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="17" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="18" getLevel="43" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="5" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="6" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="2" getLevel="43" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Deflect Arrow" skillId="112" skillLevel="3" getLevel="43" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Focus Mind" skillId="191" skillLevel="2" getLevel="43" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Cubic Mastery" skillId="143" skillLevel="1" getLevel="43" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLevel="1" getLevel="43" levelUpSp="29000" learnedByNpc="true">
+			<item id="3040" count="1" /> <!-- Spellbook: Summon Vampiric Cubic -->
+		</skill>
+		<skill skillName="Confusion" skillId="2" skillLevel="6" getLevel="43" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="4" getLevel="43" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="2" getLevel="43" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Guard Stance" skillId="288" skillLevel="1" getLevel="43" levelUpSp="29000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="15" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="16" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="17" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="22" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="23" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="24" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="21" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="22" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="23" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="19" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="20" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="21" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="7" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="8" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="9" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="23" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="24" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="25" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="19" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="20" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="21" getLevel="46" levelUpSp="13000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="7" getLevel="46" levelUpSp="20000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="8" getLevel="46" levelUpSp="20000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="3" getLevel="46" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="7" getLevel="46" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="5" getLevel="46" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="3" getLevel="46" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="2" getLevel="46" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Ultimate Defense" skillId="110" skillLevel="2" getLevel="46" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Corpse Plague" skillId="103" skillLevel="1" getLevel="46" levelUpSp="40000" learnedByNpc="true">
+			<item id="3049" count="1" /> <!-- Spellbook: Corpse Plague -->
+		</skill>
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="18" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="19" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="20" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="25" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="26" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="27" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="24" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="25" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="26" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="22" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="23" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="24" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="10" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="11" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="12" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="26" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="27" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="28" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="22" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="23" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="24" getLevel="49" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="9" getLevel="49" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="10" getLevel="49" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="4" getLevel="49" levelUpSp="58000" learnedByNpc="true" />
+		<skill skillName="Deflect Arrow" skillId="112" skillLevel="4" getLevel="49" levelUpSp="58000" learnedByNpc="true" />
+		<skill skillName="Focus Mind" skillId="191" skillLevel="3" getLevel="49" levelUpSp="58000" learnedByNpc="true" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLevel="2" getLevel="49" levelUpSp="58000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="8" getLevel="49" levelUpSp="58000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="6" getLevel="49" levelUpSp="58000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="4" getLevel="49" levelUpSp="58000" learnedByNpc="true" />
+		<skill skillName="Poison" skillId="129" skillLevel="2" getLevel="49" levelUpSp="58000" learnedByNpc="true" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLevel="1" getLevel="49" levelUpSp="58000" learnedByNpc="true">
+			<item id="3054" count="1" /> <!-- Spellbook: Summon Viper Cubic -->
+		</skill>
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="21" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="22" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="23" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="28" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="29" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="30" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="27" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="28" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="29" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="25" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="26" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="27" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="13" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="14" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="15" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="29" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="30" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="31" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="25" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="26" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="27" getLevel="52" levelUpSp="31000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="11" getLevel="52" levelUpSp="47000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="12" getLevel="52" levelUpSp="47000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="5" getLevel="52" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="1" getLevel="52" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Shield Mastery" skillId="153" skillLevel="4" getLevel="52" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="3" getLevel="52" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="9" getLevel="52" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="7" getLevel="52" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="5" getLevel="52" levelUpSp="94000" learnedByNpc="true" />
+		<skill skillName="Guard Stance" skillId="288" skillLevel="2" getLevel="52" levelUpSp="94000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="24" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="25" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="26" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="31" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="32" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="33" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="30" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="31" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="32" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="28" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="29" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="30" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="16" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="17" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="18" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="32" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="33" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="34" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="28" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="29" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="30" getLevel="55" levelUpSp="37000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="13" getLevel="55" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="14" getLevel="55" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="6" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="2" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Focus Mind" skillId="191" skillLevel="4" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLevel="3" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Cubic Mastery" skillId="143" skillLevel="2" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLevel="2" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="10" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="8" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="6" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Judgment" skillId="401" skillLevel="1" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Arrest" skillId="402" skillLevel="1" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Banish Seraph" skillId="450" skillLevel="1" getLevel="55" levelUpSp="110000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="27" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="28" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="29" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="34" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="35" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="36" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="33" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="34" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="35" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="31" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="32" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="33" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="19" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="20" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="21" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="35" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="36" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="37" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="31" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="32" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="33" getLevel="58" levelUpSp="40000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="15" getLevel="58" levelUpSp="60000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="16" getLevel="58" levelUpSp="60000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="7" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="3" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="4" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="11" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="9" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="7" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Poison" skillId="129" skillLevel="3" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Corpse Plague" skillId="103" skillLevel="2" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Lightning Strike" skillId="279" skillLevel="1" getLevel="58" levelUpSp="120000" learnedByNpc="true">
+			<item id="3055" count="1" /> <!-- Spellbook: Lightning Strike -->
+		</skill>
+		<skill skillName="Judgment" skillId="401" skillLevel="2" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Arrest" skillId="402" skillLevel="2" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Banish Seraph" skillId="450" skillLevel="2" getLevel="58" levelUpSp="120000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="30" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="31" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="37" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="38" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="36" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="37" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="34" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="35" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="22" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="23" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="38" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="39" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="34" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="35" getLevel="60" levelUpSp="76000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="17" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="8" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="4" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLevel="4" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLevel="3" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="12" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="10" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="8" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Aegis" skillId="316" skillLevel="1" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Judgment" skillId="401" skillLevel="3" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Arrest" skillId="402" skillLevel="3" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+		<skill skillName="Banish Seraph" skillId="450" skillLevel="3" getLevel="60" levelUpSp="153000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="32" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="33" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="39" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="40" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="38" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="39" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="36" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="37" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="24" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="25" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="40" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="41" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="36" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="37" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="18" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="9" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="5" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="5" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Corpse Plague" skillId="103" skillLevel="3" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Lightning Strike" skillId="279" skillLevel="2" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="13" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="11" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="9" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Guard Stance" skillId="288" skillLevel="3" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Judgment" skillId="401" skillLevel="4" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Arrest" skillId="402" skillLevel="4" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+		<skill skillName="Banish Seraph" skillId="450" skillLevel="4" getLevel="62" levelUpSp="200000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="34" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="35" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="41" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="42" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="40" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="41" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="38" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="39" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="26" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="27" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="42" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="43" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="38" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="39" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="19" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="10" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="6" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLevel="4" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Focus Mind" skillId="191" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="14" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="12" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="10" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Shield Fortress" skillId="322" skillLevel="1" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Judgment" skillId="401" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Arrest" skillId="402" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Banish Seraph" skillId="450" skillLevel="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="36" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="37" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="43" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="44" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="42" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="43" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="40" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="41" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="28" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="29" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="44" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="45" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="40" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="41" getLevel="66" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="20" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="11" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="7" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="6" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Lightning Strike" skillId="279" skillLevel="3" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="15" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="13" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="11" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Poison" skillId="129" skillLevel="4" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Shield Fortress" skillId="322" skillLevel="2" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Judgment" skillId="401" skillLevel="6" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Arrest" skillId="402" skillLevel="6" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Banish Seraph" skillId="450" skillLevel="6" getLevel="66" levelUpSp="350000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="38" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="39" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="45" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="46" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="44" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="45" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="42" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="43" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="30" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="31" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="46" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="47" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="42" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="43" getLevel="68" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="21" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="12" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="8" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLevel="6" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLevel="5" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="16" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="14" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="12" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Shield Fortress" skillId="322" skillLevel="3" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Judgment" skillId="401" skillLevel="7" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Arrest" skillId="402" skillLevel="7" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+		<skill skillName="Banish Seraph" skillId="450" skillLevel="7" getLevel="68" levelUpSp="410000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="40" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="41" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="47" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="48" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="46" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="47" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="44" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="45" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="32" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="33" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="48" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="49" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="44" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="45" getLevel="70" levelUpSp="230000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="22" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="13" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="9" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="7" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Corpse Plague" skillId="103" skillLevel="4" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Lightning Strike" skillId="279" skillLevel="4" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="17" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="15" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="13" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Guard Stance" skillId="288" skillLevel="4" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Shield Fortress" skillId="322" skillLevel="4" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Judgment" skillId="401" skillLevel="8" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Arrest" skillId="402" skillLevel="8" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+		<skill skillName="Banish Seraph" skillId="450" skillLevel="8" getLevel="70" levelUpSp="470000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="42" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="43" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="49" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="50" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="48" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="49" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="46" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="47" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="34" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="35" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="50" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="51" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="46" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="47" getLevel="72" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="23" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="14" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="10" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLevel="7" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLevel="6" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Focus Mind" skillId="191" skillLevel="6" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="18" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="16" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="14" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Shield Fortress" skillId="322" skillLevel="5" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Judgment" skillId="401" skillLevel="9" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Arrest" skillId="402" skillLevel="9" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+		<skill skillName="Banish Seraph" skillId="450" skillLevel="9" getLevel="72" levelUpSp="600000" learnedByNpc="true" />
+
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="44" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Sword Blunt Mastery" skillId="217" skillLevel="45" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="51" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="52" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="50" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLevel="51" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="48" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Aggression" skillId="28" skillLevel="49" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="36" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Aura of Hate" skillId="18" skillLevel="37" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="52" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Drain Health" skillId="70" skillLevel="53" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="48" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Sting" skillId="223" skillLevel="49" getLevel="74" levelUpSp="650000" learnedByNpc="true" />
+		<skill skillName="Freezing Strike" skillId="105" skillLevel="24" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Life Leech" skillId="289" skillLevel="15" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Final Fortress" skillId="291" skillLevel="11" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="8" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Lightning Strike" skillId="279" skillLevel="5" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Confusion" skillId="2" skillLevel="19" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Power Break" skillId="115" skillLevel="17" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Hex" skillId="122" skillLevel="15" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Poison" skillId="129" skillLevel="5" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Shield Fortress" skillId="322" skillLevel="6" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Judgment" skillId="401" skillLevel="10" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Arrest" skillId="402" skillLevel="10" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+		<skill skillName="Banish Seraph" skillId="450" skillLevel="10" getLevel="74" levelUpSp="1300000" learnedByNpc="true" />
+	</skillTree>
+</list>

@@ -1,0 +1,14 @@
+<html><body>
+When an auction bid is canceled, the transaction tax (<font color="LEVEL">10% of the bid amount</font>) cannot be returned.<br>
+The bid price for this clan hall is <font color="aaccff">%AGIT_BID%</font> adena. After deducting the transaction tax, you can receive back the remaining <font color="aaccff">%AGIT_BID_REMAIN%</font> adena. Do you want to cancel your bid?
+<img src="L2UI.SquareBlank" width=270 height=10>
+<img src="L2UI.SquareWhite" width=270 height=1>
+<img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+<tr>
+<td width=110></td>
+<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="Back" width=75 height=21 back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normal"></td>
+<td width=80 align=center><button action="bypass -h npc_%objectId%_doCancelBid" value="Cancel Bidding" width=75 height=21 back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normal"></td>
+</tr>
+</table>
+</body></html>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn zone="dion02_2122_18">
+		<territory minZ="-3861" maxZ="-3061">
+			<node x="40084" y="144588" />
+			<node x="41708" y="146494" />
+			<node x="40872" y="147701" />
+			<node x="36518" y="147867" />
+			<node x="37570" y="145419" />
+			<node x="38709" y="144529" />
+		</territory>
+		<npc id="20223" count="2" respawnDelay="35" /> <!-- Mandragora Sprout -->
+		<npc id="20154" count="4" respawnDelay="35" /> <!-- Mandragora Sprout -->
+	</spawn>
+	<spawn zone="dion02_2122_19">
+		<territory minZ="-3894" maxZ="-3094">
+			<node x="41756" y="149052" />
+			<node x="41136" y="151006" />
+			<node x="40160" y="151658" />
+			<node x="38625" y="151563" />
+			<node x="36644" y="150004" />
+			<node x="36000" y="148753" />
+			<node x="40615" y="148333" />
+		</territory>
+		<npc id="20223" count="2" respawnDelay="35" /> <!-- Mandragora Sprout -->
+		<npc id="20154" count="4" respawnDelay="35" /> <!-- Mandragora Sprout -->
+	</spawn>
+	<spawn zone="dion02_2122_20s">
+		<territory minZ="-3960" maxZ="-3360">
+			<node x="40207" y="145191" />
+			<node x="41090" y="146457" />
+			<node x="40727" y="147323" />
+			<node x="38391" y="147509" />
+			<node x="38314" y="146511" />
+			<node x="39653" y="145086" />
+		</territory>
+		<npc id="20155" count="2" respawnDelay="35" /> <!-- Mandragora Sapling -->
+		<npc id="20156" count="3" respawnDelay="35" /> <!-- Mandragora Blossom -->
+	</spawn>
+	<spawn zone="dion02_2122_21s">
+		<territory minZ="-3960" maxZ="-3360">
+			<node x="40684" y="148647" />
+			<node x="41166" y="149292" />
+			<node x="40777" y="150866" />
+			<node x="39042" y="150811" />
+			<node x="37668" y="149673" />
+			<node x="38100" y="149070" />
+		</territory>
+		<npc id="20155" count="3" respawnDelay="35" /> <!-- Mandragora Sapling -->
+		<npc id="20156" count="2" respawnDelay="35" /> <!-- Mandragora Blossom -->
+	</spawn>
+	<spawn zone="dion02_2122_22">
+		<territory minZ="-3926" maxZ="-3326">
+			<node x="42496" y="145978" />
+			<node x="44081" y="145641" />
+			<node x="45769" y="150508" />
+			<node x="43954" y="151455" />
+			<node x="41966" y="151078" />
+		</territory>
+		<npc id="20201" count="5" respawnDelay="35" /> <!-- Ghoul -->
+		<npc id="20083" count="5" respawnDelay="35" /> <!-- Granite Golem -->
+		<npc id="20202" count="5" respawnDelay="35" /> <!-- Dead Seeker -->
+	</spawn>
+	<spawn zone="dion02_2122_23">
+		<territory minZ="-3383" maxZ="-2783">
+			<node x="42857" y="141840" />
+			<node x="45622" y="140341" />
+			<node x="49682" y="140637" />
+			<node x="43661" y="144493" />
+			<node x="42221" y="144692" />
+			<node x="41750" y="143115" />
+		</territory>
+		<npc id="20160" count="4" respawnDelay="35" /> <!-- Neer Crawler -->
+		<npc id="20198" count="4" respawnDelay="35" /> <!-- Neer Ghoul Berserker -->
+		<npc id="20199" count="6" respawnDelay="35" /> <!-- Amber Basilisk -->
+		<npc id="20200" count="6" respawnDelay="35" /> <!-- Strain -->
+	</spawn>
+	<spawn zone="dion02_2122_24">
+		<territory minZ="-3838" maxZ="-3238">
+			<node x="44744" y="145274" />
+			<node x="48911" y="142988" />
+			<node x="50804" y="145462" />
+			<node x="47162" y="146946" />
+			<node x="45026" y="146381" />
+		</territory>
+		<npc id="20083" count="4" respawnDelay="35" /> <!-- Granite Golem -->
+		<npc id="20202" count="4" respawnDelay="35" /> <!-- Dead Seeker -->
+		<npc id="20144" count="6" respawnDelay="35" /> <!-- Hangman Tree -->
+	</spawn>
+	<spawn zone="dion02_2122_25">
+		<territory minZ="-3838" maxZ="-3238">
+			<node x="44980" y="146491" />
+			<node x="47143" y="146996" />
+			<node x="48372" y="149913" />
+			<node x="46505" y="149937" />
+			<node x="45052" y="148251" />
+		</territory>
+		<npc id="20201" count="2" respawnDelay="35" /> <!-- Ghoul -->
+		<npc id="20083" count="2" respawnDelay="35" /> <!-- Granite Golem -->
+		<npc id="20202" count="2" respawnDelay="35" /> <!-- Dead Seeker -->
+	</spawn>
+	<spawn zone="dion02_2122_26">
+		<territory minZ="-3838" maxZ="-3238">
+			<node x="47199" y="146990" />
+			<node x="50752" y="145592" />
+			<node x="51469" y="146809" />
+			<node x="50099" y="148622" />
+			<node x="48427" y="149892" />
+		</territory>
+		<npc id="20201" count="3" respawnDelay="35" /> <!-- Ghoul -->
+		<npc id="20202" count="3" respawnDelay="35" /> <!-- Dead Seeker -->
+		<npc id="20144" count="3" respawnDelay="35" /> <!-- Hangman Tree -->
+	</spawn>
+	<spawn zone="dion02_2122_27">
+		<territory minZ="-2950" maxZ="-2450">
+			<node x="42902" y="152504" />
+			<node x="44936" y="152332" />
+			<node x="45636" y="153902" />
+			<node x="45367" y="154535" />
+			<node x="44044" y="155256" />
+		</territory>
+		<npc id="20199" count="2" respawnDelay="35" /> <!-- Amber Basilisk -->
+		<npc id="20200" count="2" respawnDelay="35" /> <!-- Strain -->
+		<npc id="20202" count="3" respawnDelay="35" /> <!-- Dead Seeker -->
+	</spawn>
+	<spawn zone="dion02_2122_29">
+		<territory minZ="-2946" maxZ="-2446">
+			<node x="45699" y="151349" />
+			<node x="48307" y="150431" />
+			<node x="50400" y="154088" />
+			<node x="47523" y="155433" />
+			<node x="46010" y="154313" />
+			<node x="44995" y="152326" />
+		</territory>
+		<npc id="20160" count="7" respawnDelay="35" /> <!-- Neer Crawler -->
+		<npc id="20198" count="7" respawnDelay="35" /> <!-- Neer Ghoul Berserker -->
+	</spawn>
+	<spawn zone="dion02_2122_30">
+		<territory minZ="-3636" maxZ="-3136">
+			<node x="48695" y="149982" />
+			<node x="49276" y="149854" />
+			<node x="50752" y="152014" />
+			<node x="50233" y="152340" />
+		</territory>
+		<npc id="20200" count="2" respawnDelay="35" /> <!-- Strain -->
+		<npc id="20202" count="1" respawnDelay="35" /> <!-- Dead Seeker -->
+	</spawn>
+	<spawn zone="dion02_2122_31">
+		<territory minZ="-3636" maxZ="-3136">
+			<node x="50625" y="152619" />
+			<node x="50943" y="152432" />
+			<node x="52288" y="154355" />
+			<node x="51244" y="155096" />
+		</territory>
+		<npc id="20200" count="2" respawnDelay="35" /> <!-- Strain -->
+		<npc id="20202" count="2" respawnDelay="35" /> <!-- Dead Seeker -->
+	</spawn>
+	<spawn zone="dion02_2122_32">
+		<territory minZ="-2582" maxZ="-2082">
+			<node x="55469" y="149586" />
+			<node x="56313" y="152034" />
+			<node x="54503" y="154048" />
+			<node x="53433" y="153653" />
+			<node x="50028" y="149894" />
+			<node x="52371" y="147614" />
+		</territory>
+		<npc id="20171" count="5" respawnDelay="35" /> <!-- Specter -->
+		<npc id="20197" count="4" respawnDelay="35" /> <!-- Sorrow Maiden -->
+		<npc id="20160" count="6" respawnDelay="35" /> <!-- Neer Crawler -->
+	</spawn>
+	<spawn zone="dion02_2122_33">
+		<territory minZ="-3253" maxZ="-2453">
+			<node x="51744" y="145023" />
+			<node x="56485" y="145730" />
+			<node x="56270" y="148733" />
+			<node x="52646" y="146960" />
+		</territory>
+		<npc id="20171" count="4" respawnDelay="35" /> <!-- Specter -->
+		<npc id="20197" count="5" respawnDelay="35" /> <!-- Sorrow Maiden -->
+	</spawn>
+	<spawn zone="dion02_2122_34">
+		<territory minZ="-3253" maxZ="-2553">
+			<node x="56056" y="142591" />
+			<node x="57137" y="144898" />
+			<node x="56736" y="145705" />
+			<node x="54656" y="145335" />
+		</territory>
+		<npc id="20171" count="3" respawnDelay="35" /> <!-- Specter -->
+		<npc id="20197" count="2" respawnDelay="35" /> <!-- Sorrow Maiden -->
+	</spawn>
+	<spawn zone="dion02_2122_35">
+		<territory minZ="-3241" maxZ="-2541">
+			<node x="55936" y="140654" />
+			<node x="56037" y="142496" />
+			<node x="55434" y="143702" />
+			<node x="54370" y="142282" />
+		</territory>
+		<npc id="20156" count="2" respawnDelay="35" /> <!-- Mandragora Blossom -->
+		<npc id="20171" count="2" respawnDelay="35" /> <!-- Specter -->
+	</spawn>
+	<spawn zone="dion02_2122_36">
+		<territory minZ="-3220" maxZ="-2520">
+			<node x="55871" y="140644" />
+			<node x="54432" y="142155" />
+			<node x="52211" y="142380" />
+			<node x="51821" y="141491" />
+			<node x="52875" y="140482" />
+		</territory>
+		<npc id="20156" count="2" respawnDelay="35" /> <!-- Mandragora Blossom -->
+		<npc id="20171" count="3" respawnDelay="35" /> <!-- Specter -->
+	</spawn>
+	<spawn zone="dion02_2122_37">
+		<territory minZ="-3284" maxZ="-2684">
+			<node x="51970" y="141788" />
+			<node x="52534" y="145286" />
+			<node x="51402" y="145031" />
+			<node x="50727" y="143813" />
+			<node x="51223" y="142359" />
+		</territory>
+		<npc id="20171" count="3" respawnDelay="35" /> <!-- Specter -->
+		<npc id="20197" count="2" respawnDelay="35" /> <!-- Sorrow Maiden -->
+	</spawn>
+	<spawn zone="dion02_2122_38s">
+		<territory minZ="-3767" maxZ="-3267">
+			<node x="42853" y="146471" />
+			<node x="43925" y="146306" />
+			<node x="44304" y="147633" />
+			<node x="42672" y="147706" />
+		</territory>
+		<npc id="20200" count="2" respawnDelay="35" /> <!-- Strain -->
+	</spawn>
+	<spawn zone="dion02_2122_39s">
+		<territory minZ="-3834" maxZ="-3334">
+			<node x="42663" y="149260" />
+			<node x="44673" y="149064" />
+			<node x="45296" y="150317" />
+			<node x="42804" y="150828" />
+		</territory>
+		<npc id="20201" count="2" respawnDelay="35" /> <!-- Ghoul -->
+	</spawn>
+	<spawn zone="dion02_2122_40s">
+		<territory minZ="-3805" maxZ="-3305">
+			<node x="45398" y="145106" />
+			<node x="47076" y="144403" />
+			<node x="48104" y="146247" />
+			<node x="46546" y="146341" />
+		</territory>
+		<npc id="20201" count="2" respawnDelay="35" /> <!-- Ghoul -->
+		<npc id="20144" count="2" respawnDelay="35" /> <!-- Hangman Tree -->
+	</spawn>
+	<spawn zone="dion02_2122_41s">
+		<territory minZ="-3802" maxZ="-3302">
+			<node x="47681" y="144020" />
+			<node x="48911" y="143887" />
+			<node x="50086" y="145330" />
+			<node x="48755" y="145724" />
+		</territory>
+		<npc id="20202" count="2" respawnDelay="35" /> <!-- Dead Seeker -->
+		<npc id="20144" count="2" respawnDelay="35" /> <!-- Hangman Tree -->
+	</spawn>
+	<spawn zone="dion02_2122_42s">
+		<territory minZ="-3831" maxZ="-3331">
+			<node x="45323" y="147125" />
+			<node x="46906" y="147752" />
+			<node x="47803" y="149189" />
+			<node x="46455" y="149499" />
+		</territory>
+		<npc id="20200" count="3" respawnDelay="35" /> <!-- Strain -->
+	</spawn>
+	<spawn zone="dion02_2122_43s">
+		<territory minZ="-3683" maxZ="-3183">
+			<node x="49251" y="146451" />
+			<node x="50449" y="146123" />
+			<node x="51130" y="147001" />
+			<node x="49994" y="148234" />
+		</territory>
+		<npc id="20144" count="3" respawnDelay="35" /> <!-- Hangman Tree -->
+	</spawn>
+	<spawn zone="dion02_2122_44s">
+		<territory minZ="-2923" maxZ="-2423">
+			<node x="45393" y="152293" />
+			<node x="45869" y="151501" />
+			<node x="47061" y="151446" />
+			<node x="46457" y="153897" />
+		</territory>
+		<npc id="20144" count="3" respawnDelay="35" /> <!-- Hangman Tree -->
+	</spawn>
+	<spawn zone="dion02_2122_45s">
+		<territory minZ="-2923" maxZ="-2423">
+			<node x="46917" y="153602" />
+			<node x="47305" y="151737" />
+			<node x="48169" y="151879" />
+			<node x="47785" y="153810" />
+		</territory>
+		<npc id="20202" count="2" respawnDelay="35" /> <!-- Dead Seeker -->
+	</spawn>
+	<spawn zone="dion02_2122_46s">
+		<territory minZ="-2923" maxZ="-2423">
+			<node x="47291" y="154950" />
+			<node x="46822" y="153717" />
+			<node x="49306" y="152389" />
+			<node x="49623" y="154238" />
+		</territory>
+		<npc id="20201" count="2" respawnDelay="35" /> <!-- Ghoul -->
+		<npc id="20198" count="2" respawnDelay="35" /> <!-- Neer Ghoul Berserker -->
+	</spawn>
+	<spawn zone="dion02_2122_47s">
+		<territory minZ="-3382" maxZ="-2882">
+			<node x="42840" y="144248" />
+			<node x="42175" y="142912" />
+			<node x="43578" y="141816" />
+			<node x="44281" y="143644" />
+		</territory>
+		<npc id="20144" count="2" respawnDelay="35" /> <!-- Hangman Tree -->
+	</spawn>
+	<spawn zone="dion02_2122_48s">
+		<territory minZ="-3382" maxZ="-2882">
+			<node x="44505" y="143300" />
+			<node x="43840" y="141964" />
+			<node x="45243" y="140869" />
+			<node x="45946" y="142696" />
+		</territory>
+		<npc id="20202" count="2" respawnDelay="35" /> <!-- Dead Seeker -->
+	</spawn>
+	<spawn zone="dion02_2122_49s">
+		<territory minZ="-3382" maxZ="-2882">
+			<node x="46453" y="142389" />
+			<node x="45613" y="140687" />
+			<node x="46892" y="140601" />
+			<node x="47951" y="141249" />
+		</territory>
+		<npc id="20200" count="2" respawnDelay="35" /> <!-- Strain -->
+	</spawn>
+	<spawn zone="dion02_2122_50s">
+		<territory minZ="-2584" maxZ="-2084">
+			<node x="51784" y="151099" />
+			<node x="51063" y="149673" />
+			<node x="52598" y="148486" />
+			<node x="54839" y="149446" />
+		</territory>
+		<npc id="20200" count="3" respawnDelay="35" /> <!-- Strain -->
+	</spawn>
+	<spawn zone="dion02_2122_51s">
+		<territory minZ="-2584" maxZ="-2084">
+			<node x="53951" y="153066" />
+			<node x="52204" y="151589" />
+			<node x="54971" y="150128" />
+			<node x="55574" y="151607" />
+		</territory>
+		<npc id="20198" count="2" respawnDelay="35" /> <!-- Neer Ghoul Berserker -->
+	</spawn>
+	<spawn zone="dion02_2122_52s">
+		<territory minZ="-3185" maxZ="-2685">
+			<node x="53620" y="146977" />
+			<node x="52769" y="145630" />
+			<node x="55479" y="145695" />
+			<node x="55648" y="147230" />
+		</territory>
+		<npc id="20160" count="2" respawnDelay="35" /> <!-- Neer Crawler -->
+	</spawn>
+	<spawn zone="dion02_2122_53s">
+		<territory minZ="-3185" maxZ="-2685">
+			<node x="52848" y="142049" />
+			<node x="52509" y="141197" />
+			<node x="54600" y="140953" />
+			<node x="54391" y="141851" />
+		</territory>
+		<npc id="20197" count="2" respawnDelay="35" /> <!-- Sorrow Maiden -->
+	</spawn>
+</list>

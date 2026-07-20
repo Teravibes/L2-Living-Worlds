@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/items.xsd">
+	<item id="6593" type="Weapon" name="Shining Bow - Cheap Shot">
+		<set name="icon" val="icon.weapon_shining_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1650" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="11" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="reuse_delay" val="820" />
+		<set name="reduced_mp_consume" val="26,1" />
+		<stats>
+			<stat type="pAtk">581</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="3552" level="1" />
+		</skills>
+	</item>
+	<item id="6594" type="Weapon" name="Shining Bow - Focus">
+		<set name="icon" val="icon.weapon_shining_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1650" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="11" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="reuse_delay" val="820" />
+		<stats>
+			<stat type="pAtk">581</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="3567" level="1" />
+		</skills>
+	</item>
+	<item id="6595" type="Weapon" name="Shining Bow - Critical Slow">
+		<set name="icon" val="icon.weapon_shining_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1650" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="11" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="reuse_delay" val="820" />
+		<stats>
+			<stat type="pAtk">581</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="3552" level="1" />
+			<skill id="3574" level="1" type_chance="16" type="ON_CRITICAL_SKILL" />
+		</skills>
+	</item>
+</list>

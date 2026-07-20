@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event name="Christmas" active="01 12 2006-05 01 2007" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
+	<droplist>
+		<add item="5556" min="1" max="1" chance="4%" /> <!-- Star Ornament -->
+		<add item="5557" min="1" max="1" chance="4%" /> <!-- Bead Ornament -->
+		<add item="5558" min="1" max="1" chance="8%" /> <!-- Fir Tree Branch -->
+		<add item="5559" min="1" max="1" chance="1%" /> <!-- Flower Pot -->
+		<add item="5562" min="1" max="1" chance="2%" /> <!-- Echo Crystal - 1st Carol -->
+		<add item="5563" min="1" max="1" chance="2%" /> <!-- Echo Crystal - 2nd Carol -->
+		<add item="5564" min="1" max="1" chance="2%" /> <!-- Echo Crystal - 3rd Carol -->
+		<add item="5565" min="1" max="1" chance="2%" /> <!-- Echo Crystal - 4th Carol -->
+		<add item="5566" min="1" max="1" chance="2%" /> <!-- Echo Crystal - 5th Carol -->
+	</droplist>
+	<spawnlist>
+		<!-- Santa Spawns -->
+		<add npc="31863" x="147698" y="-56025" z="-2775" heading="48000" /> <!-- Goddard -->
+		<add npc="31863" x="147453" y="26968" z="-2204" heading="49545" /> <!-- Aden -->
+		<add npc="31863" x="82218" y="148605" z="-3470" heading="0" /> <!-- Giran -->
+		<add npc="31863" x="82754" y="53573" z="-1496" heading="0" /> <!-- Oren -->
+		<add npc="31863" x="15064" y="143254" z="-2668" heading="0" /> <!-- Dion -->
+		<add npc="31863" x="111067" y="218933" z="-3543" heading="0" /> <!-- Heine -->
+		<add npc="31863" x="-12965" y="122914" z="-3117" heading="0" /> <!-- Gludio -->
+		<add npc="31863" x="87362" y="-143166" z="-1293" heading="16383" /> <!-- Schuttgart -->
+		<add npc="31863" x="-81037" y="150092" z="-3044" heading="0" /> <!-- Gludin -->
+		<add npc="31863" x="117412" y="76642" z="-2695" heading="37861" /> <!-- Hunters -->
+		<add npc="31863" x="43983" y="-47758" z="-797" heading="50000" /> <!-- Rune -->
+		<add npc="31863" x="47643" y="50786" z="-2999" heading="31509" /> <!-- Elf Village -->
+		<add npc="31863" x="12153" y="16753" z="-4584" heading="0" /> <!-- Dark Elf Village -->
+		<add npc="31863" x="-84458" y="244761" z="-3730" heading="56462" /> <!-- Talking Island Village -->
+		<add npc="31863" x="114750" y="-178692" z="-820" heading="0" /> <!-- Dwarven Village -->
+		<add npc="31863" x="-45656" y="-113119" z="-240" heading="0" /> <!-- Orc Village -->
+		<!-- Tree Spawns -->
+		<add npc="13006" x="84304" y="149133" z="-3402" heading="0" />
+		<add npc="13006" x="84311" y="148101" z="-3402" heading="0" />
+		<add npc="13006" x="82948" y="147658" z="-3469" heading="0" />
+		<add npc="13006" x="80905" y="147659" z="-3469" heading="0" />
+		<add npc="13006" x="80908" y="149556" z="-3469" heading="0" />
+		<add npc="13006" x="82957" y="149554" z="-3469" heading="0" />
+		<add npc="13006" x="147849" y="-55119" z="-2734" heading="0" />
+		<add npc="13006" x="147580" y="-55117" z="-2734" heading="0" />
+		<add npc="13006" x="147581" y="-57244" z="-2781" heading="0" />
+		<add npc="13006" x="147847" y="-57261" z="-2781" heading="0" />
+		<add npc="13006" x="149085" y="-55826" z="-2781" heading="0" />
+		<add npc="13006" x="146340" y="-55829" z="-2781" heading="0" />
+		<add npc="13006" x="147826" y="-54095" z="-2735" heading="0" />
+		<add npc="13006" x="147584" y="-54070" z="-2735" heading="0" />
+		<add npc="13006" x="146235" y="25921" z="-2013" heading="0" />
+		<add npc="13006" x="147840" y="25568" z="-2013" heading="0" />
+		<add npc="13006" x="147055" y="25568" z="-2013" heading="0" />
+		<add npc="13006" x="148694" y="25929" z="-2013" heading="0" />
+		<add npc="13006" x="147733" y="27366" z="-2205" heading="0" />
+		<add npc="13006" x="147197" y="27364" z="-2205" heading="0" />
+		<add npc="13006" x="147266" y="29065" z="-2269" heading="0" />
+		<add npc="13006" x="147646" y="29065" z="-2269" heading="0" />
+		<add npc="13006" x="147456" y="27664" z="-2204" heading="0" />
+		<add npc="13006" x="148078" y="-55960" z="-2781" heading="0" />
+		<add npc="13006" x="147348" y="-55939" z="-2781" heading="0" />
+		<add npc="13006" x="117056" y="75627" z="-2726" heading="0" />
+		<add npc="13006" x="116473" y="75352" z="-2712" heading="0" />
+		<add npc="13006" x="115785" y="76111" z="-2715" heading="0" />
+		<add npc="13006" x="115939" y="76544" z="-2719" heading="0" />
+		<add npc="13006" x="116833" y="77400" z="-2697" heading="0" />
+		<add npc="13006" x="116666" y="76210" z="-2730" heading="0" />
+		<add npc="13006" x="-13130" y="122533" z="-3117" heading="0" />
+		<add npc="13006" x="-13165" y="122425" z="-2989" heading="0" />
+		<add npc="13006" x="-13126" y="122806" z="-3117" heading="0" />
+		<add npc="13006" x="15733" y="142767" z="-2706" heading="0" />
+		<add npc="13006" x="16208" y="142710" z="-2706" heading="0" />
+		<add npc="13006" x="83807" y="149325" z="-3408" heading="0" />
+		<add npc="13006" x="83690" y="147987" z="-3403" heading="0" />
+		<add npc="13006" x="83896" y="147865" z="-3403" heading="0" />
+		<add npc="13006" x="83794" y="147924" z="-3403" heading="0" />
+		<add npc="13006" x="83700" y="149249" z="-3403" heading="0" />
+		<add npc="13006" x="83895" y="149379" z="-3403" heading="0" />
+		<add npc="13006" x="84329" y="149395" z="-3403" heading="0" />
+		<add npc="13006" x="84550" y="149415" z="-3403" heading="0" />
+		<add npc="13006" x="84797" y="149410" z="-3403" heading="0" />
+		<add npc="13006" x="85051" y="149459" z="-3403" heading="0" />
+		<add npc="13006" x="85050" y="149757" z="-3390" heading="0" />
+		<add npc="13006" x="85945" y="149865" z="-3390" heading="0" />
+		<add npc="13006" x="85688" y="149875" z="-3359" heading="0" />
+		<add npc="13006" x="85631" y="150244" z="-3359" heading="0" />
+		<add npc="13006" x="85988" y="150243" z="-3495" heading="0" />
+		<add npc="13006" x="86455" y="152599" z="-3495" heading="0" />
+		<add npc="13006" x="86253" y="152603" z="-3495" heading="0" />
+		<add npc="13006" x="85189" y="152606" z="-3495" heading="0" />
+		<add npc="13006" x="85407" y="152603" z="-3390" heading="0" />
+		<add npc="13006" x="85182" y="149752" z="-3390" heading="0" />
+		<add npc="13006" x="85184" y="149498" z="-3467" heading="0" />
+		<add npc="13006" x="83200" y="147872" z="-3368" heading="0" />
+		<add npc="13006" x="83172" y="148400" z="-3370" heading="0" />
+		<add npc="13006" x="83177" y="148845" z="-3370" heading="0" />
+		<add npc="13006" x="83171" y="149325" z="-3370" heading="0" />
+		<add npc="13006" x="83171" y="147913" z="-3370" heading="0" />
+		<add npc="13006" x="83203" y="149379" z="-3403" heading="0" />
+		<add npc="13006" x="83681" y="149691" z="-3403" heading="0" />
+		<add npc="13006" x="84268" y="149746" z="-3403" heading="0" />
+		<add npc="13006" x="83680" y="147535" z="-3403" heading="0" />
+		<add npc="13006" x="84320" y="147840" z="-3403" heading="0" />
+		<add npc="13006" x="84545" y="147839" z="-3403" heading="0" />
+		<add npc="13006" x="85749" y="147241" z="-3403" heading="0" />
+		<add npc="13006" x="85747" y="147492" z="-3403" heading="0" />
+		<add npc="13006" x="87421" y="147486" z="-3403" heading="0" />
+		<add npc="13006" x="85916" y="147483" z="-3403" heading="0" />
+		<add npc="13006" x="85918" y="147238" z="-3403" heading="0" />
+		<add npc="13006" x="83776" y="147120" z="-3403" heading="0" />
+		<add npc="13006" x="84032" y="147120" z="-3403" heading="0" />
+		<add npc="13006" x="84024" y="146970" z="-3403" heading="0" />
+		<add npc="13006" x="83778" y="146971" z="-3403" heading="0" />
+		<add npc="13006" x="84030" y="143571" z="-3403" heading="0" />
+		<add npc="13006" x="83752" y="143572" z="-3408" heading="0" />
+		<add npc="13006" x="82848" y="147760" z="-3403" heading="0" />
+		<add npc="13006" x="82847" y="149456" z="-3403" heading="0" />
+		<add npc="13006" x="81042" y="149458" z="-3403" heading="0" />
+		<add npc="13006" x="81039" y="147792" z="-3403" heading="0" />
+		<add npc="13006" x="82022" y="149592" z="-3467" heading="0" />
+		<add npc="13006" x="81600" y="149744" z="-3468" heading="0" />
+		<add npc="13006" x="81472" y="149750" z="-3467" heading="0" />
+		<add npc="13006" x="82197" y="147530" z="-3467" heading="0" />
+		<add npc="13006" x="82694" y="146601" z="-3463" heading="0" />
+		<add npc="13006" x="80706" y="146406" z="-3463" heading="0" />
+		<add npc="13006" x="79242" y="149588" z="-3467" heading="0" />
+		<add npc="13006" x="82355" y="149905" z="-3464" heading="0" />
+		<add npc="13006" x="83482" y="147543" z="-3536" heading="0" />
+		<add npc="13006" x="87888" y="147808" z="-3531" heading="0" />
+		<add npc="13006" x="88097" y="148165" z="-3531" heading="0" />
+		<add npc="13006" x="88160" y="148630" z="-3403" heading="0" />
+		<add npc="13006" x="88080" y="149120" z="-3403" heading="0" />
+		<add npc="13006" x="87856" y="149456" z="-3403" heading="0" />
+		<add npc="13006" x="87440" y="149744" z="-3403" heading="0" />
+		<add npc="13006" x="86517" y="149584" z="-3403" heading="0" />
+		<add npc="13006" x="86768" y="149574" z="-3403" heading="0" />
+		<add npc="13006" x="87030" y="149568" z="-3403" heading="0" />
+		<add npc="13006" x="87312" y="149440" z="-3403" heading="0" />
+		<add npc="13006" x="87600" y="149248" z="-3403" heading="0" />
+		<add npc="13006" x="87776" y="148976" z="-3403" heading="0" />
+		<add npc="13006" x="87826" y="148629" z="-3403" heading="0" />
+		<add npc="13006" x="87792" y="148288" z="-3403" heading="0" />
+		<add npc="13006" x="87616" y="148000" z="-3403" heading="0" />
+		<add npc="13006" x="87312" y="147776" z="-3403" heading="0" />
+		<add npc="13006" x="87029" y="147667" z="-3403" heading="0" />
+		<add npc="13006" x="88427" y="147174" z="-3403" heading="0" />
+		<add npc="13006" x="88426" y="147533" z="-3362" heading="0" />
+		<add npc="13006" x="84065" y="143505" z="-3362" heading="0" />
+		<add npc="13006" x="83706" y="143501" z="-3362" heading="0" />
+		<add npc="13006" x="81777" y="143495" z="-3361" heading="0" />
+		<add npc="13006" x="81278" y="143478" z="-3530" heading="0" />
+		<add npc="13006" x="77164" y="148545" z="-3526" heading="0" />
+		<add npc="13006" x="77166" y="148715" z="-3597" heading="0" />
+		<add npc="13006" x="77609" y="148380" z="-3596" heading="0" />
+		<add npc="13006" x="77470" y="148381" z="-3579" heading="0" />
+		<add npc="13006" x="78945" y="148767" z="-3579" heading="0" />
+		<add npc="13006" x="80463" y="148539" z="-3595" heading="0" />
+		<add npc="13006" x="80462" y="148699" z="-3531" heading="0" />
+		<add npc="13006" x="81460" y="149988" z="-3531" heading="0" />
+		<add npc="13006" x="81621" y="149991" z="-3531" heading="0" />
+		<add npc="13006" x="81297" y="152955" z="-3531" heading="0" />
+		<add npc="13006" x="81804" y="152934" z="-3531" heading="0" />
+		<add npc="13006" x="81420" y="152319" z="-3531" heading="0" />
+		<add npc="13006" x="80077" y="151798" z="-3531" heading="0" />
+		<add npc="13006" x="81055" y="152545" z="-3531" heading="0" />
+		<add npc="13006" x="81073" y="150734" z="-3531" heading="0" />
+		<add npc="13006" x="80059" y="147482" z="-3531" heading="0" />
+		<add npc="13006" x="80152" y="145485" z="-3531" heading="0" />
+		<add npc="13006" x="81461" y="147253" z="-3531" heading="0" />
+		<add npc="13006" x="81622" y="147253" z="-3531" heading="0" />
+		<add npc="13006" x="81154" y="145454" z="-3531" heading="0" />
+		<add npc="13006" x="81158" y="145633" z="-3531" heading="0" />
+		<add npc="13006" x="81282" y="145456" z="-3531" heading="0" />
+		<add npc="13006" x="81283" y="145636" z="-3531" heading="0" />
+		<add npc="13006" x="82841" y="144687" z="-3531" heading="0" />
+		<add npc="13006" x="80426" y="144439" z="-3531" heading="0" />
+		<add npc="13006" x="82841" y="144327" z="-3531" heading="0" />
+		<add npc="13006" x="85073" y="146404" z="-3460" heading="0" />
+		<add npc="13006" x="81774" y="146488" z="-3460" heading="0" />
+		<add npc="13006" x="81776" y="146669" z="-3460" heading="0" />
+		<add npc="13006" x="81896" y="146671" z="-3460" heading="0" />
+		<add npc="13006" x="81905" y="146488" z="-3460" heading="0" />
+		<add npc="13006" x="81287" y="146823" z="-3460" heading="0" />
+		<add npc="13006" x="81285" y="147005" z="-3460" heading="0" />
+		<add npc="13006" x="81150" y="146821" z="-3460" heading="0" />
+		<add npc="13006" x="81151" y="147003" z="-3460" heading="0" />
+		<add npc="13006" x="79386" y="146898" z="-3460" heading="0" />
+		<add npc="13006" x="80152" y="146901" z="-3494" heading="0" />
+		<add npc="13006" x="80063" y="149310" z="-3494" heading="0" />
+		<add npc="13006" x="79415" y="150246" z="-3529" heading="0" />
+		<add npc="13006" x="79717" y="150251" z="-3529" heading="0" />
+		<add npc="13006" x="79758" y="150263" z="-3531" heading="0" />
+		<add npc="13006" x="80531" y="149746" z="-3531" heading="0" />
+		<add npc="13006" x="80496" y="149774" z="-3531" heading="0" />
+		<add npc="13006" x="80487" y="149729" z="-3531" heading="0" />
+		<add npc="13006" x="80542" y="149786" z="-3531" heading="0" />
+		<add npc="13006" x="80454" y="149724" z="-3531" heading="0" />
+		<add npc="13006" x="80506" y="149806" z="-3531" heading="0" />
+		<add npc="13006" x="82774" y="150512" z="-3531" heading="0" />
+		<add npc="13006" x="81918" y="150748" z="-3531" heading="0" />
+		<add npc="13006" x="81919" y="150568" z="-3531" heading="0" />
+		<add npc="13006" x="81281" y="150401" z="-3531" heading="0" />
+		<add npc="13006" x="81282" y="150221" z="-3531" heading="0" />
+		<add npc="13006" x="81777" y="150568" z="-3531" heading="0" />
+		<add npc="13006" x="81777" y="150751" z="-3531" heading="0" />
+		<add npc="13006" x="80180" y="150722" z="-3531" heading="0" />
+		<add npc="13006" x="79711" y="148955" z="-3531" heading="0" />
+		<add npc="13006" x="79893" y="148957" z="-3531" heading="0" />
+		<add npc="13006" x="79710" y="148815" z="-3531" heading="0" />
+		<add npc="13006" x="79894" y="148821" z="-3531" heading="0" />
+		<add npc="13006" x="79891" y="148403" z="-3531" heading="0" />
+		<add npc="13006" x="79708" y="148397" z="-3531" heading="0" />
+		<add npc="13006" x="82419" y="146424" z="-3531" heading="0" />
+		<add npc="13006" x="82416" y="146912" z="-3531" heading="0" />
+		<add npc="13006" x="81768" y="145442" z="-3531" heading="0" />
+		<add npc="13006" x="81277" y="151482" z="-3531" heading="0" />
+		<add npc="13006" x="81802" y="152013" z="-3531" heading="0" />
+		<add npc="13006" x="81147" y="150219" z="-3531" heading="0" />
+		<add npc="13006" x="81144" y="150400" z="-3531" heading="0" />
+		<add npc="13006" x="78690" y="148400" z="-3531" heading="0" />
+		<add npc="13006" x="79892" y="148262" z="-3531" heading="0" />
+		<add npc="13006" x="79712" y="148256" z="-3531" heading="0" />
+		<add npc="13006" x="80063" y="148293" z="-3531" heading="0" />
+		<add npc="13006" x="83686" y="145210" z="-3531" heading="0" />
+		<add npc="13006" x="86042" y="146906" z="-3531" heading="0" />
+		<add npc="13006" x="85918" y="145889" z="-3531" heading="0" />
+		<add npc="13006" x="84308" y="145932" z="-3531" heading="0" />
+	</spawnlist>
+	<messages>
+		<add type="onEnd" text="Christmas Event: Event end!" />
+		<add type="onEnter" text="Christmas Event: All monsters have a chance of dropping Christmas tree parts and Holiday carol Echo Crystals. See a Santa's Trainee in every town to trade your Christmas tree parts!" />
+	</messages>
+</event>

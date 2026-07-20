@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35386"> <!-- Boyer -->
+		<teleport name="tel1" type="OTHER">
+			<location name="Village Square" x="-14393" y="123671" z="-3144" />
+			<location name="East Gate Entrance" x="-11817" y="123652" z="-3079" />
+			<location name="West Gate Entrance" x="-16796" y="124108" z="-3127" />
+			<location name="South Gate Entrance" x="-14207" y="126547" z="-3151" />
+			<location name="North Gate Entrance" x="-14591" y="121024" z="-2990" />
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location name="Village Square" x="-14393" y="123671" z="-3144" />
+			<location name="East Gate Entrance" x="-11817" y="123652" z="-3079" />
+			<location name="West Gate Entrance" x="-16796" y="124108" z="-3127" />
+			<location name="South Gate Entrance" x="-14207" y="126547" z="-3151" />
+			<location name="North Gate Entrance" x="-14591" y="121024" z="-2990" />
+			<location name="Ruins of Agony" x="-41248" y="122848" z="-2912" feeCount="500" />
+			<location name="Ruins of Despair" x="-19359" y="136846" z="-3760" feeCount="500" />
+			<location name="Ant Nest" x="-9959" y="176184" z="-4160" feeCount="500" />
+			<location name="Windawood Manor" x="-28327" y="155125" z="-3496" feeCount="500" castleId="1" />
+		</teleport>
+	</npc>
+</list>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30146"> <!-- Mirabel -->
+		<teleport type="NORMAL">
+			<location name="The Town of Gludio" x="-12694" y="122776" z="-3114" feeCount="9200" castleId="1" />
+			<location name="Dwarven Village" x="115120" y="-178112" z="-916" feeCount="23000" />
+			<location name="Talking Island Village" x="-84141" y="244623" z="-3729" feeCount="23000" />
+			<location name="Orc Village" x="-45186" y="-112459" z="-236" feeCount="18000" />
+			<location name="Elven Forest" x="21362" y="51122" z="-3688" feeCount="710" />
+			<location name="Elven Fortress" x="29294" y="74968" z="-3776" feeCount="820" />
+			<location name="Neutral Zone" x="-10612" y="75881" z="-3592" feeCount="1700" />
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeId="6651" feeCount="1" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeId="6651" feeCount="1" />
+			<location name="The Center of the Neutral Zone" x="-10612" y="75881" z="-3592" feeId="6651" feeCount="1" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeId="6651" feeCount="1" />
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeCount="1000" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeCount="1000" />
+			<location name="The Center of the Neutral Zone" x="-10612" y="75881" z="-3592" feeCount="1000" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeCount="1000" />
+		</teleport>
+	</npc>
+</list>

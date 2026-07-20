@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Custom Water Zones for Catacomb Entrances -->
+	<!-- Notes: -->
+	<!-- *Smooth movement when entering -->
+	<!-- *Will not take fall damage when exiting -->
+	<!-- *Used minZ=entrance0level-100, maxZ=entrance0level+50 -->
+	<zone name="Saints Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3811" maxZ="-3661">
+		<node X="79807" Y="209461" />
+		<node X="79553" Y="209460" />
+		<node X="79438" Y="209344" />
+		<node X="79137" Y="209090" />
+		<node X="79553" Y="208974" />
+		<node X="79806" Y="208973" />
+		<node X="79922" Y="209090" />
+		<node X="79921" Y="209343" />
+	</zone>
+	<zone name="Disciples Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3273" maxZ="-3123">
+		<node X="169137" Y="-17726" />
+		<node X="169137" Y="-17473" />
+		<node X="169022" Y="-17357" />
+		<node X="168769" Y="-17357" />
+		<node X="168654" Y="-17473" />
+		<node X="168654" Y="-17726" />
+		<node X="168768" Y="-17842" />
+		<node X="169022" Y="-17842" />
+	</zone>
+	<zone name="Martyrdom Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3203" maxZ="-3053">
+		<node X="114633" Y="132926" />
+		<node X="114634" Y="132673" />
+		<node X="114753" Y="132554" />
+		<node X="115006" Y="132553" />
+		<node X="115126" Y="132673" />
+		<node X="115125" Y="132926" />
+		<node X="115006" Y="133044" />
+		<node X="114753" Y="133045" />
+	</zone>
+	<zone name="Devotion Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3113" maxZ="-2963">
+		<node X="-55806" Y="78856" />
+		<node X="-55553" Y="78856" />
+		<node X="-55434" Y="78977" />
+		<node X="-55434" Y="79230" />
+		<node X="-55553" Y="79349" />
+		<node X="-55806" Y="79349" />
+		<node X="-55924" Y="79231" />
+		<node X="-55928" Y="78977" />
+	</zone>
+	<zone name="Patriots Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3545" maxZ="-3395">
+		<node X="-25278" Y="77131" />
+		<node X="-25025" Y="77129" />
+		<node X="-24910" Y="77249" />
+		<node X="-24909" Y="77502" />
+		<node X="-25025" Y="77620" />
+		<node X="-25278" Y="77620" />
+		<node X="-25396" Y="77502" />
+		<node X="-25397" Y="77249" />
+	</zone>
+	<zone name="Worshipers Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3811" maxZ="-3661">
+		<node X="107713" Y="173774" />
+		<node X="107966" Y="173772" />
+		<node X="108080" Y="173889" />
+		<node X="108086" Y="174142" />
+		<node X="107966" Y="174255" />
+		<node X="107713" Y="174258" />
+		<node X="107599" Y="174142" />
+		<node X="107601" Y="173889" />
+	</zone>
+	<zone name="Pilgrims Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3785" maxZ="-3635">
+		<node X="45007" Y="127422" />
+		<node X="45001" Y="127169" />
+		<node X="45121" Y="127049" />
+		<node X="45374" Y="127048" />
+		<node X="45495" Y="127168" />
+		<node X="45495" Y="127422" />
+		<node X="47374" Y="127544" />
+		<node X="45121" Y="127544" />
+	</zone>
+	<zone name="Sacrifice Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3459" maxZ="-3309">
+		<node X="-41324" Y="206241" />
+		<node X="-41323" Y="206494" />
+		<node X="-41441" Y="206614" />
+		<node X="-41694" Y="206615" />
+		<node X="-41811" Y="206494" />
+		<node X="-41814" Y="206241" />
+		<node X="-41694" Y="206119" />
+		<node X="-41441" Y="206119" />
+	</zone>
+	<zone name="Dark Omens Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3273" maxZ="-3123">
+		<node X="-22974" Y="13261" />
+		<node X="-22721" Y="13296" />
+		<node X="-22600" Y="13377" />
+		<node X="-22599" Y="13630" />
+		<node X="-22721" Y="13750" />
+		<node X="-22974" Y="13750" />
+		<node X="-23097" Y="13630" />
+		<node X="-23096" Y="13377" />
+	</zone>
+	<zone name="Forbidden Path Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-4913" maxZ="-4763">
+		<node X="110401" Y="84298" />
+		<node X="110654" Y="84295" />
+		<node X="110774" Y="84417" />
+		<node X="110777" Y="84670" />
+		<node X="110654" Y="84791" />
+		<node X="110401" Y="84791" />
+		<node X="110283" Y="84670" />
+		<node X="110280" Y="84417" />
+	</zone>
+	<zone name="Witch Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3801" maxZ="-3651">
+		<node X="136897" Y="79434" />
+		<node X="137150" Y="79435" />
+		<node X="137271" Y="79553" />
+		<node X="137273" Y="79806" />
+		<node X="137150" Y="79926" />
+		<node X="136897" Y="79925" />
+		<node X="136778" Y="79806" />
+		<node X="136779" Y="79553" />
+	</zone>
+	<zone name="Apostate Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3497" maxZ="-3347">
+		<node X="74177" Y="78155" />
+		<node X="74430" Y="78154" />
+		<node X="74549" Y="78273" />
+		<node X="74552" Y="78526" />
+		<node X="74430" Y="78644" />
+		<node X="74177" Y="78648" />
+		<node X="74059" Y="78526" />
+		<node X="74057" Y="78273" />
+	</zone>
+	<zone name="Branded Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3353" maxZ="-3203">
+		<node X="42689" Y="170064" />
+		<node X="42942" Y="170058" />
+		<node X="43059" Y="170177" />
+		<node X="43060" Y="170430" />
+		<node X="42942" Y="170546" />
+		<node X="42689" Y="170549" />
+		<node X="42571" Y="170430" />
+		<node X="42570" Y="170177" />
+	</zone>
+	<zone name="Heretics Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3753" maxZ="-3603">
+		<node X="39856" Y="143808" />
+		<node X="39855" Y="144063" />
+		<node X="39743" Y="144177" />
+		<node X="39489" Y="144177" />
+		<node X="39373" Y="144062" />
+		<node X="39372" Y="143808" />
+		<node X="39488" Y="143692" />
+		<node X="39743" Y="143691" />
+	</zone>
+	<zone name="Oracle of Dawn Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3273" maxZ="-3123">
+		<node X="-83470" Y="111233" />
+		<node X="-83468" Y="111486" />
+		<node X="-83585" Y="111603" />
+		<node X="-83838" Y="111608" />
+		<node X="-83955" Y="111486" />
+		<node X="-83956" Y="111233" />
+		<node X="-83838" Y="111118" />
+		<node X="-83585" Y="111114" />
+	</zone>
+	<zone name="Oracle of Dusk Smooth Entrance" type="WaterZone" shape="NPoly" minZ="-3529" maxZ="-3379">
+		<node X="-84862" Y="86288" />
+		<node X="-84609" Y="86285" />
+		<node X="-84494" Y="86401" />
+		<node X="-84491" Y="86654" />
+		<node X="-84609" Y="86771" />
+		<node X="-84862" Y="86774" />
+		<node X="-84977" Y="86654" />
+		<node X="-84980" Y="86401" />
+	</zone>
+</list>

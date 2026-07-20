@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Reload Panel</title>
+</head>
+<body>
+<table width=270 border=0 bgcolor="444444">
+<tr>
+<td><button value="Main" action="bypass admin_admin" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+<td><button value="Char" action="bypass admin_admin6" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+<td><button value="Game" action="bypass admin_admin2" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+<td><button value="GM" action="bypass admin_admin7" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+</tr>
+</table>
+<br>
+<center>
+<table width=160 cellspacing=0 cellpadding=0>
+	<tr>
+		<td fixwidth=40>Value:</td>
+		<td fixwidth=120 height=15><edit var="value" width=120></td>
+	</tr>
+</table>
+</center>
+<br>
+<table width=260>
+	<tr>
+		<td><button value="NPC" action="bypass admin_reload npc $value" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Quest" action="bypass admin_reload quest $value" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Html" action="bypass admin_reload html $value" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Handler" action="bypass admin_reload handler" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+	</tr>
+	<tr>
+		<td><button value="Item" action="bypass admin_reload item" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Buylist" action="bypass admin_reload buylist" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Multisell" action="bypass admin_reload multisell" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Skill" action="bypass admin_reload skill" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+	</tr>
+	<tr>
+		<td><button value="Teleport" action="bypass admin_reload teleport" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Zone" action="bypass admin_reload zone" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Door" action="bypass admin_reload door" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="CW" action="bypass admin_reload cw" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+	</tr>
+	<tr>
+		<td><button value="Effect" action="bypass admin_reload effect" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Walker" action="bypass admin_reload walker" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Access" action="bypass admin_reload access" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Config" action="bypass admin_reload config" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+	</tr>
+	<tr>
+		<td><button value="Crest" action="bypass admin_reload crest" width=65 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<br>
+<font name="hs12" color="LEVEL">Living World</font><br1>
+<table width=260>
+	<tr>
+		<td><button value="FPC Chat" action="bypass -h admin_reload fakeplayerchat" width=85 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="FPC World" action="bypass -h admin_reloadfakeplayers" width=85 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+		<td><button value="Rates" action="bypass -h admin_rates" width=85 height=21 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+	</tr>
+</table>
+<font color="808080">FPC World: despawns all bots and redeploys from FakePlayerBehavior.xml (~15s)</font>
+<br><br>
+<font name="hs12" color="LEVEL">Not Recommended on Live Servers!</font>
+</body>
+</html>

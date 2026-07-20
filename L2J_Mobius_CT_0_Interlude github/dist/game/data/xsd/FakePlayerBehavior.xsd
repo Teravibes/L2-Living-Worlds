@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded" minOccurs="0">
+				<xs:element name="profile">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="point" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:int" name="x" use="required" />
+									<xs:attribute type="xs:int" name="y" use="required" />
+									<xs:attribute type="xs:int" name="z" use="required" />
+									<xs:attribute type="xs:int" name="delay" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="name" use="required" />
+						<xs:attribute type="xs:string" name="type" use="optional" />
+						<xs:attribute type="xs:int" name="radius" use="optional" />
+						<xs:attribute type="xs:boolean" name="run" use="optional" />
+						<xs:attribute type="xs:int" name="pauseMin" use="optional" />
+						<xs:attribute type="xs:int" name="pauseMax" use="optional" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="assign">
+					<xs:complexType>
+						<xs:attribute type="xs:string" name="name" use="optional" />
+						<xs:attribute type="xs:int" name="npcId" use="optional" />
+						<xs:attribute type="xs:string" name="profile" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="default">
+					<xs:complexType>
+						<xs:attribute type="xs:string" name="profile" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="population">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="point" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:int" name="x" use="required" />
+									<xs:attribute type="xs:int" name="y" use="required" />
+									<xs:attribute type="xs:int" name="z" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="name" use="optional" />
+						<xs:attribute type="xs:int" name="x" use="required" />
+						<xs:attribute type="xs:int" name="y" use="required" />
+						<xs:attribute type="xs:int" name="z" use="required" />
+						<xs:attribute type="xs:int" name="radius" use="optional" />
+						<xs:attribute type="xs:int" name="count" use="optional" />
+						<xs:attribute type="xs:int" name="minLevel" use="optional" />
+						<xs:attribute type="xs:int" name="maxLevel" use="optional" />
+						<xs:attribute type="xs:string" name="profile" use="optional" />
+						<xs:attribute type="xs:string" name="race" use="optional" />
+						<xs:attribute type="xs:boolean" name="respawn" use="optional" />
+						<xs:attribute type="xs:string" name="store" use="optional" />
+						<xs:attribute type="xs:boolean" name="fullStock" use="optional" />
+						<xs:attribute type="xs:string" name="route" use="optional" />
+						<xs:attribute type="xs:boolean" name="reversed" use="optional" />
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

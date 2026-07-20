@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/items.xsd">
+	<item id="13531" type="Weapon" name="Blue Flag">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="displayId" val="6718" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FLAG" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="500" />
+		<set name="price" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
+		<stats>
+			<stat type="pAtkSpd">325</stat>
+		</stats>
+	</item>
+	<item id="13534" type="Weapon" name="Red Flag">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="displayId" val="6718" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FLAG" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="500" />
+		<set name="price" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
+		<stats>
+			<stat type="pAtkSpd">325</stat>
+		</stats>
+	</item>
+</list>

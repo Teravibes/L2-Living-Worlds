@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6500" type="EtcItem" name="Big Blue Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="435" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2201" level="3" /> <!-- Item - Blue Treasue Box -->
+		</skills>
+	</item>
+	<item id="6501" type="EtcItem" name="Small Yellow Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="452" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2202" level="1" /> <!-- Item - Yellow Treasue Box -->
+		</skills>
+	</item>
+	<item id="6502" type="EtcItem" name="Yellow Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="568" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2202" level="2" /> <!-- Item - Yellow Treasue Box -->
+		</skills>
+	</item>
+	<item id="6503" type="EtcItem" name="Big Yellow Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="608" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2202" level="3" /> <!-- Item - Yellow Treasue Box -->
+		</skills>
+	</item>
+	<item id="6504" type="EtcItem" name="Small Orange Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="649" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2203" level="1" /> <!-- Item - Orange Treasue Box -->
+		</skills>
+	</item>
+	<item id="6505" type="EtcItem" name="Orange Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="792" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2203" level="2" /> <!-- Item - Orange Treasue Box -->
+		</skills>
+	</item>
+	<item id="6506" type="EtcItem" name="Big Orange Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="858" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2203" level="3" /> <!-- Item - Orange Treasue Box -->
+		</skills>
+	</item>
+	<item id="6507" type="EtcItem" name="Small Purple Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="910" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2204" level="1" /> <!-- Item - Violet Treasue Box -->
+		</skills>
+	</item>
+	<item id="6508" type="EtcItem" name="Purple Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1090" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2204" level="2" /> <!-- Item - Violet Treasue Box -->
+		</skills>
+	</item>
+	<item id="6509" type="EtcItem" name="Big Purple Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1157" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2204" level="3" /> <!-- Item - Violet Treasue Box -->
+		</skills>
+	</item>
+	<item id="6510" type="EtcItem" name="Small Red Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1326" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2205" level="1" /> <!-- Item - Red Treasue Box -->
+		</skills>
+	</item>
+	<item id="6511" type="EtcItem" name="Red Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1402" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2205" level="2" /> <!-- Item - Red Treasue Box -->
+		</skills>
+	</item>
+	<item id="6512" type="EtcItem" name="Big Red Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1715" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2205" level="3" /> <!-- Item - Red Treasue Box -->
+		</skills>
+	</item>
+	<item id="6513" type="EtcItem" name="Small White Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1814" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2206" level="1" /> <!-- Item - White Treasue Box -->
+		</skills>
+	</item>
+	<item id="6514" type="EtcItem" name="White Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1923" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2206" level="2" /> <!-- Item - White Treasue Box -->
+		</skills>
+	</item>
+	<item id="6515" type="EtcItem" name="Big White Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2039" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2206" level="3" /> <!-- Item - White Treasue Box -->
+		</skills>
+	</item>
+	<item id="6516" type="EtcItem" name="Small Black Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2166" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2207" level="1" /> <!-- Item - Black Treasue Box -->
+		</skills>
+	</item>
+	<item id="6517" type="EtcItem" name="Black Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2403" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2207" level="2" /> <!-- Item - Black Treasue Box -->
+		</skills>
+	</item>
+	<item id="6518" type="EtcItem" name="Big Black Treasure Chest">
+		<!-- Double-click to see the change. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="2552" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2207" level="3" /> <!-- Item - Black Treasue Box -->
+		</skills>
+	</item>
+	<item id="6519" type="EtcItem" name="Green Colored Lure - Low Grade">
+		<!-- A lure used for fishing. The higher the grade of the lure, the less time it will take for a fish to take the bait. This bait is preferred by fast fish. -->
+		<set name="icon" val="icon.etc_bait_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="6520" type="EtcItem" name="Green Colored Lure">
+		<!-- This fishing lure is preferred by fast fish. -->
+		<set name="icon" val="icon.etc_bait_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="4" />
+		<set name="price" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="6521" type="EtcItem" name="Green Colored Lure - High Grade">
+		<!-- A lure used for fishing. The higher the grade of the lure, the less time it will take for a fish to take the bait. This bait is preferred by fast fish. -->
+		<set name="icon" val="icon.etc_bait_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="3" />
+		<set name="price" val="150" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="6522" type="EtcItem" name="Purple Colored Lure - Low Grade">
+		<!-- A lure used for fishing. The higher the grade of the lure, the less time it will take for a fish to take the bait. This bait is preferred by fat fish. -->
+		<set name="icon" val="icon.etc_bait_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="150" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="6523" type="EtcItem" name="Purple Colored Lure">
+		<!-- This fishing lure is preferred by fat fish. -->
+		<set name="icon" val="icon.etc_bait_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="4" />
+		<set name="price" val="180" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="6524" type="EtcItem" name="Purple Colored Lure - High Grade">
+		<!-- A lure used for fishing. The higher the grade of the lure, the less time it will take for a fish to take the bait. This bait is preferred by fat fish. -->
+		<set name="icon" val="icon.etc_bait_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="3" />
+		<set name="price" val="200" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="6525" type="EtcItem" name="Yellow Colored Lure - Low Grade">
+		<!-- A lure used for fishing. The higher the grade of the lure, the less time it will take for a fish to bite the bait. This bait is preferred by ugly fish. -->
+		<set name="icon" val="icon.etc_bait_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="6526" type="EtcItem" name="Yellow Colored Lure">
+		<!-- This fishing lure is preferred by ugly fish. -->
+		<set name="icon" val="icon.etc_bait_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="4" />
+		<set name="price" val="150" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="6527" type="EtcItem" name="Yellow Colored Lure - High Grade">
+		<!-- A lure used for fishing. The higher the grade of the lure, the less time it will take for a fish to bite the bait. This bait is preferred by ugly fish. -->
+		<set name="icon" val="icon.etc_bait_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="3" />
+		<set name="price" val="180" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="6528" type="EtcItem" name="Event bait">
+		<!-- Bait for fishing that increases chance of getting the treasure chest. -->
+		<set name="icon" val="icon.etc_special_bait_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="3" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="6529" type="Weapon" name="Baby Duck Rod">
+		<!-- Non-grade fishing rod. It can't launch a general attack. Consumes one non-grade Fishing Shot. -->
+		<set name="icon" val="icon.weapon_fishing_rod_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="price" val="30000" />
+		<set name="isAttackWeapon" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="6530" type="Weapon" name="Albatross Rod">
+		<!-- D-grade fishing rod. It can't launch a general attack. Consumes one D-grade Fishing Shot. -->
+		<set name="icon" val="icon.weapon_fishing_rod_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="price" val="100000" />
+		<set name="isAttackWeapon" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="6531" type="Weapon" name="Pelican Rod">
+		<!-- C-grade fishing rod. It can't launch a general attack. Consumes one C-grade Fishing Shot. -->
+		<set name="icon" val="icon.weapon_fishing_rod_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="price" val="400000" />
+		<set name="isAttackWeapon" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="6532" type="Weapon" name="KingFisher Rod">
+		<!-- B-grade fishing rod. It can't launch a general attack. Consumes one B-grade Fishing Shot. -->
+		<set name="icon" val="icon.weapon_fishing_rod_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="price" val="1200000" />
+		<set name="isAttackWeapon" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="6533" type="Weapon" name="Cygnus Pole">
+		<!-- A-grade fishing rod. It can't launch a general attack. Consumes one A-grade Fishing Shot. -->
+		<set name="icon" val="icon.weapon_fishing_rod_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="price" val="4000000" />
+		<set name="isAttackWeapon" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="6534" type="Weapon" name="Triton Pole">
+		<!-- S-grade fishing rod. It can't launch a general attack. Consumes one S-grade Fishing Shot. -->
+		<set name="icon" val="icon.weapon_fishing_rod_i05" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="price" val="10000000" />
+		<set name="isAttackWeapon" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="6535" type="EtcItem" name="Fishing Shot: non-grade">
+		<!-- Soulshot consumed by a fishing rod like general soulshots. Gives double damage when the pumping or reeling skill is cast. Usable for the non-grade fishing rod. -->
+		<set name="icon" val="icon.etc_spirit_bullet_fish_i00" />
+		<set name="default_action" val="FISHINGSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="3" />
+		<set name="price" val="3" />
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="FishShots" />
+		<skills>
+			<skill id="2181" level="1" /> <!-- Item - Fishing Shot -->
+		</skills>
+	</item>
+	<item id="6536" type="EtcItem" name="Fishing Shot: D-grade">
+		<!-- Soulshot consumed by a fishing rod like general soulshots. Gives double damage when the pumping or reeling skill is cast. Usable for the D-grade fishing rod. -->
+		<set name="icon" val="icon.etc_spirit_bullet_fish_i01" />
+		<set name="default_action" val="FISHINGSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="3" />
+		<set name="price" val="5" />
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="FishShots" />
+		<skills>
+			<skill id="2182" level="1" /> <!-- Item - Fishing Shot -->
+		</skills>
+	</item>
+	<item id="6537" type="EtcItem" name="Fishing Shot: C-grade">
+		<!-- Soulshot consumed by a fishing rod like general soulshots. Gives double damage when the pumping or reeling skill is cast. Usable for the C-grade fishing rod. -->
+		<set name="icon" val="icon.etc_spirit_bullet_fish_i02" />
+		<set name="default_action" val="FISHINGSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="3" />
+		<set name="price" val="7" />
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="FishShots" />
+		<skills>
+			<skill id="2183" level="1" /> <!-- Item - Fishing Shot -->
+		</skills>
+	</item>
+	<item id="6538" type="EtcItem" name="Fishing Shot: B-grade">
+		<!-- Soulshot consumed by a fishing rod like general soulshots. Gives double damage when the pumping or reeling skill is cast. Usable for the B-grade fishing rod. -->
+		<set name="icon" val="icon.etc_spirit_bullet_fish_i03" />
+		<set name="default_action" val="FISHINGSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="3" />
+		<set name="price" val="25" />
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="FishShots" />
+		<skills>
+			<skill id="2184" level="1" /> <!-- Item - Fishing Shot -->
+		</skills>
+	</item>
+	<item id="6539" type="EtcItem" name="Fishing Shot: A-grade">
+		<!-- Soulshot consumed by a fishing rod like general soulshots. Gives double damage when the pumping or reeling skill is cast. Usable for the A-grade fishing rod. -->
+		<set name="icon" val="icon.etc_spirit_bullet_fish_i04" />
+		<set name="default_action" val="FISHINGSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="3" />
+		<set name="price" val="40" />
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="FishShots" />
+		<skills>
+			<skill id="2185" level="1" /> <!-- Item - Fishing Shot -->
+		</skills>
+	</item>
+	<item id="6540" type="EtcItem" name="Fishing Shot: S-grade">
+		<!-- Soulshot consumed by a fishing rod like general soulshots. Gives double damage when the pumping or reeling skill is cast. Usable for the S-grade fishing rod. -->
+		<set name="icon" val="icon.etc_spirit_bullet_fish_i05" />
+		<set name="default_action" val="FISHINGSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="3" />
+		<set name="price" val="50" />
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="FishShots" />
+		<skills>
+			<skill id="2186" level="1" /> <!-- Item - Fishing Shot -->
+		</skills>
+	</item>
+	<item id="6541" type="EtcItem" name="Blue Coba">
+		<set name="icon" val="icon.etc_blue_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="1250" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6542" type="EtcItem" name="Red Coba">
+		<set name="icon" val="icon.etc_red_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="1500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6543" type="EtcItem" name="Gold Coba">
+		<set name="icon" val="icon.etc_golden_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="1750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6544" type="EtcItem" name="Desert Coba">
+		<set name="icon" val="icon.etc_desert_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="2000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6545" type="EtcItem" name="Sea Coba">
+		<set name="icon" val="icon.etc_sea_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="2250" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6546" type="EtcItem" name="Twin Coba">
+		<set name="icon" val="icon.etc_twin_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="2500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6547" type="EtcItem" name="King Coba">
+		<set name="icon" val="icon.etc_great_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="2750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6548" type="EtcItem" name="Alternative Blue Coba">
+		<set name="icon" val="icon.etc_blue_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="1250" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6549" type="EtcItem" name="Alternative Red Coba">
+		<set name="icon" val="icon.etc_red_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="1500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6550" type="EtcItem" name="Alternative Gold Coba">
+		<set name="icon" val="icon.etc_golden_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="1750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6551" type="EtcItem" name="Alternative Desert Coba">
+		<set name="icon" val="icon.etc_desert_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="2000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6552" type="EtcItem" name="Alternative Sea Coba">
+		<set name="icon" val="icon.etc_sea_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="2250" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6553" type="EtcItem" name="Alternative Twin Coba">
+		<set name="icon" val="icon.etc_twin_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="2500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6554" type="EtcItem" name="Alternative King Coba">
+		<set name="icon" val="icon.etc_great_coba_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="2750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6555" type="EtcItem" name="Ripe Blue Coba">
+		<set name="icon" val="icon.etc_blue_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="1250" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6556" type="EtcItem" name="Ripe Red Coba">
+		<set name="icon" val="icon.etc_red_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="1500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6557" type="EtcItem" name="Ripe Gold Coba">
+		<set name="icon" val="icon.etc_golden_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="1750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6558" type="EtcItem" name="Ripe Desert Coba">
+		<set name="icon" val="icon.etc_desert_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="2000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6559" type="EtcItem" name="Ripe Sea Coba">
+		<set name="icon" val="icon.etc_sea_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="2250" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6560" type="EtcItem" name="Ripe Twin Coba">
+		<set name="icon" val="icon.etc_twin_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="2500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6561" type="EtcItem" name="Ripe King Coba">
+		<set name="icon" val="icon.etc_great_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="2750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6562" type="EtcItem" name="Ripe Alternative Blue Coba">
+		<set name="icon" val="icon.etc_blue_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="1250" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6563" type="EtcItem" name="Ripe Alternative Red Coba">
+		<set name="icon" val="icon.etc_red_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="1500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6564" type="EtcItem" name="Ripe Alternative Gold Coba">
+		<set name="icon" val="icon.etc_golden_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="1750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6565" type="EtcItem" name="Ripe Alternative Desert Coba">
+		<set name="icon" val="icon.etc_desert_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="2000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6566" type="EtcItem" name="Ripe Alternative Sea Coba">
+		<set name="icon" val="icon.etc_sea_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="2250" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6567" type="EtcItem" name="Ripe Alternative Twin Coba">
+		<set name="icon" val="icon.etc_twin_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="2500" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6568" type="EtcItem" name="Ripe Alternative King Coba">
+		<set name="icon" val="icon.etc_great_coba_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="2750" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6569" type="EtcItem" name="Blessed Scroll: Enchant Weapon (Grade A)">
+		<!-- Increases the P.Atk of an A-Grade weapons such as sword/one-handed, blunt/one handed, dagger, spear and etc. type by 4. The P.Atk of sword/two-handed, blunt/two-handed, dual swords, and fists type will increase by 5 and bow type by 8. The M.Atk of all weapons will increase by 3. From +4, the added bonuses for P.Atk/M.Atk are double the above value. When fail on enchanting, item does not get crystallized but it's enchant value will return to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="15000000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2027" level="1" /> <!-- Scroll: Enchant Weapon (Grade A) -->
+		</skills>
+	</item>
+	<item id="6570" type="EtcItem" name="Blessed Scroll: Enchant Armor (Grade A)">
+		<!-- Increases the P. Def. of A-Grade armor or accessories by 1, and from +4, the P. Def will increase by 3. It can be safely enchanted up to +3. One-piece type armor can be safely enchanted up to +4. If one's attempt for enchanting fails, an item will not become crystallized. However, the current enchant value will be set to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="1800000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2209" level="1" /> <!-- Item - Blessed Scroll of Enchant Armor -->
+		</skills>
+	</item>
+	<item id="6571" type="EtcItem" name="Blessed Scroll: Enchant Weapon (Grade B)">
+		<!-- Increases the P.Atk of a B-Grade weapons such as sword/one-handed, blunt/one handed, dagger, spear and etc. type by 3. The P.Atk of sword/two-handed, blunt/two-handed, dual swords, and fists type will increase by 4 and bow type by 6. The M.Atk of all weapons will increase by 3. From +4, the added bonuses for P.Atk/M.Atk are double the above value. When fail on enchanting, item does not get crystallized but it's enchant value will return to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7000000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2028" level="1" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+		</skills>
+	</item>
+	<item id="6572" type="EtcItem" name="Blessed Scroll: Enchant Armor (Grade B)">
+		<!-- Increases the P. Def. of B-Grade armor or accessories by 1, and from +4, the P. Def will increase by 3. It can be safely enchanted up to +3. One-piece type armor can be safely enchanted up to +4. If one's attempt for enchanting fails, an item will not become crystallized. However, the current enchant value will be set to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="750000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2210" level="1" /> <!-- Item - Blessed Scroll of Enchant Armor -->
+		</skills>
+	</item>
+	<item id="6573" type="EtcItem" name="Blessed Scroll: Enchant Weapon (Grade C)">
+		<!-- Increases the P.Atk of a C-Grade weapons such as sword/one-handed, blunt/one handed, dagger, spear and etc. type by 3. The P.Atk of sword/two-handed, blunt/two-handed, dual swords, and fists type will increase by 4 and bow type by 6. The M.Atk of all weapons will increase by 3. From +4, the added bonuses for P.Atk/M.Atk are double the above value. When fail on enchanting, item does not get crystallized but it's enchant value will return to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="3000000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2029" level="1" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+		</skills>
+	</item>
+	<item id="6574" type="EtcItem" name="Blessed Scroll: Enchant Armor (Grade C)">
+		<!-- Increases the P. Def. of C-Grade armor or accessories by 1, and from +4, the P. Def will increase by 3. It can be safely enchanted up to +3. One-piece type armor can be safely enchanted up to +4. If one's attempt for enchanting fails, an item will not become crystallized. However, the current enchant value will be set to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="350000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2211" level="1" /> <!-- Item - Blessed Scroll of Enchant Armor -->
+		</skills>
+	</item>
+	<item id="6575" type="EtcItem" name="Blessed Scroll: Enchant Weapon (Grade D)">
+		<!-- Increases the P.Atk of a D-Grade weapons such as sword/one-handed, blunt/one handed, dagger, spear, sword/two-handed, blunt/two-handed, dual swords, and fists, etc. type will increase by 2 and bow type by 4. The M.Atk of all weapons will increase by 2. From +4, the added bonuses for P.Atk/M.Atk are double the above value. When fail on enchanting, item does not get crystallized but it's enchant value will return to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="900000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2030" level="1" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+		</skills>
+	</item>
+	<item id="6576" type="EtcItem" name="Blessed Scroll: Enchant Armor (Grade D)">
+		<!-- Increases the P. Def. of D-Grade armor or accessories by 1, and from +4, the P. Def will increase by 3. It can be safely enchanted up to +3. One-piece type armor can be safely enchanted up to +4. If one's attempt for enchanting fails, an item will not become crystallized. However, the current enchant value will be set to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2212" level="1" /> <!-- Item - Blessed Scroll of Enchant Armor -->
+		</skills>
+	</item>
+	<item id="6577" type="EtcItem" name="Blessed Scroll: Enchant Weapon (Grade S)">
+		<!-- Increases the P.Atk of a S grade weapons such as sword/one-handed, blunt/one handed, dagger, spear and etc. type by 5. The P.Atk of sword/two-handed, blunt/two-handed, dual swords, and fists type will increase by 6 and bow type by 10. The M.Atk of all weapons will increase by 4. From +4, the added bonuses for P.Atk/M.Atk are double the above value. When fail on enchanting, item does not get crystallized but it's enchant value will return to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="30000000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2026" level="1" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+		</skills>
+	</item>
+	<item id="6578" type="EtcItem" name="Blessed Scroll: Enchant Armor (Grade S)">
+		<!-- Increases the P. Def. of S Grade armor or accessories by 1, and from +4, the P. Def will increase by 3. It can be safely enchanted up to +3. One-piece type armor can be safely enchanted up to +4. If one's attempt for enchanting fails, an item will not become crystallized. However, the current enchant value will be set to 0. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4500000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2208" level="1" /> <!-- Item - Blessed Scroll of Enchant Armor -->
+		</skills>
+	</item>
+	<item id="6579" type="Weapon" name="Arcana Mace">
+		<!-- Bestows one of the following functions: Acumen, MP Regeneration or Mana Up. -->
+		<set name="icon" val="icon.weapon_arcana_mace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">225</stat>
+			<stat type="mAtk">175</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6580" type="Weapon" name="Tallum Blade*Dark Legion's Edge">
+		<!-- P.Atk of dual swords will increase more than one-handed type weapon when enchanted. Max HP +15%, Max MP +20%, Max CP +30% when enchanted by 4 or more. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="2080" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+			<skill id="3570" level="1" type="ON_ENCHANT_4" /> <!-- Special Ability: Robust Health -->
+		</skills>
+	</item>
+	<item id="6581" type="Weapon" name="Forgotten Blade - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3564" level="1" /> <!-- Special Ability: Haste -->
+		</skills>
+	</item>
+	<item id="6582" type="Weapon" name="Forgotten Blade - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
+		</skills>
+	</item>
+	<item id="6583" type="Weapon" name="Forgotten Blade - Focus">
+		<!-- <Soul Crystal Enhancement> Increases critical chance by 84. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3566" level="1" /> <!-- Special Ability: Focus -->
+		</skills>
+	</item>
+	<item id="6584" type="Weapon" name="Basalt Battlehammer - HP Drain">
+		<!-- <Soul Crystal Enhancement>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1570" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3568" level="1" /> <!-- Special Ability: HP Drain -->
+		</skills>
+	</item>
+	<item id="6585" type="Weapon" name="Basalt Battlehammer - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1570" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
+		</skills>
+	</item>
+	<item id="6586" type="Weapon" name="Basalt Battlehammer - HP Regeneration">
+		<!-- <Soul Crystal Enhancement>. Increases HP regeneration rate. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1570" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3569" level="1" /> <!-- Special Ability: HP Regeneration -->
+		</skills>
+	</item>
+	<item id="6587" type="Weapon" name="Imperial Staff - Empower">
+		<!-- <Soul Crystal Enhancement>. Increases M. Atk. by 60. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="910" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">274</stat>
+			<stat type="mAtk">193</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3575" level="1" /> <!-- Special Ability: Empower Option -->
+		</skills>
+	</item>
+	<item id="6588" type="Weapon" name="Imperial Staff - MP Regeneration">
+		<!-- <Soul Crystal Enhancement>. Increases MP regeneration rate. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="910" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">274</stat>
+			<stat type="mAtk">193</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3576" level="1" /> <!-- Special Ability: MP Regeneration -->
+		</skills>
+	</item>
+	<item id="6589" type="Weapon" name="Imperial Staff - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Increases the chances of causing Dryad Root by 20% when using dark magic upon a target. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="910" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">274</stat>
+			<stat type="mAtk">193</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+			<skill id="3577" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
+		</skills>
+	</item>
+	<item id="6590" type="Weapon" name="Angel Slayer - Critical Damage">
+		<!-- <Soul Crystal Enhancement>. Increases P. Atk. by 265 during a critical attack. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_angel_slayer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="950" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">246</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3572" level="1" /> <!-- Special Ability: Crt. Damage -->
+		</skills>
+	</item>
+	<item id="6591" type="Weapon" name="Angel Slayer - HP Drain">
+		<!-- <Soul Crystal Enhancement>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_angel_slayer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="950" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">246</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3568" level="1" /> <!-- Special Ability: HP Drain -->
+		</skills>
+	</item>
+	<item id="6592" type="Weapon" name="Angel Slayer - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_angel_slayer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="950" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">246</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3564" level="1" /> <!-- Special Ability: Haste -->
+		</skills>
+	</item>
+	<item id="6593" type="Weapon" name="Shining Bow - Cheap Shot">
+		<set name="icon" val="icon.weapon_shining_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1650" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="11" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="reuse_delay" val="820" />
+		<stats>
+			<stat type="pAtk">581</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="6594" type="Weapon" name="Shining Bow - Focus">
+		<set name="icon" val="icon.weapon_shining_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1650" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="11" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="reuse_delay" val="820" />
+		<stats>
+			<stat type="pAtk">581</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="6595" type="Weapon" name="Shining Bow - Critical Slow">
+		<set name="icon" val="icon.weapon_shining_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1650" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="11" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="reuse_delay" val="820" />
+		<stats>
+			<stat type="pAtk">581</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="6596" type="Weapon" name="Dragon Hunter Axe - HP Regeneration">
+		<!-- <Soul Crystal Enhancement>. Increases HP regeneration rate. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1820" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3569" level="1" /> <!-- Special Ability: HP Regeneration -->
+		</skills>
+	</item>
+	<item id="6597" type="Weapon" name="Dragon Hunter Axe - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1820" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
+		</skills>
+	</item>
+	<item id="6598" type="Weapon" name="Dragon Hunter Axe - HP Drain">
+		<!-- <Soul Crystal Enhancement>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1820" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">342</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3568" level="1" /> <!-- Special Ability: HP Drain -->
+		</skills>
+	</item>
+	<item id="6599" type="Weapon" name="Saint Spear - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_saint_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2440" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1800" />
+		<set name="price" val="48800000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">281</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3013" level="4" /> <!-- Special Ability: Health -->
+		</skills>
+	</item>
+</list>

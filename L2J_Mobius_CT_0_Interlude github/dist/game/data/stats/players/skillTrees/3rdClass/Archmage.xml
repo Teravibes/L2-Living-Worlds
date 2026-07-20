@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Archmage -->
+	<skillTree type="classSkillTree" classId="94" parentClassId="12">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="15000000" learnedByNpc="true" />
+
+		<skill skillName="Skill Mastery" skillId="331" skillLevel="1" getLevel="77" levelUpSp="18000000" learnedByNpc="true" />
+		<skill skillName="Fire Vortex" skillId="1339" skillLevel="1" getLevel="77" levelUpSp="18000000" learnedByNpc="true">
+			<item id="7649" count="1" /> <!-- Spellbook - Fire Vortex -->
+		</skill>
+		<skill skillName="Spell Force" skillId="427" skillLevel="1" getLevel="77" levelUpSp="18000000" learnedByNpc="true" />
+
+		<skill skillName="Arcane Power" skillId="337" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+		<skill skillName="Arcane Chaos" skillId="1338" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true">
+			<item id="7648" count="1" /> <!-- Spellbook - Arcane Chaos -->
+		</skill>
+		<skill skillName="Arcane Roar" skillId="433" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+
+		<skill skillName="Volcano" skillId="1419" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8899" count="1" /> <!-- Ancient Spellbook: Volcano -->
+		</skill>
+	</skillTree>
+</list>

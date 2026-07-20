@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35400"> <!-- Horner -->
+		<teleport name="tel1" type="OTHER">
+			<location name="Village Square" x="-82445" y="150788" z="-3129" />
+			<location name="North Gate Entrance" x="-83331" y="148563" z="-3148" />
+			<location name="East Gate Entrance" x="-78405" y="152723" z="-3181" />
+			<location name="South Gate Entrance" x="-77460" y="155995" z="-3194" />
+			<location name="West Gate Entrance" x="-85138" y="152749" z="-3160" />
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location name="Village Square" x="-82445" y="150788" z="-3129" />
+			<location name="North Gate Entrance" x="-83331" y="148563" z="-3148" />
+			<location name="East Gate Entrance" x="-78405" y="152723" z="-3181" />
+			<location name="South Gate Entrance" x="-77460" y="155995" z="-3194" />
+			<location name="West Gate Entrance" x="-85138" y="152749" z="-3160" />
+			<location name="Windmill Hill" x="-75437" y="168800" z="-3632" feeCount="500" />
+			<location name="Fellmere Harvesting Grounds" x="-63736" y="101522" z="-3552" feeCount="500" castleId="1" />
+			<location name="Windy Hill" x="-88539" y="83389" z="-2864" feeCount="500" />
+			<location name="Abandoned Camp" x="-49853" y="147089" z="-2784" feeCount="500" />
+			<location name="Wastelands" x="-16526" y="208032" z="-3664" feeCount="500" />
+		</teleport>
+	</npc>
+</list>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn zone="aden23_2519_01">
+		<territory minZ="-6072" maxZ="-5672">
+			<node x="172467" y="53837" />
+			<node x="176223" y="53110" />
+			<node x="177496" y="57409" />
+			<node x="174220" y="59487" />
+			<node x="171647" y="55312" />
+		</territory>
+		<npc id="20966" count="7" respawnDelay="37" /> <!-- Black Shadow -->
+		<npc id="20973" count="3" respawnDelay="37" /> <!-- Forgotten Ancient People -->
+	</spawn>
+	<spawn zone="aden23_2519_02">
+		<territory minZ="-6072" maxZ="-5672">
+			<node x="176355" y="53045" />
+			<node x="179704" y="51623" />
+			<node x="182344" y="56291" />
+			<node x="177879" y="57104" />
+		</territory>
+		<npc id="20973" count="4" respawnDelay="37" /> <!-- Forgotten Ancient People -->
+		<npc id="20969" count="6" respawnDelay="37" /> <!-- Giant's Shadow -->
+	</spawn>
+	<spawn zone="aden23_2519_03">
+		<territory minZ="-6112" maxZ="-5712">
+			<node x="179600" y="51628" />
+			<node x="182542" y="48378" />
+			<node x="186097" y="51828" />
+			<node x="182545" y="55789" />
+		</territory>
+		<npc id="20973" count="4" respawnDelay="37" /> <!-- Forgotten Ancient People -->
+		<npc id="20969" count="6" respawnDelay="37" /> <!-- Giant's Shadow -->
+	</spawn>
+	<spawn zone="aden23_2519_04">
+		<territory minZ="-6056" maxZ="-5656">
+			<node x="182414" y="48196" />
+			<node x="187263" y="45685" />
+			<node x="189299" y="49041" />
+			<node x="187063" y="52435" />
+		</territory>
+		<npc id="20966" count="7" respawnDelay="37" /> <!-- Black Shadow -->
+		<npc id="20973" count="3" respawnDelay="37" /> <!-- Forgotten Ancient People -->
+	</spawn>
+</list>

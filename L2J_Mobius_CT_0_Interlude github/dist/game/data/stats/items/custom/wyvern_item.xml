@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/items.xsd">
+	<item id="50000" type="EtcItem" name="Gold Wyvern">
+		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
+		<set name="displayId" val="3482" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="reuse_delay" val="3000" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="49900" level="1" />
+		</skills>
+	</item>
+</list>

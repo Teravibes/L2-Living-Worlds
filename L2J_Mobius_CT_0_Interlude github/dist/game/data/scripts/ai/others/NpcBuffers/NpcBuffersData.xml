@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="NpcBuffersData.xsd">
+	<npc id="13007"> <!-- Special Christmas Tree -->
+		<skill id="2139" level="1" initialDelay="1" delay="10" affectScope="RANGE" affectObject="FRIEND" /> <!-- Special Tree Recovery Bonus -->
+	</npc>
+	<npc id="13018">
+		<skill id="5123" level="1" initialDelay="1" delay="5" affectScope="RANGE" affectObject="FRIEND" /> <!-- Maximum Defense -->
+	</npc>
+	<npc id="13019">
+		<skill id="5124" level="1" initialDelay="1" delay="2" affectScope="RANGE" affectObject="NOT_FRIEND" /> <!-- Anti-Music -->
+	</npc>
+	<npc id="13020">
+		<skill id="5125" level="1" initialDelay="1" delay="5" affectScope="RANGE" affectObject="FRIEND" /> <!-- Maximum Resist Status -->
+	</npc>
+	<npc id="13021">
+		<skill id="5126" level="1" initialDelay="1" delay="5" affectScope="RANGE" affectObject="FRIEND" /> <!-- Maximum Recovery -->
+	</npc>
+	<npc id="13022">
+		<skill id="5127" level="1" initialDelay="1" delay="5" affectScope="RANGE" affectObject="FRIEND" /> <!-- Recover Force -->
+	</npc>
+	<npc id="13023">
+		<skill id="5128" level="1" initialDelay="1" delay="5" affectScope="RANGE" affectObject="FRIEND" /> <!-- Maximize long-range weapon use -->
+	</npc>
+	<npc id="13024">
+		<skill id="5129" level="1" initialDelay="1" delay="5" affectScope="RANGE" affectObject="FRIEND" /> <!-- Smokescreen -->
+	</npc>
+	<npc id="13028">
+		<skill id="5145" level="1" initialDelay="1" delay="2" affectScope="RANGE" affectObject="NOT_FRIEND" /> <!-- Day of Doom -->
+	</npc>
+	<npc id="13030">
+		<skill id="5134" level="1" initialDelay="1" delay="2" affectScope="RANGE" affectObject="NOT_FRIEND" /> <!-- Anti-Summoning Field -->
+	</npc>
+</list>

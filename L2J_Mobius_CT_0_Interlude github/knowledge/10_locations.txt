@@ -1,0 +1,22 @@
+# Lineage 2 Interlude hunting locations — CURATED, kept only for zones the generator can't emit.
+# Most hunting zones now come from 60_zones_generated.txt (built from real spawn + npc data).
+# The zones below are the classic named areas whose monster spawns live in the coordinate-named
+# Others/ map-grid files (e.g. 21_22.xml), which the generator skips because those files carry no
+# zone name. So they'd be missing entirely without these lines. Do NOT re-add zones that already
+# appear in 60_zones_generated.txt — that just creates contradictory level bands.
+# Format: [location level <lo> <hi> <name tokens>] Description naming the zone and its level range.
+
+[location level 1 8 talking island cedrics training hall] Cedric's Training Hall is a very low level Talking Island area around levels 1-8; never recommend it to high level players.
+[location level 15 25 gludio ruins despair] The Ruins of Despair are a hunting zone near Gludio (reachable from the Gludio gatekeeper), around levels 15-25.
+[location level 15 44 gludio ruins agony] The Ruins of Agony are a hunting zone near Gludio (reachable from the Gludio gatekeeper), spanning roughly levels 15-44.
+[location level 8 18 elven fortress elf] Elven Fortress in the Elven Territory is around levels 8-18.
+[location level 16 20 school dark arts dark elf] The School of Dark Arts is a Dark Elven area around levels 16-20.
+[location level 19 30 abandoned coal mines dwarven] Abandoned Coal Mines in Dwarven Territory is around levels 19-30.
+[location level 24 35 orc barracks gludin] The Orc Barracks near Gludin (reachable from the Gludin Village gatekeeper) is around levels 24-35.
+[location level 17 30 abandoned camp gludin] The Abandoned Camp near Gludin (reachable from the Gludin Village gatekeeper) is a hunting ground around levels 17-30.
+[location level 22 40 ant nest gludio] The Ant Nest is a dungeon near Gludio (reachable from the Gludio gatekeeper), around levels 22-40.
+[location level 35 50 cruma tower dion] Cruma Tower near Dion (reachable from the Dion gatekeeper) is a multi-floor dungeon around levels 35-50.
+[location level 30 70 partisan hideaway dion] Partisan Hideaway in Dion Territory spans roughly levels 30-70.
+[location level 40 55 forest mirrors hunter village] Forest of Mirrors near Hunter's Village is around levels 40-55.
+[location level 60 66 forest dead rune cursed village] The Forest of the Dead surrounds the Cursed Village near Rune (reachable from the Rune gatekeeper) and is around levels 60-66.
+[location level 63 73 cursed village rune] The Cursed Village near Rune is around levels 63-73.

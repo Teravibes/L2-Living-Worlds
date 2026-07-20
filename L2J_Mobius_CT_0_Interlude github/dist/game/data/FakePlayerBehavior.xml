@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/FakePlayerBehavior.xsd">
+	<profile name="mv_giran_gatekeeper" type="WANDER" radius="240" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_warehouse" type="WANDER" radius="200" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_blacksmith" type="WANDER" radius="200" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_grocer" type="WANDER" radius="180" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_mammon" type="WANDER" radius="180" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="83485" y="147998" z="-3407"/>
+		<point x="83192" y="146680" z="-3464"/>
+		<point x="82651" y="146714" z="-3466"/>
+		<point x="85055" y="146560" z="-3399"/>
+		<point x="85505" y="146208" z="-3399"/>
+		<point x="81360" y="150016" z="-3528"/>
+	</profile>
+	<profile name="mv_giran_crowd" type="WANDER" radius="400" run="false" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_ti_gatekeeper" type="WANDER" radius="220" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_ti_movers" type="WANDER" radius="2752" run="false" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_elf_gatekeeper" type="WANDER" radius="220" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_elf_movers" type="WANDER" radius="450" run="false" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_delf_gatekeeper" type="WANDER" radius="220" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_delf_movers" type="WANDER" radius="450" run="false" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_dwarf_gatekeeper" type="WANDER" radius="200" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_dwarf_movers" type="WANDER" radius="400" run="false" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_orc_gatekeeper" type="WANDER" radius="220" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_orc_movers" type="WANDER" radius="450" run="false" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_gludin_gatekeeper" type="WANDER" radius="260" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_gludin_movers" type="WANDER" radius="600" run="false" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_gludio_gatekeeper" type="WANDER" radius="100" run="true" pauseMin="25" pauseMax="120"/>
+	<profile name="mv_giran_sellers" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_buyers" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_crafters" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_gludio_sellers" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_gludio_store_hopper" type="PATROL" run="true" pauseMin="10" pauseMax="30">
+		<point x="-14677" y="123488" z="-3000"/>
+		<point x="-15044" y="123400" z="-3000"/>
+		<point x="-15381" y="123407" z="-3000" delay="20"/>
+		<point x="-15477" y="123812" z="-3000"/>
+		<point x="-15441" y="123935" z="-3000"/>
+		<point x="-14780" y="123915" z="-3000"/>
+		<point x="-14413" y="123701" z="-3000"/>
+	</profile>
+	<profile name="mv_dion_village_runner" type="PATROL" run="true" pauseMin="10" pauseMax="30">
+		<point x="15571" y="142892" z="-2696" delay="60"/>
+		<point x="16789" y="144526" z="-2966"/>
+		<point x="17925" y="145928" z="-3112"/>
+		<point x="18592" y="145300" z="-3120"/>
+		<point x="19134" y="145592" z="-3107"/>
+		<point x="19264" y="146104" z="-3064" delay="60"/>
+		<point x="19272" y="145362" z="-3106"/>
+		<point x="18464" y="144840" z="-3072"/>
+		<point x="18234" y="144685" z="-3040"/>
+		<point x="18120" y="144578" z="-3040" delay="60"/>
+		<point x="18371" y="144154" z="-3061"/>
+		<point x="18868" y="144763" z="-3112"/>
+		<point x="19194" y="144127" z="-3080"/>
+		<point x="20086" y="144170" z="-3080"/>
+		<point x="20379" y="144557" z="-3088"/>
+		<point x="20568" y="144696" z="-3072"/>
+		<point x="20715" y="144751" z="-3064"/>
+		<point x="20765" y="144487" z="-3064" delay="120"/>
+	</profile>
+	<profile name="mv_dion_sellers" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_dion_sellers_gk" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_new_population" type="WANDER" radius="100" run="false" pauseMin="25" pauseMax="80"/>
+
+	<!-- ===== Shared town-life profiles (reused by the cities below). For populations the wander radius
+	     comes from the population's own radius attribute, so these can be shared across towns. ===== -->
+	<profile name="mv_town_gk" type="WANDER" radius="220" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_town_life" type="WANDER" radius="450" run="false" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_town_seller" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_town_buyer" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_town_crafter" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
+
+	<!-- Oren: tour the gatekeeper, Adventurers' Guild, manor manager and the plazas. -->
+	<profile name="mv_oren_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="82992" y="53171" z="-1492"/>
+		<point x="83568" y="53856" z="-1455"/>
+		<point x="81992" y="54048" z="-1494"/>
+		<point x="82682" y="55280" z="-1523"/>
+		<point x="80334" y="54400" z="-1500"/>
+		<point x="82445" y="56012" z="-1480"/>
+		<point x="80054" y="53209" z="-1500"/>
+	</profile>
+
+	<!-- Aden: the capital - gatekeeper, market squares, castle approach and the northern plaza. -->
+	<profile name="mv_aden_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="146737" y="25807" z="-2013"/>
+		<point x="146814" y="27108" z="-2189"/>
+		<point x="147970" y="27040" z="-2191"/>
+		<point x="144635" y="26664" z="-2220"/>
+		<point x="148010" y="27996" z="-2256"/>
+		<point x="145686" y="21114" z="-2100"/>
+		<point x="146494" y="30584" z="-2420"/>
+	</profile>
+
+	<!-- Heine: harbour town - gatekeeper, the eastern square and the western docks. -->
+	<profile name="mv_heine_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="111386" y="219413" z="-3536"/>
+		<point x="110896" y="220768" z="-3624"/>
+		<point x="112112" y="220576" z="-3624"/>
+		<point x="110688" y="220576" z="-3624"/>
+		<point x="107920" y="218240" z="-3624"/>
+		<point x="107552" y="218000" z="-3624"/>
+	</profile>
+
+	<!-- Hunters Village. -->
+	<profile name="mv_hunters_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="117129" y="76917" z="-2689"/>
+		<point x="116704" y="75695" z="-2680"/>
+		<point x="118275" y="74859" z="-2557"/>
+		<point x="119862" y="76603" z="-2220"/>
+		<point x="117671" y="78998" z="-2210"/>
+		<point x="115193" y="77594" z="-2670"/>
+	</profile>
+
+	<!-- Goddard. -->
+	<profile name="mv_goddard_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="147966" y="-55228" z="-2728"/>
+		<point x="148560" y="-55904" z="-2779"/>
+		<point x="150704" y="-55744" z="-2979"/>
+		<point x="146832" y="-55904" z="-2779"/>
+		<point x="149088" y="-56256" z="-2779"/>
+		<point x="145264" y="-57680" z="-2979"/>
+	</profile>
+
+	<!-- Rune: tour the lower township around the gatekeeper. -->
+	<profile name="mv_rune_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="43824" y="-47664" z="-800"/>
+		<point x="43744" y="-47920" z="-800"/>
+		<point x="44864" y="-47824" z="-800"/>
+		<point x="45632" y="-47968" z="-800"/>
+		<point x="45072" y="-49936" z="-800"/>
+		<point x="44368" y="-50592" z="-800"/>
+		<point x="43536" y="-50416" z="-800"/>
+	</profile>
+
+	<!-- Schuttgart. -->
+	<profile name="mv_schuttgart_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="87048" y="-143448" z="-1293"/>
+		<point x="88240" y="-142736" z="-1341"/>
+		<point x="86400" y="-142672" z="-1344"/>
+		<point x="85968" y="-142384" z="-1341"/>
+		<point x="84720" y="-141936" z="-1542"/>
+		<point x="88448" y="-140512" z="-1542"/>
+	</profile>
+
+	<!-- ===== Starting villages: short landmark tours (race is set on the populations) ===== -->
+	<profile name="mv_ti_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="-83990" y="243336" z="-3700"/>
+		<point x="-83964" y="242680" z="-3700"/>
+		<point x="-84512" y="242679" z="-3700"/>
+		<point x="-83742" y="242214" z="-3700"/>
+		<point x="-84903" y="243489" z="-3700"/>
+		<point x="-83808" y="243637" z="-3700"/>
+	</profile>
+	<profile name="mv_elf_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="46926" y="51511" z="-2976"/>
+		<point x="45487" y="49767" z="-2950"/>
+		<point x="45896" y="49831" z="-2950"/>
+		<point x="44798" y="49475" z="-2950"/>
+		<point x="45100" y="49025" z="-2950"/>
+		<point x="45912" y="49363" z="-2950"/>
+	</profile>
+	<profile name="mv_delf_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="12501" y="16768" z="-4500"/>
+		<point x="12104" y="17385" z="-4500"/>
+		<point x="12519" y="16376" z="-4500"/>
+		<point x="10355" y="17270" z="-4500"/>
+		<point x="10691" y="16343" z="-4500"/>
+		<point x="10146" y="16965" z="-4500"/>
+	</profile>
+	<profile name="mv_dwarf_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="115072" y="-178176" z="-880"/>
+		<point x="115248" y="-178816" z="-850"/>
+		<point x="115271" y="-178561" z="-820"/>
+		<point x="115249" y="-177859" z="-820"/>
+		<point x="115485" y="-178077" z="-820"/>
+		<point x="115790" y="-179146" z="-890"/>
+	</profile>
+	<profile name="mv_orc_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="-44316" y="-113136" z="-80"/>
+		<point x="-44296" y="-114048" z="-80"/>
+		<point x="-44704" y="-112896" z="-80"/>
+		<point x="-44206" y="-113392" z="-80"/>
+		<point x="-43970" y="-114150" z="-80"/>
+		<point x="-44232" y="-113701" z="-80"/>
+	</profile>
+	<profile name="mv_gludin_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+		<point x="-83520" y="150560" z="-3000"/>
+		<point x="-82464" y="150848" z="-3000"/>
+		<point x="-84064" y="150864" z="-3000"/>
+		<point x="-83408" y="151376" z="-3000"/>
+		<point x="-81787" y="150780" z="-3000"/>
+		<point x="-82909" y="150357" z="-3000"/>
+	</profile>
+
+	<profile name="loiter" type="WANDER" radius="150" run="false" pauseMin="25" pauseMax="80"/>
+
+	<population name="giran_gatekeeper" x="83384" y="148145" z="-3407" radius="240" count="15" minLevel="1" maxLevel="76" profile="mv_giran_gatekeeper" />
+	<population name="giran_warehouse" x="83192" y="146680" z="-3464" radius="200" count="5" minLevel="1" maxLevel="76" profile="mv_giran_warehouse" />
+	<population name="giran_blacksmith" x="85055" y="146560" z="-3399" radius="200" count="3" minLevel="15" maxLevel="76" profile="mv_giran_blacksmith" />
+	<population name="giran_grocer" x="85467" y="146349" z="-3399" radius="180" count="5" minLevel="1" maxLevel="50" profile="mv_giran_grocer" />
+	<population name="giran_mammon" x="81360" y="150016" z="-3528" radius="180" count="2" minLevel="20" maxLevel="76" profile="mv_giran_mammon" />
+	<population name="giran_movers" x="82718" y="148176" z="-3407" radius="1589" count="10" minLevel="15" maxLevel="76" profile="mv_giran_movers">
+		<point x="83509" y="148065" z="-3407" />
+		<point x="81164" y="147919" z="-3407" />
+		<point x="81145" y="148403" z="-3407" />
+		<point x="82717" y="148384" z="-3407" />
+		<point x="83483" y="148335" z="-3407" />
+		<point x="83502" y="148069" z="-3407" />
+		<point x="83509" y="148058" z="-3407" />
+	</population>
+	<population name="giran_crowd" x="82443" y="148243" z="-3400" radius="400" count="22" minLevel="15" maxLevel="50" profile="mv_giran_crowd" />
+	<population name="ti_gatekeeper" x="-83990" y="243336" z="-3700" radius="220" count="3" minLevel="1" maxLevel="18" profile="mv_ti_gatekeeper" race="HUMAN" />
+	<population name="ti_movers" x="-83676" y="243620" z="-3700" radius="2752" count="3" minLevel="1" maxLevel="18" profile="mv_ti_movers" race="HUMAN">
+		<point x="-83569" y="244668" z="-3700" />
+		<point x="-83495" y="244828" z="-3700" />
+		<point x="-83112" y="244839" z="-3700" />
+		<point x="-82861" y="244633" z="-3700" />
+		<point x="-82764" y="244428" z="-3700" />
+		<point x="-82947" y="244280" z="-3700" />
+		<point x="-83010" y="244023" z="-3700" />
+		<point x="-83067" y="243783" z="-3700" />
+		<point x="-83672" y="243623" z="-3700" />
+		<point x="-83854" y="243515" z="-3700" />
+		<point x="-83586" y="242511" z="-3700" />
+		<point x="-83906" y="242385" z="-3700" />
+		<point x="-84334" y="242436" z="-3700" />
+		<point x="-85458" y="241523" z="-3700" />
+		<point x="-85601" y="241780" z="-3700" />
+		<point x="-83575" y="244662" z="-3700" />
+	</population>
+	<population name="elf_gatekeeper" x="46926" y="51511" z="-2976" radius="220" count="3" minLevel="1" maxLevel="20" profile="mv_elf_gatekeeper" race="ELF" />
+	<population name="elf_movers" x="46926" y="51511" z="-2976" radius="450" count="2" minLevel="1" maxLevel="20" profile="mv_elf_movers" race="ELF" />
+	<population name="delf_gatekeeper" x="12501" y="16768" z="-4500" radius="220" count="4" minLevel="1" maxLevel="20" profile="mv_delf_gatekeeper" race="DARK_ELF" />
+	<population name="delf_movers" x="12501" y="16768" z="-4500" radius="450" count="2" minLevel="1" maxLevel="20" profile="mv_delf_movers" race="DARK_ELF" />
+	<population name="dwarf_gatekeeper" x="115072" y="-178176" z="-880" radius="200" count="11" minLevel="1" maxLevel="20" profile="mv_dwarf_gatekeeper" race="DWARF" />
+	<population name="dwarf_movers" x="115072" y="-178176" z="-880" radius="400" count="2" minLevel="1" maxLevel="20" profile="mv_dwarf_movers" race="DWARF" />
+	<population name="orc_gatekeeper" x="-44316" y="-113136" z="-80" radius="220" count="3" minLevel="1" maxLevel="20" profile="mv_orc_gatekeeper" race="ORC" />
+	<population name="orc_movers" x="-44316" y="-113136" z="-80" radius="450" count="1" minLevel="1" maxLevel="20" profile="mv_orc_movers" race="ORC" />
+	<population name="gludin_gatekeeper" x="-83520" y="150560" z="-3000" radius="260" count="12" minLevel="1" maxLevel="30" profile="mv_gludin_gatekeeper" race="HUMAN" />
+	<population name="gludin_movers" x="-83520" y="150560" z="-3000" radius="600" count="1" minLevel="1" maxLevel="30" profile="mv_gludin_movers" race="HUMAN" />
+	<population name="gludio_gatekeeper" x="-12726" y="122792" z="-3000" radius="100" count="5" minLevel="5" maxLevel="35" profile="mv_gludio_gatekeeper" />
+	<population name="Giran Sellers" x="82094" y="148147" z="-3000" radius="649" count="150" minLevel="1" maxLevel="40" profile="mv_giran_sellers" store="SELL" fullStock="true">
+		<point x="82590" y="147888" z="-3000" />
+		<point x="82583" y="148357" z="-3000" />
+		<point x="81986" y="148402" z="-3000" />
+		<point x="81908" y="148324" z="-3000" />
+		<point x="81468" y="148320" z="-3000" />
+		<point x="81532" y="147858" z="-3000" />
+		<point x="82590" y="147877" z="-3000" />
+	</population>
+	<population name="Giran Buyers" x="81434" y="148096" z="-3000" radius="467" count="100" minLevel="1" maxLevel="40" profile="mv_giran_buyers" store="BUY" fullStock="true">
+		<point x="81671" y="147900" z="-3000" />
+		<point x="81599" y="148350" z="-3000" />
+		<point x="81115" y="148437" z="-3000" />
+		<point x="81119" y="147904" z="-3000" />
+		<point x="81667" y="147889" z="-3000" />
+	</population>
+	<population name="Giran Crafters" x="82359" y="148629" z="-3000" radius="305" count="10" minLevel="1" maxLevel="40" profile="mv_giran_crafters" store="CRAFT" fullStock="true">
+		<point x="82177" y="148527" z="-3000" />
+		<point x="82612" y="148538" z="-3000" />
+		<point x="82627" y="148774" z="-3000" />
+		<point x="82207" y="148782" z="-3000" />
+		<point x="82173" y="148523" z="-3000" />
+	</population>
+	<!-- Dedicated Ancient Adena vendors: always a few in Giran so a solo player can always sell seal-stone
+	     winnings for adena (AABUY) or buy some Ancient Adena to spend at the Mammon merchants (AASELL). -->
+	<population name="Giran Ancient Adena Sellers" x="82094" y="148147" z="-3000" radius="300" count="3" minLevel="25" maxLevel="60" profile="mv_giran_sellers" store="AASELL" fullStock="true" />
+	<population name="Giran Ancient Adena Buyers" x="81434" y="148096" z="-3000" radius="300" count="3" minLevel="25" maxLevel="60" profile="mv_giran_buyers" store="AABUY" fullStock="true" />
+	<population name="Gludio Sellers" x="-14411" y="123749" z="-3000" radius="100" count="5" minLevel="1" maxLevel="20" profile="mv_gludio_sellers" store="SELL" />
+	<population name="Gludio Store hopper" x="-14411" y="123703" z="-3000" radius="100" count="1" minLevel="1" maxLevel="25" profile="mv_gludio_store_hopper" />
+	<population name="Dion Village Runner" x="15580" y="142894" z="-3000" radius="100" count="1" minLevel="1" maxLevel="40" profile="mv_dion_village_runner" route="Dion_village_run" />
+	<population name="Dion Sellers" x="19204" y="145606" z="-3000" radius="100" count="5" minLevel="20" maxLevel="40" profile="mv_dion_sellers" store="SELL" />
+	<population name="Dion Sellers GK" x="15636" y="142960" z="-3000" radius="100" count="7" minLevel="20" maxLevel="40" profile="mv_dion_sellers_gk" store="SELL" />
+	<population name="new_population" x="15602" y="142940" z="-3000" radius="100" count="6" minLevel="25" maxLevel="40" profile="mv_new_population" />
+
+	<!-- ============================================================= -->
+	<!-- Oren -->
+	<!-- ============================================================= -->
+	<population name="oren_gatekeeper" x="82992" y="53171" z="-1492" radius="220" count="8" minLevel="20" maxLevel="55" profile="mv_town_gk" />
+	<population name="oren_crowd" x="82600" y="54000" z="-1490" radius="500" count="12" minLevel="20" maxLevel="55" profile="mv_town_life" />
+	<population name="oren_movers" x="82600" y="54000" z="-1490" radius="1200" count="6" minLevel="20" maxLevel="55" profile="mv_oren_movers" />
+	<population name="Oren Sellers" x="82500" y="53800" z="-1490" radius="320" count="20" minLevel="20" maxLevel="52" profile="mv_town_seller" store="SELL" />
+	<population name="Oren Buyers" x="82200" y="54200" z="-1495" radius="300" count="10" minLevel="20" maxLevel="52" profile="mv_town_buyer" store="BUY" />
+	<population name="Oren Crafters" x="82900" y="54200" z="-1500" radius="250" count="3" minLevel="20" maxLevel="52" profile="mv_town_crafter" store="CRAFT" />
+
+	<!-- ============================================================= -->
+	<!-- Aden (capital - a full market hub) -->
+	<!-- ============================================================= -->
+	<population name="aden_gatekeeper" x="146737" y="25807" z="-2013" radius="240" count="10" minLevel="40" maxLevel="76" profile="mv_town_gk" />
+	<population name="aden_crowd" x="147000" y="27000" z="-2190" radius="600" count="16" minLevel="40" maxLevel="76" profile="mv_town_life" />
+	<population name="aden_movers" x="147000" y="27000" z="-2190" radius="1800" count="8" minLevel="40" maxLevel="76" profile="mv_aden_movers" />
+	<population name="Aden Sellers" x="147100" y="27200" z="-2190" radius="400" count="30" minLevel="40" maxLevel="76" profile="mv_town_seller" store="SELL" fullStock="true" />
+	<population name="Aden Buyers" x="146600" y="27400" z="-2190" radius="380" count="16" minLevel="40" maxLevel="76" profile="mv_town_buyer" store="BUY" fullStock="true" />
+	<population name="Aden Crafters" x="147600" y="27600" z="-2200" radius="300" count="5" minLevel="40" maxLevel="76" profile="mv_town_crafter" store="CRAFT" fullStock="true" />
+
+	<!-- ============================================================= -->
+	<!-- Heine -->
+	<!-- ============================================================= -->
+	<population name="heine_gatekeeper" x="111386" y="219413" z="-3536" radius="220" count="8" minLevel="40" maxLevel="62" profile="mv_town_gk" />
+	<population name="heine_crowd" x="111300" y="220100" z="-3624" radius="500" count="12" minLevel="40" maxLevel="62" profile="mv_town_life" />
+	<population name="heine_movers" x="111200" y="219800" z="-3600" radius="1400" count="6" minLevel="40" maxLevel="62" profile="mv_heine_movers" />
+	<population name="Heine Sellers" x="111300" y="220200" z="-3624" radius="350" count="20" minLevel="40" maxLevel="60" profile="mv_town_seller" store="SELL" />
+	<population name="Heine Buyers" x="110900" y="219800" z="-3624" radius="320" count="10" minLevel="40" maxLevel="60" profile="mv_town_buyer" store="BUY" />
+	<population name="Heine Crafters" x="111700" y="220000" z="-3624" radius="250" count="3" minLevel="40" maxLevel="60" profile="mv_town_crafter" store="CRAFT" />
+
+	<!-- ============================================================= -->
+	<!-- Hunters Village -->
+	<!-- ============================================================= -->
+	<population name="hunters_gatekeeper" x="117129" y="76917" z="-2689" radius="220" count="8" minLevel="40" maxLevel="62" profile="mv_town_gk" />
+	<population name="hunters_crowd" x="116900" y="76700" z="-2680" radius="500" count="12" minLevel="40" maxLevel="62" profile="mv_town_life" />
+	<population name="hunters_movers" x="116900" y="76700" z="-2680" radius="1500" count="6" minLevel="40" maxLevel="62" profile="mv_hunters_movers" />
+	<population name="Hunters Sellers" x="116700" y="76600" z="-2680" radius="350" count="20" minLevel="40" maxLevel="60" profile="mv_town_seller" store="SELL" />
+	<population name="Hunters Buyers" x="117100" y="76400" z="-2670" radius="320" count="10" minLevel="40" maxLevel="60" profile="mv_town_buyer" store="BUY" />
+	<population name="Hunters Crafters" x="116900" y="77100" z="-2680" radius="250" count="3" minLevel="40" maxLevel="60" profile="mv_town_crafter" store="CRAFT" />
+
+	<!-- ============================================================= -->
+	<!-- Goddard -->
+	<!-- ============================================================= -->
+	<population name="goddard_gatekeeper" x="147966" y="-55228" z="-2728" radius="220" count="8" minLevel="55" maxLevel="76" profile="mv_town_gk" />
+	<population name="goddard_crowd" x="147800" y="-56000" z="-2779" radius="550" count="12" minLevel="55" maxLevel="76" profile="mv_town_life" />
+	<population name="goddard_movers" x="147800" y="-56000" z="-2779" radius="1600" count="6" minLevel="55" maxLevel="76" profile="mv_goddard_movers" />
+	<population name="Goddard Sellers" x="147800" y="-56200" z="-2779" radius="380" count="20" minLevel="55" maxLevel="76" profile="mv_town_seller" store="SELL" />
+	<population name="Goddard Buyers" x="148300" y="-56400" z="-2779" radius="350" count="10" minLevel="55" maxLevel="76" profile="mv_town_buyer" store="BUY" />
+	<population name="Goddard Crafters" x="147300" y="-56500" z="-2779" radius="300" count="4" minLevel="55" maxLevel="76" profile="mv_town_crafter" store="CRAFT" />
+
+	<!-- ============================================================= -->
+	<!-- Rune (lower township) -->
+	<!-- ============================================================= -->
+	<population name="rune_gatekeeper" x="43824" y="-47664" z="-800" radius="220" count="8" minLevel="60" maxLevel="76" profile="mv_town_gk" />
+	<population name="rune_crowd" x="44400" y="-48800" z="-800" radius="600" count="14" minLevel="60" maxLevel="76" profile="mv_town_life" />
+	<population name="rune_movers" x="44400" y="-48800" z="-800" radius="1800" count="6" minLevel="60" maxLevel="76" profile="mv_rune_movers" />
+	<population name="Rune Sellers" x="44400" y="-48600" z="-800" radius="400" count="24" minLevel="60" maxLevel="76" profile="mv_town_seller" store="SELL" fullStock="true" />
+	<population name="Rune Buyers" x="44900" y="-49000" z="-800" radius="380" count="12" minLevel="60" maxLevel="76" profile="mv_town_buyer" store="BUY" fullStock="true" />
+	<population name="Rune Crafters" x="43900" y="-49200" z="-800" radius="300" count="4" minLevel="60" maxLevel="76" profile="mv_town_crafter" store="CRAFT" fullStock="true" />
+
+	<!-- ============================================================= -->
+	<!-- Schuttgart -->
+	<!-- ============================================================= -->
+	<population name="schuttgart_gatekeeper" x="87048" y="-143448" z="-1293" radius="220" count="8" minLevel="55" maxLevel="76" profile="mv_town_gk" />
+	<population name="schuttgart_crowd" x="87000" y="-142400" z="-1340" radius="550" count="12" minLevel="55" maxLevel="76" profile="mv_town_life" />
+	<population name="schuttgart_movers" x="87000" y="-142400" z="-1340" radius="1600" count="6" minLevel="55" maxLevel="76" profile="mv_schuttgart_movers" />
+	<population name="Schuttgart Sellers" x="86800" y="-142400" z="-1341" radius="380" count="20" minLevel="55" maxLevel="76" profile="mv_town_seller" store="SELL" />
+	<population name="Schuttgart Buyers" x="87400" y="-142200" z="-1341" radius="350" count="10" minLevel="55" maxLevel="76" profile="mv_town_buyer" store="BUY" />
+	<population name="Schuttgart Crafters" x="86600" y="-141900" z="-1400" radius="300" count="4" minLevel="55" maxLevel="76" profile="mv_town_crafter" store="CRAFT" />
+
+	<!-- ============================================================= -->
+	<!-- Starting villages (smaller crowds, mostly the local race)      -->
+	<!-- These already have gatekeeper/movers groups above; here we add -->
+	<!-- a little town life and small shops.                            -->
+	<!-- ============================================================= -->
+
+	<!-- Talking Island (Human) -->
+	<population name="ti_crowd" x="-84000" y="243000" z="-3700" radius="350" count="6" minLevel="1" maxLevel="18" profile="mv_town_life" race="HUMAN" />
+	<population name="ti_tour" x="-84000" y="243000" z="-3700" radius="900" count="3" minLevel="1" maxLevel="18" profile="mv_ti_tour" race="HUMAN" />
+	<population name="Talking Island Sellers" x="-84050" y="243150" z="-3700" radius="260" count="8" minLevel="1" maxLevel="20" profile="mv_town_seller" store="SELL" race="HUMAN" />
+	<population name="Talking Island Buyers" x="-83820" y="242900" z="-3700" radius="240" count="4" minLevel="1" maxLevel="20" profile="mv_town_buyer" store="BUY" race="HUMAN" />
+
+	<!-- Elven Village (Elf) -->
+	<population name="elf_crowd" x="45400" y="49600" z="-2950" radius="350" count="6" minLevel="1" maxLevel="20" profile="mv_town_life" race="ELF" />
+	<population name="elf_tour" x="45400" y="49600" z="-2950" radius="900" count="3" minLevel="1" maxLevel="20" profile="mv_elf_tour" race="ELF" />
+	<population name="Elven Village Sellers" x="45450" y="49700" z="-2950" radius="260" count="8" minLevel="1" maxLevel="20" profile="mv_town_seller" store="SELL" race="ELF" />
+	<population name="Elven Village Buyers" x="45200" y="49450" z="-2950" radius="240" count="4" minLevel="1" maxLevel="20" profile="mv_town_buyer" store="BUY" race="ELF" />
+
+	<!-- Dark Elf Village (Dark Elf) -->
+	<population name="delf_crowd" x="11800" y="16800" z="-4500" radius="350" count="6" minLevel="1" maxLevel="20" profile="mv_town_life" race="DARK_ELF" />
+	<population name="delf_tour" x="11800" y="16800" z="-4500" radius="900" count="3" minLevel="1" maxLevel="20" profile="mv_delf_tour" race="DARK_ELF" />
+	<population name="Dark Elf Village Sellers" x="12200" y="16900" z="-4500" radius="260" count="8" minLevel="1" maxLevel="20" profile="mv_town_seller" store="SELL" race="DARK_ELF" />
+	<population name="Dark Elf Village Buyers" x="11900" y="16500" z="-4500" radius="240" count="4" minLevel="1" maxLevel="20" profile="mv_town_buyer" store="BUY" race="DARK_ELF" />
+
+	<!-- Dwarven Village (Dwarf - also the natural crafting hub) -->
+	<population name="dwarf_crowd" x="115400" y="-178400" z="-840" radius="350" count="6" minLevel="1" maxLevel="20" profile="mv_town_life" race="DWARF" />
+	<population name="dwarf_tour" x="115400" y="-178400" z="-840" radius="900" count="3" minLevel="1" maxLevel="20" profile="mv_dwarf_tour" race="DWARF" />
+	<population name="Dwarven Village Sellers" x="115400" y="-178300" z="-840" radius="260" count="8" minLevel="1" maxLevel="20" profile="mv_town_seller" store="SELL" race="DWARF" />
+	<population name="Dwarven Village Buyers" x="115200" y="-178600" z="-840" radius="240" count="4" minLevel="1" maxLevel="20" profile="mv_town_buyer" store="BUY" race="DWARF" />
+	<population name="Dwarven Village Crafters" x="115550" y="-178050" z="-820" radius="220" count="3" minLevel="1" maxLevel="20" profile="mv_town_crafter" store="CRAFT" />
+
+	<!-- Orc Village (Orc) -->
+	<population name="orc_crowd" x="-44400" y="-113500" z="-80" radius="350" count="6" minLevel="1" maxLevel="20" profile="mv_town_life" race="ORC" />
+	<population name="orc_tour" x="-44400" y="-113500" z="-80" radius="900" count="3" minLevel="1" maxLevel="20" profile="mv_orc_tour" race="ORC" />
+	<population name="Orc Village Sellers" x="-44350" y="-113300" z="-80" radius="260" count="8" minLevel="1" maxLevel="20" profile="mv_town_seller" store="SELL" race="ORC" />
+	<population name="Orc Village Buyers" x="-44550" y="-113600" z="-80" radius="240" count="4" minLevel="1" maxLevel="20" profile="mv_town_buyer" store="BUY" race="ORC" />
+
+	<!-- Gludin Village (Human) -->
+	<population name="gludin_crowd" x="-82800" y="150800" z="-3000" radius="400" count="8" minLevel="1" maxLevel="30" profile="mv_town_life" race="HUMAN" />
+	<population name="gludin_tour" x="-82800" y="150800" z="-3000" radius="1000" count="3" minLevel="1" maxLevel="30" profile="mv_gludin_tour" race="HUMAN" />
+	<population name="Gludin Sellers" x="-82700" y="150850" z="-3000" radius="300" count="10" minLevel="1" maxLevel="30" profile="mv_town_seller" store="SELL" race="HUMAN" />
+	<population name="Gludin Buyers" x="-83100" y="150650" z="-3000" radius="280" count="5" minLevel="1" maxLevel="30" profile="mv_town_buyer" store="BUY" race="HUMAN" />
+
+	<default profile="loiter"/>
+</list>

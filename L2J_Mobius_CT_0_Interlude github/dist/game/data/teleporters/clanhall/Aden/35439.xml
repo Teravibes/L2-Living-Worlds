@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+	<npc id="35439"> <!-- Carey -->
+		<teleport name="tel1" type="OTHER">
+			<location name="Village Square" x="147450" y="28081" z="-2294" />
+			<location name="East Gate Entrance" x="151950" y="25094" z="-2172" />
+			<location name="West Gate Entrance" x="142593" y="26344" z="-2425" />
+			<location name="South Gate Entrance" x="147503" y="32299" z="-2501" />
+			<location name="North Gate Entrance" x="147465" y="20737" z="-2130" />
+		</teleport>
+		<teleport name="tel2" type="OTHER">
+			<location name="Village Square" x="147450" y="28081" z="-2294" />
+			<location name="East Gate Entrance" x="151950" y="25094" z="-2172" />
+			<location name="West Gate Entrance" x="142593" y="26344" z="-2425" />
+			<location name="South Gate Entrance" x="147503" y="32299" z="-2501" />
+			<location name="North Gate Entrance" x="147465" y="20737" z="-2130" />
+			<location name="Ancient Battleground" x="106517" y="-2871" z="-3454" feeCount="500" />
+			<location name="Enchanted Valley, Southern Region" x="124904" y="61992" z="-3973" feeCount="500" castleId="4" />
+			<location name="Enchanted Valley, Northern Region" x="104426" y="33746" z="-3825" feeCount="500" castleId="4;5" />
+			<location name="Blazing Swamp" x="155310" y="-16339" z="-3320" feeCount="500" />
+			<location name="Forest of Mirrors" x="142065" y="81300" z="-3000" feeCount="500" />
+			<location name="Anghel Waterfall" x="166182" y="91560" z="-3168" feeCount="500" />
+			<location name="South Entrance of Devastated Castle" x="181726" y="-7524" z="-3464" feeCount="500" />
+			<location name="West Area of the Devastated Castle" x="168779" y="-18790" z="-3184" feeCount="500" />
+			<location name="Seal of Shilen" x="184742" y="19745" z="-3168" feeCount="500" />
+			<location name="Forsaken Plains" x="168217" y="37990" z="-4072" feeCount="500" />
+			<location name="Tower of Insolence" x="114649" y="11115" z="-5120" feeCount="500" />
+			<location name="Giant's Cave Upper Layer" x="183985" y="61424" z="-3992" feeCount="500" />
+			<location name="Giant's Cave Lower Layer" x="191754" y="56760" z="-7624" feeCount="500" />
+		</teleport>
+	</npc>
+</list>

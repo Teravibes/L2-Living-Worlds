@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn zone="gludio32_qm1725_00">
+		<territory minZ="-3148" maxZ="-2948">
+			<node x="-71944" y="258332" />
+			<node x="-71316" y="257772" />
+			<node x="-70728" y="258468" />
+			<node x="-71364" y="259000" />
+		</territory>
+		<npc id="18342" count="10" respawnDelay="15" /> <!-- Gremlin -->
+	</spawn>
+	<spawn zone="gludio32_qm1725_01">
+		<territory minZ="-3648" maxZ="-3448">
+			<node x="-91080" y="248292" />
+			<node x="-90792" y="247860" />
+			<node x="-90136" y="248300" />
+			<node x="-90432" y="248720" />
+		</territory>
+		<npc id="18342" count="10" respawnDelay="15" /> <!-- Gremlin -->
+	</spawn>
+	<spawn zone="oren02_qm2119_00">
+		<territory minZ="-3552" maxZ="-3352">
+			<node x="44656" y="40896" />
+			<node x="47488" y="41148" />
+			<node x="46476" y="41884" />
+			<node x="45904" y="41904" />
+		</territory>
+		<npc id="18342" count="15" respawnDelay="15" /> <!-- Gremlin -->
+	</spawn>
+	<spawn zone="oren23_qm2018_00">
+		<territory minZ="-4268" maxZ="-4068">
+			<node x="27820" y="10364" />
+			<node x="29036" y="10356" />
+			<node x="29032" y="11724" />
+			<node x="27856" y="11720" />
+		</territory>
+		<npc id="18342" count="15" respawnDelay="15" /> <!-- Gremlin -->
+	</spawn>
+	<spawn zone="rhion07_qm1814_00">
+		<territory minZ="-716" maxZ="-516">
+			<node x="-56808" y="-113944" />
+			<node x="-55732" y="-113948" />
+			<node x="-55748" y="-113264" />
+			<node x="-56804" y="-113268" />
+		</territory>
+		<npc id="18342" count="15" respawnDelay="15" /> <!-- Gremlin -->
+	</spawn>
+	<spawn zone="schttgart07_qm2312_00">
+		<territory minZ="-604" maxZ="-304">
+			<node x="108756" y="-175200" />
+			<node x="109716" y="-174268" />
+			<node x="108768" y="-172744" />
+			<node x="107540" y="-173300" />
+		</territory>
+		<npc id="18342" count="15" respawnDelay="15" /> <!-- Gremlin -->
+	</spawn>
+</list>

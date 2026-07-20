@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="15500" name="o_s_61_2r_33">
+		<!-- Active: Teleports to a town. Cannot be used in special areas such as the GM info center. -->
+		<active_skill id="3146" level="1" /> <!-- Item Skill: Recall -->
+	</option>
+	<option id="15501" name="o_s_61_2r_34">
+		<!-- Active: Resurrects a corpse. -->
+		<active_skill id="3160" level="6" /> <!-- Item Skill: Resurrection -->
+	</option>
+	<option id="15502" name="o_s_61_2r_35">
+		<!-- Active: Emits an area of effect earth attack. -->
+		<active_skill id="3183" level="6" /> <!-- Item Skill: Stone -->
+	</option>
+	<option id="15503" name="o_s_61_2r_36">
+		<!-- Active: Emits an area of effect fire attack. -->
+		<active_skill id="3180" level="6" /> <!-- Item Skill: Prominence -->
+	</option>
+	<option id="15504" name="o_s_61_2r_37">
+		<!-- Active: Emits an area of effect holy magic attack. -->
+		<active_skill id="3184" level="6" /> <!-- Item Skill: Solar Flare -->
+	</option>
+	<option id="15505" name="o_s_61_2r_38">
+		<!-- Active: Emits elemental damage over an area. -->
+		<active_skill id="3186" level="6" /> <!-- Item Skill: Aura Flare -->
+	</option>
+	<option id="15506" name="o_s_61_2r_39">
+		<!-- Active: Emits an area of effect dark attack. -->
+		<active_skill id="3185" level="6" /> <!-- Item Skill: Shadow Flare -->
+	</option>
+	<option id="15507" name="o_s_61_2r_40">
+		<!-- Active: Emits an area of effect water attack. -->
+		<active_skill id="3181" level="6" /> <!-- Item Skill: Hydro Blast -->
+	</option>
+	<option id="15508" name="o_s_61_2r_41">
+		<!-- Active: Emits an area of effect wind attack. -->
+		<active_skill id="3182" level="6" /> <!-- Item Skill: Hurricane -->
+	</option>
+	<option id="15509" name="o_s_61_2r_42">
+		<!-- Active: Inflicts sleep on the target by a fixed rate. Additional Sleep is not available while the effect lasts. -->
+		<active_skill id="3191" level="6" /> <!-- Item Skill: Sleep -->
+	</option>
+	<option id="15510" name="o_s_61_2r_43">
+		<!-- Active: Decreases the target's moving speed by a fixed rate. -->
+		<active_skill id="3187" level="6" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="15511" name="o_s_61_2r_44">
+		<!-- Active: Inflicts shock on the target by a fixed rate. -->
+		<active_skill id="3189" level="6" /> <!-- Item Skill: Stun -->
+	</option>
+	<option id="15512" name="o_s_61_2r_45">
+		<!-- Active: Emits an area of effect earth attack. -->
+		<active_skill id="3176" level="6" /> <!-- Item Skill: Stone -->
+	</option>
+	<option id="15513" name="o_s_61_2r_46">
+		<!-- Active: Inflicts a fire attack. -->
+		<active_skill id="3173" level="6" /> <!-- Item Skill: Prominence -->
+	</option>
+	<option id="15514" name="o_s_61_2r_47">
+		<!-- Active: Inflicts a holy magic attack. -->
+		<active_skill id="3177" level="6" /> <!-- Item Skill: Solar Flare -->
+	</option>
+	<option id="15515" name="o_s_61_2r_48">
+		<!-- Active: Emits elemental damage over an area. -->
+		<active_skill id="3179" level="6" /> <!-- Item Skill: Aura Flare -->
+	</option>
+	<option id="15516" name="o_s_61_2r_49">
+		<!-- Active: Emits an area of effect dark attack. -->
+		<active_skill id="3178" level="6" /> <!-- Item Skill: Shadow Flare -->
+	</option>
+	<option id="15517" name="o_s_61_2r_50">
+		<!-- Active: Emits an area of effect water attack. -->
+		<active_skill id="3174" level="6" /> <!-- Item Skill: Hydro Blast -->
+	</option>
+	<option id="15518" name="o_s_61_2r_51">
+		<!-- Active: Inflicts a wind attack. -->
+		<active_skill id="3175" level="6" /> <!-- Item Skill: Hurricane -->
+	</option>
+	<option id="15519" name="o_s_61_2r_52">
+		<!-- Active: Cancels your enemy's target. -->
+		<active_skill id="3152" level="6" /> <!-- Item Skill: Trick -->
+	</option>
+	<option id="15520" name="o_s_61_2r_53">
+		<!-- Active: Inflicts flint on the target by a fixed rate. -->
+		<active_skill id="3193" level="6" /> <!-- Item Skill: Medusa -->
+	</option>
+	<option id="15521" name="o_s_61_2r_54">
+		<!-- Active: Launches a dark attack. -->
+		<active_skill id="3171" level="6" /> <!-- Item Skill: Shadow Flare -->
+	</option>
+	<option id="15522" name="o_s_61_2r_55">
+		<!-- Active: Opens doors and treasure chests by a fixed rate. Requires a Thief Key. -->
+		<active_skill id="3155" level="6" /> <!-- Item Skill: Unlock -->
+	</option>
+	<option id="15523" name="o_s_61_2r_56">
+		<!-- Active: Absorbs HP from your target. -->
+		<active_skill id="3153" level="6" /> <!-- Item Skill: Vampiric Touch -->
+	</option>
+	<option id="15524" name="o_s_61_2r_57">
+		<!-- Active: Inflicts a water attack. -->
+		<active_skill id="3167" level="6" /> <!-- Item Skill: Hydro Blast -->
+	</option>
+	<option id="15525" name="o_s_61_2r_58">
+		<!-- Active: Inflicts a fire attack. -->
+		<active_skill id="3168" level="6" /> <!-- Item Skill: Tempest -->
+	</option>
+	<option id="15526" name="o_s_61_2r_59">
+		<!-- Chance: During a physical attack, decreases the target's Atk. Spd. by a fixed rate. -->
+		<attack_skill id="3084" level="6" chance="1.0" /> <!-- Item Skill: Winter -->
+	</option>
+	<option id="15527" name="o_s_61_2r_60">
+		<!-- Chance: During a physical attack, inflicts bleed on the target by a fixed rate. -->
+		<attack_skill id="3092" level="6" chance="1.0" /> <!-- Item Skill: Bleed -->
+	</option>
+	<option id="15528" name="o_s_61_2r_61">
+		<!-- Chance: During a physical attack, inflicts fear on the target by a fixed rate and causes him to flee. -->
+		<attack_skill id="3090" level="6" chance="1.0" /> <!-- Item Skill: Fear -->
+	</option>
+	<option id="15529" name="o_s_61_2r_62">
+		<!-- Chance: During a physical attack, inflicts hold on the target by a fixed rate. Additional Hold is not available while the effect lasts. -->
+		<attack_skill id="3086" level="6" chance="1.0" /> <!-- Item Skill: Hold -->
+	</option>
+	<option id="15530" name="o_s_61_2r_63">
+		<!-- Chance: During a physical attack, inflicts poison on the target by a fixed rate. -->
+		<attack_skill id="3091" level="6" chance="1.0" /> <!-- Item Skill: Poison -->
+	</option>
+	<option id="15531" name="o_s_61_2r_64">
+		<!-- Chance: During a physical attack, inflicts flint on the target by a fixed rate. -->
+		<attack_skill id="3089" level="6" chance="1.0" /> <!-- Item Skill: Medusa -->
+	</option>
+	<option id="15532" name="o_s_61_2r_65">
+		<!-- Chance: During a critical attack, decreases the target's Atk. Spd. by a fixed rate. -->
+		<critical_skill id="3112" level="6" chance="5.0" /> <!-- Item Skill: Winter -->
+	</option>
+	<option id="15533" name="o_s_61_2r_66">
+		<!-- Chance: During a critical attack, inflicts bleed on the target by a fixed rate. -->
+		<critical_skill id="3120" level="6" chance="5.0" /> <!-- Item Skill: Bleed -->
+	</option>
+	<option id="15534" name="o_s_61_2r_67">
+		<!-- Chance: During a critical attack, inflicts fear on the target by a fixed rate. -->
+		<critical_skill id="3118" level="6" chance="5.0" /> <!-- Item Skill: Fear -->
+	</option>
+	<option id="15535" name="o_s_61_2r_68">
+		<!-- Chance: During a critical attack, inflicts hold on the target by a fixed rate. Additional Hold is not available while the effect lasts. -->
+		<critical_skill id="3114" level="6" chance="5.0" /> <!-- Item Skill: Hold -->
+	</option>
+	<option id="15536" name="o_s_61_2r_69">
+		<!-- Chance: During a critical attack, inflicts poison on the target by a fixed rate. -->
+		<critical_skill id="3119" level="6" chance="5.0" /> <!-- Item Skill: Poison -->
+	</option>
+	<option id="15537" name="o_s_61_2r_70">
+		<!-- Chance: During a critical attack, inflicts flint on the target by a fixed rate. -->
+		<critical_skill id="3117" level="6" chance="5.0" /> <!-- Item Skill: Medusa -->
+	</option>
+	<option id="15538" name="o_s_61_2r_71">
+		<!-- Chance: Decreases the Atk. Spd. of the target who attacks you by a fixed rate. -->
+		<passive_skill id="3227" level="6" /> <!-- Item Skill: Winter -->
+	</option>
+	<option id="15539" name="o_s_61_2r_72">
+		<!-- Chance: Evasion increases at a constant rate when receiving damage. -->
+		<passive_skill id="3221" level="6" /> <!-- Item Skill: Agility -->
+	</option>
+	<option id="15540" name="o_s_61_2r_73">
+		<!-- Chance: Inflicts bleed on the target who attacks you by a fixed rate. -->
+		<passive_skill id="3235" level="6" /> <!-- Item Skill: Bleed -->
+	</option>
+	<option id="15541" name="o_s_61_2r_74">
+		<!-- Chance: Restores one's own CP at a constant rate when receiving damage. -->
+		<passive_skill id="3213" level="6" /> <!-- Item Skill: Ritual -->
+	</option>
+	<option id="15542" name="o_s_61_2r_75">
+		<!-- Chance: Critical attack rate increases at a constant rate when receiving damage. -->
+		<passive_skill id="3223" level="6" /> <!-- Item Skill: Focus -->
+	</option>
+	<option id="15543" name="o_s_61_2r_76">
+		<!-- Chance: Decreases the attacking desire of the target who attacks you by a fixed rate. -->
+		<passive_skill id="3225" level="6" /> <!-- Item Skill: Charm -->
+	</option>
+	<option id="15544" name="o_s_61_2r_77">
+		<!-- Chance: Increases one's own Accuracy at a constant rate when receiving damage. -->
+		<passive_skill id="3222" level="6" /> <!-- Item Skill: Guidance -->
+	</option>
+	<option id="15545" name="o_s_61_2r_78">
+		<!-- Chance: Inflicts hold on the target who attacks you by a fixed rate. Additional Hold is not available while the effect lasts. -->
+		<passive_skill id="3229" level="6" /> <!-- Item Skill: Hold -->
+	</option>
+	<option id="15546" name="o_s_61_2r_79">
+		<!-- Chance: In case of receiving damage, the restoring amount increases at a constant rate when receiving HP regeneration magic. -->
+		<passive_skill id="3209" level="6" /> <!-- Item Skill: Prayer -->
+	</option>
+	<option id="15547" name="o_s_61_2r_80">
+		<!-- Chance: Restores one's own HP at a constant rate when receiving damage. -->
+		<passive_skill id="3207" level="6" /> <!-- Item Skill: Heal -->
+	</option>
+	<option id="15548" name="o_s_61_2r_81">
+		<!-- Chance: Increases one's own M. Atk. at a constant rate when receiving damage. -->
+		<passive_skill id="3216" level="6" /> <!-- Item Skill: Empower -->
+	</option>
+	<option id="15549" name="o_s_61_2r_82">
+		<!-- Chance: The critical rate of the damage attack magic increases at a constant rate when receiving damage. -->
+		<passive_skill id="3224" level="6" /> <!-- Item Skill: Wild Magic -->
+	</option>
+	<option id="15550" name="o_s_61_2r_83">
+		<!-- Chance: Max CP increases at a constant rate when receiving damage. -->
+		<passive_skill id="3214" level="6" /> <!-- Item Skill: Cheer -->
+	</option>
+	<option id="15551" name="o_s_61_2r_84">
+		<!-- Chance: Max HP increases at a constant rate when receiving damage. -->
+		<passive_skill id="3208" level="6" /> <!-- Item Skill: Blessed Body -->
+	</option>
+	<option id="15552" name="o_s_61_2r_85">
+		<!-- Chance: Max MP increases at a constant rate when receiving damage. -->
+		<passive_skill id="3211" level="6" /> <!-- Item Skill: Blessed Soul -->
+	</option>
+	<option id="15553" name="o_s_61_2r_86">
+		<!-- Chance: Increases one's own M. Def. at a constant rate when receiving damage. -->
+		<passive_skill id="3219" level="6" /> <!-- Item Skill: Magic Barrier -->
+	</option>
+	<option id="15554" name="o_s_61_2r_87">
+		<!-- Chance: Increases one's own P. Atk. at a constant rate when receiving damage. -->
+		<passive_skill id="3215" level="6" /> <!-- Item Skill: Might -->
+	</option>
+	<option id="15555" name="o_s_61_2r_88">
+		<!-- Chance: Increases one's own P. Def. at a constant rate when receiving damage. -->
+		<passive_skill id="3218" level="6" /> <!-- Item Skill: Shield -->
+	</option>
+	<option id="15556" name="o_s_61_2r_89">
+		<!-- Chance: During a physical attack, inflicts poison on the target who attacks you by a fixed rate. -->
+		<passive_skill id="3234" level="6" /> <!-- Item Skill: Poison -->
+	</option>
+	<option id="15557" name="o_s_61_2r_90">
+		<!-- Chance: Decreases the PvP P. Atk. of the target who attacks you by a fixed rate. -->
+		<passive_skill id="3220" level="6" /> <!-- Item Skill: Duel Weakness -->
+	</option>
+	<option id="15558" name="o_s_61_2r_91">
+		<!-- Chance: Increases one's own PVP P. Atk. at a constant rate when receiving damage. -->
+		<passive_skill id="3217" level="6" /> <!-- Item Skill: Duel Might -->
+	</option>
+	<option id="15559" name="o_s_61_2r_92">
+		<!-- Chance: Inflicts sleep on the target who attacks you by a fixed rate. Additional sleep is not available while the effect lasts. -->
+		<passive_skill id="3230" level="6" /> <!-- Item Skill: Sleep -->
+	</option>
+	<option id="15560" name="o_s_61_2r_93">
+		<!-- Chance: Decreases the moving speed of the target who attacks you by a fixed rate. -->
+		<passive_skill id="3226" level="6" /> <!-- Item Skill: Slow -->
+	</option>
+	<option id="15561" name="o_s_61_2r_94">
+		<!-- Chance: During a magic attack, decreases the target's Atk. Spd. by a fixed rate. -->
+		<magic_skill id="3097" level="6" chance="2.0" /> <!-- Item Skill: Winter -->
+	</option>
+	<option id="15562" name="o_s_61_2r_95">
+		<!-- Chance: During a magic attack, inflicts bleed on the target by a fixed rate. -->
+		<magic_skill id="3105" level="6" chance="2.0" /> <!-- Item Skill: Bleed -->
+	</option>
+	<option id="15563" name="o_s_61_2r_96">
+		<!-- Chance: During a magic attack, inflicts fear on the target by a fixed rate and causes him to flee. -->
+		<magic_skill id="3103" level="6" chance="2.0" /> <!-- Item Skill: Fear -->
+	</option>
+	<option id="15564" name="o_s_61_2r_97">
+		<!-- Chance: During a magic attack, inflicts hold on the target by a fixed rate. Additional Hold is not available while the effect lasts. -->
+		<magic_skill id="3099" level="6" chance="2.0" /> <!-- Item Skill: Hold -->
+	</option>
+	<option id="15565" name="o_s_61_2r_98">
+		<!-- Chance: During a magic attack, inflicts poison on the target by a fixed rate. -->
+		<magic_skill id="3104" level="6" chance="2.0" /> <!-- Item Skill: Poison -->
+	</option>
+	<option id="15566" name="o_s_61_2r_99">
+		<!-- Chance: During a magic attack, inflicts flint on the target by a fixed rate. -->
+		<magic_skill id="3102" level="6" chance="2.0" /> <!-- Item Skill: Medusa -->
+	</option>
+	<option id="15567" name="o_s_61_2r_100">
+		<!-- Passive: Increases the power of HP recovery magic. -->
+		<passive_skill id="3246" level="6" /> <!-- Item Skill: Heal Empower -->
+	</option>
+	<option id="15568" name="o_s_61_2r_101">
+		<!-- Passive: Increases HP recovery magic effect. -->
+		<passive_skill id="3238" level="6" /> <!-- Item Skill: Prayer -->
+	</option>
+	<option id="15569" name="o_s_61_2r_102">
+		<!-- Passive: Increases one's own M. Atk. -->
+		<passive_skill id="3241" level="6" /> <!-- Item Skill: Empower -->
+	</option>
+	<option id="15570" name="o_s_61_2r_103">
+		<!-- Passive: Increases one's own M. Def. -->
+		<passive_skill id="3245" level="6" /> <!-- Item Skill: Magic Barrier -->
+	</option>
+	<option id="15571" name="o_s_61_2r_104">
+		<!-- Passive: Increases one's own P. Atk. -->
+		<passive_skill id="3240" level="6" /> <!-- Item Skill: Might -->
+	</option>
+	<option id="15572" name="o_s_61_2r_105">
+		<!-- Passive: Increases one's own P. Def. -->
+		<passive_skill id="3244" level="6" /> <!-- Item Skill: Shield -->
+	</option>
+	<option id="15573" name="o_s_61_2r_106">
+		<!-- Passive: Increases PvP P. Atk. -->
+		<passive_skill id="3243" level="6" /> <!-- Item Skill: Duel Might -->
+	</option>
+	<option id="15574" name="o_s_61_2r_107">
+		<!-- Passive: Increases the weight limit 2 times. -->
+		<passive_skill id="3251" level="6" /> <!-- Item Skill: Weight Limit -->
+	</option>
+	<option id="15575" name="o_s_61_2u_1">
+		<!-- Active: Temporarily decreases all skill reuse time. -->
+		<active_skill id="3202" level="1" /> <!-- Item Skill: Refresh -->
+	</option>
+	<option id="15576" name="o_s_61_2u_2">
+		<!-- Active: Reduces MP consumption of all skills for a fixed time. -->
+		<active_skill id="3164" level="1" /> <!-- Item Skill: Clarity -->
+	</option>
+	<option id="15577" name="o_s_61_2u_3">
+		<!-- Active: Temporarily increases the probability of critical attack. -->
+		<active_skill id="3141" level="6" /> <!-- Item Skill: Focus -->
+	</option>
+	<option id="15578" name="o_s_61_2u_4">
+		<!-- Active: An ability to reflect a portion of damage received to an enemy is endowed to oneself for a fixed time. -->
+		<active_skill id="3204" level="1" /> <!-- Item Skill: Reflect Damage -->
+	</option>
+	<option id="15579" name="o_s_61_2u_5">
+		<!-- Active: Blocks all of the target's physical/magic skills by a fixed rate. -->
+		<active_skill id="3198" level="6" /> <!-- Item Skill: Doom -->
+	</option>
+	<option id="15580" name="o_s_61_2u_6">
+		<!-- Active: Teleports to a town. Cannot be used in special areas such as the GM info center. -->
+		<active_skill id="3147" level="1" /> <!-- Item Skill: Recall -->
+	</option>
+	<option id="15581" name="o_s_61_2u_7">
+		<!-- Active: Becomes invincible momentarily. -->
+		<active_skill id="3158" level="1" /> <!-- Item Skill: Lesser Celestial Shield -->
+	</option>
+	<option id="15582" name="o_s_61_2u_8">
+		<!-- Active: Increases the Critical Rate of damage attack magic for a fixed time. -->
+		<active_skill id="3142" level="6" /> <!-- Item Skill: Wild Magic -->
+	</option>
+	<option id="15583" name="o_s_61_2u_9">
+		<!-- Active: Teleports party members to a town. Cannot be used in special areas such as the GM info center. -->
+		<active_skill id="3205" level="2" /> <!-- Item Skill: Party Recall -->
+	</option>
+	<option id="15584" name="o_s_61_2u_10">
+		<!-- Active: Blocks the target's magic skills by a fixed rate. -->
+		<active_skill id="3197" level="6" /> <!-- Item Skill: Silence -->
+	</option>
+	<option id="15585" name="o_s_61_2u_11">
+		<!-- Active: Temporarily decreases skill reuse time. -->
+		<active_skill id="3199" level="1" /> <!-- Item Skill: Skill Refresh -->
+	</option>
+	<option id="15586" name="o_s_61_2u_12">
+		<!-- Active: Reduces MP consumption of a skill for a fixed time. -->
+		<active_skill id="3161" level="1" /> <!-- Item Skill: Skill Clarity -->
+	</option>
+	<option id="15587" name="o_s_61_2u_13">
+		<!-- Active: Temporarily decreases the reuse time of song/dance skills. -->
+		<active_skill id="3201" level="1" /> <!-- Item Skill: Music Refresh -->
+	</option>
+	<option id="15588" name="o_s_61_2u_14">
+		<!-- Active: Reduces MP consumption of song/dance skills for a fixed time. -->
+		<active_skill id="3163" level="1" /> <!-- Item Skill: Music Clarity -->
+	</option>
+	<option id="15589" name="o_s_61_2u_15">
+		<!-- Active: Temporarily decreases magic reuse time. -->
+		<active_skill id="3200" level="1" /> <!-- Item Skill: Spell Refresh -->
+	</option>
+	<option id="15590" name="o_s_61_2u_16">
+		<!-- Active: Reduces MP consumption of magic for a fixed time. -->
+		<active_skill id="3162" level="1" /> <!-- Item Skill: Spell Clarity -->
+	</option>
+	<option id="15591" name="o_s_61_2u_17">
+		<!-- Active: You can momentarily avoid a monster's preemptive attack. Your attack abilities are greatly decreased while the effect lasts. -->
+		<active_skill id="3159" level="1" /> <!-- Item Skill: Stealth -->
+	</option>
+	<option id="15592" name="o_s_61_2u_18">
+		<!-- Active: Increases the ability to restore HP as part of the damage inflicted on the enemy for a fixed time. Excludes damage by skill or long-range attacks. -->
+		<active_skill id="3148" level="6" /> <!-- Item Skill: Vampiric Rage -->
+	</option>
+	<option id="15593" name="o_s_61_2u_19">
+		<!-- Chance: During a physical attack, blocks all of the target's physical/magic skills by a fixed rate. -->
+		<attack_skill id="3094" level="6" chance="1.0" /> <!-- Item Skill: Doom -->
+	</option>
+	<option id="15594" name="o_s_61_2u_20">
+		<!-- Chance: During a physical attack, burns up the target's MP by a fixed rate. -->
+		<attack_skill id="3082" level="6" chance="1.0" /> <!-- Item Skill: Mana Burn -->
+	</option>
+	<option id="15595" name="o_s_61_2u_21">
+		<!-- Chance: During a physical attack, inflicts paralysis on the target by a fixed rate. -->
+		<attack_skill id="3088" level="6" chance="1.0" /> <!-- Item Skill: Paralyze -->
+	</option>
+	<option id="15596" name="o_s_61_2u_22">
+		<!-- Chance: During a physical attack, blocks the target's magic skills by a fixed rate. -->
+		<attack_skill id="3093" level="6" chance="1.0" /> <!-- Item Skill: Silence -->
+	</option>
+	<option id="15597" name="o_s_61_2u_23">
+		<!-- Chance: During a physical attack, inflicts sleep on the target by a fixed rate. Additional sleep is not available while the effect lasts. -->
+		<attack_skill id="3087" level="6" chance="1.0" /> <!-- Item Skill: Sleep -->
+	</option>
+	<option id="15598" name="o_s_61_2u_24">
+		<!-- Chance: During a physical attack, inflicts shock on the target by a fixed rate. -->
+		<attack_skill id="3085" level="6" chance="1.0" /> <!-- Item Skill: Stun -->
+	</option>
+	<option id="15599" name="o_s_61_2u_25">
+		<!-- Chance: During a critical attack, blocks all of the target's physical/magic skills by a fixed rate. -->
+		<critical_skill id="3122" level="6" chance="5.0" /> <!-- Item Skill: Doom -->
+	</option>
+</list>

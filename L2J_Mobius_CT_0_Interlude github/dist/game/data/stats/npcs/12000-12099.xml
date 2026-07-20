@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="12077" level="15" type="Pet" name="Wolf">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="246.95422" hpRegen="2.5" mp="149.2" mpRegen="1.2" />
+			<attack physical="29.61691" magical="20.22451" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="73.55216" magical="53.82228" />
+			<speed>
+				<walk ground="24" />
+				<run ground="125" />
+			</speed>
+			<hitTime>390</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<corpseTime>86400</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
+		<collision>
+			<radius normal="13" />
+			<height normal="11.5" />
+		</collision>
+	</npc>
+</list>

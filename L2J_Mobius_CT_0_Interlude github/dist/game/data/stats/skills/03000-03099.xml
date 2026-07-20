@@ -1,0 +1,2034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="3001" levels="1" name="int_1">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>0</magicLevel>
+	</skill>
+	<skill id="3002" levels="1" name="int_2">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>0</magicLevel>
+	</skill>
+	<skill id="3003" levels="1" name="str_2">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>0</magicLevel>
+	</skill>
+	<skill id="3004" levels="1" name="maxmp_5">
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>0</magicLevel>
+	</skill>
+	<skill id="3005" levels="1" name="Bleed">
+		<!-- A scar cuts down HP. Effect 5. -->
+		<icon>icon.skill0223</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>5</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>CON</basicProperty>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>40</magicLevel>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>44</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3006" levels="1" name="Equip Set Items">
+		<!-- Additional effects given, when equipping set items. -->
+		<icon>icon.skill0042</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>0</magicLevel>
+	</skill>
+	<skill id="3007" levels="6" name="Special Ability: Guidance">
+		<!-- Increases Accuracy. -->
+		<table name="#accCombat">6.88 6.07 5.72 5.37 5.02 4.68</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill1240</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">#accCombat</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3008" levels="6" name="Special Ability: Guidance">
+		<!-- Increases Accuracy. -->
+		<table name="#accCombat">5.42 5.12 4.82 4.53 4.24 3.95</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill1240</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">#accCombat</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3009" levels="6" name="Special Ability: Evasion">
+		<!-- Increases Evasion. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#rEvas">2.95 2.82 2.68 2.55 2.41 2.28</table>
+		<icon>icon.skill0198</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">#rEvas</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3010" levels="7" name="Special Ability: Focus">
+		<!-- Increases critical attack success rate. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64</table>
+		<table name="#critRate">86.7 82.2 77.8 73.3 68.9 64.5 68.9</table>
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critRate">#critRate</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3011" levels="6" name="Special Ability: Focus">
+		<!-- Increases critical attack success rate. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#critRate">90.5 85.9 81.2 76.6 71.9 67.3</table>
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critRate">#critRate</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3012" levels="6" name="Special Ability: Anger">
+		<!-- Decreases Max HP and increases P. Atk. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#pAtk">20.44 22.64 24.77 26.78 28.59 30.12</table>
+		<icon>icon.skill1062</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pAtk">#pAtk</add>
+				<mul stat="maxHp">0.85</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3013" levels="5" name="Special Ability: Health">
+		<!-- Level 1: Increases Max HP. -->
+		<!-- Level 2: Increases Max HP. Allows simultaneous attacks on multiple targets. -->
+		<!-- Level 3: Increases Max HP. Inflicts additional damage during PvP. -->
+		<!-- Level 4: Increases Max HP. Allows simultaneous attacks on multiple targets. Inflicts additional damage during PvP. -->
+		<!-- Level 5: Increases maximum HP. Increases damage inflicted during PvP. -->
+		<table name="#atkCountMax">0 4 0 4 0</table>
+		<table name="#magicLevel">1 1 64 64 70</table>
+		<table name="#pvpBonus">1 1 1.05 1.05 1.05</table>
+		<icon>icon.skill0211</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.25</mul>
+				<add stat="atkCountMax">#atkCountMax</add>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3014" levels="3" name="Special Ability: Mana Up">
+		<!-- Level 1: Increases Max MP. -->
+		<!-- Level 2: Increases maximum MP. Inflicts additional damage during PvP. -->
+		<!-- Level 3: Increases maximum MP. Increases damage inflicted during PvP. -->
+		<table name="#magicLevel">1 64 70</table>
+		<table name="#pvpBonus">1 1.05 1.05</table>
+		<icon>icon.skill0213</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxMp">1.3</mul>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3016" levels="6" name="Special Ability: Critical Stun">
+		<!-- Temporarily stuns and paralyzes target. -->
+		<table name="#activateRates">34 32 31 29 27 25</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill0100</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>#activateRates</activateRate>
+		<basicProperty>CON</basicProperty>
+		<effectPoint>-92</effectPoint>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="3018" levels="6" name="Special Ability: Back Blow">
+		<!-- Increases critical attack success rate when attacking a target from behind. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#critRate">1.71 1.67 1.63 1.6 1.56 1.53</table>
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRatePos">
+					<value>#critRate</value>
+					<player behind="true" />
+				</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3019" levels="6" name="Special Ability: Back Blow">
+		<!-- Increases critical attack success rate when attacking a target from behind. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#critRate">1.5 1.47 1.45 1.42 1.4 1.37</table>
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRate">
+					<value>#critRate</value>
+					<player behind="true" />
+				</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3020" levels="6" name="Special Ability: Critical Bleed">
+		<!-- Level 1: Causes target to bleed, instantly reducing HP. Effect 5. -->
+		<!-- Level 2: Causes target to bleed, instantly reducing HP. Effect 5. -->
+		<!-- Level 3: Causes target to bleed, instantly reducing HP. Effect 5. -->
+		<!-- Level 4: Causes target to bleed, instantly reducing HP. Effect 6. -->
+		<!-- Level 5: Causes target to bleed, instantly reducing HP. Effect 6. -->
+		<!-- Level 6: Causes target to bleed, instantly reducing HP. Effect 7. -->
+		<table name="#abnormalLevels">5 5 6 6 6 7</table>
+		<table name="#activateRates">17 17 14 14 14 12</table>
+		<table name="#dot">128 128 190 190 190 256</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill0223</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>#activateRates</activateRate>
+		<basicProperty>CON</basicProperty>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>#dot</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3021" levels="6" name="Special Ability: Critical Bleed">
+		<!-- Level 1: Causes target to bleed, instantly reducing HP. Effect 5. -->
+		<!-- Level 2: Causes target to bleed, instantly reducing HP. Effect 5. -->
+		<!-- Level 3: Causes target to bleed, instantly reducing HP. Effect 6. -->
+		<!-- Level 4: Causes target to bleed, instantly reducing HP. Effect 6. -->
+		<!-- Level 5: Causes target to bleed, instantly reducing HP. Effect 6. -->
+		<!-- Level 6: Causes target to bleed, instantly reducing HP. Effect 7. -->
+		<table name="#activateRates">51 51 42 42 41 35</table>
+		<table name="#dot">43 43 64 64 65 88</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill0223</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>5</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>#activateRates</activateRate>
+		<basicProperty>CON</basicProperty>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>#dot</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3022" levels="6" name="Special Ability: Critical Drain">
+		<table name="#absorbPart">0.21 0.23 0.25 0.28 0.31 0.35</table>
+		<table name="#effectPoints">-209 -214 -219 -224 -229 -234</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#power">9.26 9.33 9.31 9.19 8.97 8.65</table>
+		<icon>icon.skill0070</icon>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<power>#power</power>
+		<reuseDelay>15000</reuseDelay>
+		<effects>
+			<effect name="HpDrain">
+				<power>#absorbPart</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3023" levels="6" name="Special Ability: Critical Damage">
+		<!-- Causes additional damage when making a critical attack. -->
+		<table name="#cAtkAdd">174.78 194.1 213.12 231.29 247.98 262.57</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill0193</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critDmgAdd">#cAtkAdd</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3024" levels="6" name="Special Ability: Critical Poison">
+		<!-- Level 1: Poisons target, instantly decreasing HP. Effect 5. -->
+		<!-- Level 2: Poisons target, instantly decreasing HP. Effect 5. -->
+		<!-- Level 3: Poisons target, instantly decreasing HP. Effect 6. -->
+		<!-- Level 4: Poisons target, instantly decreasing HP. Effect 6. -->
+		<!-- Level 5: Poisons target, instantly decreasing HP. Effect 6. -->
+		<!-- Level 6: Poisons target, instantly decreasing HP. Effect 7. -->
+		<table name="#abnormalLevels">5 5 6 6 6 7</table>
+		<table name="#activateRates">15 15 12 12 12 10</table>
+		<table name="#dot">191 191 291 291 291 403</table>
+		<table name="#effectPoints">-121 -203 -285 -418 -495 -582</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill1168</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>#activateRates</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>12000</reuseDelay>
+		<trait>POISON</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>#dot</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3025" levels="6" name="Special Ability: Critical Anger">
+		<table name="#hpConsume">12 13 14 15 16 17</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hpConsume>#hpConsume</hpConsume>
+		<magicLevel>#magicLevel</magicLevel>
+	</skill>
+	<skill id="3026" levels="6" name="Special Ability: Critical Anger">
+		<!-- Causes additional damage during a critical attack while reducing one's own HP. -->
+		<table name="#cAtkAdd">248.56 298.04 352.73 411.98 474.82 539.9</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill1062</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critDmgAdd">#cAtkAdd</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3027" levels="6" name="Special Ability: Rsk. Focus">
+		<!-- Critical attack success rate is increased during a crisis. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#pvpBonus">1 1 1 1 1 1</table>
+		<table name="#critRate">138.7 130.9 123.1 115.4 107.7 99.9</table>
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critRate">
+					<value>#critRate</value>
+					<player hp="60" />
+				</add>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3028" levels="6" name="Special Ability: Rsk. Evasion">
+		<!-- Evasion is increased during a crisis. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#rEvas">7.63 7.29 6.95 6.6 6.24 5.87</table>
+		<icon>icon.skill0198</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">
+					<value>#rEvas</value>
+					<player hp="60" />
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3029" levels="6" name="Special Ability: Rsk. Evasion">
+		<!-- Evasion is increased during a crisis. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#rEvas">4.44 4.24 4.04 3.84 3.63 3.41</table>
+		<icon>icon.skill0198</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">
+					<value>#rEvas</value>
+					<player hp="60" />
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3030" levels="6" name="Special Ability: Rsk. Evasion">
+		<!-- Evasion is increased during a crisis. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#rEvas">7.63 7.29 6.95 6.6 6.24 5.87</table>
+		<icon>icon.skill0198</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">
+					<value>#rEvas</value>
+					<player hp="60" />
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3031" levels="6" name="Special Ability: Rsk. Evasion">
+		<!-- Evasion is increased during a crisis. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#rEvas">7.63 7.29 6.95 6.6 6.24 5.87</table>
+		<icon>icon.skill0198</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">
+					<value>#rEvas</value>
+					<player hp="60" />
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3032" levels="6" name="Special Ability: Rsk. Haste">
+		<!-- Atk. Spd. is increased during a crisis. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#pAtkSpd">1.13 1.12 1.12 1.11 1.1 1.09</table>
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">
+					<value>#pAtkSpd</value>
+					<player hp="60" />
+				</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3033" levels="6" name="Special Ability: Rsk. Haste">
+		<!-- Atk. Spd. is increased during a crisis. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#pAtkSpd">1.13 1.12 1.12 1.11 1.1 1.09</table>
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">
+					<value>#pAtkSpd</value>
+					<player hp="60" />
+				</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3034" levels="6" name="Special Ability: Rsk. Haste">
+		<!-- Atk. Spd. is increased during a crisis. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#pAtkSpd">1.13 1.12 1.12 1.11 1.1 1.09</table>
+		<table name="#pvpBonus">1 1 1 1 1 1</table>
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">
+					<value>#pAtkSpd</value>
+					<player hp="60" />
+				</mul>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3035" levels="6" name="Special Ability: Mighty Mortal">
+		<!-- Increases success rate of attacks targeting an enemy's vital parts. -->
+		<table name="#blowRate">1.5 1.48 1.46 1.44 1.42 1.4</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill0016</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="blowRate">#blowRate</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3036" levels="6" name="Special Ability: Haste">
+		<!-- Increases ATK Spd. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#pAtkSpd">1.08 1.07 1.07 1.07 1.06 1.06</table>
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3037" levels="6" name="Special Ability: Haste">
+		<!-- Increases ATK Spd. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#pAtkSpd">1.08 1.07 1.07 1.07 1.06 1.06</table>
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3038" levels="6" name="Special Ability: Haste">
+		<!-- Increases ATK Spd. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#pAtkSpd">1.08 1.07 1.07 1.07 1.06 1.06</table>
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3039" levels="7" name="Special Ability: Crt. Drain">
+		<table name="#absorbPart">0.33 0.31 0.3 0.28 0.26 0.24 0.24</table>
+		<table name="#effectPoints">-239 -243 -248 -253 -257 -262 -266</table>
+		<table name="#magicLevel">46 49 52 55 58 61 70</table>
+		<table name="#power">6.85 7.96 9.26 10.8 12.62 14.82 14.82</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<power>#power</power>
+		<effects>
+			<effect name="HpDrain">
+				<power>#absorbPart</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3040" levels="6" name="Special Ability: Critical Poison">
+		<!-- Level 1: Poisons target, instantly decreasing HP. Effect 5. -->
+		<!-- Level 2: Poisons target, instantly decreasing HP. Effect 5. -->
+		<!-- Level 3: Poisons target, instantly decreasing HP. Effect 6. -->
+		<!-- Level 4: Poisons target, instantly decreasing HP. Effect 6. -->
+		<!-- Level 5: Poisons target, instantly decreasing HP. Effect 6. -->
+		<!-- Level 6: Poisons target, instantly decreasing HP. Effect 7. -->
+		<table name="#abnormalLevels">5 5 6 6 6 7</table>
+		<table name="#activateRates">17 17 14 14 14 12</table>
+		<table name="#dot">168 168 249 249 249 336</table>
+		<table name="#effectPoints">-121 -203 -285 -418 -495 -582</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill1168</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>#activateRates</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<trait>POISON</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>#dot</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3041" levels="6" name="Special Ability: Critical Poison">
+		<!-- Level 1: Poisons target, instantly decreasing HP. Effect 5. -->
+		<!-- Level 2: Poisons target, instantly decreasing HP. Effect 5. -->
+		<!-- Level 3: Poisons target, instantly decreasing HP. Effect 6. -->
+		<!-- Level 4: Poisons target, instantly decreasing HP. Effect 6. -->
+		<!-- Level 5: Poisons target, instantly decreasing HP. Effect 6. -->
+		<!-- Level 6: Poisons target, instantly decreasing HP. Effect 7. -->
+		<table name="#abnormalLevels">5 5 6 6 6 7</table>
+		<table name="#activateRates">9 9 7 7 7 6</table>
+		<table name="#dot">317 317 498 498 498 671</table>
+		<table name="#effectPoints">-121 -203 -285 -418 -495 -582</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill1168</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>#activateRates</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<trait>POISON</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>#dot</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3042" levels="20" name="Special Ability: Critical Damage">
+		<!-- Level 1: Inflicts additional damage during a critical attack. -->
+		<!-- Level 2: Inflicts additional damage during a critical attack. -->
+		<!-- Level 3: Inflicts additional damage during a critical attack. -->
+		<!-- Level 4: Inflicts additional damage during a critical attack. -->
+		<!-- Level 5: Inflicts additional damage during a critical attack. -->
+		<!-- Level 6: Inflicts additional damage during a critical attack. -->
+		<!-- Level 7: Inflicts additional damage during a critical attack. -->
+		<!-- Level 8: Inflicts additional damage during a critical attack. -->
+		<!-- Level 9: Inflicts additional damage during a critical attack. -->
+		<!-- Level 10: Inflicts additional damage during a critical attack. -->
+		<!-- Level 11: Inflicts additional damage during a critical attack. -->
+		<!-- Level 12: Inflicts additional damage during a critical attack. -->
+		<!-- Level 13: Inflicts additional damage during a critical attack. -->
+		<!-- Level 14: Inflicts additional damage during a critical attack. -->
+		<!-- Level 15: Inflicts additional damage during a critical attack. -->
+		<!-- Level 16: Inflicts additional damage during a critical attack. -->
+		<!-- Level 17: Increases critical attack damage inflicted during PvP. -->
+		<!-- Level 18: Increases critical attack damage inflicted during PvP. -->
+		<!-- Level 19: Increases critical attack damage inflicted during PvP. -->
+		<!-- Level 20: Increases critical attack damage inflicted during PvP. -->
+		<table name="#cAtkAdd">81.6 61.4 84.14 75.49 66.77 58.01 49.42 84.11 166.26 146.88 127 107.01 133.97 124.79 275.26 267.13 257.98 297.21 331.38 361.06</table>
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<table name="#pvpBonus">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05</table>
+		<icon>icon.skill0193</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critDmgAdd">#cAtkAdd</add>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3043" levels="6" name="Special Ability: Critical Damage">
+		<!-- Causes additional damage when making a critical attack. -->
+		<table name="#cAtkAdd">106.45 118.22 129.81 140.87 151.04 159.93</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill0193</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critDmgAdd">#cAtkAdd</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3044" levels="20" name="Special Ability: Focus">
+		<!-- Level 1: Increases critical attack success rate. -->
+		<!-- Level 2: Increases critical attack success rate. -->
+		<!-- Level 3: Increases critical attack success rate. -->
+		<!-- Level 4: Increases critical attack success rate. -->
+		<!-- Level 5: Increases critical attack success rate. -->
+		<!-- Level 6: Increases critical attack success rate. -->
+		<!-- Level 7: Increases critical attack success rate. -->
+		<!-- Level 8: Increases critical attack success rate. -->
+		<!-- Level 9: Increases critical attack success rate. -->
+		<!-- Level 10: Increases critical attack success rate. -->
+		<!-- Level 11: Increases critical attack success rate. -->
+		<!-- Level 12: Increases critical attack success rate. -->
+		<!-- Level 13: Increases critical attack success rate. -->
+		<!-- Level 14: Increases critical attack success rate. -->
+		<!-- Level 15: Increases critical attack success rate. -->
+		<!-- Level 16: Increases critical attack success rate. -->
+		<!-- Level 17: Increases critical attack success rate and damage inflicted during PvP. -->
+		<!-- Level 18: Increases critical attack success rate and damage inflicted during PvP. -->
+		<!-- Level 19: Increases critical attack success rate and damage inflicted during PvP. -->
+		<!-- Level 20: Increases critical attack success rate and damage inflicted during PvP. -->
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<table name="#pvpBonus">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05</table>
+		<table name="#critRate">53.6 38.5 50.4 43.2 36.5 30.4 24.8 40.4 76.6 65 54 43.7 52.6 47.2 98.7 92.4 86.2 96 103.5 109.2</table>
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critRate">#critRate</add>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3045" levels="20" name="Special Ability: Haste">
+		<!-- Level 1: Increases Atk. Spd. -->
+		<!-- Level 2: Increases Atk. Spd. -->
+		<!-- Level 3: Increases Atk. Spd. -->
+		<!-- Level 4: Increases Atk. Spd. -->
+		<!-- Level 5: Increases Atk. Spd. -->
+		<!-- Level 6: Increases Atk. Spd. -->
+		<!-- Level 7: Increases Atk. Spd. -->
+		<!-- Level 8: Increases Atk. Spd. -->
+		<!-- Level 9: Increases Atk. Spd. -->
+		<!-- Level 10: Increases Atk. Spd. -->
+		<!-- Level 11: Increases Atk. Spd. -->
+		<!-- Level 12: Increases Atk. Spd. -->
+		<!-- Level 13: Increases Atk. Spd. -->
+		<!-- Level 14: Increases Atk. Spd. -->
+		<!-- Level 15: Increases Atk. Spd. -->
+		<!-- Level 16: Increases Atk. Spd. -->
+		<!-- Level 17: Increases Atk. Spd. and damage inflicted during PvP. -->
+		<!-- Level 18: Increases Atk. Spd. and damage inflicted during PvP. -->
+		<!-- Level 19: Increases Atk. Spd. and damage inflicted during PvP. -->
+		<!-- Level 20: Increases Atk. Spd. and damage inflicted during PvP. -->
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<table name="#pAtkSpd">1.05 1.04 1.05 1.04 1.03 1.03 1.02 1.04 1.07 1.06 1.05 1.04 1.05 1.04 1.09 1.08 1.08 1.09 1.09 1.1</table>
+		<table name="#pvpBonus">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05</table>
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3046" levels="20" name="Special Ability: Guidance">
+		<!-- Level 1: Increases Accuracy. -->
+		<!-- Level 2: Increases Accuracy. -->
+		<!-- Level 3: Increases Accuracy. -->
+		<!-- Level 4: Increases Accuracy. -->
+		<!-- Level 5: Increases Accuracy. -->
+		<!-- Level 6: Increases Accuracy. -->
+		<!-- Level 7: Increases Accuracy. -->
+		<!-- Level 8: Increases Accuracy. -->
+		<!-- Level 9: Increases Accuracy. -->
+		<!-- Level 10: Increases Accuracy. -->
+		<!-- Level 11: Increases Accuracy. -->
+		<!-- Level 12: Increases Accuracy. -->
+		<!-- Level 13: Increases Accuracy. -->
+		<!-- Level 14: Increases Accuracy. -->
+		<!-- Level 15: Increases Accuracy. -->
+		<!-- Level 16: Increases Accuracy. -->
+		<!-- Level 17: Increases Accuracy. Increases damage inflicted during PvP. -->
+		<!-- Level 18: Increases Accuracy. Increases damage inflicted during PvP. -->
+		<!-- Level 19: Increases Accuracy. Increases damage inflicted during PvP. -->
+		<!-- Level 20: Increases Accuracy. Increases damage inflicted during PvP. -->
+		<table name="#accCombat">3.9 2.8 3.7 3.1 2.6 2.2 1.8 2.9 5.7 4.8 3.9 3.2 3.8 3.4 6.5 6.5 6.5 6.5 6.5 6.5</table>
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<table name="#pvpBonus">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05</table>
+		<icon>icon.skill1240</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">#accCombat</add>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3047" levels="3" name="Special Ability: Acumen">
+		<!-- Level 1: Increases Casting Spd. -->
+		<!-- Level 2: Increases Casting Spd. and damage inflicted during PvP. -->
+		<!-- Level 3: Increases Casting Spd. Increases damage inflicted during PvP. -->
+		<table name="#magicLevel">64 64 70</table>
+		<table name="#pvpBonus">1 1.05 1.05</table>
+		<icon>icon.skill1085</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">1.15</mul>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3048" levels="3" name="Special Ability: Conversion">
+		<!-- Level 1: Decreases Max HP and increases Max MP. -->
+		<!-- Level 2: Decreases Max HP and increases Max MP. Increases damage inflicted during PvP. -->
+		<!-- Level 3: Decreases maximum HP and increases maximum MP. Increases damage inflicted during PvP. -->
+		<table name="#magicLevel">64 64 70</table>
+		<table name="#pvpBonus">1 1.05 1.05</table>
+		<icon>icon.skill1048</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxMp">1.6</mul>
+				<mul stat="maxHp">0.6</mul>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3049" levels="2" name="Magic Damage: Increase Critical">
+		<table name="#magicLevel">64 67</table>
+		<operateType>A1</operateType>
+		<targetType>NONE</targetType>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<power>8.39</power>
+		<effects>
+			<effect name="MagicalDamage" />
+		</effects>
+	</skill>
+	<skill id="3050" levels="2" name="Special Ability: Focus">
+		<!-- Level 1: Increases critical attack success rate and damage inflicted during PvP. -->
+		<!-- Level 2: Increases critical attack success rate. Increases damage inflicted during PvP. -->
+		<table name="#magicLevel">64 70</table>
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critRate">61.6</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3051" levels="2" name="Special Ability: Focus">
+		<!-- Level 1: Increases critical attack success rate and damage inflicted during PvP. -->
+		<!-- Level 2: Increases critical attack success rate. Increases damage inflicted during PvP. -->
+		<table name="#magicLevel">67 70</table>
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critRate">67.3</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3052" levels="2" name="Special Ability: Critical Bleed">
+		<!-- Causes target to bleed, instantly reducing HP. Effect 7. -->
+		<table name="#magicLevel">64 67</table>
+		<icon>icon.skill0223</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>7</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>42</activateRate>
+		<basicProperty>CON</basicProperty>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>74</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3053" levels="2" name="Special Ability: Critical Bleed">
+		<!-- Causes target to bleed, instantly reducing HP. Effect 7. -->
+		<table name="#magicLevel">64 67</table>
+		<icon>icon.skill0223</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>7</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>35</activateRate>
+		<basicProperty>CON</basicProperty>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>88</power>
+				<mul stat="runSpd">0.8</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3054" levels="2" name="Special Ability: Critical Bleed">
+		<!-- Causes target to bleed, instantly reducing HP. Effect 7. -->
+		<table name="#magicLevel">64 67</table>
+		<icon>icon.skill0223</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>7</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>12</activateRate>
+		<basicProperty>CON</basicProperty>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>256</power>
+				<mul stat="runSpd">0.8</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3055" levels="2" name="Special Ability: Critical Bleed">
+		<!-- Causes target to bleed, instantly reducing HP. Effect 7. -->
+		<table name="#magicLevel">64 67</table>
+		<icon>icon.skill0223</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>7</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>24</activateRate>
+		<basicProperty>CON</basicProperty>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>128</power>
+				<mul stat="runSpd">0.8</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3056" levels="3" name="Special Ability: Rsk. Haste">
+		<!-- Level 1: Atk. Spd. Is increased during a crisis. -->
+		<!-- Level 2: Atk. Spd. increases as HP falls. Increases damage inflicted during PvP. -->
+		<!-- Level 3: Increases Atk. Spd. during a crisis. Increases damage inflicted during PvP. -->
+		<table name="#magicLevel">64 64 70</table>
+		<table name="#pvpBonus">1 1.05 1.05</table>
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">
+					<value>1.11</value>
+					<player hp="60" />
+				</mul>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3057" levels="3" name="Special Ability: Anger">
+		<!-- Level 1: Decreases Max HP and increases P. Atk. Increases damage inflicted during PvP. -->
+		<!-- Level 2: Decreases Max HP and increases P. Atk. Increases damage inflicted during PvP. -->
+		<!-- Level 3: Decreases maximum HP and increases P. Atk. Increases damage inflicted during PvP. -->
+		<table name="#magicLevel">64 67 70</table>
+		<table name="#pAtk">31.3 32.05 32.05</table>
+		<icon>icon.skill1062</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pAtk">#pAtk</add>
+				<mul stat="maxHp">0.85</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3058" levels="2" name="Special Ability: Anger">
+		<!-- Decreases Max HP and increases P. Atk. Increases damage inflicted during PvP. -->
+		<table name="#magicLevel">64 67</table>
+		<table name="#pAtk">38.09 39</table>
+		<icon>icon.skill1062</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="pAtk">#pAtk</add>
+				<mul stat="maxHp">0.85</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3059" levels="2" name="Special Ability: Critical Drain">
+		<table name="#magicLevel">64 67</table>
+		<table name="#power">18 19</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<power>#power</power>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.65</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3060" levels="2" name="Special Ability: Critical Drain">
+		<table name="#magicLevel">64 67</table>
+		<table name="#power">10 11</table>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<power>#power</power>
+		<effects>
+			<effect name="HpDrain">
+				<power>0.35</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3061" levels="3" name="Special Ability: Critical Poison">
+		<!-- Level 1: Poisons target, temporarily reducing HP. Effect 7. -->
+		<!-- Level 2: Poisons target, temporarily reducing HP. Effect 7. -->
+		<!-- Level 3: A deadly toxin decreases your HP by the moment. Effect 7. -->
+		<table name="#dot">403 403 439</table>
+		<table name="#magicLevel">64 67 70</table>
+		<icon>icon.skill1168</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>7</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>10</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<trait>POISON</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>#dot</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3062" levels="2" name="Special Ability: Critical Poison">
+		<!-- Poisons target, temporarily reducing HP. Effect 7. -->
+		<table name="#magicLevel">64 67</table>
+		<icon>icon.skill1168</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>7</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>18</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<trait>POISON</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="3">
+				<power>224</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3063" levels="2" name="Special Ability: Back Blow">
+		<!-- Increases critical attack success rate when attacking a target from behind. Increases damage inflicted during PvP. -->
+		<table name="#magicLevel">64 70</table>
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRatePos">
+					<value>1.37</value>
+					<player behind="true" />
+				</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3064" levels="1" name="Special Ability: Guidance">
+		<!-- Increases Accuracy. Increases damage inflicted during PvP. -->
+		<icon>icon.skill1240</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>64</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">3.95</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3065" levels="1" name="Special Ability: Guidance">
+		<!-- Increases Accuracy. Increases damage inflicted during PvP. -->
+		<icon>icon.skill1240</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>67</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="accCombat">5.41</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3066" levels="3" name="Special Ability: Critical Damage">
+		<!-- Level 1: Increases critical attack damage and damage inflicted during PvP. -->
+		<!-- Level 2: Increases critical attack damage and damage inflicted during PvP. -->
+		<!-- Level 3: Inflicts additional damage during a critical attack. Increases damage inflicted during PvP. -->
+		<table name="#cAtkAdd">180.94 200.79 200.79</table>
+		<table name="#magicLevel">64 67 70</table>
+		<icon>icon.skill0193</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critDmgAdd">#cAtkAdd</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3067" levels="2" name="Special Ability: Critical Damage">
+		<!-- Increases critical attack damage and damage inflicted during PvP. -->
+		<table name="#cAtkAdd">297.68 326.28</table>
+		<table name="#magicLevel">64 67</table>
+		<icon>icon.skill0193</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critDmgAdd">#cAtkAdd</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3068" levels="3" name="Special Ability: Haste">
+		<!-- Level 1: Increases ATK Spd. -->
+		<!-- Level 2: Increases Atk. Spd. Increases damage inflicted during PvP. -->
+		<!-- Level 3: Increases Atk. Spd. Increases damage inflicted during PvP. -->
+		<table name="#magicLevel">64 64 70</table>
+		<table name="#pAtkSpd">1.06 1.06 1.06</table>
+		<table name="#pvpBonus">1 1.05 1.05</table>
+		<icon>icon.skill1086</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">#pAtkSpd</mul>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3069" levels="1" name="Special Ability: Risky Evasion">
+		<!-- Evasion is increased during a crisis. -->
+		<icon>icon.skill0198</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="rEvas">
+					<value>6.8</value>
+					<player hp="60" />
+				</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3070" levels="3" name="Special Ability: Critical Stun">
+		<!-- Level 1: Temporarily stuns and paralyzes target. -->
+		<!-- Level 2: Temporarily stuns and paralyzes target. -->
+		<!-- Level 3: Instantly throws enemy into a state of shock, immobilizing them. -->
+		<table name="#activateRates">25 25 25</table>
+		<table name="#magicLevel">64 67 70</table>
+		<icon>icon.skill0100</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>#activateRates</activateRate>
+		<basicProperty>CON</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="3071" levels="2" name="Special Ability: Rsk. Focus">
+		<!-- Level 1: Increases critical attack success rate during a crisis. -->
+		<!-- Level 2: Increases critical attack success rate during a crisis and damage inflicted during PvP. -->
+		<table name="#pvpBonus">1 1.05</table>
+		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>64</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="critRate">
+					<value>130</value>
+					<player hp="60" />
+				</add>
+				<mul stat="pvpPhysDmg">#pvpBonus</mul>
+				<mul stat="pvpPhysSkillsDmg">#pvpBonus</mul>
+				<mul stat="pvpMagicalDmg">#pvpBonus</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3072" levels="2" name="Special Ability: Empower">
+		<!-- Increases M. Atk. Enhances damage to target during PvP. -->
+		<table name="#magicLevel">64 67</table>
+		<table name="#mAtk">30.76 31.38</table>
+		<icon>icon.skill1059</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="mAtk">#mAtk</add>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3073" levels="2" name="Special Ability: Magic Power">
+		<!-- Increases MP Consumption and M. Atk. Enhances damage to target during PvP. -->
+		<table name="#magicLevel">64 67</table>
+		<table name="#mAtk">153.28 167.02</table>
+		<icon>icon.skill1059</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="mAtk">#mAtk</add>
+				<mul stat="magicalMpConsumeRate">1.15</mul>
+				<mul stat="pvpPhysDmg">1.05</mul>
+				<mul stat="pvpPhysSkillsDmg">1.05</mul>
+				<mul stat="pvpMagicalDmg">1.05</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3074" levels="2" name="Special Ability: Magic Silence">
+		<!-- Temporarily blocks the ability to use magic skills. -->
+		<table name="#magicLevel">64 67</table>
+		<icon>icon.skill1064</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="Mute" />
+		</effects>
+	</skill>
+	<skill id="3075" levels="2" name="Special Ability: Magic Paralyze">
+		<!-- Temporarily paralyzes target. -->
+		<table name="#magicLevel">64 67</table>
+		<icon>icon.skill1170</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>20</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>PARALYZE</trait>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd">0.5</mul>
+				<mul stat="runSpd">0.5</mul>
+				<mul stat="mAtkSpd">0.5</mul>
+			</effect>
+			<effect name="Paralyze" />
+		</effects>
+	</skill>
+	<skill id="3076" levels="6" name="Special Ability: Empower">
+		<!-- Increases M. Atk. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#mAtk">20.36 22.51 24.59 26.53 28.27 29.7</table>
+		<icon>icon.skill1059</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="mAtk">#mAtk</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3077" levels="6" name="Special Ability: Magic Power">
+		<!-- Increases MP Consumption and M. Atk. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#mAtk">75.86 87.22 99.39 112.26 125.66 139.41</table>
+		<icon>icon.skill1059</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>#magicLevel</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="mAtk">#mAtk</add>
+				<mul stat="magicalMpConsumeRate">1.15</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3078" levels="6" name="Special Ability: Magic Silence">
+		<!-- Temporarily blocks the ability to use magic skills. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill1064</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="Mute" />
+		</effects>
+	</skill>
+	<skill id="3079" levels="6" name="Special Ability: Magic Paralyze">
+		<!-- Temporarily paralyzes target. -->
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<icon>icon.skill1170</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>20</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<trait>PARALYZE</trait>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd">0.5</mul>
+				<mul stat="runSpd">0.5</mul>
+				<mul stat="mAtkSpd">0.5</mul>
+			</effect>
+			<effect name="Paralyze" />
+		</effects>
+	</skill>
+	<skill id="3080" levels="10" name="Item Skill: Aggression">
+		<!-- Level 1: Chance: Provokes a target to attack during an ordinary physical attack. Power 438. -->
+		<!-- Level 2: Chance: Provokes a target to attack during an ordinary physical attack. Power 467. -->
+		<!-- Level 3: Chance: Provokes a target to attack during an ordinary physical attack. Power 495. -->
+		<!-- Level 4: Chance: Provokes a target to attack during an ordinary physical attack. Power 523. -->
+		<!-- Level 5: Chance: Provokes a target to attack during an ordinary physical attack. Power 549. -->
+		<!-- Level 6: Chance: Provokes a target to attack during an ordinary physical attack. Power 574. -->
+		<!-- Level 7: Chance: Provokes a target to attack during an ordinary physical attack. Power 597. -->
+		<!-- Level 8: Chance: Provokes a target to attack during an ordinary physical attack. Power 617. -->
+		<!-- Level 9: Chance: Provokes a target to attack during an ordinary physical attack. Power 635. -->
+		<!-- Level 10: Chance: Provokes a target to attack during an ordinary physical attack. Power 659. -->
+		<table name="#effectPoints">-438 -467 -495 -523 -549 -574 -597 -617 -635 -659</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<effectRange>400</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="TargetMeProbability">
+				<chance>40</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3081" levels="10" name="Item Skill: Charm">
+		<!-- Level 1: Chance: Decreases a target's urge to attack during a general physical attack. Power 219. -->
+		<!-- Level 2: Chance: Decreases a target's urge to attack during a general physical attack. Power 234. -->
+		<!-- Level 3: Chance: Decreases a target's urge to attack during a general physical attack. Power 248. -->
+		<!-- Level 4: Chance: Decreases a target's urge to attack during a general physical attack. Power 262. -->
+		<!-- Level 5: Chance: Decreases a target's urge to attack during a general physical attack. Power 275. -->
+		<!-- Level 6: Chance: Decreases a target's urge to attack during a general physical attack. Power 287. -->
+		<!-- Level 7: Chance: Decreases a target's urge to attack during a general physical attack. Power 299. -->
+		<!-- Level 8: Chance: Decreases a target's urge to attack during a general physical attack. Power 309. -->
+		<!-- Level 9: Chance: Decreases a target's urge to attack during a general physical attack. Power 318. -->
+		<!-- Level 10: Chance: Decreases a target's urge to attack during a general physical attack. Power 330. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#power">-219 -234 -248 -262 -275 -287 -299 -309 -318 -330</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="AddHate">
+				<power>#power</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3082" levels="10" name="Item Skill: Mana Burn">
+		<!-- Level 1: Chance: Burns up a target's MP during an ordinary physical attack. Power 49. -->
+		<!-- Level 2: Chance: Burns up a target's MP during an ordinary physical attack. Power 53. -->
+		<!-- Level 3: Chance: Burns up a target's MP during an ordinary physical attack. Power 57. -->
+		<!-- Level 4: Chance: Burns up a target's MP during an ordinary physical attack. Power 61. -->
+		<!-- Level 5: Chance: Burns up a target's MP during an ordinary physical attack. Power 66. -->
+		<!-- Level 6: Chance: Burns up a target's MP during an ordinary physical attack. Power 70. -->
+		<!-- Level 7: Chance: Burns up a target's MP during an ordinary physical attack. Power 74. -->
+		<!-- Level 8: Chance: Burns up a target's MP during an ordinary physical attack. Power 78. -->
+		<!-- Level 9: Chance: Burns up a target's MP during an ordinary physical attack. Power 82. -->
+		<!-- Level 10: Chance: Burns up a target's MP during an ordinary physical attack. Power 88. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#power">49 53 57 61 66 70 74 78 82 88</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<power>#power</power>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamageMp" />
+		</effects>
+	</skill>
+	<skill id="3083" levels="10" name="Item Skill: Slow">
+		<!-- Chance: Momentarily decreases a target's speed during an ordinary physical attack. Effect 3. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">0.7</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3084" levels="10" name="Item Skill: Winter">
+		<!-- Chance: Momentarily decreases a target's Atk. Spd. during an ordinary physical attack. Effect 3. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd">0.77</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3085" levels="10" name="Item Skill: Stun">
+		<!-- Chance: Momentarily throws the target into a state of shock during an ordinary physical attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="3086" levels="10" name="Item Skill: Hold">
+		<!-- Chance: Momentarily throws the target into a state of hold during an ordinary physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>HOLD</trait>
+		<effects>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3087" levels="10" name="Item Skill: Sleep">
+		<!-- Chance: Momentarily throws the target into a state of sleep during a general physical attack. The target cannot be affected by any additional sleep attacks while the effect lasts. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>SLEEP</trait>
+		<effects>
+			<effect name="Sleep" />
+			<effect name="DefenceTrait">
+				<SLEEP>100</SLEEP>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3088" levels="10" name="Item Skill: Paralyze">
+		<!-- Chance: Momentarily throws the target into a state of paralysis during an ordinary physical attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>PARALYZE</trait>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd">0.5</mul>
+				<mul stat="runSpd">0.5</mul>
+				<mul stat="mAtkSpd">0.5</mul>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>5171</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</endEffects>
+	</skill>
+	<skill id="3089" levels="10" name="Item Skill: Medusa">
+		<!-- Chance: Momentarily throws the target into a petrified state during a general physical attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TURN_STONE</abnormalType>
+		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<element>3</element> <!-- Earth -->
+		<elementPower>20</elementPower>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="Petrification" />
+		</effects>
+	</skill>
+	<skill id="3090" levels="10" name="Item Skill: Fear">
+		<!-- Chance: Momentarily throws the target into a state of fear and causes him to flee during a general physical attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="Fear" />
+		</effects>
+	</skill>
+	<skill id="3091" levels="10" name="Item Skill: Poison">
+		<!-- Level 1: Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 5. -->
+		<!-- Level 2: Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 5. -->
+		<!-- Level 3: Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 6. -->
+		<!-- Level 4: Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 6. -->
+		<!-- Level 5: Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 6. -->
+		<!-- Level 6: Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 7. -->
+		<!-- Level 7: Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 7. -->
+		<!-- Level 8: Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 7. -->
+		<!-- Level 9: Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 8. -->
+		<!-- Level 10: Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 8. -->
+		<table name="#abnormalLevels">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#dot">41 41 50 50 50 58 58 58 63 63</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>POISON</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="5">
+				<power>#dot</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3092" levels="10" name="Item Skill: Bleed">
+		<!-- Level 1: Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 5. -->
+		<!-- Level 2: Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 5. -->
+		<!-- Level 3: Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 6. -->
+		<!-- Level 4: Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 6. -->
+		<!-- Level 5: Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 6. -->
+		<!-- Level 6: Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 7. -->
+		<!-- Level 7: Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 7. -->
+		<!-- Level 8: Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 7. -->
+		<!-- Level 9: Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 8. -->
+		<!-- Level 10: Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 8. -->
+		<table name="#abnormalLevels">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#dot">44 44 54 54 54 62 62 62 67 67</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<nextActionAttack>true</nextActionAttack>
+		<reuseDelay>30000</reuseDelay>
+		<trait>BLEED</trait>
+		<effects>
+			<effect name="DamOverTime" ticks="5">
+				<power>#dot</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3093" levels="10" name="Item Skill: Silence">
+		<!-- Chance: Momentarily blocks the target's magic skill during a general physical attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="Mute" />
+		</effects>
+	</skill>
+	<skill id="3094" levels="10" name="Item Skill: Doom">
+		<!-- Chance: Momentarily blocks all of the target's physical and magic skills during a general physical attack. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SILENCE_ALL</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</effects>
+	</skill>
+	<skill id="3095" levels="10" name="Item Skill: Mana Burn">
+		<!-- Level 1: Chance: Burns up a target's MP during magic use. Power 49. -->
+		<!-- Level 2: Chance: Burns up a target's MP during magic use. Power 53. -->
+		<!-- Level 3: Chance: Burns up a target's MP during magic use. Power 57. -->
+		<!-- Level 4: Chance: Burns up a target's MP during magic use. Power 61. -->
+		<!-- Level 5: Chance: Burns up a target's MP during magic use. Power 66. -->
+		<!-- Level 6: Chance: Burns up a target's MP during magic use. Power 70. -->
+		<!-- Level 7: Chance: Burns up a target's MP during magic use. Power 74. -->
+		<!-- Level 8: Chance: Burns up a target's MP during magic use. Power 78. -->
+		<!-- Level 9: Chance: Burns up a target's MP during magic use. Power 82. -->
+		<!-- Level 10: Chance: Burns up a target's MP during magic use. Power 88. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#power">49 53 57 61 66 70 74 78 82 88</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<power>#power</power>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamageMp" />
+		</effects>
+	</skill>
+	<skill id="3096" levels="10" name="Item Skill: Slow">
+		<!-- Chance: Momentarily decreases the target's speed during magic use. Effect 3. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">0.7</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3097" levels="10" name="Item Skill: Winter">
+		<!-- Chance: Momentarily decreases the target's Atk. Spd. during magic use. Effect 3. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd">0.77</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3098" levels="10" name="Item Skill: Stun">
+		<!-- Chance: Momentarily throws the target into a state of shock during magic use. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>CON</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="3099" levels="10" name="Item Skill: Hold">
+		<!-- Chance: Momentarily throws the target into a state of hold during magic use. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>1000</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<reuseDelay>30000</reuseDelay>
+		<trait>HOLD</trait>
+		<effects>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+			</effect>
+		</effects>
+	</skill>
+</list>

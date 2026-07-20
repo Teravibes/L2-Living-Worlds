@@ -1,0 +1,2165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="7800" type="EtcItem" name="Small Black Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1083" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2228" level="3" /> <!-- Item - Easy Black Fish -->
+		</skills>
+	</item>
+	<item id="7801" type="EtcItem" name="Black Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1155" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2228" level="4" /> <!-- Item - Easy Black Fish -->
+		</skills>
+	</item>
+	<item id="7802" type="EtcItem" name="Black Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1179" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2228" level="5" /> <!-- Item - Easy Black Fish -->
+		</skills>
+	</item>
+	<item id="7803" type="EtcItem" name="Black Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1202" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2228" level="6" /> <!-- Item - Easy Black Fish -->
+		</skills>
+	</item>
+	<item id="7804" type="EtcItem" name="Large Black Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1226" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2228" level="7" /> <!-- Item - Easy Black Fish -->
+		</skills>
+	</item>
+	<item id="7805" type="EtcItem" name="Large Black Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1251" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2228" level="8" /> <!-- Item - Easy Black Fish -->
+		</skills>
+	</item>
+	<item id="7806" type="EtcItem" name="Large Black Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i05" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="price" val="1276" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="2228" level="9" /> <!-- Item - Easy Black Fish -->
+		</skills>
+	</item>
+	<item id="7807" type="EtcItem" name="Green Colored Lure - For Beginners">
+		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fast moving fish. -->
+		<set name="icon" val="icon.etc_bait_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="7808" type="EtcItem" name="Purple Colored Lure - For Beginners">
+		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fat fish. -->
+		<set name="icon" val="icon.etc_bait_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="70" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="7809" type="EtcItem" name="Yellow Colored Lure - For Beginners">
+		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by ugly fish. -->
+		<set name="icon" val="icon.etc_bait_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="price" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="7810" type="Weapon" name="Soulfire Dirk - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. -->
+		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="750" />
+		<set name="price" val="2870000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">86</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3014" level="1" /> <!-- Special Ability: Mana Up -->
+		</skills>
+	</item>
+	<item id="7811" type="Weapon" name="Soulfire Dirk - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Casts Dryad Root magic against the target with a 10% chance of success when using bad magic. Effect 1. -->
+		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="750" />
+		<set name="price" val="2870000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">86</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1201" level="18" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
+		</skills>
+	</item>
+	<item id="7812" type="Weapon" name="Soulfire Dirk - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. When using bad magic against a target, casts Silence upon target with a 10% chance of success. Effect 1. -->
+		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1148" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="750" />
+		<set name="price" val="2870000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">86</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
+		</skills>
+	</item>
+	<item id="7813" type="Weapon" name="Hell Knife - Magic Regeneration">
+		<!-- <Soul Crystal Enhancement>. Casts HP Regeneration magic upon the target with a 30% chance of success when using good magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_hell_knife_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="740" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1044" level="3" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Regeneration -->
+		</skills>
+	</item>
+	<item id="7814" type="Weapon" name="Hell Knife - Mental Shield">
+		<!-- <Soul Crystal Enhancement>. Casts Mental Shield magic upon the target with a 50% chance of success when using good magic. Effect 4. -->
+		<set name="icon" val="icon.weapon_hell_knife_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="740" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1035" level="4" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
+		</skills>
+	</item>
+	<item id="7815" type="Weapon" name="Hell Knife - Magic Weakness">
+		<!-- <Soul Crystal Enhancement>. Casts Curse Weakness against the target with a 7% chance of success when using bad magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_hell_knife_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="740" />
+		<set name="price" val="8680000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">122</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="1164" level="11" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse: Weakness -->
+		</skills>
+	</item>
+	<item id="7816" type="Weapon" name="Apprentice Adventurer's Staff">
+		<!-- Apprentice Adventurer's Staff. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1070" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">23</stat>
+			<stat type="mAtk">24</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7817" type="Weapon" name="Apprentice Adventurer's Bone Club">
+		<!-- Apprentice Adventurer's Bone Club. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_club_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">24</stat>
+			<stat type="mAtk">17</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7818" type="Weapon" name="Apprentice Adventurer's Knife">
+		<!-- Apprentice Adventurer's Knife. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_shining_knife_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1120" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">21</stat>
+			<stat type="mAtk">17</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7819" type="Weapon" name="Apprentice Adventurer's Cestus">
+		<!-- Apprentice Adventurer's Cestus. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_vipers_canine_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1570" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">29</stat>
+			<stat type="mAtk">17</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7820" type="Weapon" name="Apprentice Adventurer's Bow">
+		<!-- Apprentice Adventurer's Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_short_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1900" />
+		<set name="soulshots" val="7" />
+		<set name="spiritshots" val="2" />
+		<set name="mp_consume" val="3" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">49</stat>
+			<stat type="mAtk">17</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="7821" type="Weapon" name="Apprentice Adventurer's Long Sword">
+		<!-- Apprentice Adventurer's Long Sword. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_long_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1560" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">24</stat>
+			<stat type="mAtk">17</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7822" type="Weapon" name="Traveler's Mace">
+		<!-- Traveler's Mace. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_mace_of_prayer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">41</stat>
+			<stat type="mAtk">43</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7823" type="Weapon" name="Traveler's Dark Elven Bow">
+		<!-- Traveler's Dark Elven Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1830" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="2" />
+		<set name="mp_consume" val="4" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">105</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="7824" type="Weapon" name="Traveler's Long Bow">
+		<!-- Traveler's Long Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_strengthening_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1830" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="2" />
+		<set name="mp_consume" val="4" />
+		<set name="reuse_delay" val="820" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">105</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="7825" type="Weapon" name="Traveler's Staff">
+		<!-- Traveler's Staff. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_staff_of_mana_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1040" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">50</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7826" type="Weapon" name="Traveler's Bastard Sword">
+		<!-- Traveler's Bastard Sword. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_bastard_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;42;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7827" type="Weapon" name="Traveler's Wand">
+		<!-- Traveler's Wand. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_divine_tome_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ETC" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="570" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">41</stat>
+			<stat type="mAtk">43</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7828" type="Weapon" name="Traveler's Jamadhr">
+		<!-- Traveler's Jamadhr. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_baghnakh_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">62</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7829" type="Weapon" name="Traveler's Tomahawk">
+		<!-- Traveler's Tomahawk. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_tomahawk_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1780" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7830" type="Weapon" name="Traveler's Poniard Dagger">
+		<!-- Traveler's Poniard Dagger. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_dirk_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1090" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">45</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7831" type="Weapon" name="Traveler's Pike">
+		<!-- Traveler's Pike. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_pike_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2090" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1685">
+			<player pkCount="0" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">51</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+	</item>
+	<item id="7832" type="EtcItem" name="Apprentice Adventurer's Weapon Exchange Coupon">
+		<!-- An exchange coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guild. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="7833" type="EtcItem" name="Adventurer's Weapon Exchange Coupon">
+		<!-- An exchange coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guild. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="7834" type="Weapon" name="Art of Battle Axe">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1746" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1570" />
+		<set name="price" val="13100000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="pAtk">194</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7835" type="EtcItem" name="Amulet: Seal of Disease">
+		<!-- Amulet required for the Seal of Disease spell. Used by Dominators. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="11600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="7836" type="Armor" name="Santa's Hat">
+		<!-- A Santa Claus hat that was created to celebrate the holiday. This hat can be worn only during the end of year holiday season. It uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="7837" type="Armor" name="Sayha's White Mask">
+		<!-- 2006 Lineage II Epic Collection Souvenir. -->
+		<set name="icon" val="icon.accessory_full_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="7838" type="EtcItem" name="Santa's Hat">
+		<!-- A Santa Claus hat that was created to celebrate the holiday. This hat can be worn only during the end of year holiday season. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="7839" type="Armor" name="Gran Kain's Black Mask">
+		<!-- 2007 Lineage II Limited Edition Souvenir. -->
+		<set name="icon" val="icon.accessory_full_mask_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="7840" type="Armor" name="Rabbit Ears - Event">
+		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="7841" type="Armor" name="Racoon Ears">
+		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_racoon_ear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="7842" type="Armor" name="Cat Ears">
+		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_cat_ear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="7843" type="Armor" name="Pirate's Eyepatch">
+		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_eye_bandage_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="7844" type="Armor" name="Monocle">
+		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_glasses_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="7845" type="Armor" name="Outlaw's Eyepatch">
+		<!-- Purple eyepatch accessory. It cannot be exchanged for an event item and can't be dropped. -->
+		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="7846" type="Armor" name="Maiden's Hairpin">
+		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1518">
+			<player sex="1" />
+		</conditions>
+	</item>
+	<item id="7847" type="Armor" name="Lady's Hairpin">
+		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_hairpin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1518">
+			<player sex="1" />
+		</conditions>
+	</item>
+	<item id="7848" type="Armor" name="Forget-me-not Hairpin">
+		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1518">
+			<player sex="1" />
+		</conditions>
+	</item>
+	<item id="7849" type="Armor" name="Daisy Hairpin">
+		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<conditions msgId="1518">
+			<player sex="1" />
+		</conditions>
+	</item>
+	<item id="7850" type="Armor" name="Clan Oath Helm">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="139" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="640" />
+		<set name="price" val="76180" />
+		<set name="enchant_enabled" val="true" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<conditions msgId="1764">
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+		</conditions>
+		<stats>
+			<stat type="pDef">37</stat>
+		</stats>
+	</item>
+	<item id="7851" type="Armor" name="Clan Oath Armor">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t1001_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="609" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="9870" />
+		<set name="price" val="330070" />
+		<set name="enchant_enabled" val="true" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<conditions msgId="1764">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">158</stat>
+		</stats>
+	</item>
+	<item id="7852" type="Armor" name="Clan Oath Gauntlets - Heavy Armor">
+		<set name="icon" val="icon.armor_t1001_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="93" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="640" />
+		<set name="price" val="50830" />
+		<set name="enchant_enabled" val="true" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<conditions msgId="1764">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">24</stat>
+		</stats>
+	</item>
+	<item id="7853" type="Armor" name="Clan Oath Sabaton - Heavy Armor">
+		<set name="icon" val="icon.armor_t1001_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="93" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1280" />
+		<set name="price" val="50830" />
+		<set name="enchant_enabled" val="true" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<conditions msgId="1764">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">24</stat>
+		</stats>
+	</item>
+	<item id="7854" type="Armor" name="Clan Oath Brigandine">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t1002_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="457" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="5400" />
+		<set name="price" val="247520" />
+		<set name="enchant_enabled" val="true" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<conditions msgId="1764">
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+		</conditions>
+		<stats>
+			<stat type="pDef">119</stat>
+		</stats>
+	</item>
+	<item id="7855" type="Armor" name="Clan Oath Leather Gloves - Light Armor">
+		<set name="icon" val="icon.armor_t1002_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="93" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="640" />
+		<set name="price" val="50830" />
+		<set name="enchant_enabled" val="true" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<conditions msgId="1764">
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+		</conditions>
+		<stats>
+			<stat type="pDef">24</stat>
+		</stats>
+	</item>
+	<item id="7856" type="Armor" name="Clan Oath Boots - Light Armor">
+		<set name="icon" val="icon.armor_t1002_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="93" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1280" />
+		<set name="price" val="50830" />
+		<set name="enchant_enabled" val="true" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<conditions msgId="1764">
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+		</conditions>
+		<stats>
+			<stat type="pDef">24</stat>
+		</stats>
+	</item>
+	<item id="7857" type="Armor" name="Clan Oath Aketon">
+		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t1003_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="457" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="2450" />
+		<set name="price" val="247520" />
+		<set name="enchant_enabled" val="true" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<conditions msgId="1764">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">79</stat>
+			<stat type="maxMp">239</stat>
+		</stats>
+	</item>
+	<item id="7858" type="Armor" name="Clan Oath Padded Gloves - Robe">
+		<set name="icon" val="icon.armor_t1003_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="93" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="640" />
+		<set name="price" val="50830" />
+		<set name="enchant_enabled" val="true" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<conditions msgId="1764">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">24</stat>
+		</stats>
+	</item>
+	<item id="7859" type="Armor" name="Clan Oath Sandals - Robe">
+		<set name="icon" val="icon.armor_t1003_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="93" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1280" />
+		<set name="price" val="50830" />
+		<set name="enchant_enabled" val="true" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<conditions msgId="1764">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">24</stat>
+		</stats>
+	</item>
+	<item id="7860" type="Armor" name="Apella Helm">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="139" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="570" />
+		<set name="price" val="1736800" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player pledgeClass="5" /> <!-- Baron -->
+		</conditions>
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="7861" type="Armor" name="Apella Plate Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Full body armor used by clan members. -->
+		<set name="icon" val="icon.armor_t1004_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="541" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="9780" />
+		<set name="price" val="7524400" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">278</stat>
+		</stats>
+	</item>
+	<item id="7862" type="Armor" name="Apella Gauntlet - Heavy Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
+		<set name="icon" val="icon.armor_t1004_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7863" type="Armor" name="Apella Solleret - Heavy Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
+		<set name="icon" val="icon.armor_t1004_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7864" type="Armor" name="Apella Brigandine">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Full body armor used by clan members. -->
+		<set name="icon" val="icon.armor_t1005_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="406" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="5400" />
+		<set name="price" val="5643300" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player pledgeClass="5" /> <!-- Baron -->
+		</conditions>
+		<stats>
+			<stat type="pDef">209</stat>
+		</stats>
+	</item>
+	<item id="7865" type="Armor" name="Apella Leather Gloves - Light Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
+		<set name="icon" val="icon.armor_t1005_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player pledgeClass="5" /> <!-- Baron -->
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7866" type="Armor" name="Apella Boots - Light Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
+		<set name="icon" val="icon.armor_t1005_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player pledgeClass="5" /> <!-- Baron -->
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7867" type="Armor" name="Apella Doublet">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Full body armor used by clan members. -->
+		<set name="icon" val="icon.armor_t1006_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="406" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="2450" />
+		<set name="price" val="5643300" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">139</stat>
+			<stat type="maxMp">665</stat>
+		</stats>
+	</item>
+	<item id="7868" type="Armor" name="Apella Silk Gloves - Robe">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
+		<set name="icon" val="icon.armor_t1006_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7869" type="Armor" name="Apella Sandals - Robe">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
+		<set name="icon" val="icon.armor_t1006_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7870" type="Armor" name="Sealed Apella Helm">
+		<!-- May be worn by a Baron or a higher level Aristocrat. It can be opened with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_helmet_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="139" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="570" />
+		<set name="price" val="1736800" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player pledgeClass="5" /> <!-- Baron -->
+		</conditions>
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="7871" type="Armor" name="Sealed Apella Plate Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Plate Armor. It can be opened with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t1004_ul_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="541" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="9780" />
+		<set name="price" val="7524400" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">278</stat>
+		</stats>
+	</item>
+	<item id="7872" type="Armor" name="Sealed Apella Gauntlet">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Gauntlet. It can be opened with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t1004_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7873" type="Armor" name="Sealed Apella Solleret">
+		<!-- May be worn by a Baron or a higher level Aristocrat. They can be opened with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t1004_b_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7874" type="Armor" name="Sealed Apella Brigandine">
+		<!-- May be worn by a Baron or a higher level Aristocrat. It can be opened with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t1005_ul_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="406" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="5400" />
+		<set name="price" val="5643300" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player pledgeClass="5" /> <!-- Baron -->
+		</conditions>
+		<stats>
+			<stat type="pDef">209</stat>
+		</stats>
+	</item>
+	<item id="7875" type="Armor" name="Sealed Apella Leather Gloves">
+		<!-- May be worn by a Baron or a higher level Aristocrat. They can be opened with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t1005_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player pledgeClass="5" /> <!-- Baron -->
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7876" type="Armor" name="Sealed Apella Boots">
+		<!-- May be worn by a Baron or a higher level Aristocrat. They can be opened with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t1005_b_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<player pledgeClass="5" /> <!-- Baron -->
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7877" type="Armor" name="Sealed Apella Doublet">
+		<!-- May be worn by a Baron or a higher level Aristocrat. It can be opened with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t1006_ul_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="onepiece" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="406" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="2450" />
+		<set name="price" val="5643300" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">139</stat>
+			<stat type="maxMp">665</stat>
+		</stats>
+	</item>
+	<item id="7878" type="Armor" name="Sealed Apella Silk Gloves">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Silk Gloves. They can be opened with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t1006_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7879" type="Armor" name="Sealed Apella Sandals">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Sandals. They can be opened with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t1006_b_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="1157000" />
+		<set name="enchant_enabled" val="true" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player pledgeClass="5" /> <!-- Baron -->
+			</and>
+		</conditions>
+		<stats>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="7880" type="Weapon" name="Steel Sword">
+		<set name="icon" val="icon.weapon_iron_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="756" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2100" />
+		<set name="price" val="409500" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">49</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7881" type="Weapon" name="Titan Sword">
+		<set name="icon" val="icon.weapon_giants_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2577" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2020" />
+		<set name="price" val="1396200" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">96</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7882" type="Weapon" name="Pa'agrian Sword">
+		<!-- Bestows one of the following functions: Focus, Health or Critical Drain. -->
+		<set name="icon" val="icon.weapon_sword_of_paagrio_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1718" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1980" />
+		<set name="price" val="4295590" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">169</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7883" type="Weapon" name="Guardian Sword">
+		<!-- Bestows one of the following functions: Critical Drain, Health or Critical Bleed. -->
+		<set name="icon" val="icon.weapon_guardians_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1749" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1930" />
+		<set name="price" val="13118820" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">236</stat>
+			<stat type="mAtk">99</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7884" type="Weapon" name="Infernal Master">
+		<!-- Bestows either Haste, Critical Damage, or Focus. -->
+		<set name="icon" val="icon.weapon_inferno_master_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1465" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1900" />
+		<set name="price" val="18327400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7885" type="Weapon" name="Priest Sword">
+		<set name="icon" val="icon.weapon_sword_of_priest_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="756" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="409500" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">32</stat>
+			<stat type="mAtk">35</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7886" type="Weapon" name="Sword of Magic Fog">
+		<set name="icon" val="icon.weapon_sword_of_magic_fog_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2577" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1450" />
+		<set name="price" val="1396200" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">63</stat>
+			<stat type="mAtk">63</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7887" type="Weapon" name="Mysterious Sword">
+		<!-- Bestows either Acumen, Magic Power, or Magic Weakness. -->
+		<set name="icon" val="icon.weapon_mystery_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="915" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1430" />
+		<set name="price" val="2291770" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">85</stat>
+			<stat type="mAtk">81</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7888" type="Weapon" name="Ecliptic Sword">
+		<!-- Bestows either Empower, Magic Power, or Magic Silence. -->
+		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2449" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="price" val="6127550" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">125</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7889" type="Weapon" name="Wizard's Tear">
+		<!-- Bestows either Acumen, Magic Power, or Conversion. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1749" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1350" />
+		<set name="price" val="13118820" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">155</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7890" type="Weapon" name="Priest Mace">
+		<set name="icon" val="icon.weapon_mace_of_priest_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2577" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1720" />
+		<set name="price" val="1396200" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">63</stat>
+			<stat type="mAtk">63</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7891" type="Weapon" name="Ecliptic Axe">
+		<!-- Bestows one of the following functions: Conversion, Magic Power or Magic Hold. -->
+		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2449" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1640" />
+		<set name="price" val="6127550" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">125</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7892" type="Weapon" name="Spell Breaker">
+		<!-- Bestows either Acumen, Magic Mental Shield or Magic Hold. -->
+		<set name="icon" val="icon.weapon_spell_breaker_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1620" />
+		<set name="price" val="8684650" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">140</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7893" type="Weapon" name="Kaim Vanul's Bones">
+		<!-- Bestows either Mana Up, Magic Silence, or Conversion. -->
+		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1749" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1570" />
+		<set name="price" val="13118820" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">155</stat>
+			<stat type="mAtk">132</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7894" type="Weapon" name="Spiritual Eye">
+		<!-- Bestows either Mana Up, Magic Poison, or Acumen. -->
+		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1465" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1550" />
+		<set name="price" val="18327400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">170</stat>
+			<stat type="mAtk">143</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7895" type="Weapon" name="Flaming Dragon Skull">
+		<!-- Bestows one of the following functions: Acumen, Magic Power or Magic Silence. -->
+		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2156" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1530" />
+		<set name="price" val="26963300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">186</stat>
+			<stat type="mAtk">152</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7896" type="Weapon" name="Titan Hammer">
+		<set name="icon" val="icon.weapon_giants_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2577" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2100" />
+		<set name="price" val="1396200" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">96</stat>
+			<stat type="mAtk">47</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7897" type="Weapon" name="Dwarven Hammer">
+		<!-- Bestows either Health, Anger, or Critical Bleed. -->
+		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2449" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2010" />
+		<set name="price" val="6127550" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">190</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7898" type="Weapon" name="Karik Horn">
+		<!-- Bestows either Focus, Haste, or Critical Drain. -->
+		<set name="icon" val="icon.weapon_horn_of_karik_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1718" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="2020" />
+		<set name="price" val="4295590" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">169</stat>
+			<stat type="mAtk">76</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="7899" type="Weapon" name="Destroyer Hammer">
+		<!-- Bestows either Health, Haste, or Critical Drain. -->
+		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1465" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1910" />
+		<set name="price" val="18327400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="critRate">4</stat>
+			<stat type="accCombat">4.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+</list>

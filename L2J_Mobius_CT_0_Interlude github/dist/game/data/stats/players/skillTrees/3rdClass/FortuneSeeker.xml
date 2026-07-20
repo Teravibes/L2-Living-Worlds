@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Fortune Seeker -->
+	<skillTree type="classSkillTree" classId="117" parentClassId="55">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true" />
+		<skill skillName="Health" skillId="329" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true" />
+		<skill skillName="Spoil Crush" skillId="348" skillLevel="1" getLevel="76" levelUpSp="8340000" learnedByNpc="true" />
+
+		<skill skillName="Skill Mastery" skillId="330" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true" />
+		<skill skillName="Riposte Stance" skillId="340" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true" />
+		<skill skillName="Armor Crush" skillId="362" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true" />
+		<skill skillName="Battle Force" skillId="426" skillLevel="1" getLevel="77" levelUpSp="11000000" learnedByNpc="true" />
+
+		<skill skillName="Parry Stance" skillId="339" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true" />
+		<skill skillName="Earthquake" skillId="347" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true" />
+		<skill skillName="Master of Combat" skillId="430" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true" />
+		<skill skillName="Braveheart" skillId="440" skillLevel="1" getLevel="78" levelUpSp="16000000" learnedByNpc="true" />
+
+		<skill skillName="Symbol of Resistance" skillId="456" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8894" count="1" /> <!-- Ancient Tactical Manual: Symbol of Resistance -->
+		</skill>
+	</skillTree>
+</list>

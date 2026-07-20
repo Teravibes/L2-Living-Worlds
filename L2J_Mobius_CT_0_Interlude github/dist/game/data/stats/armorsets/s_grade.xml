@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/armorSets.xsd">
+	<!-- S GRADE Armor Sets -->
+	<set id="56">
+		<chest id="6373" /> <!-- Imperial Crusader Breastplate -->
+		<legs id="6374" /> <!-- Imperial Crusader Gaiters -->
+		<head id="6378" /> <!-- Imperial Crusader Helmet -->
+		<gloves id="6375" /> <!-- Imperial Crusader Gauntlets -->
+		<feet id="6376" /> <!-- Imperial Crusader Boots -->
+		<shield id="6377" /> <!-- Imperial Crusader Shield -->
+		<skill id="3006" level="1" /> <!-- Equip Set Items -->
+		<skill id="3553" level="1" /> <!-- Imperial Crusader Heavy Armor Set -->
+		<shield_skill id="3554" level="1" /> <!-- Equipped with Shield -->
+		<enchant6skill id="3623" level="1" /> <!-- Enchant Heavy Armor (S Grade) -->
+		<str val="2" />
+		<dex val="-2" />
+	</set>
+	<set id="57">
+		<chest id="6379" /> <!-- Draconic Leather Armor -->
+		<head id="6382" /> <!-- Draconic Leather Helmet -->
+		<gloves id="6380" /> <!-- Draconic Leather Gloves -->
+		<feet id="6381" /> <!-- Draconic Leather Boots -->
+		<skill id="3006" level="1" /> <!-- Equip Set Items -->
+		<skill id="3555" level="1" /> <!-- Draconic Light Armor Set -->
+		<enchant6skill id="3624" level="1" /> <!-- Enchant Light Armor (S Grade) -->
+		<str val="1" />
+		<con val="-2" />
+		<dex val="1" />
+	</set>
+	<set id="58">
+		<chest id="6383" /> <!-- Major Arcana Robe -->
+		<head id="6386" /> <!-- Major Arcana Circlet -->
+		<gloves id="6384" /> <!-- Major Arcana Gloves -->
+		<feet id="6385" /> <!-- Major Arcana Boots -->
+		<skill id="3006" level="1" /> <!-- Equip Set Items -->
+		<skill id="3556" level="1" /> <!-- Major Arcana Robe Set -->
+		<enchant6skill id="3625" level="1" /> <!-- Enchant Robe (S Grade) -->
+		<int val="1" />
+		<men val="-2" />
+		<wit val="1" />
+	</set>
+</list>

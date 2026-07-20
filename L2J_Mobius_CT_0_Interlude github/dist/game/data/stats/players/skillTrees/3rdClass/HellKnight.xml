@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skillTrees.xsd">
+	<!-- Hell Knight -->
+	<skillTree type="classSkillTree" classId="91" parentClassId="6">
+		<skill skillName="Wisdom" skillId="328" skillLevel="1" getLevel="76" levelUpSp="10000000" learnedByNpc="true" />
+		<skill skillName="Health" skillId="329" skillLevel="1" getLevel="76" levelUpSp="10000000" learnedByNpc="true" />
+		<skill skillName="Fortitude" skillId="335" skillLevel="1" getLevel="76" levelUpSp="10000000" learnedByNpc="true" />
+
+		<skill skillName="Vengeance" skillId="368" skillLevel="1" getLevel="77" levelUpSp="13000000" learnedByNpc="true" />
+		<skill skillName="Shield Slam" skillId="353" skillLevel="1" getLevel="77" levelUpSp="13000000" learnedByNpc="true" />
+		<skill skillName="Battle Force" skillId="426" skillLevel="1" getLevel="77" levelUpSp="13000000" learnedByNpc="true" />
+
+		<skill skillName="Touch of Death" skillId="342" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+		<skill skillName="Physical Mirror" skillId="350" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+		<skill skillName="Knighthood" skillId="429" skillLevel="1" getLevel="78" levelUpSp="21340000" learnedByNpc="true" />
+
+		<skill skillName="Shield of Revenge" skillId="439" skillLevel="1" getLevel="79" levelUpSp="80000000" learnedByNpc="true" />
+
+		<skill skillName="Symbol of Defense" skillId="454" skillLevel="1" getLevel="80" levelUpSp="150000000" learnedByNpc="true">
+			<item id="8892" count="1" /> <!-- Ancient Tactical Manual: Symbol of Defense -->
+		</skill>
+	</skillTree>
+</list>

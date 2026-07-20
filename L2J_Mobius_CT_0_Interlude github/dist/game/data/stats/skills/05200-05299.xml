@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="5200" levels="3" name="Pet Recharge">
+		<!-- Regenerates MP. -->
+		<table name="#amount">120 124 128</table>
+		<table name="#effectPoints">604 617 630</table>
+		<table name="#magicLevel">65 67 69</table>
+		<table name="#mpConsume">96 99 102</table>
+		<table name="#mpInitialConsume">24 25 26</table>
+		<icon>icon.skill1013</icon>
+		<operateType>A1</operateType>
+		<targetType>OWNER_PET</targetType>
+		<castRange>400</castRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>6000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>12000</reuseDelay>
+		<effects>
+			<effect name="ManaHealByLevel">
+				<power>#amount</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5201" levels="2" name="Pet Concentration">
+		<!-- Temporarily lowers the probability of magic being canceled due to damage taken taken. -->
+		<table name="#abnormalLevels">1 2</table>
+		<table name="#cancel">18 25</table>
+		<table name="#effectPoints">204 285</table>
+		<table name="#magicLevel">20 30</table>
+		<table name="#mpConsume">16 21</table>
+		<table name="#mpInitialConsume">4 6</table>
+		<icon>icon.skill1078</icon>
+		<operateType>A2</operateType>
+		<targetType>OWNER_PET</targetType>
+		<abnormalLevel>#abnormalLevels</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>#effectPoints</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<mpInitialConsume>#mpInitialConsume</mpInitialConsume>
+		<reuseDelay>6000</reuseDelay>
+		<effects>
+			<effect name="Buff">
+				<sub stat="cancel">#cancel</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5202" levels="12" name="NPC Ranged Stun">
+		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">7 10 14 19 25 31 36 38 40 42 42 43</table>
+		<operateType>A2</operateType>
+		<targetType>AURA</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>CON</basicProperty>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="5203" levels="12" name="NPC Ranged Fear">
+		<!-- Temporarily becomes overcome with fear and flees mindlessly. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">7 10 14 19 25 31 36 38 40 42 42 43</table>
+		<icon>icon.skill1092</icon>
+		<operateType>A2</operateType>
+		<targetType>AURA</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>MEN</basicProperty>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>4000</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLevel>#magicLevel</magicLevel>
+		<mpConsume>#mpConsume</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="Fear" />
+		</effects>
+	</skill>
+	<skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>5800</hitTime>
+		<magicLevel>76</magicLevel>
+	</skill>
+	<skill id="5205" levels="1" name="Boss Regeneration">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<magicLevel>99</magicLevel>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5206" levels="1" name="Decrease Speed">
+		<!-- Curse of the Pig: Instantly reduces Speed. Effect 1. -->
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>95</magicLevel>
+		<mpConsume>62</mpConsume>
+		<mpInitialConsume>16</mpInitialConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="runSpd">0.85</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5207" levels="1" name="Decrease Atk. Spd.">
+		<!-- Curse of the Pig: Instantly reduces Atk. Spd. Effect 1. -->
+		<icon>icon.skill4038</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>95</magicLevel>
+		<mpConsume>62</mpConsume>
+		<mpInitialConsume>16</mpInitialConsume>
+		<reuseDelay>8000</reuseDelay>
+		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd">0.85</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5208" levels="1" name="Golden Pig Wind Walk">
+		<!-- Temporarily increases Speed. Effect 2. -->
+		<icon>icon.skill1204</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd">33</add>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5209" levels="1" name="Golden Pig Shield">
+		<!-- Temporarily increases P. Def. Effect 3. -->
+		<icon>icon.skill1040</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pDef">1.15</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5210" levels="1" name="Golden Pig Blessed Body">
+		<!-- Temporarily increases maximum HP. Effect 6. -->
+		<icon>icon.skill1045</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>7</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAX_HP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxHp">1.35</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5211" levels="1" name="Golden Pig Vampiric Rage">
+		<!-- Uses damage inflicted upon an enemy to temporarily restore HP. Excludes damage inflicted by skill or remote attack. Effect 4. -->
+		<icon>icon.skill1268</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>5</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<add stat="absorbDam">9</add> <!-- absorb 9% HP from damage inflicted on enemies -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5212" levels="1" name="Golden Pig Regeneration">
+		<!-- Temporarily increases ability to restore HP. Effect 3. -->
+		<icon>icon.skill1044</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>HP_REGEN_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="regHp">1.2</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5213" levels="1" name="Golden Pig Haste">
+		<!-- Temporarily increases Atk. Spd. Effect 1. -->
+		<icon>icon.skill1086</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd">1.15</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5214" levels="1" name="Golden Pig Blessed Soul">
+		<!-- Temporarily increases maximum MP. Effect 6. -->
+		<icon>icon.skill1048</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>7</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAX_MP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="maxMp">1.35</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5215" levels="1" name="Golden Pig Acumen">
+		<!-- Temporarily increases Casting Spd. Effect 3. -->
+		<icon>icon.skill1085</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd">1.3</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5216" levels="1" name="Golden Pig Concentration">
+		<!-- Temporarily decreases the probability of magic being canceled due to damage taken. Effect 1. -->
+		<icon>icon.skill1078</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<sub stat="cancel">18</sub>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5217" levels="1" name="Golden Pig Empower">
+		<!-- Temporarily increases M. Atk. Effect 1. -->
+		<icon>icon.skill1059</icon>
+		<operateType>A2</operateType>
+		<targetType>ONE</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>60</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<mul stat="mAtk">1.55</mul>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5218" levels="1" name="Production: Event Teleport">
+		<operateType>A1</operateType>
+		<targetType>ONE</targetType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<hitTime>2000</hitTime>
+		<magicLevel>76</magicLevel>
+	</skill>
+	<skill id="5219" levels="1" name="Huge Pig Stun">
+		<!-- Curse of the Huge Pig: Target is temporarily stunned and immoblized. -->
+		<operateType>A2</operateType>
+		<targetType>AREA</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>CON</basicProperty>
+		<castRange>600</castRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>6000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLevel>95</magicLevel>
+		<mpConsume>43</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="Stun" />
+		</effects>
+	</skill>
+	<skill id="5220" levels="1" name="Huge Pig Fear">
+		<!-- Curse of the Huge Pig: Target is temporarily overcome with fear, causing it to flee mindlessly. -->
+		<operateType>A2</operateType>
+		<targetType>AREA</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>MEN</basicProperty>
+		<castRange>600</castRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>6000</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLevel>95</magicLevel>
+		<mpConsume>43</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="Fear" />
+		</effects>
+	</skill>
+</list>

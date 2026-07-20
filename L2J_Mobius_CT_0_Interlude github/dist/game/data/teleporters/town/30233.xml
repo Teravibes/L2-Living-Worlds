@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30233"> <!-- Esmeralda -->
+		<teleport type="NORMAL">
+			<location name="Town of Aden" x="146705" y="25840" z="-2000" feeCount="5900" castleId="5" />
+			<location name="Town of Oren" x="82956" y="53162" z="-1470" feeCount="4100" castleId="4" />
+			<location name="Hardin's Private Academy" x="105846" y="109762" z="-3170" feeCount="3400" castleId="3" />
+			<location name="Enchanted Valley, Southern Region" x="124904" y="61992" z="-3973" feeCount="1300" />
+			<location name="Enchanted Valley, Northern Region" x="104426" y="33746" z="-3825" feeCount="3600" />
+			<location name="Forest of Mirrors" x="142065" y="81300" z="-3000" feeCount="2000" />
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeId="6651" feeCount="1" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeId="6651" feeCount="1" />
+			<location name="The Center of the Forest of Mirrors" x="166080" y="75574" z="-2992" feeId="6651" feeCount="1" />
+			<location name="The Center of the Enchanted Valley" x="114674" y="44150" z="-3376" feeId="6651" feeCount="1" />
+			<location name="Hunters Valley" x="114306" y="86573" z="-3112" feeId="6651" feeCount="1" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeId="6651" feeCount="1" />
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeCount="1000" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeCount="1000" />
+			<location name="The Center of the Forest of Mirrors" x="166080" y="75574" z="-2992" feeCount="1000" />
+			<location name="The Center of the Enchanted Valley" x="114674" y="44150" z="-3376" feeCount="1000" />
+			<location name="Hunters Valley" x="114306" y="86573" z="-3112" feeCount="1000" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeCount="1000" />
+		</teleport>
+	</npc>
+</list>

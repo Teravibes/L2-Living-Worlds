@@ -150,6 +150,66 @@ foreach ($devFile in @('launcher\build-pack.ps1','launcher\build-pack.bat')) {
 }
 Ok "pack configured"
 
+# ---- 6b. bundle the OPTIONAL FPC brain (AI chat) into pack\brain -----------
+# The brain is a small local Flask service the game server talks to for
+# in-character bot chat. It is OFF by default and needs Python (+ either a local
+# Ollama model or a DeepSeek API key), so it is not part of the "installs
+# nothing" core - it is bundled here so a tester can turn it on if they want.
+# setup_brain.bat loads fpc_brain.py + knowledge\ from its own folder, so they
+# must travel together; the launcher looks for dist\brain\setup_brain.bat.
+Info "bundling the optional FPC brain into pack\brain ..."
+$brainDst = Join-Path $Pack 'brain'
+New-Item -ItemType Directory -Path $brainDst -Force | Out-Null
+foreach ($f in @('fpc_brain.py', 'requirements.txt', 'setup_brain.bat', 'setup_brain.sh')) {
+    $srcF = Join-Path $ProjectRoot $f
+    if (Test-Path $srcF) { Copy-Item $srcF -Destination $brainDst -Force }
+}
+$knowSrc = Join-Path $ProjectRoot 'knowledge'
+if (Test-Path $knowSrc) { Copy-Tree $knowSrc (Join-Path $brainDst 'knowledge') }
+
+# A short player-facing readme for the bundled brain.
+$brainReadme = @'
+# Optional AI chat brain
+
+The bots in this server can hold in-character chat (whisper / say / trade / shout)
+through a small local service called the "brain". It is **optional and off by
+default** - the server and all the bots work fully without it; this only adds
+the talking.
+
+## What you need
+
+`setup_brain.bat` sets everything up for you - it installs Python automatically
+if it isn't already present. You just choose how the bots "think":
+
+- **Ollama** - a free local model that runs on your own PC (needs a decent
+  GPU/CPU; the setup installs Ollama and downloads a few GB the first time), or
+- **DeepSeek** - a cloud API (works on any PC, needs an API key you paste in).
+
+## Turn it on
+
+1. Double-click **setup_brain.bat** in this folder. It installs Python if needed,
+   asks whether to use Ollama or DeepSeek, sets everything up, and starts the
+   brain on http://127.0.0.1:5000.
+2. To have the launcher start the brain automatically with the server instead,
+   set `StartBrain=true` in `launcher\launcher.ini`.
+
+That's it - once the brain is running, the bots start chatting.
+
+> If Python was just installed for the first time, Windows may need a fresh
+> Command Prompt to see it - if the script says so, just double-click
+> setup_brain.bat again.
+'@
+Set-Content -Path (Join-Path $brainDst 'README.md') -Value $brainReadme -Encoding UTF8
+Ok "brain bundled (optional; needs Python + a model or API key to run)"
+
+# ---- 6c. bundle the FPC editor (visual bot-data editor) into pack\tools -----
+$editorSrc = Join-Path $ProjectRoot 'tools\fpc-editor'
+if (Test-Path $editorSrc) {
+    Info "bundling the FPC editor into pack\tools\fpc-editor ..."
+    Copy-Tree $editorSrc (Join-Path $Pack 'tools\fpc-editor')
+    Ok "FPC editor bundled (open tools\fpc-editor\index.html in a browser)"
+}
+
 # ---- 7. zip it -------------------------------------------------------------
 $outZip = Join-Path $OutDir 'L2J-Offline-OneClick.zip'
 if (Test-Path $outZip) { Remove-Item $outZip -Force }

@@ -75,7 +75,11 @@ the servers and the bundled DB down cleanly.
    any exist* — because ~14 SQL files `DROP TABLE` before recreating (e.g. `accounts`), importing
    over a live DB would wipe those. Auto-skip means running on a set-up machine never touches data.
 5. **Login server, then Game server** — each in its own console window, using each `java.cfg`.
-6. Optional **Python brain** (off by default).
+6. Optional **Python brain** (AI bot chat, off by default). The pack bundles it at
+   `dist\brain\`; run `brain\setup_brain.bat` once (it auto-installs Python and sets up
+   Ollama or DeepSeek), or set `StartBrain=true` in `launcher.ini` to auto-start it. See
+   `dist\brain\README.md`. The visual **FPC editor** ships at `dist\tools\fpc-editor\`
+   (`index.html`).
 
 ## Testing without the full pack (external DB path)
 

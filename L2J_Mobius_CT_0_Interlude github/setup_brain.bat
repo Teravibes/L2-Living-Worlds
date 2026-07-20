@@ -274,13 +274,56 @@ if not defined OLLAMA_MODEL set "OLLAMA_MODEL=!EXIST_MODEL!"
 
 REM --- 3. Python env + deps ----------------------------------------------------
 
+REM Make an already-installed Python visible even if PATH wasn't refreshed yet.
+call :ensure_python_on_path
+
 where python >nul 2>&1
 if errorlevel 1 (
-    echo ERROR: Python not found on PATH.
-    echo Install Python from python.org and tick Add python.exe to PATH.
-    echo Then close this window and run this BAT again.
-    pause
-    exit /b 1
+    echo ==^> Python not found. Installing it automatically...
+
+    where winget >nul 2>&1
+    if errorlevel 1 (
+        echo ==^> winget not available. Downloading the official Python installer...
+        if not exist "%TEMP%\fpc_brain_setup" mkdir "%TEMP%\fpc_brain_setup"
+        powershell -NoProfile -ExecutionPolicy Bypass -Command "$ErrorActionPreference='Stop'; $url='https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe'; $out=Join-Path $env:TEMP 'fpc_brain_setup\python-installer.exe'; Invoke-WebRequest -Uri $url -OutFile $out"
+        if errorlevel 1 (
+            echo ERROR: Could not download the Python installer.
+            echo Install Python manually from https://python.org - tick "Add python.exe to PATH".
+            pause
+            exit /b 1
+        )
+        echo ==^> Running the Python installer silently (this can take a minute)...
+        start /wait "" "%TEMP%\fpc_brain_setup\python-installer.exe" /quiet InstallAllUsers=0 PrependPath=1 Include_pip=1 Include_launcher=1
+    ) else (
+        echo ==^> Installing Python via winget...
+        winget install --id Python.Python.3.12 -e --accept-package-agreements --accept-source-agreements
+        if errorlevel 1 (
+            echo WARNING: winget install failed. Downloading the official installer instead...
+            if not exist "%TEMP%\fpc_brain_setup" mkdir "%TEMP%\fpc_brain_setup"
+            powershell -NoProfile -ExecutionPolicy Bypass -Command "$ErrorActionPreference='Stop'; $url='https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe'; $out=Join-Path $env:TEMP 'fpc_brain_setup\python-installer.exe'; Invoke-WebRequest -Uri $url -OutFile $out"
+            if errorlevel 1 (
+                echo ERROR: Could not download the Python installer.
+                pause
+                exit /b 1
+            )
+            echo ==^> Running the Python installer silently (this can take a minute)...
+            start /wait "" "%TEMP%\fpc_brain_setup\python-installer.exe" /quiet InstallAllUsers=0 PrependPath=1 Include_pip=1 Include_launcher=1
+        )
+    )
+
+    REM Make the freshly installed Python visible to THIS window (PrependPath only
+    REM affects newly opened shells).
+    call :ensure_python_on_path
+
+    where python >nul 2>&1
+    if errorlevel 1 (
+        echo ERROR: Python was installed, but it is not visible in this window yet.
+        echo Close this Command Prompt, open a new one, and run this BAT again.
+        pause
+        exit /b 1
+    )
+) else (
+    echo ==^> Python already installed.
 )
 
 python --version
@@ -352,3 +395,25 @@ echo FPC brain exited with code %errorlevel%.
 pause
 
 endlocal
+goto :eof
+
+REM ===========================================================================
+REM  Subroutines
+REM ===========================================================================
+
+:ensure_python_on_path
+REM Add the usual per-user / all-users Python install locations to PATH for THIS
+REM window. The installer's PrependPath only affects newly opened shells, so a
+REM Python we just installed (or one installed but not yet on PATH) would be
+REM invisible without this. Any working python is fine - a venv is created from it.
+if exist "%LOCALAPPDATA%\Programs\Python" (
+    for /f "delims=" %%P in ('dir /b /ad /o-n "%LOCALAPPDATA%\Programs\Python\Python3*" 2^>nul') do (
+        if exist "%LOCALAPPDATA%\Programs\Python\%%P\python.exe" (
+            set "PATH=%LOCALAPPDATA%\Programs\Python\%%P;%LOCALAPPDATA%\Programs\Python\%%P\Scripts;!PATH!"
+        )
+    )
+)
+for %%D in ("%ProgramFiles%\Python313" "%ProgramFiles%\Python312" "%ProgramFiles%\Python311") do (
+    if exist "%%~D\python.exe" set "PATH=%%~D;%%~D\Scripts;!PATH!"
+)
+goto :eof

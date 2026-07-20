@@ -293,13 +293,19 @@ if ($startGame) {
 }
 
 if ($startBrain) {
-    $brainBat = Join-Path (Split-Path -Parent $DistDir) 'setup_brain.bat'
-    if (Test-Path $brainBat) {
+    # setup_brain.bat can live either inside the bundled pack (dist\brain\) or,
+    # in a source-tree layout, one level above dist\. Try both.
+    $brainCandidates = @(
+        (Join-Path $DistDir 'brain\setup_brain.bat'),                  # bundled one-click pack
+        (Join-Path (Split-Path -Parent $DistDir) 'setup_brain.bat')   # source-tree checkout
+    )
+    $brainBat = $brainCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
+    if ($brainBat) {
         Write-Info "launching FPC brain ..."
         Start-Process -FilePath 'cmd.exe' -ArgumentList "/c `"$brainBat`"" | Out-Null
         Write-Ok "brain started"
     } else {
-        Write-Info "StartBrain=true but setup_brain.bat not found next to dist\ - skipping"
+        Write-Info "StartBrain=true but setup_brain.bat not found (looked in brain\ and next to dist\) - skipping"
     }
 }
 

@@ -83,15 +83,24 @@ The bots work fully without this. If you want them to hold natural, in-character
 conversations, run the small Python "brain" alongside the server. It's a local Flask
 service the game server calls over HTTP.
 
-You can use a **local model via [Ollama](https://ollama.com)** (no API key, runs on your
-machine) or a hosted API. On Linux/macOS the one-step script does everything:
+It needs a model to think with - a **local model via [Ollama](https://ollama.com)** (no
+API key, runs on your machine) or a hosted API. **Python is installed automatically** if
+you don't already have it.
+
+**If you're using the one-click pack:** the brain is bundled at `dist\brain\`. Just
+double-click `dist\brain\setup_brain.bat` - it installs Python if needed, asks Ollama vs
+DeepSeek, and sets everything up. To have the launcher start it automatically, set
+`StartBrain=true` in `dist\launcher\launcher.ini`. See `dist/brain/README.md` in the pack
+for details.
+
+**If you cloned the source repo:** on Linux/macOS the one-step script does everything:
 
 ```bash
 cd "L2J_Mobius_CT_0_Interlude github"
 ./setup_brain.sh          # installs Ollama, pulls a model, sets up a venv, launches
 ```
 
-On Windows use `setup_brain.bat` or if you want to run it manually, do:
+On Windows use `setup_brain.bat`. To run it manually:
 
 ```bash
 cd "L2J_Mobius_CT_0_Interlude github"

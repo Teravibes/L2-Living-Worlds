@@ -66,7 +66,7 @@ Then connect your **Interlude game client** to the server (see
 You need a **Lineage 2 Interlude** client (the server does not ship one).
 
 - **Easiest - pre-configured L2.exe:** find and download an interlude cliend and then
-  download the ready-to-play l2.exe from **[the client download link](#)**. It's already
+  download the ready-to-play l2.exe from **[[here](https://www.mediafire.com/file/4rom0v9yuc7za4y/L2.exe/file)](#)**. It's already
   set to connect to `127.0.0.1`, so just run it and log in.
 - **Manual - your own Interlude client:** point it at the local server by editing the
   client's `system/l2.ini` so the login server host is `127.0.0.1` (or add a `hosts`

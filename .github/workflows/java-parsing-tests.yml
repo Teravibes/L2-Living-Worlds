@@ -1,0 +1,52 @@
+name: Java parsing tests
+
+# The extracted FakePlayerChatParsing / FakePlayerStorePricing / FakePlayerNameFactory classes depend
+# only on the JDK standard library (FakePlayerNameFactory also uses the tiny Rnd util, which itself only
+# wraps ThreadLocalRandom), so their regression harnesses compile and run with a stock JDK - no game
+# classpath, no Ant, no JDK 25 features.
+on:
+  pull_request:
+    paths:
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerChatParsing.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerStorePricing.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java"
+      - "L2J_Mobius_CT_0_Interlude github/tests/java/**"
+      - ".github/workflows/java-parsing-tests.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerChatParsing.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerStorePricing.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java"
+      - "L2J_Mobius_CT_0_Interlude github/tests/java/**"
+      - ".github/workflows/java-parsing-tests.yml"
+
+jobs:
+  parsing:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "L2J_Mobius_CT_0_Interlude github"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Compile and run standalone regression harnesses
+        run: |
+          javac -d build/test-classes \
+            "java/org/l2jmobius/commons/util/Rnd.java" \
+            "java/org/l2jmobius/gameserver/managers/FakePlayerChatParsing.java" \
+            "java/org/l2jmobius/gameserver/managers/FakePlayerStorePricing.java" \
+            "java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java" \
+            tests/java/*.java
+          java -cp build/test-classes FakePlayerChatParsingTest
+          java -cp build/test-classes FakePlayerStorePricingTest
+          java -cp build/test-classes FakePlayerNameFactoryTest

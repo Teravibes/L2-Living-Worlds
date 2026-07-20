@@ -1,0 +1,62 @@
+name: Build one-click pack
+
+# Builds the self-contained "install nothing" pack in the cloud so you never
+# need JDK or Ant on your own machine. Click "Run workflow" in the Actions tab,
+# wait for it to finish, then download the L2J-Offline-OneClick artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      mariadb_version:
+        description: "Portable MariaDB version to bundle"
+        required: false
+        default: "11.4.5"
+  # Also build on every push that touches the launcher/pack files, so a changed
+  # pack can be produced and downloaded before merging to main (where the manual
+  # button lives).
+  push:
+    paths:
+      - "L2J_Mobius_CT_0_Interlude github/dist/launcher/**"
+      - ".github/workflows/build-oneclick-pack.yml"
+
+jobs:
+  build-pack:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: "L2J_Mobius_CT_0_Interlude github"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25 (full JDK - needed to bundle + to compile datapack scripts at runtime)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Ensure Ant is available
+        shell: pwsh
+        run: |
+          if (-not (Get-Command ant -ErrorAction SilentlyContinue)) {
+            choco install ant --no-progress -y
+          }
+          ant -version
+
+      - name: Build the one-click pack
+        shell: pwsh
+        run: |
+          $mdv = "${{ github.event.inputs.mariadb_version }}"
+          if ([string]::IsNullOrWhiteSpace($mdv)) { $mdv = "11.4.5" }
+          powershell -ExecutionPolicy Bypass -File "dist/launcher/build-pack.ps1" `
+            -JdkHome "$env:JAVA_HOME" `
+            -MariaDbVersion "$mdv" `
+            -OutDir "."
+
+      - name: Upload the pack
+        uses: actions/upload-artifact@v4
+        with:
+          name: L2J-Offline-OneClick
+          path: "L2J_Mobius_CT_0_Interlude github/L2J-Offline-OneClick.zip"
+          if-no-files-found: error
+          retention-days: 30

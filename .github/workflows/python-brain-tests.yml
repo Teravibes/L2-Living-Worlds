@@ -1,0 +1,54 @@
+name: Python brain tests
+
+on:
+  pull_request:
+    paths:
+      - "L2J_Mobius_CT_0_Interlude github/fpc_brain.py"
+      - "L2J_Mobius_CT_0_Interlude github/tests/**"
+      - "L2J_Mobius_CT_0_Interlude github/requirements.txt"
+      - ".github/workflows/python-brain-tests.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "L2J_Mobius_CT_0_Interlude github/fpc_brain.py"
+      - "L2J_Mobius_CT_0_Interlude github/tests/**"
+      - "L2J_Mobius_CT_0_Interlude github/requirements.txt"
+      - ".github/workflows/python-brain-tests.yml"
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "L2J_Mobius_CT_0_Interlude github"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: "L2J_Mobius_CT_0_Interlude github/requirements.txt"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run regression tests
+        env:
+          PROVIDER: ollama
+        # Fail if the suite collects zero tests. `unittest discover` reports "OK" on an
+        # empty suite, which previously let a gutted test file show a false green.
+        run: |
+          python - <<'PY'
+          import sys, unittest
+          suite = unittest.defaultTestLoader.discover("tests", pattern="test_*.py")
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          if result.testsRun == 0:
+              print("::error::No tests were collected - refusing to report success.")
+              sys.exit(1)
+          sys.exit(0 if result.wasSuccessful() else 1)
+          PY

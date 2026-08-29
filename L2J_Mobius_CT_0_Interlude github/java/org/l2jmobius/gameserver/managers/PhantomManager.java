@@ -368,7 +368,7 @@ public class PhantomManager implements IXmlReader
 		NUKER(true, BuddyRole.NONE, ArmorType.MAGIC),
 		HEALER(true, BuddyRole.ELDER, ArmorType.MAGIC), // Elven Elder kit (heals + recharge + Resurrection, learned naturally from its class tree)
 		BUFFER(true, BuddyRole.PROPHET, ArmorType.MAGIC), // Prophet fighter-buff kit
-        BOUNTY_HUNTER(false, BuddyRole.BOUNTY_HUNTER, ArmorType.HEAVY); // Bounty Hunter: spoils stuff, shares loot
+        BOUNTY_HUNTER(false, BuddyRole.NONE, ArmorType.HEAVY); // Bounty Hunter: spoils stuff, shares loot
 
         final boolean mage;
 		final BuddyRole supportAs;
@@ -646,7 +646,10 @@ public class PhantomManager implements IXmlReader
 		{
 			return PartyRole.MONK;
 		}
-		if (nameHas(name, "scavenger", "bounty", "artisan", "warsmith", "seeker", "maestro")) // Dwarves: blunt/heavy melee, not daggers (despite "hunter"/"seeker" in the names)
+		if (nameHas(name, "scavenger", "bounty", "seeker")) { // Dwarves: blunt/heavy melee, spoil targets, collect with sweep
+			return PartyRole.BOUNTY_HUNTER;
+		}
+		if (nameHas(name, "artisan", "warsmith", "maestro")) // Dwarves: blunt/heavy melee, assist with golems
 		{
 			return PartyRole.WARRIOR;
 		}

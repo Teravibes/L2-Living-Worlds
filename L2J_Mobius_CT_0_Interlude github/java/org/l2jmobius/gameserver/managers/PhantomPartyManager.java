@@ -32,12 +32,14 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
@@ -52,6 +54,11 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.events.Containers;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.holders.actor.player.inventory.OnPlayerItemAdd;
+import org.l2jmobius.gameserver.model.events.holders.actor.player.inventory.OnPlayerItemTransfer;
+import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.model.groups.Party;
 import org.l2jmobius.gameserver.model.groups.PartyDistributionType;
 import org.l2jmobius.gameserver.model.groups.PartyMessageType;
@@ -398,6 +405,9 @@ public class PhantomPartyManager
 		1015 // Battle Heal
 	};
 	private static final int BIG_HEAL_DEFICIT = 35; // missing HP% at/above which the strong heal is worth its MP
+    /** AOE radius for phantoms to check for mobs with their respective spoiledByObjectId */
+    private static final int DEFAULT_AOE_SWEEP_RADIUS = 600;
+    private static final int SWEEPER_SKILL_ID = 42;
 
 	/** Per-member state. */
 	private static class Member
@@ -462,7 +472,12 @@ public class PhantomPartyManager
 		boolean songsRequested; // explicit "sing"/"dance" order: run the rotation now even out of combat
 		Skill pendingSong; // explicit "<song/dance> by name" order (SINGER/DANCER): cast that exact one next tick, even if it's outside the auto rotation
 		SpoilBehavior spoilBehavior;
-		List<Item> spoilSessionItems;
+		Skill sweeper;
+		boolean scavengerKitLookedUp;
+		boolean fieldSweepingInProcess;
+		Monster nextMonsterCorpseToSweep;
+		List<Monster> targetsToSweep;
+		Map<Integer, Integer> lootingSessionItems; // Map of Item.getObjectId() to Item.getCount()
 		Skill survival; // lazy (TANK): Ultimate Defense, hand-cast at low HP (parked out of the auto-buff loop)
 		boolean survivalLookedUp;
 		Skill cc; // lazy (NUKER): Sleep / Dryad Root for a loose add
@@ -498,6 +513,39 @@ public class PhantomPartyManager
 		{
 			return role.isSupport();
 		}
+
+		void cleanup()
+		{
+			lootingSessionItems = null;
+		}
+
+        public void addItemsToLootingSession(Item item)
+		{
+            if (lootingSessionItems == null)
+			{
+				lootingSessionItems = new ConcurrentHashMap<>();
+			}
+			if (!lootingSessionItems.containsKey(item.getObjectId()))
+			{
+                lootingSessionItems.put(item.getObjectId(), 0);
+			}
+			lootingSessionItems.compute(
+					item.getObjectId(),
+					(k, currentAmount) -> currentAmount + item.getCount()
+			);
+        }
+
+        public void removeItemsFromLootingSession(Item item)
+		{
+            if (lootingSessionItems == null || lootingSessionItems.isEmpty() || !lootingSessionItems.containsKey(item.getObjectId()))
+			{
+				return;
+			}
+			lootingSessionItems.compute(
+					item.getObjectId(),
+					(k, currentAmount) -> currentAmount - item.getCount()
+			);
+        }
 	}
 
 	private enum SpoilBehavior {
@@ -557,8 +605,26 @@ public class PhantomPartyManager
 	private final Set<Integer> _healedThisTick = ConcurrentHashMap.newKeySet();
 	private boolean _ticking = false;
 
+	private final ConsumerEventListener addItemEventListener =
+			new ConsumerEventListener(
+					Containers.Players(),
+					EventType.ON_PLAYER_ITEM_ADD,
+					(OnPlayerItemAdd event) -> onPlayerItemAdd(event),
+					this
+			);
+
+	private final ConsumerEventListener transferItemEventListener =
+			new ConsumerEventListener(
+					Containers.Players(),
+					EventType.ON_PLAYER_ITEM_TRANSFER,
+					(OnPlayerItemTransfer event) -> onPlayerItemTransfer(event),
+					this
+			);
+
 	protected PhantomPartyManager()
 	{
+		Containers.Players().addListener(addItemEventListener);
+		Containers.Players().addListener(transferItemEventListener);
 	}
 
 	// ===== Recruitment =====
@@ -615,6 +681,22 @@ public class PhantomPartyManager
 			}
 		}
 		return cap - incoming;
+	}
+
+	private void onPlayerItemAdd(OnPlayerItemAdd event)
+	{
+		Member npc = _members.get(event.getPlayer().getObjectId());
+		if (npc != null) {
+			npc.addItemsToLootingSession(event.getItem());
+		}
+	}
+
+	private void onPlayerItemTransfer(OnPlayerItemTransfer event)
+	{
+		Member npc = _members.get(event.getPlayer().getObjectId());
+		if (npc != null) {
+			npc.removeItemsFromLootingSession(event.getItem());
+		}
 	}
 
 	/** Spawns a member out of sight near the leader and starts it walking over. */
@@ -941,29 +1023,23 @@ public class PhantomPartyManager
 	 * @return {@code true} if the line matched a known command (and was acted on); {@code false} for free-form
 	 *         text the caller should route to the brain
 	 */
-	private boolean tryCommand(Member state, Player owner, String message, boolean addressed)
-	{
+	private boolean tryCommand(Member state, Player owner, String message, boolean addressed) {
 		final String text = message.toLowerCase().trim();
 
 		// A specific buff by name ("give me might", "ww pls") - checked first so "give me"/"gimme" aren't eaten by
 		// the grace ("brb") matcher. Grant it if the buffer knows it, else say it doesn't have it.
-		if (state.isSupport())
-		{
+		if (state.isSupport()) {
 			final String requested = PhantomBuffs.requestedBuff(text);
-			if (requested != null)
-			{
+			if (requested != null) {
 				final Skill known = PhantomBuffs.findKnown(buffs(state), requested);
-				if (known != null)
-				{
+				if (known != null) {
 					// "<buff> on me" / "<buff> on <member>": a named party member is the target, else the leader.
 					final Player named = findPartyMemberByName(state, text);
 					final Player target = (named != null) ? named : state.owner;
 					state.pendingBuff = known;
 					state.pendingBuffTarget = target;
 					deliver(state, "sure, " + known.getName().toLowerCase() + ((target == state.owner) ? "" : " on " + target.getName()));
-				}
-				else
-				{
+				} else {
 					deliver(state, "i don't have " + requested);
 				}
 				return true;
@@ -974,11 +1050,9 @@ public class PhantomPartyManager
 		// exact one next tick, even if it's outside the auto rotation (e.g. Dance of Medusa). Checked BEFORE the
 		// generic "sing"/"dance" trigger below so a named request casts that one song, not the whole rotation. It
 		// resolves against the member's own learned skills, so a singer only answers song names and a dancer dances.
-		if ((state.role == PartyRole.SINGER) || (state.role == PartyRole.DANCER))
-		{
+		if ((state.role == PartyRole.SINGER) || (state.role == PartyRole.DANCER)) {
 			final Skill namedSong = requestedSong(state.npc, text);
-			if (namedSong != null)
-			{
+			if (namedSong != null) {
 				state.pendingSong = namedSong;
 				deliver(state, ((state.role == PartyRole.SINGER) ? "singing " : "dancing ") + namedSong.getName().toLowerCase());
 				return true;
@@ -989,8 +1063,7 @@ public class PhantomPartyManager
 		// rotation on its own). "songs pls" reaches the singer, "dance" the dancer, "songs and dances" both.
 		// ("song" not "sing" for the singer - a bare "sing" substring also matches "using"/"losing" in casual chat.)
 		if (((state.role == PartyRole.SINGER) && containsAny(text, "song", "sing pls", "sing please")) //
-			|| ((state.role == PartyRole.DANCER) && containsAny(text, "dance")))
-		{
+				|| ((state.role == PartyRole.DANCER) && containsAny(text, "dance"))) {
 			state.songsRequested = true;
 			deliver(state, (state.role == PartyRole.SINGER) ? "singing" : "dancing");
 			return true;
@@ -998,6 +1071,9 @@ public class PhantomPartyManager
 
 		if (((state.role == PartyRole.BOUNTY_HUNTER) && containsAny(text, "spoil on assist"))) {
 			state.spoilBehavior = SpoilBehavior.SPOIL_ON_ASSIST;
+			stopCamp(owner);
+			setFree(state, false);
+			state.following = true;
 			deliver(state, "got you boss, spoiling your targets!");
 			return true;
 		}
@@ -1005,10 +1081,8 @@ public class PhantomPartyManager
 		// Raid pull control. Against a raid the party HOLDS until the tank initiates (see combatTick); these orders
 		// drive that. Only the tank acknowledges out loud so a full party doesn't chatter over each other.
 		// "tank attack" - order the tank to pull the boss; the rest follow once it has aggro.
-		if (containsAny(text, "tank attack", "tank pull", "tank go", "tank engage", "tank initiate", "tank in", "pull it", "pull the boss", "pull boss", "initiate"))
-		{
-			if (state.role == PartyRole.TANK)
-			{
+		if (containsAny(text, "tank attack", "tank pull", "tank go", "tank engage", "tank initiate", "tank in", "pull it", "pull the boss", "pull boss", "initiate")) {
+			if (state.role == PartyRole.TANK) {
 				state.pullOrdered = true;
 				state.pullSince = System.currentTimeMillis();
 				deliver(state, "pulling - hold dps till i have aggro");
@@ -1016,12 +1090,10 @@ public class PhantomPartyManager
 			return true;
 		}
 		// "all attack" - everyone engages the current raid right now (skip the tank-initiate).
-		if (containsAny(text, "all attack", "everyone attack", "all in", "open fire", "engage all", "attack the raid", "everyone in", "burn it"))
-		{
+		if (containsAny(text, "all attack", "everyone attack", "all in", "open fire", "engage all", "attack the raid", "everyone in", "burn it")) {
 			_released.add(owner.getObjectId());
 			_releasedRaidTargets.removeIf(key -> raidOwnerId(key) == owner.getObjectId());
-			if (state.role == PartyRole.TANK)
-			{
+			if (state.role == PartyRole.TANK) {
 				state.pullOrdered = true;
 				state.pullSince = System.currentTimeMillis();
 				deliver(state, "all in!");
@@ -1029,12 +1101,10 @@ public class PhantomPartyManager
 			return true;
 		}
 		// "hold fire" - re-engage the hold (stop feeding the raid, wait for the tank).
-		if (containsAny(text, "hold fire", "hold dps", "wait for tank", "fall back", "stop dps", "back off"))
-		{
+		if (containsAny(text, "hold fire", "hold dps", "wait for tank", "fall back", "stop dps", "back off")) {
 			clearRaidRelease(owner);
 			state.pullOrdered = false;
-			if (state.role == PartyRole.TANK)
-			{
+			if (state.role == PartyRole.TANK) {
 				deliver(state, "holding");
 			}
 			return true;
@@ -1043,19 +1113,15 @@ public class PhantomPartyManager
 		// ===== Camp-and-pull =====
 		// Break camp / stop pulling first - these phrases contain "camp"/"pull", so they must match before the
 		// generic "camp"/"pull" starters below.
-		if (containsAny(text, "break camp", "leave camp", "stop camp", "decamp", "no more camp", "stop camping", "move out"))
-		{
-			if (stopCamp(owner))
-			{
+		if (containsAny(text, "break camp", "leave camp", "stop camp", "decamp", "no more camp", "stop camping", "move out")) {
+			if (stopCamp(owner)) {
 				deliver(state, "breaking camp");
 			}
 			return true;
 		}
-		if (containsAny(text, "stop pull", "stop pulling", "no more pull", "hold pull", "quit pull", "stop fetching"))
-		{
+		if (containsAny(text, "stop pull", "stop pulling", "no more pull", "hold pull", "quit pull", "stop fetching")) {
 			final Camp camp = _camps.get(owner.getObjectId());
-			if (camp != null)
-			{
+			if (camp != null) {
 				camp.pullerId = 0; // stay camped, just stop fetching (fight only what wanders in)
 			}
 			deliver(state, "ok, no more pulls");
@@ -1063,32 +1129,27 @@ public class PhantomPartyManager
 		}
 		// "<name> pull [N]" - make this member the puller. Only when this member was specifically addressed (whisper or
 		// named in the party line), so a bare party-wide "pull" doesn't turn all eight into pullers at once.
-		if (addressed && containsWord(text, "pull") && !containsAny(text, "dont pull", "don't pull", "pull it", "pull the boss", "pull boss"))
-		{
+		if (addressed && containsWord(text, "pull") && !containsAny(text, "dont pull", "don't pull", "pull it", "pull the boss", "pull boss")) {
 			startCampPuller(state, parsePullSize(text));
 			return true;
 		}
 		// "camp here" / "make camp" - plant a fixed camp at the leader's spot; the party holds and fights only what's
 		// brought in. Matched on explicit phrases (not the bare word "camp"), so "go to abandoned camp" still travels.
-		if (text.equals("camp") || containsAny(text, "camp here", "camp up", "set up camp", "make camp", "lets camp", "let's camp", "set up here", "hold this spot", "set camp"))
-		{
-			if (startCamp(owner))
-			{
+		if (text.equals("camp") || containsAny(text, "camp here", "camp up", "set up camp", "make camp", "lets camp", "let's camp", "set up here", "hold this spot", "set camp")) {
+			if (startCamp(owner)) {
 				deliver(state, "camping here");
 			}
 			return true;
 		}
 
 		// Free-hunt vs assist toggle.
-		if (containsAny(text, "attack freely", "free hunt", "go wild", "ffa", "hunt freely", "do your own", "attack anything"))
-		{
+		if (containsAny(text, "attack freely", "free hunt", "go wild", "ffa", "hunt freely", "do your own", "attack anything")) {
 			stopCamp(owner); // a movement/targeting order breaks camp
 			setFree(state, true);
 			deliver(state, "k, hunting on my own");
 			return true;
 		}
-		if (containsAny(text, "assist", "focus", "help me", "on my target", "kill my target", "attack my"))
-		{
+		if (containsAny(text, "assist", "focus", "help me", "on my target", "kill my target", "attack my")) {
 			stopCamp(owner);
 			setFree(state, false);
 			state.following = true;
@@ -1097,13 +1158,11 @@ public class PhantomPartyManager
 		}
 
 		// Stand up on demand (interrupts an MP rest): "stand", "stand up", "get up", "on your feet".
-		if (containsAny(text, "stand up", "stand", "get up", "on your feet", "feet"))
-		{
+		if (containsAny(text, "stand up", "stand", "get up", "on your feet", "feet")) {
 			state.noSitUntil = System.currentTimeMillis() + STAND_SUPPRESS; // don't pop straight back down
 			afterHumanDelay(state, () ->
 			{
-				if (state.npc.isSitting())
-				{
+				if (state.npc.isSitting()) {
 					state.npc.standUp();
 				}
 			});
@@ -1112,16 +1171,14 @@ public class PhantomPartyManager
 		}
 
 		// Follow / hold.
-		if (containsAny(text, "follow", "come with", "on me", "regroup", "gather", "stack", "stick with"))
-		{
+		if (containsAny(text, "follow", "come with", "on me", "regroup", "gather", "stack", "stick with")) {
 			stopCamp(owner); // "follow" breaks camp - the party moves with the leader again
 			state.following = true;
 			setFree(state, false); // "follow" also leaves free-hunt - without this the member said "coming" but kept attacking
 			afterHumanDelay(state, () ->
 			{
 				final Player npc = state.npc;
-				if (npc.isAttackingNow() || npc.isInCombat())
-				{
+				if (npc.isAttackingNow() || npc.isInCombat()) {
 					npc.abortAttack();
 					npc.setTarget(null); // drop the mob too, or AutoUse keeps casting at it mid-follow
 				}
@@ -1130,8 +1187,7 @@ public class PhantomPartyManager
 			deliver(state, "coming");
 			return true;
 		}
-		if (containsAny(text, "stay", "wait here", "hold", "stop", "halt"))
-		{
+		if (containsAny(text, "stay", "wait here", "hold", "stop", "halt")) {
 			stopCamp(owner); // "stop"/"hold" ends camp too (stop everything, incl. pulling)
 			state.following = false;
 			setFree(state, false);
@@ -1141,16 +1197,14 @@ public class PhantomPartyManager
 		}
 
 		// Grace.
-		if (containsAny(text, "brb", "be right back", "give me", "gimme", "afk", "one sec", "1 sec", "moment"))
-		{
+		if (containsAny(text, "brb", "be right back", "give me", "gimme", "afk", "one sec", "1 sec", "moment")) {
 			state.graceUntil = System.currentTimeMillis() + BRB_GRACE;
 			deliver(state, "np");
 			return true;
 		}
 
 		// Disband / dismiss.
-		if (containsAny(text, "disband", "leave party", "leave the party", "dismiss", "you can go", "thanks bye", "thx bye", "bye", "gl hf"))
-		{
+		if (containsAny(text, "disband", "leave party", "leave the party", "dismiss", "you can go", "thanks bye", "thx bye", "bye", "gl hf")) {
 			deliver(state, "gl hf o/");
 			emote(state, SOCIAL_BOW, 400); // a parting bow before leaving
 			ThreadPool.schedule(() -> release(state, true), 1800);
@@ -1158,9 +1212,25 @@ public class PhantomPartyManager
 		}
 
 		// Status.
-		if (containsAny(text, "status", "hp?", "mp?", "you ok", "u ok"))
-		{
+		if (containsAny(text, "status", "hp?", "mp?", "you ok", "u ok")) {
 			deliver(state, "hp " + state.npc.getCurrentHpPercent() + "% / mp " + state.npc.getCurrentMpPercent() + "%");
+			return true;
+		}
+
+		if (containsAny(text, "give me spoils", "give me spoil", "give me sweep", "return spoil"))
+		{
+			Map<Integer, Integer> spoils = state.lootingSessionItems;
+			if (spoils.isEmpty()) {
+				deliver(state, "nothing to hand over yet, how about a few more mobs then?");
+				return true;
+			}
+			deliver(state, "here's your loot mate, have fun with it!");
+			PhantomExchangeManager.newInstance().runTrade(
+					state.npc,
+					owner,
+					spoils
+			);
+			state.lootingSessionItems.clear();
 			return true;
 		}
 
@@ -2143,6 +2213,12 @@ public class PhantomPartyManager
 			}
 		}
 
+		if (state.role == PartyRole.BOUNTY_HUNTER && state.fieldSweepingInProcess)
+		{
+			runSweepOnSelectedCorpses(state);
+			return;
+		}
+
 		// Charge classes bank their sonic/force energy while settled and out of combat, so a pull OPENS prepared
 		// instead of building reactively - an experienced player taps up charges before engaging, and Interlude
 		// charge energy persists ~10 minutes so one pre-charge carries many pulls. Only when standing near the
@@ -2275,6 +2351,14 @@ public class PhantomPartyManager
 			{
 				return;
 			}
+
+			// if the battle is over, then it's probably a good time to look for spoiled mobs and spoil them
+			if (focus == null) {
+				if ((state.role == PartyRole.BOUNTY_HUNTER) && checkForSweepableMobs(state))
+				{
+					return;
+				}
+			}
 			// Nothing to assist (or a nuker that just ran dry): a caster low on MP sits to recover when safe;
 			// otherwise stick with the leader.
 			if (restForMp(state))
@@ -2362,6 +2446,72 @@ public class PhantomPartyManager
 		}
 	}
 
+	private boolean checkForSweepableMobs(Member state)
+	{
+		final Player npc = state.npc;
+
+		if (!state.scavengerKitLookedUp) {
+			state.sweeper = npc.getKnownSkill(SWEEPER_SKILL_ID);
+			state.scavengerKitLookedUp = true;
+		}
+
+		if (!state.fieldSweepingInProcess) {
+			List<Monster> sweepableEntities =
+					World.getInstance().getVisibleObjectsInRange(npc, Monster.class, DEFAULT_AOE_SWEEP_RADIUS)
+							.stream()
+							.filter((monster) -> monster.isDead() && monster.getSpoilerObjectId() == npc.getObjectId())
+							.collect(Collectors.toCollection(ArrayList::new));
+
+			state.fieldSweepingInProcess = !sweepableEntities.isEmpty();
+			if (state.fieldSweepingInProcess) {
+				state.targetsToSweep = sweepableEntities;
+			}
+			return state.fieldSweepingInProcess;
+		}
+
+		return false;
+	}
+
+	private void runSweepOnSelectedCorpses(Member state)
+	{
+		Player npc = state.npc;
+		Optional<Monster> closestMonsterCorpseOptional = state.targetsToSweep
+                .stream()
+				.min((monster1, monster2) -> {
+                    double distanceToPlayer1 = monster1.calculateDistance2D(npc);
+                    double distanceToPlayer2 = monster2.calculateDistance2D(npc);
+
+                    return Double.compare(distanceToPlayer1, distanceToPlayer2);
+                });
+
+		 if (closestMonsterCorpseOptional.isPresent())
+		 {
+			 Monster closestMonsterCorpse = closestMonsterCorpseOptional.get();
+			 if (state.nextMonsterCorpseToSweep == closestMonsterCorpse)
+			 {
+				 npc.setTarget(closestMonsterCorpse);
+				 npc.setRunning();
+				 npc.getAI().setIntention(Intention.MOVE_TO, closestMonsterCorpse.getLocation());
+
+				 if (npc.calculateDistance2D(closestMonsterCorpse) <= state.sweeper.getCastRange())
+				 {
+					 npc.getAI().setIntention(Intention.IDLE);
+					 npc.doCast(state.sweeper);
+					 deliver(state, "sweeping them: " + closestMonsterCorpse.getName());
+					 state.targetsToSweep.remove(closestMonsterCorpse);
+					 state.nextMonsterCorpseToSweep = null;
+				 }
+			 } else
+			 {
+				 state.nextMonsterCorpseToSweep = closestMonsterCorpse;
+			 }
+		} else
+		{
+			state.fieldSweepingInProcess = false;
+			state.nextMonsterCorpseToSweep = null;
+		}
+	}
+
 	/**
 	 * Drives a member to fight one chosen {@code focus} mob: the shared engage logic used by both assist mode and
 	 * camp mode. Handles raid aggro-easing (a no-op on trash), nuker CC + cast-range hold, the archer target-switch
@@ -2418,10 +2568,6 @@ public class PhantomPartyManager
 			return true;
 		}
 		if ((state.role == PartyRole.DAGGER) && positionRear(state, focus))
-		{
-			return true;
-		}
-		if ((state.role == PartyRole.BOUNTY_HUNTER) && maintainSpoil(state, focus))
 		{
 			return true;
 		}
@@ -3790,22 +3936,6 @@ public class PhantomPartyManager
 		return true;
 	}
 
-	private boolean maintainSpoil(Member state, Monster target)
-	{
-		Player player = state.npc;
-		if (!target.isSpoiled() && !target.isCastingNow()) {
-			Skill spoilSkill = player.getKnownSkill(254);
-			player.doCast(spoilSkill, target, new ArrayList<>());
-			return true;
-		}
-		if (target.isSpoiled() && target.isDead()) {
-			Skill sweeperSkill = player.getKnownSkill(42);
-			player.doCast(sweeperSkill, target, new ArrayList<>());
-			return true;
-		}
-		return false;
-	}
-
 	/**
 	 * NUKER crowd control: a loose add beating on a squishy party member (healer/caster/the leader) gets slept or
 	 * rooted before the nuker resumes its normal DPS - CC is the nuker's party job. Never the kill target, never
@@ -4165,7 +4295,7 @@ public class PhantomPartyManager
 				protector = m.npc;
 				break;
 			}
-			if (((m.role == PartyRole.WARRIOR) || (m.role == PartyRole.DAGGER) || (m.role == PartyRole.MONK)) && (distance < bestDistance))
+			if (((m.role == PartyRole.WARRIOR) || (m.role == PartyRole.DAGGER) || (m.role == PartyRole.MONK) || (m.role == PartyRole.BOUNTY_HUNTER)) && (distance < bestDistance))
 			{
 				bestDistance = distance;
 				protector = m.npc;

@@ -49,5 +49,7 @@ Start-Server.bat
 Stop-Server.bat
 launcher/launcher.ps1
 launcher/stop.ps1
-launcher/assets/background.png
-launcher/assets/launcher.ico
+# launcher/assets/* is intentionally NOT patched: the running LivingWorld.exe holds
+# these open (e.g. launcher.ico as its window icon), so overwriting them mid-update
+# fails with a file-in-use error and aborts the whole patch. Ship changed launcher
+# assets in the full pack instead.

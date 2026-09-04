@@ -1133,7 +1133,7 @@ public class PhantomPartyManager
 		{
 			_pendingTrades = new CopyOnWriteArrayList<>();
 			_members.values().stream()
-					.filter(member -> member.lootingSessionItems != null && !member.lootingSessionItems.isEmpty())
+					.filter(member -> member.owner == owner && member.lootingSessionItems != null && !member.lootingSessionItems.isEmpty())
 					.collect(Collectors.toCollection(() -> _pendingTrades));
 			if (_pendingTrades.isEmpty()) {
 				return false;
@@ -1393,7 +1393,7 @@ public class PhantomPartyManager
 		if (containsAny(text, "return loot", "hand over loot", "hand over loot"))
 		{
 			Map<Integer, Integer> spoils = state.lootingSessionItems;
-			if (spoils.isEmpty()) {
+			if (spoils == null || spoils.isEmpty()) {
 				deliver(state, "nothing to hand over yet, how about a few more mobs then?");
 				return true;
 			}
@@ -2693,6 +2693,12 @@ public class PhantomPartyManager
 		if (!state.scavengerKitLookedUp) {
 			state.sweeper = npc.getKnownSkill(SWEEPER_SKILL_ID);
 			state.scavengerKitLookedUp = true;
+		}
+
+		// Without the Sweeper skill there is nothing to cast on a spoiled corpse; never enter
+		// sweeping mode, or runSweepOnSelectedCorpses would dereference a null sweeper.
+		if (state.sweeper == null) {
+			return false;
 		}
 
 		if (!state.fieldSweepingInProcess) {

@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class PvpTitleColorConfig
 {
-	// File
-	private static final String PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
-	
 	// Constants
 	public static boolean PVP_COLOR_SYSTEM_ENABLED;
 	public static int PVP_AMOUNT1;
@@ -49,9 +46,10 @@ public class PvpTitleColorConfig
 	public static String TITLE_FOR_PVP_AMOUNT4;
 	public static String TITLE_FOR_PVP_AMOUNT5;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(PVP_TITLE_CONFIG_FILE);
+		String pvpTitleConfigFile = String.format("./%s/Custom/PvpTitleColor.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(pvpTitleConfigFile);
 		PVP_COLOR_SYSTEM_ENABLED = config.getBoolean("EnablePvPColorSystem", false);
 		PVP_AMOUNT1 = config.getInt("PvpAmount1", 500);
 		PVP_AMOUNT2 = config.getInt("PvpAmount2", 1000);

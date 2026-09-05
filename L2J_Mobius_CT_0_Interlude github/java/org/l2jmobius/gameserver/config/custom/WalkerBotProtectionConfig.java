@@ -28,15 +28,13 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class WalkerBotProtectionConfig
 {
-	// File
-	private static final String WALKER_BOT_PROTECTION_CONFIG_FILE = "./config/Custom/WalkerBotProtection.ini";
-	
 	// Constants
 	public static boolean L2WALKER_PROTECTION;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(WALKER_BOT_PROTECTION_CONFIG_FILE);
+		String walkerBotProtectionConfigFile = String.format("./%s/Custom/WalkerBotProtection.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(walkerBotProtectionConfigFile);
 		L2WALKER_PROTECTION = config.getBoolean("L2WalkerProtection", false);
 	}
 }

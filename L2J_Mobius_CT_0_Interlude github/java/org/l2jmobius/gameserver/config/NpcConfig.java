@@ -35,9 +35,6 @@ public class NpcConfig
 {
 	private static final Logger LOGGER = Logger.getLogger(NpcConfig.class.getName());
 	
-	// File
-	private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
-	
 	// Constants
 	public static boolean ANNOUNCE_MAMMON_SPAWN;
 	public static boolean ALT_MOB_AGRO_IN_PEACEZONE;
@@ -81,9 +78,10 @@ public class NpcConfig
 	public static double PET_HP_REGEN_MULTIPLIER;
 	public static double PET_MP_REGEN_MULTIPLIER;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(NPC_CONFIG_FILE);
+		String npcConfigFile = String.format("./%s/NPC.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(npcConfigFile);
 		ANNOUNCE_MAMMON_SPAWN = config.getBoolean("AnnounceMammonSpawn", false);
 		ALT_MOB_AGRO_IN_PEACEZONE = config.getBoolean("AltMobAgroInPeaceZone", true);
 		ALT_ATTACKABLE_NPCS = config.getBoolean("AltAttackableNpcs", true);

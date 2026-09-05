@@ -28,16 +28,14 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class CustomMailManagerConfig
 {
-	// File
-	private static final String CUSTOM_MAIL_MANAGER_CONFIG_FILE = "./config/Custom/CustomMailManager.ini";
-	
 	// Constants
 	public static boolean CUSTOM_MAIL_MANAGER_ENABLED;
 	public static int CUSTOM_MAIL_MANAGER_DELAY;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader custom = new ConfigReader(CUSTOM_MAIL_MANAGER_CONFIG_FILE);
+		String customMailManagerConfigFile = String.format("./%s/Custom/CustomMailManager.ini", baseConfigPath);
+		final ConfigReader custom = new ConfigReader(customMailManagerConfigFile);
 		CUSTOM_MAIL_MANAGER_ENABLED = custom.getBoolean("CustomMailManagerEnabled", false);
 		CUSTOM_MAIL_MANAGER_DELAY = custom.getInt("DatabaseQueryDelay", 30) * 1000;
 	}

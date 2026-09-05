@@ -37,9 +37,6 @@ public class DualboxCheckConfig
 {
 	private static final Logger LOGGER = Logger.getLogger(DualboxCheckConfig.class.getName());
 	
-	// File
-	private static final String DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
-	
 	// Constants
 	public static int DUALBOX_CHECK_MAX_PLAYERS_PER_IP;
 	public static int DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP;
@@ -49,9 +46,10 @@ public class DualboxCheckConfig
 	public static boolean DUALBOX_COUNT_OFFLINE_TRADERS;
 	public static Map<Integer, Integer> DUALBOX_CHECK_WHITELIST;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(DUALBOX_CHECK_CONFIG_FILE);
+		String dualboxCheckConfigFile = String.format("./%s/Custom/DualboxCheck.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(dualboxCheckConfigFile);
 		DUALBOX_CHECK_MAX_PLAYERS_PER_IP = config.getInt("DualboxCheckMaxPlayersPerIP", 0);
 		DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP = config.getInt("DualboxCheckMaxOlympiadParticipantsPerIP", 0);
 		DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP = config.getInt("DualboxCheckMaxL2EventParticipantsPerIP", 0);

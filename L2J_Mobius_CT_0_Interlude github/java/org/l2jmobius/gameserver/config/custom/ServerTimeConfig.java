@@ -28,15 +28,13 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class ServerTimeConfig
 {
-	// File
-	private static final String SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
-	
 	// Constant
 	public static boolean DISPLAY_SERVER_TIME;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(SERVER_TIME_CONFIG_FILE);
+		String serverTimeConfigFile = String.format("./%s/Custom/ServerTime.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(serverTimeConfigFile);
 		DISPLAY_SERVER_TIME = config.getBoolean("DisplayServerTime", false);
 	}
 }

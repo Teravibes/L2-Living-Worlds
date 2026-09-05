@@ -28,17 +28,15 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class ScreenWelcomeMessageConfig
 {
-	// File
-	private static final String SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
-	
 	// Constants
 	public static boolean WELCOME_MESSAGE_ENABLED;
 	public static String WELCOME_MESSAGE_TEXT;
 	public static int WELCOME_MESSAGE_TIME;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(SCREEN_WELCOME_MESSAGE_CONFIG_FILE);
+		String screenWelcomeMessageConfigFile = String.format("./%s/Custom/ScreenWelcomeMessage.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(screenWelcomeMessageConfigFile);
 		WELCOME_MESSAGE_ENABLED = config.getBoolean("ScreenWelcomeMessageEnable", false);
 		WELCOME_MESSAGE_TEXT = config.getString("ScreenWelcomeMessageText", "Welcome to our server!");
 		WELCOME_MESSAGE_TIME = config.getInt("ScreenWelcomeMessageTime", 10) * 1000;

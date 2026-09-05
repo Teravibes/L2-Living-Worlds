@@ -28,15 +28,13 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class PasswordChangeConfig
 {
-	// File
-	private static final String PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
-	
 	// Constants
 	public static boolean ALLOW_CHANGE_PASSWORD;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(PASSWORD_CHANGE_CONFIG_FILE);
+		String passwordChangeConfigFile = String.format("./%s/Custom/PasswordChange.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(passwordChangeConfigFile);
 		ALLOW_CHANGE_PASSWORD = config.getBoolean("AllowChangePassword", false);
 	}
 }

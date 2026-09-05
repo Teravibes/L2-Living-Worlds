@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class NpcStatMultipliersConfig
 {
-	// File
-	private static final String NPC_STAT_MULTIPLIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
-	
 	// Constants
 	public static boolean ENABLE_NPC_STAT_MULTIPLIERS;
 	public static double MONSTER_HP_MULTIPLIER;
@@ -66,9 +63,10 @@ public class NpcStatMultipliersConfig
 	public static double DEFENDER_AGRRO_RANGE_MULTIPLIER;
 	public static double DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(NPC_STAT_MULTIPLIERS_CONFIG_FILE);
+		String npcStatMultipliersConfigFile = String.format("./%s/Custom/NpcStatMultipliers.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(npcStatMultipliersConfigFile);
 		ENABLE_NPC_STAT_MULTIPLIERS = config.getBoolean("EnableNpcStatMultipliers", false);
 		MONSTER_HP_MULTIPLIER = config.getDouble("MonsterHP", 1.0);
 		MONSTER_MP_MULTIPLIER = config.getDouble("MonsterMP", 1.0);

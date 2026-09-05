@@ -53,8 +53,9 @@ public class DatabaseFactory
 	/**
 	 * Initializes the HikariCP connection pool with optimized settings.<br>
 	 * Ensures that the pool is initialized only once.
+	 * @param baseConfigPath base directory holding the configuration files
 	 */
-	public static synchronized void init()
+	public static synchronized void init(String baseConfigPath)
 	{
 		if ((DATABASE_POOL != null) && !DATABASE_POOL.isClosed())
 		{
@@ -63,7 +64,7 @@ public class DatabaseFactory
 		}
 		
 		// Load configurations.
-		DatabaseConfig.load();
+		DatabaseConfig.load(baseConfigPath);
 		
 		try
 		{

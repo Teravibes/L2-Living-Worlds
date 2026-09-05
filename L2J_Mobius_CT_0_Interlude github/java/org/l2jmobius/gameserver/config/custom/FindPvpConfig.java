@@ -28,15 +28,13 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class FindPvpConfig
 {
-	// File
-	private static final String FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
-	
 	// Constants
 	public static boolean ENABLE_FIND_PVP;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(FIND_PVP_CONFIG_FILE);
+		String findPvpConfigFile = String.format("./%s/Custom/FindPvP.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(findPvpConfigFile);
 		ENABLE_FIND_PVP = config.getBoolean("EnableFindPvP", false);
 	}
 }

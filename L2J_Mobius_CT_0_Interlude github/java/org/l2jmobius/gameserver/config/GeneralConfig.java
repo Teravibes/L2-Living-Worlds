@@ -38,9 +38,6 @@ public class GeneralConfig
 {
 	private static final Logger LOGGER = Logger.getLogger(GeneralConfig.class.getName());
 	
-	// File
-	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
-	
 	// Constants
 	public static boolean EVERYBODY_HAS_ADMIN_RIGHTS;
 	public static boolean SERVER_GMONLY;
@@ -180,9 +177,10 @@ public class GeneralConfig
 	public static boolean ENABLE_FALLING_DAMAGE;
 	public static boolean DEBUFF_DURATION_USES_RESISTS;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(GENERAL_CONFIG_FILE);
+		String generalConfigFile = String.format("./%s/General.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(generalConfigFile);
 		EVERYBODY_HAS_ADMIN_RIGHTS = config.getBoolean("EverybodyHasAdminRights", false);
 		SERVER_GMONLY = config.getBoolean("ServerGMOnly", false);
 		GM_HERO_AURA = config.getBoolean("GMHeroAura", false);

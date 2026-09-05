@@ -32,9 +32,6 @@ import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
  */
 public class OfflinePlayConfig
 {
-	// File
-	private static final String OFFLINE_PLAY_CONFIG_FILE = "./config/Custom/OfflinePlay.ini";
-	
 	// Constants
 	public static boolean ENABLE_OFFLINE_PLAY_COMMAND;
 	public static boolean RESTORE_AUTO_PLAY_OFFLINERS;
@@ -46,9 +43,10 @@ public class OfflinePlayConfig
 	public static int OFFLINE_PLAY_NAME_COLOR;
 	public static List<AbnormalVisualEffect> OFFLINE_PLAY_ABNORMAL_EFFECTS = new ArrayList<>();
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(OFFLINE_PLAY_CONFIG_FILE);
+		String offlinePlayConfigFile = String.format("./%s/Custom/OfflinePlay.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(offlinePlayConfigFile);
 		ENABLE_OFFLINE_PLAY_COMMAND = config.getBoolean("EnableOfflinePlayCommand", false);
 		RESTORE_AUTO_PLAY_OFFLINERS = config.getBoolean("RestoreAutoPlayOffliners", true);
 		OFFLINE_PLAY_PREMIUM = config.getBoolean("OfflinePlayPremium", false);

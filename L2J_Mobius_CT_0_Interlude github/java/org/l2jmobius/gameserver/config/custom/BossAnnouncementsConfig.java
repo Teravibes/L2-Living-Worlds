@@ -31,9 +31,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class BossAnnouncementsConfig
 {
-	// File
-	private static final String BOSS_ANNOUNCEMENTS_CONFIG_FILE = "./config/Custom/BossAnnouncements.ini";
-	
 	// Constants
 	public static boolean RAIDBOSS_SPAWN_ANNOUNCEMENTS;
 	public static boolean RAIDBOSS_DEFEAT_ANNOUNCEMENTS;
@@ -44,9 +41,10 @@ public class BossAnnouncementsConfig
 	public static Set<Integer> RAIDBOSSES_EXCLUDED_FROM_SPAWN_ANNOUNCEMENTS = new HashSet<>();
 	public static Set<Integer> RAIDBOSSES_EXCLUDED_FROM_DEFEAT_ANNOUNCEMENTS = new HashSet<>();
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(BOSS_ANNOUNCEMENTS_CONFIG_FILE);
+		String bossAnnouncementsConfigFile = String.format("./%s/Custom/BossAnnouncements.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(bossAnnouncementsConfigFile);
 		RAIDBOSS_SPAWN_ANNOUNCEMENTS = config.getBoolean("RaidBossSpawnAnnouncements", false);
 		RAIDBOSS_DEFEAT_ANNOUNCEMENTS = config.getBoolean("RaidBossDefeatAnnouncements", false);
 		RAIDBOSS_INSTANCE_ANNOUNCEMENTS = config.getBoolean("RaidBossInstanceAnnouncements", false);

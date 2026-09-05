@@ -70,6 +70,7 @@ import org.l2jmobius.commons.ui.DarkTheme;
 import org.l2jmobius.commons.ui.SplashScreen;
 import org.l2jmobius.commons.util.HexUtil;
 import org.l2jmobius.loginserver.GameServerTable;
+import org.l2jmobius.loginserver.util.argsparse.LoginServerLaunchArgumentsParser;
 
 /**
  * @author Skache
@@ -812,8 +813,9 @@ public class GameServerRegister extends JFrame
 	{
 		SwingUtilities.invokeLater(() ->
 		{
-			InterfaceConfig.load();
-			DatabaseFactory.init(); // Initialize the database connection.
+			final String baseConfigPath = LoginServerLaunchArgumentsParser.parse().baseConfigPath();
+			InterfaceConfig.load(baseConfigPath);
+			DatabaseFactory.init(baseConfigPath); // Initialize the database connection.
 			GameServerTable.getInstance(); // Initialize the GameServerTable.
 			new GameServerRegister();
 		});

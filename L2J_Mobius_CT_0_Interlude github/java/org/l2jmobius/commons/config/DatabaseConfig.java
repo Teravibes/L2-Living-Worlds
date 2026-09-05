@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class DatabaseConfig
 {
-	// File
-	private static final String DATABASE_CONFIG_FILE = "./config/Database.ini";
-	
 	// Constants
 	public static String DATABASE_DRIVER;
 	public static String DATABASE_URL;
@@ -43,9 +40,10 @@ public class DatabaseConfig
 	public static String BACKUP_PATH;
 	public static int BACKUP_DAYS;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(DATABASE_CONFIG_FILE);
+		String databaseConfigFile = String.format("./%s/Database.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(databaseConfigFile);
 		DATABASE_DRIVER = config.getString("Driver", "com.mysql.cj.jdbc.Driver");
 		DATABASE_URL = config.getString("URL", "jdbc:mysql://localhost/l2jmobius");
 		DATABASE_LOGIN = config.getString("Login", "root");

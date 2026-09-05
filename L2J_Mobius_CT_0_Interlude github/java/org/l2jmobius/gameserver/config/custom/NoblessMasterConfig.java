@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class NoblessMasterConfig
 {
-	// File
-	private static final String NOBLESS_MASTER_CONFIG_FILE = "./config/Custom/NoblessMaster.ini";
-	
 	// Constants
 	public static boolean NOBLESS_MASTER_ENABLED;
 	public static int NOBLESS_MASTER_NPCID;
@@ -39,9 +36,10 @@ public class NoblessMasterConfig
 	public static int NOBLESS_MASTER_ITEM_COUNT;
 	public static boolean NOBLESS_MASTER_REWARD_TIARA;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(NOBLESS_MASTER_CONFIG_FILE);
+		String noblessMasterConfigFile = String.format("./%s/Custom/NoblessMaster.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(noblessMasterConfigFile);
 		NOBLESS_MASTER_ENABLED = config.getBoolean("Enabled", false);
 		NOBLESS_MASTER_NPCID = config.getInt("NpcId", 1003000);
 		NOBLESS_MASTER_LEVEL_REQUIREMENT = config.getInt("LevelRequirement", 80);

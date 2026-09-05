@@ -30,16 +30,14 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class InterfaceConfig
 {
-	// File
-	private static final String INTERFACE_CONFIG_FILE = "./config/Interface.ini";
-	
 	// Constants
 	public static boolean ENABLE_GUI;
 	public static boolean DARK_THEME;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(INTERFACE_CONFIG_FILE);
+		String interfaceConfigFile = String.format("./%s/Interface.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(interfaceConfigFile);
 		ENABLE_GUI = config.getBoolean("EnableGUI", true) && !GraphicsEnvironment.isHeadless();
 		if (ENABLE_GUI)
 		{

@@ -71,67 +71,80 @@ import org.l2jmobius.gameserver.config.custom.WeddingConfig;
  */
 public class ConfigLoader
 {
-	public static void init()
+	private static String BASE_CONFIG_PATH = "config";
+	
+	public static void init(String baseConfigPath)
 	{
-		ServerConfig.load();
+		BASE_CONFIG_PATH = baseConfigPath;
+		
+		ServerConfig.load(baseConfigPath);
 		
 		// Main configurations.
-		ConquerableHallSiegeConfig.load();
-		DevelopmentConfig.load();
-		FeatureConfig.load();
-		FloodProtectorConfig.load();
-		GeneralConfig.load();
-		GeoEngineConfig.load();
-		GrandBossConfig.load();
-		IdManagerConfig.load();
-		NpcConfig.load();
-		OlympiadConfig.load();
-		PlayerConfig.load();
-		PvpConfig.load();
-		RatesConfig.load();
+		ConquerableHallSiegeConfig.load(baseConfigPath);
+		DevelopmentConfig.load(baseConfigPath);
+		FeatureConfig.load(baseConfigPath);
+		FloodProtectorConfig.load(baseConfigPath);
+		GeneralConfig.load(baseConfigPath);
+		GeoEngineConfig.load(baseConfigPath);
+		GrandBossConfig.load(baseConfigPath);
+		IdManagerConfig.load(baseConfigPath);
+		NpcConfig.load(baseConfigPath);
+		OlympiadConfig.load(baseConfigPath);
+		PlayerConfig.load(baseConfigPath);
+		PvpConfig.load(baseConfigPath);
+		RatesConfig.load(baseConfigPath);
 		
 		// Custom configurations.
-		AllowedPlayerRacesConfig.load();
-		AutoPlayConfig.load();
-		AutoPotionsConfig.load();
-		BankingConfig.load();
-		BossAnnouncementsConfig.load();
-		CancelReturnConfig.load();
-		CaptchaConfig.load();
-		ChampionMonstersConfig.load();
-		ChatModerationConfig.load();
-		ClassBalanceConfig.load();
-		CommunityBoardConfig.load();
-		CustomMailManagerConfig.load();
-		DelevelManagerConfig.load();
-		DualboxCheckConfig.load();
-		FactionSystemConfig.load();
-		FakePlayersConfig.load();
-		FindPvpConfig.load();
-		FreeMountsConfig.load();
-		MerchantZeroSellPriceConfig.load();
-		MultilingualSupportConfig.load();
-		NoblessMasterConfig.load();
-		NpcStatMultipliersConfig.load();
-		OfflinePlayConfig.load();
-		OfflineTradeConfig.load();
-		OnlineInfoConfig.load();
-		PasswordChangeConfig.load();
-		PremiumSystemConfig.load();
-		PrivateStoreRangeConfig.load();
-		PvpAnnounceConfig.load();
-		PvpRewardItemConfig.load();
-		PvpTitleColorConfig.load();
-		RandomSpawnsConfig.load();
-		SchemeBufferConfig.load();
-		ScreenWelcomeMessageConfig.load();
-		SellBuffsConfig.load();
-		ServerTimeConfig.load();
-		StartingLocationConfig.load();
-		StartingTitleConfig.load();
-		TransmogConfig.load();
-		WalkerBotProtectionConfig.load();
-		WarehouseSortingConfig.load();
-		WeddingConfig.load();
+		AllowedPlayerRacesConfig.load(baseConfigPath);
+		AutoPlayConfig.load(baseConfigPath);
+		AutoPotionsConfig.load(baseConfigPath);
+		BankingConfig.load(baseConfigPath);
+		BossAnnouncementsConfig.load(baseConfigPath);
+		CancelReturnConfig.load(baseConfigPath);
+		CaptchaConfig.load(baseConfigPath);
+		ChampionMonstersConfig.load(baseConfigPath);
+		ChatModerationConfig.load(baseConfigPath);
+		ClassBalanceConfig.load(baseConfigPath);
+		CommunityBoardConfig.load(baseConfigPath);
+		CustomMailManagerConfig.load(baseConfigPath);
+		DelevelManagerConfig.load(baseConfigPath);
+		DualboxCheckConfig.load(baseConfigPath);
+		FactionSystemConfig.load(baseConfigPath);
+		FakePlayersConfig.load(baseConfigPath);
+		FindPvpConfig.load(baseConfigPath);
+		FreeMountsConfig.load(baseConfigPath);
+		MerchantZeroSellPriceConfig.load(baseConfigPath);
+		MultilingualSupportConfig.load(baseConfigPath);
+		NoblessMasterConfig.load(baseConfigPath);
+		NpcStatMultipliersConfig.load(baseConfigPath);
+		OfflinePlayConfig.load(baseConfigPath);
+		OfflineTradeConfig.load(baseConfigPath);
+		OnlineInfoConfig.load(baseConfigPath);
+		PasswordChangeConfig.load(baseConfigPath);
+		PremiumSystemConfig.load(baseConfigPath);
+		PrivateStoreRangeConfig.load(baseConfigPath);
+		PvpAnnounceConfig.load(baseConfigPath);
+		PvpRewardItemConfig.load(baseConfigPath);
+		PvpTitleColorConfig.load(baseConfigPath);
+		RandomSpawnsConfig.load(baseConfigPath);
+		SchemeBufferConfig.load(baseConfigPath);
+		ScreenWelcomeMessageConfig.load(baseConfigPath);
+		SellBuffsConfig.load(baseConfigPath);
+		ServerTimeConfig.load(baseConfigPath);
+		StartingLocationConfig.load(baseConfigPath);
+		StartingTitleConfig.load(baseConfigPath);
+		TransmogConfig.load(baseConfigPath);
+		WalkerBotProtectionConfig.load(baseConfigPath);
+		WarehouseSortingConfig.load(baseConfigPath);
+		WeddingConfig.load(baseConfigPath);
+	}
+	
+	/**
+	 * Gets the base directory holding the configuration files, as passed to {@link #init(String)}.
+	 * @return the base configuration directory
+	 */
+	public static String getBaseConfigPath()
+	{
+		return BASE_CONFIG_PATH;
 	}
 }

@@ -29,9 +29,6 @@ import org.l2jmobius.gameserver.model.Location;
  */
 public class FactionSystemConfig
 {
-	// File
-	private static final String FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
-	
 	// Constants
 	public static boolean FACTION_SYSTEM_ENABLED;
 	public static Location FACTION_STARTING_LOCATION;
@@ -49,9 +46,10 @@ public class FactionSystemConfig
 	public static boolean FACTION_BALANCE_ONLINE_PLAYERS;
 	public static int FACTION_BALANCE_PLAYER_EXCEED_LIMIT;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(FACTION_SYSTEM_CONFIG_FILE);
+		String factionSystemConfigFile = String.format("./%s/Custom/FactionSystem.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(factionSystemConfigFile);
 		String[] tempString;
 		FACTION_SYSTEM_ENABLED = config.getBoolean("EnableFactionSystem", false);
 		tempString = config.getString("StartingLocation", "85332,16199,-1252").split(",");

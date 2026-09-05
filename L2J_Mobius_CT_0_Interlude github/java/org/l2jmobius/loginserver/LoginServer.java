@@ -43,6 +43,8 @@ import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.LoginPacketHandler;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import org.l2jmobius.loginserver.ui.Gui;
+import org.l2jmobius.loginserver.util.argsparse.LoginServerLaunchArgs;
+import org.l2jmobius.loginserver.util.argsparse.LoginServerLaunchArgumentsParser;
 
 /**
  * Bootstraps and drives the login server lifecycle.<br>
@@ -84,11 +86,15 @@ public class LoginServer
 	// Login server status.
 	private static volatile int _loginStatus = ServerStatus.STATUS_NORMAL;
 	
+	private final LoginServerLaunchArgs _loginServerLaunchArgs;
+	
 	/**
 	 * Creates a new login server instance and initializes all required services.
 	 */
 	private LoginServer()
 	{
+		_loginServerLaunchArgs = LoginServerLaunchArgumentsParser.parse();
+		
 		initializeInterfaceLayer();
 		initializeLoggingLayer();
 		initializeCoreServices();
@@ -102,7 +108,7 @@ public class LoginServer
 	 */
 	private void initializeInterfaceLayer()
 	{
-		InterfaceConfig.load();
+		InterfaceConfig.load(_loginServerLaunchArgs.baseConfigPath());
 		
 		if (!InterfaceConfig.ENABLE_GUI)
 		{
@@ -152,11 +158,11 @@ public class LoginServer
 	 */
 	private void initializeCoreServices()
 	{
-		LoginConfig.load();
+		LoginConfig.load(_loginServerLaunchArgs.baseConfigPath());
 		
-		DatabaseFactory.init();
+		DatabaseFactory.init(_loginServerLaunchArgs.baseConfigPath());
 		
-		ThreadPool.init();
+		ThreadPool.init(_loginServerLaunchArgs.baseConfigPath());
 		
 		try
 		{

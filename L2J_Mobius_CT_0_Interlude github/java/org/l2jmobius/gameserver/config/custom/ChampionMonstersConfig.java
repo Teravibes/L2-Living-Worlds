@@ -32,9 +32,6 @@ import org.l2jmobius.gameserver.model.item.holders.ItemHolder;
  */
 public class ChampionMonstersConfig
 {
-	// File
-	private static final String CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
-	
 	// Constants
 	public static boolean CHAMPION_ENABLE;
 	public static boolean CHAMPION_PASSIVE;
@@ -58,9 +55,10 @@ public class ChampionMonstersConfig
 	public static boolean CHAMPION_ENABLE_VITALITY;
 	public static boolean CHAMPION_ENABLE_IN_INSTANCES;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(CHAMPION_MONSTERS_CONFIG_FILE);
+		String championMonstersConfigFile = String.format("./%s/Custom/ChampionMonsters.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(championMonstersConfigFile);
 		CHAMPION_ENABLE = config.getBoolean("ChampionEnable", false);
 		CHAMPION_PASSIVE = config.getBoolean("ChampionPassive", false);
 		CHAMPION_FREQUENCY = config.getInt("ChampionFrequency", 0);

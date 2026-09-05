@@ -32,9 +32,6 @@ import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
  */
 public class OfflineTradeConfig
 {
-	// File
-	private static final String OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
-	
 	// Constants
 	public static boolean OFFLINE_TRADE_ENABLE;
 	public static boolean OFFLINE_CRAFT_ENABLE;
@@ -51,9 +48,10 @@ public class OfflineTradeConfig
 	public static boolean ENABLE_OFFLINE_COMMAND;
 	public static List<AbnormalVisualEffect> OFFLINE_ABNORMAL_EFFECTS = new ArrayList<>();
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(OFFLINE_TRADE_CONFIG_FILE);
+		String offlineTradeConfigFile = String.format("./%s/Custom/OfflineTrade.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(offlineTradeConfigFile);
 		OFFLINE_TRADE_ENABLE = config.getBoolean("OfflineTradeEnable", false);
 		OFFLINE_CRAFT_ENABLE = config.getBoolean("OfflineCraftEnable", false);
 		OFFLINE_MODE_IN_PEACE_ZONE = config.getBoolean("OfflineModeInPeaceZone", false);

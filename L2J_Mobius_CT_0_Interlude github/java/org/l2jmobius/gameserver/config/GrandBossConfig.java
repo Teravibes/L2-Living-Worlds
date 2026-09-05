@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class GrandBossConfig
 {
-	// File
-	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-	
 	// Constants
 	public static int ANTHARAS_WAIT_TIME;
 	public static int ANTHARAS_SPAWN_INTERVAL;
@@ -54,9 +51,10 @@ public class GrandBossConfig
 	public static int FRINTEZZA_SPAWN_INTERVAL;
 	public static int FRINTEZZA_SPAWN_RANDOM;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(GRANDBOSS_CONFIG_FILE);
+		String grandbossConfigFile = String.format("./%s/GrandBoss.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(grandbossConfigFile);
 		ANTHARAS_WAIT_TIME = config.getInt("AntharasWaitTime", 30);
 		ANTHARAS_SPAWN_INTERVAL = config.getInt("IntervalOfAntharasSpawn", 264);
 		ANTHARAS_SPAWN_RANDOM = config.getInt("RandomOfAntharasSpawn", 72);

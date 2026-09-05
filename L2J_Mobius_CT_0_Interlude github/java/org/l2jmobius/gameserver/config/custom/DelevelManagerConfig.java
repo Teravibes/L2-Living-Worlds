@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class DelevelManagerConfig
 {
-	// File
-	private static final String DELEVEL_MANAGER_CONFIG_FILE = "./config/Custom/DelevelManager.ini";
-	
 	// Constants
 	public static boolean DELEVEL_MANAGER_ENABLED;
 	public static int DELEVEL_MANAGER_NPCID;
@@ -38,9 +35,10 @@ public class DelevelManagerConfig
 	public static int DELEVEL_MANAGER_ITEMCOUNT;
 	public static int DELEVEL_MANAGER_MINIMUM_DELEVEL;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(DELEVEL_MANAGER_CONFIG_FILE);
+		String delevelManagerConfigFile = String.format("./%s/Custom/DelevelManager.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(delevelManagerConfigFile);
 		DELEVEL_MANAGER_ENABLED = config.getBoolean("Enabled", false);
 		DELEVEL_MANAGER_NPCID = config.getInt("NpcId", 1002000);
 		DELEVEL_MANAGER_ITEMID = config.getInt("RequiredItemId", 4356);

@@ -28,15 +28,13 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class ChatModerationConfig
 {
-	// File
-	private static final String CHAT_MODERATION_CONFIG_FILE = "./config/Custom/ChatModeration.ini";
-	
 	// Constants
 	public static boolean CHAT_ADMIN;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(CHAT_MODERATION_CONFIG_FILE);
+		String chatModerationConfigFile = String.format("./%s/Custom/ChatModeration.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(chatModerationConfigFile);
 		CHAT_ADMIN = config.getBoolean("ChatAdmin", true);
 	}
 }

@@ -61,13 +61,14 @@ public class ThreadPool
 	
 	/**
 	 * Initializes thread pool executors and starts maintenance tasks.
+	 * @param baseConfigPath base directory holding the configuration files
 	 */
-	public static void init()
+	public static void init(String baseConfigPath)
 	{
 		LOGGER.info("ThreadPool: Initializing.");
 		
 		// Load configurations.
-		ThreadConfig.load();
+		ThreadConfig.load(baseConfigPath);
 		
 		// Configure High Priority ScheduledThreadPoolExecutor.
 		if (ThreadConfig.HIGH_PRIORITY_SCHEDULED_THREAD_POOL_SIZE > 0)

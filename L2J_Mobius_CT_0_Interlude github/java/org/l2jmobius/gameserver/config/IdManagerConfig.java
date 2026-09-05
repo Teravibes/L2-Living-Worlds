@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class IdManagerConfig
 {
-	// File
-	private static final String ID_MANAGER_CONFIG_FILE = "./config/IdManager.ini";
-	
 	// Constants
 	public static boolean DATABASE_CLEAN_UP;
 	public static int FIRST_OBJECT_ID;
@@ -39,9 +36,10 @@ public class IdManagerConfig
 	public static double RESIZE_THRESHOLD;
 	public static double RESIZE_MULTIPLIER;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(ID_MANAGER_CONFIG_FILE);
+		String idManagerConfigFile = String.format("./%s/IdManager.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(idManagerConfigFile);
 		DATABASE_CLEAN_UP = config.getBoolean("DatabaseCleanUp", true);
 		FIRST_OBJECT_ID = config.getInt("FirstObjectId", 268435456);
 		LAST_OBJECT_ID = config.getInt("LastObjectId", 2147483647);

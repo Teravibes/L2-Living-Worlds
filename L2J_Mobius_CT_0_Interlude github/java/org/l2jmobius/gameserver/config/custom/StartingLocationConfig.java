@@ -28,18 +28,16 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class StartingLocationConfig
 {
-	// File
-	private static final String STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
-	
 	// Constants
 	public static boolean CUSTOM_STARTING_LOC;
 	public static int CUSTOM_STARTING_LOC_X;
 	public static int CUSTOM_STARTING_LOC_Y;
 	public static int CUSTOM_STARTING_LOC_Z;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(STARTING_LOCATION_CONFIG_FILE);
+		String startingLocationConfigFile = String.format("./%s/Custom/StartingLocation.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(startingLocationConfigFile);
 		CUSTOM_STARTING_LOC = config.getBoolean("CustomStartingLocation", false);
 		CUSTOM_STARTING_LOC_X = config.getInt("CustomStartingLocX", 50821);
 		CUSTOM_STARTING_LOC_Y = config.getInt("CustomStartingLocY", 186527);

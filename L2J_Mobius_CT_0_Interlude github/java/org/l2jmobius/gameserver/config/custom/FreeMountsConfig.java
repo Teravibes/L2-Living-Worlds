@@ -28,16 +28,14 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class FreeMountsConfig
 {
-	// File
-	private static final String FREE_MOUNTS_CONFIG_FILE = "./config/Custom/FreeMounts.ini";
-	
 	// Constants
 	public static boolean ENABLE_FREE_STRIDER;
 	public static boolean ENABLE_FREE_WYVERN;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(FREE_MOUNTS_CONFIG_FILE);
+		String freeMountsConfigFile = String.format("./%s/Custom/FreeMounts.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(freeMountsConfigFile);
 		ENABLE_FREE_STRIDER = config.getBoolean("EnableFreeStrider", false);
 		ENABLE_FREE_WYVERN = config.getBoolean("EnableFreeWyvern", false);
 	}

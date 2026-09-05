@@ -31,9 +31,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class GeoEngineConfig
 {
-	// File
-	private static final String GEOENGINE_CONFIG_FILE = "./config/GeoEngine.ini";
-	
 	// Constants
 	public static Path GEODATA_PATH;
 	public static Path PATHNODE_PATH;
@@ -48,9 +45,10 @@ public class GeoEngineConfig
 	public static float DIAGONAL_WEIGHT;
 	public static int MAX_POSTFILTER_PASSES;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(GEOENGINE_CONFIG_FILE);
+		String geoengineConfigFile = String.format("./%s/GeoEngine.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(geoengineConfigFile);
 		GEODATA_PATH = Paths.get(ServerConfig.DATAPACK_ROOT.getPath() + "/" + config.getString("GeoDataPath", "geodata"));
 		PATHNODE_PATH = Paths.get(ServerConfig.DATAPACK_ROOT.getPath() + "/" + config.getString("PathnodePath", "pathnode"));
 		GEOEDIT_PATH = Paths.get(ServerConfig.DATAPACK_ROOT.getPath() + "/" + config.getString("GeoEditPath", "saves"));

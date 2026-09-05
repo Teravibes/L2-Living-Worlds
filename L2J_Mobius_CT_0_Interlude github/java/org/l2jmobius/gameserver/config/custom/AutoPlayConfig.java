@@ -31,9 +31,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class AutoPlayConfig
 {
-	// File
-	private static final String AUTO_PLAY_CONFIG_FILE = "./config/Custom/AutoPlay.ini";
-	
 	// Constants
 	public static boolean ENABLE_AUTO_PLAY;
 	public static boolean ENABLE_AUTO_POTION;
@@ -49,9 +46,10 @@ public class AutoPlayConfig
 	public static Set<Integer> IGNORED_AUTO_PICK_ITEMS = new HashSet<>();
 	public static String AUTO_PLAY_LOGIN_MESSAGE;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(AUTO_PLAY_CONFIG_FILE);
+		String autoPlayConfigFile = String.format("./%s/Custom/AutoPlay.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(autoPlayConfigFile);
 		ENABLE_AUTO_PLAY = config.getBoolean("EnableAutoPlay", false);
 		ENABLE_AUTO_POTION = config.getBoolean("EnableAutoPotion", true);
 		ENABLE_AUTO_SKILL = config.getBoolean("EnableAutoSkill", true);

@@ -34,9 +34,6 @@ import org.l2jmobius.gameserver.model.Location;
  */
 public class CommunityBoardConfig
 {
-	// File
-	private static final String COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
-	
 	// Constants
 	public static boolean CUSTOM_CB_ENABLED;
 	public static int COMMUNITYBOARD_CURRENCY;
@@ -59,9 +56,10 @@ public class CommunityBoardConfig
 	public static Set<Integer> COMMUNITY_AVAILABLE_BUFFS;
 	public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(COMMUNITY_BOARD_CONFIG_FILE);
+		String communityBoardConfigFile = String.format("./%s/Custom/CommunityBoard.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(communityBoardConfigFile);
 		CUSTOM_CB_ENABLED = config.getBoolean("CustomCommunityBoard", false);
 		COMMUNITYBOARD_CURRENCY = config.getInt("CommunityCurrencyId", 57);
 		COMMUNITYBOARD_ENABLE_MULTISELLS = config.getBoolean("CommunityEnableMultisells", true);

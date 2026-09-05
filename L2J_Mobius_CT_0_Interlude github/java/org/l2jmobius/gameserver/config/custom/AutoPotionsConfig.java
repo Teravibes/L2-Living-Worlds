@@ -31,9 +31,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class AutoPotionsConfig
 {
-	// File
-	private static final String AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
-	
 	// Constants
 	public static boolean AUTO_POTIONS_ENABLED;
 	public static boolean AUTO_POTIONS_IN_OLYMPIAD;
@@ -48,9 +45,10 @@ public class AutoPotionsConfig
 	public static Set<Integer> AUTO_HP_ITEM_IDS = new HashSet<>();
 	public static Set<Integer> AUTO_MP_ITEM_IDS = new HashSet<>();
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(AUTO_POTIONS_CONFIG_FILE);
+		String autoPotionsConfigFile = String.format("./%s/Custom/AutoPotions.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(autoPotionsConfigFile);
 		AUTO_POTIONS_ENABLED = config.getBoolean("AutoPotionsEnabled", false);
 		AUTO_POTIONS_IN_OLYMPIAD = config.getBoolean("AutoPotionsInOlympiad", false);
 		AUTO_POTION_MIN_LEVEL = config.getInt("AutoPotionMinimumLevel", 1);

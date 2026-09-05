@@ -31,9 +31,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class DevelopmentConfig
 {
-	// File
-	private static final String DEVELOPMENT_CONFIG_FILE = "./config/Development.ini";
-	
 	// Constants
 	public static boolean LOG_SERVER_LOAD_TIMES;
 	public static boolean HTML_ACTION_CACHE_DEBUG;
@@ -47,9 +44,10 @@ public class DevelopmentConfig
 	public static boolean DEBUG_UNKNOWN_PACKETS;
 	public static Set<String> EXCLUDED_DEBUG_PACKETS;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(DEVELOPMENT_CONFIG_FILE);
+		String developmentConfigFile = String.format("./%s/Development.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(developmentConfigFile);
 		LOG_SERVER_LOAD_TIMES = config.getBoolean("LogServerLoadTimes", false);
 		HTML_ACTION_CACHE_DEBUG = config.getBoolean("HtmlActionCacheDebug", false);
 		NO_QUESTS = config.getBoolean("NoQuests", false);

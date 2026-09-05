@@ -65,10 +65,7 @@ public class ServerConfig
 	private static final Logger LOGGER = Logger.getLogger(ServerConfig.class.getName());
 	
 	// Files
-	private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
-	private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
-	private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-	private static final String HEXID_FILE = "./config/hexid.txt";
+	private static String HEXID_FILE;
 	
 	// Constants
 	public static String GAMESERVER_HOSTNAME;
@@ -115,9 +112,10 @@ public class ServerConfig
 	public static int SERVER_ID;
 	public static byte[] HEX_ID;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(SERVER_CONFIG_FILE);
+		String serverConfigFile = String.format("./%s/Server.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(serverConfigFile);
 		GAMESERVER_HOSTNAME = config.getString("GameserverHostname", "0.0.0.0");
 		PORT_GAME = config.getInt("GameserverPort", 7777);
 		GAME_SERVER_LOGIN_PORT = config.getInt("LoginPort", 9014);
@@ -210,27 +208,29 @@ public class ServerConfig
 		PRECAUTIONARY_RESTART_PERCENTAGE = config.getInt("PrecautionaryRestartPercentage", 95);
 		PRECAUTIONARY_RESTART_DELAY = config.getInt("PrecautionaryRestartDelay", 60) * 1000;
 		
-		final IPConfigData ipConfigData = new IPConfigData();
+		final IPConfigData ipConfigData = new IPConfigData(String.format("./%s/ipconfig.xml", baseConfigPath));
 		GAME_SERVER_SUBNETS = ipConfigData.getSubnets();
 		GAME_SERVER_HOSTS = ipConfigData.getHosts();
 		
 		// Load chatfilter.txt file.
-		loadChatFilter();
+		loadChatFilter(String.format("./%s/chatfilter.txt", baseConfigPath));
 		
 		// Load hexid.txt file.
+		HEXID_FILE = String.format("./%s/hexid.txt", baseConfigPath);
 		loadHexid();
 	}
 	
 	/**
 	 * Loads the chat filter words from the specified file.<br>
-	 * This method reads lines from the {@code CHAT_FILTER_FILE}, trims whitespace and ignores empty lines or lines starting with a '#' character.<br>
+	 * This method reads lines from the given file, trims whitespace and ignores empty lines or lines starting with a '#' character.<br>
 	 * The filtered words are collected into the {@code FILTER_LIST}. If an error occurs during file reading, a warning message is logged.
+	 * @param chatFilterFile path of the chat filter file
 	 */
-	private static void loadChatFilter()
+	private static void loadChatFilter(String chatFilterFile)
 	{
 		try
 		{
-			FILTER_LIST = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8).map(String::trim).filter(line -> (!line.isEmpty() && (line.charAt(0) != '#'))).collect(Collectors.toList());
+			FILTER_LIST = Files.lines(Paths.get(chatFilterFile), StandardCharsets.UTF_8).map(String::trim).filter(line -> (!line.isEmpty() && (line.charAt(0) != '#'))).collect(Collectors.toList());
 			LOGGER.info("Loaded " + FILTER_LIST.size() + " Filter Words.");
 		}
 		catch (IOException e)
@@ -383,19 +383,22 @@ public class ServerConfig
 		private static final List<String> _subnets = new ArrayList<>(5);
 		private static final List<String> _hosts = new ArrayList<>(5);
 		
-		public IPConfigData()
+		private final String _ipConfigFile;
+		
+		public IPConfigData(String ipConfigFile)
 		{
+			_ipConfigFile = ipConfigFile;
 			load();
 		}
 		
 		@Override
 		public void load()
 		{
-			final File file = new File(IPCONFIG_FILE);
+			final File file = new File(_ipConfigFile);
 			if (file.exists())
 			{
 				LOGGER.info("Network Config: ipconfig.xml exists, using manual configuration...");
-				parseFile(new File(IPCONFIG_FILE));
+				parseFile(file);
 			}
 			else // Auto configuration...
 			{
@@ -422,7 +425,7 @@ public class ServerConfig
 							
 							if (_hosts.size() != _subnets.size())
 							{
-								LOGGER.warning("Failed to Load " + IPCONFIG_FILE + " File - subnets does not match server addresses.");
+								LOGGER.warning("Failed to Load " + _ipConfigFile + " File - subnets does not match server addresses.");
 							}
 						}
 					}
@@ -430,7 +433,7 @@ public class ServerConfig
 					final Node att = n.getAttributes().getNamedItem("address");
 					if (att == null)
 					{
-						LOGGER.warning("Failed to load " + IPCONFIG_FILE + " file - default server address is missing.");
+						LOGGER.warning("Failed to load " + _ipConfigFile + " file - default server address is missing.");
 						_hosts.add("127.0.0.1");
 					}
 					else

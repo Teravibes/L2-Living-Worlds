@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class CaptchaConfig
 {
-	// File
-	private static final String CAPTCHA_CONFIG_FILE = "./config/Custom/Captcha.ini";
-	
 	// Constants
 	public static boolean ENABLE_CAPTCHA;
 	public static int KILL_COUNTER;
@@ -43,9 +40,10 @@ public class CaptchaConfig
 	public static int JAIL_TIME;
 	public static boolean DOUBLE_JAIL_TIME;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(CAPTCHA_CONFIG_FILE);
+		String captchaConfigFile = String.format("./%s/Custom/Captcha.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(captchaConfigFile);
 		ENABLE_CAPTCHA = config.getBoolean("EnableCaptcha", false);
 		KILL_COUNTER = config.getInt("KillCounter", 100);
 		KILL_COUNTER_RANDOMIZATION = config.getInt("KillCounterRandomization", 50);

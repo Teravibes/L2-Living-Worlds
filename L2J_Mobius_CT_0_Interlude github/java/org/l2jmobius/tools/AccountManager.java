@@ -93,6 +93,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.time.TimeUtil;
 import org.l2jmobius.commons.ui.DarkTheme;
 import org.l2jmobius.commons.ui.SplashScreen;
+import org.l2jmobius.loginserver.util.argsparse.LoginServerLaunchArgumentsParser;
 
 /**
  * @author Skache
@@ -1671,8 +1672,9 @@ public class AccountManager extends JFrame
 	
 	public static void main(String[] args)
 	{
-		InterfaceConfig.load();
-		DatabaseFactory.init();
+		final String baseConfigPath = LoginServerLaunchArgumentsParser.parse().baseConfigPath();
+		InterfaceConfig.load(baseConfigPath);
+		DatabaseFactory.init(baseConfigPath);
 		SwingUtilities.invokeLater(AccountManager::new);
 	}
 }

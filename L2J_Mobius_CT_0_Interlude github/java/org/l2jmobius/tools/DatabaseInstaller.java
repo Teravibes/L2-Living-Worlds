@@ -76,7 +76,7 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class DatabaseInstaller extends JFrame
 {
-	public static final String INTERFACE_CONFIG_FILE = "./config/Interface.ini";
+	public static final String INTERFACE_CONFIG_FILE = String.format("./%s/Interface.ini", System.getProperty("gameConfigPath", "config"));
 	
 	private JTextField _hostField;
 	private JTextField _portField;

@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class FakePlayersConfig
 {
-	// File
-	private static final String FAKE_PLAYERS_CONFIG_FILE = "./config/Custom/FakePlayers.ini";
-	
 	// Constants
 	public static boolean FAKE_PLAYERS_ENABLED;
 	public static boolean FAKE_PLAYER_CHAT;
@@ -57,9 +54,10 @@ public class FakePlayersConfig
 	public static boolean PHANTOM_HUNTER_PLAYSTYLES;
 	public static boolean PHANTOM_HUNTER_RETALIATE;
 
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(FAKE_PLAYERS_CONFIG_FILE);
+		String fakePlayersConfigFile = String.format("./%s/Custom/FakePlayers.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(fakePlayersConfigFile);
 		FAKE_PLAYERS_ENABLED = config.getBoolean("EnableFakePlayers", false);
 		FAKE_PLAYER_CHAT = config.getBoolean("FakePlayerChat", false);
 		FAKE_PLAYER_BEHAVIOR = config.getBoolean("FakePlayerBehavior", false);

@@ -28,15 +28,13 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class MerchantZeroSellPriceConfig
 {
-	// File
-	private static final String MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/Custom/MerchantZeroSellPrice.ini";
-	
 	// Constants
 	public static boolean MERCHANT_ZERO_SELL_PRICE;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE);
+		String merchantZeroSellPriceConfigFile = String.format("./%s/Custom/MerchantZeroSellPrice.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(merchantZeroSellPriceConfigFile);
 		MERCHANT_ZERO_SELL_PRICE = config.getBoolean("MerchantZeroSellPrice", false);
 	}
 }

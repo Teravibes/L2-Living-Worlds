@@ -33,6 +33,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.ConfigReader;
+import org.l2jmobius.gameserver.config.ConfigLoader;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -47,8 +48,6 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 public class SiegeManager
 {
 	private static final Logger LOGGER = Logger.getLogger(SiegeManager.class.getName());
-	
-	private static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
 	
 	private final Map<Integer, List<TowerSpawn>> _controlTowers = new HashMap<>();
 	private final Map<Integer, List<TowerSpawn>> _flameTowers = new HashMap<>();
@@ -125,7 +124,8 @@ public class SiegeManager
 	
 	private void load()
 	{
-		final ConfigReader siegeConfig = new ConfigReader(SIEGE_CONFIG_FILE);
+		String siegeConfigFile = String.format("./%s/Siege.ini", ConfigLoader.getBaseConfigPath());
+		final ConfigReader siegeConfig = new ConfigReader(siegeConfigFile);
 		
 		// Siege configurations.
 		_siegeCycle = siegeConfig.getInt("SiegeCycle", 2);

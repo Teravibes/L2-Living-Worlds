@@ -35,18 +35,16 @@ public class MultilingualSupportConfig
 {
 	private static final Logger LOGGER = Logger.getLogger(MultilingualSupportConfig.class.getName());
 	
-	// File
-	private static final String MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
-	
 	// Constants
 	public static String MULTILANG_DEFAULT;
 	public static boolean MULTILANG_ENABLE;
 	public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
 	public static boolean MULTILANG_VOICED_ALLOW;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(MULTILANGUAL_SUPPORT_CONFIG_FILE);
+		String multilangualSupportConfigFile = String.format("./%s/Custom/MultilingualSupport.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(multilangualSupportConfigFile);
 		MULTILANG_DEFAULT = config.getString("MultiLangDefault", "en").toLowerCase();
 		
 		MULTILANG_ENABLE = config.getBoolean("MultiLangEnable", false);

@@ -60,6 +60,7 @@ import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.util.argsparse.GameServerLaunchArgs;
 
 /**
  * @author Mobius
@@ -89,7 +90,7 @@ public class Gui
 	
 	private final JTextArea _txtrConsole;
 	
-	public Gui()
+	public Gui(GameServerLaunchArgs gameServerLaunchArgs)
 	{
 		// Disable hardware acceleration.
 		System.setProperty("sun.java2d.opengl", "false");
@@ -185,7 +186,7 @@ public class Gui
 		{
 			if (JOptionPane.showOptionDialog(null, "Reload configs?", "Select an option", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, CONFIRM_OPTIONS, CONFIRM_OPTIONS[1]) == 0)
 			{
-				ConfigLoader.init();
+				ConfigLoader.init(gameServerLaunchArgs.baseConfigPath());
 			}
 		});
 		mnReload.add(mntmConfigs);

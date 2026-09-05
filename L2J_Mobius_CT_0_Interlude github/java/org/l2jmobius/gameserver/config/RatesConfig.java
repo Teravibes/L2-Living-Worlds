@@ -39,9 +39,6 @@ public class RatesConfig
 {
 	private static final Logger LOGGER = Logger.getLogger(RatesConfig.class.getName());
 	
-	// File
-	private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
-	
 	// Constants
 	public static float RATE_XP;
 	public static float RATE_SP;
@@ -111,9 +108,10 @@ public class RatesConfig
 	public static int BOSS_DROP_MAX_LEVEL;
 	public static List<DropHolder> BOSS_DROP_LIST = new ArrayList<>();
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(RATES_CONFIG_FILE);
+		String ratesConfigFile = String.format("./%s/Rates.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(ratesConfigFile);
 		RATE_XP = config.getFloat("RateXp", 1);
 		RATE_SP = config.getFloat("RateSp", 1);
 		RATE_PARTY_XP = config.getFloat("RatePartyXp", 1);

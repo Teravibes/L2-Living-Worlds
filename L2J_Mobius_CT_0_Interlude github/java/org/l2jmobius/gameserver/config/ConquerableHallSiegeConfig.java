@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class ConquerableHallSiegeConfig
 {
-	// File
-	private static final String CONQUERABLE_HALL_SIEGE_CONFIG_FILE = "./config/ConquerableHallSiege.ini";
-	
 	// Constants
 	public static int CHS_MAX_ATTACKERS;
 	public static int CHS_CLAN_MINLEVEL;
@@ -39,9 +36,10 @@ public class ConquerableHallSiegeConfig
 	public static int CHS_FAME_AMOUNT;
 	public static int CHS_FAME_FREQUENCY;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(CONQUERABLE_HALL_SIEGE_CONFIG_FILE);
+		String conquerableHallSiegeConfigFile = String.format("./%s/ConquerableHallSiege.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(conquerableHallSiegeConfigFile);
 		CHS_MAX_ATTACKERS = config.getInt("MaxAttackers", 500);
 		CHS_CLAN_MINLEVEL = config.getInt("MinClanLevel", 4);
 		CHS_MAX_FLAGS_PER_CLAN = config.getInt("MaxFlagsPerClan", 1);

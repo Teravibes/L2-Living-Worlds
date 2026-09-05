@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class AllowedPlayerRacesConfig
 {
-	// File
-	private static final String ALLOWED_PLAYER_RACES_CONFIG_FILE = "./config/Custom/AllowedPlayerRaces.ini";
-	
 	// Constants
 	public static boolean ALLOW_HUMAN;
 	public static boolean ALLOW_ELF;
@@ -38,9 +35,10 @@ public class AllowedPlayerRacesConfig
 	public static boolean ALLOW_ORC;
 	public static boolean ALLOW_DWARF;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(ALLOWED_PLAYER_RACES_CONFIG_FILE);
+		String allowedPlayerRacesConfigFile = String.format("./%s/Custom/AllowedPlayerRaces.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(allowedPlayerRacesConfigFile);
 		ALLOW_HUMAN = config.getBoolean("AllowHuman", true);
 		ALLOW_ELF = config.getBoolean("AllowElf", true);
 		ALLOW_DARKELF = config.getBoolean("AllowDarkElf", true);

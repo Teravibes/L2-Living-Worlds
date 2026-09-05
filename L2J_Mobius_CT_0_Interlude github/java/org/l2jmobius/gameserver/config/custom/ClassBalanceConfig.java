@@ -32,9 +32,6 @@ import org.l2jmobius.gameserver.model.actor.enums.player.PlayerClass;
  */
 public class ClassBalanceConfig
 {
-	// File
-	private static final String CLASS_BALANCE_CONFIG_FILE = "./config/Custom/ClassBalance.ini";
-	
 	// Constants
 	public static float[] PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS = new float[119];
 	public static float[] PVP_MAGICAL_SKILL_DAMAGE_MULTIPLIERS = new float[119];
@@ -74,9 +71,10 @@ public class ClassBalanceConfig
 	public static float[] EXP_AMOUNT_MULTIPLIERS = new float[119];
 	public static float[] SP_AMOUNT_MULTIPLIERS = new float[119];
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(CLASS_BALANCE_CONFIG_FILE);
+		String classBalanceConfigFile = String.format("./%s/Custom/ClassBalance.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(classBalanceConfigFile);
 		
 		Arrays.fill(PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS, 1f);
 		final String[] pveMagicalSkillDamageMultipliers = config.getString("PveMagicalSkillDamageMultipliers", "").trim().split(";");

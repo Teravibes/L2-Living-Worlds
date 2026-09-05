@@ -31,9 +31,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class TransmogConfig
 {
-	// File
-	private static final String TRANSMOG_CONFIG_FILE = "./config/Custom/Transmog.ini";
-	
 	// Constants
 	public static boolean ENABLE_TRANSMOG;
 	public static boolean TRANSMOG_SHARE_ACCOUNT;
@@ -41,9 +38,10 @@ public class TransmogConfig
 	public static int TRANSMOG_REMOVE_COST;
 	public static Set<Integer> TRANSMOG_BANNED_ITEM_IDS = new HashSet<>();
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(TRANSMOG_CONFIG_FILE);
+		String transmogConfigFile = String.format("./%s/Custom/Transmog.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(transmogConfigFile);
 		ENABLE_TRANSMOG = config.getBoolean("TransmogEnabled", false);
 		TRANSMOG_SHARE_ACCOUNT = config.getBoolean("TransmogShareAccount", false);
 		TRANSMOG_APPLY_COST = config.getInt("TransmogApplyCost", 0);

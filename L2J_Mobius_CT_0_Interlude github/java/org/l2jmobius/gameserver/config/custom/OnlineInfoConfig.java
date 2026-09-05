@@ -28,15 +28,13 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class OnlineInfoConfig
 {
-	// File
-	private static final String ONLINE_INFO_CONFIG_FILE = "./config/Custom/OnlineInfo.ini";
-	
 	// Constants
 	public static boolean ENABLE_ONLINE_COMMAND;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(ONLINE_INFO_CONFIG_FILE);
+		String onlineInfoConfigFile = String.format("./%s/Custom/OnlineInfo.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(onlineInfoConfigFile);
 		ENABLE_ONLINE_COMMAND = config.getBoolean("EnableOnlineCommand", false);
 	}
 }

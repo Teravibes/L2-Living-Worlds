@@ -30,9 +30,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class PvpConfig
 {
-	// File
-	private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
-	
 	// Constants
 	public static boolean KARMA_DROP_GM;
 	public static boolean KARMA_AWARD_PK_KILL;
@@ -48,9 +45,10 @@ public class PvpConfig
 	public static int PVP_NORMAL_TIME;
 	public static int PVP_PVP_TIME;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(PVP_CONFIG_FILE);
+		String pvpConfigFile = String.format("./%s/PVP.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(pvpConfigFile);
 		KARMA_DROP_GM = config.getBoolean("CanGMDropEquipment", false);
 		KARMA_AWARD_PK_KILL = config.getBoolean("AwardPKKillPVPPoint", false);
 		KARMA_PK_LIMIT = config.getInt("MinimumPKRequiredToDrop", 5);

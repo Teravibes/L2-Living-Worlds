@@ -28,18 +28,16 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class ThreadConfig
 {
-	// File
-	private static final String THREADS_CONFIG_FILE = "./config/Threads.ini";
-	
 	// Constants
 	public static int SCHEDULED_THREAD_POOL_SIZE;
 	public static int HIGH_PRIORITY_SCHEDULED_THREAD_POOL_SIZE;
 	public static int INSTANT_THREAD_POOL_SIZE;
 	public static boolean THREADS_FOR_LOADING;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(THREADS_CONFIG_FILE);
+		String threadsConfigFile = String.format("./%s/Threads.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(threadsConfigFile);
 		
 		SCHEDULED_THREAD_POOL_SIZE = config.getInt("ScheduledThreadPoolSize", -1);
 		if (SCHEDULED_THREAD_POOL_SIZE == -1)

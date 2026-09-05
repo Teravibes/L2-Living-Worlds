@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class WeddingConfig
 {
-	// File
-	private static final String WEDDING_CONFIG_FILE = "./config/Custom/Wedding.ini";
-	
 	// Constants
 	public static boolean ALLOW_WEDDING;
 	public static int WEDDING_PRICE;
@@ -42,9 +39,10 @@ public class WeddingConfig
 	public static boolean WEDDING_FORMALWEAR;
 	public static int WEDDING_DIVORCE_COSTS;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(WEDDING_CONFIG_FILE);
+		String weddingConfigFile = String.format("./%s/Custom/Wedding.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(weddingConfigFile);
 		ALLOW_WEDDING = config.getBoolean("AllowWedding", false);
 		WEDDING_PRICE = config.getInt("WeddingPrice", 250000000);
 		WEDDING_PUNISH_INFIDELITY = config.getBoolean("WeddingPunishInfidelity", true);

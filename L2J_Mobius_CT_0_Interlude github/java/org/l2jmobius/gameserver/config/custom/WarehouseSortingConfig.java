@@ -28,16 +28,14 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class WarehouseSortingConfig
 {
-	// File
-	private static final String WAREHOUSE_SORTING_CONFIG_FILE = "./config/Custom/WarehouseSorting.ini";
-	
 	// Constants
 	public static boolean ENABLE_WAREHOUSESORTING_CLAN;
 	public static boolean ENABLE_WAREHOUSESORTING_PRIVATE;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(WAREHOUSE_SORTING_CONFIG_FILE);
+		String warehouseSortingConfigFile = String.format("./%s/Custom/WarehouseSorting.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(warehouseSortingConfigFile);
 		ENABLE_WAREHOUSESORTING_CLAN = config.getBoolean("EnableWarehouseSortingClan", false);
 		ENABLE_WAREHOUSESORTING_PRIVATE = config.getBoolean("EnableWarehouseSortingPrivate", false);
 	}

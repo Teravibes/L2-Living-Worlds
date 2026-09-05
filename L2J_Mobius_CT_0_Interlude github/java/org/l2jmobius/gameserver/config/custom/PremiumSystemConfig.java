@@ -34,9 +34,6 @@ public class PremiumSystemConfig
 {
 	private static final Logger LOGGER = Logger.getLogger(PremiumSystemConfig.class.getName());
 	
-	// File
-	private static final String PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
-	
 	// Constants
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static boolean PC_CAFE_ENABLED;
@@ -62,9 +59,10 @@ public class PremiumSystemConfig
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(PREMIUM_SYSTEM_CONFIG_FILE);
+		String premiumSystemConfigFile = String.format("./%s/Custom/PremiumSystem.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(premiumSystemConfigFile);
 		PREMIUM_SYSTEM_ENABLED = config.getBoolean("EnablePremiumSystem", false);
 		PC_CAFE_ENABLED = config.getBoolean("PcCafeEnabled", false);
 		PC_CAFE_ONLY_PREMIUM = config.getBoolean("PcCafeOnlyPremium", false);

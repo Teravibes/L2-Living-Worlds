@@ -166,6 +166,8 @@ import org.l2jmobius.gameserver.taskmanagers.ItemLifeTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanagers.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.ui.Gui;
 import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.util.argsparse.GameServerLaunchArgs;
+import org.l2jmobius.gameserver.util.argsparse.GameServerLaunchArgumentsParser;
 
 public class GameServer
 {
@@ -178,13 +180,15 @@ public class GameServer
 	public GameServer() throws Exception
 	{
 		System.out.println("=== Living Worlds Server ===");
-		
+
+		GameServerLaunchArgs gameServerLaunchArgs = GameServerLaunchArgumentsParser.parse();
+
 		// GUI
-		InterfaceConfig.load();
+		InterfaceConfig.load(gameServerLaunchArgs.baseConfigPath());
 		if (InterfaceConfig.ENABLE_GUI)
 		{
 			System.out.println("GameServer: Running in GUI mode.");
-			new Gui();
+			new Gui(gameServerLaunchArgs);
 		}
 		
 		// Create log folder
@@ -196,17 +200,17 @@ public class GameServer
 		{
 			LogManager.getLogManager().readConfiguration(is);
 		}
-		
+
 		// Initialize config
-		ConfigLoader.init();
+		ConfigLoader.init(gameServerLaunchArgs.baseConfigPath());
 		
 		LOGGER.info("=== Living Worlds Server ===");
 		
 		printSection("Database");
-		DatabaseFactory.init();
+		DatabaseFactory.init(gameServerLaunchArgs.baseConfigPath());
 		
 		printSection("ThreadPool");
-		ThreadPool.init();
+		ThreadPool.init(gameServerLaunchArgs.baseConfigPath());
 		
 		// Start game time task manager early
 		GameTimeTaskManager.getInstance();
@@ -501,7 +505,7 @@ public class GameServer
 		return START_TIME;
 	}
 	
-	public static void main(String[] args) throws Exception
+	public static void main() throws Exception
 	{
 		new GameServer();
 	}

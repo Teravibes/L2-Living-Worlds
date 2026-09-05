@@ -28,9 +28,6 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class CancelReturnConfig
 {
-	// File
-	private static final String CANCEL_RETURN_CONFIG_FILE = "./config/Custom/CancelReturn.ini";
-	
 	// Constants
 	public static boolean CANCEL_RETURN_ON;
 	public static boolean CANCEL_RETURN_MOB;
@@ -38,9 +35,10 @@ public class CancelReturnConfig
 	public static boolean CANCEL_RETURN_PLAYER_OLYS;
 	public static int TIME_TO_RETURN;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(CANCEL_RETURN_CONFIG_FILE);
+		String cancelReturnConfigFile = String.format("./%s/Custom/CancelReturn.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(cancelReturnConfigFile);
 		CANCEL_RETURN_ON = config.getBoolean("CancelReturn", false);
 		CANCEL_RETURN_MOB = config.getBoolean("ReturnMonster", true);
 		CANCEL_RETURN_PLAYER = config.getBoolean("ReturnPlayer", true);

@@ -35,9 +35,6 @@ public class LoginConfig
 {
 	private static final Logger LOGGER = Logger.getLogger(LoginConfig.class.getName());
 	
-	// File
-	private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
-	
 	// Constants
 	public static int GAME_SERVER_LOGIN_PORT;
 	public static String GAME_SERVER_LOGIN_HOST;
@@ -57,9 +54,10 @@ public class LoginConfig
 	public static int FAST_CONNECTION_TIME;
 	public static int MAX_CONNECTION_PER_IP;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(SERVER_CONFIG_FILE);
+		String serverConfigFile = String.format("./%s/Server.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(serverConfigFile);
 		GAME_SERVER_LOGIN_HOST = config.getString("LoginHostname", "127.0.0.1");
 		GAME_SERVER_LOGIN_PORT = config.getInt("LoginPort", 9013);
 		LOGIN_BIND_ADDRESS = config.getString("LoginserverHostname", "0.0.0.0");

@@ -29,9 +29,6 @@ import org.l2jmobius.gameserver.util.FloodProtectorSettings;
  */
 public class FloodProtectorConfig
 {
-	// File
-	private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
-	
 	// Constants
 	public static FloodProtectorSettings FLOOD_PROTECTOR_USE_ITEM;
 	public static FloodProtectorSettings FLOOD_PROTECTOR_ROLL_DICE;
@@ -50,9 +47,10 @@ public class FloodProtectorConfig
 	public static FloodProtectorSettings FLOOD_PROTECTOR_ITEM_AUCTION;
 	public static FloodProtectorSettings FLOOD_PROTECTOR_PLAYER_ACTION;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(FLOOD_PROTECTOR_CONFIG_FILE);
+		String floodProtectorConfigFile = String.format("./%s/FloodProtector.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(floodProtectorConfigFile);
 		FLOOD_PROTECTOR_USE_ITEM = new FloodProtectorSettings("UseItemFloodProtector");
 		FLOOD_PROTECTOR_ROLL_DICE = new FloodProtectorSettings("RollDiceFloodProtector");
 		FLOOD_PROTECTOR_ITEM_PET_SUMMON = new FloodProtectorSettings("ItemPetSummonFloodProtector");

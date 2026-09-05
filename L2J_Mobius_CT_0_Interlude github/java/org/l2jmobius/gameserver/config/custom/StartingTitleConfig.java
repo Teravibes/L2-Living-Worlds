@@ -28,16 +28,14 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class StartingTitleConfig
 {
-	// File
-	private static final String STARTING_TITLE_CONFIG_FILE = "./config/Custom/StartingTitle.ini";
-	
 	// Constants
 	public static boolean ENABLE_CUSTOM_STARTING_TITLE;
 	public static String CUSTOM_STARTING_TITLE;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(STARTING_TITLE_CONFIG_FILE);
+		String startingTitleConfigFile = String.format("./%s/Custom/StartingTitle.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(startingTitleConfigFile);
 		ENABLE_CUSTOM_STARTING_TITLE = config.getBoolean("EnableStartingTitle", false);
 		CUSTOM_STARTING_TITLE = config.getString("StartingTitle", "Newbie");
 	}

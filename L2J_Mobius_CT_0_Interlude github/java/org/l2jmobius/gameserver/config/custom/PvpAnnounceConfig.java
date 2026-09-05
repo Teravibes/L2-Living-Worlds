@@ -28,18 +28,16 @@ import org.l2jmobius.commons.util.ConfigReader;
  */
 public class PvpAnnounceConfig
 {
-	// File
-	private static final String PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
-	
 	// Constants
 	public static boolean ANNOUNCE_PK_PVP;
 	public static boolean ANNOUNCE_PK_PVP_NORMAL_MESSAGE;
 	public static String ANNOUNCE_PK_MSG;
 	public static String ANNOUNCE_PVP_MSG;
 	
-	public static void load()
+	public static void load(String baseConfigPath)
 	{
-		final ConfigReader config = new ConfigReader(PVP_ANNOUNCE_CONFIG_FILE);
+		String pvpAnnounceConfigFile = String.format("./%s/Custom/PvpAnnounce.ini", baseConfigPath);
+		final ConfigReader config = new ConfigReader(pvpAnnounceConfigFile);
 		ANNOUNCE_PK_PVP = config.getBoolean("AnnouncePkPvP", false);
 		ANNOUNCE_PK_PVP_NORMAL_MESSAGE = config.getBoolean("AnnouncePkPvPNormalMessage", true);
 		ANNOUNCE_PK_MSG = config.getString("AnnouncePkMsg", "$killer has slaughtered $target");

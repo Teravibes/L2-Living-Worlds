@@ -42,7 +42,7 @@ The easiest way to play. You do **not** need Java, a database, or any setup.
 1. Download the latest **`version release`** from the
    [**Releases**](../../releases) page. DO NOT download the patch if it's your first download. Download the normal version.
 2. Unzip it anywhere.
-3. Double-click the **`Control-Panel.bat`** for the alpha GUI launcher version or **`Start-Server.bat`** to skip the launcer.
+3. Double-click the **`LivingWorld.exe`**.
 
 On first run it initializes a bundled, portable MariaDB, imports the schema, then starts
 the login and game servers - a bundled JDK and database are inside the zip, so there's

@@ -47,6 +47,8 @@ import org.l2jmobius.gameserver.managers.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.scripting.ScriptEngine;
+import org.l2jmobius.gameserver.util.argsparse.GameServerLaunchArgs;
+import org.l2jmobius.gameserver.util.argsparse.GameServerLaunchArgumentsParser;
 
 /**
  * @author NosBit
@@ -81,7 +83,8 @@ public class AdminReload implements IAdminCommandHandler
 			{
 				case "config":
 				{
-					ConfigLoader.init();
+					GameServerLaunchArgs gameServerLaunchArgs = GameServerLaunchArgumentsParser.parse();
+					ConfigLoader.init(gameServerLaunchArgs.baseConfigPath());
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Configs.");
 					break;
 				}

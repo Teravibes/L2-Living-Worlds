@@ -26,6 +26,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -54,6 +55,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.holders.player.AutoUseSettingsHolder;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -422,6 +424,7 @@ public class PhantomPartyManager
 	private static final int BIG_HEAL_DEFICIT = 35; // missing HP% at/above which the strong heal is worth its MP
     /** AOE radius for phantoms to check for mobs with their respective spoiledByObjectId */
     private static final int DEFAULT_AOE_SWEEP_RADIUS = 600;
+    private static final int SPOIL_SKILL_ID = 254;
     private static final int SWEEPER_SKILL_ID = 42;
 
 	/** Per-member state. */
@@ -487,6 +490,7 @@ public class PhantomPartyManager
 		boolean songsRequested; // explicit "sing"/"dance" order: run the rotation now even out of combat
 		Skill pendingSong; // explicit "<song/dance> by name" order (SINGER/DANCER): cast that exact one next tick, even if it's outside the auto rotation
 		SpoilBehavior spoilBehavior;
+		Skill spoil;
 		Skill sweeper;
 		boolean scavengerKitLookedUp;
 		boolean fieldSweepingInProcess;
@@ -1480,11 +1484,21 @@ public class PhantomPartyManager
 	private void setFree(Member state, boolean free)
 	{
 		state.assist = !free;
-		PhantomManager.getInstance().setRecruitHunting(state.npc, free);
+		List<Skill> autoUseSkills = provideAutoUsedSkills(state);
+		PhantomManager.getInstance().setRecruitHunting(state.npc, free, autoUseSkills);
 		if (!free)
 		{
 			ensureFollow(state);
 		}
+	}
+
+	private List<Skill> provideAutoUsedSkills(Member state)
+	{
+		return switch (state.role)
+		{
+			case BOUNTY_HUNTER -> List.of(state.sweeper, state.spoil);
+			default -> List.of();
+		};
 	}
 
 	/**
@@ -2691,6 +2705,7 @@ public class PhantomPartyManager
 		final Player npc = state.npc;
 
 		if (!state.scavengerKitLookedUp) {
+			state.spoil = npc.getKnownSkill(SPOIL_SKILL_ID);
 			state.sweeper = npc.getKnownSkill(SWEEPER_SKILL_ID);
 			state.scavengerKitLookedUp = true;
 		}

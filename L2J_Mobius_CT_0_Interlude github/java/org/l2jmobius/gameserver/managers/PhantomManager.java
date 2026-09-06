@@ -25,6 +25,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.EnumMap;
 import java.util.EnumSet;
@@ -3796,11 +3797,16 @@ public class PhantomManager implements IXmlReader
 		return (data != null) && data.recruited;
 	}
 
+	public void setRecruitHunting(Player member, boolean hunting)
+	{
+		setRecruitHunting(member, hunting, Collections.emptyList());
+	}
+
 	/**
 	 * Toggles a recruited member's "free hunt" mode. ON starts the native AutoPlay scanner (the member grabs
 	 * its own nearby mobs); OFF stops it so the party manager's assist (focus the leader's target) takes over.
 	 */
-	public void setRecruitHunting(Player member, boolean hunting)
+	public void setRecruitHunting(Player member, boolean hunting, List<Skill> autoUseSkills)
 	{
 		final PhantomData data = (member == null) ? null : _phantoms.get(member.getObjectId());
 		if ((data == null) || !data.recruited)
@@ -3814,6 +3820,9 @@ public class PhantomManager implements IXmlReader
 			settings.setShortRange(false);
 			settings.setRespectfulHunting(true);
 			settings.setPickup(false); // recruited party members never loot - drops are left for the real player
+			final AutoUseSettingsHolder autoUseSettings = member.getAutoUseSettings();
+			autoUseSettings.getAutoSkills().clear();
+			autoUseSkills.forEach(skill -> autoUseSettings.getAutoSkills().add(skill.getId()));
 			AutoPlayTaskManager.getInstance().startAutoPlay(member); // also sets isAutoPlaying(true)
 		}
 		else

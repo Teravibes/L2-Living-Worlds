@@ -15,8 +15,8 @@ public final class LoginServerLaunchArgumentsParser
 
     public static LoginServerLaunchArgs parse()
     {
-        String baseGameConfigPath = System.getProperty(CONFIG_PATH_KEY, DEFAULT_CONFIG_PATH);
+        String baseLoginConfigPath = System.getProperty(CONFIG_PATH_KEY, DEFAULT_CONFIG_PATH);
 
-        return new LoginServerLaunchArgs(baseGameConfigPath);
+        return new LoginServerLaunchArgs(baseLoginConfigPath);
     }
 }

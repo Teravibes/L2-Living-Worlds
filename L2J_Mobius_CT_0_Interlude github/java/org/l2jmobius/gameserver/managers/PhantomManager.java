@@ -180,6 +180,10 @@ public class PhantomManager implements IXmlReader
 	// the phantom on despawn, so nothing leaks into the economy.
 	private static final int REZ_SCROLL_ID = 737;
 	private static final int REZ_SCROLL_COUNT = 3;
+	// Dimensional Fragment: every phantom carries one so it satisfies the Dimensional Rift entry requirement
+	// (each party member must hold at least one fragment). With the rift entry cost configurable to 0 the fragment
+	// is never consumed, so a single copy is enough and it leaves with the phantom on despawn.
+	private static final int DIMENSION_FRAGMENT_ID = 7079;
 	// Buff reagents: a few support buffs consume an item per cast (the prophet's Greater Might / Greater Shield
 	// and the caster's Clarity all eat Spirit Ore, id 3031). A clientless buffer that has none silently fails the
 	// cast - the engine rejects it in checkDoCastConditions - and, since the buff never lands, re-tries it every
@@ -2192,6 +2196,13 @@ public class PhantomManager implements IXmlReader
 	 */
 	private void enterWorld(Player phantom, Location location)
 	{
+		// Ensure the phantom holds a Dimensional Fragment so it meets the rift entry requirement. Guarded so a
+		// re-equip/respawn never stacks duplicates.
+		if (phantom.getInventory().getItemByItemId(DIMENSION_FRAGMENT_ID) == null)
+		{
+			phantom.getInventory().addItem(ItemProcessType.REWARD, DIMENSION_FRAGMENT_ID, 1, phantom, null);
+		}
+
 		phantom.setCurrentHp(phantom.getMaxHp());
 		phantom.setCurrentMp(phantom.getMaxMp());
 		phantom.setCurrentCp(phantom.getMaxCp());
@@ -3821,9 +3832,11 @@ public class PhantomManager implements IXmlReader
 			settings.setRespectfulHunting(true);
 			settings.setPickup(false); // recruited party members never loot - drops are left for the real player
 			final AutoUseSettingsHolder autoUseSettings = member.getAutoUseSettings();
-			autoUseSkills.forEach(skill -> {
-				List<Integer> autoSkills = autoUseSettings.getAutoSkills();
-				if (!autoSkills.contains(skill.getId())) {
+			autoUseSkills.forEach(skill ->
+			{
+				final List<Integer> autoSkills = autoUseSettings.getAutoSkills();
+				if (!autoSkills.contains(skill.getId()))
+				{
 					autoSkills.add(skill.getId());
 				}
 			});

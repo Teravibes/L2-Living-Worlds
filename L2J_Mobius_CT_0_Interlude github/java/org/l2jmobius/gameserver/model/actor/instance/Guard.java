@@ -73,6 +73,19 @@ public class Guard extends Attackable
 	public void addDamage(Creature attacker, int damage, Skill skill)
 	{
 		super.addDamage(attacker, damage, skill);
+
+		// Assaulting a guard is a hostile act: flag the responsible player (or a pet's owner) so the guard,
+		// and the nearby guards pulled in below, may legitimately attack back. Without this a non-PK attacker
+		// is not auto-attackable by a guard, so the guard would only chase without ever striking.
+		if (attacker.isPlayable())
+		{
+			final Player attackerPlayer = attacker.asPlayer();
+			if (attackerPlayer != null)
+			{
+				attackerPlayer.updatePvPStatus();
+			}
+		}
+
 		getAI().startFollow(attacker);
 		addDamageHate(attacker, 0, 10);
 		World.getInstance().forEachVisibleObjectInRange(this, Guard.class, 500, guard ->

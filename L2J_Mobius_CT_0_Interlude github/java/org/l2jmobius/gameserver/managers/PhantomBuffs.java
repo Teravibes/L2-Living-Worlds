@@ -216,6 +216,23 @@ public final class PhantomBuffs
 		BUFF_ALIASES.put("greater empower", "greater empower");
 		BUFF_ALIASES.put("war chant", "war chant");
 		BUFF_ALIASES.put("earth chant", "earth chant");
+		// Specific chants map to their exact skill name so a named chant resolves to that chant only. Without these
+		// a bare "chant" match would grab the first chant the buffer happened to know (e.g. Chant of Revenge). A
+		// chant the buffer has not learned now returns "i don't have it" instead of silently swapping in another.
+		BUFF_ALIASES.put("flame chant", "flame chant");
+		BUFF_ALIASES.put("chant of victory", "chant of victory");
+		BUFF_ALIASES.put("chant of battle", "chant of battle");
+		BUFF_ALIASES.put("chant of fury", "chant of fury");
+		BUFF_ALIASES.put("chant of rage", "chant of rage");
+		BUFF_ALIASES.put("chant of predator", "chant of predator");
+		BUFF_ALIASES.put("chant of eagle", "chant of eagle");
+		BUFF_ALIASES.put("chant of vampire", "chant of vampire");
+		BUFF_ALIASES.put("chant of fire", "chant of fire");
+		BUFF_ALIASES.put("chant of shielding", "chant of shielding");
+		BUFF_ALIASES.put("chant of evasion", "chant of evasion");
+		BUFF_ALIASES.put("chant of revenge", "chant of revenge");
+		BUFF_ALIASES.put("chant of life", "chant of life");
+		BUFF_ALIASES.put("chant of spirit", "chant of spirit");
 		BUFF_ALIASES.put("holy resist", "holy resist");
 		BUFF_ALIASES.put("holy resistance", "holy resist");
 		BUFF_ALIASES.put("unholy resist", "unholy resist");
@@ -236,7 +253,6 @@ public final class PhantomBuffs
 		BUFF_ALIASES.put("bless the body", "bless the body");
 		BUFF_ALIASES.put("bless the soul", "bless the soul");
 		BUFF_ALIASES.put("prophecy", "prophecy");
-		BUFF_ALIASES.put("chant", "chant");
 		BUFF_ALIASES.put("vampiric", "vampiric rage");
 	}
 

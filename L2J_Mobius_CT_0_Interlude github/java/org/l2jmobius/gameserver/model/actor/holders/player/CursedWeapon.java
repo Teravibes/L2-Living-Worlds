@@ -232,16 +232,20 @@ public class CursedWeapon
 		else
 		{
 			_item = _player.getInventory().getItemByItemId(_itemId);
+			// Make sure the weapon leaves the paperdoll before it is dropped, so the client does not keep
+			// showing it equipped. dropItem already unequips on removal, but we clear the slot explicitly and
+			// then refresh the client below to avoid a stale "still equipped" state until relog.
+			_player.getInventory().unEquipItemInBodySlot(BodyPart.LR_HAND);
 			_player.dropItem(ItemProcessType.DEATH, _item, killer, true);
 			_player.setKarma(_playerKarma);
 			_player.setPkKills(_playerPkKills);
 			_player.setCursedWeaponEquippedId(0);
 			removeSkill();
 			_player.abortAttack();
-			
-			// Item item = _player.getInventory().getItemByItemId(_itemId);
-			// _player.getInventory().dropItem("DieDrop", item, _player, null);
-			// _player.getInventory().getItemByItemId(_itemId).dropMe(_player, _player.getX(), _player.getY(), _player.getZ());
+
+			// Refresh inventory and character info so the dropped weapon stops showing as equipped client-side.
+			_player.sendItemList(true);
+			_player.broadcastUserInfo();
 		}
 		
 		_isDropped = true;

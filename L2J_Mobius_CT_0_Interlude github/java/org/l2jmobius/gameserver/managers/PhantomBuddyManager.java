@@ -344,6 +344,28 @@ public class PhantomBuddyManager implements IXmlReader
 			final Skill known = PhantomBuffs.findKnown(buffList(state, buddy), requested);
 			if (known != null)
 			{
+				// Long-reuse buffs (e.g. Chant of Victory, 20 min) would otherwise be dropped silently by the cast
+				// tick while on cooldown. Acknowledge the remaining time instead of accepting an order it can't fill.
+				if (buddy.isSkillDisabled(known))
+				{
+					final long remainingMs = buddy.getSkillRemainingReuseTime(known.getReuseHashCode());
+					if (remainingMs > 0)
+					{
+						final long remainingMin = (remainingMs + 59999) / 60000; // round up to whole minutes
+						deliver(state, owner, party, known.getName().toLowerCase() + " is on cooldown, ~" + remainingMin + " min left");
+					}
+					else
+					{
+						deliver(state, owner, party, known.getName().toLowerCase() + " is on cooldown");
+					}
+					return null;
+				}
+				// Some chants (Chant of Victory eats 40 Spirit Ore) need a reagent; say so rather than silently failing.
+				if (!PhantomBuffs.canAffordReagent(buddy, known))
+				{
+					deliver(state, owner, party, "i'm out of reagents for " + known.getName().toLowerCase());
+					return null;
+				}
 				// "<buff> on me" / "<buff> on <member>": a named party member is the target, otherwise the owner.
 				final Player named = findPartyMemberByName(owner, text);
 				final Player target = ((named != null) && (named != buddy)) ? named : owner;

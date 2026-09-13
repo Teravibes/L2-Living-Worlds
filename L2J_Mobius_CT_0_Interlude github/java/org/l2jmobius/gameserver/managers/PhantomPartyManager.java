@@ -26,7 +26,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -55,7 +54,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.holders.player.AutoUseSettingsHolder;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -1179,6 +1177,28 @@ public class PhantomPartyManager
 				final Skill known = PhantomBuffs.findKnown(buffs(state), requested);
 				if (known != null)
 				{
+					// Long-reuse buffs (e.g. Chant of Victory, 20 min) would otherwise be dropped silently by the
+					// cast tick while on cooldown. Acknowledge the remaining time instead of accepting the order.
+					if (state.npc.isSkillDisabled(known))
+					{
+						final long remainingMs = state.npc.getSkillRemainingReuseTime(known.getReuseHashCode());
+						if (remainingMs > 0)
+						{
+							final long remainingMin = (remainingMs + 59999) / 60000; // round up to whole minutes
+							deliver(state, known.getName().toLowerCase() + " is on cooldown, ~" + remainingMin + " min left");
+						}
+						else
+						{
+							deliver(state, known.getName().toLowerCase() + " is on cooldown");
+						}
+						return true;
+					}
+					// Some chants (Chant of Victory eats 40 Spirit Ore) need a reagent; say so rather than failing silently.
+					if (!PhantomBuffs.canAffordReagent(state.npc, known))
+					{
+						deliver(state, "i'm out of reagents for " + known.getName().toLowerCase());
+						return true;
+					}
 					// "<buff> on me" / "<buff> on <member>": a named party member is the target, else the leader.
 					final Player named = findPartyMemberByName(state, text);
 					final Player target = (named != null) ? named : state.owner;
@@ -1484,7 +1504,7 @@ public class PhantomPartyManager
 	private void setFree(Member state, boolean free)
 	{
 		state.assist = !free;
-		List<Skill> autoUseSkills = provideAutoUsedSkills(state);
+		final List<Skill> autoUseSkills = provideAutoUsedSkills(state);
 		PhantomManager.getInstance().setRecruitHunting(state.npc, free, autoUseSkills);
 		if (!free)
 		{
@@ -1492,13 +1512,27 @@ public class PhantomPartyManager
 		}
 	}
 
+	/**
+	 * Skills a role should have seeded into its AutoUse list when it enters free-hunt. A BOUNTY_HUNTER hunts with
+	 * Spoil then Sweeper so autoplay actually spoils and sweeps its own kills. Either skill may still be unknown
+	 * (not yet looked up, or the member never learned it), so nulls are dropped - {@code List.of} would throw on a
+	 * null element and crash the order that triggered the toggle.
+	 */
 	private List<Skill> provideAutoUsedSkills(Member state)
 	{
-		return switch (state.role)
+		final List<Skill> skills = new ArrayList<>();
+		if (state.role == PartyRole.BOUNTY_HUNTER)
 		{
-			case BOUNTY_HUNTER -> List.of(state.sweeper, state.spoil);
-			default -> List.of();
-		};
+			if (state.spoil != null)
+			{
+				skills.add(state.spoil);
+			}
+			if (state.sweeper != null)
+			{
+				skills.add(state.sweeper);
+			}
+		}
+		return skills;
 	}
 
 	/**

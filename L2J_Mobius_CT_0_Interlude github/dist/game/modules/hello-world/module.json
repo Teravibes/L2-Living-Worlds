@@ -1,0 +1,10 @@
+{
+  "id": "hello-world",
+  "name": "Hello World",
+  "version": "1.0.0",
+  "apiVersion": "1",
+  "entrypoint": "modules.helloworld.HelloWorldModule",
+  "description": "Proves the module framework end to end.",
+  "author": "core",
+  "priority": 100
+}

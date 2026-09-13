@@ -49,6 +49,7 @@ public partial class MainWindow : Window
         SettingsButton.Click += Settings_Click;
         UpdateButton.Click += Update_Click;
         ConfigButton.Click += Config_Click;
+        ModulesButton.Click += Modules_Click;
 
         // Live status lights.
         _statusTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
@@ -190,6 +191,15 @@ public partial class MainWindow : Window
         {
             Log("[FAIL] could not open the config editor: " + ex.Message);
         }
+    }
+
+    // Opens the Installed Modules panel: a modal list of what is in game\modules,
+    // with enable, disable, and remove per module. Changes it makes to a module's
+    // config\module.ini take effect on the next server start.
+    private void Modules_Click(object sender, RoutedEventArgs e)
+    {
+        var dlg = new ModulesWindow(_paths) { Owner = this };
+        dlg.ShowDialog();
     }
 
     // ---- updates ----------------------------------------------------------

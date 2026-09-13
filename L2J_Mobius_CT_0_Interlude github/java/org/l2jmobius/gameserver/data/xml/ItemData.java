@@ -23,7 +23,9 @@ package org.l2jmobius.gameserver.data.xml;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -39,6 +41,8 @@ import org.l2jmobius.gameserver.model.item.Armor;
 import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.modules.ModuleResourceRegistry;
+import org.l2jmobius.gameserver.modules.ModuleResourceType;
 import org.l2jmobius.gameserver.util.DocumentItem;
 
 /**
@@ -53,7 +57,9 @@ public class ItemData
 	private final Map<Integer, Armor> _armors = new HashMap<>();
 	private final Map<Integer, Weapon> _weapons = new HashMap<>();
 	private final List<File> _itemFiles = new ArrayList<>();
-	
+	private final List<File> _moduleItemFiles = new ArrayList<>();
+	private final Set<Integer> _baseGameItemIds = new HashSet<>();
+
 	protected ItemData()
 	{
 		processDirectory("data/stats/items", _itemFiles);
@@ -61,13 +67,26 @@ public class ItemData
 		{
 			processDirectory("data/stats/items/custom", _itemFiles);
 		}
-		
+
+		// Item directories contributed by enabled modules. Kept separate from the stock and custom files so the base
+		// game id set can be captured on its own, which the module framework's reserved-range check needs. Empty when no
+		// module is installed or enabled, so stock behavior is unchanged; the modules root registered these during
+		// discovery, before this loader runs.
+		for (File moduleRoot : ModuleResourceRegistry.getInstance().getRoots(ModuleResourceType.ITEMS))
+		{
+			processDirectory(moduleRoot, _moduleItemFiles);
+		}
+
 		load();
 	}
 	
 	private void processDirectory(String dirName, List<File> list)
 	{
-		final File dir = new File(ServerConfig.DATAPACK_ROOT, dirName);
+		processDirectory(new File(ServerConfig.DATAPACK_ROOT, dirName), list);
+	}
+	
+	private void processDirectory(File dir, List<File> list)
+	{
 		if (!dir.exists())
 		{
 			LOGGER.warning("Directory " + dir.getAbsolutePath() + " does not exist.");
@@ -87,19 +106,15 @@ public class ItemData
 		}
 	}
 	
-	private void load()
+	private Collection<ItemTemplate> parseItemFiles(List<File> files)
 	{
 		final Collection<ItemTemplate> items = ConcurrentHashMap.newKeySet();
-		int highestId = 0;
-		_armors.clear();
-		_etcItems.clear();
-		_weapons.clear();
-		
+
 		// If multithreading is enabled, use a thread pool to parse files.
 		if (ThreadConfig.THREADS_FOR_LOADING)
 		{
 			final Collection<ScheduledFuture<?>> tasks = ConcurrentHashMap.newKeySet();
-			for (File file : _itemFiles)
+			for (File file : files)
 			{
 				tasks.add(ThreadPool.schedule(() ->
 				{
@@ -108,7 +123,7 @@ public class ItemData
 					items.addAll(document.getItemList());
 				}, 0));
 			}
-			
+
 			// Wait for all scheduled tasks to complete.
 			while (!tasks.isEmpty())
 			{
@@ -123,14 +138,46 @@ public class ItemData
 		}
 		else // Parse files sequentially if multithreading is not enabled.
 		{
-			for (File file : _itemFiles)
+			for (File file : files)
 			{
 				final DocumentItem document = new DocumentItem(file);
 				document.parse();
 				items.addAll(document.getItemList());
 			}
 		}
-		
+
+		return items;
+	}
+
+	/**
+	 * @return the ids defined by the stock and custom datapack, without any ids a module contributed. Used by the module
+	 *         framework to check a module's reserved id ranges against ids the base game already owns.
+	 */
+	public Set<Integer> getBaseGameItemIds()
+	{
+		return Collections.unmodifiableSet(_baseGameItemIds);
+	}
+
+	private void load()
+	{
+		final Collection<ItemTemplate> items = ConcurrentHashMap.newKeySet();
+		int highestId = 0;
+		_armors.clear();
+		_etcItems.clear();
+		_weapons.clear();
+		_baseGameItemIds.clear();
+
+		// Parse the stock and custom items first and record their ids as the base game set, then parse any module items
+		// on top. Keeping the two apart is what lets a module's reserved id ranges be checked against ids the base game
+		// already owns.
+		final Collection<ItemTemplate> baseItems = parseItemFiles(_itemFiles);
+		for (ItemTemplate item : baseItems)
+		{
+			_baseGameItemIds.add(item.getId());
+		}
+		items.addAll(baseItems);
+		items.addAll(parseItemFiles(_moduleItemFiles));
+
 		// Process each loaded item and organize them into their respective collections.
 		for (ItemTemplate item : items)
 		{

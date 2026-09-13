@@ -1,0 +1,89 @@
+<Window x:Class="LivingWorld.ModulesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Modules" Height="620" Width="620"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        FontFamily="Segoe UI">
+
+  <Window.Resources>
+    <SolidColorBrush x:Key="Gold"     Color="#C9A15A"/>
+    <SolidColorBrush x:Key="GoldDim"  Color="#8A7448"/>
+    <SolidColorBrush x:Key="Ink"      Color="#EDE3D2"/>
+    <SolidColorBrush x:Key="InkDim"   Color="#9C9385"/>
+    <SolidColorBrush x:Key="CardEdge" Color="#33C9A15A"/>
+
+    <Style x:Key="Btn" TargetType="Button">
+      <Setter Property="Foreground" Value="{StaticResource Ink}"/>
+      <Setter Property="Background" Value="#2A1D140B"/>
+      <Setter Property="BorderBrush" Value="#3AC9A15A"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="Padding" Value="12,6"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="FontSize" Value="12.5"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="Button">
+            <Border x:Name="b" CornerRadius="6" Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
+                    Padding="{TemplateBinding Padding}">
+              <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+              <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="b" Property="BorderBrush" Value="{StaticResource Gold}"/>
+              </Trigger>
+              <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="0.45"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+  </Window.Resources>
+
+  <Border CornerRadius="10" Background="#0D0A07" BorderBrush="#55C9A15A" BorderThickness="1">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="42"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+      <!-- Title bar -->
+      <Grid x:Name="TitleBar" Grid.Row="0" Background="#40000000">
+        <TextBlock Text="INSTALLED MODULES" Margin="18,0,0,0" VerticalAlignment="Center"
+                   Foreground="{StaticResource Gold}" FontFamily="Georgia" FontSize="14"/>
+      </Grid>
+
+      <!-- Trust warning -->
+      <Border Grid.Row="1" Margin="20,14,20,4" Background="#2A3A2408" BorderBrush="#55C9A15A"
+              BorderThickness="1" CornerRadius="6" Padding="12,9">
+        <TextBlock Foreground="{StaticResource Ink}" FontSize="12" TextWrapping="Wrap"
+                   Text="Modules are executable code. Install modules only from sources you trust."/>
+      </Border>
+
+      <!-- Module list -->
+      <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto" Margin="20,6,20,4">
+        <StackPanel>
+          <StackPanel x:Name="ModuleList"/>
+          <TextBlock x:Name="EmptyText" Foreground="{StaticResource InkDim}" FontSize="13"
+                     TextWrapping="Wrap" Visibility="Collapsed" Margin="2,10,0,0"
+                     Text="No modules are installed. Drop a module folder into game\modules and it will appear here."/>
+        </StackPanel>
+      </ScrollViewer>
+
+      <!-- Footer -->
+      <Border Grid.Row="3" Background="#B3050403" BorderBrush="#33C9A15A" BorderThickness="0,1,0,0">
+        <Grid Margin="20,12">
+          <TextBlock x:Name="RestartNote" VerticalAlignment="Center" Foreground="{StaticResource Gold}"
+                     FontSize="12" Visibility="Collapsed"
+                     Text="Changes apply the next time you start the server."/>
+          <Button x:Name="CloseButton" HorizontalAlignment="Right" Style="{StaticResource Btn}" Content="Close"/>
+        </Grid>
+      </Border>
+    </Grid>
+  </Border>
+</Window>

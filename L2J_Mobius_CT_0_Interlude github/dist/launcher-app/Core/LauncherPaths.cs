@@ -26,6 +26,7 @@ public sealed class LauncherPaths
     public string LibsDir => Path.Combine(DistDir, "libs");
     public string LoginDir => Path.Combine(DistDir, "login");
     public string GameDir => Path.Combine(DistDir, "game");
+    public string ModulesDir => Path.Combine(GameDir, "modules");
     public string LoginJar => Path.Combine(LibsDir, "LoginServer.jar");
     public string GameJar => Path.Combine(LibsDir, "GameServer.jar");
     public string DbInstallerDir => Path.Combine(DistDir, "db_installer");

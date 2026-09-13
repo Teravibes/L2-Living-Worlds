@@ -160,6 +160,42 @@ public class ScriptExecutor
 		}
 	}
 	
+	/**
+	 * Compiles a supplied list of source files and adds the resulting classes to the shared script class loader, without
+	 * invoking any {@code main} method. This is the seam the module framework uses: it compiles a module's scripts and
+	 * then loads the module's entry-point class by name from the returned loader. It reuses the same compiler
+	 * configuration as {@link #executeScripts(Iterable)} and is generic, with no knowledge of modules.
+	 * @param sourcePaths the source files to compile
+	 * @return the shared script class loader, now containing the newly compiled classes
+	 * @throws Exception if compilation fails
+	 */
+	public ScriptClassLoader compile(Iterable<Path> sourcePaths) throws Exception
+	{
+		final DiagnosticCollector<JavaFileObject> fileManagerDiagnostics = new DiagnosticCollector<>();
+		final DiagnosticCollector<JavaFileObject> compilationDiagnostics = new DiagnosticCollector<>();
+
+		try (ScriptFileManager fileManager = new ScriptFileManager(COMPILER.getStandardFileManager(fileManagerDiagnostics, null, StandardCharsets.UTF_8)))
+		{
+			final List<String> sourcePathStrings = new ArrayList<>();
+			for (Path sourcePath : sourcePaths)
+			{
+				sourcePathStrings.add(sourcePath.toAbsolutePath().toString());
+			}
+
+			final StringWriter strOut = new StringWriter();
+			final PrintWriter out = new PrintWriter(strOut);
+			final boolean compilationSuccess = COMPILER.getTask(out, fileManager, compilationDiagnostics, OPTIONS, null, fileManager.getJavaFileObjectsFromStrings(sourcePathStrings)).call();
+			if (!compilationSuccess)
+			{
+				logDiagnostics(out, fileManagerDiagnostics, compilationDiagnostics);
+				throw new RuntimeException(strOut.toString());
+			}
+
+			SCRIPT_CLASS_LOADER.addCompiledClasses(fileManager.getCompiledClasses());
+			return SCRIPT_CLASS_LOADER;
+		}
+	}
+
 	private void logDiagnostics(PrintWriter out, DiagnosticCollector<JavaFileObject> fileManagerDiagnostics, DiagnosticCollector<JavaFileObject> compilationDiagnostics)
 	{
 		out.println();

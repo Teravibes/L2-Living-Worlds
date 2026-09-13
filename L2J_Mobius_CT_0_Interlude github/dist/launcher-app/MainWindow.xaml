@@ -220,7 +220,15 @@
                   <Button x:Name="SettingsButton" Grid.Column="0" Style="{StaticResource Flat}" Content="Settings"/>
                   <Button x:Name="UpdateButton" Grid.Column="2" Style="{StaticResource Flat}" Content="Check for updates"/>
                 </Grid>
-                <Button x:Name="ConfigButton" Style="{StaticResource Flat}" Margin="0,8,0,0" Content="Config Editor"/>
+                <Grid Margin="0,8,0,0">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="8"/>
+                    <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+                  <Button x:Name="ConfigButton" Grid.Column="0" Style="{StaticResource Flat}" Content="Config Editor"/>
+                  <Button x:Name="ModulesButton" Grid.Column="2" Style="{StaticResource Flat}" Content="Modules"/>
+                </Grid>
               </StackPanel>
             </Border>
 

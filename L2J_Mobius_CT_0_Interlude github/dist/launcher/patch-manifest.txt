@@ -45,6 +45,21 @@ game/data/scripts/handlers/MasterHandler.java
 game/data/scripts/handlers/skill/targets/Party.java
 game/data/skill icons
 images
+# Module framework: reference Hello World module. config/module.ini is intentionally
+# omitted so a tester who enabled it is not reset, and game/config/Modules.ini is a
+# protected config shipped only in the full pack; the framework defaults to enabled
+# with no Modules.ini present, so a patch-only tester still works.
+game/modules/hello-world/module.json
+game/modules/hello-world/MODULE.md
+game/modules/hello-world/TESTING.md
+game/modules/hello-world/scripts/HelloWorldModule.java
+# Module framework: reference Custom Item module (resource-root proof). config/module.ini
+# is omitted for the same reason as above; its item definition ships as a normal module file.
+game/modules/custom-item/module.json
+game/modules/custom-item/MODULE.md
+game/modules/custom-item/TESTING.md
+game/modules/custom-item/scripts/CustomItemModule.java
+game/modules/custom-item/data/items/60000-60009.xml
 Start-Server.bat
 Stop-Server.bat
 launcher/launcher.ps1

@@ -43,6 +43,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.TraceUtil;
 import org.l2jmobius.gameserver.config.DevelopmentConfig;
 import org.l2jmobius.gameserver.config.ServerConfig;
+import org.l2jmobius.gameserver.scripting.engine.ScriptClassLoader;
 import org.l2jmobius.gameserver.scripting.engine.ScriptExecutor;
 
 /**
@@ -206,6 +207,19 @@ public class ScriptEngine implements IXmlReader
 	public Path getCurrentLoadingScript()
 	{
 		return SCRIPT_EXECUTOR.getCurrentExecutingScript();
+	}
+
+	/**
+	 * Compiles a supplied list of module source files and returns the class loader that holds the compiled classes, so a
+	 * caller can load a module's entry-point class by name. Unlike {@link #executeScriptList()}, this does not walk the
+	 * stock script root and does not invoke any {@code main} method.
+	 * @param sourceFiles the module source files to compile
+	 * @return the script class loader containing the newly compiled classes
+	 * @throws Exception if compilation fails
+	 */
+	public ScriptClassLoader compileModuleScripts(List<Path> sourceFiles) throws Exception
+	{
+		return SCRIPT_EXECUTOR.compile(sourceFiles);
 	}
 	
 	public static ScriptEngine getInstance()

@@ -37,6 +37,14 @@ PROD_SOURCES=(
 	"java/org/l2jmobius/gameserver/managers/FakePlayerStoreEligibility.java"
 	"java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java"
 	"java/org/l2jmobius/gameserver/managers/PhantomBuffReservations.java"
+	"java/org/l2jmobius/gameserver/modules/Json.java"
+	"java/org/l2jmobius/gameserver/modules/ModuleException.java"
+	"java/org/l2jmobius/gameserver/modules/ModuleResourceType.java"
+	"java/org/l2jmobius/gameserver/modules/ModuleIdRange.java"
+	"java/org/l2jmobius/gameserver/modules/ModuleValidator.java"
+	"java/org/l2jmobius/gameserver/modules/ModuleDatabaseSpec.java"
+	"java/org/l2jmobius/gameserver/modules/ModuleManifest.java"
+	"java/org/l2jmobius/gameserver/modules/ModuleManifestReader.java"
 )
 JAVA_MAIN_CLASSES=(
 	"FakePlayerChatParsingTest"
@@ -44,6 +52,7 @@ JAVA_MAIN_CLASSES=(
 	"FakePlayerStoreEligibilityTest"
 	"FakePlayerNameFactoryTest"
 	"PhantomBuffReservationsTest"
+	"ModuleFrameworkTest"
 )
 
 failures=0

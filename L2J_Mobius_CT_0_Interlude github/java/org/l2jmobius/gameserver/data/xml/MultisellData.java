@@ -36,6 +36,8 @@ import org.l2jmobius.gameserver.config.ConfigLoader;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.modules.ModuleResourceRegistry;
+import org.l2jmobius.gameserver.modules.ModuleResourceType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -73,7 +75,14 @@ public class MultisellData implements IXmlReader
 		{
 			parseDatapackDirectory("data/multisell/custom", false);
 		}
-		
+
+		// Multisell directories contributed by enabled modules. Empty when no module is installed or enabled, so stock
+		// behavior is unchanged.
+		for (File moduleRoot : ModuleResourceRegistry.getInstance().getRoots(ModuleResourceType.MULTISELL))
+		{
+			parseDirectory(moduleRoot, false);
+		}
+
 		verify();
 		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _entries.size() + " multisell lists.");
 	}

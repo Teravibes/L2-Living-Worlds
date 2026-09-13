@@ -52,6 +52,8 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.holders.SkillHolder;
+import org.l2jmobius.gameserver.modules.ModuleResourceRegistry;
+import org.l2jmobius.gameserver.modules.ModuleResourceType;
 import org.l2jmobius.gameserver.util.ArrayUtil;
 
 /**
@@ -64,17 +66,18 @@ public class NpcData implements IXmlReader
 	private final Map<String, Integer> _clans = new ConcurrentHashMap<>();
 	private static final Collection<Integer> _masterMonsterIDs = ConcurrentHashMap.newKeySet();
 	private static Integer _genericClanId = null;
-	
+	private Set<Integer> _baseGameNpcIds = new HashSet<>();
+
 	protected NpcData()
 	{
 		load();
 	}
-	
+
 	@Override
 	public synchronized void load()
 	{
 		_masterMonsterIDs.clear();
-		
+
 		parseDatapackDirectory("data/stats/npcs", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcs.size() + " NPCs.");
 		if (GeneralConfig.CUSTOM_NPC_DATA)
@@ -83,8 +86,25 @@ public class NpcData implements IXmlReader
 			parseDatapackDirectory("data/stats/npcs/custom", true);
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_npcs.size() - npcCount) + " custom NPCs.");
 		}
-		
+
+		// Snapshot the base game npc ids before any module npc loads, so the module framework can check a module's
+		// reserved npc ranges against ids the base game already owns.
+		_baseGameNpcIds = new HashSet<>(_npcs.keySet());
+		for (File moduleRoot : ModuleResourceRegistry.getInstance().getRoots(ModuleResourceType.NPCS))
+		{
+			parseDirectory(moduleRoot, true);
+		}
+
 		loadNpcsSkillLearn();
+	}
+
+	/**
+	 * @return the npc ids defined by the stock and custom datapack, without any a module contributed. Used by the module
+	 *         framework to check a module's reserved id ranges against ids the base game already owns.
+	 */
+	public Set<Integer> getBaseGameNpcIds()
+	{
+		return Collections.unmodifiableSet(_baseGameNpcIds);
 	}
 	
 	@Override

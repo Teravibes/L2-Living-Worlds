@@ -157,6 +157,7 @@ import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.model.spawns.AutoSpawnHandler;
+import org.l2jmobius.gameserver.modules.ModuleManager;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.GamePacketHandler;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -221,6 +222,10 @@ public class GameServer
 		printSection("Scripting Engine");
 		EventDispatcher.getInstance();
 		ScriptEngine.getInstance();
+		
+		// Discover and validate installed modules before the data loaders run, so later milestones can register
+		// module resource roots in time. Module scripts are compiled and enabled after the stock scripts (below).
+		ModuleManager.getInstance();
 		
 		printSection("World");
 		InstanceManager.getInstance();
@@ -349,6 +354,10 @@ public class GameServer
 			LOGGER.info("Loading server scripts...");
 			ScriptEngine.getInstance().executeScript(ScriptEngine.MASTER_HANDLER_FILE);
 			ScriptEngine.getInstance().executeScriptList();
+			
+			// Compile and enable installed modules after the stock scripts, so module code can rely on the handler
+			// singletons already existing. A disabled or absent module contributes nothing.
+			ModuleManager.getInstance().enableModules();
 		}
 		catch (Exception e)
 		{

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../data/xsd/items.xsd">
+	<!-- Owned by the custom-item module. Reserved id range 60000-60009. -->
+	<item id="60000" type="EtcItem" name="Living World Token">
+		<set name="icon" val="icon.etc_adena_i00" />
+		<!--
+			The item id 60000 is new, so a stock client has no name or icon for it and would render it blank.
+			displayId borrows an existing client-known item (4037, Coin of Luck) purely for how the client draws
+			and names this item. The server still tracks it as id 60000: this is the server-side way to show a
+			module item without shipping client assets, which the framework keeps out of scope.
+		-->
+		<set name="displayId" val="4037" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="0" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+	</item>
+</list>

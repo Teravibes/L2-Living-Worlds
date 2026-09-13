@@ -1,0 +1,16 @@
+{
+  "id": "custom-item",
+  "name": "Custom Item",
+  "version": "1.0.0",
+  "apiVersion": "1",
+  "entrypoint": "modules.customitem.CustomItemModule",
+  "description": "Proves module-owned data loads through a stock loader: ships one item and a command to grant it.",
+  "author": "core",
+  "priority": 100,
+  "resources": {
+    "items": ["data/items"]
+  },
+  "reserves": {
+    "items": [[60000, 60009]]
+  }
+}

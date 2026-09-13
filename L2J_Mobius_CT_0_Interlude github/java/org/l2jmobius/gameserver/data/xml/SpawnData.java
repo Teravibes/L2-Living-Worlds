@@ -47,6 +47,8 @@ import org.l2jmobius.gameserver.managers.DayNightSpawnManager;
 import org.l2jmobius.gameserver.managers.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.modules.ModuleResourceRegistry;
+import org.l2jmobius.gameserver.modules.ModuleResourceType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawns.Spawn;
@@ -81,6 +83,14 @@ public class SpawnData implements IXmlReader
 		{
 			LOGGER.info(getClass().getSimpleName() + ": Initializing spawns...");
 			parseDatapackDirectory("data/spawns", true);
+
+			// Spawn directories contributed by enabled modules. Empty when no module is installed or enabled, so stock
+			// behavior is unchanged.
+			for (File moduleRoot : ModuleResourceRegistry.getInstance().getRoots(ModuleResourceType.SPAWNS))
+			{
+				parseDirectory(moduleRoot, true);
+			}
+
 			LOGGER.info(getClass().getSimpleName() + ": " + _spawnCount + " spawns have been initialized!");
 		}
 	}

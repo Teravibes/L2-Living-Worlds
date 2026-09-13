@@ -23,6 +23,8 @@ package org.l2jmobius.gameserver.data.xml;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -37,6 +39,8 @@ import org.l2jmobius.commons.util.TraceUtil;
 import org.l2jmobius.gameserver.config.GeneralConfig;
 import org.l2jmobius.gameserver.config.ServerConfig;
 import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.modules.ModuleResourceRegistry;
+import org.l2jmobius.gameserver.modules.ModuleResourceType;
 import org.l2jmobius.gameserver.util.DocumentSkill;
 
 /**
@@ -50,8 +54,10 @@ public class SkillData
 	private final Map<Integer, Integer> _maxSkillLevels = new ConcurrentHashMap<>();
 	private final Set<Integer> _enchantable = ConcurrentHashMap.newKeySet();
 	private final List<File> _skillFiles = new ArrayList<>();
+	private final List<File> _moduleSkillFiles = new ArrayList<>();
+	private final Set<Integer> _baseGameSkillIds = new HashSet<>();
 	private static int count = 0;
-	
+
 	protected SkillData()
 	{
 		processDirectory("data/stats/skills", _skillFiles);
@@ -59,19 +65,31 @@ public class SkillData
 		{
 			processDirectory("data/stats/skills/custom", _skillFiles);
 		}
-		
+
+		// Skill directories contributed by enabled modules. Kept separate from the stock and custom files so the base
+		// game id set can be captured on its own for the module framework's reserved-range check. Empty when no module
+		// is enabled, so stock behavior is unchanged.
+		for (File moduleRoot : ModuleResourceRegistry.getInstance().getRoots(ModuleResourceType.SKILLS))
+		{
+			processDirectory(moduleRoot, _moduleSkillFiles);
+		}
+
 		load();
 	}
-	
+
 	private void processDirectory(String dirName, List<File> list)
 	{
-		final File dir = new File(ServerConfig.DATAPACK_ROOT, dirName);
+		processDirectory(new File(ServerConfig.DATAPACK_ROOT, dirName), list);
+	}
+
+	private void processDirectory(File dir, List<File> list)
+	{
 		if (!dir.exists())
 		{
 			LOGGER.warning("Directory " + dir.getAbsolutePath() + " does not exist.");
 			return;
 		}
-		
+
 		final File[] files = dir.listFiles();
 		if (files != null)
 		{
@@ -83,6 +101,15 @@ public class SkillData
 				}
 			}
 		}
+	}
+
+	/**
+	 * @return the skill ids defined by the stock and custom datapack, without any a module contributed. Used by the
+	 *         module framework to check a module's reserved id ranges against ids the base game already owns.
+	 */
+	public Set<Integer> getBaseGameSkillIds()
+	{
+		return Collections.unmodifiableSet(_baseGameSkillIds);
 	}
 	
 	private void load()
@@ -132,10 +159,26 @@ public class SkillData
 	
 	public void loadAllSkills(Map<Integer, Skill> allSkills)
 	{
+		// Load the stock and custom skills first and snapshot their ids as the base game set, then load any module
+		// skills on top. Keeping the two apart lets a module's reserved skill ranges be checked against ids the base
+		// game already owns.
+		_baseGameSkillIds.clear();
+		loadSkillFiles(_skillFiles, allSkills);
+		for (Skill skill : allSkills.values())
+		{
+			_baseGameSkillIds.add(skill.getId());
+		}
+		loadSkillFiles(_moduleSkillFiles, allSkills);
+
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " Skill templates from XML files.");
+	}
+
+	private void loadSkillFiles(List<File> skillFiles, Map<Integer, Skill> allSkills)
+	{
 		if (ThreadConfig.THREADS_FOR_LOADING)
 		{
 			final Collection<ScheduledFuture<?>> jobs = ConcurrentHashMap.newKeySet();
-			for (File file : _skillFiles)
+			for (File file : skillFiles)
 			{
 				jobs.add(ThreadPool.schedule(() ->
 				{
@@ -166,14 +209,14 @@ public class SkillData
 		}
 		else
 		{
-			for (File file : _skillFiles)
+			for (File file : skillFiles)
 			{
 				final List<Skill> skills = loadSkills(file);
 				if (skills == null)
 				{
 					return;
 				}
-				
+
 				for (Skill skill : skills)
 				{
 					allSkills.put(SkillData.getSkillHashCode(skill), skill);
@@ -181,10 +224,8 @@ public class SkillData
 				}
 			}
 		}
-		
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " Skill templates from XML files.");
 	}
-	
+
 	public void reload()
 	{
 		load();

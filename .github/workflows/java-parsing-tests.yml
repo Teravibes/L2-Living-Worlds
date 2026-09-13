@@ -12,6 +12,7 @@ on:
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerStoreEligibility.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomBuffReservations.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/modules/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/java/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/js/**"
       - "L2J_Mobius_CT_0_Interlude github/tools/l2admin/index.html"
@@ -25,6 +26,7 @@ on:
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerStoreEligibility.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomBuffReservations.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/modules/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/java/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/js/**"
       - "L2J_Mobius_CT_0_Interlude github/tools/l2admin/index.html"
@@ -56,12 +58,21 @@ jobs:
             "java/org/l2jmobius/gameserver/managers/FakePlayerStoreEligibility.java" \
             "java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java" \
             "java/org/l2jmobius/gameserver/managers/PhantomBuffReservations.java" \
+            "java/org/l2jmobius/gameserver/modules/Json.java" \
+            "java/org/l2jmobius/gameserver/modules/ModuleException.java" \
+            "java/org/l2jmobius/gameserver/modules/ModuleManifest.java" \
+            "java/org/l2jmobius/gameserver/modules/ModuleManifestReader.java" \
+            "java/org/l2jmobius/gameserver/modules/ModuleIdRange.java" \
+            "java/org/l2jmobius/gameserver/modules/ModuleResourceType.java" \
+            "java/org/l2jmobius/gameserver/modules/ModuleValidator.java" \
+            "java/org/l2jmobius/gameserver/modules/ModuleDatabaseSpec.java" \
             tests/java/*.java
           java -cp build/test-classes FakePlayerChatParsingTest
           java -cp build/test-classes FakePlayerStorePricingTest
           java -cp build/test-classes FakePlayerStoreEligibilityTest
           java -cp build/test-classes FakePlayerNameFactoryTest
           java -cp build/test-classes PhantomBuffReservationsTest
+          java -cp build/test-classes ModuleFrameworkTest
 
       - name: Set up Node
         uses: actions/setup-node@v4

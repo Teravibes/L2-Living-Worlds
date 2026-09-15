@@ -42,12 +42,17 @@ The easiest way to play. You do **not** need Java, a database, or any setup.
 1. Download the latest **`version release`** from the
    [**Releases**](../../releases) page. DO NOT download the patch if it's your first download. Download the normal version.
 2. Unzip it anywhere.
-3. Double-click the **`LivingWorld.exe`**.
+3. Double-click **`LivingWorld.exe`** and press **Play**.
 
-On first run it initializes a bundled, portable MariaDB, imports the schema, then starts
-the login and game servers - a bundled JDK and database are inside the zip, so there's
-nothing to install. Later runs start straight up. `Stop-Server.bat` shuts everything down
-cleanly.
+`LivingWorld.exe` is the launcher and the only thing you run: one **Play** button walks
+through the whole start sequence (database, first-run setup, login and game servers, and
+the optional chat brain) behind a progress bar, with a status light for each piece. On
+first run it initializes a bundled, portable MariaDB, imports the schema, then starts the
+servers - a bundled JDK and database are inside the zip, so there's nothing to install.
+Later runs start straight up. The launcher also carries a **Config Editor** and a
+**Modules** panel (see [Configuration](#configuration)) and a one-click **Update** that
+never touches your database or your customized config. Use the launcher's **Stop** button
+(or `Stop-Server.bat`) to shut everything down cleanly.
 
 **`WARNING`**
 If the server did not close down gracefully, it might have leftover items that prevent it from starting again. If that happens, you need to delete the **`.processes.json`** in the launcher folder. It is a hidden file, so make sure you can see hidden files through Windows settings.
@@ -120,7 +125,7 @@ Configure it with a `.env` file in that folder:
 PROVIDER=ollama
 OLLAMA_MODEL=gamma3:12b
 
-# — or — a hosted provider:
+# - or - a hosted provider:
 # PROVIDER=deepseek
 # DEEPSEEK_API_KEY=your-key-here
 ```
@@ -163,11 +168,18 @@ DB).
 
 ## Configuration
 
-Server settings live in `L2J_Mobius_CT_0_Interlude github/dist/game/config/` (standard
-L2J Mobius `.ini` files). The custom "Living World" systems are configured under
-`config/Custom/` (e.g. `FakePlayers.ini`) and via the XML behaviour/route files under
-`dist/game/data/`. Rates, spawns, and the fake-player populations are all adjustable
-there.
+The easy way is built into the launcher. Click **Config Editor** and a visual panel opens
+as its own window, already pointed at your server files, so every tab is ready with no
+setup: **rates and server settings**, phantom playstyles, bot clans, and the fake-player
+**population map**. You change things without editing a single file, and a save rewrites
+only the values you touched while keeping your comments and layout intact. The **Modules**
+button enables, disables, or removes optional feature modules the same way.
+
+Prefer to edit by hand? Every setting still lives in plain files: standard L2J Mobius
+`.ini` files under `L2J_Mobius_CT_0_Interlude github/dist/game/config/`, the custom
+"Living World" options under `config/Custom/` (e.g. `FakePlayers.ini`), and the XML
+behaviour/route files under `dist/game/data/`. Rates, spawns, and the fake-player
+populations are all adjustable there too.
 
 ---
 
@@ -179,7 +191,7 @@ L2J_Mobius_CT_0_Interlude github/   # the server project (note the space in the 
   dist/                              # runnable server: config, data, scripts, launcher
   fpc_brain.py                       # optional Python LLM chat service
   knowledge/                         # fact files that ground the chat brain
-  tools/fpc-editor/                  # visual editor for bot zones/routes (open index.html)
+  tools/l2admin/                     # visual Config Editor: rates, playstyles, bot clans, populations
   build.xml                          # Ant build
 fpc data/                            # geodata + world map assets for the editor
 .github/workflows/                   # CI: pack build + regression tests

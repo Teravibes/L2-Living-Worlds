@@ -11,16 +11,44 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-PROVIDER = os.getenv("PROVIDER", "deepseek")
 
-if PROVIDER == "deepseek":
-    client = OpenAI(api_key=os.environ["DEEPSEEK_API_KEY"], base_url="https://api.deepseek.com")
-    MODEL = "deepseek-chat"
-elif PROVIDER == "ollama":
-    client = OpenAI(api_key="ollama", base_url="http://localhost:11434/v1")
-    MODEL = os.getenv("OLLAMA_MODEL", "llama3.1")
+# Supported LLM providers. Every one of these speaks the OpenAI chat-completions
+# protocol, so a single OpenAI() client handles them all - only the base URL,
+# the default model, and the API-key env var differ. Ollama is the local/offline
+# option and needs no real key; the rest are cloud APIs keyed by <NAME>_API_KEY.
+# setup_brain.bat writes PROVIDER, MODEL and the relevant key into .env.
+PROVIDERS = {
+    "ollama":     {"base_url": "http://localhost:11434/v1",     "default_model": "gemma3:12b",     "key_env": None},
+    "deepseek":   {"base_url": "https://api.deepseek.com",      "default_model": "deepseek-chat",  "key_env": "DEEPSEEK_API_KEY"},
+    "openai":     {"base_url": "https://api.openai.com/v1",     "default_model": "gpt-4o-mini",    "key_env": "OPENAI_API_KEY"},
+    "groq":       {"base_url": "https://api.groq.com/openai/v1", "default_model": "llama-3.3-70b-versatile", "key_env": "GROQ_API_KEY"},
+    "openrouter": {"base_url": "https://openrouter.ai/api/v1",  "default_model": "deepseek/deepseek-chat", "key_env": "OPENROUTER_API_KEY"},
+    "mistral":    {"base_url": "https://api.mistral.ai/v1",     "default_model": "mistral-small-latest", "key_env": "MISTRAL_API_KEY"},
+}
+
+PROVIDER = os.getenv("PROVIDER", "deepseek").strip().lower()
+if PROVIDER not in PROVIDERS:
+    raise ValueError("PROVIDER must be one of: " + ", ".join(PROVIDERS))
+
+_cfg = PROVIDERS[PROVIDER]
+
+# Model: an explicit MODEL wins; then the legacy OLLAMA_MODEL (older .env files
+# only wrote that); then the provider's default.
+MODEL = os.getenv("MODEL", "").strip()
+if not MODEL and PROVIDER == "ollama":
+    MODEL = os.getenv("OLLAMA_MODEL", "").strip()
+if not MODEL:
+    MODEL = _cfg["default_model"]
+
+# Key: Ollama accepts any non-empty string; the cloud providers need a real key.
+if _cfg["key_env"] is None:
+    _api_key = "ollama"
 else:
-    raise ValueError("PROVIDER must be 'deepseek' or 'ollama'")
+    _api_key = os.getenv(_cfg["key_env"], "").strip()
+    if not _api_key:
+        raise ValueError(f"{PROVIDER} needs {_cfg['key_env']} set (run setup_brain.bat to configure it).")
+
+client = OpenAI(api_key=_api_key, base_url=_cfg["base_url"])
 
 app = Flask(__name__)
 

@@ -56,6 +56,28 @@ public sealed class LauncherPaths
         return Path.IsPathRooted(p) ? p : Path.Combine(DistDir, p);
     }
 
+    // Best-effort location of the brain's persistent player memory. The pack ships
+    // the brain under dist\brain\, so its memory sits at dist\brain\memory\; a raw
+    // source checkout keeps it one level above dist\ at ...\memory\. Returns the
+    // first that exists; when neither does, returns the pack-layout path as the
+    // target to write a restored file to. The database is the real progress, so a
+    // missing memory file is never fatal - the backup simply skips it.
+    public string BrainMemoryFile
+    {
+        get
+        {
+            var packLevel = Path.Combine(DistDir, "brain", "memory", "fpc_memory.json");
+            if (File.Exists(packLevel)) return packLevel;
+            var parent = Directory.GetParent(DistDir);
+            if (parent != null)
+            {
+                var srcLevel = Path.Combine(parent.FullName, "memory", "fpc_memory.json");
+                if (File.Exists(srcLevel)) return srcLevel;
+            }
+            return packLevel;
+        }
+    }
+
     // The pack ships the brain at dist\brain\setup_brain.bat; a raw source
     // checkout keeps it one level above dist\. Try both, as launcher.ps1 does.
     public string? FindBrainSetup()

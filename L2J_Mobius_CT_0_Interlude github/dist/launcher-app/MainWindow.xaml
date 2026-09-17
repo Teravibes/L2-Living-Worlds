@@ -229,6 +229,15 @@
                   <Button x:Name="ConfigButton" Grid.Column="0" Style="{StaticResource Flat}" Content="Config Editor"/>
                   <Button x:Name="ModulesButton" Grid.Column="2" Style="{StaticResource Flat}" Content="Modules"/>
                 </Grid>
+                <Grid Margin="0,8,0,0">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="8"/>
+                    <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+                  <Button x:Name="BackupButton" Grid.Column="0" Style="{StaticResource Flat}" Content="Back up progress"/>
+                  <Button x:Name="RestoreButton" Grid.Column="2" Style="{StaticResource Flat}" Content="Restore progress"/>
+                </Grid>
               </StackPanel>
             </Border>
 

@@ -74,8 +74,11 @@ public partial class SettingsWindow : Window
     }
 
     // Opens the interactive brain setup (setup_brain.bat) in its own console
-    // window so the user can install Python and pick Ollama or DeepSeek. Matches
-    // the old Control Panel's "Set up brain" button (cmd /k keeps the window up).
+    // window so the user can install Python and pick a provider and model. Passes
+    // --reconfigure so the questions run every time this button is clicked, even
+    // when the brain is already configured (a plain run would just start it). The
+    // saved .env values are offered as defaults, so existing API keys are reused.
+    // cmd /k keeps the window up.
     private void BrainSetup_Click(object sender, RoutedEventArgs e)
     {
         var brain = _paths.FindBrainSetup();
@@ -91,7 +94,7 @@ public partial class SettingsWindow : Window
             Process.Start(new ProcessStartInfo
             {
                 FileName = "cmd.exe",
-                Arguments = $"/k \"{brain}\"",
+                Arguments = $"/k \"{brain}\" --reconfigure",
                 UseShellExecute = true,
                 WorkingDirectory = Path.GetDirectoryName(brain) ?? _paths.DistDir
             });

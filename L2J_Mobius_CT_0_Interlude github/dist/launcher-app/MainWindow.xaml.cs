@@ -7,6 +7,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using Microsoft.Win32;
 using LivingWorld.Core;
 
 namespace LivingWorld;
@@ -50,6 +51,8 @@ public partial class MainWindow : Window
         UpdateButton.Click += Update_Click;
         ConfigButton.Click += Config_Click;
         ModulesButton.Click += Modules_Click;
+        BackupButton.Click += Backup_Click;
+        RestoreButton.Click += Restore_Click;
 
         // Live status lights.
         _statusTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
@@ -200,6 +203,98 @@ public partial class MainWindow : Window
     {
         var dlg = new ModulesWindow(_paths) { Owner = this };
         dlg.ShowDialog();
+    }
+
+    // ---- backup / restore -------------------------------------------------
+
+    // Writes a single portable .zip holding a full database dump plus the brain
+    // memory. Best done with the server stopped for a clean snapshot, so it warns
+    // (does not block) if the server is up. The dialog defaults to Documents so
+    // the file lives outside the pack folder and survives a reinstall.
+    private async void Backup_Click(object sender, RoutedEventArgs e)
+    {
+        if (_busy) return;
+        _cfg = Config.Load(new Ini(_paths.IniPath));
+
+        if (Ports.IsOpen(Ports.Login) || Ports.IsOpen(Ports.Game))
+        {
+            var go = MessageBox.Show(
+                "The server is running. For a clean snapshot it is best to Stop it first, then back up.\n\nBack up anyway?",
+                "Living World Launcher", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (go != MessageBoxResult.Yes) return;
+        }
+
+        var dlg = new SaveFileDialog
+        {
+            Title = "Save your progress backup",
+            FileName = Backup.SuggestedFileName(),
+            Filter = "Living World backup (*.zip)|*.zip",
+            InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+        };
+        if (dlg.ShowDialog(this) != true) return;
+        var target = dlg.FileName;
+
+        SetBusy(true);
+        LogBox.Clear();
+        SetStage("Backing up your progress ...", 0);
+        var backup = new Backup(_paths, _cfg, UiLog);
+        try
+        {
+            await Task.Run(() => backup.CreateBackup(target));
+            SetStage("Backup complete.", 1);
+            MessageBox.Show(
+                "Your progress was backed up to:\n\n" + target +
+                "\n\nKeep this file somewhere safe, such as a USB stick or the cloud. To bring it back later, use Restore progress.",
+                "Living World Launcher", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+        catch (LauncherException ex) { Log("[FAIL] " + ex.Message); SetStage("Backup failed - see the log.", 0); }
+        catch (Exception ex) { Log("[FAIL] " + ex.Message); SetStage("Backup failed - see the log.", 0); }
+        finally { SetBusy(false); RefreshStatus(); }
+    }
+
+    // Replaces all current progress with a chosen backup. Stops the server first
+    // and requires an explicit confirmation because it overwrites the database.
+    private async void Restore_Click(object sender, RoutedEventArgs e)
+    {
+        if (_busy) return;
+        _cfg = Config.Load(new Ini(_paths.IniPath));
+
+        var dlg = new OpenFileDialog
+        {
+            Title = "Choose a backup to restore",
+            Filter = "Living World backup (*.zip)|*.zip",
+            InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+            CheckFileExists = true,
+        };
+        if (dlg.ShowDialog(this) != true) return;
+        var source = dlg.FileName;
+
+        var confirm = MessageBox.Show(
+            "Restoring REPLACES all current progress on this server with the backup:\n\n" + source +
+            "\n\nThe server will be stopped first. This cannot be undone. Continue?",
+            "Living World Launcher", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+        if (confirm != MessageBoxResult.Yes) return;
+
+        SetBusy(true);
+        LogBox.Clear();
+        SetStage("Restoring your progress ...", 0);
+        var servers = new Servers(_paths, _cfg, UiLog);
+        var backup = new Backup(_paths, _cfg, UiLog);
+        try
+        {
+            await Task.Run(() =>
+            {
+                servers.StopAll();
+                backup.RestoreBackup(source);
+            });
+            SetStage("Restore complete.", 1);
+            MessageBox.Show(
+                "Your progress was restored. Press PLAY to start the server on the restored data.",
+                "Living World Launcher", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+        catch (LauncherException ex) { Log("[FAIL] " + ex.Message); SetStage("Restore failed - see the log.", 0); }
+        catch (Exception ex) { Log("[FAIL] " + ex.Message); SetStage("Restore failed - see the log.", 0); }
+        finally { SetBusy(false); RefreshStatus(); }
     }
 
     // ---- updates ----------------------------------------------------------
@@ -367,6 +462,8 @@ public partial class MainWindow : Window
         StopButton.IsEnabled = !busy && (Ports.IsOpen(Ports.Login) || Ports.IsOpen(Ports.Game) || File.Exists(_paths.RegistryPath));
         SettingsButton.IsEnabled = !busy;
         UpdateButton.IsEnabled = !busy;
+        BackupButton.IsEnabled = !busy;
+        RestoreButton.IsEnabled = !busy;
     }
 
     private static string Coalesce(string v, string fallback) =>

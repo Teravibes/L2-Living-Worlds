@@ -4,10 +4,13 @@ using System.Text;
 
 namespace LivingWorld.Core;
 
-// Thin process helpers. Two shapes are used:
-//   * StartHidden - long-running children (DB engine, Java servers, brain). They
-//     get their own hidden console window (matching Start-Process -WindowStyle
-//     Hidden) and outlive the launcher, so nothing is redirected.
+// Thin process helpers. Three shapes are used:
+//   * StartHidden - long-running children with their own GUI or no UI (DB engine,
+//     Java servers). They get a hidden console window (matching Start-Process
+//     -WindowStyle Hidden) and outlive the launcher, so nothing is redirected.
+//   * StartVisible - children whose console IS their only interface (the FPC
+//     brain, the game client). They get a normal, visible window so the user can
+//     watch their output, exactly like double-clicking the batch file.
 //   * Run - short foreground commands (the mysql client) whose stdout/stderr and
 //     exit code we capture and log.
 public static class Proc
@@ -27,17 +30,22 @@ public static class Proc
         return p;
     }
 
-    public static Process StartVisible(string exe, string workingDir)
+    public static Process StartVisible(string exe, string arguments, string workingDir)
     {
         var psi = new ProcessStartInfo
         {
             FileName = exe,
+            Arguments = arguments,
             WorkingDirectory = workingDir,
             UseShellExecute = true,
+            WindowStyle = ProcessWindowStyle.Normal,
         };
         return Process.Start(psi)
                ?? throw new LauncherException($"Failed to start: {exe}");
     }
+
+    public static Process StartVisible(string exe, string workingDir)
+        => StartVisible(exe, string.Empty, workingDir);
 
     public sealed record Result(int ExitCode, string StdOut, string StdErr);
 

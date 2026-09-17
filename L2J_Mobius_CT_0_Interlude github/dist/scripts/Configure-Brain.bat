@@ -15,4 +15,11 @@ if not exist "%BRAIN%" (
   pause
   exit /b 1
 )
-call "%BRAIN%" %*
+REM Default to --reconfigure so double-clicking this always walks through the
+REM provider/model questions (keeping saved keys), even when the brain is already
+REM set up. Any explicit argument the user passes still wins.
+if "%~1"=="" (
+  call "%BRAIN%" --reconfigure
+) else (
+  call "%BRAIN%" %*
+)

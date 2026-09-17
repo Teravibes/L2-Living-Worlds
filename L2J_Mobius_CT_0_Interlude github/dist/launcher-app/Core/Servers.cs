@@ -65,8 +65,13 @@ public sealed class Servers
         // --auto is non-interactive: the brain starts only if it has already been
         // configured (.env + .venv); otherwise it exits without prompting, so boot
         // never hangs waiting for input.
+        //
+        // Launch it VISIBLE. The brain's console is its only interface - it shows
+        // the request/response log and is where the user presses CTRL+C to stop it.
+        // A hidden window would leave the brain running with nothing to see, which
+        // looks like it never started. This matches double-clicking setup_brain.bat.
         _log("Launching FPC brain (auto - only if already configured) ...");
-        var process = Proc.StartHidden("cmd.exe", $"/c \"{brainBat}\" --auto", _paths.DistDir);
+        var process = Proc.StartVisible("cmd.exe", $"/c \"{brainBat}\" --auto", _paths.DistDir);
         registry.Register("FPC Brain", process, Path.GetFileName(brainBat));
         _log($"Brain launch requested (PID {process.Id}). Run setup_brain.bat once to configure it if needed.");
     }

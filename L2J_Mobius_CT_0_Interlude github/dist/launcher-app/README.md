@@ -53,6 +53,7 @@ launcher-app/
     ProcessRegistry.cs      launcher-owned process tracking (start/stop safety)
     Proc.cs                 process launch + command capture helpers
     Database.cs             engine start, first-run init, schema install
+    Backup.cs               whole-server backup + restore (one .zip)
     Servers.cs              login/game/brain/client start + safe stop
     Boot.cs                 the Play sequence
     Updater.cs              news feed + patch download/apply

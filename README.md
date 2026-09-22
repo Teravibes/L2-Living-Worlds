@@ -33,6 +33,8 @@ core - augmentation, Seven Signs, sieges, raids, the full quest and skill set.
 For help with installation, to report bugs, or to share your experience and
 suggestions, join our [L2 Living Worlds Discord](https://discord.gg/6KTyDG55PA).
 
+For in-game available commands and features please see the wiki [L2 Living Worlds wiki](https://livingworlds.pages.dev/wiki) 
+
 ---
 
 ## Quick start (Windows, install nothing)
@@ -96,11 +98,10 @@ It needs a model to think with - a **local model via [Ollama](https://ollama.com
 API key, runs on your machine) or a hosted API. **Python is installed automatically** if
 you don't already have it.
 
-**If you're using the one-click pack:** the brain is bundled at `dist\brain\`. Just
-double-click `dist\brain\setup_brain.bat` - it installs Python if needed, asks Ollama vs
-DeepSeek, and sets everything up. To have the launcher start it automatically, set
-`StartBrain=true` in `dist\launcher\launcher.ini`. See `dist/brain/README.md` in the pack
-for details.
+**If you're using the launcher:** the brain is bundled at `dist\brain\`. Just go to settings
+in the launcher and click "set up / configure brain..." and the guide to set it up will come up.
+Alternative you can also double-click `dist\brain\setup_brain.bat` - which does the same thing and 
+sets everything up.
 
 **If you cloned the source repo:** on Linux/macOS the one-step script does everything:
 

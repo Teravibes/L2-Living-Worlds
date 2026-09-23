@@ -3423,7 +3423,7 @@ public class PhantomManager implements IXmlReader
 	 * next listed skill. Called for fighters from the assign tick (once they own a focus) and for mages from the mage
 	 * tick (once at casting range); buddies and recruited members are excluded upstream by their own ticks.
 	 */
-	private void tryHunterPlaystyle(Player phantom, Monster focus, PhantomData data)
+	private void tryHunterPlaystyle(Player phantom, Creature focus, PhantomData data)
 	{
 		if (!data.playstyleParked || (data.play == null))
 		{
@@ -3496,7 +3496,7 @@ public class PhantomManager implements IXmlReader
 	 * relaunch the swing ({@code doAttack} self-guards via {@code isAttackDisabled}, so it can never swing early - e.g.
 	 * while stunned); any other case engages/retargets normally through {@code setIntention}.
 	 */
-	private void keepMeleeAttacking(Player phantom, Monster focus)
+	private void keepMeleeAttacking(Player phantom, Creature focus)
 	{
 		if (phantom.isCastingNow() || phantom.isCastingSimultaneouslyNow())
 		{
@@ -3524,7 +3524,7 @@ public class PhantomManager implements IXmlReader
 	 * the state that explains a stall - distance to focus, AI intention, attacking/moving/casting flags, under-attack,
 	 * HP/MP - plus what the engine decided this tick ({@code note}). Off entirely when DEBUG is off.
 	 */
-	private void hunterDbg(Player phantom, Monster focus, PhantomData data, String note)
+	private void hunterDbg(Player phantom, Creature focus, PhantomData data, String note)
 	{
 		if (!PhantomPartyManager.DEBUG)
 		{
@@ -4152,7 +4152,7 @@ public class PhantomManager implements IXmlReader
 	 * steps toward it kites indefinitely and wanders into fresh spawns. (Out-of-MP break-off lives in
 	 * {@link #mageCombat} via {@link #retreatMage}.)
 	 */
-	private void positionMage(Player mage, Monster target)
+	private void positionMage(Player mage, Creature target)
 	{
 		double dx = mage.getX() - target.getX();
 		double dy = mage.getY() - target.getY();
@@ -4686,8 +4686,7 @@ public class PhantomManager implements IXmlReader
 		data.nextPvpDecisionAt = 0; // decide stand-or-flee now
 		data.pvpFleeing = false;
 		// The hunt-detach steps below are field-hunter machinery. A recruited member or buddy (a party/clan defender)
-		// is driven by PhantomPartyManager, which defers while pvpTargetOid != 0; it already has its skills on AutoUse
-		// and does not run the auto-play hunt or the hunter playstyle engine, so it just needs the target and drive.
+		// is driven by PhantomPartyManager, which defers while pvpTargetOid != 0.
 		if (!data.recruited && !data.role.isBuddy())
 		{
 			// Stop the native auto-play target scanner so it does not re-acquire a monster over our player target; keep
@@ -4702,12 +4701,11 @@ public class PhantomManager implements IXmlReader
 				data.resting = false;
 			}
 			data.claimedOid = 0; // release any monster it owned to the hunt pool
-			// Return the phantom's offensive skills to AutoUse for the fight. A playstyle fighter/mage normally parks
-			// them into the monster-typed playstyle engine (which PvP does not drive), so without this it would only
-			// auto-attack; AutoUse casts its offensive skills on whatever it is targeting - here, the player - as long
-			// as that target is attackable and outside a peace zone. endPvp's enableAutoHunt re-parks it for the hunt.
-			unparkHunterPlaystyle(phantom, data);
 		}
+		// The playstyle skills stay PARKED in the engine: drivePvp drives them through tryHunterPlaystyle against the
+		// Player target (the engine is now Creature-typed), so every class uses its tuned rotation in PvP, not just a
+		// round-robin AutoUse dump, and a mage kites and nukes instead of meleeing. A no-playstyle phantom has nothing
+		// parked, so its AutoUse keeps casting as before.
 		drivePvp(phantom, data, attacker, now);
 	}
 
@@ -4747,8 +4745,34 @@ public class PhantomManager implements IXmlReader
 		}
 		else
 		{
-			engageTarget(phantom, target);
+			pvpStandCombat(phantom, data, target);
 		}
+	}
+
+	/**
+	 * Stand-and-fight combat for a PvP tick, using the same class-combat primitives as the PvE hunt so every class
+	 * fights in PvP the way it fights monsters. A mage kites to cast range and nukes (it never melees); a fighter
+	 * approaches and auto-attacks. Offensive skills come from the (now Creature-typed) playstyle engine via
+	 * {@link #tryHunterPlaystyle}; a no-playstyle class falls back to its AutoUse casting, exactly as in PvE.
+	 */
+	private void pvpStandCombat(Player phantom, PhantomData data, Player target)
+	{
+		phantom.setTarget(target);
+		if (data.mage)
+		{
+			// Caster: hold at cast range and nuke, never walk in to melee. Out of range, close the gap first.
+			if (phantom.calculateDistance2D(target) > (MAGE_CAST_RANGE + MAGE_RANGE_TOLERANCE))
+			{
+				positionMage(phantom, target);
+				return;
+			}
+			tryHunterPlaystyle(phantom, target, data); // in range: cast the tuned rotation (or AutoUse for a no-playstyle mage)
+			return;
+		}
+		// Fighter: approach and auto-attack (the base ATTACK intention), then let the engine fire its class skills at
+		// the paced moments. tryHunterPlaystyle no-ops for a no-playstyle fighter, whose AutoUse casts as before.
+		engageTarget(phantom, target);
+		tryHunterPlaystyle(phantom, target, data);
 	}
 
 	/** Turns the phantom to attack the target, letting the core AI drive the approach, swing, and AutoUse casting. */

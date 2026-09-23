@@ -170,7 +170,7 @@ public class PhantomPlaystyleEngine
 	 * @param mpReservePercent below this own-MP percent, spending entries are skipped (PANIC/LIMIT exempt)
 	 * @param roleName the member's party role name, used to resolve role-split lineages
 	 */
-	public static CastAction pick(Player npc, Monster focus, PlayState state, boolean healerReady, boolean underAttack, int mpReservePercent, String roleName)
+	public static CastAction pick(Player npc, Creature focus, PlayState state, boolean healerReady, boolean underAttack, int mpReservePercent, String roleName)
 	{
 		final int classId = npc.getPlayerClass().getId();
 		state.refreshIfReloaded();
@@ -381,7 +381,7 @@ public class PhantomPlaystyleEngine
 		return null;
 	}
 
-	private static boolean conditionsPass(Player npc, Monster focus, PlayEntry entry, Skill skill, boolean healerReady, boolean underAttack)
+	private static boolean conditionsPass(Player npc, Creature focus, PlayEntry entry, Skill skill, boolean healerReady, boolean underAttack)
 	{
 		for (Cond cond : entry.conds)
 		{
@@ -425,7 +425,9 @@ public class PhantomPlaystyleEngine
 				}
 				case MOBS_NEAR:
 				{
-					if (countPack(npc, focus, skill) < entry.mobsAtLeast)
+					// PvE-only (an AoE justified by a monster pack). A Player focus has no mob pack, so the condition
+					// fails and the AoE entry does not fire in PvP; the PvE path still passes a Monster here.
+					if (!(focus instanceof Monster) || (countPack(npc, (Monster) focus, skill) < entry.mobsAtLeast))
 					{
 						return false;
 					}
@@ -433,7 +435,8 @@ public class PhantomPlaystyleEngine
 				}
 				case MOBS_UNSPOILED:
 				{
-					if (countUnspoiled(focus, skill) < entry.mobsAtLeast)
+					// PvE-only (AoE-spoil worth gate). Spoil does not apply to a Player, so this never fires in PvP.
+					if (!(focus instanceof Monster) || (countUnspoiled((Monster) focus, skill) < entry.mobsAtLeast))
 					{
 						return false; // not enough unspoiled mobs to make an AoE-spoil worthwhile
 					}
@@ -483,9 +486,11 @@ public class PhantomPlaystyleEngine
 				}
 				case NOT_SPOILED:
 				{
-					if (focus.isSpoiled())
+					// Spoil is PvE-only. On a Player focus this condition can never be satisfied usefully, so the
+					// spoil skill it guards does not fire in PvP; the PvE path still passes a Monster here.
+					if (!(focus instanceof Monster) || ((Monster) focus).isSpoiled())
 					{
-						return false; // already spoiled - re-casting is wasted MP; a resisted attempt leaves this false and retries next tick
+						return false; // already spoiled (or not a monster) - re-casting is wasted MP; retries next tick
 					}
 					break;
 				}
@@ -648,7 +653,7 @@ public class PhantomPlaystyleEngine
 	}
 
 	/** Range gate: melee skills need contact reach, ranged ones their cast range (with slack for drift while both move). */
-	private static boolean inReach(Player npc, Monster focus, Skill skill)
+	private static boolean inReach(Player npc, Creature focus, Skill skill)
 	{
 		final int reach = (skill.getCastRange() > 0) ? (skill.getCastRange() + RANGE_SLACK) : ((skill.getAffectRange() > 0) ? skill.getAffectRange() : MELEE_REACH + RANGE_SLACK);
 		// Collision-aware, so this matches the range the rest of the core actually fights at: CreatureAI.maybeMoveToPawn

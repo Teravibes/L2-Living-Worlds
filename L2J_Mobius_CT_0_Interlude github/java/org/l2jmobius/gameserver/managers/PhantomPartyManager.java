@@ -4037,7 +4037,9 @@ public class PhantomPartyManager
 			}
 			if (npc.getInventory().getInventoryItemCount(CUBIC_CRYSTAL_ID, -1) < skill.getItemConsumeCount())
 			{
-				npc.getInventory().addItem(ItemProcessType.REWARD, CUBIC_CRYSTAL_ID, CUBIC_CRYSTAL_STOCK, npc, null);
+				// No actor: an actor fires ON_PLAYER_ITEM_ADD, which the loot tracker would record, so "return loot"
+				// would hand the leader the knight's summoning crystals.
+				npc.getInventory().addItem(ItemProcessType.REWARD, CUBIC_CRYSTAL_ID, CUBIC_CRYSTAL_STOCK, null, null);
 			}
 			npc.setTarget(npc);
 			npc.doCast(skill);

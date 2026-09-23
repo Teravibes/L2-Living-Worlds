@@ -50,9 +50,11 @@ public class FakePlayerChatParsingTest
 		testTradeUnitPrice();
 		testSpokenQuantity();
 		testShopPriceMultiplier();
-		testResolveDealPrice();
 		testParseCounterOffer();
 		testAcceptsCounter();
+		testBareCounterCandidate();
+		testActionIntentPredicates();
+		testDealIntentPredicates();
 		testLfpLevel();
 		testLooksLikeLfp();
 		testLooksLikeTradeAd();
@@ -138,22 +140,13 @@ public class FakePlayerChatParsingTest
 		eq(5000, FakePlayerChatParsing.applyShopPriceMultiplier(5, "k"), "k -> *1000");
 		eq(5000000, FakePlayerChatParsing.applyShopPriceMultiplier(5, "kk"), "kk -> *1,000,000");
 		eq(5000, FakePlayerChatParsing.applyShopPriceMultiplier(5, "K"), "suffix is case-insensitive");
-	}
-
-	private static void testResolveDealPrice()
-	{
-		// The offer is authoritative; a genuine haggle within 4x either way is honored.
-		eq(14000, FakePlayerChatParsing.resolveDealPrice(14000, 14000), "exact match kept");
-		eq(12000, FakePlayerChatParsing.resolveDealPrice(12000, 14000), "small discount is a real haggle");
-		eq(20000, FakePlayerChatParsing.resolveDealPrice(20000, 14000), "small markup is a real haggle");
-		// The core bug: the model dropped the "k", so 14k became a literal 14 -> reject, use the offer.
-		eq(14000, FakePlayerChatParsing.resolveDealPrice(14, 14000), "dropped-k 14 -> falls back to 14000");
-		// An added "k" (14 offered, tag says 14000) is also outside the band -> use the offer.
-		eq(14, FakePlayerChatParsing.resolveDealPrice(14000, 14), "added-k -> falls back to offer");
-		// No usable tag price -> use the offer; no server anchor -> trust the tag.
-		eq(14000, FakePlayerChatParsing.resolveDealPrice(0, 14000), "no tag price -> offer");
-		eq(500, FakePlayerChatParsing.resolveDealPrice(500, 0), "no offer -> trust tag");
-		eq(0, FakePlayerChatParsing.resolveDealPrice(0, 0), "nothing known -> 0");
+		// FPC-004: the multiplier is overflow-safe. A wide price that would wrap int is clamped to Integer.MAX_VALUE
+		// rather than becoming negative, and a negative base can never produce a negative price.
+		eq(Integer.MAX_VALUE, FakePlayerChatParsing.applyShopPriceMultiplier(Integer.MAX_VALUE, "kk"), "MAX * kk clamps, not wraps");
+		eq(Integer.MAX_VALUE, FakePlayerChatParsing.applyShopPriceMultiplier(3000000, "kk"), "3,000,000 kk clamps to MAX");
+		eq(Integer.MAX_VALUE, FakePlayerChatParsing.applyShopPriceMultiplier(2500000, "k"), "2,500,000 k clamps to MAX");
+		eq(2000000000, FakePlayerChatParsing.applyShopPriceMultiplier(2000000, "k"), "in-range k still exact");
+		eq(0, FakePlayerChatParsing.applyShopPriceMultiplier(-5, "k"), "negative base never yields a negative price");
 	}
 
 	private static void testParseCounterOffer()
@@ -195,6 +188,74 @@ public class FakePlayerChatParsingTest
 		// Guards.
 		truth(!FakePlayerChatParsing.acceptsCounter(0, 14000, true), "no counter -> refuse");
 		truth(!FakePlayerChatParsing.acceptsCounter(12000, 0, true), "no anchor -> refuse");
+	}
+
+	private static void testBareCounterCandidate()
+	{
+		// FPC-042: a bare number with a PRICE cue is a candidate to CONFIRM (not commit); no cue -> leave alone.
+		eq(17, FakePlayerChatParsing.parseBareCounterCandidate("make it 17"), "'make it 17' -> 17 candidate");
+		eq(17, FakePlayerChatParsing.parseBareCounterCandidate("17?"), "'17?' -> 17 candidate");
+		eq(20, FakePlayerChatParsing.parseBareCounterCandidate("how about 20"), "'how about 20' -> 20 candidate");
+		eq(17, FakePlayerChatParsing.parseBareCounterCandidate("17 works"), "'17 works' -> 17 candidate");
+		// A quantity cue means the bare number is an amount, never a price.
+		eq(0, FakePlayerChatParsing.parseBareCounterCandidate("i'll take 5000"), "quantity 'take' -> no candidate");
+		eq(0, FakePlayerChatParsing.parseBareCounterCandidate("i need 200"), "quantity 'need' -> no candidate");
+		// A bare number with no cue at all is ambiguous -> leave the deal unchanged (no clarify).
+		eq(0, FakePlayerChatParsing.parseBareCounterCandidate("5000"), "bare number, no cue -> no candidate");
+		// An explicit/suffixed price is handled by parseCounterOffer, not treated as a bare candidate.
+		eq(0, FakePlayerChatParsing.parseBareCounterCandidate("12k?"), "suffixed price -> no bare candidate");
+		eq(0, FakePlayerChatParsing.parseBareCounterCandidate(null), "null -> no candidate");
+
+		// scaleBareCounter picks the interpretation closest in magnitude to the current quoted price.
+		eq(17000, FakePlayerChatParsing.scaleBareCounter(17, 15000), "17 vs 15k price -> 17,000");
+		eq(17, FakePlayerChatParsing.scaleBareCounter(17, 15), "17 vs 15 adena price -> 17");
+		eq(17000, FakePlayerChatParsing.scaleBareCounter(17, 0), "17 with no anchor -> 17,000 (k shorthand)");
+		eq(2000000, FakePlayerChatParsing.scaleBareCounter(2, 1500000), "2 vs 1.5m price -> 2,000,000");
+	}
+
+	private static void testActionIntentPredicates()
+	{
+		// FPC-044/FPC-046: destructive DISBAND needs a real dismiss order; negation/keep phrasings hold.
+		truth(FakePlayerChatParsing.isDismissOrder("you can go now, thanks"), "'you can go' -> dismiss");
+		truth(FakePlayerChatParsing.isDismissOrder("alright disband"), "'disband' -> dismiss");
+		truth(!FakePlayerChatParsing.isDismissOrder("don't leave the party"), "'don't leave' -> hold");
+		truth(!FakePlayerChatParsing.isDismissOrder("stay with me"), "'stay' -> hold");
+		truth(!FakePlayerChatParsing.isDismissOrder("hey how's it going"), "chit-chat -> hold");
+		truth(!FakePlayerChatParsing.isDismissOrder(null), "null -> hold");
+
+		// Reversible FOLLOW/STAY are vetoed only when the player negates them.
+		truth(FakePlayerChatParsing.negatesFollow("don't follow me"), "'don't follow' -> veto follow");
+		truth(FakePlayerChatParsing.negatesFollow("wait here"), "'wait here' -> veto follow");
+		truth(!FakePlayerChatParsing.negatesFollow("come on then"), "'come on' -> allow follow");
+		truth(!FakePlayerChatParsing.negatesFollow(null), "null -> allow follow");
+		truth(FakePlayerChatParsing.negatesStay("follow me"), "'follow me' -> veto stay");
+		truth(FakePlayerChatParsing.negatesStay("don't stay here"), "'don't stay' -> veto stay");
+		truth(!FakePlayerChatParsing.negatesStay("hold this spot"), "'hold this spot' -> allow stay");
+	}
+
+	private static void testDealIntentPredicates()
+	{
+		// FPC-060: SHOP/MEET commit needs the player's own acceptance, not just the model tag.
+		truth(FakePlayerChatParsing.isDealAccept("ok deal"), "'ok deal' -> accept");
+		truth(FakePlayerChatParsing.isDealAccept("sure"), "'sure' -> accept");
+		truth(FakePlayerChatParsing.isDealAccept("yeah i'll take it"), "'i'll take it' -> accept");
+		truth(FakePlayerChatParsing.isDealAccept("gk"), "naming a meet place -> accept");
+		truth(FakePlayerChatParsing.isDealAccept("meet me at the warehouse"), "'meet me' -> accept");
+		truth(!FakePlayerChatParsing.isDealAccept("nah, not interested"), "'not interested' -> not accept");
+		truth(!FakePlayerChatParsing.isDealAccept("no deal"), "'no deal' -> not accept");
+		truth(!FakePlayerChatParsing.isDealAccept("hmm let me think"), "ambiguous -> not accept");
+		truth(!FakePlayerChatParsing.isDealAccept("broke"), "'broke' does not match 'ok' substring");
+		truth(!FakePlayerChatParsing.isDealAccept("can you do 5k"), "'5k' does not match 'k' as accept");
+		truth(!FakePlayerChatParsing.isDealAccept(null), "null -> not accept");
+
+		// FPC-061: MEET:cancel needs a real cancel intent; conservative and phrase-based.
+		truth(FakePlayerChatParsing.isDealCancel("cancel it"), "'cancel' -> cancel");
+		truth(FakePlayerChatParsing.isDealCancel("forget it"), "'forget it' -> cancel");
+		truth(FakePlayerChatParsing.isDealCancel("changed my mind, not coming"), "'not coming' -> cancel");
+		truth(FakePlayerChatParsing.isDealCancel("nvm"), "'nvm' -> cancel");
+		truth(!FakePlayerChatParsing.isDealCancel("ok deal"), "acceptance -> not cancel");
+		truth(!FakePlayerChatParsing.isDealCancel("no worries, meet me at gk"), "'no worries' -> not cancel");
+		truth(!FakePlayerChatParsing.isDealCancel(null), "null -> not cancel");
 	}
 
 	private static void testLfpLevel()
@@ -243,12 +304,13 @@ public class FakePlayerChatParsingTest
 
 	private static void testShopTagPattern()
 	{
-		final Matcher m = FakePlayerChatParsing.SHOP_TAG.matcher("deal [[SHOP:SELL:soulshot:5k]]");
-		truth(m.find(), "SHOP tag matches");
-		eq("SELL", m.group(1).toUpperCase(), "side captured");
-		eq("soulshot", m.group(2), "item captured");
-		eq("5", m.group(3), "price digits captured");
-		eq("k", m.group(4), "price suffix captured");
+		// FPC-062: SHOP is a bare transition signal (Java owns side/item/price), so the pattern only detects and
+		// strips the tag in any form; it no longer captures a payload.
+		truth(FakePlayerChatParsing.SHOP_TAG.matcher("deal [[SHOP]]").find(), "bare SHOP matches");
+		truth(FakePlayerChatParsing.SHOP_TAG.matcher("deal [[SHOP:SELL:soulshot:5k]]").find(), "legacy payload SHOP still matches");
+		truth(FakePlayerChatParsing.SHOP_TAG.matcher("ok [[SHOP:garbage]").find(), "malformed SHOP close still matches so it is stripped");
+		truth(!FakePlayerChatParsing.SHOP_TAG.matcher("i went shopping today").find(), "prose 'shopping' does not match");
+		eq("done", FakePlayerChatParsing.SHOP_TAG.matcher("done [[SHOP:SELL:x:5k]]").replaceAll("").trim(), "SHOP tag strips out");
 	}
 
 	private static void testCountBefore()
@@ -285,6 +347,9 @@ public class FakePlayerChatParsingTest
 
 		// Numeric count is clamped to 6.
 		req(FakePlayerChatParsing.parseRoleRequests("10 dd").get(0), "dd", 6, "count clamps to 6");
+
+		// FPC-004: an oversized numeric count must clamp, not throw NumberFormatException on a very long number.
+		req(FakePlayerChatParsing.parseRoleRequests("99999999999 dd").get(0), "dd", 6, "huge count clamps to 6 without throwing");
 
 		// Plurals are emitted verbatim (caller resolves the singular).
 		req(FakePlayerChatParsing.parseRoleRequests("3 mages").get(0), "mages", 3, "plural token kept verbatim");

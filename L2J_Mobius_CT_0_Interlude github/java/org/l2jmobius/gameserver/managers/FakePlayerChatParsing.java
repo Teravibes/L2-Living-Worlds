@@ -22,6 +22,8 @@ package org.l2jmobius.gameserver.managers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -40,7 +42,11 @@ public final class FakePlayerChatParsing
 	// accept one or two of "]" / ")" as the close so every variant is caught and removed.
 	public static final Pattern MEET_TAG = Pattern.compile("\\[\\[\\s*MEET\\s*:\\s*([a-zA-Z]+)\\s*[\\]\\)]{1,2}", Pattern.CASE_INSENSITIVE);
 	// [[SHOP:SELL|BUY:<item>:<price>]] - the bot commits to actually trading a specific item at a price.
-	public static final Pattern SHOP_TAG = Pattern.compile("\\[\\[\\s*SHOP\\s*:\\s*(SELL|BUY)\\s*:\\s*([^:\\]]+?)\\s*:\\s*(\\d+)\\s*(kk|k)?\\s*\\]\\]", Pattern.CASE_INSENSITIVE);
+	// FPC-062: SHOP is a bare transition signal. Java owns the side/item/price/count (FPC-055), so the tag body is
+	// never read; this tolerant matcher accepts bare [[SHOP]], the legacy [[SHOP:SELL:item:price]] payload, and the
+	// malformed closings weak models emit, so handleMeetRequest can both detect the signal and strip any SHOP form out
+	// of the spoken line (a strict payload-only pattern used to leave a malformed SHOP tag visible in chat).
+	public static final Pattern SHOP_TAG = Pattern.compile("\\[\\[\\s*SHOP\\b[^\\]\\)]*[\\]\\)]{1,2}", Pattern.CASE_INSENSITIVE);
 	public static final Pattern TRADE_AD = Pattern.compile("(wts|selling|s>|wtb|buying|b>)\\s*(.*)", Pattern.CASE_INSENSITIVE);
 	public static final Pattern TRADE_QUANTITY = Pattern.compile("\\b(\\d{1,9})(k|kk|m)?\\b", Pattern.CASE_INSENSITIVE);
 	// A unit price the player explicitly marked in a trade ad. Only a number carrying a price cue counts, so a bare
@@ -253,54 +259,29 @@ public final class FakePlayerChatParsing
 	}
 
 	/**
-	 * Apply the trailing k/kk multiplier from a {@code [[SHOP:...]]} price.<br>
-	 * NOTE: preserves the manager's original {@code int} arithmetic exactly (no 'm' suffix here, unlike
-	 * {@link #parseTradeQuantity}); a price wide enough to overflow {@code int} after {@code *1000000} would
-	 * wrap just as it did before this extraction. Behaviour is intentionally unchanged.
+	 * Apply the trailing k/kk multiplier from a {@code [[SHOP:...]]} price (no 'm' suffix here, unlike
+	 * {@link #parseTradeQuantity}). The multiplication is done in {@code long} and clamped to
+	 * {@code Integer.MAX_VALUE} so a wide price cannot wrap to a negative or otherwise invalid value (FPC-004).
 	 * @param price the base price parsed from the tag
 	 * @param mult the suffix group ("k", "kk", or null)
-	 * @return the multiplied price
+	 * @return the multiplied price, never negative and never above {@code Integer.MAX_VALUE}
 	 */
 	public static int applyShopPriceMultiplier(int price, String mult)
 	{
+		long value = price;
 		if ("k".equalsIgnoreCase(mult))
 		{
-			return price * 1000;
+			value = (long) price * 1000;
 		}
-		if ("kk".equalsIgnoreCase(mult))
+		else if ("kk".equalsIgnoreCase(mult))
 		{
-			return price * 1000000;
+			value = (long) price * 1000000;
 		}
-		return price;
-	}
-
-	/**
-	 * Resolve the unit price to actually charge for a chat-arranged deal, guarding against a weak brain model
-	 * that mangles the price in a {@code [[SHOP:...]]} tag - most often by dropping the "k", turning 14k into a
-	 * literal 14. The server-side offered price (quoted when Java armed the deal) is authoritative; the model's
-	 * tagged price is honored only when it reads as a genuine haggle, i.e. within a 4x band of the offer either
-	 * way. Anything outside that band (a dropped/added suffix, or garbage) falls back to the offered price.
-	 * @param taggedPrice the price parsed from the model's SHOP tag (after any k/kk multiplier); {@code <=0} if absent
-	 * @param offeredUnitPrice the authoritative unit price Java quoted when it armed the deal; {@code <=0} if none
-	 * @return the unit price to use
-	 */
-	public static int resolveDealPrice(int taggedPrice, int offeredUnitPrice)
-	{
-		if (offeredUnitPrice <= 0)
+		if (value < 0)
 		{
-			return Math.max(0, taggedPrice); // no server anchor - trust the tag
+			return 0;
 		}
-		if (taggedPrice <= 0)
-		{
-			return offeredUnitPrice; // model gave no usable price - use the offer
-		}
-		// Genuine haggle band: within 4x of the offer either way. Outside it (dropped "k", added "k", junk) the
-		// tag is not a real negotiated price, so fall back to what Java actually quoted.
-		if ((taggedPrice >= (offeredUnitPrice / 4)) && (taggedPrice <= ((long) offeredUnitPrice * 4)))
-		{
-			return taggedPrice;
-		}
-		return offeredUnitPrice;
+		return (value > Integer.MAX_VALUE) ? Integer.MAX_VALUE : (int) value;
 	}
 
 	/**
@@ -310,8 +291,9 @@ public final class FakePlayerChatParsing
 	 * context makes the intent unambiguous, a bare shorthand number ("12k?", "can you do 12k", "make it 10k") is
 	 * also read as the counter here. A bare number with NO k/kk/m suffix and NO price cue is deliberately ignored,
 	 * so a plain quantity ("i'll take 5000") is never mistaken for a price. The suffix multiplier is applied. This
-	 * is deterministic (no LLM); the caller must still clamp the result into a sane band around the current offer
-	 * (see {@link #resolveDealPrice}) before trusting it, so an absurd or adversarial counter cannot take hold.
+	 * is deterministic (no LLM); the caller must still validate the result against the economy band (see
+	 * {@link FakePlayerStoreFactory#dealPriceWithinBand}) before accepting it, so an absurd or adversarial counter
+	 * cannot take hold.
 	 * @param text the player's whispered reply during an active deal
 	 * @return the counteroffer unit price in (0, 2,000,000,000], or 0 when the player named no price
 	 */
@@ -354,13 +336,100 @@ public final class FakePlayerChatParsing
 		return 0;
 	}
 
+	/** A phrase that marks a bare number as a PRICE proposal ("make it 17", "how about 17", "17?"). */
+	private static final Pattern BARE_PRICE_CUE = Pattern.compile("(?i)(?:make it|how ?(?:about|bout)|can (?:you|u) do|could (?:you|u) do|lower to|down to|up to|i(?:'?ll)? (?:do|give|pay|go)|gimme for|do (?:it )?for)\\s+\\d");
+	/** A bare number immediately followed by a price/agreement cue ("17?", "17 deal", "17 then"). */
+	private static final Pattern BARE_PRICE_TRAILER = Pattern.compile("(?i)(?<![\\w.])\\d{1,7}\\s*(?:\\?|deal\\b|then\\b|works?\\b|ok(?:ay)?\\b)");
+	/** A phrase that marks a bare number as a QUANTITY, so it is never read as a price. */
+	private static final Pattern BARE_QTY_CUE = Pattern.compile("(?i)\\b(?:take|want|need|how many|pcs|pieces|stack|units?|of them|of the|buy|sell(?:ing)?)\\b");
+	/** First bare number (no k/kk/m suffix) in the text. */
+	private static final Pattern BARE_NUMBER = Pattern.compile("(?<![\\w.])(\\d{1,7})(?![\\w.])");
+
+	/**
+	 * Read a BARE-number price candidate ("17?", "make it 17") from a live-deal reply that {@link #parseCounterOffer}
+	 * deliberately ignored because the number carried no k/kk/m suffix. This does NOT commit a price: it is only used
+	 * to ask the player to confirm the scaled value (see {@link #scaleBareCounter}). It returns 0 - meaning "leave the
+	 * deal unchanged, do not even ask" - unless the line has a clear price cue and NO quantity cue, so a stated amount
+	 * ("i'll take 5000") is never treated as a price and a truly ambiguous bare number is left alone.
+	 * @param text the player's whispered reply during an active deal
+	 * @return the raw bare number the player typed (before any scaling), or 0 when none should be treated as a price
+	 */
+	public static int parseBareCounterCandidate(String text)
+	{
+		if ((text == null) || (parseCounterOffer(text) > 0))
+		{
+			return 0; // no text, or an explicit/suffixed price already handled by parseCounterOffer
+		}
+		if (BARE_QTY_CUE.matcher(text).find())
+		{
+			return 0; // reads as a quantity, not a price
+		}
+		if (!BARE_PRICE_CUE.matcher(text).find() && !BARE_PRICE_TRAILER.matcher(text).find())
+		{
+			return 0; // no price cue - genuinely ambiguous, leave the deal unchanged
+		}
+		final Matcher matcher = BARE_NUMBER.matcher(text);
+		if (matcher.find())
+		{
+			final long value = Long.parseLong(matcher.group(1));
+			if ((value > 0) && (value <= 2_000_000_000L))
+			{
+				return (int) value;
+			}
+		}
+		return 0;
+	}
+
+	/**
+	 * Scale a bare counter candidate to the most plausible price given the current quoted unit price, choosing among
+	 * the literal value and its k/kk interpretations the one closest in magnitude to the current offer. With current
+	 * price 15,000 a bare "17" scales to 17,000; with current price 15 it stays 17. Used only to phrase a clarification
+	 * question, never to commit a price, so an imperfect guess is harmless - the player still confirms.
+	 * @param bare the raw bare number from {@link #parseBareCounterCandidate}
+	 * @param currentUnitPrice the bot's current quoted unit price; {@code <= 0} means no anchor (assume k shorthand)
+	 * @return the plausible scaled price in (0, 2,000,000,000]
+	 */
+	public static int scaleBareCounter(int bare, int currentUnitPrice)
+	{
+		if (bare <= 0)
+		{
+			return 0;
+		}
+		if (currentUnitPrice <= 0)
+		{
+			return (int) Math.min(2_000_000_000L, bare * 1000L); // no anchor: bare numbers in trade are usually 'k'
+		}
+		final long[] candidates =
+		{
+			bare,
+			bare * 1000L,
+			bare * 1000000L
+		};
+		long best = bare;
+		double bestDistance = Double.MAX_VALUE;
+		for (long candidate : candidates)
+		{
+			if ((candidate <= 0) || (candidate > 2_000_000_000L))
+			{
+				continue;
+			}
+			final double distance = Math.abs(Math.log((double) candidate / currentUnitPrice));
+			if (distance < bestDistance)
+			{
+				bestDistance = distance;
+				best = candidate;
+			}
+		}
+		return (int) best;
+	}
+
 	/** How far a bot will haggle from its own quoted price before it refuses: 15% either way. */
 	public static final double COUNTER_HAGGLE_TOLERANCE = 0.15;
 
 	/**
 	 * The bot's negotiation policy: does it accept the player's counteroffer, or hold its price? This is a genuine
-	 * business decision, distinct from {@link #resolveDealPrice} (which only guards a corrupted brain tag). The
-	 * bot's own quoted price is the anchor: any counter that is better for the bot is always taken, and it will
+	 * business decision. The bot's own quoted price is the anchor: any counter that is better for the bot is always
+	 * taken, and it will
 	 * concede a small haggle up to {@link #COUNTER_HAGGLE_TOLERANCE} the wrong way, but a counter beyond that is
 	 * refused so the bot keeps its price instead of the player unilaterally setting it by asking. Kept pure and
 	 * deterministic so Java, not the model, owns accept/reject.
@@ -384,6 +453,133 @@ public final class FakePlayerChatParsing
 		// Bot buys: a counter at or below its ask is pure profit; above the ask it concedes up to the ceiling.
 		final long ceiling = Math.round(offeredUnit * (1.0 + COUNTER_HAGGLE_TOLERANCE));
 		return counter <= ceiling;
+	}
+
+	// ===== Player-intent predicates for model action tags (FPC-044 / FPC-046) =====
+	// A model action tag ([[DISBAND]], [[FOLLOW]], [[STAY]], ...) is a proposal; Java authorizes it against the
+	// player's actual message before executing. These pure predicates are shared by the party and buddy managers so
+	// the same "did the player actually order this?" logic is used - and unit-tested - in both places.
+
+	private static boolean containsAnyLower(String low, String... needles)
+	{
+		for (String needle : needles)
+		{
+			if (low.contains(needle))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * {@code true} when the line is an explicit order for a companion to leave the party/service now. Negated or
+	 * keep-in-party phrasings ("don't leave", "stay", "keep you") return {@code false}, so a hallucinated or negated
+	 * [[DISBAND]] cannot release the companion against the player's wishes.
+	 * @param text the player's latest message
+	 * @return {@code true} to allow a dismiss, {@code false} to hold
+	 */
+	public static boolean isDismissOrder(String text)
+	{
+		if (text == null)
+		{
+			return false;
+		}
+		final String low = text.toLowerCase();
+		if (containsAnyLower(low, "don't", "dont", "do not", "never", "no need", "stay", "keep you", "keep him", "keep her"))
+		{
+			return false;
+		}
+		return containsAnyLower(low, "disband", "leave the party", "leave party", "you can go", "you can leave", "dismiss", "you're free to go", "youre free to go", "ur free to go", "part ways", "we're done", "were done", "head out", "you can head");
+	}
+
+	/**
+	 * {@code true} when the player's message tells a companion NOT to follow (or to hold position instead). Used to
+	 * veto a [[FOLLOW]] tag the model emitted against a prohibition, without requiring a positive keyword for the
+	 * common case (so a legitimate paraphrased "come on then" still lets the follow through).
+	 * @param text the player's latest message
+	 * @return {@code true} when following is negated this turn
+	 */
+	public static boolean negatesFollow(String text)
+	{
+		if (text == null)
+		{
+			return false;
+		}
+		final String low = text.toLowerCase();
+		return containsAnyLower(low, "don't follow", "dont follow", "do not follow", "stop following", "stop follow", "quit following", "no need to follow", "stay here", "wait here", "hold position", "don't come", "dont come");
+	}
+
+	/**
+	 * {@code true} when the player's message tells a companion NOT to stay (or to come along instead). Used to veto a
+	 * [[STAY]] tag emitted against a prohibition.
+	 * @param text the player's latest message
+	 * @return {@code true} when staying is negated this turn
+	 */
+	public static boolean negatesStay(String text)
+	{
+		if (text == null)
+		{
+			return false;
+		}
+		final String low = text.toLowerCase();
+		return containsAnyLower(low, "don't stay", "dont stay", "do not stay", "don't wait", "dont wait", "stop waiting", "follow me", "come with", "come along", "with me");
+	}
+
+	// Short affirmations count only as a whole word, so "ok" does not match inside "broke" and a meet-place word like
+	// "gk" does not match inside a longer token. Multi-word cues are matched as substrings.
+	private static final Set<String> _ACCEPT_WORDS = Set.of("ok", "okay", "okey", "yes", "yep", "yeah", "yup", "sure", "fine", "deal", "sold", "agreed", "agree", "coming", "omw", "gk", "gatekeeper", "warehouse", "wh");
+
+	/**
+	 * {@code true} when the player's latest message reads like agreement to close or meet on a trade: a clear
+	 * affirmation ("ok", "deal", "sure"), an "I'll take/buy/sell it" phrase, "meet me"/"on my way", or naming a
+	 * meeting place ("gk"). A message that calls the deal off (see {@link #isDealCancel}) or carries no such cue
+	 * returns {@code false}, so a model [[SHOP]]/[[MEET]] tag cannot commit the deal on its own (FPC-060). This gates
+	 * the state transition only; the item, side and price stay Java-owned.
+	 * @param text the player's latest message
+	 * @return {@code true} when the player's message supports committing/meeting this turn
+	 */
+	public static boolean isDealAccept(String text)
+	{
+		if (text == null)
+		{
+			return false;
+		}
+		final String low = text.toLowerCase(Locale.ROOT);
+		if (isDealCancel(low))
+		{
+			return false;
+		}
+		if (containsAnyLower(low, "i'll take", "ill take", "take it", "i'll buy", "ill buy", "i'll sell", "ill sell", "sounds good", "works for me", "that works", "let's do it", "lets do it", "let's meet", "lets meet", "meet me", "on my way", "i'm coming", "im coming", "come to", "meet at", "see you at"))
+		{
+			return true;
+		}
+		for (String token : low.split("[^a-z]+"))
+		{
+			if (_ACCEPT_WORDS.contains(token))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * {@code true} when the player's latest message calls the trade off or clearly declines to proceed ("cancel",
+	 * "forget it", "not interested", "no deal", "not coming"). Deliberately conservative and phrase-based, so an
+	 * ambiguous line does not tear down a live deal: a model [[MEET:cancel]] tag runs only when both a deal exists
+	 * and this returns true (FPC-061), and it also vetoes a false {@link #isDealAccept}.
+	 * @param text the player's latest message
+	 * @return {@code true} when the player's message expresses calling the deal off
+	 */
+	public static boolean isDealCancel(String text)
+	{
+		if (text == null)
+		{
+			return false;
+		}
+		final String low = text.toLowerCase(Locale.ROOT);
+		return containsAnyLower(low, "cancel", "forget it", "forget the deal", "nvm", "never mind", "nevermind", "not interested", "no thanks", "no thank", "no deal", "not coming", "won't come", "wont come", "not gonna", "changed my mind", "change my mind", "call it off", "called off", "call off", "drop it", "not anymore", "no longer", "forget about it");
 	}
 
 	/** @return the level requested in an LFP shout (1-80), or 0 when none is given (match the recruiter). */
@@ -437,16 +633,33 @@ public final class FakePlayerChatParsing
 			{
 				return 1;
 			}
-			try
-			{
-				return Math.max(1, Math.min(6, Integer.parseInt(text.subSequence(i + 1, end + 1).toString())));
-			}
-			catch (NumberFormatException e)
-			{
-				return 1;
-			}
+			return clampRecruitCount(text.subSequence(i + 1, end + 1).toString());
 		}
 		return 1;
+	}
+
+	/**
+	 * Parse a recruit party-slot count into the valid 1..6 range. A party holds at most six, and the digit token
+	 * is regex-matched with no length bound, so an oversized value clamps to 6 and a malformed one falls back to 1
+	 * rather than throwing {@link NumberFormatException} on a very long number (FPC-004).
+	 * @param digits the matched digit token
+	 * @return a slot count clamped to 1..6
+	 */
+	private static int clampRecruitCount(String digits)
+	{
+		// Any 2+ digit count is already past the six-slot cap, so clamp without parsing a wide (throw-prone) value.
+		if (digits.length() > 1)
+		{
+			return 6;
+		}
+		try
+		{
+			return Math.max(1, Math.min(6, Integer.parseInt(digits)));
+		}
+		catch (NumberFormatException e)
+		{
+			return 1;
+		}
 	}
 
 	/**
@@ -543,7 +756,7 @@ public final class FakePlayerChatParsing
 					levelToken = false; // consume the level number; don't treat it as a count
 					continue;
 				}
-				pendingCount = Math.max(1, Math.min(6, Integer.parseInt(token)));
+				pendingCount = clampRecruitCount(token);
 				continue;
 			}
 			levelToken = false;

@@ -24,14 +24,15 @@ import java.util.Arrays;
 
 /**
  * Authoritative allow-list for items used by generated FakePlayer buy and sell stores and negotiated trades.
- * The IDs are the 2,439 rows marked "Include" in the research workbook's Suggested Decision column.
+ * The IDs are the 2,439 rows marked "Include" in the research workbook's Suggested Decision column, plus item 126
+ * ("Artisan's Sword"), a D-grade base weapon added by request over the workbook's exclusion of shop-buyable weapons.
  */
 public final class FakePlayerStoreEligibility
 {
 	private static final int[] INCLUDED_ITEM_IDS =
 	{
 		60, 62, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 84,
-		88, 91, 92, 94, 95, 96, 97, 98, 107, 110, 119, 120, 121, 125, 128, 131,
+		88, 91, 92, 94, 95, 96, 97, 98, 107, 110, 119, 120, 121, 125, 126, 128, 131,
 		132, 133, 134, 135, 142, 145, 148, 150, 151, 159, 160, 161, 162, 164, 167, 169,
 		171, 173, 174, 175, 180, 181, 184, 187, 188, 189, 190, 191, 192, 193, 194, 195,
 		196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 210, 213, 217, 225, 226,

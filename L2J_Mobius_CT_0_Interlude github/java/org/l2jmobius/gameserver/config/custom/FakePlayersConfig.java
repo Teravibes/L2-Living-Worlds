@@ -53,6 +53,27 @@ public class FakePlayersConfig
 	public static boolean FAKE_PLAYER_AUTO_HUNTING_ZONES;
 	public static boolean PHANTOM_HUNTER_PLAYSTYLES;
 	public static boolean PHANTOM_HUNTER_RETALIATE;
+	public static boolean PHANTOM_PVP_ENABLED;
+	public static boolean PHANTOM_PVP_SELF_DEFENSE;
+	public static boolean PHANTOM_PVP_REACT_TO_FLAGGED;
+	public static boolean PHANTOM_PVP_DUELS;
+	public static boolean PHANTOM_PVP_PARTY_DEFENSE;
+	public static boolean PHANTOM_PVP_BETWEEN_PHANTOMS;
+	public static boolean PHANTOM_PVP_OPEN_WORLD_GANK;
+	public static boolean PHANTOM_PVP_DEATH_DROPS;
+	public static int PHANTOM_PVP_MAX_LEVEL_GAP_ABOVE_PLAYER;
+	public static int PHANTOM_PVP_AGGRESSOR_PERCENT;
+	public static int PHANTOM_PVP_REACT_CHANCE_PERCENT;
+	public static int PHANTOM_PVP_ENGAGE_COOLDOWN_SECONDS;
+	public static boolean PHANTOM_PVP_CLAN_DEFENSE;
+	public static int PHANTOM_PVP_DEFEND_RADIUS;
+	public static int PHANTOM_PVP_DUEL_CHANCE_PERCENT;
+	public static int PHANTOM_PVP_FLEE_HP_PERCENT;
+	public static int FAKE_PLAYER_AMBIENT_TRADE_INTERVAL_SECONDS;
+	public static int FAKE_PLAYER_AMBIENT_SHOUT_INTERVAL_SECONDS;
+	public static int FAKE_PLAYER_MAX_PUBLIC_CHATS_PER_MINUTE;
+	public static int FAKE_PLAYER_BOT_CHAT_CHAIN_DEPTH;
+	public static int FAKE_PLAYER_BOT_CHAT_REPLY_CHANCE;
 
 	public static void load(String baseConfigPath)
 	{
@@ -82,5 +103,26 @@ public class FakePlayersConfig
 		FAKE_PLAYER_AUTO_HUNTING_ZONES = config.getBoolean("PhantomAutoHuntingZones", true);
 		PHANTOM_HUNTER_PLAYSTYLES = config.getBoolean("PhantomHunterPlaystyles", true);
 		PHANTOM_HUNTER_RETALIATE = config.getBoolean("PhantomHunterRetaliate", true);
+		PHANTOM_PVP_ENABLED = config.getBoolean("PhantomPvpEnabled", true);
+		PHANTOM_PVP_SELF_DEFENSE = config.getBoolean("PhantomPvpSelfDefense", true);
+		PHANTOM_PVP_REACT_TO_FLAGGED = config.getBoolean("PhantomPvpReactToFlagged", true);
+		PHANTOM_PVP_DUELS = config.getBoolean("PhantomPvpDuels", true);
+		PHANTOM_PVP_PARTY_DEFENSE = config.getBoolean("PhantomPvpPartyDefense", true);
+		PHANTOM_PVP_BETWEEN_PHANTOMS = config.getBoolean("PhantomPvpBetweenPhantoms", true);
+		PHANTOM_PVP_OPEN_WORLD_GANK = config.getBoolean("PhantomPvpOpenWorldGank", false);
+		PHANTOM_PVP_DEATH_DROPS = config.getBoolean("PhantomPvpDeathDrops", true);
+		PHANTOM_PVP_MAX_LEVEL_GAP_ABOVE_PLAYER = config.getInt("PhantomPvpMaxLevelGapAbovePlayer", 6);
+		PHANTOM_PVP_AGGRESSOR_PERCENT = config.getInt("PhantomPvpAggressorPercent", 15);
+		PHANTOM_PVP_REACT_CHANCE_PERCENT = config.getInt("PhantomPvpReactChancePercent", 25);
+		PHANTOM_PVP_ENGAGE_COOLDOWN_SECONDS = config.getInt("PhantomPvpEngageCooldownSeconds", 300);
+		PHANTOM_PVP_CLAN_DEFENSE = config.getBoolean("PhantomPvpClanDefense", true);
+		PHANTOM_PVP_DEFEND_RADIUS = config.getInt("PhantomPvpDefendRadius", 1200);
+		PHANTOM_PVP_DUEL_CHANCE_PERCENT = config.getInt("PhantomPvpDuelChancePercent", 10);
+		PHANTOM_PVP_FLEE_HP_PERCENT = config.getInt("PhantomPvpFleeHpPercent", 30);
+		FAKE_PLAYER_AMBIENT_TRADE_INTERVAL_SECONDS = config.getInt("FakePlayerAmbientTradeIntervalSeconds", 90);
+		FAKE_PLAYER_AMBIENT_SHOUT_INTERVAL_SECONDS = config.getInt("FakePlayerAmbientShoutIntervalSeconds", 120);
+		FAKE_PLAYER_MAX_PUBLIC_CHATS_PER_MINUTE = config.getInt("FakePlayerMaxPublicChatsPerMinute", 8);
+		FAKE_PLAYER_BOT_CHAT_CHAIN_DEPTH = Math.max(0, config.getInt("FakePlayerBotChatChainDepth", 2));
+		FAKE_PLAYER_BOT_CHAT_REPLY_CHANCE = Math.min(100, Math.max(0, config.getInt("FakePlayerBotChatReplyChance", 15)));
 	}
 }

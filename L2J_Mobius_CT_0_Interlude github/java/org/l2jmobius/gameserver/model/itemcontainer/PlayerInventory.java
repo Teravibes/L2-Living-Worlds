@@ -915,12 +915,21 @@ public class PlayerInventory extends Inventory
 	@Override
 	public boolean validateWeight(long weight)
 	{
+		// Phantoms (buddy bots) are living-world population, not real players: they auto-loot without a weight cap
+		// and are never meant to be constrained by encumbrance. Exempting them here keeps a give-only loot handover
+		// (for example the party "return loot" trade) from being rejected on the phantom's own current load, which
+		// would otherwise fire "you have exceeded the weight limit" at both parties even when the receiver has room.
+		if (_owner.isBuddyBot())
+		{
+			return true;
+		}
+
 		// Disable weight check for GMs.
 		if (_owner.isGM() && _owner.getDietMode() && _owner.getAccessLevel().allowTransaction())
 		{
 			return true;
 		}
-		
+
 		return ((_totalWeight + weight) <= _owner.getMaxLoad());
 	}
 	

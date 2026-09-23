@@ -45,6 +45,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.Action;
+import org.l2jmobius.gameserver.config.custom.FakePlayersConfig;
 import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.NpcConfig;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -54,6 +55,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Cubic;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -69,6 +71,7 @@ import org.l2jmobius.gameserver.model.groups.PartyMessageType;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -180,6 +183,25 @@ public class PhantomPartyManager
 	private static final int RES_SCROLL_ID = 737; // Scroll of Resurrection: the item a recruit carries as a fallback rez
 	private static final int RES_SCROLL_CAST_RANGE = 400; // skill 2014's cast range - a scroll-rezzer closes to this first
 	private static final int RES_SCROLL_CLAIM_MS = 16000; // hold the corpse claim across the scroll's long (~15s) cast so no second scroll is burned on it
+	// Knight cubics (Temple Knight / Shillien Knight trees). A knight keeps its core cubic (Life / Vampiric) up on its own
+	// and summons the others only when the leader asks. The summoner classes' mass cubics are out of scope.
+	private static final int SUMMON_STORM_CUBIC = 10;
+	private static final int SUMMON_VAMPIRIC_CUBIC = 22;
+	private static final int SUMMON_PHANTOM_CUBIC = 33;
+	private static final int SUMMON_LIFE_CUBIC = 67;
+	private static final int SUMMON_VIPER_CUBIC = 278;
+	private static final int SUMMON_ATTRACTIVE_CUBIC = 449;
+	private static final Map<Integer, Integer> CUBIC_BY_SKILL = Map.of( //
+		SUMMON_STORM_CUBIC, Cubic.STORM_CUBIC, //
+		SUMMON_VAMPIRIC_CUBIC, Cubic.VAMPIRIC_CUBIC, //
+		SUMMON_PHANTOM_CUBIC, Cubic.POLTERGEIST_CUBIC, // Phantom Cubic's stock id is POLTERGEIST_CUBIC
+		SUMMON_LIFE_CUBIC, Cubic.LIFE_CUBIC, //
+		SUMMON_VIPER_CUBIC, Cubic.VIPER_CUBIC, //
+		SUMMON_ATTRACTIVE_CUBIC, Cubic.ATTRACT_CUBIC);
+	private static final int CUBIC_CRYSTAL_ID = 1458; // Crystal: D-Grade, consumed by every knight cubic summon (5-14 each)
+	private static final int CUBIC_CRYSTAL_STOCK = 1000; // top-up when a knight runs short, like the buffers' reagent stock
+	// "drop / no / stop / dismiss the viper cubic": remove a cubic instead of summoning it.
+	private static final Pattern DROP_CUBIC = Pattern.compile("\\b(no|drop|remove|unsummon|dismiss|lose|stop|cancel|without)\\b|don'?t");
 	private static final int AGGRESSION_ID = 28; // single-target taunt (knight tree) - "provokes a target to attack"
 	private static final int AURA_OF_HATE_ID = 18; // AoE taunt (knight tree) - "provokes nearby enemies to attack"
 	private static final int THREAT_SCAN_RANGE = 1000; // how far a tank looks for a mob loose on a squishy party member
@@ -437,6 +459,7 @@ public class PhantomPartyManager
 		long pullSince; // when that order was given - release the rest of the party shortly after even if aggro reads flaky
 		boolean assist = true; // assist the leader's target (default) vs. free-hunt
 		boolean following = true;
+		boolean holding; // "hold"/"stop": stand still and ignore the leader's target; only fight back when hit
 		boolean reminded; // already whispered "here, inv me" while waiting
 		boolean rezOnArrival; // summoned to a dead solo player: self-invite on arrival (a corpse can't answer /invite) so the rez lands at once
 		long pendingSince; // spawn time; despawn if never invited within RECRUIT_TIMEOUT
@@ -472,6 +495,7 @@ public class PhantomPartyManager
 		boolean healNow; // "heal me" order: heal the leader once even at full HP
 		Skill pendingBuff; // "give me X" / "X on <name>" order: a specific buff to cast next tick
 		Player pendingBuffTarget; // who that on-demand buff goes on (the leader, or a named party member)
+		Player rechargeTarget; // "recharge" / "recharge <name>" order: keep refilling this member's MP until it is full or the leader says stop
 		long noSitUntil; // "stand" order: don't auto-sit for MP until this time (so it doesn't pop straight back down)
 		long recoveryUntil; // after a battle-res, especially the tank, pause DPS until it is stable again
 		long lastBarkAt; // proactive-chat throttle: when this member last spoke up on its own
@@ -486,6 +510,8 @@ public class PhantomPartyManager
 		List<Skill> songs; // lazy (SINGER/DANCER): the full learned song/dance kit this member keeps running (capped to its music-pool share)
 		boolean songsLookedUp;
 		boolean songsRequested; // explicit "sing"/"dance" order: run the rotation now even out of combat
+		List<Integer> cubics; // lazy (cubic knights): summon skill ids to keep up, oldest first; starts as the core cubic only
+		int urgentCubic; // a cubic the leader just asked for: summon it even mid-fight (plain upkeep waits for a lull)
 		Skill pendingSong; // explicit "<song/dance> by name" order (SINGER/DANCER): cast that exact one next tick, even if it's outside the auto rotation
 		SpoilBehavior spoilBehavior;
 		Skill spoil;
@@ -1167,6 +1193,48 @@ public class PhantomPartyManager
 	{
 		final String text = message.toLowerCase().trim();
 
+		// On-demand Recharge ("recharge" / "recharge <name>"): only a member that actually knows Recharge (an Elder /
+		// Shillien Elder) answers. It then keeps refilling the target's MP every tick until the target is full or the
+		// leader says stop - an explicit order, so it ignores the role/threshold filter the automatic battery uses and
+		// will even top a class the auto-scan skips (a warsmith, a not-yet-drained mage). Handled before the buff-by-name
+		// path so "recharge" is never mistaken for a buff request.
+		if (state.npc.getKnownSkill(RECHARGE_ID) != null)
+		{
+			if (containsAny(text, "stop recharge", "stop charging", "stop the recharge", "enough recharge", "stop mp"))
+			{
+				if (state.rechargeTarget != null)
+				{
+					state.rechargeTarget = null;
+					deliver(state, "ok, stopping");
+				}
+				return true;
+			}
+			if (containsWord(text, "recharge"))
+			{
+				final Player named = findPartyMemberByName(state, text);
+				final Player target = (named != null) ? named : owner;
+				if (target.getKnownSkill(RECHARGE_ID) != null)
+				{
+					deliver(state, (target == owner) ? "you already have recharge yourself" : target.getName() + " has recharge already");
+				}
+				else
+				{
+					state.rechargeTarget = target;
+					deliver(state, "recharging " + ((target == owner) ? "you" : target.getName()) + " till full - say stop recharge to end");
+				}
+				return true;
+			}
+		}
+
+		// Knight cubics ("viper cubic", "swap life for storm cubic", "drop the viper cubic", "cubics?"): only a member
+		// that knows a cubic summon answers. Checked early so "stop"/"dismiss" in a cubic order is never read as the
+		// hold or disband command.
+		if (text.contains("cubic") && (coreOrFirstCubic(state.npc) != 0))
+		{
+			handleCubicOrder(state, text, addressed);
+			return true;
+		}
+
 		// A specific buff by name ("give me might", "ww pls") - checked first so "give me"/"gimme" aren't eaten by
 		// the grace ("brb") matcher. Grant it if the buffer knows it, else say it doesn't have it.
 		if (state.isSupport())
@@ -1385,7 +1453,17 @@ public class PhantomPartyManager
 			stopCamp(owner); // "stop"/"hold" ends camp too (stop everything, incl. pulling)
 			state.following = false;
 			setFree(state, false);
-			afterHumanDelay(state, () -> state.npc.getAI().setIntention(Intention.IDLE));
+			state.holding = true; // after setFree, which clears it: don't assist the leader's target until told to
+			afterHumanDelay(state, () ->
+			{
+				final Player npc = state.npc;
+				if (npc.isAttackingNow() || npc.isInCombat())
+				{
+					npc.abortAttack();
+					npc.setTarget(null); // drop the mob too, or AutoUse keeps casting at it
+				}
+				npc.getAI().setIntention(Intention.IDLE);
+			});
 			deliver(state, "holding here");
 			return true;
 		}
@@ -1503,6 +1581,7 @@ public class PhantomPartyManager
 
 	private void setFree(Member state, boolean free)
 	{
+		state.holding = false; // any assist/free-hunt order (assist, follow, attack freely, camp) ends a hold
 		state.assist = !free;
 		final List<Skill> autoUseSkills = provideAutoUsedSkills(state);
 		PhantomManager.getInstance().setRecruitHunting(state.npc, free, autoUseSkills);
@@ -1544,7 +1623,14 @@ public class PhantomPartyManager
 	{
 		final int memberId = state.npc.getObjectId();
 		final int ownerId = owner.getObjectId();
-		ThreadPool.execute(() ->
+		// FPC-064: serialize this member's PARTY conversation turns per (owner, member) through the shared executor, so
+		// two quick orders are not reordered against the shared conversation history. FPC-020: the brain call still
+		// blocks (HttpClient.send, up to ~45s), so it runs on the shared bounded brain executor, never on the game
+		// ThreadPool where it would starve combat AI, buff ticks and respawns. FPC-073: key by the member's NAME (the
+		// X-FPC the brain keys its per-(player, bot) lock/history on), not its object id, so PARTY shares one lane with
+		// any WHISPER/OFFER to the same bot from the same owner and cannot interleave against the shared Python history.
+		final String key = BrainConversationExecutor.key(owner.getName(), state.npc.getName());
+		BrainConversationExecutor.submit(key, onComplete -> BrainExecutor.runBrainWork(() ->
 		{
 			final Member s = _members.get(memberId);
 			final Player o = (Player) World.getInstance().findObject(ownerId);
@@ -1552,7 +1638,7 @@ public class PhantomPartyManager
 			{
 				return;
 			}
-			String reply = callBrain(s.npc, o.getName(), s.role, isPartiedWith(s), message);
+			String reply = callBrain(s.npc, o.getName(), s.role, isPartiedWith(s), "PARTY", message, partyLocationNote(s.npc, o));
 			if ((reply == null) || reply.isEmpty())
 			{
 				reply = "say: assist, attack freely, follow, hold, a place to tp, brb or bye";
@@ -1574,17 +1660,34 @@ public class PhantomPartyManager
 			{
 				o.sendPacket(new CreatureSay(npc, ChatType.WHISPER, npc.getName(), reply));
 			}
-		});
+		}, onComplete));
 	}
 
-	/** Calls the brain bridge in PARTY mode; returns the raw reply (possibly with tags), or null if offline. */
-	private String callBrain(Player npc, String ownerName, PartyRole role, boolean partied, String message)
+	/**
+	 * A short, natural current-location note for a recruited member, sent to the brain as {@code X-Location}
+	 * (FPC-038). It always names the nearest town via the shared resolver in {@link FakePlayerChatManager}; when the
+	 * owner is online and standing with the member it prefers a player-relative phrasing, so "where are you?" gets
+	 * "right next to you" rather than a bare town label.
+	 * @param member the recruited member
+	 * @param owner the recruiting player, or {@code null}
+	 * @return a location note suitable for the brain, or {@code ""} when nothing is known
+	 */
+	private static String partyLocationNote(Player member, Player owner)
 	{
-		return callBrain(npc, ownerName, role, partied, "PARTY", message);
+		final String town = FakePlayerChatManager.nearestLocation(member);
+		if ((owner != null) && owner.isOnline() && (member.calculateDistance2D(owner) <= 350))
+		{
+			return "right next to " + owner.getName() + (town.isEmpty() ? "" : " (" + town + ")");
+		}
+		return town;
 	}
 
-	/** Calls the brain bridge in {@code mode} (PARTY orders, or PARTYEVENT lifecycle chatter); null if offline. */
-	private String callBrain(Player npc, String ownerName, PartyRole role, boolean partied, String mode, String message)
+	/**
+	 * Calls the brain bridge in {@code mode} (PARTY orders, or PARTYEVENT lifecycle chatter); null if offline. The
+	 * member's live current location travels along as {@code X-Location} so it answers "where are you?" truthfully
+	 * (FPC-038) instead of inventing a spot or leaning on a level-derived farm location (FPC-039).
+	 */
+	private String callBrain(Player npc, String ownerName, PartyRole role, boolean partied, String mode, String message, String location)
 	{
 		try
 		{
@@ -1602,6 +1705,7 @@ public class PhantomPartyManager
 				.header("X-Partied", Boolean.toString(partied)) //
 				.header("X-Bot-Level", Integer.toString(npc.getLevel())) //
 				.header("X-Bot-Class", botClass) //
+				.header("X-Location", location == null ? "" : location) //
 				.header("Content-Type", "text/plain; charset=utf-8") //
 				.POST(HttpRequest.BodyPublishers.ofString(message)) //
 				.build();
@@ -1658,15 +1762,19 @@ public class PhantomPartyManager
 		{
 			setFree(state, true);
 		}
-		if (partied && TAG_FOLLOW.matcher(reply).find())
+		// Reversible movement tags are allowed by default, but a model tag emitted against an explicit prohibition
+		// ("don't follow me", "wait here" -> [[FOLLOW]]) is vetoed so a hallucination cannot flip movement state (FPC-046).
+		if (partied && TAG_FOLLOW.matcher(reply).find() && !FakePlayerChatParsing.negatesFollow(playerMessage))
 		{
 			state.following = true;
+			state.holding = false;
 			ensureFollow(state);
 		}
-		if (partied && TAG_STAY.matcher(reply).find())
+		if (partied && TAG_STAY.matcher(reply).find() && !FakePlayerChatParsing.negatesStay(playerMessage))
 		{
 			state.following = false;
 			setFree(state, false);
+			state.holding = true;
 			state.npc.getAI().setIntention(Intention.IDLE);
 		}
 		final Matcher grace = TAG_GRACE.matcher(reply);
@@ -1674,8 +1782,12 @@ public class PhantomPartyManager
 		{
 			state.graceUntil = System.currentTimeMillis() + (Math.min(30, Integer.parseInt(grace.group(1))) * 60000L);
 		}
+		// A model tag proposes an action; Java authorizes it against the player's actual message before executing
+		// (FPC-044). A hallucinated or negated tag ("don't teleport to cruma" -> [[TP:Cruma Tower]]) must not move or
+		// release the member, so teleport needs a real travel order and disband needs a real dismiss order.
+		final String order = (playerMessage == null) ? "" : playerMessage.toLowerCase();
 		final Matcher tp = TAG_TP.matcher(reply);
-		if (partied && tp.find())
+		if (partied && tp.find() && isTravelOrder(order))
 		{
 			final Map.Entry<String, Location> dest = PhantomBuddyManager.getInstance().findDestination(tp.group(1));
 			if (dest != null)
@@ -1683,7 +1795,7 @@ public class PhantomPartyManager
 				teleportMember(state, dest.getValue());
 			}
 		}
-		if (partied && TAG_DISBAND.matcher(reply).find())
+		if (partied && TAG_DISBAND.matcher(reply).find() && FakePlayerChatParsing.isDismissOrder(playerMessage))
 		{
 			ThreadPool.schedule(() -> release(state, true), 1000);
 		}
@@ -1863,7 +1975,9 @@ public class PhantomPartyManager
 		final String ownerName = (state.owner != null) ? state.owner.getName() : "";
 		final PartyRole role = state.role;
 		final boolean partied = isPartiedWith(state);
-		ThreadPool.execute(() ->
+		// FPC-020: the PARTYEVENT brain call below blocks (HttpClient.send); run it on the shared bounded brain
+		// executor, never on the game ThreadPool.
+		BrainExecutor.runBrainWork(() ->
 		{
 			// Re-resolve under the manager's view so we never speak for a member that despawned/released mid-call.
 			final Member current = _members.get(memberId);
@@ -1871,7 +1985,7 @@ public class PhantomPartyManager
 			{
 				return;
 			}
-			String line = callBrain(current.npc, ownerName, role, partied, "PARTYEVENT", situation);
+			String line = callBrain(current.npc, ownerName, role, partied, "PARTYEVENT", situation, FakePlayerChatManager.nearestLocation(current.npc));
 			if (line != null)
 			{
 				line = ANY_TAG.matcher(line).replaceAll("").trim(); // lifecycle chatter is speech only - drop any stray tag
@@ -2282,6 +2396,20 @@ public class PhantomPartyManager
 			state.graceUntil = 0;
 		}
 
+		// PvP owns this member: a party/clan/self defense engagement is driving it via PhantomManager's PvP tick.
+		// Defer all party behavior (assist, camp, raid, follow) until that engagement ends and hands control back.
+		if (PhantomManager.getInstance().isPvpEngaged(npc))
+		{
+			return true;
+		}
+		// Party/clan defense: peel this member onto a hostile attacking the owner or a party-mate (or itself), unless
+		// it is tied up on a raid boss (then it only defends itself). Starts an engagement it defers to next tick.
+		maybeDefendParty(state, now);
+		if (PhantomManager.getInstance().isPvpEngaged(npc))
+		{
+			return true;
+		}
+
 		// Cast watchdog: a clientless caster can wedge with its casting flag stuck; abort an over-long cast so the
 		// member recovers instead of freezing (stops buffing/healing AND following). The limit tracks the LIVE skill's
 		// own expected duration (hit + cool time is the pre-haste ceiling; casting speed only shortens it) plus a
@@ -2487,6 +2615,11 @@ public class PhantomPartyManager
 		{
 			return;
 		}
+		// Knight cubic upkeep: resummon any wanted cubic that expired or was lost on death.
+		if (maintainCubics(state))
+		{
+			return;
+		}
 		// ARCHER skill discipline: park the skill bar when MP runs low (plain soulshotted auto-shots keep firing
 		// for free), restore it once recovered.
 		if (state.role == PartyRole.ARCHER)
@@ -2521,6 +2654,19 @@ public class PhantomPartyManager
 		if (camp != null)
 		{
 			campTick(state, camp);
+			return;
+		}
+
+		// Holding ("hold"/"stop"): stay put and ignore the leader's target. Only a mob actually hitting this member
+		// is fought, so a held member is never left standing there taking hits. Raids are excluded by attackerOnMe.
+		if (state.holding)
+		{
+			final Monster onMe = attackerOnMe(state, null, false);
+			if ((onMe != null) && engageFocus(state, onMe))
+			{
+				return;
+			}
+			restForMp(state);
 			return;
 		}
 
@@ -3833,6 +3979,347 @@ public class PhantomPartyManager
 	// ===== Class competence (Bucket 2): songs/dances, panic buttons, discipline, positioning, CC =====
 
 	/**
+	 * Knight cubic upkeep. Walks the member's wanted list (at most its Cubic Mastery limit) and summons the first cubic
+	 * that is not out. Plain upkeep waits until nothing is hitting the knight, since the 6s cast mid-pull would leave
+	 * the party untanked; a cubic the leader just asked for is summoned at once. Cubics act on their own once out
+	 * (stock {@link Cubic} tasks), so nothing else is needed here.
+	 * @return {@code true} if the member is busy with a summon this tick
+	 */
+	private boolean maintainCubics(Member state)
+	{
+		final Player npc = state.npc;
+		final List<Integer> wanted = wantedCubics(state);
+		if (wanted.isEmpty())
+		{
+			return false;
+		}
+		final boolean busy = npc.isAttackingNow() || underAttack(npc);
+		final int limit = cubicLimit(npc);
+		int slot = 0;
+		for (int skillId : wanted)
+		{
+			if (slot++ >= limit)
+			{
+				break;
+			}
+			if (npc.getCubicById(CUBIC_BY_SKILL.get(skillId)) != null)
+			{
+				if (state.urgentCubic == skillId)
+				{
+					state.urgentCubic = 0;
+				}
+				continue;
+			}
+			if (busy && (state.urgentCubic != skillId))
+			{
+				continue;
+			}
+			final Skill skill = npc.getKnownSkill(skillId);
+			if (!castable(npc, skill))
+			{
+				continue; // on reuse or short of MP - retried on a later tick
+			}
+			if (!readyToCast(npc))
+			{
+				return true; // stand up first; the summon lands next tick
+			}
+			// Free a slot held by a cubic the leader swapped out, so the stock summon doesn't evict a random wanted one.
+			if (npc.getCubics().size() >= limit)
+			{
+				for (Integer present : new ArrayList<>(npc.getCubics().keySet()))
+				{
+					if (!isWantedCubic(wanted, present))
+					{
+						dismissCubic(npc, present);
+						break;
+					}
+				}
+			}
+			if (npc.getInventory().getInventoryItemCount(CUBIC_CRYSTAL_ID, -1) < skill.getItemConsumeCount())
+			{
+				npc.getInventory().addItem(ItemProcessType.REWARD, CUBIC_CRYSTAL_ID, CUBIC_CRYSTAL_STOCK, npc, null);
+			}
+			npc.setTarget(npc);
+			npc.doCast(skill);
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Handles a cubic order from the leader. One cubic named: summon it (or, with a drop word, remove it). Two named
+	 * ("swap life for storm"): the first goes, the second comes in. When the wanted list is full, a new cubic replaces
+	 * the oldest non-core one, or the core itself when that is the only one out. No cubic named: report status.
+	 */
+	private void handleCubicOrder(Member state, String text, boolean addressed)
+	{
+		final Player npc = state.npc;
+		final List<Integer> wanted = wantedCubics(state);
+		final List<Integer> named = namedCubics(text);
+		if (named.isEmpty())
+		{
+			deliver(state, cubicStatus(state));
+			return;
+		}
+		for (int skillId : named)
+		{
+			if (npc.getKnownSkill(skillId) == null)
+			{
+				// A party-wide ask for a cubic another knight here has: let that knight answer instead of this one saying no.
+				if (addressed || !partyKnightKnows(state, skillId))
+				{
+					deliver(state, "i don't have " + cubicName(skillId) + " cubic");
+				}
+				return;
+			}
+		}
+		final int incoming = named.get(named.size() - 1);
+		if ((named.size() == 1) && DROP_CUBIC.matcher(text).find())
+		{
+			if (wanted.remove(Integer.valueOf(incoming)))
+			{
+				dismissCubic(npc, CUBIC_BY_SKILL.get(incoming));
+				if (state.urgentCubic == incoming)
+				{
+					state.urgentCubic = 0;
+				}
+				deliver(state, "ok, " + cubicName(incoming) + " cubic is gone");
+			}
+			else
+			{
+				deliver(state, "i don't have " + cubicName(incoming) + " cubic out");
+			}
+			return;
+		}
+		String swapped = null;
+		if (named.size() > 1)
+		{
+			final int outgoing = named.get(0);
+			if (wanted.remove(Integer.valueOf(outgoing)))
+			{
+				dismissCubic(npc, CUBIC_BY_SKILL.get(outgoing));
+				swapped = cubicName(outgoing);
+			}
+		}
+		if (wanted.contains(incoming))
+		{
+			if (npc.getCubicById(CUBIC_BY_SKILL.get(incoming)) == null)
+			{
+				state.urgentCubic = incoming; // wanted but expired or lost: summon it now rather than at the next lull
+				deliver(state, "summoning " + cubicName(incoming) + " cubic");
+			}
+			else
+			{
+				deliver(state, ((swapped != null) ? "ok, " + swapped + " cubic is gone - " : "") + cubicName(incoming) + " cubic is already on");
+			}
+			return;
+		}
+		final int limit = cubicLimit(npc);
+		final int core = coreOrFirstCubic(npc);
+		while (!wanted.isEmpty() && (wanted.size() >= limit))
+		{
+			int outgoing = wanted.get(0);
+			for (int id : wanted)
+			{
+				if (id != core)
+				{
+					outgoing = id; // the oldest non-core cubic goes first
+					break;
+				}
+			}
+			wanted.remove(Integer.valueOf(outgoing));
+			dismissCubic(npc, CUBIC_BY_SKILL.get(outgoing));
+			swapped = cubicName(outgoing);
+		}
+		wanted.add(incoming);
+		state.urgentCubic = incoming;
+		deliver(state, (swapped != null) ? "swapping " + swapped + " for " + cubicName(incoming) + " cubic" : "summoning " + cubicName(incoming) + " cubic");
+	}
+
+	/** The member's wanted cubic list, created on first use with just its core cubic (or its level 40 one before 43). */
+	private List<Integer> wantedCubics(Member state)
+	{
+		synchronized (state)
+		{
+			if (state.cubics == null)
+			{
+				state.cubics = new CopyOnWriteArrayList<>();
+				final int first = coreOrFirstCubic(state.npc);
+				if (first != 0)
+				{
+					state.cubics.add(first);
+				}
+			}
+			return state.cubics;
+		}
+	}
+
+	/** The knight's core cubic (Life / Vampiric), else its level 40 cubic (Storm / Phantom), else 0 for a non-knight. */
+	private static int coreOrFirstCubic(Player npc)
+	{
+		for (int skillId : new int[]
+		{
+			SUMMON_LIFE_CUBIC,
+			SUMMON_VAMPIRIC_CUBIC,
+			SUMMON_STORM_CUBIC,
+			SUMMON_PHANTOM_CUBIC
+		})
+		{
+			if (npc.getKnownSkill(skillId) != null)
+			{
+				return skillId;
+			}
+		}
+		return 0;
+	}
+
+	/** How many cubics the member may have out at once (Cubic Mastery: 1, then 2 at 43, then 3 at 55). */
+	private static int cubicLimit(Player npc)
+	{
+		return Math.max(1, npc.getStat().getMaxCubicCount());
+	}
+
+	private static boolean isWantedCubic(List<Integer> wanted, int cubicId)
+	{
+		for (int skillId : wanted)
+		{
+			if (CUBIC_BY_SKILL.get(skillId) == cubicId)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/** Removes a cubic the same way the stock summon does when it replaces one. */
+	private static void dismissCubic(Player npc, int cubicId)
+	{
+		final Cubic cubic = npc.getCubicById(cubicId);
+		if (cubic != null)
+		{
+			cubic.stopAction();
+			cubic.cancelDisappear();
+			npc.getCubics().remove(cubicId);
+			npc.broadcastUserInfo();
+		}
+	}
+
+	/** {@code true} if another partied member of the same leader knows this cubic summon. */
+	private boolean partyKnightKnows(Member state, int skillId)
+	{
+		for (Member other : _members.values())
+		{
+			if ((other != state) && (other.owner == state.owner) && other.partied && (other.npc.getKnownSkill(skillId) != null))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/** "cubics up: life. can also do storm, attractive" - what is kept up and what else the knight could summon. */
+	private String cubicStatus(Member state)
+	{
+		final List<Integer> wanted = wantedCubics(state);
+		final List<String> up = new ArrayList<>();
+		final List<String> spare = new ArrayList<>();
+		for (int skillId : CUBIC_BY_SKILL.keySet())
+		{
+			if (wanted.contains(skillId))
+			{
+				up.add(cubicName(skillId));
+			}
+			else if (state.npc.getKnownSkill(skillId) != null)
+			{
+				spare.add(cubicName(skillId));
+			}
+		}
+		final String kept = up.isEmpty() ? "no cubics up" : "cubics up: " + String.join(", ", up);
+		return spare.isEmpty() ? kept : kept + ". can also do " + String.join(", ", spare) + " - just ask";
+	}
+
+	/** Cubic summon skill ids named in {@code text}, in the order they appear ("swap life for storm" -> life, storm). */
+	private static List<Integer> namedCubics(String text)
+	{
+		final Map<Integer, Integer> at = new HashMap<>();
+		for (int skillId : CUBIC_BY_SKILL.keySet())
+		{
+			int index = -1;
+			for (String token : cubicTokens(skillId))
+			{
+				final int found = text.indexOf(token);
+				if ((found >= 0) && ((index < 0) || (found < index)))
+				{
+					index = found;
+				}
+			}
+			if (index >= 0)
+			{
+				at.put(skillId, index);
+			}
+		}
+		final List<Integer> named = new ArrayList<>(at.keySet());
+		named.sort((a, b) -> Integer.compare(at.get(a), at.get(b)));
+		return named;
+	}
+
+	private static String[] cubicTokens(int skillId)
+	{
+		switch (skillId)
+		{
+			case SUMMON_STORM_CUBIC:
+			{
+				return new String[]
+				{
+					"storm"
+				};
+			}
+			case SUMMON_VAMPIRIC_CUBIC:
+			{
+				return new String[]
+				{
+					"vampiric",
+					"vamp"
+				};
+			}
+			case SUMMON_PHANTOM_CUBIC:
+			{
+				return new String[]
+				{
+					"phantom"
+				};
+			}
+			case SUMMON_LIFE_CUBIC:
+			{
+				return new String[]
+				{
+					"life"
+				};
+			}
+			case SUMMON_VIPER_CUBIC:
+			{
+				return new String[]
+				{
+					"viper"
+				};
+			}
+			default:
+			{
+				return new String[]
+				{
+					"attractive",
+					"attract"
+				};
+			}
+		}
+	}
+
+	private static String cubicName(int skillId)
+	{
+		return cubicTokens(skillId)[0];
+	}
+
+	/**
 	 * SWS/BD song/dance upkeep. First honours any explicit by-name request ({@link Member#pendingSong}); otherwise
 	 * resolves the member's rotation once (the role's priority list filtered to what it actually knows, capped at its
 	 * music-pool share by {@link #songRotationCap}); then each tick the first song that has fully lapsed on the member
@@ -4899,6 +5386,135 @@ public class PhantomPartyManager
 		return false;
 	}
 
+	/**
+	 * Phase 2b party defense: peel a member onto a hostile that is attacking the owner or a party-mate (or the member
+	 * itself). Gated on party defense being enabled and the member being out of a peace zone. A member currently on a
+	 * raid boss defends only itself, never peeling to others, so a ganker cannot bait a raid party off its boss.
+	 */
+	private void maybeDefendParty(Member state, long now)
+	{
+		if (!PhantomPvpManager.partyDefenseEnabled())
+		{
+			return;
+		}
+		final Player npc = state.npc;
+		if ((npc == null) || npc.isDead() || npc.isInsideZone(ZoneId.PEACE) || (state.owner == null))
+		{
+			return;
+		}
+		PhantomManager.getInstance().watchOwnerForPvp(state.owner); // ensure the owner is watched while defense is live
+		// Cheap first pass (map lookups + a few distance checks, no world scan): is anyone we protect being attacked?
+		Player attacker = defendTarget(state, now, false);
+		if (attacker == null)
+		{
+			return;
+		}
+		// A threat exists. Only now pay for the raid scan: if this member is on a raid boss it defends only itself,
+		// never peeling to others, so a ganker cannot bait a raid party off its boss.
+		if (engagedRaid(state) != null)
+		{
+			attacker = defendTarget(state, now, true);
+			if (attacker == null)
+			{
+				return;
+			}
+		}
+		PhantomManager.getInstance().startPvpDefense(npc, attacker);
+	}
+
+	/**
+	 * @param state the defending member
+	 * @param now the current time
+	 * @param selfOnly when {@code true}, only the member itself is protected (used mid raid boss)
+	 * @return the nearest hostile {@link Player} attacking a protected ally within {@code PhantomPvpDefendRadius}, that
+	 *         the member may legally strike and that is not on the member's own side, or {@code null}
+	 */
+	private Player defendTarget(Member state, long now, boolean selfOnly)
+	{
+		final Player npc = state.npc;
+		final int radius = FakePlayersConfig.PHANTOM_PVP_DEFEND_RADIUS;
+		final List<Player> protectedList = new ArrayList<>();
+		protectedList.add(npc); // self-defense always applies
+		if (!selfOnly)
+		{
+			protectedList.add(state.owner);
+			if (state.owner.isInParty())
+			{
+				for (Player member : state.owner.getParty().getMembers())
+				{
+					if ((member != npc) && (member != state.owner))
+					{
+						protectedList.add(member);
+					}
+				}
+			}
+			// Clan/alliance defense (Phase 2b-ii): also protect clanmates and allymates, not only the party. Iterate the
+			// small set of players actually hit recently (no world scan, so the cheap-first-pass note above still holds);
+			// a clanmate victim must be one the system observes (a phantom, or a watched owner) to appear here.
+			if (PhantomPvpManager.clanDefenseEnabled())
+			{
+				final PhantomManager pm = PhantomManager.getInstance();
+				for (int victimOid : pm.recentlyAttackedVictimOids())
+				{
+					final WorldObject victim = World.getInstance().findObject(victimOid);
+					if (!(victim instanceof Player))
+					{
+						continue;
+					}
+					final Player mate = (Player) victim;
+					if ((mate != npc) && !mate.isDead() && (npc.calculateDistance2D(mate) <= radius) && PhantomManager.sameClanOrAlly(npc, mate) && !protectedList.contains(mate))
+					{
+						protectedList.add(mate);
+					}
+				}
+			}
+		}
+		Player best = null;
+		double bestDistance = Double.MAX_VALUE;
+		final PhantomManager manager = PhantomManager.getInstance();
+		for (Player prot : protectedList)
+		{
+			if ((prot == null) || prot.isDead() || (npc.calculateDistance2D(prot) > radius))
+			{
+				continue;
+			}
+			final int attackerOid = manager.recentPvpAttackerOid(prot, now);
+			if (attackerOid == 0)
+			{
+				continue;
+			}
+			final WorldObject object = World.getInstance().findObject(attackerOid);
+			if (!(object instanceof Player))
+			{
+				continue;
+			}
+			final Player attacker = (Player) object;
+			if ((attacker == npc) || attacker.isDead() || attacker.isInsideZone(ZoneId.PEACE))
+			{
+				continue;
+			}
+			if (isPartyMember(state, attacker) || (attacker == state.owner))
+			{
+				continue; // never turn on our own side
+			}
+			if (!manager.validPvpOpponent(npc, attacker))
+			{
+				continue; // phantom-versus-phantom gate: do not defend against a phantom when that is disabled
+			}
+			if (!attacker.isAutoAttackable(npc))
+			{
+				continue; // also excludes same clan/ally; the attacker must be legal to strike
+			}
+			final double distance = npc.calculateDistance2D(attacker);
+			if (distance < bestDistance)
+			{
+				bestDistance = distance;
+				best = attacker;
+			}
+		}
+		return best;
+	}
+
 	/** The nearest of a list of mobs to a point of origin. */
 	private static Monster nearest(Player origin, List<Monster> mobs)
 	{
@@ -5177,6 +5793,36 @@ public class PhantomPartyManager
 				_healedThisTick.add(worst.getObjectId());
 				return;
 			}
+		}
+
+		// 4b) On-demand Recharge order ("recharge" / "recharge <name>"): keep refilling the requested member's MP every
+		// tick until it is full or the leader says stop. Placed below res/heal so a dying member or a corpse still wins
+		// this tick (recharge resumes once nobody needs saving), but above routine buff upkeep and MP-sitting. Unlike the
+		// automatic battery it ignores the role/threshold filter, so it tops even a class the auto-scan skips.
+		if (state.rechargeTarget != null)
+		{
+			final Skill rechOrder = recharge(state);
+			final Player target = state.rechargeTarget;
+			if ((rechOrder == null) || (target == null) || target.isDead() || !inParty(owner, target) || (target.getKnownSkill(RECHARGE_ID) != null))
+			{
+				state.rechargeTarget = null; // order can no longer be served (target gone / dead / left party) - drop it silently
+			}
+			else if (target.getCurrentMpPercent() >= 100)
+			{
+				deliver(state, ((target == owner) ? "you're" : target.getName() + " is") + " topped up");
+				state.rechargeTarget = null;
+			}
+			else if ((npc.calculateDistance2D(target) <= SUPPORT_RANGE) && castable(npc, rechOrder))
+			{
+				if (!readyToCast(npc))
+				{
+					return; // getting up first; recharge on the next tick (order kept so it isn't lost)
+				}
+				npc.setTarget(target);
+				npc.doCast(rechOrder);
+				return;
+			}
+			// else: out of range or momentarily out of MP / on cooldown - keep the order and retry next tick
 		}
 
 		// 5) On-demand "(re)buff <who>": recast a full kit on each queued target, one buff per tick, regardless of
@@ -5857,6 +6503,16 @@ public class PhantomPartyManager
 			}
 		}
 		return null;
+	}
+
+	/** {@code true} if {@code member} is still the leader themselves or in the leader's party (used to drop a recharge order once its target leaves). */
+	private static boolean inParty(Player owner, Player member)
+	{
+		if ((owner == null) || (member == null))
+		{
+			return false;
+		}
+		return (member == owner) || (owner.isInParty() && owner.getParty().getMembers().contains(member));
 	}
 
 	/**

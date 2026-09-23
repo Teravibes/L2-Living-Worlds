@@ -78,17 +78,70 @@ public class FakePlayerChatManager implements IXmlReader
 	// looked like "bots never reply in-game". Sized to outlast a slow local model; a fast provider (DeepSeek) or
 	// a smaller Ollama model returns well under this, so it only ever bites when generation is genuinely slow.
 	private static final int BRAIN_TIMEOUT_SECONDS = 45;
-	
+
+	// FPC-020: a dedicated, bounded executor for the blocking brain HTTP calls, kept OFF the shared game ThreadPool.
+	// FPC-020: blocking brain HTTP must never run on the shared game ThreadPool (a slow or unreachable brain would
+	// occupy threads that combat AI, buff ticks and respawns also need). All blocking brain work is handed to the
+	// shared BrainExecutor (a bounded, daemon-threaded pool shared by every brain client); the game ThreadPool is
+	// used only for the non-blocking "thinking" delay before hand-off.
+	// Thin delegators to the shared BrainExecutor so the many call sites in this class stay readable.
+	private static void runBrainWork(Runnable work)
+	{
+		BrainExecutor.runBrainWork(work);
+	}
+
+	private static void scheduleBrainWork(Runnable work, long delayMs)
+	{
+		BrainExecutor.scheduleBrainWork(work, delayMs);
+	}
+
+	// As above, but with a guaranteed completion callback (used to release the next conversation turn, FPC-064).
+	private static void scheduleBrainWork(Runnable work, long delayMs, Runnable onComplete)
+	{
+		ThreadPool.schedule(() -> BrainExecutor.runBrainWork(work, onComplete), delayMs);
+	}
+
+	/**
+	 * FPC-021: atomically reserve one unit of a per-minute cap BEFORE starting expensive brain work. A plain
+	 * check-then-increment (get() &gt;= cap, then a later incrementAndGet()) let several concurrent brain workers all
+	 * observe free capacity before any of them counted, so the configured cap did not actually bound concurrent
+	 * model calls. This compare-and-set reserve either takes a slot or reports the cap is full, with no window in
+	 * between.
+	 * <p>
+	 * A reserved slot is NEVER refunded (the "count admitted attempts" policy). An earlier version released a slot when
+	 * the brain returned nothing to say, but a release that crossed the per-minute reset refunded a slot the NEW window
+	 * owned, so a window could still over-admit (the counter carried no window identity to make a refund safe). Not
+	 * refunding removes that cross-window race entirely and also bounds brain load directly: an attempt that produces
+	 * no line still consumes its slot, which throttles pointless retries while a provider is misbehaving. The cost is
+	 * that a rare "chose to stay silent" reply also consumes a slot, which the per-minute reset clears.
+	 * @param counter the per-minute counter
+	 * @param cap the configured maximum
+	 * @return {@code true} if a slot was reserved (caller may proceed), {@code false} if the cap is already full
+	 */
+	private static boolean tryReserve(AtomicInteger counter, int cap)
+	{
+		int current = counter.get();
+		while (current < cap)
+		{
+			if (counter.compareAndSet(current, current + 1))
+			{
+				return true;
+			}
+			current = counter.get();
+		}
+		return false;
+	}
+
 	// ===== Social tuning knobs =====
 	private static final boolean SOCIAL_ENABLED = true;
 	private static final int REPLY_CHANCE_TO_PLAYER = 50; // % chance a nearby bot reacts to a player (throttle 1)
-	private static final int REPLY_CHANCE_TO_BOT = 15; // % chance bot-to-bot (throttle 2: damping)
 	private static final int MAX_REPLIERS = 2; // at most N bots answer one line
 	// Bot-to-bot chain leash: a message a human (or an ambient seed) started can be answered by a bot, and that
-	// answer by one more bot, but the chain stops here. Without this a single line spirals into a self-sustaining
-	// echo loop ("xD" -> "lol classic" -> "seriously 😂" ...) until the per-minute cap runs out. Ambient timers
-	// still seed fresh chatter independently, so idle chat stays alive; only the runaway depth is capped.
-	private static final int MAX_BOT_CHAIN_DEPTH = 2; // bot-to-bot hops after a human/ambient seed before the chain stops
+	// answer by one more bot, but the chain stops at the configured depth. Without this a single line spirals into a
+	// self-sustaining echo loop ("xD" -> "lol classic" -> "seriously 😂" ...) until the per-minute cap runs out.
+	// Ambient timers still seed fresh chatter independently, so idle chat stays alive; only the runaway depth is
+	// capped. The depth and the bot-to-bot reply chance are data-driven (FakePlayersConfig), read live so a
+	// //reload config applies them: lower them if bots chatter among themselves too much, raise for a livelier feel.
 	// A bot should not seed a reply chain off a content-free line (pure laughter, an emote, a one-word ack). These
 	// tokens are stripped when deciding whether a line carries enough substance to be worth reacting to.
 	private static final Set<String> LOW_CONTENT_TOKENS = Set.of(
@@ -105,13 +158,17 @@ public class FakePlayerChatManager implements IXmlReader
 	private static final long TYPE_MAX_MS = 4000;
 	private static final int SOCIAL_RANGE = 3000; // trade: how close a bot must be to react
 	private static final int SAY_RANGE = 1250; // say: local hearing/broadcast range
-	private static final int MAX_MESSAGES_PER_MINUTE = 8; // public/social rate cap: shout/trade/say/ambient banter
+	// Ambient chatter cadence is data-driven (Custom/FakePlayers.ini, editable in the Config Editor's Fake Players
+	// panel) rather than hardcoded: the public rate cap and the two spontaneous-chatter intervals come from
+	// FakePlayersConfig. The rate cap is read live at each use, so a //reload config applies it; the two intervals are
+	// read once when the timers are scheduled at startup (see startSocial), so a change to them applies on restart.
 	private static final int MAX_TRADE_OFFERS_PER_MINUTE = 20; // important WTB/WTS responder PM cap
-	private static final long AMBIENT_INTERVAL = 240000; // spontaneous trade line every ~4 min
-	private static final long SHOUT_AMBIENT_INTERVAL = 300000; // spontaneous shout (LFM / chit-chat) every ~5 min
 	private static final AtomicInteger MESSAGES_THIS_MINUTE = new AtomicInteger();
 	private static final AtomicInteger TRADE_OFFERS_THIS_MINUTE = new AtomicInteger();
 	private static boolean SOCIAL_STARTED = false;
+	// Base ambient intervals in ms, captured once at startup from config; each cycle self-reschedules with jitter.
+	private static long AMBIENT_TRADE_BASE_MS;
+	private static long AMBIENT_SHOUT_BASE_MS;
 
 	// Structured deal context kept while a trade responder is negotiating with a player.
 	// Keyed by playerName|botName so follow-up whispers can include the same exact item/count/price.
@@ -352,14 +409,35 @@ public class FakePlayerChatManager implements IXmlReader
 	
 	public void manageChat(Player player, String fpcName, String message)
 	{
-		ThreadPool.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(MIN_DELAY, MAX_DELAY));
+		enqueuePrivateTurn(player, fpcName, message, MIN_DELAY, MAX_DELAY);
 	}
-	
+
 	public void manageChat(Player player, String fpcName, String message, int minDelay, int maxDelay)
 	{
-		ThreadPool.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(minDelay, maxDelay));
+		enqueuePrivateTurn(player, fpcName, message, minDelay, maxDelay);
 	}
-	
+
+	// FPC-059/FPC-064: serialize private whisper turns per (player, bot) BEFORE the brain request starts, through the
+	// shared BrainConversationExecutor (the same mechanism PARTY/BUDDY/FRIEND use). Each whisper was scheduled with its
+	// own random "thinking" delay, so two quick messages could reach the brain (and the shared conversation history)
+	// out of send order; the Python per-conversation lock only orders by arrival. With one outstanding brain request
+	// per conversation here, turns run in send order, a slow turn never leaves a later one waiting inside Python, and
+	// the executor bounds/ages the queue so a message cannot sit for minutes and then run as if fresh (FPC-063).
+	private void enqueuePrivateTurn(Player player, String fpcName, String message, int minDelay, int maxDelay)
+	{
+		if (player == null)
+		{
+			return;
+		}
+		final String key = BrainConversationExecutor.key(player.getName(), fpcName);
+		// The turn keeps its own human-like delay (a non-blocking timer), then the blocking brain call runs on the
+		// shared brain executor with a guaranteed completion callback that releases the next queued turn - even if this
+		// turn is shed under load, so the conversation can never stall behind a dropped reply.
+		BrainConversationExecutor.submit(key, onComplete -> ThreadPool.schedule( //
+			() -> BrainExecutor.runBrainWork(() -> manageResponce(player, fpcName, message), onComplete), //
+			Rnd.get(minDelay, maxDelay)));
+	}
+
 	private void manageResponce(Player player, String fpcName, String message)
 	{
 		if (player == null)
@@ -390,7 +468,7 @@ public class FakePlayerChatManager implements IXmlReader
 		final String aiReply = askBrain(player.getName(), fpcName, message, bot);
 		if (aiReply != null)
 		{
-			sendChat(player, fpcName, handleMeetRequest(aiReply, player, bot));
+			sendChat(player, fpcName, handleMeetRequest(aiReply, message, player, bot));
 			return;
 		}
 		
@@ -477,9 +555,47 @@ public class FakePlayerChatManager implements IXmlReader
 			MESSAGES_THIS_MINUTE.set(0);
 			TRADE_OFFERS_THIS_MINUTE.set(0);
 		}, 60000, 60000); // reset rate caps each minute
-		ThreadPool.scheduleAtFixedRate(this::ambientTradeChat, AMBIENT_INTERVAL, AMBIENT_INTERVAL);
-		ThreadPool.scheduleAtFixedRate(this::ambientShoutChat, SHOUT_AMBIENT_INTERVAL, SHOUT_AMBIENT_INTERVAL);
+		// The timers stay on the game ThreadPool, but the ambient body does blocking brain work, so it runs on the
+		// dedicated brain executor (FPC-020). Cadence comes from config (seconds -> ms), clamped to a 5s floor so a
+		// mistyped 0 cannot busy-spin the timer. The base interval is read once here, so an interval change applies on
+		// restart (as the ini documents). Each cycle is then self-rescheduled with a fresh jitter instead of firing on a
+		// fixed beat, so ambient posts do not arrive in a robotic lockstep burst and idle chat feels less mechanical.
+		AMBIENT_TRADE_BASE_MS = Math.max(5, FakePlayersConfig.FAKE_PLAYER_AMBIENT_TRADE_INTERVAL_SECONDS) * 1000L;
+		AMBIENT_SHOUT_BASE_MS = Math.max(5, FakePlayersConfig.FAKE_PLAYER_AMBIENT_SHOUT_INTERVAL_SECONDS) * 1000L;
+		scheduleAmbientTrade();
+		scheduleAmbientShout();
 		LOGGER.info(getClass().getSimpleName() + ": Server-wide social chat enabled.");
+	}
+
+	/**
+	 * A randomized delay around a base interval: uniform in [base*0.6, base*1.4]. Used to jitter the ambient timers so
+	 * spontaneous chatter does not land on a fixed beat.
+	 * @param baseMs the configured interval in milliseconds
+	 * @return a jittered delay in milliseconds
+	 */
+	private static long jitteredDelay(long baseMs)
+	{
+		return Rnd.get((long) (baseMs * 0.6), (long) (baseMs * 1.4));
+	}
+
+	/** Post one spontaneous trade line after a jittered delay, then reschedule itself for the next one. */
+	private void scheduleAmbientTrade()
+	{
+		ThreadPool.schedule(() ->
+		{
+			runBrainWork(this::ambientTradeChat);
+			scheduleAmbientTrade();
+		}, jitteredDelay(AMBIENT_TRADE_BASE_MS));
+	}
+
+	/** Post one spontaneous shout line after a jittered delay, then reschedule itself for the next one. */
+	private void scheduleAmbientShout()
+	{
+		ThreadPool.schedule(() ->
+		{
+			runBrainWork(this::ambientShoutChat);
+			scheduleAmbientShout();
+		}, jitteredDelay(AMBIENT_SHOUT_BASE_MS));
 	}
 	
 	// Called from ChatTrade when a real player uses trade (+) chat.
@@ -492,7 +608,7 @@ public class FakePlayerChatManager implements IXmlReader
 			if (TRADE_AD.matcher(text).find())
 			{
 				final Player who = speaker;
-				ThreadPool.schedule(() -> respondToTradeAd(who, text), Rnd.get(MIN_DELAY, MAX_DELAY));
+				scheduleBrainWork(() -> respondToTradeAd(who, text), Rnd.get(MIN_DELAY, MAX_DELAY));
 			}
 			else
 			{
@@ -539,11 +655,25 @@ public class FakePlayerChatManager implements IXmlReader
 		}
 		if (item == null)
 		{
+			// The player named a real item that bots simply do not trade (not in the allow-list): hint that it will
+			// not sell, in-character, instead of silent banter. A phrase that names no real item falls through to banter.
+			ItemTemplate known = (aiName == null) ? null : FakePlayerStoreFactory.findKnownItemByName(aiName);
+			if (known == null)
+			{
+				known = FakePlayerStoreFactory.findKnownItemByName(rawPhrase);
+			}
+			if (known != null)
+			{
+				noSellHint(player, known, playerSelling);
+				return;
+			}
 			reactToChat(player, player.getName(), text, false, "TRADE"); // nothing recognisable -> banter
 			return;
 		}
 
-		final Npc bot = FakePlayerBehaviorManager.getInstance().pickTradeResponder(player);
+		// FPC-066: atomically claim the responder, so two concurrent trade ads cannot both select the same bot and set
+		// up two deals (with two ACTIVE_DEALS entries) against one reservation. setupDeal below supersedes the claim.
+		final Npc bot = FakePlayerBehaviorManager.getInstance().tryClaimTradeResponder(player);
 		if (bot == null)
 		{
 			reactToChat(player, player.getName(), text, false, "TRADE"); // no roaming bot around -> banter
@@ -560,13 +690,27 @@ public class FakePlayerChatManager implements IXmlReader
 		final List<FakePlayerStoreItem> stock = playerSelling ? FakePlayerStoreFactory.dealBuyStock(item.getId(), playerUnitPrice, requestedCount) : FakePlayerStoreFactory.dealSellStock(item.getId(), playerUnitPrice, requestedCount);
 		if (stock.isEmpty())
 		{
+			FakePlayerBehaviorManager.getInstance().releaseTradeClaim(bot, player); // FPC-066: no deal after all, free the claim now
+			return;
+		}
+		// FPC-021: reserve a trade-offer slot atomically before arming the bot and calling the brain, so concurrent
+		// responders cannot all pass a check-then-increment and overshoot the per-minute offer cap.
+		if (!tryReserve(TRADE_OFFERS_THIS_MINUTE, MAX_TRADE_OFFERS_PER_MINUTE))
+		{
+			FakePlayerBehaviorManager.getInstance().releaseTradeClaim(bot, player); // FPC-066: offer cap hit, free the claim now
 			return;
 		}
 		final String title = FakePlayerStoreFactory.title(playerSelling ? "BUY" : "SELL", stock);
 		// Stash the deal terms and reserve the bot, but do NOT walk yet. The bot quotes a price and waits;
 		// the player agrees (or haggles) and picks a meet spot over whisper. The whisper handler then walks
 		// the bot once a [[MEET:spot]] is agreed, applying any haggled price from the [[SHOP:...]] tag.
-		FakePlayerBehaviorManager.getInstance().setupDeal(bot, storeType, stock, title);
+		// FPC-078: only create the chat deal context and send the offer if the reservation actually took (the bot was
+		// still ours). If setupDeal was refused (someone else's claim slipped in), free our claim and stay quiet.
+		if (!FakePlayerBehaviorManager.getInstance().setupDeal(bot, player, storeType, stock, title))
+		{
+			FakePlayerBehaviorManager.getInstance().releaseTradeClaim(bot, player);
+			return;
+		}
 
 		final int unit = stock.get(0).getPrice();
 		final int actualCount = stock.get(0).getCount();
@@ -575,26 +719,91 @@ public class FakePlayerChatManager implements IXmlReader
 		// answer in the real shop later (see the whisper handler). A non-stackable is always a single piece.
 		final boolean needsCount = item.isStackable() && (requestedCount <= 0);
 		final String unitText = FakePlayerStorePricing.priceText(unit);
+		// "each" fits only a per-unit deal: a stackable good whose amount is still open, or more than one piece. A
+		// single non-stackable item (a weapon, a piece of armor) is one flat price, so the bot must not say "400k
+		// each" for one Artisan's Sword.
+		final boolean perUnit = needsCount || (actualCount > 1);
+		final String eachWord = perUnit ? " each" : "";
+		// The spoken name never carries the '*' Common Item marker (FPC-043/FPC-052), and it is what we store on the
+		// deal, hand the brain, and match its reply against, so chat, X-Deal-Item and any SHOP re-resolution stay clean.
+		final String itemName = spokenItemName(item);
+		// The opener only quotes a price and asks if they want to deal. The player already named the item in their
+		// post, so the bot must not repeat it, and the meeting place is settled later (only after a price is agreed),
+		// so the opener never asks where to meet (FPC-054).
 		final String deal = needsCount //
-			? ((playerSelling ? "buy their " : "sell them ") + item.getName() + " for about " + unitText
-				+ " adena each; ask HOW MANY they want and state your price, and ask if they want to deal and where to meet"
-				+ " (gatekeeper, warehouse or shop) - do not commit to an amount or to walking anywhere yet") //
+			? ((playerSelling ? "buy their " : "sell them ") + itemName + " for about " + unitText
+				+ " adena each; ask HOW MANY they want and state your price, and ask if they want to deal - do NOT"
+				+ " repeat the item name (they already posted it), do NOT ask where to meet yet, and do not commit to"
+				+ " an amount or to walking anywhere yet") //
 			: ((playerSelling ? "buy their " : "sell them ")
-				+ (actualCount > 0 ? (FakePlayerStorePricing.priceText(actualCount) + "x ") : "")
-				+ item.getName() + " for about " + unitText
-				+ " adena each; state your price and ask if they want to deal and where to meet (gatekeeper, warehouse or shop) - do not commit to walking anywhere yet");
+				+ (actualCount > 1 ? (FakePlayerStorePricing.priceText(actualCount) + "x ") : "")
+				+ itemName + " for about " + unitText + " adena" + eachWord
+				+ (perUnit ? "" : " (a single item - state one flat price, do not say 'each')")
+				+ "; state your price and ask if they want to deal - do NOT repeat the item name (they already posted"
+				+ " it), do NOT ask where to meet yet, and do not commit to walking anywhere yet");
 		final String fpcName = bot.getName();
-		final BrainDealContext dealContext = new BrainDealContext(botSide, item.getName(), item.getId(), actualCount, unit, needsCount);
+		final BrainDealContext dealContext = new BrainDealContext(botSide, itemName, item.getId(), actualCount, unit, needsCount);
 		ACTIVE_DEALS.put(dealKey(player.getName(), fpcName), dealContext);
-		final String line = callBridge(fpcName, "OFFER", player.getName(), "", text, nearestLocation(bot), deal, dealContext, BotIdentity.of(bot));
 		final String fallback = needsCount //
-			? ("saw ur post - i " + (playerSelling ? "buy " : "sell ") + item.getName() + " for " + unitText + " adena each, how many u want? and where u wanna meet?") //
-			: ("saw ur post - i " + (playerSelling ? "buy " : "sell ") + item.getName() + " for " + unitText + " adena each, wanna deal? where u wanna meet?");
-		sendChat(player, fpcName, (line == null) || line.isEmpty() ? fallback : line);
-		TRADE_OFFERS_THIS_MINUTE.incrementAndGet();
+			? ("saw ur post - i " + (playerSelling ? "buy" : "sell") + " at " + unitText + " adena each, how many u want?") //
+			: ("saw ur post - i can do " + unitText + " adena" + eachWord + ", wanna deal?");
+		// FPC-073: the OFFER opener writes the (player, bot) conversation history that later WHISPER turns read, so it
+		// must run on the SAME per-conversation lane as those whispers. If it stayed a bare inline brain call, a fast
+		// follow-up whisper (already routed through the executor) could reach the brain and be appended to the shared
+		// Python history before this opener is - reordering the very history those fixes protect. Route it through the
+		// conversation executor keyed (player, bot-name), with the blocking call on the shared brain executor and a
+		// guaranteed completion callback that releases the next queued turn on every path.
+		final String convKey = BrainConversationExecutor.key(player.getName(), fpcName);
+		BrainConversationExecutor.submit(convKey, onComplete -> BrainExecutor.runBrainWork(() ->
+		{
+			final String line = callBridge(fpcName, "OFFER", player.getName(), "", text, nearestLocation(bot), deal, dealContext, BotIdentity.of(bot));
+			// Prefer the model's natural line and fall back to the canned one only when it gave nothing. An OFFER is a
+			// direct reply to the player's own post, so the line need not repeat the item name to be clear; requiring it
+			// forced the canned template on every reply that phrased the deal naturally (FPC-043 follow-up). The store
+			// Java opens always uses the authoritative item, and sanitize()/spokenItemName keep a corrupted name out of
+			// chat, so trusting the line here costs at most an occasionally vague line, never a wrong deal.
+			sendChat(player, fpcName, ((line == null) || line.isEmpty()) ? fallback : line);
+		}, onComplete));
+		// The offer slot was reserved atomically before the brain call (FPC-021); it is not counted again here.
+	}
+
+	/**
+	 * The item name as it should ever appear in chat: the '*' Common Item marker is a stock-data artefact, not part of
+	 * the real name, so it is never spoken (FPC-043/FPC-052). Normal names pass through unchanged.
+	 * @param item the deal item
+	 * @return the name with any '*' folded to a space and runs of whitespace collapsed
+	 */
+	private static String spokenItemName(ItemTemplate item)
+	{
+		return item.getName().replace('*', ' ').replaceAll("\\s+", " ").trim();
 	}
 
 	/** Asks the brain to translate trade-chat shorthand into a plain item name; {@code null} if unclear. */
+	/**
+	 * Tells a player, in-character, that a real item they posted for trade is not something the bots deal, so it will
+	 * not sell here. Java owns the fact (the item is outside the trade allow-list); a nearby bot only phrases it, via
+	 * the brain's NOSELL mode, with a canned fallback when the brain is offline (FPC-052 follow-up).
+	 * @param player the advertiser
+	 * @param item the real item they named
+	 * @param playerSelling {@code true} for a WTS (nobody buys it), {@code false} for a WTB (nobody sells it)
+	 */
+	private void noSellHint(Player player, ItemTemplate item, boolean playerSelling)
+	{
+		final Npc bot = FakePlayerBehaviorManager.getInstance().pickTradeResponder(player);
+		if (bot == null)
+		{
+			return; // no bot nearby to answer - stay quiet rather than force a line
+		}
+		final String fpcName = bot.getName();
+		final String itemName = spokenItemName(item);
+		final String side = playerSelling ? "SELL" : "BUY";
+		final String line = callBridge(fpcName, "NOSELL", player.getName(), "", itemName, nearestLocation(bot), side, BotIdentity.of(bot));
+		final String fallback = playerSelling //
+			? ("nobody here's really buying " + itemName + " tbh") //
+			: ("dont think anyone round here sells " + itemName);
+		sendChat(player, fpcName, ((line == null) || line.isEmpty()) ? fallback : line);
+	}
+
 	private String askBrainItem(String adText)
 	{
 		final String reply = callBridge("", "ITEM", "", "", adText, "", "");
@@ -620,6 +829,15 @@ public class FakePlayerChatManager implements IXmlReader
 		{
 			ACTIVE_DEALS.remove(dealKey(playerName, fpcName));
 		}
+	}
+
+	// FPC-068: a deal whose current turn Java classified as REJECT or CLARIFY is being held in negotiation, so no
+	// SHOP/MEET commit may happen this turn even if the player's message also carries a stray acceptance word (e.g.
+	// "ok but can you do 5k?"). The deterministic counter decision outranks generic acceptance. counterDecision is
+	// turn-local (maybeHandleCounterOffer clears a stale one when a turn carries no counteroffer).
+	private static boolean isNegotiationHold(BrainDealContext deal)
+	{
+		return (deal != null) && ("REJECT".equals(deal.counterDecision) || "CLARIFY".equals(deal.counterDecision));
 	}
 
 	private static String dealKey(String playerName, String fpcName)
@@ -667,7 +885,9 @@ public class FakePlayerChatManager implements IXmlReader
 		final int storeType = botSells ? PrivateStoreType.SELL.getId() : PrivateStoreType.BUY.getId();
 		final String title = FakePlayerStoreFactory.title(botSells ? "SELL" : "BUY", stock);
 		FakePlayerBehaviorManager.getInstance().updateDealStock(bot, storeType, stock, title);
-		ACTIVE_DEALS.put(key, new BrainDealContext(deal.side, deal.item, deal.itemId, stock.get(0).getCount(), stock.get(0).getPrice(), false));
+		// Preserve any price already locked before the amount was known (FPC-040), so a price agreed first survives
+		// this quantity turn. The stock was restocked at deal.unitPrice, so its price equals the locked price.
+		ACTIVE_DEALS.put(key, new BrainDealContext(deal.side, deal.item, deal.itemId, stock.get(0).getCount(), stock.get(0).getPrice(), false, deal.priceLocked));
 	}
 
 	/**
@@ -688,31 +908,66 @@ public class FakePlayerChatManager implements IXmlReader
 		}
 		final String key = dealKey(player.getName(), fpcName);
 		final BrainDealContext deal = ACTIVE_DEALS.get(key);
-		if ((deal == null) || deal.needsCount)
+		if (deal == null)
 		{
-			return; // wait until the amount is settled before pricing this deal
+			return;
 		}
+		final boolean botSells = "SELL".equalsIgnoreCase(deal.side);
 		final int counter = FakePlayerChatParsing.parseCounterOffer(message);
 		if (counter <= 0)
 		{
-			return; // no price stated in this line - leave the deal as-is
+			// No explicit price. A bare number with a price cue ("17?", "make it 17") is ambiguous with a plain
+			// quantity, so Java never commits it (FPC-042): it records a CLARIFY with the plausible scaled value so
+			// the bot asks the player to confirm instead of guessing or silently keeping the old price. A truly
+			// ambiguous bare number (no cue) leaves the deal unchanged.
+			final int bare = FakePlayerChatParsing.parseBareCounterCandidate(message);
+			if (bare > 0)
+			{
+				final int candidate = FakePlayerChatParsing.scaleBareCounter(bare, deal.unitPrice);
+				if ((candidate > 0) && (candidate != deal.unitPrice))
+				{
+					ACTIVE_DEALS.put(key, new BrainDealContext(deal.side, deal.item, deal.itemId, deal.count, deal.unitPrice, deal.needsCount, deal.priceLocked, "CLARIFY", candidate));
+					return;
+				}
+			}
+			// FPC-068: the negotiation decision is turn-local. With no counteroffer this turn, clear a stale
+			// REJECT/CLARIFY from a previous turn so it cannot linger and wrongly veto a later accept or colour the
+			// prompt. The persistent deal keeps its agreed price/quantity/lock; only "what happened this turn" resets.
+			if (!deal.counterDecision.isEmpty())
+			{
+				ACTIVE_DEALS.put(key, new BrainDealContext(deal.side, deal.item, deal.itemId, deal.count, deal.unitPrice, deal.needsCount, deal.priceLocked, "", 0));
+			}
+			return;
 		}
-		final boolean botSells = "SELL".equalsIgnoreCase(deal.side);
 		// Java's negotiation decision. A counter equal to the current price is not a change, but is still an accept.
 		if (!FakePlayerChatParsing.acceptsCounter(counter, deal.unitPrice, botSells))
 		{
 			// REJECT: hold the bot's quoted price, but record the refused counter so the brain declines and restates
 			// the price rather than silently opening a store at the player's number.
-			ACTIVE_DEALS.put(key, new BrainDealContext(deal.side, deal.item, deal.itemId, deal.count, deal.unitPrice, false, deal.priceLocked, "REJECT", counter));
+			ACTIVE_DEALS.put(key, new BrainDealContext(deal.side, deal.item, deal.itemId, deal.count, deal.unitPrice, deal.needsCount, deal.priceLocked, "REJECT", counter));
 			return;
 		}
 		if (counter == deal.unitPrice)
 		{
 			// ACCEPT at the price already on the deal: just lock it and mark accepted; no restock needed.
-			ACTIVE_DEALS.put(key, new BrainDealContext(deal.side, deal.item, deal.itemId, deal.count, deal.unitPrice, false, true, "ACCEPT", counter));
+			ACTIVE_DEALS.put(key, new BrainDealContext(deal.side, deal.item, deal.itemId, deal.count, deal.unitPrice, deal.needsCount, true, "ACCEPT", counter));
 			return;
 		}
-		// ACCEPT at a new price: restock at the agreed price (mirrors maybeSetDealCount) and lock it in.
+		// Exact-ACCEPT invariant (FPC-041): an accepted price must be exactly executable. A counter outside the economy
+		// band would be silently clamped to a different number, so it is REJECTED here rather than accepted-then-changed.
+		if (!FakePlayerStoreFactory.dealPriceWithinBand(deal.itemId, counter, botSells))
+		{
+			ACTIVE_DEALS.put(key, new BrainDealContext(deal.side, deal.item, deal.itemId, deal.count, deal.unitPrice, deal.needsCount, deal.priceLocked, "REJECT", counter));
+			return;
+		}
+		if (deal.needsCount)
+		{
+			// Price agreed before the amount (FPC-040): lock the exact in-band price now and keep waiting on the
+			// quantity. No stack is built yet; maybeSetDealCount sizes it later at this locked price.
+			ACTIVE_DEALS.put(key, new BrainDealContext(deal.side, deal.item, deal.itemId, deal.count, counter, true, true, "ACCEPT", counter));
+			return;
+		}
+		// ACCEPT at a new in-band price: restock at exactly the agreed price (the clamp is a no-op here) and lock it.
 		final List<FakePlayerStoreItem> stock = botSells ? FakePlayerStoreFactory.dealSellStock(deal.itemId, counter, deal.count) : FakePlayerStoreFactory.dealBuyStock(deal.itemId, counter, deal.count);
 		if (stock.isEmpty())
 		{
@@ -785,7 +1040,7 @@ public class FakePlayerChatManager implements IXmlReader
 		if (looksLikeLfp(text))
 		{
 			final Player who = speaker;
-			ThreadPool.execute(() ->
+			runBrainWork(() ->
 			{
 				final List<Recruit> aiRoles = askBrainLfp(text);
 				if (!aiRoles.isEmpty())
@@ -1197,13 +1452,18 @@ public class FakePlayerChatManager implements IXmlReader
 	 */
 	private void whisperRecruitClarification(Player speaker, List<String> tokens)
 	{
-		if ((speaker == null) || (tokens == null) || tokens.isEmpty() || (MESSAGES_THIS_MINUTE.get() >= MAX_MESSAGES_PER_MINUTE))
+		if ((speaker == null) || (tokens == null) || tokens.isEmpty())
+		{
+			return;
+		}
+		// FPC-021: reserve the message slot atomically instead of check-then-increment; this line always sends, so
+		// the reserved slot is never released.
+		if (!tryReserve(MESSAGES_THIS_MINUTE, FakePlayersConfig.FAKE_PLAYER_MAX_PUBLIC_CHATS_PER_MINUTE))
 		{
 			return;
 		}
 		final String line = recruitClarifyLine(tokens);
 		final Npc voice = pickShoutResponder(speaker);
-		MESSAGES_THIS_MINUTE.incrementAndGet();
 		if (voice != null)
 		{
 			sendChat(speaker, voice.getName(), line); // reuses the length-scaled "typing" whisper path
@@ -1221,7 +1481,12 @@ public class FakePlayerChatManager implements IXmlReader
 	 */
 	private void whisperImpossibleCombos(Player speaker, List<String> combos)
 	{
-		if ((speaker == null) || (combos == null) || combos.isEmpty() || (MESSAGES_THIS_MINUTE.get() >= MAX_MESSAGES_PER_MINUTE))
+		if ((speaker == null) || (combos == null) || combos.isEmpty())
+		{
+			return;
+		}
+		// FPC-021: reserve the message slot atomically instead of check-then-increment; this line always sends.
+		if (!tryReserve(MESSAGES_THIS_MINUTE, FakePlayersConfig.FAKE_PLAYER_MAX_PUBLIC_CHATS_PER_MINUTE))
 		{
 			return;
 		}
@@ -1248,7 +1513,6 @@ public class FakePlayerChatManager implements IXmlReader
 		}
 		final String line = "there's no such thing as a " + sb + " m8, doesn't exist in this game";
 		final Npc voice = pickShoutResponder(speaker);
-		MESSAGES_THIS_MINUTE.incrementAndGet();
 		if (voice != null)
 		{
 			sendChat(speaker, voice.getName(), line);
@@ -1329,7 +1593,7 @@ public class FakePlayerChatManager implements IXmlReader
 	 */
 	private void reactToPlayerShout(Player speaker, String text)
 	{
-		if (MESSAGES_THIS_MINUTE.get() >= MAX_MESSAGES_PER_MINUTE)
+		if (MESSAGES_THIS_MINUTE.get() >= FakePlayersConfig.FAKE_PLAYER_MAX_PUBLIC_CHATS_PER_MINUTE)
 		{
 			return;
 		}
@@ -1368,7 +1632,7 @@ public class FakePlayerChatManager implements IXmlReader
 			final int slot = repliers++;
 			final Npc replier = bot;
 			// Stagger extra repliers so a 2nd bot answers a few seconds after the 1st, not in lockstep.
-			ThreadPool.schedule(() -> botSpeaks(replier, speakerName, text, "SHOUT", true), Rnd.get(MIN_DELAY, MAX_DELAY) + ((long) slot * REPLY_STAGGER_MS));
+			scheduleBrainWork(() -> botSpeaks(replier, speakerName, text, "SHOUT", true), Rnd.get(MIN_DELAY, MAX_DELAY) + ((long) slot * REPLY_STAGGER_MS));
 		}
 	}
 	
@@ -1380,13 +1644,19 @@ public class FakePlayerChatManager implements IXmlReader
 
 	private void reactToChat(Creature origin, String speakerName, String text, boolean speakerIsBot, String channel, int depth)
 	{
-		if (MESSAGES_THIS_MINUTE.get() >= MAX_MESSAGES_PER_MINUTE)
+		if (MESSAGES_THIS_MINUTE.get() >= FakePlayersConfig.FAKE_PLAYER_MAX_PUBLIC_CHATS_PER_MINUTE)
 		{
 			return; // throttle 3: global cap
 		}
 		// Chain leash: stop a bot-to-bot echo once it has run its allotted hops. Reactions to a human are never
 		// gated here (depth is 0 for those), so players always get answered.
-		if (speakerIsBot && (depth >= MAX_BOT_CHAIN_DEPTH))
+		if (speakerIsBot && (depth >= FakePlayersConfig.FAKE_PLAYER_BOT_CHAT_CHAIN_DEPTH))
+		{
+			return;
+		}
+		// Defense in depth: a content-free bot line must never become the seed of a new reaction chain, even if a
+		// future caller reaches reactToChat directly instead of going through botSpeaks' pre-broadcast quality gate.
+		if (speakerIsBot && isLowContentBanter(text))
 		{
 			return;
 		}
@@ -1408,7 +1678,7 @@ public class FakePlayerChatManager implements IXmlReader
 			return;
 		}
 		
-		final int chance = speakerIsBot ? REPLY_CHANCE_TO_BOT : REPLY_CHANCE_TO_PLAYER;
+		final int chance = speakerIsBot ? FakePlayersConfig.FAKE_PLAYER_BOT_CHAT_REPLY_CHANCE : REPLY_CHANCE_TO_PLAYER;
 		Collections.shuffle(bots);
 		int repliers = 0;
 		for (Npc bot : bots)
@@ -1424,7 +1694,7 @@ public class FakePlayerChatManager implements IXmlReader
 			final int slot = repliers++;
 			final Npc replier = bot;
 			// Stagger extra repliers so a 2nd bot answers a few seconds after the 1st, not in lockstep.
-			ThreadPool.schedule(() -> botSpeaks(replier, speakerName, text, channel, !speakerIsBot, depth), Rnd.get(MIN_DELAY, MAX_DELAY) + ((long) slot * REPLY_STAGGER_MS));
+			scheduleBrainWork(() -> botSpeaks(replier, speakerName, text, channel, !speakerIsBot, depth), Rnd.get(MIN_DELAY, MAX_DELAY) + ((long) slot * REPLY_STAGGER_MS));
 		}
 	}
 
@@ -1435,7 +1705,7 @@ public class FakePlayerChatManager implements IXmlReader
 
 	private void botSpeaks(Npc bot, String speakerName, String overheard, String channel, boolean human, int depth)
 	{
-		if (MESSAGES_THIS_MINUTE.get() >= MAX_MESSAGES_PER_MINUTE)
+		if (MESSAGES_THIS_MINUTE.get() >= FakePlayersConfig.FAKE_PLAYER_MAX_PUBLIC_CHATS_PER_MINUTE)
 		{
 			return;
 		}
@@ -1444,8 +1714,25 @@ public class FakePlayerChatManager implements IXmlReader
 		{
 			return;
 		}
+		// FPC-021: reserve a message slot atomically BEFORE the brain call, so concurrent brain workers cannot all
+		// pass a check-then-increment and overshoot the per-minute cap. The slot is never refunded (see tryReserve):
+		// an empty reply still consumes it, which bounds brain load and keeps the reservation window-safe.
+		if (!tryReserve(MESSAGES_THIS_MINUTE, FakePlayersConfig.FAKE_PLAYER_MAX_PUBLIC_CHATS_PER_MINUTE))
+		{
+			return;
+		}
 		final String line = askBrainPublic(bot, speakerName, overheard, channel, human);
 		if ((line == null) || line.isEmpty())
+		{
+			return; // nothing to say; the reserved slot stays consumed (no cross-window refund)
+		}
+		// A prompt telling the model to be meaningful is not an enforcement mechanism. Previously a bot could still
+		// broadcast "yeah lol" / "same" / "lol classic" and only AFTER the player saw it would isLowContentBanter
+		// prevent that weak line from spawning another bot reply. For autonomous/bot-to-bot chatter, reject the weak
+		// line BEFORE broadcast. A reply to a real human is deliberately exempt because short answers such as "np",
+		// "sure" or "omw" can be perfectly natural when directly answering a player.
+		final boolean lowContent = isLowContentBanter(line);
+		if (!human && lowContent)
 		{
 			return;
 		}
@@ -1465,13 +1752,13 @@ public class FakePlayerChatManager implements IXmlReader
 			{
 				sendTradeChat(bot, line); // TRADE and AMBIENT both broadcast to global trade
 			}
-			MESSAGES_THIS_MINUTE.incrementAndGet();
+			// The message slot was reserved atomically before the brain call (FPC-021); it is not counted again here.
 
 			// Bot-to-bot banter (damped): let another bot pick this up only while the chain has hops left AND the
-			// line actually carries substance. A content-free laugh or emote does not seed the next reply, which is
-			// what used to turn one joke into a ten-deep "xD"/"lol classic" echo loop. Ambient timers keep seeding
-			// fresh topics independently, so the channel stays alive without spiralling.
-			if (!isLowContentBanter(line))
+			// line actually carries substance. `lowContent` was calculated before broadcast: autonomous low-content
+			// lines never reach this point, while a short human-directed reply may be visible but still must not seed a
+			// bot echo chain. Ambient timers keep seeding fresh topics independently.
+			if (!lowContent)
 			{
 				reactToChat(bot, bot.getName(), line, true, channel.equals("SAY") ? "SAY" : channel.startsWith("SHOUT") ? "SHOUT" : "TRADE", depth + 1);
 			}
@@ -1480,8 +1767,9 @@ public class FakePlayerChatManager implements IXmlReader
 
 	/**
 	 * A line that is only laughter, an emote, or a one-word acknowledgement ("xD", "lol classic", "sup dude") - too
-	 * thin to be worth a bot reacting to. Used to stop content-free lines from seeding an endless bot-to-bot echo
-	 * chain; the bot may still SAY such a line, it just does not trigger the next reply off it.
+	 * thin to be autonomous living-world chatter. Autonomous/bot-to-bot lines are now dropped before broadcast;
+	 * human-directed replies are allowed through because a short answer can be natural, but they still cannot seed
+	 * another bot reply.
 	 * @param line the bot's outgoing chat line
 	 * @return {@code true} when the line has fewer than two substantive words
 	 */
@@ -1562,7 +1850,7 @@ public class FakePlayerChatManager implements IXmlReader
 
 	private void ambientTradeChat()
 	{
-		if (!SOCIAL_ENABLED || (MESSAGES_THIS_MINUTE.get() >= MAX_MESSAGES_PER_MINUTE))
+		if (!SOCIAL_ENABLED || (MESSAGES_THIS_MINUTE.get() >= FakePlayersConfig.FAKE_PLAYER_MAX_PUBLIC_CHATS_PER_MINUTE))
 		{
 			return;
 		}
@@ -1580,7 +1868,7 @@ public class FakePlayerChatManager implements IXmlReader
 	/** Spontaneous shout: a random bot posts global chit-chat or an LFM/looking-for-party ad now and then. */
 	private void ambientShoutChat()
 	{
-		if (!SOCIAL_ENABLED || (MESSAGES_THIS_MINUTE.get() >= MAX_MESSAGES_PER_MINUTE))
+		if (!SOCIAL_ENABLED || (MESSAGES_THIS_MINUTE.get() >= FakePlayersConfig.FAKE_PLAYER_MAX_PUBLIC_CHATS_PER_MINUTE))
 		{
 			return;
 		}
@@ -1740,7 +2028,11 @@ public class FakePlayerChatManager implements IXmlReader
 		}
 		final String regularName = regular.getName();
 		final String playerName = player.getName();
-		ThreadPool.schedule(() ->
+		// FPC-064: serialize FRIEND turns per (player, regular) like the other private modes, so two quick friend PMs
+		// are not reordered against the shared conversation history. FPC-073: keyed (player, bot-name) with no mode, so
+		// this shares one lane with WHISPER/OFFER to the same regular (the brain keeps a single history for the pair).
+		final String key = BrainConversationExecutor.key(playerName, regularName);
+		BrainConversationExecutor.submit(key, onComplete -> scheduleBrainWork(() ->
 		{
 			// FRIEND mode: same stable persona as a whisper, but the brain knows you two are friends (warmer
 			// tone) and writes the friendship into its memory so other channels pick it up too.
@@ -1755,7 +2047,7 @@ public class FakePlayerChatManager implements IXmlReader
 					player.sendPacket(new L2FriendSay(regularName, playerName, reply));
 				}
 			}, typingDelayMillis(reply));
-		}, Rnd.get(FRIEND_THINK_MIN, FRIEND_THINK_MAX));
+		}, Rnd.get(FRIEND_THINK_MIN, FRIEND_THINK_MAX), onComplete));
 	}
 
 	/**
@@ -1774,7 +2066,10 @@ public class FakePlayerChatManager implements IXmlReader
 		}
 		final String regularName = regular.getName();
 		final String playerName = player.getName();
-		ThreadPool.schedule(() ->
+		// FPC-064: serialize FRIEND turns per (player, regular), like the other private modes. FPC-073: keyed
+		// (player, bot-name) with no mode, so it shares one lane with WHISPER/OFFER to the same regular.
+		final String key = BrainConversationExecutor.key(playerName, regularName);
+		BrainConversationExecutor.submit(key, onComplete -> scheduleBrainWork(() ->
 		{
 			final String aiReply = callBridge(regularName, "FRIEND", playerName, "", message, nearestLocation(regular), "", BotIdentity.of(regular));
 			final String reply = ((aiReply != null) && !aiReply.isEmpty()) //
@@ -1787,7 +2082,7 @@ public class FakePlayerChatManager implements IXmlReader
 					player.sendPacket(new CreatureSay(regular, ChatType.WHISPER, regularName, reply));
 				}
 			}, typingDelayMillis(reply));
-		}, Rnd.get(FRIEND_THINK_MIN, FRIEND_THINK_MAX));
+		}, Rnd.get(FRIEND_THINK_MIN, FRIEND_THINK_MAX), onComplete));
 	}
 
 	/**
@@ -1855,7 +2150,7 @@ public class FakePlayerChatManager implements IXmlReader
 	 * strip the tag so the player only sees the natural line.
 	 * @return the cleaned reply text
 	 */
-	private String handleMeetRequest(String reply, Player player, Npc bot)
+	private String handleMeetRequest(String reply, String playerMessage, Player player, Npc bot)
 	{
 		if (reply == null)
 		{
@@ -1864,6 +2159,7 @@ public class FakePlayerChatManager implements IXmlReader
 
 		boolean cancelled = false;
 		boolean handledShop = false;
+		boolean moved = false; // the bot was actually sent to meet / a store was opened this line (FPC-051 review, finding 6)
 
 		// Roaming bots and bots running a temporary deal store both negotiate here (the latter so the player
 		// can renegotiate or cancel mid-deal); only static AFK vendors are excluded.
@@ -1871,25 +2167,29 @@ public class FakePlayerChatManager implements IXmlReader
 		{
 			// SHOP tag: the bot commits to a real store for a specific item/price. Open it now if it is
 			// already waiting with the player, otherwise arm it and make sure it walks over to meet.
+			//
+			// A SHOP tag only ever means "the deal we already negotiated is agreed, open it now". It is NEVER the
+			// source of truth for direction, item, or price: a weak model routinely flips SELL/BUY, mangles the item
+			// name, and drops the "k" on the price inside the tag. Those terms come only from the Java-owned deal
+			// context that the original WTS/WTB ad (or a later accepted counteroffer) stored. So:
+			// - If there is NO stored deal for this (player, bot), the tag is unanchored (a model hallucination or an
+			//   expired deal); Java refuses to create any real store state from it. The bot may still speak; it just
+			//   cannot open a store no server-side deal backs (FPC-051 review, section 6.1).
+			// - The executable price is ALWAYS the server-side deal price: the opening quote, or the negotiated price
+			//   once maybeHandleCounterOffer locked it. The model can never choose a money value (section 6.2).
+			// FPC-060: the model tag is a proposal, not the authority for WHEN the deal commits. Java opens/arms the
+			// store only when the player's own latest message reads like acceptance (isDealAccept). A [[SHOP]] paired
+			// with a "nah, not interested" is ignored and the deal stays in negotiation, so the model no longer owns
+			// the state transition (it never owned the item/side/price, which come from the deal context).
 			final Matcher shop = SHOP_TAG.matcher(reply);
-			if (shop.find())
+			final BrainDealContext deal = ACTIVE_DEALS.get(dealKey(player.getName(), bot.getName()));
+			if (shop.find() && (deal != null) && FakePlayerChatParsing.isDealAccept(playerMessage) && !isNegotiationHold(deal))
 			{
-				// A weak brain model routinely flips SELL/BUY, mangles the item name, and drops the "k" on the
-				// price inside this tag. Java already parsed the real terms from the original WTS/WTB ad and
-				// stashed them in the deal context, so treat that as authoritative: the SHOP tag is only the
-				// "deal agreed, open it now" signal, not the source of truth for direction/item/price. When there
-				// is no stored deal (unusual), fall back to reading the terms straight from the tag.
-				final BrainDealContext deal = ACTIVE_DEALS.get(dealKey(player.getName(), bot.getName()));
-				final boolean botSells = (deal != null) ? "SELL".equalsIgnoreCase(deal.side) : "SELL".equalsIgnoreCase(shop.group(1));
-				final ItemTemplate item = FakePlayerStoreFactory.findItemByName((deal != null) ? deal.item : shop.group(2));
+				final boolean botSells = "SELL".equalsIgnoreCase(deal.side);
+				final ItemTemplate item = FakePlayerStoreFactory.findItemByName(deal.item);
 				if (item != null)
 				{
-					final int taggedPrice = FakePlayerChatParsing.applyShopPriceMultiplier(Integer.parseInt(shop.group(3)), shop.group(4));
-					// Price authority: once Java has locked a negotiated price (deal.priceLocked), the SHOP tag is only
-					// the "open it now" signal and its price is ignored. Otherwise keep the FPC-026 behavior - trust the
-					// stored offer, allowing a genuine haggle carried in the tag within a 4x band.
-					final int price = (deal != null) ? (deal.priceLocked ? deal.unitPrice : FakePlayerChatParsing.resolveDealPrice(taggedPrice, deal.unitPrice)) : taggedPrice;
-
+					final int price = deal.unitPrice;
 					final int storeType = botSells ? PrivateStoreType.SELL.getId() : PrivateStoreType.BUY.getId();
 					final FakePlayerBehaviorManager behavior = FakePlayerBehaviorManager.getInstance();
 					final int requestedCount = behavior.getPendingDealCount(bot, item.getId());
@@ -1898,13 +2198,14 @@ public class FakePlayerChatManager implements IXmlReader
 					{
 						final String title = FakePlayerStoreFactory.title(botSells ? "SELL" : "BUY", stock);
 						handledShop = true;
+						moved = true; // a store was opened or armed and the bot is heading to the meet
 						if (behavior.isWaitingAtMeet(bot))
 						{
 							behavior.openDealNow(bot, storeType, stock, title); // already here -> open immediately
 						}
 						else
 						{
-							behavior.setupDeal(bot, storeType, stock, title);
+							behavior.setupDeal(bot, player, storeType, stock, title);
 							final Matcher meet = MEET_TAG.matcher(reply);
 							final String spot = (meet.find() && !"cancel".equalsIgnoreCase(normalizeMeetSpot(meet.group(1)))) ? normalizeMeetSpot(meet.group(1)) : "gatekeeper";
 							behavior.requestMeet(bot, spot, player);
@@ -1922,13 +2223,26 @@ public class FakePlayerChatManager implements IXmlReader
 					final String spot = normalizeMeetSpot(meet.group(1));
 					if ("cancel".equalsIgnoreCase(spot))
 					{
-						FakePlayerBehaviorManager.getInstance().cancelMeet(bot);
-						ACTIVE_DEALS.remove(dealKey(player.getName(), bot.getName()));
-						cancelled = true;
+						// FPC-061: tear the deal down only when a deal actually exists AND the player's own message
+						// expresses cancellation. A bare [[MEET:cancel]] with no player cancel intent (a hallucinated
+						// or injected tag) must not stand the bot down or drop a live deal.
+						if ((deal != null) && FakePlayerChatParsing.isDealCancel(playerMessage))
+						{
+							// FPC-067: cancel the WHOLE deal lifecycle (pending offer, active meet, or open store) and
+							// clear the chat context in one authoritative call, so a pre-meet cancel does not leave the
+							// bot reserved until the offer TTL. cancelDeal clears ACTIVE_DEALS itself.
+							FakePlayerBehaviorManager.getInstance().cancelDeal(bot, player);
+							cancelled = true;
+						}
 					}
-					else
+					else if ((deal != null) && FakePlayerChatParsing.isDealAccept(playerMessage) && !isNegotiationHold(deal))
 					{
+						// Positive anchor (FPC-051 review, finding 6) plus player-intent gate (FPC-060): only move the
+						// bot when a real, server-owned deal exists for this (player, bot) AND the player's latest
+						// message reads like agreement to meet. Without a deal a [[MEET]] is unanchored, and without
+						// acceptance the model does not get to decide the bot walks over.
 						FakePlayerBehaviorManager.getInstance().requestMeet(bot, spot, player);
+						moved = true;
 					}
 				}
 				else
@@ -1944,7 +2258,14 @@ public class FakePlayerChatManager implements IXmlReader
 		{
 			return cleaned;
 		}
-		return cancelled ? "k np" : "omw";
+		if (cancelled)
+		{
+			return "k np";
+		}
+		// Only answer "omw" when the bot was actually sent somewhere / a store was opened. If the model returned only
+		// tags that resolved to no action (an unanchored SHOP/MEET, a foreign tag), stay silent rather than claiming
+		// to be on the way when nothing happened (FPC-051 review, finding 6).
+		return moved ? "omw" : "";
 	}
 
 	/** A seated private-store vendor is an AFK shop and never chats. */
@@ -1955,7 +2276,7 @@ public class FakePlayerChatManager implements IXmlReader
 	}
 
 	/** @return a short phrase like "in Giran" or "near Aden" for the bot's current position (NPC or phantom). */
-	private static String nearestLocation(Creature creature)
+	public static String nearestLocation(Creature creature)
 	{
 		if (creature == null)
 		{

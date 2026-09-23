@@ -10,8 +10,10 @@ on:
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerChatParsing.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerStorePricing.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerStoreEligibility.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerStoreMath.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomBuffReservations.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomPvpManager.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/modules/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/java/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/js/**"
@@ -24,8 +26,10 @@ on:
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerChatParsing.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerStorePricing.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerStoreEligibility.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerStoreMath.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomBuffReservations.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomPvpManager.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/modules/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/java/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/js/**"
@@ -53,11 +57,16 @@ jobs:
         run: |
           javac -d build/test-classes \
             "java/org/l2jmobius/commons/util/Rnd.java" \
+            "java/org/l2jmobius/commons/time/TimeUtil.java" \
+            "java/org/l2jmobius/commons/util/ConfigReader.java" \
+            "java/org/l2jmobius/gameserver/config/custom/FakePlayersConfig.java" \
             "java/org/l2jmobius/gameserver/managers/FakePlayerChatParsing.java" \
             "java/org/l2jmobius/gameserver/managers/FakePlayerStorePricing.java" \
             "java/org/l2jmobius/gameserver/managers/FakePlayerStoreEligibility.java" \
+            "java/org/l2jmobius/gameserver/managers/FakePlayerStoreMath.java" \
             "java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java" \
             "java/org/l2jmobius/gameserver/managers/PhantomBuffReservations.java" \
+            "java/org/l2jmobius/gameserver/managers/PhantomPvpManager.java" \
             "java/org/l2jmobius/gameserver/modules/Json.java" \
             "java/org/l2jmobius/gameserver/modules/ModuleException.java" \
             "java/org/l2jmobius/gameserver/modules/ModuleManifest.java" \
@@ -70,8 +79,10 @@ jobs:
           java -cp build/test-classes FakePlayerChatParsingTest
           java -cp build/test-classes FakePlayerStorePricingTest
           java -cp build/test-classes FakePlayerStoreEligibilityTest
+          java -cp build/test-classes FakePlayerStoreMathTest
           java -cp build/test-classes FakePlayerNameFactoryTest
           java -cp build/test-classes PhantomBuffReservationsTest
+          java -cp build/test-classes PhantomPvpManagerTest
           java -cp build/test-classes ModuleFrameworkTest
 
       - name: Set up Node

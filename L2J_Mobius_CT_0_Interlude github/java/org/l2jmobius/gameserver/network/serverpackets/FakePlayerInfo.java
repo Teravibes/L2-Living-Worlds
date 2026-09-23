@@ -207,7 +207,10 @@ public class FakePlayerInfo extends ServerPacket
 		buffer.writeInt(_npc.getAbnormalVisualEffects());
 		buffer.writeByte(0); // _player.getRecomLeft()
 		buffer.writeShort(_fpcHolder.getRecommends()); // Blue value for name (0 = white, 255 = pure blue)
-		buffer.writeInt(_fpcHolder.getPlayerClass().getId());
+		// FPC-010: the current-class field must match the early base-class field above (line ~118). A generated bot
+		// has no subclass, so its generated class is both its base and active class; writing the shared template's
+		// class here gave the client contradictory class metadata for a generated FakePlayer.
+		buffer.writeInt(_look != null ? _look.getPlayerClass().getId() : _fpcHolder.getPlayerClass().getId());
 		buffer.writeInt(0); // ?
 		buffer.writeInt(0); // _player.getCurrentCp()
 		buffer.writeByte(_look != null ? _look.getWeaponEnchantLevel() : _fpcHolder.getWeaponEnchantLevel()); // isMounted() ? 0 : _enchantLevel

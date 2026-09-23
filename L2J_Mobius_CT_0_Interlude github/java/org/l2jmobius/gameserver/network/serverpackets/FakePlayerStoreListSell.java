@@ -26,6 +26,7 @@ import java.util.List;
 import org.l2jmobius.commons.network.WritableBuffer;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
 import org.l2jmobius.gameserver.model.actor.holders.npc.FakePlayerAppearance;
 import org.l2jmobius.gameserver.model.actor.holders.npc.FakePlayerStoreItem;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -41,6 +42,7 @@ public class FakePlayerStoreListSell extends ServerPacket
 	private final int _objectId;
 	private final int _playerAdena;
 	private final List<FakePlayerStoreItem> _items;
+	private final boolean _packaged;
 
 	public FakePlayerStoreListSell(Player player, Npc npc)
 	{
@@ -48,6 +50,9 @@ public class FakePlayerStoreListSell extends ServerPacket
 		_playerAdena = player.getAdena();
 		final FakePlayerAppearance look = npc.getFakePlayerAppearance();
 		_items = look == null ? Collections.emptyList() : look.getStoreItems();
+		// FPC-014: advertise the package flag so a PACKAGE vendor is shown as an all-or-nothing bundle, matching the
+		// stock packet's isPackaged() value instead of always claiming an ordinary partial-purchase sell store.
+		_packaged = (look != null) && (look.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL.getId());
 	}
 
 	@Override
@@ -55,7 +60,7 @@ public class FakePlayerStoreListSell extends ServerPacket
 	{
 		ServerPackets.PRIVATE_STORE_LIST_SELL.writeId(this, buffer);
 		buffer.writeInt(_objectId);
-		buffer.writeInt(0); // not a package sell
+		buffer.writeInt(_packaged ? 1 : 0); // package sell flag (FPC-014)
 		buffer.writeInt(_playerAdena);
 		buffer.writeInt(_items.size());
 		for (FakePlayerStoreItem entry : _items)

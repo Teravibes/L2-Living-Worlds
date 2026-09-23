@@ -1298,6 +1298,15 @@ public class Player extends Playable
 	private void setBuddyBot(boolean isBuddyBot) {
 		this.isBuddyBot = isBuddyBot;
 	}
+
+	/**
+	 * @return {@code true} if this player is a buddy bot (a phantom / FakePlayer spawned by the living-world
+	 *         population), not a real client-controlled character.
+	 */
+	public boolean isBuddyBot()
+	{
+		return isBuddyBot;
+	}
 	
 	/**
 	 * @return the Id for the last talked quest NPC.

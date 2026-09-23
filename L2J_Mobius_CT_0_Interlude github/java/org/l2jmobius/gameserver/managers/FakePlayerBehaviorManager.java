@@ -96,6 +96,8 @@ public class FakePlayerBehaviorManager implements IXmlReader
 	private static final int SUMMON_SEARCH_RANGE = 6000;
 	// Wider than landmark search: used only to find a roaming fake player who can answer a WTB/WTS ad.
 	private static final int TRADE_RESPONDER_SEARCH_RANGE = 12000;
+	private static final long TRADE_CLAIM_TTL = 30000; // FPC-066: how long an atomic responder claim holds a bot before setupDeal supersedes it, or it lapses if the deal never sets up
+	private final Object _tradeClaimLock = new Object(); // guards the check-and-claim in tryClaimTradeResponder (FPC-066)
 	// Meet beside a landmark NPC instead of on top of it, so the fake player does not overlap the gatekeeper,
 	// warehouse keeper or merchant model.
 	private static final int MEET_OFFSET_MIN = 160;
@@ -177,6 +179,8 @@ public class FakePlayerBehaviorManager implements IXmlReader
 		List<FakePlayerStoreItem> pendingStock;
 		String pendingTitle;
 		long pendingDealExpire; // when an offered-but-not-yet-agreed deal reservation lapses (0 = none)
+		Player dealPlayer; // the player an offered/pending deal is with, so an abandoned offer can clear its chat context (FPC-019)
+		long dealClaimExpire; // FPC-066: a short atomic hold taken when this bot is selected as a trade responder, before setupDeal fills the deal in (0 = none)
 		boolean dealActive; // a deal store is currently open on this bot
 
 		BotState(Profile profile, Location home, int radius, Population population)
@@ -213,7 +217,11 @@ public class FakePlayerBehaviorManager implements IXmlReader
 	private String _defaultProfile = null;
 
 	private final Map<Integer, BotState> _bots = new ConcurrentHashMap<>(); // objectId -> state
-	private boolean _started = false;
+	// FPC-018: the recurring discovery/tick loops are scheduled ONCE for the JVM lifetime; a reload replaces data and
+	// bots, not these loops, so reloads no longer stack duplicate loops. Delayed deploy/respawn work carries the
+	// generation it was scheduled under and no-ops if a reload has since bumped it.
+	private boolean _loopsStarted = false;
+	private volatile int _generation = 0;
 	private int _baseId; // base template id used for all generated bots (resolved at deploy)
 
 	protected FakePlayerBehaviorManager()
@@ -227,6 +235,7 @@ public class FakePlayerBehaviorManager implements IXmlReader
 	@Override
 	public void load()
 	{
+		_generation++; // FPC-018: a new (re)load; delayed deploy/respawn work from the previous generation now no-ops.
 		_profiles.clear();
 		_assignByName.clear();
 		_assignByNpcId.clear();
@@ -294,7 +303,7 @@ public class FakePlayerBehaviorManager implements IXmlReader
 				population.minLevel = set.getInt("minLevel", 1);
 				population.maxLevel = set.getInt("maxLevel", 60);
 				population.respawn = set.getBoolean("respawn", false);
-				population.storeType = set.contains("store") ? set.getString("store") : null;
+				population.storeType = normalizeStoreType(population.name, set.contains("store") ? set.getString("store") : null);
 				population.fullStock = set.getBoolean("fullStock", false);
 				population.profileName = set.getString("profile", _defaultProfile);
 				population.routeName = set.contains("route") ? set.getString("route") : null;
@@ -320,20 +329,64 @@ public class FakePlayerBehaviorManager implements IXmlReader
 		});
 	}
 
+	// The population store types the deployment code understands. Anything else must be rejected at load, not fall
+	// through to a SELL vendor (FPC-017).
+	private static final java.util.Set<String> SUPPORTED_STORE_TYPES = java.util.Set.of("SELL", "BUY", "PACKAGE", "CRAFT", "MANUFACTURE", "AASELL", "AABUY");
+
+	/**
+	 * Validate and canonicalize a population's {@code store} attribute (FPC-017). The XSD only says {@code xs:string},
+	 * so a typo like {@code store="BUYY"} used to pass validation and silently deploy a SELL vendor. This normalizes
+	 * to the documented upper-case form, accepts only the supported set, and disables the store (returns {@code null})
+	 * with a named warning for anything else - so a mistake never reverses the intended market direction unnoticed.
+	 * @param populationName the population the value came from, for the warning
+	 * @param raw the raw store attribute, or {@code null} when none was set
+	 * @return the canonical upper-case store type, or {@code null} to run the population with no store
+	 */
+	private static String normalizeStoreType(String populationName, String raw)
+	{
+		if (raw == null)
+		{
+			return null;
+		}
+		final String kind = raw.trim().toUpperCase(java.util.Locale.ROOT);
+		if (kind.isEmpty() || !SUPPORTED_STORE_TYPES.contains(kind))
+		{
+			LOGGER.warning(FakePlayerBehaviorManager.class.getSimpleName() + ": population \"" + populationName //
+				+ "\" has an unsupported store type \"" + raw + "\"; running it with no store. Supported: " + SUPPORTED_STORE_TYPES + ".");
+			return null;
+		}
+		return kind;
+	}
+
 	private void start()
 	{
-		if (_started || _profiles.isEmpty())
+		if (_profiles.isEmpty())
 		{
 			return;
 		}
-		_started = true;
+		// FPC-018: schedule the recurring loops exactly once. A reload replaces data and bots but must NOT schedule a
+		// second discovery/tick pair - that was the leak that made every reload permanently raise the tick frequency
+		// and let several workers process one BotState at once.
+		if (!_loopsStarted)
+		{
+			_loopsStarted = true;
+			ThreadPool.scheduleAtFixedRate(this::discover, DISCOVERY_INTERVAL, DISCOVERY_INTERVAL);
+			ThreadPool.scheduleAtFixedRate(this::tick, BEHAVIOR_INTERVAL, BEHAVIOR_INTERVAL);
+			LOGGER.info(getClass().getSimpleName() + ": Fake player behavior enabled.");
+		}
+		// Deploy this (re)load's population after the usual delay, tagged with the current generation so a reload
+		// issued before it fires cancels it instead of deploying a now-stale population on top of the new one.
 		if (!_populations.isEmpty() || (FakePlayersConfig.FAKE_PLAYER_DEPLOY_COUNT > 0))
 		{
-			ThreadPool.schedule(this::deploy, DEPLOY_DELAY);
+			final int generation = _generation;
+			ThreadPool.schedule(() ->
+			{
+				if (generation == _generation)
+				{
+					deploy();
+				}
+			}, DEPLOY_DELAY);
 		}
-		ThreadPool.scheduleAtFixedRate(this::discover, DISCOVERY_INTERVAL, DISCOVERY_INTERVAL);
-		ThreadPool.scheduleAtFixedRate(this::tick, BEHAVIOR_INTERVAL, BEHAVIOR_INTERVAL);
-		LOGGER.info(getClass().getSimpleName() + ": Fake player behavior enabled.");
 	}
 
 	/**
@@ -712,10 +765,19 @@ public class FakePlayerBehaviorManager implements IXmlReader
 			if (npc.isDead())
 			{
 				final BotState dead = _bots.remove(entry.getKey());
-				// Replace fallen field bots with a fresh hunter so the zone stays populated.
+				// Replace fallen field bots with a fresh hunter so the zone stays populated. FPC-018: tag the respawn
+				// with the current generation, so a reload before it fires drops it instead of spawning a bot from a
+				// population that no longer exists.
 				if ((dead != null) && (dead.population != null) && dead.population.respawn)
 				{
-					ThreadPool.schedule(() -> deployOne(dead.population), RESPAWN_DELAY);
+					final int generation = _generation;
+					ThreadPool.schedule(() ->
+					{
+						if (generation == _generation)
+						{
+							deployOne(dead.population);
+						}
+					}, RESPAWN_DELAY);
 				}
 				continue;
 			}
@@ -850,10 +912,19 @@ public class FakePlayerBehaviorManager implements IXmlReader
 		// mid-deal.)
 		if ((state.pendingStoreType != 0) && (state.pendingDealExpire > 0) && (now > state.pendingDealExpire))
 		{
+			// FPC-019: also drop the structured chat context for this pair. Without this the ACTIVE_DEALS entry
+			// outlived the reservation, so a later unrelated whisper was grounded with the dead deal's terms and the
+			// SHOP/MEET auth gate still saw deal != null. This fires only when THIS bot's own reservation lapsed (a
+			// newer deal resets pendingDealExpire), so an old timeout cannot clear a fresher deal.
+			if (state.dealPlayer != null)
+			{
+				FakePlayerChatManager.getInstance().clearDeal(state.dealPlayer.getName(), npc.getName());
+			}
 			state.pendingStoreType = 0;
 			state.pendingStock = null;
 			state.pendingTitle = null;
 			state.pendingDealExpire = 0;
+			state.dealPlayer = null;
 		}
 
 		// Seated private-store vendors are otherwise stationary (static vendors, or a bot mid-deal whose
@@ -1042,6 +1113,12 @@ public class FakePlayerBehaviorManager implements IXmlReader
 		{
 			return false; // not a behavior-controlled roaming bot
 		}
+		// FPC-074: do not redirect a meet the caller does not own. If the bot has a pending/active deal for a DIFFERENT
+		// player, a stale chat context must not be able to overwrite that player's meet target.
+		if (((state.dealPlayer != null) && (state.dealPlayer != player)) || ((state.summonPlayer != null) && (state.summonPlayer != player)))
+		{
+			return false;
+		}
 		final Location destination = resolveMeetSpot(bot, spot);
 		if (destination == null)
 		{
@@ -1077,6 +1154,53 @@ public class FakePlayerBehaviorManager implements IXmlReader
 			return false;
 		}
 		endMeet(bot, state);
+		return true;
+	}
+
+	/**
+	 * FPC-067: authoritatively cancel a deal at ANY stage - a pending offer that has not reached a meet, an active
+	 * meet, or an open temporary store - clearing both the behavior reservation and the chat deal context. {@link
+	 * #cancelMeet} only handled an active meet ({@code summonTarget != null}), so a pre-meet cancel left the offer
+	 * reservation ({@code pendingStoreType}/{@code dealPlayer}/{@code pendingDealExpire}) alive until the offer TTL.
+	 * @param bot the bot holding the deal
+	 * @param player the player cancelling (its chat context is also cleared, in case a claim race left two entries)
+	 * @return {@code true} if the bot had any deal state to cancel
+	 */
+	public boolean cancelDeal(Npc bot, Player player)
+	{
+		if (bot == null)
+		{
+			return false;
+		}
+		final BotState state = _bots.get(bot.getObjectId());
+		if (state == null)
+		{
+			return false;
+		}
+		if ((state.summonTarget == null) && (state.pendingStoreType == 0) && (state.dealPlayer == null) && !state.dealActive)
+		{
+			return false; // nothing to cancel
+		}
+		// FPC-074: only the deal's owner may tear it down. If the caller does NOT own the bot's real deal (a stale chat
+		// context while the behavior deal belongs to another player - reachable through the claim window, FPC-066/078),
+		// clear only the caller's own stale ACTIVE_DEALS entry and leave the bot's state untouched.
+		if ((player == null) || ((state.dealPlayer != player) && (state.summonPlayer != player)))
+		{
+			if (player != null)
+			{
+				FakePlayerChatManager.getInstance().clearDeal(player.getName(), bot.getName());
+			}
+			return false;
+		}
+		// Capture the offer's player before endMeet nulls it. endMeet tears down an active meet, a temporary store, and
+		// the pending offer fields, and clears the chat context for summonPlayer (null pre-meet), so we clear the
+		// offer pair here to cover the pre-meet case.
+		final Player offerPlayer = state.dealPlayer;
+		endMeet(bot, state);
+		if (offerPlayer != null)
+		{
+			FakePlayerChatManager.getInstance().clearDeal(offerPlayer.getName(), bot.getName());
+		}
 		return true;
 	}
 
@@ -1126,6 +1250,8 @@ public class FakePlayerBehaviorManager implements IXmlReader
 		state.pendingStock = null;
 		state.pendingTitle = null;
 		state.pendingDealExpire = 0;
+		state.dealPlayer = null; // deal ended: forget the offer's player too (FPC-019)
+		state.dealClaimExpire = 0; // and release any transient responder claim (FPC-066)
 		// Tear down a temporary deal store so the bot becomes a normal roamer again.
 		final FakePlayerAppearance look = bot.getFakePlayerAppearance();
 		if (state.dealActive && (look != null))
@@ -1156,32 +1282,100 @@ public class FakePlayerBehaviorManager implements IXmlReader
 	 * controlled, not already a vendor / in a meet / holding a deal, and within the same town.
 	 * @return a suitable bot, or {@code null} if none is around
 	 */
+	/** @return {@code true} when this bot is free to take a new trade deal (not meeting, reserved, claimed, or a vendor). */
+	private static boolean isTradeResponderFree(BotState state, FakePlayerAppearance look, long now)
+	{
+		if ((state == null) || (state.summonTarget != null) || (state.pendingStoreType != 0) || state.dealActive || (now <= state.dealClaimExpire))
+		{
+			return false;
+		}
+		return (look == null) || (look.getPrivateStoreType() == 0); // an existing vendor is not free
+	}
+
+	private List<Npc> freeTradeResponders(Player player)
+	{
+		final List<Npc> candidates = new ArrayList<>();
+		final long now = System.currentTimeMillis();
+		World.getInstance().forEachVisibleObjectInRange(player, Npc.class, TRADE_RESPONDER_SEARCH_RANGE, npc ->
+		{
+			if (npc.isFakePlayer() && isTradeResponderFree(_bots.get(npc.getObjectId()), npc.getFakePlayerAppearance(), now))
+			{
+				candidates.add(npc);
+			}
+		});
+		return candidates;
+	}
+
+	/**
+	 * Pick a nearby free bot to SPEAK for a trade (no reservation). Used for a "won't sell here" hint that opens no
+	 * deal; a real deal must use {@link #tryClaimTradeResponder} so selection and reservation are atomic (FPC-066).
+	 */
 	public Npc pickTradeResponder(Player player)
 	{
 		if (player == null)
 		{
 			return null;
 		}
-		final List<Npc> candidates = new ArrayList<>();
-		World.getInstance().forEachVisibleObjectInRange(player, Npc.class, TRADE_RESPONDER_SEARCH_RANGE, npc ->
-		{
-			if (!npc.isFakePlayer())
-			{
-				return;
-			}
-			final BotState state = _bots.get(npc.getObjectId());
-			final FakePlayerAppearance look = npc.getFakePlayerAppearance();
-			if ((state == null) || (state.summonTarget != null) || (state.pendingStoreType != 0) || state.dealActive)
-			{
-				return;
-			}
-			if ((look != null) && (look.getPrivateStoreType() != 0))
-			{
-				return; // already a vendor
-			}
-			candidates.add(npc);
-		});
+		final List<Npc> candidates = freeTradeResponders(player);
 		return candidates.isEmpty() ? null : candidates.get(Rnd.get(candidates.size()));
+	}
+
+	/**
+	 * FPC-066: atomically pick AND claim a free nearby bot as this player's trade responder, so two concurrent trade
+	 * ads can never select the same bot and create two `ACTIVE_DEALS` entries for one reservation. The claim is a short
+	 * hold ({@link #TRADE_CLAIM_TTL}) that {@link #setupDeal} supersedes; if the deal never sets up, it lapses and the
+	 * bot frees again. Returns the claimed bot, or {@code null} if none is free.
+	 * @param player the advertiser
+	 * @return the claimed bot, reserved for this player, or {@code null}
+	 */
+	/**
+	 * FPC-066: release a bare responder claim taken by {@link #tryClaimTradeResponder} when the caller decides not to
+	 * set up a deal after all (no stock, offer cap hit), so the bot frees immediately instead of waiting out the claim
+	 * TTL. Never touches a bot that has since set up a real deal.
+	 * @param bot the claimed bot to release
+	 * @param player the player whose claim it should be (only that player's bare claim is released)
+	 */
+	public void releaseTradeClaim(Npc bot, Player player)
+	{
+		if (bot == null)
+		{
+			return;
+		}
+		final BotState state = _bots.get(bot.getObjectId());
+		// FPC-078: only release a bare claim that still belongs to this player, and never one that has since become a
+		// real deal (pendingStoreType set) or been re-claimed by someone else.
+		if ((state != null) && (state.pendingStoreType == 0) && (state.dealPlayer == player))
+		{
+			state.dealClaimExpire = 0;
+			state.dealPlayer = null;
+		}
+	}
+
+	public Npc tryClaimTradeResponder(Player player)
+	{
+		if (player == null)
+		{
+			return null;
+		}
+		final List<Npc> candidates = freeTradeResponders(player);
+		// Randomize so concurrent ads do not all try the same first candidate, then claim the first one that is still
+		// free under the lock (its state may have changed since the scan).
+		java.util.Collections.shuffle(candidates);
+		synchronized (_tradeClaimLock)
+		{
+			final long now = System.currentTimeMillis();
+			for (Npc npc : candidates)
+			{
+				final BotState state = _bots.get(npc.getObjectId());
+				if (isTradeResponderFree(state, npc.getFakePlayerAppearance(), now))
+				{
+					state.dealClaimExpire = now + TRADE_CLAIM_TTL;
+					state.dealPlayer = player;
+					return npc;
+				}
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -1192,7 +1386,7 @@ public class FakePlayerBehaviorManager implements IXmlReader
 	 * @param title the store sign
 	 * @return {@code true} if armed
 	 */
-	public boolean setupDeal(Npc bot, int storeType, List<FakePlayerStoreItem> stock, String title)
+	public boolean setupDeal(Npc bot, Player player, int storeType, List<FakePlayerStoreItem> stock, String title)
 	{
 		if (bot == null)
 		{
@@ -1203,9 +1397,18 @@ public class FakePlayerBehaviorManager implements IXmlReader
 		{
 			return false;
 		}
+		// FPC-078: only set up a deal for the player who holds the bot's claim/deal. If the bot is already claimed or
+		// reserved by a DIFFERENT player, refuse rather than overwrite their reservation.
+		if ((state.dealPlayer != null) && (player != null) && (state.dealPlayer != player))
+		{
+			return false;
+		}
 		state.pendingStoreType = storeType;
 		state.pendingStock = stock;
 		state.pendingTitle = title;
+		// Remember who the offer is with so an abandoned deal can clear its exact chat context on expiry (FPC-019).
+		state.dealPlayer = (storeType != 0) ? player : null;
+		state.dealClaimExpire = 0; // FPC-066: the durable pending reservation now supersedes any transient claim
 		// Reserve the bot for this offer, but let the reservation lapse if no meet is agreed in time. Cleared
 		// the moment a meet actually starts (requestMeet) so a walking/trading bot never lapses mid-deal.
 		state.pendingDealExpire = (storeType != 0) ? (System.currentTimeMillis() + OFFER_TTL) : 0;
@@ -1421,8 +1624,7 @@ public class FakePlayerBehaviorManager implements IXmlReader
 			}
 		}
 		_bots.clear();
-		_started = false;
-		load();
+		load(); // bumps the generation (stale delayed work no-ops) and redeploys; the recurring loops keep running.
 		return removed;
 	}
 

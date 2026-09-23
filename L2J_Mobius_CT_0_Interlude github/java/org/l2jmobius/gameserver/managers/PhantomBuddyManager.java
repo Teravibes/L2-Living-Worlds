@@ -130,6 +130,10 @@ public class PhantomBuddyManager implements IXmlReader
 	private static final int RES_SKILL_ID = 1016;
 	private static final int RES_CLAIM_MS = 4500; // hold a corpse claim long enough for the cast/revive-request to land
 
+	// Recharge (1013): an Elder / Shillien Elder buddy can refill a party mana-user's MP on demand. "recharge" /
+	// "recharge <name>" keeps topping the target every tick until it is full or the owner says stop.
+	private static final int RECHARGE_ID = 1013;
+
 	// Heal skills a buddy may know, in PREFERENCE order (bestHeal picks the first it can cast). Greater Battle Heal
 	// leads because cast SPEED is what makes a Bishop's healing (2s vs 5s) - the buddy heals reactively, so a fast
 	// heal beats a bigger slow one. Major Heal sits below the fast heals as the MP-cheap big-heal fallback (it heals
@@ -168,6 +172,7 @@ public class PhantomBuddyManager implements IXmlReader
 		boolean healNow; // "heal me" order: heal the owner once even at full HP
 		Skill pendingBuff; // "give me X" / "X on <name>" order: a specific buff to cast next tick
 		Player pendingBuffTarget; // who that on-demand buff goes on (the owner, or a named party member)
+		Player rechargeTarget; // "recharge" / "recharge <name>" order: keep refilling this member's MP until it is full or the owner says stop
 		long noSitUntil; // "stand" order: don't auto-sit for MP until this time (so it doesn't pop straight back down)
 
 		Buddy(Player npc)
@@ -462,6 +467,43 @@ public class PhantomBuddyManager implements IXmlReader
 			return null;
 		}
 
+		// On-demand Recharge ("recharge" / "recharge <name>"): only a buddy that actually knows Recharge (an Elder /
+		// Shillien Elder) answers. It then keeps refilling the target's MP every tick until the target is full or the
+		// owner says stop. An explicit order, so it tops even a class the automatic battery skips (a warsmith, a
+		// not-yet-drained mage). Checked before the buff/heal words so "recharge" is never mistaken for one of them.
+		if (buddy.getKnownSkill(RECHARGE_ID) != null)
+		{
+			if (containsAny(text, "stop recharge", "stop charging", "stop the recharge", "enough recharge", "stop mp"))
+			{
+				if (state.rechargeTarget != null)
+				{
+					state.rechargeTarget = null;
+					deliver(state, owner, party, "ok, stopping");
+				}
+				return null;
+			}
+			if (containsAny(text, "recharge"))
+			{
+				if (!isPartiedWith(state, owner))
+				{
+					deliver(state, owner, party, "party me first :)");
+					return null;
+				}
+				final Player named = findPartyMemberByName(owner, text);
+				final Player target = (named != null) ? named : owner;
+				if (target.getKnownSkill(RECHARGE_ID) != null)
+				{
+					deliver(state, owner, party, (target == owner) ? "you already have recharge yourself" : target.getName() + " has recharge already");
+				}
+				else
+				{
+					state.rechargeTarget = target;
+					deliver(state, owner, party, "recharging " + ((target == owner) ? "you" : target.getName()) + " till full - say stop recharge to end");
+				}
+				return null;
+			}
+		}
+
 		// Re-buff on demand: actually recast the whole kit (not just acknowledge).
 		if (containsAny(text, "buff", "rebuff", "rebuf"))
 		{
@@ -656,7 +698,14 @@ public class PhantomBuddyManager implements IXmlReader
 	{
 		final int ownerId = owner.getObjectId();
 		final int buddyId = buddy.getObjectId();
-		ThreadPool.execute(() ->
+		// FPC-064: serialize this buddy's BUDDY conversation turns per (owner, buddy) through the shared executor, so
+		// two quick whispers are not reordered against the shared conversation history. FPC-020: the brain call still
+		// blocks (HttpClient.send, up to ~45s), so it runs on the shared bounded brain executor, never on the game
+		// ThreadPool where it would starve combat AI, buff ticks and respawns. FPC-073: key by the buddy's NAME (the
+		// X-FPC the brain keys its per-(player, bot) lock/history on), not its object id, so BUDDY and the BUDDYCHAT
+		// opener share one lane with any WHISPER to the same buddy and cannot interleave against the Python history.
+		final String key = BrainConversationExecutor.key(owner.getName(), buddy.getName());
+		BrainConversationExecutor.submit(key, onComplete -> BrainExecutor.runBrainWork(() ->
 		{
 			final Buddy state = _buddies.get(buddyId);
 			final Player ownerNow = (Player) World.getInstance().findObject(ownerId);
@@ -686,19 +735,21 @@ public class PhantomBuddyManager implements IXmlReader
 					whisper(state.npc, ownerNow, reply);
 				}
 			}
-		});
+		}, onComplete));
 	}
 
 	/** Executes any action tag in the brain's reply and returns the cleaned, speakable text. */
 	private String applyBuddyTags(String reply, Buddy state, Player owner, Player buddy, String playerMessage)
 	{
 		final boolean partied = isPartiedWith(state, owner);
-		if (partied && TAG_FOLLOW.matcher(reply).find())
+		// Reversible movement tags are allowed by default but vetoed when the player's message negates them (FPC-046),
+		// so a hallucinated [[FOLLOW]]/[[STAY]] against "don't follow"/"come with me" cannot flip movement state.
+		if (partied && TAG_FOLLOW.matcher(reply).find() && !FakePlayerChatParsing.negatesFollow(playerMessage))
 		{
 			state.following = true;
 			ensureFollow(state, owner);
 		}
-		if (partied && TAG_STAY.matcher(reply).find())
+		if (partied && TAG_STAY.matcher(reply).find() && !FakePlayerChatParsing.negatesStay(playerMessage))
 		{
 			state.following = false;
 			buddy.getAI().setIntention(Intention.IDLE);
@@ -730,7 +781,9 @@ public class PhantomBuddyManager implements IXmlReader
 				}
 			}
 		}
-		if (partied && TAG_DISBAND.matcher(reply).find())
+		// Disband is destructive, so it needs a real dismiss order in the player's message, not just the model tag
+		// (FPC-046, mirroring the party path). A hallucinated or negated [[DISBAND]] must not release the buddy.
+		if (partied && TAG_DISBAND.matcher(reply).find() && FakePlayerChatParsing.isDismissOrder(playerMessage))
 		{
 			release(state, true);
 		}
@@ -878,7 +931,13 @@ public class PhantomBuddyManager implements IXmlReader
 		scheduleNextChatter(state, now); // set the next window now so a slow brain call can't double-fire
 		final int buddyId = buddy.getObjectId();
 		final int ownerId = owner.getObjectId();
-		ThreadPool.execute(() ->
+		// FPC-020: the spontaneous-chatter brain call below blocks (HttpClient.send); run it on the shared bounded
+		// brain executor, never on the game ThreadPool. FPC-073: BUDDYCHAT writes the same (player, bot) conversation
+		// history a BUDDY whisper reply reads, so route it through the conversation executor keyed (owner, buddy-name)
+		// - the same lane BUDDY uses - so an opener and a fast reply cannot be appended to the shared Python history
+		// out of order. The completion callback releases the next queued turn on every path (ran, dropped, or failed).
+		final String key = BrainConversationExecutor.key(owner.getName(), buddy.getName());
+		BrainConversationExecutor.submit(key, onComplete -> BrainExecutor.runBrainWork(() ->
 		{
 			final Buddy s = _buddies.get(buddyId);
 			final Player o = (Player) World.getInstance().findObject(ownerId);
@@ -895,7 +954,7 @@ public class PhantomBuddyManager implements IXmlReader
 			{
 				partyChat(s.npc, line);
 			}
-		});
+		}, onComplete));
 	}
 
 	/** Asks the brain (BUDDYCHAT mode) for a spontaneous small-talk opener; null if the brain is offline. */
@@ -1161,6 +1220,36 @@ public class PhantomBuddyManager implements IXmlReader
 		if ((buddy.getCurrentHpPercent() < SELF_HEAL_PERCENT) && tryHeal(state, buddy, buddy))
 		{
 			return true;
+		}
+
+		// 1b) On-demand Recharge order ("recharge" / "recharge <name>"): keep refilling the requested member's MP every
+		// tick until it is full or the owner says stop. Placed below res and the reactive heals so a fallen or dying
+		// party member still wins the tick; recharge resumes once nobody needs saving.
+		if (state.rechargeTarget != null)
+		{
+			final Skill rech = buddy.getKnownSkill(RECHARGE_ID);
+			final Player target = state.rechargeTarget;
+			final boolean stillHere = (target == owner) || (owner.isInParty() && owner.getParty().getMembers().contains(target));
+			if ((rech == null) || target.isDead() || !stillHere || (target.getKnownSkill(RECHARGE_ID) != null))
+			{
+				state.rechargeTarget = null; // order can no longer be served - drop it silently
+			}
+			else if (target.getCurrentMpPercent() >= 100)
+			{
+				whisper(buddy, owner, ((target == owner) ? "you're" : target.getName() + " is") + " topped up");
+				state.rechargeTarget = null;
+			}
+			else if ((buddy.calculateDistance2D(target) <= SUPPORT_RANGE) && !buddy.isSkillDisabled(rech) && (buddy.getCurrentMp() >= rech.getMpConsume()))
+			{
+				if (!readyToCast(buddy))
+				{
+					return true; // getting up first; recharge next tick (order kept so it isn't lost)
+				}
+				buddy.setTarget(target);
+				buddy.doCast(rech);
+				return true;
+			}
+			// else: out of range or momentarily out of MP / on cooldown - keep the order and retry next tick
 		}
 
 		// 2) On-demand "(re)buff <who>": recast a full kit on each queued target, one buff per tick. Below heal so a

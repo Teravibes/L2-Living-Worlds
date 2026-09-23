@@ -20,6 +20,7 @@
  */
 package org.l2jmobius.gameserver.data.xml;
 
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -71,7 +72,9 @@ public class FakePlayerData
 	 */
 	public int getNpcIdByName(String name)
 	{
-		return _fakePlayerIds.get(name);
+		// FPC-005: null-safe. A plain Map.get on an unknown name auto-unboxes null into an int and throws; the
+		// established "not found" sentinel is 0.
+		return (name == null) ? 0 : _fakePlayerIds.getOrDefault(name, 0);
 	}
 
 	/**
@@ -100,7 +103,7 @@ public class FakePlayerData
 	 */
 	public String getProperName(String name)
 	{
-		return _fakePlayerNames.get(name.toLowerCase());
+		return _fakePlayerNames.get(name.toLowerCase(Locale.ROOT));
 	}
 	
 	/**
@@ -119,7 +122,7 @@ public class FakePlayerData
 	 */
 	public boolean isTalkable(String name)
 	{
-		return _talkableFakePlayerNames.contains(name.toLowerCase());
+		return _talkableFakePlayerNames.contains(name.toLowerCase(Locale.ROOT));
 	}
 	
 	public static FakePlayerData getInstance()

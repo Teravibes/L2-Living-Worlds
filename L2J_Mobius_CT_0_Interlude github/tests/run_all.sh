@@ -32,8 +32,13 @@ fi
 # main class name in JAVA_MAIN_CLASSES.
 PROD_SOURCES=(
 	"java/org/l2jmobius/commons/util/Rnd.java"
+	"java/org/l2jmobius/commons/time/TimeUtil.java"
+	"java/org/l2jmobius/commons/util/ConfigReader.java"
+	"java/org/l2jmobius/gameserver/config/custom/FakePlayersConfig.java"
+	"java/org/l2jmobius/gameserver/managers/PhantomPvpManager.java"
 	"java/org/l2jmobius/gameserver/managers/FakePlayerChatParsing.java"
 	"java/org/l2jmobius/gameserver/managers/FakePlayerStorePricing.java"
+	"java/org/l2jmobius/gameserver/managers/FakePlayerStoreMath.java"
 	"java/org/l2jmobius/gameserver/managers/FakePlayerStoreEligibility.java"
 	"java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java"
 	"java/org/l2jmobius/gameserver/managers/PhantomBuffReservations.java"
@@ -49,9 +54,11 @@ PROD_SOURCES=(
 JAVA_MAIN_CLASSES=(
 	"FakePlayerChatParsingTest"
 	"FakePlayerStorePricingTest"
+	"FakePlayerStoreMathTest"
 	"FakePlayerStoreEligibilityTest"
 	"FakePlayerNameFactoryTest"
 	"PhantomBuffReservationsTest"
+	"PhantomPvpManagerTest"
 	"ModuleFrameworkTest"
 )
 

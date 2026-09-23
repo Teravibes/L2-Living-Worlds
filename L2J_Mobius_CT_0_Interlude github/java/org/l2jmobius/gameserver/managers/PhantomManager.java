@@ -75,6 +75,12 @@ import org.l2jmobius.gameserver.model.actor.instance.Chest;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
+import org.l2jmobius.gameserver.model.events.Containers;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDamageReceived;
+import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogout;
+import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
+import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.model.item.Armor;
 import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -89,6 +95,7 @@ import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.skill.AbnormalType;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.targets.TargetType;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.L2Friend;
@@ -254,6 +261,32 @@ public class PhantomManager implements IXmlReader
 	// when MP drops below CAST_MP_PERCENT they break off to rest (a pure caster is otherwise passive with no MP).
 	// TOLERANCE is the casting-range slack that stops constant micro-repositioning.
 	private static final long MAGE_TICK_INTERVAL = 1000;
+	// Phantom PvP (self-defense) tick. Runs at the same cadence as the hunt deconflict pass; the pvpCombat tick
+	// early-returns when the master switch is off, so it costs nothing on a server with PvP disabled.
+	private static final long PVP_TICK_INTERVAL = 1000;
+	// How close a hostile player must be for a phantom to notice it is under attack (mirrors REST_DANGER_RANGE).
+	private static final int PVP_DANGER_RANGE = 700;
+	// A PvP opponent that leaves this range (or dies) ends the engagement; wider than PVP_DANGER_RANGE so a phantom
+	// does not disengage the instant the opponent steps back a pace mid-fight.
+	private static final int PVP_LEASH_RANGE = 1200;
+	// Hard cap on a single PvP engagement, so a phantom never stays locked on a vanished or unreachable opponent.
+	private static final long PVP_ENGAGE_MAX_MS = 60000;
+	// Anti-thrash: once a stand-or-flee decision is made it holds at least this long before it may flip again.
+	private static final long PVP_DECISION_HOLD_MS = 3000;
+	// One retreat step for a fleeing phantom. Kept short and re-issued each time the phantom finishes the previous
+	// step (rather than one long lurch), so the client animates a continuous run away instead of a snap, and so the
+	// direction re-aims at the attacker as it chases.
+	private static final int PVP_FLEE_STEP = 300;
+	// A fleeing phantom still this close to its attacker at decision time is cornered: it turns and fights back.
+	private static final int PVP_CORNERED_RANGE = 200;
+	// How long a recorded "a Player hit me" record stays valid. A hit inside this window means the attacker is still
+	// actively engaging; once the last hit is older than this the record is stale and self-defense will not fire on it.
+	private static final long PVP_ATTACKER_MEMORY_MS = 8000;
+	// How often an idle aggressor phantom scans for a flagged/PK target to react to. Coarser than the 1s tick so the
+	// scan and the react roll stay cheap; a phantom that finds no target waits this long before scanning again.
+	private static final long PVP_REACT_SCAN_INTERVAL_MS = 4000;
+	// A caster/healer phantom below this MP percent is treated as out of mana for the stand-or-flee sizing (flee sooner).
+	private static final int PVP_CASTER_LOW_MP_PERCENT = 20;
 	private static final int MAGE_CAST_RANGE = 650;
 	private static final int MAGE_RANGE_TOLERANCE = 150;
 	private static final int MAGE_CAST_MP_PERCENT = 20;
@@ -975,6 +1008,26 @@ public class PhantomManager implements IXmlReader
 		boolean playstyleParked; // this fighter's offensive AutoUse was handed to the playstyle engine (restored on teardown/adopt)
 		long nextRetargetAt; // earliest time this hunter may switch target to a fresh attacker again (retaliation hysteresis)
 		long nextDbgAt; // throttle for the per-tick hunter debug trace (only used while PhantomPartyManager.DEBUG is on)
+		// PvP personality, rolled once at construction (see PhantomPvpManager). 0-100 each.
+		final boolean aggressor; // an aggressor may initiate PvP (react to a flag/PK, gank); a non-aggressor only ever defends
+		final int bravery; // higher = tolerates being more outmatched before it flees (shifts the flee HP threshold)
+		// PvP engagement state (Phase 1: self-defense). Written by the pvpCombat tick and read by the separate
+		// hunt/deconflict ticks (assignTargets, mageCombat, supervise) to defer to PvP, so these are volatile: the
+		// tasks run on different pool threads and a stale read of pvpTargetOid would let the hunt yank the phantom
+		// off its PvP target.
+		volatile int pvpTargetOid; // objectId of the Player this phantom is currently fighting in PvP (0 = not engaged)
+		volatile long pvpUntil; // hard cap on the current PvP engagement, so a phantom never stays locked on a vanished target
+		volatile boolean pvpFleeing; // currently retreating from the PvP opponent rather than trading blows
+		volatile long nextPvpDecisionAt; // anti-thrash: earliest time the stand-or-flee decision may flip again
+		// Most recent Player (real player or another phantom) that dealt damage to this phantom, recorded by the
+		// ON_CREATURE_DAMAGE_RECEIVED listener (attachPvpDamageListener). This is how self-defense detects its
+		// attacker: a Player's stock attack-by list is never populated (that is Attackable/NPC-only), so the old
+		// getAttackByList() check could never fire. Written by the async damage event, read by the pvpCombat tick.
+		// (Phase 1 self-defense records the last attacker in the manager-level _recentPvpVictims map, keyed by this
+		// phantom's objectId, not on PhantomData - the same map that carries watched owners, so defense reads uniformly.)
+		// Phase 2 (react to flagged/PK): earliest time this aggressor phantom next CONSIDERS initiating on a flagged
+		// target. Set after each consideration so reacting is occasional, not a per-tick scan. Non-aggressors never set it.
+		volatile long nextInitiateAt;
 
 		PhantomData(Player player, Location home, Population population, boolean mage, BuddyRole role)
 		{
@@ -983,10 +1036,23 @@ public class PhantomManager implements IXmlReader
 			this.population = population;
 			this.mage = mage;
 			this.role = role;
+			this.aggressor = PhantomPvpManager.rollAggressor();
+			this.bravery = PhantomPvpManager.rollBravery();
 		}
 	}
 
 	private final ConcurrentHashMap<Integer, PhantomData> _phantoms = new ConcurrentHashMap<>();
+	// Phase 2 (react to flagged/PK): objectId of a target -> time until which no aggressor may newly INITIATE on it,
+	// so several phantoms do not dogpile the same flagged player. Stamped when a phantom starts a reaction; entries
+	// are short-lived (PhantomPvpEngageCooldownSeconds) and pruned lazily on read.
+	private final ConcurrentHashMap<Integer, Long> _pvpVictimCooldownUntil = new ConcurrentHashMap<>();
+	// One record of "who last hit victim V, and when", keyed by victim objectId, for every watched player: each phantom
+	// (its own ON_CREATURE_DAMAGE_RECEIVED listener) and each watched real owner. Self-defense reads a phantom's own
+	// entry; party/clan defense reads an owner's or a party-mate's; clan defense iterates the (small) live entries to
+	// find a clanmate victim without a world scan. Entries are short-lived (PVP_ATTACKER_MEMORY_MS) and pruned on read.
+	private final ConcurrentHashMap<Integer, long[]> _recentPvpVictims = new ConcurrentHashMap<>();
+	// The damage listener attached to each watched owner, so it can be detached on logout (see the ON_PLAYER_LOGOUT hook).
+	private final ConcurrentHashMap<Integer, AbstractEventListener> _pvpWatchedOwners = new ConcurrentHashMap<>();
 	// CopyOnWriteArrayList: //phantom reload rewrites this from the admin's packet thread while the
 	// supervisor iterates it every tick - a plain ArrayList would risk a ConcurrentModificationException.
 	// Writes are rare (boot + reload) and the list is tiny, so copy-on-write is the cheap safe choice.
@@ -2139,6 +2205,7 @@ public class PhantomManager implements IXmlReader
 		final PhantomData data = new PhantomData(phantom, spawnLocation, population, mage, role);
 		data.friendOwnerId = friendOwnerId;
 		_phantoms.put(phantom.getObjectId(), data);
+		attachPvpDamageListener(phantom, data);
 		if (role.isBuddy())
 		{
 			// Buddies don't hunt - they stand where placed (and do nothing, not even self-buff) until a real
@@ -3770,6 +3837,7 @@ public class PhantomManager implements IXmlReader
 			final PhantomData data = new PhantomData(phantom, spawnLocation, null, mage, BuddyRole.NONE);
 			data.recruited = true;
 			_phantoms.put(phantom.getObjectId(), data);
+			attachPvpDamageListener(phantom, data);
 
 			// Combat roles fire skills/shots/potions through the native AutoUse task on the party manager's
 			// assigned target. No AutoPlay here: the manager picks the target (assist), not the engine's scanner.
@@ -3997,6 +4065,13 @@ public class PhantomManager implements IXmlReader
 		ThreadPool.scheduleAtFixedRate(this::supervise, SUPERVISE_INTERVAL, SUPERVISE_INTERVAL);
 		ThreadPool.scheduleAtFixedRate(this::mageCombat, MAGE_TICK_INTERVAL, MAGE_TICK_INTERVAL);
 		ThreadPool.scheduleAtFixedRate(this::assignTargets, DECONFLICT_INTERVAL, DECONFLICT_INTERVAL);
+		ThreadPool.scheduleAtFixedRate(this::pvpCombat, PVP_TICK_INTERVAL, PVP_TICK_INTERVAL);
+		// Phase 2b: detach a watched owner's defense listener when it logs out, so a re-login re-attaches cleanly and
+		// nothing leaks. Registered only when PvP is enabled, so a PvP-disabled server adds no logout-path work.
+		if (PhantomPvpManager.pvpEnabled())
+		{
+			Containers.Players().addListener(new ConsumerEventListener(Containers.Players(), EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> unwatchOwnerForPvp(event.getPlayer().getObjectId()), this));
+		}
 		LOGGER.info(getClass().getSimpleName() + ": Phantom supervisor started.");
 	}
 
@@ -4010,9 +4085,9 @@ public class PhantomManager implements IXmlReader
 	{
 		for (PhantomData data : _phantoms.values())
 		{
-			if (!data.mage || data.role.isBuddy() || data.recruited || data.dormant || data.resting || data.dispersing || (data.huntPauseUntil > 0))
+			if (!data.mage || data.role.isBuddy() || data.recruited || data.dormant || data.resting || data.dispersing || (data.huntPauseUntil > 0) || (data.pvpTargetOid != 0))
 			{
-				continue; // buddies/recruits never auto-hunt; otherwise skip if fanning out, on a breather, resting or asleep
+				continue; // buddies/recruits never auto-hunt; otherwise skip if fanning out, on a breather, resting, asleep, or PvP-engaged
 			}
 			final Player mage = data.player;
 			try
@@ -4147,6 +4222,608 @@ public class PhantomManager implements IXmlReader
 	 * </ol>
 	 * Also stands a resting phantom up immediately if a threat appears, rather than waiting for the slow tick.
 	 */
+	/**
+	 * Phantom PvP self-defense tick (Phase 1). For each awake field hunter, either continues an active PvP
+	 * engagement or notices a hostile player/phantom that has attacked it and starts one. The stand-or-flee call and
+	 * the personality that shapes it live in {@link PhantomPvpManager}; this method is the wiring that reads state,
+	 * sets the target/intention, and drives the retreat. It early-returns when the master switch (or self-defense) is
+	 * off, so it costs nothing on a server with PvP disabled.
+	 *
+	 * <p>
+	 * Scope for Phase 1 is field hunters. Recruited party members and buddies are driven by PhantomPartyManager and
+	 * their PvP (party defense) is a later phase. Because the opponent is just a {@link Player}, a phantom defending
+	 * itself against another phantom is already covered here with no extra logic.
+	 * </p>
+	 */
+	private void pvpCombat()
+	{
+		// Gate on the master switch, not one behavior: this driver also services active engagements, react-to-flagged,
+		// and party/clan-defense engagements armed by startPvpDefense. Each behavior is gated individually below.
+		if (!PhantomPvpManager.pvpEnabled())
+		{
+			return;
+		}
+		final long now = System.currentTimeMillis();
+		for (PhantomData data : _phantoms.values())
+		{
+			final Player phantom = data.player;
+			try
+			{
+				// Peace zone, dead, dormant, or mid-disperse: drop any engagement and skip (applies to every role).
+				if (phantom.isDead() || data.dormant || data.dispersing || phantom.isInsideZone(ZoneId.PEACE))
+				{
+					if (data.pvpTargetOid != 0)
+					{
+						endPvp(phantom, data, resolvePvpTarget(data));
+					}
+					continue;
+				}
+				// Service an active engagement for ANY phantom: a field hunter defending itself or reacting, or a
+				// recruited member / buddy that PhantomPartyManager peeled onto an attacker for party/clan defense.
+				if (data.pvpTargetOid != 0)
+				{
+					continuePvp(phantom, data, now);
+					continue;
+				}
+				// Initiation (self-defense detection and react-to-flagged) is field hunters only. A recruited member or
+				// buddy is engaged for defense by PhantomPartyManager via startPvpDefense, never self-initiated here.
+				if (data.recruited || data.role.isBuddy())
+				{
+					continue;
+				}
+				if (PhantomPvpManager.selfDefenseEnabled())
+				{
+					final Player attacker = hostilePvpAttacker(phantom, data, now);
+					if (attacker != null)
+					{
+						beginPvp(phantom, data, attacker, now);
+						continue;
+					}
+				}
+				// Clan/alliance defense for field hunters: help a clanmate or allymate under attack nearby. These are the
+				// phantoms the player actually meets in the open world, so this is where clan defense is visible. Not
+				// personality-gated (defending your own is not aggression); bounded by the defend radius and clan membership.
+				if (PhantomPvpManager.clanDefenseEnabled())
+				{
+					final Player defendAgainst = clanDefendTarget(phantom, now);
+					if (defendAgainst != null)
+					{
+						beginPvp(phantom, data, defendAgainst, now);
+						continue;
+					}
+				}
+				// Phase 2: an idle aggressor may react to a nearby flagged (purple) or red (PK) target. Personality,
+				// a per-consideration roll, cooldowns, level band, newbie protection, peace zones, and clan/ally
+				// membership all gate it, so reacting is occasional and never touches a friendly target.
+				reactToFlagged(phantom, data, now);
+			}
+			catch (Exception e)
+			{
+				LOGGER.warning(getClass().getSimpleName() + ": pvpCombat error for " + phantom.getName() + ": " + e.getMessage());
+			}
+		}
+	}
+
+	/**
+	 * @param phantom the defending phantom
+	 * @param data the phantom's state bag (holds the recorded last attacker)
+	 * @param now the current time
+	 * @return the {@link Player} (real player or another phantom) that recently hit this phantom and that the phantom
+	 *         may legally strike back, or {@code null} if none. Detection is the damage record written by
+	 *         {@link #attachPvpDamageListener}: a Player's stock attack-by list is never populated, so this cannot use
+	 *         {@code getAttackByList()}. The recorded attacker must still be recent, in range, out of a peace zone,
+	 *         and legally attackable (an assault on a phantom flags the attacker, so this holds for a genuine one).
+	 */
+	private Player hostilePvpAttacker(Player phantom, PhantomData data, long now)
+	{
+		final int attackerOid = recentPvpAttackerOid(phantom, now);
+		if (attackerOid == 0)
+		{
+			return null;
+		}
+		final WorldObject object = World.getInstance().findObject(attackerOid);
+		if (!(object instanceof Player))
+		{
+			return null;
+		}
+		final Player attacker = (Player) object;
+		if (!validPvpOpponent(phantom, attacker) || attacker.isDead() || attacker.isInsideZone(ZoneId.PEACE))
+		{
+			return null; // includes the phantom-versus-phantom gate: ignore a phantom attacker when that is disabled
+		}
+		if ((phantom.calculateDistance2D(attacker) > PVP_DANGER_RANGE) || !attacker.isAutoAttackable(phantom))
+		{
+			return null;
+		}
+		return attacker;
+	}
+
+	/**
+	 * Registers the self-defense damage listener on a phantom, so a hit from a Player is recorded on its state bag for
+	 * the pvpCombat tick to react to. Only attached when PvP self-defense is enabled, so a PvP-disabled server registers
+	 * nothing and the stock damage path stays free of any phantom listener. The stock {@code ON_CREATURE_DAMAGE_RECEIVED}
+	 * event is used because a Player never populates its own attack-by list (that is Attackable/NPC-only).
+	 * @param phantom the phantom to watch
+	 * @param data the phantom's state bag (unused now; the record lives in the manager-level map)
+	 */
+	private void attachPvpDamageListener(Player phantom, PhantomData data)
+	{
+		// Self-defense reads a phantom's own record; party defense reads a party-mate phantom's record, so either
+		// behavior being on is reason to watch this phantom. Both off: register nothing (a PvP-disabled server is free).
+		if (!PhantomPvpManager.selfDefenseEnabled() && !PhantomPvpManager.partyDefenseEnabled())
+		{
+			return;
+		}
+		final int victimOid = phantom.getObjectId();
+		phantom.addListener(new ConsumerEventListener(phantom, EventType.ON_CREATURE_DAMAGE_RECEIVED, (OnCreatureDamageReceived event) -> recordPvpHit(victimOid, event), this));
+	}
+
+	/** Records a Player-on-Player hit (real player or another phantom) on a watched victim into the shared record map. */
+	private void recordPvpHit(int victimOid, OnCreatureDamageReceived event)
+	{
+		final Creature attacker = event.getAttacker();
+		if (!(attacker instanceof Player) || (attacker.getObjectId() == victimOid))
+		{
+			return; // PvE damage from monsters, or self-inflicted, is not a PvP attacker
+		}
+		_recentPvpVictims.put(victimOid, new long[]
+		{
+			attacker.getObjectId(),
+			System.currentTimeMillis()
+		});
+	}
+
+	/**
+	 * Phase 2 react-to-flagged: an idle aggressor phantom occasionally engages a nearby flagged (purple) or red (PK)
+	 * target. It considers at most once per {@link #PVP_REACT_SCAN_INTERVAL_MS}, and only while react-to-flagged is
+	 * enabled and this phantom is an aggressor. On a consideration it picks the nearest eligible target and rolls
+	 * {@link PhantomPvpManager#rollReactEngage()}; whether it engages or declines, it then waits out the engage
+	 * cooldown before reconsidering, so PK-reaction is occasional rather than an every-tick dogpile.
+	 */
+	private void reactToFlagged(Player phantom, PhantomData data, long now)
+	{
+		if (!PhantomPvpManager.reactToFlaggedEnabled() || !data.aggressor || (now < data.nextInitiateAt))
+		{
+			return;
+		}
+		final Player target = flaggedReactTarget(phantom, now);
+		if (target == null)
+		{
+			data.nextInitiateAt = now + PVP_REACT_SCAN_INTERVAL_MS; // nothing to react to; scan again shortly
+			return;
+		}
+		final long cooldownMs = FakePlayersConfig.PHANTOM_PVP_ENGAGE_COOLDOWN_SECONDS * 1000L;
+		data.nextInitiateAt = now + cooldownMs; // decided (engage or decline); hold off reconsidering until it passes
+		if (PhantomPvpManager.rollReactEngage())
+		{
+			_pvpVictimCooldownUntil.put(target.getObjectId(), now + cooldownMs); // stop other phantoms dogpiling it
+			beginPvp(phantom, data, target, now);
+		}
+	}
+
+	/**
+	 * @param phantom the aggressor considering a reaction
+	 * @param now the current time
+	 * @return the nearest eligible flagged/red target, or {@code null}. A candidate is a living {@link Player} (real
+	 *         player or another phantom) that is flagged (purple) or carries karma (red), out of a peace / no-PvP
+	 *         zone, not a clan or ally member, not newbie-protected, inside the initiate level band, not on the
+	 *         per-target dogpile cooldown, and legally attackable by the phantom.
+	 */
+	private Player flaggedReactTarget(Player phantom, long now)
+	{
+		Player best = null;
+		double bestDistance = Double.MAX_VALUE;
+		for (Player p : World.getInstance().getVisibleObjectsInRange(phantom, Player.class, PVP_DANGER_RANGE))
+		{
+			if (!validPvpOpponent(phantom, p) || p.isDead() || p.isInsideZone(ZoneId.PEACE) || p.isInsideZone(ZoneId.NO_PVP))
+			{
+				continue; // includes the phantom-versus-phantom gate: skip a phantom target when that is disabled
+			}
+			if ((p.getPvpFlag() == 0) && (p.getKarma() <= 0))
+			{
+				continue; // only already-flagged or red targets; a clean white player is Phase 4 (ganking), not this
+			}
+			if (sameClanOrAlly(phantom, p) || p.isNewbie() || !p.isAutoAttackable(phantom))
+			{
+				continue; // never a clanmate/allymate, a newbie, or anyone the phantom may not legally strike
+			}
+			if (!PhantomPvpManager.mayInitiateByLevel(phantom.getLevel(), p.getLevel(), FakePlayersConfig.PHANTOM_PVP_MAX_LEVEL_GAP_ABOVE_PLAYER))
+			{
+				continue;
+			}
+			final Long until = _pvpVictimCooldownUntil.get(p.getObjectId());
+			if (until != null)
+			{
+				if (now < until)
+				{
+					continue; // another phantom recently engaged this target; leave it alone
+				}
+				_pvpVictimCooldownUntil.remove(p.getObjectId(), until); // stale entry; prune it
+			}
+			final double distance = phantom.calculateDistance2D(p);
+			if (distance < bestDistance)
+			{
+				bestDistance = distance;
+				best = p;
+			}
+		}
+		return best;
+	}
+
+	/**
+	 * Central participant check for every PvP path: whether {@code phantom} may take {@code target} as an opponent.
+	 * Rejects a null or self target and, when phantom-versus-phantom is disabled, any phantom target, so the
+	 * {@code PhantomPvpBetweenPhantoms} toggle actually governs phantom-on-phantom combat across self-defense,
+	 * reaction, and party/clan defense alike. Zone, legality, and side checks stay with each caller; this is only the
+	 * opponent-kind gate.
+	 * @param phantom the phantom choosing an opponent
+	 * @param target the candidate opponent
+	 * @return {@code true} if this opponent is a permitted kind
+	 */
+	public boolean validPvpOpponent(Player phantom, Player target)
+	{
+		if ((target == null) || (target == phantom))
+		{
+			return false;
+		}
+		return PhantomPvpManager.opponentKindAllowed(isPhantom(target), PhantomPvpManager.betweenPhantomsEnabled());
+	}
+
+	/** @return {@code true} if the two players share a clan or an alliance (a phantom never initiates on its own side). */
+	public static boolean sameClanOrAlly(Player phantom, Player other)
+	{
+		final Clan clan = phantom.getClan();
+		if ((clan != null) && (other.getClan() == clan))
+		{
+			return true;
+		}
+		final int allyId = phantom.getAllyId();
+		return (allyId != 0) && (allyId == other.getAllyId());
+	}
+
+	// ---------------------------------------------------------------------
+	// Phase 2b support: party / clan defense. PhantomPartyManager owns the "who defends whom" decision (it knows the
+	// party, owner, and raid state); these entry points expose the shared PvP mechanics it drives.
+	// ---------------------------------------------------------------------
+
+	/**
+	 * Watches a real-player owner for the party-defense system, so a phantom can tell when its owner is attacked. A
+	 * Player never populates its own attack-by list, so this uses the stock damage event, mirroring the per-phantom
+	 * listener. Idempotent and gated on party defense being enabled; the listener is detached on the owner's logout.
+	 * @param owner the real player to watch
+	 */
+	public void watchOwnerForPvp(Player owner)
+	{
+		if (!PhantomPvpManager.partyDefenseEnabled() || (owner == null) || isPhantom(owner))
+		{
+			return;
+		}
+		final int ownerOid = owner.getObjectId();
+		_pvpWatchedOwners.computeIfAbsent(ownerOid, k ->
+		{
+			final ConsumerEventListener listener = new ConsumerEventListener(owner, EventType.ON_CREATURE_DAMAGE_RECEIVED, (OnCreatureDamageReceived event) -> recordPvpHit(ownerOid, event), this);
+			owner.addListener(listener);
+			return listener;
+		});
+	}
+
+	/** Detaches a watched owner's defense listener and forgets its attacker record (called on logout). */
+	private void unwatchOwnerForPvp(int ownerObjectId)
+	{
+		final AbstractEventListener listener = _pvpWatchedOwners.remove(ownerObjectId);
+		if (listener != null)
+		{
+			final WorldObject object = World.getInstance().findObject(ownerObjectId);
+			if (object instanceof Player)
+			{
+				((Player) object).removeListener(listener);
+			}
+		}
+		_recentPvpVictims.remove(ownerObjectId);
+	}
+
+	/**
+	 * @param victim a watched player: a phantom (its own listener) or a watched owner
+	 * @param now the current time
+	 * @return the objectId of the Player that recently hit {@code victim} (within {@link #PVP_ATTACKER_MEMORY_MS}), or 0.
+	 *         A stale entry is pruned as it is read, so the record map never accumulates dead victims.
+	 */
+	public int recentPvpAttackerOid(Player victim, long now)
+	{
+		if (victim == null)
+		{
+			return 0;
+		}
+		final int victimOid = victim.getObjectId();
+		final long[] record = _recentPvpVictims.get(victimOid);
+		if (record == null)
+		{
+			return 0;
+		}
+		if ((record[0] != 0) && ((now - record[1]) <= PVP_ATTACKER_MEMORY_MS))
+		{
+			return (int) record[0];
+		}
+		_recentPvpVictims.remove(victimOid, record); // stale; prune it
+		return 0;
+	}
+
+	/** @return a snapshot of the objectIds of players hit recently enough to still be defended (for the clan-defense scan). */
+	public Set<Integer> recentlyAttackedVictimOids()
+	{
+		return new HashSet<>(_recentPvpVictims.keySet());
+	}
+
+	/** @return {@code true} if this phantom is currently in a PvP engagement (so PhantomPartyManager should defer to it). */
+	public boolean isPvpEngaged(Player phantom)
+	{
+		final PhantomData data = _phantoms.get(phantom.getObjectId());
+		return (data != null) && (data.pvpTargetOid != 0);
+	}
+
+	/**
+	 * Peels a recruited member or buddy onto an attacker for party/clan defense. This only ARMS the engagement (records
+	 * the target on the member's state bag); the actual driving happens on the next pvpCombat tick via continuePvp, so
+	 * all of a phantom's AI manipulation stays on the one PvP thread rather than the party tick that called this. No-op
+	 * if the phantom is not tracked, already engaged, dead, or the attacker is gone / in a peace zone / not attackable.
+	 * @param memberPhantom the defending phantom
+	 * @param attacker the hostile to engage
+	 */
+	public void startPvpDefense(Player memberPhantom, Player attacker)
+	{
+		if ((memberPhantom == null) || (attacker == null))
+		{
+			return;
+		}
+		final PhantomData data = _phantoms.get(memberPhantom.getObjectId());
+		if ((data == null) || (data.pvpTargetOid != 0) || memberPhantom.isDead() || memberPhantom.isInsideZone(ZoneId.PEACE))
+		{
+			return;
+		}
+		if (!validPvpOpponent(memberPhantom, attacker) || attacker.isDead() || attacker.isInsideZone(ZoneId.PEACE) || !attacker.isAutoAttackable(memberPhantom))
+		{
+			return; // includes the phantom-versus-phantom gate for a phantom attacker when that is disabled
+		}
+		// Arm only. Setting pvpTargetOid makes the next pvpCombat tick drive it (continuePvp -> drivePvp) and makes
+		// PhantomPartyManager defer to it (isPvpEngaged), so the party thread never drives this phantom's AI directly.
+		data.pvpFleeing = false;
+		data.nextPvpDecisionAt = 0;
+		data.pvpUntil = System.currentTimeMillis() + PVP_ENGAGE_MAX_MS;
+		data.pvpTargetOid = attacker.getObjectId();
+	}
+
+	/**
+	 * @return nearby actual allies minus nearby actual hostiles, a numbers input for stand-or-flee. Counts real sides
+	 *         only: an ally is a party/clan/ally member, a hostile is a genuinely flagged or red player the phantom may
+	 *         strike. A neutral white bystander is neither, so uninvolved players never inflate the phantom's courage.
+	 */
+	private int pvpAllyAdvantage(Player phantom)
+	{
+		int allies = 0;
+		int enemies = 0;
+		final boolean inParty = phantom.isInParty();
+		for (Player p : World.getInstance().getVisibleObjectsInRange(phantom, Player.class, PVP_DANGER_RANGE))
+		{
+			if ((p == phantom) || p.isDead())
+			{
+				continue;
+			}
+			if (sameClanOrAlly(phantom, p) || (inParty && (p.getParty() == phantom.getParty())))
+			{
+				allies++; // a real ally: same clan, alliance, or party
+			}
+			else if (p.isAutoAttackable(phantom) && ((p.getPvpFlag() != 0) || (p.getKarma() > 0)))
+			{
+				enemies++; // a genuine hostile: flagged/red and legally strikeable (not a neutral bystander)
+			}
+			// else: a neutral, uninvolved player - counts as neither side
+		}
+		return allies - enemies;
+	}
+
+	/**
+	 * Field-hunter clan/alliance defense: the nearest hostile that is attacking a clanmate or allymate of
+	 * {@code defender} within the defend radius, that the defender may legally strike and that is not on the
+	 * defender's own side, or {@code null}. Iterates only players hit recently (no world scan), so it is cheap when no
+	 * PvP is happening. Recruited members and buddies get clan defense through {@link PhantomPartyManager} instead.
+	 * @param defender the field-hunter phantom considering a defense
+	 * @param now the current time
+	 * @return the attacker to engage, or {@code null}
+	 */
+	private Player clanDefendTarget(Player defender, long now)
+	{
+		final int radius = FakePlayersConfig.PHANTOM_PVP_DEFEND_RADIUS;
+		Player best = null;
+		double bestDistance = Double.MAX_VALUE;
+		for (int victimOid : _recentPvpVictims.keySet())
+		{
+			final WorldObject victimObject = World.getInstance().findObject(victimOid);
+			if (!(victimObject instanceof Player))
+			{
+				continue;
+			}
+			final Player victim = (Player) victimObject;
+			// A clanmate/allymate being hit, near enough to reach, and not the defender itself.
+			if ((victim == defender) || victim.isDead() || (defender.calculateDistance2D(victim) > radius) || !sameClanOrAlly(defender, victim))
+			{
+				continue;
+			}
+			final int attackerOid = recentPvpAttackerOid(victim, now);
+			if (attackerOid == 0)
+			{
+				continue;
+			}
+			final WorldObject attackerObject = World.getInstance().findObject(attackerOid);
+			if (!(attackerObject instanceof Player))
+			{
+				continue;
+			}
+			final Player attacker = (Player) attackerObject;
+			if ((attacker == defender) || attacker.isDead() || attacker.isInsideZone(ZoneId.PEACE))
+			{
+				continue;
+			}
+			// Never our own side, must be a permitted opponent kind (phantom-vs-phantom gate), and legal to strike.
+			if (sameClanOrAlly(defender, attacker) || !validPvpOpponent(defender, attacker) || !attacker.isAutoAttackable(defender))
+			{
+				continue;
+			}
+			final double distance = defender.calculateDistance2D(attacker);
+			if (distance < bestDistance)
+			{
+				bestDistance = distance;
+				best = attacker;
+			}
+		}
+		return best;
+	}
+
+	/** Begins a PvP engagement: records the opponent, detaches the phantom from the hunt, and drives the first decision. */
+	private void beginPvp(Player phantom, PhantomData data, Player attacker, long now)
+	{
+		data.pvpTargetOid = attacker.getObjectId();
+		data.pvpUntil = now + PVP_ENGAGE_MAX_MS;
+		data.nextPvpDecisionAt = 0; // decide stand-or-flee now
+		data.pvpFleeing = false;
+		// The hunt-detach steps below are field-hunter machinery. A recruited member or buddy (a party/clan defender)
+		// is driven by PhantomPartyManager, which defers while pvpTargetOid != 0; it already has its skills on AutoUse
+		// and does not run the auto-play hunt or the hunter playstyle engine, so it just needs the target and drive.
+		if (!data.recruited && !data.role.isBuddy())
+		{
+			// Stop the native auto-play target scanner so it does not re-acquire a monster over our player target; keep
+			// AutoUse running so shots, self-buffs, and (for a no-playstyle phantom) offensive skills still fire in PvP.
+			if (phantom.isAutoPlaying())
+			{
+				AutoPlayTaskManager.getInstance().stopAutoPlay(phantom);
+			}
+			if (data.resting)
+			{
+				endRest(phantom);
+				data.resting = false;
+			}
+			data.claimedOid = 0; // release any monster it owned to the hunt pool
+			// Return the phantom's offensive skills to AutoUse for the fight. A playstyle fighter/mage normally parks
+			// them into the monster-typed playstyle engine (which PvP does not drive), so without this it would only
+			// auto-attack; AutoUse casts its offensive skills on whatever it is targeting - here, the player - as long
+			// as that target is attackable and outside a peace zone. endPvp's enableAutoHunt re-parks it for the hunt.
+			unparkHunterPlaystyle(phantom, data);
+		}
+		drivePvp(phantom, data, attacker, now);
+	}
+
+	/** Validates the current opponent (alive, in range, out of a peace zone, engagement not expired) then drives it, or disengages. */
+	private void continuePvp(Player phantom, PhantomData data, long now)
+	{
+		final Player target = resolvePvpTarget(data);
+		final boolean gone = (target == null) || target.isDead() || target.isInsideZone(ZoneId.PEACE) || (phantom.calculateDistance2D(target) > PVP_LEASH_RANGE);
+		if ((now >= data.pvpUntil) || gone)
+		{
+			endPvp(phantom, data, target);
+			return;
+		}
+		drivePvp(phantom, data, target, now);
+	}
+
+	/**
+	 * The per-tick stand-or-flee driver. Re-decides at most once per {@link #PVP_DECISION_HOLD_MS} to avoid thrashing.
+	 * A fleeing phantom that still cannot open distance from its attacker (cornered) turns and fights.
+	 */
+	private void drivePvp(Player phantom, PhantomData data, Player target, long now)
+	{
+		if (now >= data.nextPvpDecisionAt)
+		{
+			data.nextPvpDecisionAt = now + PVP_DECISION_HOLD_MS;
+			final boolean cornered = data.pvpFleeing && (phantom.calculateDistance2D(target) < PVP_CORNERED_RANGE);
+			// Situational sizing (FPC-081): outnumbering the enemy lets it stand longer, being outnumbered flees sooner,
+			// and an out-of-mana caster flees sooner. allyAdvantage is nearby allies minus nearby hostiles.
+			final int allyAdvantage = pvpAllyAdvantage(phantom);
+			final boolean casterLowMp = data.mage && (phantom.getCurrentMpPercent() < PVP_CASTER_LOW_MP_PERCENT);
+			final boolean flee = !cornered && PhantomPvpManager.shouldFlee((int) phantom.getCurrentHpPercent(), FakePlayersConfig.PHANTOM_PVP_FLEE_HP_PERCENT, data.bravery, phantom.getLevel(), target.getLevel(), allyAdvantage, casterLowMp);
+			data.pvpFleeing = flee;
+		}
+		if (data.pvpFleeing)
+		{
+			fleeFrom(phantom, target);
+		}
+		else
+		{
+			engageTarget(phantom, target);
+		}
+	}
+
+	/** Turns the phantom to attack the target, letting the core AI drive the approach, swing, and AutoUse casting. */
+	private void engageTarget(Player phantom, Player target)
+	{
+		phantom.setTarget(target);
+		if ((phantom.getAI().getIntention() != Intention.ATTACK) || (phantom.getAI().getAttackTarget() != target))
+		{
+			phantom.getAI().setIntention(Intention.ATTACK, target);
+		}
+	}
+
+	/**
+	 * Retreats the phantom one short {@link #PVP_FLEE_STEP} away from its attacker, re-issued each time the previous
+	 * step finishes so the client animates a continuous run rather than one long lurch. Two things keep it from
+	 * reading as a teleport: it never yanks the phantom out of a cast mid-animation (that abrupt cast-to-move handoff
+	 * is what the client snaps), and it drops the attack target only once at the start of the flight rather than every
+	 * tick, so AutoUse does not keep pulling it back into a swing.
+	 */
+	private void fleeFrom(Player phantom, Player attacker)
+	{
+		// Let any in-progress cast finish before moving; issuing MOVE_TO mid-cast is what pops the client position.
+		if (phantom.isCastingNow() || phantom.isMoving())
+		{
+			return;
+		}
+		// Stop aiming a target while running, so AutoUse does not re-engage; do it once (target is null after).
+		if (phantom.getTarget() != null)
+		{
+			phantom.setTarget(null);
+		}
+		final double angle = Math.atan2(phantom.getY() - attacker.getY(), phantom.getX() - attacker.getX());
+		final int x = phantom.getX() + (int) (Math.cos(angle) * PVP_FLEE_STEP);
+		final int y = phantom.getY() + (int) (Math.sin(angle) * PVP_FLEE_STEP);
+		final Location destination = GeoEngine.getInstance().getValidLocation(phantom, new Location(x, y, phantom.getZ()));
+		phantom.getAI().setIntention(Intention.MOVE_TO, destination);
+	}
+
+	/** Ends a PvP engagement, forgets the opponent so it does not instantly re-trigger, and resumes normal hunting. */
+	private void endPvp(Player phantom, PhantomData data, Player target)
+	{
+		// Clear the "you hit me" record so self-defense does not immediately re-fire on the same, now-resolved attacker.
+		// A fresh hit after this point rewrites it through the damage listener and re-engages normally.
+		_recentPvpVictims.remove(phantom.getObjectId());
+		data.pvpTargetOid = 0;
+		data.pvpUntil = 0;
+		data.pvpFleeing = false;
+		data.nextPvpDecisionAt = 0;
+		if (phantom.isDead() || data.dormant || data.dispersing)
+		{
+			return; // nothing to resume
+		}
+		if (!data.recruited && !data.role.isBuddy())
+		{
+			yieldTarget(phantom);
+			enableAutoHunt(phantom, data.mage, data);
+			return;
+		}
+		// A recruited member or buddy defender: hand control back to PhantomPartyManager by dropping the PvP target and
+		// idling. It is no longer deferred (pvpTargetOid == 0), so its next party tick re-establishes follow/assist.
+		phantom.setTarget(null);
+		phantom.getAI().setIntention(Intention.IDLE);
+	}
+
+	/** @return the phantom's current PvP opponent as a {@link Player}, or {@code null} if it left the world or is not a player. */
+	private Player resolvePvpTarget(PhantomData data)
+	{
+		if (data.pvpTargetOid == 0)
+		{
+			return null;
+		}
+		final WorldObject target = World.getInstance().findObject(data.pvpTargetOid);
+		return (target instanceof Player) ? (Player) target : null;
+	}
+
 	private void assignTargets()
 	{
 		final long now = System.currentTimeMillis();
@@ -4162,6 +4839,13 @@ public class PhantomManager implements IXmlReader
 				if (data.role.isBuddy() || data.recruited || data.dormant || data.dispersing || phantom.isDead())
 				{
 					continue; // buddies and recruited party members are not part of the hunt/deconflict
+				}
+
+				// PvP owns this phantom this tick: the pvpCombat tick has it engaged with (or fleeing from) a player.
+				// Leave its target and intention alone so the hunt loop does not yank it back onto a monster.
+				if (data.pvpTargetOid != 0)
+				{
+					continue;
 				}
 
 				// Resting phantom that just came under threat: stand now, don't wait for the 5s supervise tick.
@@ -4701,6 +5385,14 @@ public class PhantomManager implements IXmlReader
 
 				// Post-kill breather is managed by assignTargets (1s): leave it standing, don't roam it here.
 				if (data.huntPauseUntil > 0)
+				{
+					continue;
+				}
+
+				// PvP-engaged: the pvpCombat tick owns this phantom's target and movement while it fights or flees a
+				// player. Don't let the rest/roam/idle-clear logic below (whose danger check only sees monsters) sit it
+				// down, clear its target, or wander it off mid-fight.
+				if (data.pvpTargetOid != 0)
 				{
 					continue;
 				}

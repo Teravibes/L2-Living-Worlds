@@ -23,6 +23,7 @@ package org.l2jmobius.gameserver.managers;
 import static org.l2jmobius.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -188,47 +189,88 @@ public class FakePlayerStoreManager
 			return;
 		}
 
-		// Validate every line against the live stock, then total it up (anti-tamper on price/amount).
-		long total = 0;
-		final Map<FakePlayerStoreItem, Integer> plan = new LinkedHashMap<>();
-		for (RequestTrade request : items)
+		// FPC-003/FPC-072: run the WHOLE transaction under the per-store lock - validation, charge, grant, stock
+		// decrement AND settle() together - so no other customer's transaction can interleave. The earlier
+		// reserve-then-rollback released the lock during payment, which let a concurrent settle() close the store in
+		// that gap and leave a rolled-back unit orphaned. The store lock is store-specific and taken only by this store
+		// code, so holding it across the (in-memory) inventory ops creates no lock-ordering cycle with inventory locks.
+		synchronized (look.storeLock())
 		{
-			final FakePlayerStoreItem entry = findByObjectId(look, request.getObjectId());
-			if (entry == null)
+			long total = 0;
+			final Map<FakePlayerStoreItem, Integer> plan = new LinkedHashMap<>();
+			for (RequestTrade request : items)
+			{
+				final FakePlayerStoreItem entry = findByObjectId(look, request.getObjectId());
+				if (entry == null)
+				{
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				final int want = plan.getOrDefault(entry, 0) + request.getCount();
+				if ((request.getCount() < 1) || !FakePlayerStoreMath.fits(want, entry.getCount()) || (request.getPrice() != entry.getPrice()))
+				{
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				total += FakePlayerStoreMath.lineTotal(request.getCount(), entry.getPrice());
+				plan.put(entry, want);
+			}
+
+			// FPC-001: prove the total is inside 1..Integer.MAX_VALUE BEFORE narrowing it to int. A total above
+			// Integer.MAX_VALUE would cast to a negative charge, and reduceAdena removes nothing for a nonpositive
+			// count while still returning true, so the items would be granted for free.
+			if (!FakePlayerStoreMath.totalInRange(total))
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			final int want = plan.getOrDefault(entry, 0) + request.getCount();
-			if ((request.getCount() < 1) || (want > entry.getCount()) || (request.getPrice() != entry.getPrice()))
+
+			// FPC-014: a PACKAGE_SELL vendor is an all-or-nothing bundle, so enforce completeness server-side (the
+			// wire package flag alone does not stop a crafted partial request). Every live stock line must appear
+			// exactly once at its full remaining quantity; anything omitted or reduced is rejected with no state change.
+			if (look.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL.getId())
 			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
+				final List<FakePlayerStoreItem> stock = look.getStoreItems();
+				boolean complete = (plan.size() == stock.size());
+				for (FakePlayerStoreItem entry : stock)
+				{
+					if (plan.getOrDefault(entry, 0) != entry.getCount())
+					{
+						complete = false;
+						break;
+					}
+				}
+				if (!complete)
+				{
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+			}
+
+			if (total > player.getAdena())
+			{
+				player.sendMessage("You do not have enough adena.");
+				player.sendPacket(new FakePlayerStoreListSell(player, npc));
 				return;
 			}
-			total += (long) request.getCount() * entry.getPrice();
-			plan.put(entry, want);
-		}
+			if (!player.reduceAdena(ItemProcessType.BUY, (int) total, npc, true))
+			{
+				return;
+			}
 
-		if ((total <= 0) || (total > player.getAdena()))
-		{
-			player.sendMessage("You do not have enough adena.");
-			player.sendPacket(new FakePlayerStoreListSell(player, npc));
-			return;
-		}
-		if (!player.reduceAdena(ItemProcessType.BUY, (int) total, npc, true))
-		{
-			return;
-		}
+			// Payment succeeded: grant the items and decrement stock, still under the lock. No rollback is needed
+			// because nothing was mutated until reduceAdena succeeded and no other transaction can interleave here.
+			for (Map.Entry<FakePlayerStoreItem, Integer> bought : plan.entrySet())
+			{
+				final FakePlayerStoreItem entry = bought.getKey();
+				player.addItem(ItemProcessType.BUY, entry.getItemId(), bought.getValue(), entry.getEnchant(), npc, true);
+				entry.decrease(bought.getValue());
+			}
 
-		for (Map.Entry<FakePlayerStoreItem, Integer> bought : plan.entrySet())
-		{
-			final FakePlayerStoreItem entry = bought.getKey();
-			player.addItem(ItemProcessType.BUY, entry.getItemId(), bought.getValue(), entry.getEnchant(), npc, true);
-			entry.decrease(bought.getValue());
+			settle(npc, look);
 		}
 
 		FakePlayerBehaviorManager.getInstance().noteMeetInteraction(npc, player); // active trade -> don't time out
-		settle(npc, look);
 		player.sendPacket(new FakePlayerStoreListSell(player, npc));
 	}
 
@@ -248,60 +290,88 @@ public class FakePlayerStoreManager
 			return;
 		}
 
-		long total = 0;
-		final List<int[]> plan = new ArrayList<>(); // {itemObjectId, count}
-		final Map<FakePlayerStoreItem, Integer> taken = new LinkedHashMap<>();
-		for (RequestTrade request : items)
-		{
-			final Item owned = player.getInventory().getItemByObjectId(request.getObjectId());
-			if ((owned == null) || (owned.getId() != request.getItemId()) || !owned.isTradeable() || owned.isEquipped())
-			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			final FakePlayerStoreItem demand = findByItemId(look, request.getItemId());
-			if (demand == null)
-			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			final int alreadyTaken = taken.getOrDefault(demand, 0);
-			final int want = Math.min(request.getCount(), Math.min(owned.getCount(), demand.getCount() - alreadyTaken));
-			if ((want < 1) || (request.getPrice() != demand.getPrice()))
-			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			total += (long) want * demand.getPrice();
-			plan.add(new int[]
-			{
-				owned.getObjectId(),
-				want
-			});
-			taken.put(demand, alreadyTaken + want);
-		}
+		// One planned removal: the buyer's item instance, how many to take, and which demand line pays for it.
+		record SellRow(int objectId, int want, FakePlayerStoreItem demand, int price) {}
 
-		if (total <= 0)
+		final Set<Integer> seenObjectIds = new HashSet<>();
+		final List<SellRow> plan = new ArrayList<>();
+		// FPC-003/FPC-072: run the WHOLE transaction under the per-store lock - validation, item removal, demand
+		// decrement, payment AND settle() together - so no other seller's transaction can interleave. Two concurrent
+		// sellers therefore serialize and cannot both validate against the same remaining demand, and no rollback is
+		// needed: demand is decremented only for a row whose item actually destroyed. The store lock is store-specific
+		// and taken only by this code, so holding it across the (in-memory) inventory ops is deadlock-safe.
+		synchronized (look.storeLock())
 		{
-			return;
-		}
-		if (total > Integer.MAX_VALUE)
-		{
-			total = Integer.MAX_VALUE;
-		}
+			final Map<FakePlayerStoreItem, Integer> taken = new LinkedHashMap<>();
+			for (RequestTrade request : items)
+			{
+				// FPC-002: reject a repeated inventory object id. Two rows naming the same stack each see the full
+				// owned count during validation, so without this a crafted packet could plan to sell one stack twice,
+				// have the second removal fail, and still be paid for both.
+				if (!seenObjectIds.add(request.getObjectId()))
+				{
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				final Item owned = player.getInventory().getItemByObjectId(request.getObjectId());
+				if ((owned == null) || (owned.getId() != request.getItemId()) || !owned.isTradeable() || owned.isEquipped())
+				{
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				final FakePlayerStoreItem demand = findByItemId(look, request.getItemId());
+				if (demand == null)
+				{
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				final int alreadyTaken = taken.getOrDefault(demand, 0);
+				final int want = FakePlayerStoreMath.grantable(Math.min(request.getCount(), owned.getCount()), demand.getCount(), alreadyTaken);
+				if ((want < 1) || (request.getPrice() != demand.getPrice()))
+				{
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				plan.add(new SellRow(owned.getObjectId(), want, demand, demand.getPrice()));
+				taken.put(demand, alreadyTaken + want);
+			}
 
-		for (int[] row : plan)
-		{
-			player.destroyItem(ItemProcessType.SELL, row[0], row[1], npc, true);
+			// FPC-070: prove the full payout fits 1..Integer.MAX_VALUE BEFORE removing any item, mirroring the FPC-001
+			// BUY range check. Otherwise an extreme valid sale would destroy items worth more than Integer.MAX_VALUE and
+			// then clamp the payment down, underpaying the player for goods already gone. Reject here, no state change.
+			long plannedTotal = 0;
+			for (SellRow row : plan)
+			{
+				plannedTotal += FakePlayerStoreMath.lineTotal(row.want(), row.price());
+			}
+			if (!FakePlayerStoreMath.totalInRange(plannedTotal))
+			{
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+
+			// FPC-002: pay only for items actually removed. A row whose destroy succeeds decrements the bot's demand
+			// and adds to the payout; a failed removal simply pays nothing and leaves demand untouched (no rollback).
+			long paid = 0;
+			for (SellRow row : plan)
+			{
+				if (player.destroyItem(ItemProcessType.SELL, row.objectId(), row.want(), npc, true))
+				{
+					row.demand().decrease(row.want());
+					paid += FakePlayerStoreMath.lineTotal(row.want(), row.price());
+				}
+			}
+
+			if (paid <= 0)
+			{
+				return;
+			}
+			// paid is bounded by the planned total, proven <= Integer.MAX_VALUE above (FPC-070), so the cast is safe.
+			player.addAdena(ItemProcessType.SELL, (int) paid, npc, true);
+			settle(npc, look);
 		}
-		for (Map.Entry<FakePlayerStoreItem, Integer> sold : taken.entrySet())
-		{
-			sold.getKey().decrease(sold.getValue());
-		}
-		player.addAdena(ItemProcessType.SELL, (int) total, npc, true);
 
 		FakePlayerBehaviorManager.getInstance().noteMeetInteraction(npc, player); // active trade -> don't time out
-		settle(npc, look);
 		player.sendPacket(new FakePlayerStoreListBuy(player, npc));
 	}
 

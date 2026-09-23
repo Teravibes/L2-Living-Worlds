@@ -72,16 +72,19 @@ public class FakePlayerStoreItem
 	}
 
 	/**
-	 * Reduces the remaining quantity after a (partial) trade, clamped at zero.
-	 * @param amount how many units changed hands
+	 * Reduces the remaining quantity after a (partial) trade, clamped at zero. A trade always removes a
+	 * positive quantity, so a nonpositive amount is ignored rather than allowed to add stock, and the
+	 * subtraction is done in {@code long} so an extreme amount cannot wrap before it is clamped (FPC-007).
+	 * @param amount how many units changed hands; ignored when not positive
 	 */
 	public void decrease(int amount)
 	{
-		_count -= amount;
-		if (_count < 0)
+		if (amount <= 0)
 		{
-			_count = 0;
+			return;
 		}
+		final long remaining = (long) _count - amount;
+		_count = (remaining < 0) ? 0 : (int) remaining;
 	}
 
 	/**

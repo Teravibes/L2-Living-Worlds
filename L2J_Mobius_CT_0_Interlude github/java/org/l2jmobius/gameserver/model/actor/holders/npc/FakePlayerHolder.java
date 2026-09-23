@@ -100,7 +100,7 @@ public class FakePlayerHolder
 		// Populate FakePlayerData mappings.
 		final String name = set.getString("name", "");
 		FakePlayerData.getInstance().addFakePlayerId(name, set.getInt("id", 0)); // Map name to npcId.
-		final String lowercaseName = name.toLowerCase();
+		final String lowercaseName = name.toLowerCase(java.util.Locale.ROOT); // FPC-005: fold with a fixed locale so lookup matches on any host
 		FakePlayerData.getInstance().addFakePlayerName(lowercaseName, name); // Map lowercase name to original name.
 		if (_talkable)
 		{

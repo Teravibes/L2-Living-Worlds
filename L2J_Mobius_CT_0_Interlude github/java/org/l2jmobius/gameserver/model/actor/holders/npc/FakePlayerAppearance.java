@@ -69,6 +69,9 @@ public class FakePlayerAppearance
 	private int _clanId = 0; // 0 = unaffiliated; otherwise the live id of a bot clan this fake player belongs to
 	private List<FakePlayerStoreItem> _storeItems = Collections.emptyList();
 	private List<FakePlayerCraftItem> _craftItems = Collections.emptyList();
+	// FPC-003: guards this store's stock/demand so concurrent buyers/sellers reserve atomically. It is store-specific
+	// and acquired only by the FakePlayer store transaction code, so it introduces no lock-ordering cycle.
+	private final Object _storeLock = new Object();
 
 	public int getClanId()
 	{
@@ -322,6 +325,15 @@ public class FakePlayerAppearance
 	{
 		_storeItems = items == null ? Collections.emptyList() : items;
 		return this;
+	}
+
+	/**
+	 * @return the monitor guarding this store's stock/demand; the FakePlayer store transaction code synchronizes on
+	 *         it so two concurrent customers cannot validate against the same remaining amount and oversell (FPC-003)
+	 */
+	public Object storeLock()
+	{
+		return _storeLock;
 	}
 
 	/**

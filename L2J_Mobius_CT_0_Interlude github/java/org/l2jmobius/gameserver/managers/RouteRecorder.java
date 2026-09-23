@@ -63,6 +63,12 @@ public class RouteRecorder
 		{
 			return "Already recording '" + SESSIONS.get(player.getObjectId()).name + "'. Use //stop_route first.";
 		}
+		// FPC-011: reject an invalid name up front, before the GM walks the whole path, so the save at //stop_route
+		// cannot silently fail on a name with metacharacters or one that would collide with another route's file.
+		if (!RouteData.isValidRouteName(routeName))
+		{
+			return "Invalid route name '" + routeName + "'. Use letters, digits, '_' or '-' only (max 64).";
+		}
 		final Location start = new Location(player.getX(), player.getY(), player.getZ());
 		SESSIONS.put(player.getObjectId(), new Session(routeName, start));
 		return null;
@@ -87,8 +93,13 @@ public class RouteRecorder
 		{
 			return "Route '" + session.name + "' has only " + session.points.size() + " point(s) — not saved. Walk further before stopping.";
 		}
-		RouteData.getInstance().saveRoute(session.name, session.points);
-		return "Route '" + session.name + "' saved with " + session.points.size() + " waypoints.";
+		// FPC-011: report the REAL outcome. saveRoute now returns whether the route was durably written and registered,
+		// so a GM no longer gets a "saved" message for a route that would be gone after a restart.
+		if (RouteData.getInstance().saveRoute(session.name, session.points))
+		{
+			return "Route '" + session.name + "' saved with " + session.points.size() + " waypoints.";
+		}
+		return "Route '" + session.name + "' could NOT be saved (see server log). It will be lost on restart.";
 	}
 
 	public static boolean isRecording(Player player)

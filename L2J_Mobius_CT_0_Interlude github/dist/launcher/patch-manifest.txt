@@ -35,6 +35,11 @@ scripts/Configure-Brain.bat
 launcher/update.ps1
 tools/l2admin/index.html
 tools/l2admin/native-bridge.js
+# v0.1.22 exception to the "no customizable configs" rule: this release adds many new
+# FakePlayers.ini keys (chatter cadence, bot-to-bot chat, Phantom PvP) and turns Phantom
+# PvP on, so the file ships in the patch and overwrites the tester's copy. Remove this
+# entry again after v0.1.22 so later patches keep tester customizations.
+game/config/Custom/FakePlayers.ini
 game/data/PhantomPlaystyles.xml
 game/data/xsd/PhantomPlaystyles.xsd
 game/data/PhantomPopulations.xml

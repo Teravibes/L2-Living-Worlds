@@ -419,6 +419,23 @@ public class FakePlayerStoreFactory
 	 */
 	public static ItemTemplate findItemByName(String phrase)
 	{
+		return findItemByName(phrase, true);
+	}
+
+	/**
+	 * Like {@link #findItemByName(String)} but ignoring the trade allow-list, so it resolves any real, normally-named
+	 * tradeable item a player might mean - including ones bots do not actually trade. Used to tell a real item the
+	 * bots simply do not deal ("nobody here buys that") apart from an unrecognisable phrase (FPC-052 follow-up).
+	 * @param phrase the words after WTS/WTB
+	 * @return the closest matching real tradeable item, or {@code null} if the phrase names no such item
+	 */
+	public static ItemTemplate findKnownItemByName(String phrase)
+	{
+		return findItemByName(phrase, false);
+	}
+
+	private static ItemTemplate findItemByName(String phrase, boolean allowedOnly)
+	{
 		final List<String> wanted = matchTokens(phrase);
 		if (wanted.isEmpty())
 		{
@@ -428,7 +445,11 @@ public class FakePlayerStoreFactory
 		int bestScore = Integer.MAX_VALUE;
 		for (ItemTemplate item : ItemData.getInstance().getAllItems())
 		{
-			if ((item == null) || (item.getId() == ADENA_ID) || (item.getId() == ANCIENT_ADENA_ID) || !FakePlayerStoreEligibility.isAllowed(item.getId()))
+			if ((item == null) || (item.getId() == ADENA_ID) || (item.getId() == ANCIENT_ADENA_ID))
+			{
+				continue;
+			}
+			if (allowedOnly && !FakePlayerStoreEligibility.isAllowed(item.getId()))
 			{
 				continue;
 			}
@@ -439,6 +460,13 @@ public class FakePlayerStoreFactory
 			}
 			final String name = item.getName();
 			if ((name == null) || name.isEmpty())
+			{
+				continue;
+			}
+			// Skip "Common Item" weapon variants (e.g. "Saber*Artisan's Sword"), whose stock name carries a '*'.
+			// Their base-weapon tokens ("artisan", "sword") match a plain phrase, so without this a WTS/WTB for a
+			// normal item resolves to the '*' variant and the whole deal is set up for the wrong item (FPC-052).
+			if (name.indexOf('*') >= 0)
 			{
 				continue;
 			}
@@ -563,6 +591,31 @@ public class FakePlayerStoreFactory
 	private static int clampDealPrice(int unitPrice, int referencePrice, boolean selling)
 	{
 		return FakePlayerStorePricing.clampDealPrice(unitPrice, referencePrice, selling);
+	}
+
+	/**
+	 * Whether a negotiated unit price already sits inside the deal clamp band for this item, i.e. the
+	 * anti-injection clamp ({@link #clampDealPrice}) would leave it unchanged. This lets the chat manager
+	 * reject an out-of-band counteroffer outright instead of classifying it as accepted and then silently
+	 * storing a different, clamped price (FPC-041). An unknown item has no band, so its price
+	 * is treated as in-band.
+	 * @param itemId the deal item id
+	 * @param unitPrice the proposed unit price; {@code <= 0} is never in band
+	 * @param selling {@code true} if the bot sells to the player, {@code false} if it buys from the player
+	 * @return {@code true} when the clamp would return exactly {@code unitPrice}
+	 */
+	public static boolean dealPriceWithinBand(int itemId, int unitPrice, boolean selling)
+	{
+		if (unitPrice <= 0)
+		{
+			return false;
+		}
+		final ItemTemplate item = ItemData.getInstance().getTemplate(itemId);
+		if (item == null)
+		{
+			return true; // unknown item - no reference band to enforce
+		}
+		return clampDealPrice(unitPrice, effRef(item.getReferencePrice()), selling) == unitPrice;
 	}
 
 	/**

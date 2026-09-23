@@ -22,6 +22,8 @@ package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -30,6 +32,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 
 import org.w3c.dom.Document;
 
@@ -113,11 +116,43 @@ public class RouteData implements IXmlReader
 	/**
 	 * Saves a route to {@code data/routes/<name>.xml} and registers it in memory.
 	 */
-	public void saveRoute(String name, List<Location> points)
+	// FPC-011: the one canonical route-name form. Restricting names to these characters means the name equals its own
+	// filename (no two names collide onto one file, no metacharacter can corrupt the XML attribute), so the map key,
+	// the on-disk file, and the reloadable attribute all agree.
+	private static final Pattern VALID_ROUTE_NAME = Pattern.compile("[A-Za-z0-9_-]{1,64}");
+
+	/** @return {@code true} when {@code name} is a valid canonical route name (letters, digits, underscore, hyphen). */
+	public static boolean isValidRouteName(String name)
 	{
-		_routes.put(name, Collections.unmodifiableList(new ArrayList<>(points)));
-		final File file = new File("data/routes/" + sanitize(name) + ".xml");
-		try (PrintWriter pw = new PrintWriter(file, "UTF-8"))
+		return (name != null) && VALID_ROUTE_NAME.matcher(name).matches();
+	}
+
+	/**
+	 * Persist a route and register it in memory. FPC-011: this used to register the route before touching disk, never
+	 * created {@code data/routes}, and swallowed write failures, so a GM got a "saved" message for a route that was
+	 * gone after restart. Now it validates the name, creates the directory, writes to a temp file and atomically moves
+	 * it into place, and registers the route in memory ONLY after the file is durably written - and it returns whether
+	 * it actually succeeded so the caller can report the truth.
+	 * @param name the route name (must be a valid canonical name)
+	 * @param points the recorded waypoints
+	 * @return {@code true} if the route was written to disk and registered; {@code false} on any failure
+	 */
+	public boolean saveRoute(String name, List<Location> points)
+	{
+		if (!isValidRouteName(name))
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Refusing to save route with invalid name '" + name + "' (allowed: letters, digits, '_', '-').");
+			return false;
+		}
+		final File folder = new File("data/routes");
+		if (!folder.isDirectory() && !folder.mkdirs())
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Could not create route directory '" + folder.getPath() + "'.");
+			return false;
+		}
+		final File file = new File(folder, name + ".xml");
+		final File tmp = new File(folder, name + ".xml.tmp");
+		try (PrintWriter pw = new PrintWriter(tmp, "UTF-8"))
 		{
 			pw.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
 			pw.println("<route name=\"" + name + "\">");
@@ -129,13 +164,31 @@ public class RouteData implements IXmlReader
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not save route '" + name + "': " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not write route '" + name + "': " + e.getMessage(), e);
+			tmp.delete();
+			return false;
 		}
-	}
-
-	private static String sanitize(String name)
-	{
-		return name.replaceAll("[^a-zA-Z0-9_\\-]", "_");
+		try
+		{
+			Files.move(tmp.toPath(), file.toPath(), StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+		}
+		catch (Exception atomic)
+		{
+			// ATOMIC_MOVE is not supported on every filesystem; fall back to a plain replace.
+			try
+			{
+				Files.move(tmp.toPath(), file.toPath(), StandardCopyOption.REPLACE_EXISTING);
+			}
+			catch (Exception plain)
+			{
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not move route '" + name + "' into place: " + plain.getMessage(), plain);
+				tmp.delete();
+				return false;
+			}
+		}
+		// Register only now that the complete file is in place, so an in-memory route always has a durable backing file.
+		_routes.put(name, Collections.unmodifiableList(new ArrayList<>(points)));
+		return true;
 	}
 
 	public static RouteData getInstance()

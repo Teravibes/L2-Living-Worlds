@@ -8,8 +8,9 @@ public class FakePlayerStoreEligibilityTest
 
 	public static void main(String[] args)
 	{
-		eq(2439, FakePlayerStoreEligibility.size(), "curated pool size");
+		eq(2440, FakePlayerStoreEligibility.size(), "curated pool size");
 
+		allowed(126, "Artisan's Sword (D-grade base weapon, added by request)");
 		allowed(1463, "D-grade Soulshot");
 		allowed(3948, "D-grade Blessed Spiritshot");
 		allowed(5575, "Ancient Adena");

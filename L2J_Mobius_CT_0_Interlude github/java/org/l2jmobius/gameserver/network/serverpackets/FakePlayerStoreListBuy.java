@@ -86,9 +86,19 @@ public class FakePlayerStoreListBuy extends ServerPacket
 			{
 				continue;
 			}
-			// Match against a tradeable, non-equipped copy the viewer owns; absent that, list it greyed.
-			final Item owned = player.getInventory().getItemByItemId(demand.getItemId());
-			final boolean canSell = (owned != null) && owned.isTradeable() && !owned.isEquipped();
+			// FPC-016: pick an ELIGIBLE (tradeable, unequipped) copy among all the viewer's instances of this item.
+			// getItemByItemId returns the first match from an unordered set, so with one copy equipped and another
+			// carried unequipped it could return the equipped one and wrongly grey out a sellable copy.
+			Item owned = null;
+			for (Item candidate : player.getInventory().getAllItemsByItemId(demand.getItemId()))
+			{
+				if (candidate.isTradeable() && !candidate.isEquipped())
+				{
+					owned = candidate;
+					break;
+				}
+			}
+			final boolean canSell = owned != null;
 			final int objectId = canSell ? owned.getObjectId() : 0;
 			final int enchant = canSell ? owned.getEnchantLevel() : 0;
 			final int sellable = canSell ? Math.min(demand.getCount(), owned.getCount()) : 0;

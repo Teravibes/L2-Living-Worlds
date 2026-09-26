@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/FakePlayerBehavior.xsd">
-	<profile name="mv_giran_gatekeeper" type="WANDER" radius="240" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_giran_warehouse" type="WANDER" radius="200" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_giran_blacksmith" type="WANDER" radius="200" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_giran_grocer" type="WANDER" radius="180" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_giran_mammon" type="WANDER" radius="180" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_giran_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_giran_gatekeeper" type="WANDER" radius="240" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_warehouse" type="WANDER" radius="200" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_blacksmith" type="WANDER" radius="200" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_grocer" type="WANDER" radius="180" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_mammon" type="WANDER" radius="180" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_giran_movers" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="83485" y="147998" z="-3407"/>
 		<point x="83192" y="146680" z="-3464"/>
 		<point x="82651" y="146714" z="-3466"/>
@@ -13,19 +13,19 @@
 		<point x="85505" y="146208" z="-3399"/>
 		<point x="81360" y="150016" z="-3528"/>
 	</profile>
-	<profile name="mv_giran_crowd" type="WANDER" radius="400" run="false" pauseMin="18" pauseMax="45"/>
-	<profile name="mv_ti_gatekeeper" type="WANDER" radius="220" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_ti_movers" type="WANDER" radius="2752" run="false" pauseMin="18" pauseMax="45"/>
-	<profile name="mv_elf_gatekeeper" type="WANDER" radius="220" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_elf_movers" type="WANDER" radius="450" run="false" pauseMin="18" pauseMax="45"/>
-	<profile name="mv_delf_gatekeeper" type="WANDER" radius="220" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_delf_movers" type="WANDER" radius="450" run="false" pauseMin="18" pauseMax="45"/>
-	<profile name="mv_dwarf_gatekeeper" type="WANDER" radius="200" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_dwarf_movers" type="WANDER" radius="400" run="false" pauseMin="18" pauseMax="45"/>
-	<profile name="mv_orc_gatekeeper" type="WANDER" radius="220" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_orc_movers" type="WANDER" radius="450" run="false" pauseMin="18" pauseMax="45"/>
-	<profile name="mv_gludin_gatekeeper" type="WANDER" radius="260" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_gludin_movers" type="WANDER" radius="600" run="false" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_giran_crowd" type="WANDER" radius="400" run="true" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_ti_gatekeeper" type="WANDER" radius="220" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_ti_movers" type="WANDER" radius="2752" run="true" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_elf_gatekeeper" type="WANDER" radius="220" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_elf_movers" type="WANDER" radius="450" run="true" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_delf_gatekeeper" type="WANDER" radius="220" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_delf_movers" type="WANDER" radius="450" run="true" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_dwarf_gatekeeper" type="WANDER" radius="200" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_dwarf_movers" type="WANDER" radius="400" run="true" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_orc_gatekeeper" type="WANDER" radius="220" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_orc_movers" type="WANDER" radius="450" run="true" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_gludin_gatekeeper" type="WANDER" radius="260" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_gludin_movers" type="WANDER" radius="600" run="true" pauseMin="18" pauseMax="45"/>
 	<profile name="mv_gludio_gatekeeper" type="WANDER" radius="100" run="true" pauseMin="25" pauseMax="120"/>
 	<profile name="mv_giran_sellers" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
 	<profile name="mv_giran_buyers" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
@@ -62,18 +62,18 @@
 	</profile>
 	<profile name="mv_dion_sellers" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
 	<profile name="mv_dion_sellers_gk" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_new_population" type="WANDER" radius="100" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_new_population" type="WANDER" radius="100" run="true" pauseMin="25" pauseMax="80"/>
 
 	<!-- ===== Shared town-life profiles (reused by the cities below). For populations the wander radius
 	     comes from the population's own radius attribute, so these can be shared across towns. ===== -->
-	<profile name="mv_town_gk" type="WANDER" radius="220" run="false" pauseMin="25" pauseMax="80"/>
-	<profile name="mv_town_life" type="WANDER" radius="450" run="false" pauseMin="18" pauseMax="45"/>
+	<profile name="mv_town_gk" type="WANDER" radius="220" run="true" pauseMin="25" pauseMax="80"/>
+	<profile name="mv_town_life" type="WANDER" radius="450" run="true" pauseMin="18" pauseMax="45"/>
 	<profile name="mv_town_seller" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
 	<profile name="mv_town_buyer" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
 	<profile name="mv_town_crafter" type="WANDER" radius="120" run="false" pauseMin="25" pauseMax="80"/>
 
 	<!-- Oren: tour the gatekeeper, Adventurers' Guild, manor manager and the plazas. -->
-	<profile name="mv_oren_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_oren_movers" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="82992" y="53171" z="-1492"/>
 		<point x="83568" y="53856" z="-1455"/>
 		<point x="81992" y="54048" z="-1494"/>
@@ -84,7 +84,7 @@
 	</profile>
 
 	<!-- Aden: the capital - gatekeeper, market squares, castle approach and the northern plaza. -->
-	<profile name="mv_aden_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_aden_movers" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="146737" y="25807" z="-2013"/>
 		<point x="146814" y="27108" z="-2189"/>
 		<point x="147970" y="27040" z="-2191"/>
@@ -95,7 +95,7 @@
 	</profile>
 
 	<!-- Heine: harbour town - gatekeeper, the eastern square and the western docks. -->
-	<profile name="mv_heine_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_heine_movers" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="111386" y="219413" z="-3536"/>
 		<point x="110896" y="220768" z="-3624"/>
 		<point x="112112" y="220576" z="-3624"/>
@@ -105,7 +105,7 @@
 	</profile>
 
 	<!-- Hunters Village. -->
-	<profile name="mv_hunters_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_hunters_movers" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="117129" y="76917" z="-2689"/>
 		<point x="116704" y="75695" z="-2680"/>
 		<point x="118275" y="74859" z="-2557"/>
@@ -115,7 +115,7 @@
 	</profile>
 
 	<!-- Goddard. -->
-	<profile name="mv_goddard_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_goddard_movers" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="147966" y="-55228" z="-2728"/>
 		<point x="148560" y="-55904" z="-2779"/>
 		<point x="150704" y="-55744" z="-2979"/>
@@ -125,7 +125,7 @@
 	</profile>
 
 	<!-- Rune: tour the lower township around the gatekeeper. -->
-	<profile name="mv_rune_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_rune_movers" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="43824" y="-47664" z="-800"/>
 		<point x="43744" y="-47920" z="-800"/>
 		<point x="44864" y="-47824" z="-800"/>
@@ -136,7 +136,7 @@
 	</profile>
 
 	<!-- Schuttgart. -->
-	<profile name="mv_schuttgart_movers" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_schuttgart_movers" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="87048" y="-143448" z="-1293"/>
 		<point x="88240" y="-142736" z="-1341"/>
 		<point x="86400" y="-142672" z="-1344"/>
@@ -146,7 +146,7 @@
 	</profile>
 
 	<!-- ===== Starting villages: short landmark tours (race is set on the populations) ===== -->
-	<profile name="mv_ti_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_ti_tour" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="-83990" y="243336" z="-3700"/>
 		<point x="-83964" y="242680" z="-3700"/>
 		<point x="-84512" y="242679" z="-3700"/>
@@ -154,7 +154,7 @@
 		<point x="-84903" y="243489" z="-3700"/>
 		<point x="-83808" y="243637" z="-3700"/>
 	</profile>
-	<profile name="mv_elf_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_elf_tour" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="46926" y="51511" z="-2976"/>
 		<point x="45487" y="49767" z="-2950"/>
 		<point x="45896" y="49831" z="-2950"/>
@@ -162,7 +162,7 @@
 		<point x="45100" y="49025" z="-2950"/>
 		<point x="45912" y="49363" z="-2950"/>
 	</profile>
-	<profile name="mv_delf_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_delf_tour" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="12501" y="16768" z="-4500"/>
 		<point x="12104" y="17385" z="-4500"/>
 		<point x="12519" y="16376" z="-4500"/>
@@ -170,7 +170,7 @@
 		<point x="10691" y="16343" z="-4500"/>
 		<point x="10146" y="16965" z="-4500"/>
 	</profile>
-	<profile name="mv_dwarf_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_dwarf_tour" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="115072" y="-178176" z="-880"/>
 		<point x="115248" y="-178816" z="-850"/>
 		<point x="115271" y="-178561" z="-820"/>
@@ -178,7 +178,7 @@
 		<point x="115485" y="-178077" z="-820"/>
 		<point x="115790" y="-179146" z="-890"/>
 	</profile>
-	<profile name="mv_orc_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_orc_tour" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="-44316" y="-113136" z="-80"/>
 		<point x="-44296" y="-114048" z="-80"/>
 		<point x="-44704" y="-112896" z="-80"/>
@@ -186,7 +186,7 @@
 		<point x="-43970" y="-114150" z="-80"/>
 		<point x="-44232" y="-113701" z="-80"/>
 	</profile>
-	<profile name="mv_gludin_tour" type="VISIT" run="false" pauseMin="25" pauseMax="70">
+	<profile name="mv_gludin_tour" type="VISIT" run="true" pauseMin="25" pauseMax="70">
 		<point x="-83520" y="150560" z="-3000"/>
 		<point x="-82464" y="150848" z="-3000"/>
 		<point x="-84064" y="150864" z="-3000"/>
@@ -195,7 +195,7 @@
 		<point x="-82909" y="150357" z="-3000"/>
 	</profile>
 
-	<profile name="loiter" type="WANDER" radius="150" run="false" pauseMin="25" pauseMax="80"/>
+	<profile name="loiter" type="WANDER" radius="150" run="true" pauseMin="25" pauseMax="80"/>
 
 	<population name="giran_gatekeeper" x="83384" y="148145" z="-3407" radius="240" count="15" minLevel="1" maxLevel="76" profile="mv_giran_gatekeeper" />
 	<population name="giran_warehouse" x="83192" y="146680" z="-3464" radius="200" count="5" minLevel="1" maxLevel="76" profile="mv_giran_warehouse" />

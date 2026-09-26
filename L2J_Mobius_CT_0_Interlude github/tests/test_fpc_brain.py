@@ -192,6 +192,45 @@ class FpcBrainRegressionTests(unittest.TestCase):
         self.assertEqual("45k", self.brain.fmt_amount("45000"))
         self.assertEqual("junk", self.brain.fmt_amount("junk"))
 
+    def test_history_text_drops_trade_action_tags(self):
+        self.assertEqual("", self.brain.history_text("[[MEET:gatekeeper]]"))
+        self.assertEqual("ok.", self.brain.history_text("ok. [[MEET:cancel]]"))
+        self.assertEqual("deal, see u there", self.brain.history_text("deal, see u there [[SHOP]] [[MEET:warehouse]]"))
+        # Other tags are not trade actions and stay as they were.
+        self.assertEqual("omw [[FOLLOW]]", self.brain.history_text("omw [[FOLLOW]]"))
+
+    def test_no_deal_note_forbids_trade_actions(self):
+        with self.brain.app.test_request_context(headers={}):
+            self.assertEqual("", self.brain.deal_note_from_headers())
+        note = self.brain.NO_DEAL_NOTE
+        self.assertIn("NO trade set up", note)
+        self.assertIn("never add a MEET or SHOP tag", note)
+
+    def test_meet_note_travelling_never_claims_arrival(self):
+        with self.brain.app.test_request_context(headers={
+            "X-Meet-State": "travelling",
+            "X-Meet-Spot": "gatekeeper",
+        }):
+            note = self.brain.meet_note_from_headers()
+        self.assertIn("gatekeeper", note)
+        self.assertIn("NOT arrived", note)
+        self.assertIn("on the way", note)
+
+    def test_meet_note_waiting_names_the_spot(self):
+        with self.brain.app.test_request_context(headers={
+            "X-Meet-State": "waiting",
+            "X-Meet-Spot": "warehouse",
+        }):
+            note = self.brain.meet_note_from_headers()
+        self.assertIn("standing next to the warehouse", note)
+        self.assertNotIn("NOT arrived", note)
+
+    def test_meet_note_empty_without_a_meet(self):
+        with self.brain.app.test_request_context(headers={}):
+            self.assertEqual("", self.brain.meet_note_from_headers())
+        with self.brain.app.test_request_context(headers={"X-Meet-State": "", "X-Meet-Spot": "gatekeeper"}):
+            self.assertEqual("", self.brain.meet_note_from_headers())
+
     def test_deal_note_speaks_shorthand_prices(self):
         with self.brain.app.test_request_context(headers={
             "X-Deal-Side": "SELL",
@@ -359,6 +398,17 @@ class FpcBrainRegressionTests(unittest.TestCase):
         self.assertEqual("wts elite set", self.brain.strip_fake_handle("vamp_wanted: wts elite set"))
         # A capitalised nick is also a handle.
         self.assertEqual("selling ssd", self.brain.strip_fake_handle("Ulras: selling ssd"))
+
+    def test_strip_fake_handle_removes_the_bots_own_name(self):
+        # A lowercase own name is not name-looking, but the bot must never prefix its line with itself.
+        self.assertEqual("[[MEET:cancel]]", self.brain.strip_fake_handle("zephdil: [[MEET:cancel]]", own_name="Zephdil"))
+        self.assertEqual("k np", self.brain.strip_fake_handle("Zephdil : k np", own_name="zephdil"))
+        self.assertEqual("mira: u there?", self.brain.strip_fake_handle("mira: u there?", own_name="Zephdil"))
+
+    def test_knowledge_covers_every_bss_grade(self):
+        for short, grade in (("bssd", "D"), ("bssc", "C"), ("bssb", "B"), ("bssa", "A"), ("bsss", "S")):
+            note = self.brain.knowledge_note("wtb " + short + " 1k 5a", k=3, allow={"item"})
+            self.assertIn(short + " is Blessed Spiritshot " + grade if short == "bssd" else short + " " + grade + "-grade", note)
 
     def test_strip_fake_handle_keeps_real_trade_prefixes_and_plain_lines(self):
         # Genuine trade prefixes before a colon must survive.

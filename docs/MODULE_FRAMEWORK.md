@@ -228,7 +228,20 @@ game/modules/<id>/
 
 Every path a module owns is inside this directory and is declared in the manifest relative to the module root.
 Nothing a module owns lives inside a stock class or a shared file. This single-directory ownership is what
-makes uninstall safe (section 3.8 of the review response, and section 8 here).
+makes uninstall safe (see "Why a dedicated module root" below, and section 8).
+
+### Why a dedicated module root
+
+Three locations were considered during the design review:
+
+- Option A, reuse the existing trees (scripts under `data/scripts/custom/<id>/`, config under `config/Custom/`,
+  data under the stock roots). Fastest to ship, but one module then owns files scattered across unrelated
+  directories, so uninstall needs a trusted ownership inventory and a later move to a dedicated root becomes a
+  compatibility problem. Rejected.
+- Option B, a dedicated `modules/<id>/` root. Chosen. Each module is self-contained, uninstall deletes one
+  validated directory, and it leaves room for a future `server/` and `client/` split. It cost more platform work
+  up front (script compilation, resource roots and config discovery from the new root).
+- Option C, a hybrid. Rejected. It carries most of Option B's complexity while keeping Option A's fragmentation.
 
 ## 6. The manifest
 

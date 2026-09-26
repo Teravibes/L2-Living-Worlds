@@ -465,7 +465,7 @@ public class FakePlayerChatManager implements IXmlReader
 
 		// LLM brain hook (private whisper). Falls back to canned chat if the bridge is offline.
 		// The bot's whereabouts go along so it can truthfully answer "where are you?".
-		final String aiReply = askBrain(player.getName(), fpcName, message, bot);
+		final String aiReply = askBrain(player, fpcName, message, bot);
 		if (aiReply != null)
 		{
 			sendChat(player, fpcName, handleMeetRequest(aiReply, message, player, bot));
@@ -1883,9 +1883,14 @@ public class FakePlayerChatManager implements IXmlReader
 		}
 	}
 	
-	private String askBrain(String playerName, String fpcName, String message, Npc bot)
+	private String askBrain(Player player, String fpcName, String message, Npc bot)
 	{
-		return callBridge(fpcName, "WHISPER", playerName, "", message, nearestLocation(bot), "", ACTIVE_DEALS.get(dealKey(playerName, fpcName)), BotIdentity.of(bot));
+		// Tell the brain whether this bot is walking to or waiting at a meet with this player, so "where are u" gets a
+		// truthful answer instead of a guess from the town name.
+		final FakePlayerBehaviorManager behavior = FakePlayerBehaviorManager.getInstance();
+		final String meetState = behavior.getMeetState(bot, player);
+		final String meetSpot = meetState.isEmpty() ? "" : behavior.getMeetSpot(bot);
+		return callBridge(fpcName, "WHISPER", player.getName(), "", message, nearestLocation(bot), "", false, ACTIVE_DEALS.get(dealKey(player.getName(), fpcName)), BotIdentity.of(bot), meetState, meetSpot);
 	}
 
 	private String askBrainPublic(Npc bot, String speakerName, String overheard, String mode, boolean human)
@@ -1916,6 +1921,11 @@ public class FakePlayerChatManager implements IXmlReader
 
 	private String callBridge(String fpcName, String mode, String playerName, String speakerName, String body, String location, String deal, boolean human, BrainDealContext dealContext, BotIdentity identity)
 	{
+		return callBridge(fpcName, mode, playerName, speakerName, body, location, deal, human, dealContext, identity, "", "");
+	}
+
+	private String callBridge(String fpcName, String mode, String playerName, String speakerName, String body, String location, String deal, boolean human, BrainDealContext dealContext, BotIdentity identity, String meetState, String meetSpot)
+	{
 		try
 		{
 			final HttpRequest.Builder builder = HttpRequest.newBuilder() //
@@ -1927,7 +1937,9 @@ public class FakePlayerChatManager implements IXmlReader
 				.header("X-Speaker", speakerName) //
 				.header("X-Location", location == null ? "" : location) //
 				.header("X-Deal", deal == null ? "" : deal) //
-				.header("X-Human", human ? "true" : "false");
+				.header("X-Human", human ? "true" : "false") //
+				.header("X-Meet-State", meetState == null ? "" : meetState) //
+				.header("X-Meet-Spot", meetSpot == null ? "" : meetSpot);
 
 			if ((identity != null) && !identity.isEmpty())
 			{
@@ -2160,6 +2172,17 @@ public class FakePlayerChatManager implements IXmlReader
 		boolean cancelled = false;
 		boolean handledShop = false;
 		boolean moved = false; // the bot was actually sent to meet / a store was opened this line (FPC-051 review, finding 6)
+		// Java owns what the bot says about where it is once a meet action runs: the model's line is written before
+		// the action and often claims arrival ("im at gk") while the bot has only just started walking.
+		boolean travelling = false; // a meet started and the bot is walking there now
+		String failedSpot = null; // a meet was agreed but no spot could be found beside that landmark
+		boolean cancelledByWords = false; // the player's own words called the deal off (no tag needed)
+		boolean alreadyThere = false; // a repeat meet for the spot the bot is already waiting at
+		BrainDealContext deal = null;
+		// A SHOP tag, or a MEET tag naming a place: the model proposed an action. If nothing ran, Java says so instead of
+		// sending the model's line (or an empty line when the reply was only the tag).
+		final Matcher anyMeet = MEET_TAG.matcher(reply);
+		final boolean proposedAction = SHOP_TAG.matcher(reply).find() || (anyMeet.find() && !"cancel".equalsIgnoreCase(normalizeMeetSpot(anyMeet.group(1))));
 
 		// Roaming bots and bots running a temporary deal store both negotiate here (the latter so the player
 		// can renegotiate or cancel mid-deal); only static AFK vendors are excluded.
@@ -2182,8 +2205,21 @@ public class FakePlayerChatManager implements IXmlReader
 			// with a "nah, not interested" is ignored and the deal stays in negotiation, so the model no longer owns
 			// the state transition (it never owned the item/side/price, which come from the deal context).
 			final Matcher shop = SHOP_TAG.matcher(reply);
-			final BrainDealContext deal = ACTIVE_DEALS.get(dealKey(player.getName(), bot.getName()));
-			if (shop.find() && (deal != null) && FakePlayerChatParsing.isDealAccept(playerMessage) && !isNegotiationHold(deal))
+			deal = ACTIVE_DEALS.get(dealKey(player.getName(), bot.getName()));
+
+			// The player's own words decide a cancel. "sorry no deal" ends the deal even when the model forgets the
+			// [[MEET:cancel]] tag; before, the bot said goodbye while the server kept the offer, meet or store alive. A
+			// message that also names a new price ("no deal at 15k, 12k?") is haggling, not a cancel, and is left to the
+			// counteroffer handling.
+			if ((deal != null) && FakePlayerChatParsing.isDealCancel(playerMessage) && (FakePlayerChatParsing.parseCounterOffer(playerMessage) <= 0))
+			{
+				FakePlayerBehaviorManager.getInstance().cancelDeal(bot, player);
+				clearDeal(player.getName(), bot.getName()); // also when the bot held no behavior state for it
+				cancelled = true;
+				cancelledByWords = true;
+			}
+
+			if (!cancelled && shop.find() && (deal != null) && FakePlayerChatParsing.isDealAccept(playerMessage) && !isNegotiationHold(deal))
 			{
 				final boolean botSells = "SELL".equalsIgnoreCase(deal.side);
 				final ItemTemplate item = FakePlayerStoreFactory.findItemByName(deal.item);
@@ -2203,18 +2239,30 @@ public class FakePlayerChatManager implements IXmlReader
 						{
 							behavior.openDealNow(bot, storeType, stock, title); // already here -> open immediately
 						}
-						else
+						else if (behavior.setupDeal(bot, player, storeType, stock, title))
 						{
-							behavior.setupDeal(bot, player, storeType, stock, title);
 							final Matcher meet = MEET_TAG.matcher(reply);
 							final String spot = (meet.find() && !"cancel".equalsIgnoreCase(normalizeMeetSpot(meet.group(1)))) ? normalizeMeetSpot(meet.group(1)) : "gatekeeper";
-							behavior.requestMeet(bot, spot, player);
+							if (behavior.requestMeet(bot, spot, player))
+							{
+								travelling = true;
+							}
+							else
+							{
+								// The deal stays pending (it lapses on the offer timer) so the player can name another spot.
+								moved = false;
+								failedSpot = spot;
+							}
+						}
+						else
+						{
+							moved = false; // the bot is reserved by someone else: nothing was armed
 						}
 					}
 				}
 			}
 
-			if (!handledShop)
+			if (!handledShop && !cancelled)
 			{
 				// Plain MEET handling (no shop committed this line).
 				final Matcher meet = MEET_TAG.matcher(reply);
@@ -2241,8 +2289,22 @@ public class FakePlayerChatManager implements IXmlReader
 						// bot when a real, server-owned deal exists for this (player, bot) AND the player's latest
 						// message reads like agreement to meet. Without a deal a [[MEET]] is unanchored, and without
 						// acceptance the model does not get to decide the bot walks over.
-						FakePlayerBehaviorManager.getInstance().requestMeet(bot, spot, player);
-						moved = true;
+						final FakePlayerBehaviorManager behavior = FakePlayerBehaviorManager.getInstance();
+						if (behavior.isWaitingAtMeet(bot) && spot.equals(behavior.getMeetSpot(bot)))
+						{
+							// Already standing at that very spot for this meet: nothing to walk to, just keep waiting.
+							behavior.noteMeetInteraction(bot, player);
+							alreadyThere = true;
+						}
+						else if (behavior.requestMeet(bot, spot, player))
+						{
+							moved = true;
+							travelling = true;
+						}
+						else
+						{
+							failedSpot = spot;
+						}
 					}
 				}
 				else
@@ -2253,7 +2315,32 @@ public class FakePlayerChatManager implements IXmlReader
 			}
 		}
 
-		final String cleaned = MEET_TAG.matcher(SHOP_TAG.matcher(reply).replaceAll("")).replaceAll("").trim();
+		if (failedSpot != null)
+		{
+			return meetFailedLine(failedSpot);
+		}
+		if (travelling)
+		{
+			return meetTransitLine();
+		}
+		final String cleaned = stripOwnName(MEET_TAG.matcher(SHOP_TAG.matcher(reply).replaceAll("")).replaceAll("").trim(), bot);
+		if (cancelledByWords && proposedAction)
+		{
+			return dealCancelledLine(); // the model's line was written for the meet or store the player just called off
+		}
+		if (proposedAction && !moved && !alreadyThere && !cancelled)
+		{
+			// The model proposed a meet or store but Java ran nothing. Without a deal there is nothing to meet for, so
+			// the bot must not sound like it is coming; with a deal still in negotiation, keep its line or ask.
+			if (deal == null)
+			{
+				return noDealLine();
+			}
+			if (cleaned.isEmpty())
+			{
+				return Rnd.nextBoolean() ? "so we got a deal or not?" : "u want it or not?";
+			}
+		}
 		if (!cleaned.isEmpty())
 		{
 			return cleaned;
@@ -2266,6 +2353,84 @@ public class FakePlayerChatManager implements IXmlReader
 		// tags that resolved to no action (an unanchored SHOP/MEET, a foreign tag), stay silent rather than claiming
 		// to be on the way when nothing happened (FPC-051 review, finding 6).
 		return moved ? "omw" : "";
+	}
+
+	/**
+	 * Drops a leading "botname:" the model sometimes writes before its line. With a tag-only reply such as
+	 * "zephdil: [[MEET:cancel]]" the player otherwise received just "zephdil:" once the tag was removed.
+	 * @param line the reply with action tags already removed
+	 * @param bot the answering bot, may be null
+	 * @return the line without the bot's own name prefix
+	 */
+	private static String stripOwnName(String line, Npc bot)
+	{
+		if ((bot == null) || (bot.getName() == null) || bot.getName().isEmpty())
+		{
+			return line;
+		}
+		final String name = bot.getName();
+		if ((line.length() > name.length()) && line.regionMatches(true, 0, name, 0, name.length()) && (line.charAt(name.length()) == ':'))
+		{
+			return line.substring(name.length() + 1).trim();
+		}
+		return line;
+	}
+
+	/** What the bot says when a meet has just started: it is on its way, never already there. */
+	private static String meetTransitLine()
+	{
+		switch (Rnd.get(4))
+		{
+			case 0:
+			{
+				return "omw";
+			}
+			case 1:
+			{
+				return "k omw";
+			}
+			case 2:
+			{
+				return "on my way";
+			}
+			default:
+			{
+				return "heading there now";
+			}
+		}
+	}
+
+	/** What the bot says when no spot could be found beside the agreed landmark (none nearby, or no free ground). */
+	private static String meetFailedLine(String spot)
+	{
+		final String place = "warehouse".equals(spot) ? "wh" : "shop".equals(spot) ? "shop" : "gk";
+		return Rnd.nextBoolean() ? ("cant find the " + place + " from here, where r u?") : ("no " + place + " near me, meet somewhere else?");
+	}
+
+	/** What the bot says when the player called the deal off. */
+	private static String dealCancelledLine()
+	{
+		switch (Rnd.get(3))
+		{
+			case 0:
+			{
+				return "k np";
+			}
+			case 1:
+			{
+				return "np, maybe next time";
+			}
+			default:
+			{
+				return "all good, cya";
+			}
+		}
+	}
+
+	/** What the bot says when the model agreed to a meet or store but no server-side deal exists with this player. */
+	private static String noDealLine()
+	{
+		return Rnd.nextBoolean() ? "wait what deal? we never set anything up" : "we got nothing lined up tho, post it in trade";
 	}
 
 	/** A seated private-store vendor is an AFK shop and never chats. */

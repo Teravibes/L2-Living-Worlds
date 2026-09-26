@@ -102,7 +102,12 @@ public class FakePlayerBehaviorManager implements IXmlReader
 	// warehouse keeper or merchant model.
 	private static final int MEET_OFFSET_MIN = 160;
 	private static final int MEET_OFFSET_MAX = 260;
-	// Travel time before giving up (e.g. no path) instead of wall-banging.
+	// A meet spot must sit on roughly the same floor as the landmark NPC (not on a roof or a lower terrace).
+	private static final int MEET_MAX_DZ = 150;
+	// How much closer the bot must get to count as progress on its way to the meet spot.
+	private static final int SUMMON_PROGRESS_STEP = 50;
+	// Give up when the bot has made no progress toward the meet spot for this long (e.g. no path), instead of
+	// wall-banging. Measured from the last progress, not from the start, so a long walk across town is fine.
 	private static final long SUMMON_GIVEUP = 45000;
 	// While waiting at the meet spot: ask "still coming?" after this, then leave if no reply within the grace.
 	private static final long MEET_NUDGE_AFTER = 300000;
@@ -167,7 +172,10 @@ public class FakePlayerBehaviorManager implements IXmlReader
 		// Player-requested "come meet me" override: while set, the bot walks to this spot and then waits
 		// there (pinned) until the player shows up, calls it off, or stops answering.
 		Location summonTarget;
-		long summonStart; // travel start (for the give-up timer)
+		long summonStart; // travel start
+		String summonSpot; // the agreed landmark keyword ("gatekeeper", "warehouse", "shop"), for the brain's meet note
+		double summonBestDistance; // closest the bot has come to summonTarget on this trip
+		long summonLastProgress; // when the bot last got closer (for the give-up timer)
 		long summonHardExpire; // absolute safety cap
 		boolean summonArrived;
 		long waitingSince; // start of the current wait window (reset whenever the player interacts)
@@ -842,10 +850,12 @@ public class FakePlayerBehaviorManager implements IXmlReader
 			}
 			else if (npc.isInCombat() || npc.isAttackingNow())
 			{
+				state.summonLastProgress = now; // a fight is not a stall
 				return; // let it fight; it resumes heading over afterwards
 			}
-			else if (npc.calculateDistance2D(state.summonTarget) <= SUMMON_ARRIVE_DIST)
+			else if (npc.calculateDistance3D(state.summonTarget) <= SUMMON_ARRIVE_DIST)
 			{
+				// 3D so a spot on another floor (a terrace above or below the landmark) does not count as arrived.
 				// Arrived: pin in place so the core AI doesn't immediately walk it back to its spawn.
 				state.summonArrived = true;
 				state.waitingSince = now;
@@ -878,6 +888,12 @@ public class FakePlayerBehaviorManager implements IXmlReader
 					state.pendingTitle = null;
 					refreshFakePlayerVisual(npc); // force client to rebuild fake-player visual with sitting/store state
 				}
+				LOGGER.info("FPC_MEET_ARRIVAL bot=" + npc.getName()
+					+ " spot=" + state.summonSpot
+					+ " distance2D=" + (int) npc.calculateDistance2D(state.summonTarget)
+					+ " distance3D=" + (int) npc.calculateDistance3D(state.summonTarget)
+					+ " x=" + npc.getX() + " y=" + npc.getY() + " z=" + npc.getZ()
+					+ " targetX=" + state.summonTarget.getX() + " targetY=" + state.summonTarget.getY() + " targetZ=" + state.summonTarget.getZ());
 				if (who != null)
 				{
 					final String line = state.dealActive ? (Rnd.nextBoolean() ? "im here, check my store" : "here, open my shop") : (Rnd.nextBoolean() ? "im here" : "here, where are u");
@@ -885,9 +901,14 @@ public class FakePlayerBehaviorManager implements IXmlReader
 				}
 				return;
 			}
-			else if ((now - state.summonStart) > SUMMON_GIVEUP)
+			else if (!madeMeetProgress(npc, state, now) && ((now - state.summonLastProgress) > SUMMON_GIVEUP))
 			{
-				// Couldn't reach the spot (likely no path); stop trying and say so.
+				// No progress toward the spot for a while (likely no path); stop trying and say so.
+				LOGGER.info("FPC_MEET_GIVEUP bot=" + npc.getName()
+					+ " spot=" + state.summonSpot
+					+ " distance3D=" + (int) npc.calculateDistance3D(state.summonTarget)
+					+ " x=" + npc.getX() + " y=" + npc.getY() + " z=" + npc.getZ()
+					+ " targetX=" + state.summonTarget.getX() + " targetY=" + state.summonTarget.getY() + " targetZ=" + state.summonTarget.getZ());
 				if (who != null)
 				{
 					FakePlayerChatManager.getInstance().sendChat(who, npc.getName(), Rnd.nextBoolean() ? "cant get there, come to me?" : "im stuck, where r u exactly");
@@ -1122,20 +1143,75 @@ public class FakePlayerBehaviorManager implements IXmlReader
 		final Location destination = resolveMeetSpot(bot, spot);
 		if (destination == null)
 		{
-			return false; // no such landmark nearby (different town / unknown spot)
+			return false; // no such landmark nearby (different town / unknown spot), or no free spot beside it
 		}
 		// Make sure it can move again (in case it was pinned waiting at a previous meet spot).
 		bot.setImmobilized(false);
 		bot.disableCoreAI(false);
 		state.summonTarget = destination;
+		state.summonSpot = spot;
 		state.summonStart = System.currentTimeMillis();
+		state.summonBestDistance = bot.calculateDistance3D(destination);
+		state.summonLastProgress = state.summonStart;
 		state.summonHardExpire = state.summonStart + MEET_HARD_CAP;
 		state.pendingDealExpire = 0; // meet underway: the offer reservation no longer lapses
 		state.summonArrived = false;
 		state.waitingSince = 0;
 		state.summonNudged = false;
 		state.summonPlayer = player;
+		LOGGER.info("FPC_MEET_START bot=" + bot.getName()
+			+ " player=" + (player == null ? "" : player.getName())
+			+ " spot=" + spot
+			+ " x=" + bot.getX() + " y=" + bot.getY() + " z=" + bot.getZ()
+			+ " targetX=" + destination.getX() + " targetY=" + destination.getY() + " targetZ=" + destination.getZ());
 		return true;
+	}
+
+	/**
+	 * Records progress toward the meet spot: the bot counts as progressing when it is at least
+	 * {@link #SUMMON_PROGRESS_STEP} closer than its best distance so far on this trip.
+	 * @return {@code true} if the bot got closer this tick
+	 */
+	private static boolean madeMeetProgress(Npc npc, BotState state, long now)
+	{
+		final double distance = npc.calculateDistance3D(state.summonTarget);
+		if (distance <= (state.summonBestDistance - SUMMON_PROGRESS_STEP))
+		{
+			state.summonBestDistance = distance;
+			state.summonLastProgress = now;
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Where this bot stands in a meet with {@code player}, so the brain can answer "where are u" truthfully.
+	 * @return {@code "travelling"} while walking to the spot, {@code "waiting"} once there, or {@code ""} when the
+	 *         bot has no meet with this player
+	 */
+	public String getMeetState(Npc bot, Player player)
+	{
+		if ((bot == null) || (player == null))
+		{
+			return "";
+		}
+		final BotState state = _bots.get(bot.getObjectId());
+		if ((state == null) || (state.summonTarget == null) || (state.summonPlayer != player))
+		{
+			return "";
+		}
+		return state.summonArrived ? "waiting" : "travelling";
+	}
+
+	/** @return the agreed meet spot keyword for {@code bot}'s current meet, or {@code ""} when it has none. */
+	public String getMeetSpot(Npc bot)
+	{
+		if (bot == null)
+		{
+			return "";
+		}
+		final BotState state = _bots.get(bot.getObjectId());
+		return ((state == null) || (state.summonTarget == null) || (state.summonSpot == null)) ? "" : state.summonSpot;
 	}
 
 	/**
@@ -1243,6 +1319,7 @@ public class FakePlayerBehaviorManager implements IXmlReader
 			FakePlayerChatManager.getInstance().clearDeal(dealPlayer.getName(), bot.getName());
 		}
 		state.summonTarget = null;
+		state.summonSpot = null;
 		state.summonPlayer = null;
 		state.summonArrived = false;
 		state.summonNudged = false;
@@ -1576,10 +1653,17 @@ public class FakePlayerBehaviorManager implements IXmlReader
 		return nearest == null ? null : nearbyMeetLocation(bot, nearest);
 	}
 
+	/**
+	 * Picks a standing spot beside {@code landmark}. The spot is only checked locally around the landmark (ground
+	 * height, same floor, walkable straight from the NPC); it is never traced from the bot, because the bot may be
+	 * across town with buildings in between. Getting there is left to the movement pathfinding.
+	 * @return a spot beside the landmark, or {@code null} if none of the sampled spots is usable
+	 */
 	private Location nearbyMeetLocation(Npc bot, Npc landmark)
 	{
-		// Prefer standing on the side facing the approaching bot, so the destination is usually reachable
-		// and visually reads as "next to the NPC" instead of hidden behind it.
+		// Prefer standing on the side facing the approaching bot, so the spot visually reads as "next to the NPC"
+		// on the bot's way in instead of hidden behind it. The samples still fan out all the way around.
+		final GeoEngine geo = GeoEngine.getInstance();
 		final double baseAngle = Math.atan2(bot.getY() - landmark.getY(), bot.getX() - landmark.getX());
 		for (int attempt = 0; attempt < 12; attempt++)
 		{
@@ -1587,22 +1671,18 @@ public class FakePlayerBehaviorManager implements IXmlReader
 			final int distance = Rnd.get(MEET_OFFSET_MIN, MEET_OFFSET_MAX);
 			final int x = landmark.getX() + (int) (Math.cos(angle) * distance);
 			final int y = landmark.getY() + (int) (Math.sin(angle) * distance);
-			final Location candidate = GeoEngine.getInstance().getValidLocation(bot, new Location(x, y, landmark.getZ()));
-
-			// Keep the chosen spot close to the landmark, but avoid picking the exact landmark tile again.
-			final int dx = candidate.getX() - landmark.getX();
-			final int dy = candidate.getY() - landmark.getY();
-			final double distanceFromLandmark = Math.sqrt((dx * dx) + (dy * dy));
-			if ((distanceFromLandmark >= MEET_OFFSET_MIN / 2) && GeoEngine.getInstance().canMoveToTarget(bot, candidate))
+			final int z = geo.getHeight(x, y, landmark.getZ());
+			if (Math.abs(z - landmark.getZ()) > MEET_MAX_DZ)
+			{
+				continue; // another floor (a roof, a terrace, a drop)
+			}
+			final Location candidate = new Location(x, y, z);
+			if (geo.canMoveToTarget(landmark, candidate))
 			{
 				return candidate;
 			}
 		}
-
-		// Fallback: still offset from the NPC even if geodata rejects every sampled point.
-		final int x = landmark.getX() + MEET_OFFSET_MIN;
-		final int y = landmark.getY();
-		return GeoEngine.getInstance().getValidLocation(bot, new Location(x, y, landmark.getZ()));
+		return null; // no usable spot beside this landmark: the meet is refused rather than aimed somewhere wrong
 	}
 
 	/**

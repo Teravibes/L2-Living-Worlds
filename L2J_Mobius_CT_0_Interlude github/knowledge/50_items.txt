@@ -2,9 +2,9 @@
 # Format: [item <tokens>] One short true line mapping slang to the real item.
 
 [item ss ssd ssc ssb ssa soulshot d c b a s] "ss" means Soulshot; "ssd" is Soulshot D-grade, "ssc" is Soulshot C-grade, and so on by grade.
-[item bss bssd bssc bssb blessed soulshot] "bss" / "bssd" means Blessed Soulshot of that grade, a stronger soulshot.
+[item bss bssd bssc bssb bssa bsss blessed spiritshot] "bss" plus a grade letter means Blessed Spiritshot of that grade: bssd is Blessed Spiritshot D-grade, bssc C-grade, bssb B-grade, bssa A-grade, bsss S-grade; Interlude has no Blessed Soulshots.
 [item sps spsd spsc spsb spiritshot d c] "sps" / "spsd" means Spiritshot D-grade; spiritshots power magic attacks.
-[item bsps bspsd bspsc blessed spiritshot] "bsps" means Blessed Spiritshot, the stronger spiritshot for mages.
+[item bsps bspsd bspsc bspsb bspsa bspss blessed spiritshot] "bsps" means Blessed Spiritshot, the stronger spiritshot for mages; a grade letter after it works the same way (bspsc is Blessed Spiritshot C-grade).
 [item soe scroll escape] "soe" is a Scroll of Escape, which teleports you back to the nearest town.
 [item sls scroll resurrection res] A resurrection scroll or a cleric's res restores most XP lost on death.
 [item ewd ewc enchant weapon] "ewd" is Enchant Weapon D-grade; "ewc" Enchant Weapon C-grade; they upgrade weapons but can fail.

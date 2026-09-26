@@ -3251,7 +3251,7 @@ const FPC_APP_HTML = `<div id="app">
 				<details class="adv" style="border-top:0;margin-top:0">
 					<summary>Movement timing (advanced)</summary>
 					<label>run / walk</label>
-					<select id="f_run"><option value="false">walk</option><option value="true">run</option></select>
+					<select id="f_run"><option value="true">run</option><option value="false">walk</option></select>
 					<div class="row">
 						<div><label>pause min (s)</label><input id="f_pauseMin" type="number" min="1" /></div>
 						<div><label>pause max (s)</label><input id="f_pauseMax" type="number" min="1" /></div>
@@ -3559,10 +3559,10 @@ const LANDMARKS = [
 //   SHOP   -> WANDER  (private-store vendors, small drift)   gold
 const BEHAVIORS = ['IDLE','RUNNER','PATROL','SHOP'];
 const BEHAVIOR_DEFAULTS = {
-	IDLE:   { type: 'WANDER', run: false, pauseMin: 25, pauseMax: 80, roam: 'pop'  },
+	IDLE:   { type: 'WANDER', run: true,  pauseMin: 25, pauseMax: 80, roam: 'pop'  },
 	SHOP:   { type: 'WANDER', run: false, pauseMin: 25, pauseMax: 80, roam: 120    },
-	RUNNER: { type: 'VISIT',  run: false, pauseMin: 25, pauseMax: 70, roam: null   },
-	PATROL: { type: 'PATROL', run: false, pauseMin: 10, pauseMax: 30, roam: null   }
+	RUNNER: { type: 'VISIT',  run: true,  pauseMin: 25, pauseMax: 70, roam: null   },
+	PATROL: { type: 'PATROL', run: true,  pauseMin: 10, pauseMax: 30, roam: null   }
 };
 const BEHAVIOR_HELP = {
 	IDLE:   'Bots drift around at random within the radius (or the drawn zone) — the standing-around-town crowd.',
@@ -4889,7 +4889,7 @@ function buildXml(){
 	// emit a minimal WANDER profile for each one we didn't already generate.
 	const referenced = new Set();
 	[...preserved.assigns, preserved.def || ''].forEach(s => { const m = /profile="([^"]+)"/.exec(s); if (m) referenced.add(m[1]); });
-	referenced.forEach(name => { if (!usedNames.has(name)){ usedNames.add(name); profileBlocks.push(`\t<profile name="${esc(name)}" type="WANDER" radius="150" run="false" pauseMin="25" pauseMax="80"/>\n`); } });
+	referenced.forEach(name => { if (!usedNames.has(name)){ usedNames.add(name); profileBlocks.push(`\t<profile name="${esc(name)}" type="WANDER" radius="150" run="true" pauseMin="25" pauseMax="80"/>\n`); } });
 
 	profileBlocks.forEach(b => out += b);
 	if (profileBlocks.length) out += '\n';

@@ -93,6 +93,7 @@ def _diag_reset():
     _diag.pre_contract = None   # the reply AFTER the safety pass but BEFORE the output contract (set by finalize_reply)
     _diag.provider_error = None  # the exception type if a provider call threw, so a failure is not misread as silence
     _diag.quality_drop = None    # deterministic public-chat quality gate (echo, filler, stale topic, bad party target)
+    _diag.own_name = None        # the answering bot's name, so a reply that starts with "<own name>:" is cleaned
 
 def _diag_record_raw(text):
     """Record one raw model output for the current request (called from call_llm)."""
@@ -411,10 +412,18 @@ _HANDLE_PREFIX_RE = re.compile(r"^\s*([A-Za-z][A-Za-z0-9_]{1,15})\s*:\s+")
 # Real trade/chat prefixes a player might actually type before a colon - never stripped.
 _KEEP_PREFIXES = {"wts", "wtb", "wtt", "wtc", "pc", "lf", "lfm", "lfp", "lfg", "b", "s", "cc", "note", "psa"}
 
-def strip_fake_handle(text):
+def strip_fake_handle(text, own_name=None):
     """Remove a fabricated leading 'username:' the model copied from the chat-log context. Keeps genuine trade
     prefixes (wts:, wtb:, pc:, ...); only strips a name-looking handle (has a digit/underscore, or is capitalised
-    like a nick), so ordinary lines are untouched."""
+    like a nick), so ordinary lines are untouched. The answering bot's own name is always stripped, in any case:
+    "zephdil: [[MEET:cancel]]" otherwise reached the player as "zephdil:" once Java removed the tag. `own_name`
+    defaults to the bot of the current request."""
+    if own_name is None:
+        own_name = getattr(_diag, "own_name", None)
+    if own_name:
+        own = re.match(r"^\s*" + re.escape(own_name) + r"\s*:\s*", text or "", re.IGNORECASE)
+        if own:
+            return text[own.end():]
     match = _HANDLE_PREFIX_RE.match(text or "")
     if not match:
         return text
@@ -1295,6 +1304,26 @@ _LFP_ROLES = ("tank", "warrior", "dd", "archer", "dagger", "nuker", "healer", "b
 # trims runaway output, at a word boundary and with no ellipsis (a game chat line does not show one naturally).
 _MAX_CHAT_PROSE = 300
 
+_TRADE_ACTION_TAGS = frozenset({"MEET", "SHOP"})
+
+
+def history_text(reply):
+    """The reply as kept in (player, bot) whisper history: the MEET/SHOP action tags removed. Java decides whether a
+    proposed meet or store actually happens (it refuses one with no deal or no player agreement), so a stored tag could
+    record an action that never ran, and the model later claimed "you agreed, are you coming?" about a meet that never
+    started (FPC-069). What really happened reaches the brain from Java instead (X-Meet-State, the deal headers)."""
+    def _drop(match):
+        name = _TAG_ALIASES.get(match.group(1).upper(), match.group(1).upper())
+        return " " if name in _TRADE_ACTION_TAGS else match.group(0)
+    return re.sub(r"\s+", " ", _CONTROL_TAG_RE.sub(_drop, reply or "")).strip()
+
+
+NO_DEAL_NOTE = ("\n\nTrade state (set by the server): you have NO trade set up with this player right now. If they "
+                "want to buy or sell something with you, say you don't have it or aren't trading right now, and tell "
+                "them to post a WTB or WTS in trade chat. Do not quote a price, haggle, agree a deal, or agree to meet "
+                "for a trade, and never add a MEET or SHOP tag.")
+
+
 def _first_nonempty_line(text):
     """The first line with visible content, stripped; '' when there is none."""
     for line in (text or "").splitlines():
@@ -1470,6 +1499,28 @@ def fmt_amount(value):
         return (str(int(v)) if v == int(v) else f"{v:.1f}") + "k"
     return str(n)
 
+_MEET_SPOT_WORDS = {"gatekeeper": "gatekeeper (gk)", "warehouse": "warehouse (wh)", "shop": "shop"}
+
+
+def meet_note_from_headers():
+    """Java's own view of a meetup with this player, so the bot never claims to be somewhere it is not yet.
+
+    X-Meet-State is "travelling" while the bot walks to the agreed spot, "waiting" once the server has checked it
+    is standing there, and empty when there is no meet with this player. Java also sends the arrival line itself,
+    so this only keeps later answers ("where are u?") truthful.
+    """
+    state = request.headers.get("X-Meet-State", "").strip().lower()
+    spot = _MEET_SPOT_WORDS.get(request.headers.get("X-Meet-Spot", "").strip().lower(), "meeting spot")
+    if state == "travelling":
+        return (f" You agreed to meet this player at the {spot} and you are walking there across town right now. You have NOT "
+                "arrived yet: never say you are there, here, or waiting. If asked where you are, say you are on "
+                "the way.")
+    if state == "waiting":
+        return (f" You are standing next to the {spot} right now, waiting for this player to show up. If asked "
+                f"where you are, say you are at the {spot}.")
+    return ""
+
+
 def deal_note_from_headers():
     side = request.headers.get("X-Deal-Side", "").strip().upper()
     item = request.headers.get("X-Deal-Item", "").strip()
@@ -1552,6 +1603,7 @@ def chat():
     started = time.time()
     _diag_reset()
     fpc = request.headers.get("X-FPC", "a player")
+    _diag.own_name = request.headers.get("X-FPC", "").strip() or None
     mode = request.headers.get("X-Mode", "WHISPER").upper()
     location = request.headers.get("X-Location", "").strip()
     # A real player (not a bot) is addressing a public channel; when set, the bot must answer instead of
@@ -1561,6 +1613,7 @@ def chat():
     loc_note = (f" You are currently {location} in the game world. This is where you actually are right now: "
                 "do NOT claim to be in a different town or zone, traveling, or off farming/hunting somewhere else, "
                 "and if asked where you are or where to meet, answer truthfully with that.") if location else ""
+    loc_note += meet_note_from_headers()
     message = request.get_data(as_text=True)
     voice, temperature = _voice(fpc)  # this bot's stable personality + creativity
     deal_note = deal_note_from_headers()
@@ -1577,7 +1630,7 @@ def chat():
             system = ("You convert Lineage 2 Interlude trade-chat shorthand into the plain English item name. "
                       "Reply with ONLY the item name, nothing else, no quotes, no extra words. "
                       "Expand grade letters (d/c/b/a/s) as '<name> <grade>-grade'. Ignore quantities, prices and filler. "
-                      "Examples: 'ssd' -> Soulshot D-grade; 'ss c' -> Soulshot C-grade; 'bsps' -> Blessed Spiritshot; "
+                      "Examples: 'ssd' -> Soulshot D-grade; 'ss c' -> Soulshot C-grade; 'bsps' -> Blessed Spiritshot; 'bssd' -> Blessed Spiritshot D-grade; 'bssb' -> Blessed Spiritshot B-grade; "
                       "'spsd' -> Spiritshot D-grade; 'soe' -> Scroll of Escape; 'ewd' -> Enchant Weapon D-grade; "
                       "'gemstone d' -> Gemstone D; 'iron ore' -> Iron Ore. If there is no clear item, reply: NONE")
             reply = call_llm(system + knowledge_note(message, k=3, allow={"item"}),
@@ -1699,10 +1752,12 @@ def chat():
             hist.append({"role": "user", "content": message})
             recent = "\n".join(trade_log) if trade_log else "(nothing recent)"
             system = (whisper_persona(fpc, voice) + loc_note + identity_note() + memory_note(player, ("trade", "party", "social"), k=8)
-                      + deal_note + knowledge_note(message)
+                      + (deal_note or NO_DEAL_NOTE) + knowledge_note(message)
                       + f"\n\nRecent public trade chat you saw:\n{recent}")
             reply = finalize_reply(mode, call_llm(system, list(hist), 80, temperature))
-            hist.append({"role": "assistant", "content": reply})
+            stored = history_text(reply)
+            if stored:
+                hist.append({"role": "assistant", "content": stored})
             remember_from_exchange(player, message, reply, "WHISPER")
         elif mode == "FRIEND":
             # A private message over the FRIENDS LIST. The Java side only routes friend PMs here for bots the

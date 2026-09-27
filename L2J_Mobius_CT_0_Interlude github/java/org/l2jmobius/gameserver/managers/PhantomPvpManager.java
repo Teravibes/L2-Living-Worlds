@@ -38,8 +38,8 @@ import org.l2jmobius.gameserver.config.custom.FakePlayersConfig;
  *
  * <p>
  * Phase 0 delivers the config gating and personality rolls; Phase 1 adds the self-defense stand-or-flee decision.
- * Later phases (flag / PK reaction, duels, party defense, open-world ganking) reuse the same gates and the same
- * stand-or-flee routine.
+ * Later phases (flag / PK reaction, party defense, duels, open-world ganking) reuse the same gates and the same
+ * stand-or-flee routine. Phase 3 adds the duel decisions: honor, acceptance, challenging, and surrender.
  * </p>
  */
 public class PhantomPvpManager
@@ -73,6 +73,31 @@ public class PhantomPvpManager
 	public static final int FLEE_HP_FLOOR = 5;
 	public static final int FLEE_HP_CEIL = 90;
 
+	/** Honor (duel acceptance and challenging) is rolled on this 0-100 scale. */
+	public static final int HONOR_MIN = 0;
+	public static final int HONOR_MAX = 100;
+
+	/** Each level the challenger is above the phantom lowers its duel acceptance chance by this many points. */
+	public static final int DUEL_LEVEL_GAP_ACCEPT_WEIGHT = 8;
+
+	/** Hard floor / ceiling for the duel acceptance chance, so any phantom may surprise either way. */
+	public static final int DUEL_ACCEPT_FLOOR = 5;
+	public static final int DUEL_ACCEPT_CEIL = 95;
+
+	/** Only a phantom with at least this much honor ever issues a duel challenge of its own. */
+	public static final int DUEL_CHALLENGER_MIN_HONOR = 60;
+
+	/** A phantom only challenges an opponent within this many levels of itself (either way). */
+	public static final int DUEL_CHALLENGE_LEVEL_BAND = 5;
+
+	/** A phantom with bravery below this is timid: when a duel turns against it, it surrenders instead of fighting on. */
+	public static final int DUEL_SURRENDER_MAX_BRAVERY = 35;
+
+	/** {@link #duelWaitStep} verdicts: keep holding, start fighting (the duel began), or give up on the duel. */
+	public static final int DUEL_WAIT_HOLD = 0;
+	public static final int DUEL_WAIT_FIGHT = 1;
+	public static final int DUEL_WAIT_END = 2;
+
 	protected PhantomPvpManager()
 	{
 	}
@@ -99,7 +124,7 @@ public class PhantomPvpManager
 		return FakePlayersConfig.PHANTOM_PVP_ENABLED && FakePlayersConfig.PHANTOM_PVP_REACT_TO_FLAGGED;
 	}
 
-	/** @return {@code true} if a phantom takes part in formal duels (Phase 3). */
+	/** @return {@code true} if a phantom takes part in formal duels (Phase 3): answers challenges and issues its own. */
 	public static boolean duelsEnabled()
 	{
 		return FakePlayersConfig.PHANTOM_PVP_ENABLED && FakePlayersConfig.PHANTOM_PVP_DUELS;
@@ -165,6 +190,143 @@ public class PhantomPvpManager
 	public static int rollBravery()
 	{
 		return Rnd.get(BRAVERY_MIN, BRAVERY_MAX);
+	}
+
+	/**
+	 * Rolls an honor value on the {@link #HONOR_MIN}..{@link #HONOR_MAX} scale. Higher honor makes a phantom more
+	 * willing to accept a duel, and only a phantom with at least {@link #DUEL_CHALLENGER_MIN_HONOR} issues one.
+	 * @return the rolled honor
+	 */
+	public static int rollHonor()
+	{
+		return Rnd.get(HONOR_MIN, HONOR_MAX);
+	}
+
+	/**
+	 * Rolls whether an eligible idle phantom issues a duel challenge this consideration. The share is
+	 * {@link FakePlayersConfig#PHANTOM_PVP_DUEL_CHANCE_PERCENT}.
+	 * @return {@code true} to issue a challenge this time
+	 */
+	public static boolean rollIssueDuel()
+	{
+		return Rnd.get(100) < FakePlayersConfig.PHANTOM_PVP_DUEL_CHANCE_PERCENT;
+	}
+
+	// ---------------------------------------------------------------------
+	// Duels (Phase 3). Pure functions, no world access, so they unit test cleanly.
+	// ---------------------------------------------------------------------
+
+	/**
+	 * The chance, as a percentage, that a phantom accepts a duel challenge. It starts at the phantom's honor. A
+	 * challenger above the phantom lowers it by {@link #DUEL_LEVEL_GAP_ACCEPT_WEIGHT} per level; a challenger at or
+	 * below the phantom's level does not change it. The result is clamped to {@link #DUEL_ACCEPT_FLOOR} ..
+	 * {@link #DUEL_ACCEPT_CEIL}, except that a hopelessly higher challenger ({@link #HOPELESS_LEVEL_GAP}) is always
+	 * refused.
+	 * @param honor this phantom's honor, {@link #HONOR_MIN}..{@link #HONOR_MAX}
+	 * @param selfLevel the phantom's level
+	 * @param challengerLevel the challenger's level
+	 * @return the acceptance chance, 0..100
+	 */
+	public static int duelAcceptChancePercent(int honor, int selfLevel, int challengerLevel)
+	{
+		final int levelGap = challengerLevel - selfLevel; // positive means the challenger is higher level
+		if (levelGap >= HOPELESS_LEVEL_GAP)
+		{
+			return 0;
+		}
+		final int clampedHonor = Math.max(HONOR_MIN, Math.min(HONOR_MAX, honor));
+		final int chance = clampedHonor - (Math.max(0, levelGap) * DUEL_LEVEL_GAP_ACCEPT_WEIGHT);
+		return Math.max(DUEL_ACCEPT_FLOOR, Math.min(DUEL_ACCEPT_CEIL, chance));
+	}
+
+	/**
+	 * Whether a phantom accepts a duel, given a 0..99 roll. Taking the roll as a parameter keeps this deterministic
+	 * for tests; the live caller passes {@code Rnd.get(100)}.
+	 * @param roll a uniform roll in 0..99
+	 * @param honor this phantom's honor
+	 * @param selfLevel the phantom's level
+	 * @param challengerLevel the challenger's level
+	 * @return {@code true} to accept
+	 */
+	public static boolean shouldAcceptDuel(int roll, int honor, int selfLevel, int challengerLevel)
+	{
+		return roll < duelAcceptChancePercent(honor, selfLevel, challengerLevel);
+	}
+
+	/**
+	 * Whether a phantom's personality and the level match allow it to issue a duel challenge. It needs at least
+	 * {@link #DUEL_CHALLENGER_MIN_HONOR} honor, and the opponent must be within {@link #DUEL_CHALLENGE_LEVEL_BAND}
+	 * levels either way, so a challenge is always a fair match.
+	 * @param honor this phantom's honor
+	 * @param selfLevel the phantom's level
+	 * @param targetLevel the prospective opponent's level
+	 * @return {@code true} if this phantom may challenge that opponent
+	 */
+	public static boolean mayIssueDuel(int honor, int selfLevel, int targetLevel)
+	{
+		return (honor >= DUEL_CHALLENGER_MIN_HONOR) && (Math.abs(selfLevel - targetLevel) <= DUEL_CHALLENGE_LEVEL_BAND);
+	}
+
+	/**
+	 * Whether a phantom that is losing a duel surrenders. Only a timid phantom (bravery below
+	 * {@link #DUEL_SURRENDER_MAX_BRAVERY}) ever surrenders, and only once its HP has fallen to its effective flee
+	 * threshold (the same threshold that makes it flee an ordinary fight). A braver phantom fights the duel out.
+	 * @param selfHpPercent the phantom's current HP percentage (0-100)
+	 * @param baseFleeHpPercent the configured base flee threshold
+	 * @param bravery this phantom's bravery
+	 * @param selfLevel the phantom's level
+	 * @param enemyLevel the opponent's level
+	 * @return {@code true} to surrender
+	 */
+	public static boolean shouldSurrenderDuel(int selfHpPercent, int baseFleeHpPercent, int bravery, int selfLevel, int enemyLevel)
+	{
+		if (bravery >= DUEL_SURRENDER_MAX_BRAVERY)
+		{
+			return false;
+		}
+		return selfHpPercent <= effectiveFleeHpPercent(baseFleeHpPercent, bravery, selfLevel, enemyLevel);
+	}
+
+	/**
+	 * The next step for a phantom waiting for a duel to begin: after asking a real player (a request is or was
+	 * pending) or after an accepted challenge (the stock countdown). Pure, so the waiting logic is unit tested without
+	 * a world; the caller does the actual AI work and, on {@link #DUEL_WAIT_END}, withdraws any open request.
+	 * <ul>
+	 * <li>The opponent is gone: end.</li>
+	 * <li>The duel has started: fight, even if the deadline has just passed.</li>
+	 * <li>The deadline has passed: end.</li>
+	 * <li>The request is still pending, or it has not been seen answered yet: hold.</li>
+	 * <li>The request was answered or expired more than {@code answerGraceMs} ago and no duel started: end (a
+	 * decline, or no answer at all).</li>
+	 * </ul>
+	 * @param opponentPresent whether the opponent is still in the world
+	 * @param inDuel whether the phantom is now in the stock duel
+	 * @param requestPending whether the phantom's challenge is still waiting for an answer
+	 * @param answeredAt when the request was first seen answered or expired, or 0 if not yet (always 0 for a countdown)
+	 * @param now the current time
+	 * @param deadline the hard deadline for this step
+	 * @param answerGraceMs how long after an answer the duel may take to start (covers the stock countdown)
+	 * @return {@link #DUEL_WAIT_HOLD}, {@link #DUEL_WAIT_FIGHT} or {@link #DUEL_WAIT_END}
+	 */
+	public static int duelWaitStep(boolean opponentPresent, boolean inDuel, boolean requestPending, long answeredAt, long now, long deadline, long answerGraceMs)
+	{
+		if (!opponentPresent)
+		{
+			return DUEL_WAIT_END;
+		}
+		if (inDuel)
+		{
+			return DUEL_WAIT_FIGHT;
+		}
+		if (now >= deadline)
+		{
+			return DUEL_WAIT_END;
+		}
+		if (requestPending || (answeredAt == 0))
+		{
+			return DUEL_WAIT_HOLD;
+		}
+		return ((now - answeredAt) > answerGraceMs) ? DUEL_WAIT_END : DUEL_WAIT_HOLD;
 	}
 
 	/**

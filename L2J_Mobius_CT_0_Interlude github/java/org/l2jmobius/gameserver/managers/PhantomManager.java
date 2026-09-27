@@ -52,6 +52,7 @@ import org.l2jmobius.gameserver.ai.Action;
 import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.custom.AutoPlayConfig;
 import org.l2jmobius.gameserver.data.sql.CharInfoTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.data.xml.PhantomPlaystyleData;
@@ -71,6 +72,8 @@ import org.l2jmobius.gameserver.model.actor.holders.player.AutoPlaySettingsHolde
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.actor.holders.player.AutoUseSettingsHolder;
 import org.l2jmobius.gameserver.model.actor.holders.player.ClassType;
+import org.l2jmobius.gameserver.model.actor.holders.player.Duel;
+import org.l2jmobius.gameserver.model.actor.holders.npc.FakePlayerAppearance;
 import org.l2jmobius.gameserver.model.actor.instance.Chest;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
@@ -92,12 +95,16 @@ import org.l2jmobius.gameserver.model.item.type.ArmorType;
 import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skill.AbnormalType;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.enums.ChatType;
+import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2jmobius.gameserver.network.serverpackets.ExDuelAskStart;
 import org.l2jmobius.gameserver.network.serverpackets.L2Friend;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanagers.AutoPlayTaskManager;
@@ -127,6 +134,18 @@ public class PhantomManager implements IXmlReader
 	// live under this distinct account so the boot sweep (which only targets ACCOUNT_NAME) never touches them
 	// and despawn() knows to keep their row instead of deleting it.
 	private static final String ACCOUNT_NAME_REGULAR = "phantom_regular";
+	// Olympiad roster nobles (PhantomOlympiadManager) live on their own account: persistent like regulars, since their
+	// Olympiad record and Hero status are keyed to the charId, but never part of the friend tier. The boot sweep only
+	// targets ACCOUNT_NAME, so it never touches them either.
+	public static final String ACCOUNT_NAME_NOBLE = "phantom_noble";
+	// An idle roster noble takes a short stroll near its Olympiad Manager every so often, so the crowd is not frozen.
+	private static final long OLYMPIAN_WANDER_MIN_MS = 20000;
+	private static final long OLYMPIAN_WANDER_MAX_MS = 60000;
+	private static final int OLYMPIAN_WANDER_RADIUS = 250;
+	// A roster noble still down this long after its match (the stock return teleport normally revives it) stands up.
+	private static final long OLYMPIAN_REVIVE_DELAY_MS = 10000;
+	// Both sides of a match stand 1800 apart at the start; the opponent search covers the whole stadium.
+	private static final int OLYMPIAD_OPPONENT_RANGE = 4000;
 	// Short grace after a player's EnterWorld before we login-spawn their befriended regulars, so login itself
 	// finishes first and the spawn work runs off the login (packet) thread.
 	private static final long FRIEND_SPAWN_DELAY = 3000;
@@ -287,6 +306,78 @@ public class PhantomManager implements IXmlReader
 	private static final long PVP_REACT_SCAN_INTERVAL_MS = 4000;
 	// A caster/healer phantom below this MP percent is treated as out of mana for the stand-or-flee sizing (flee sooner).
 	private static final int PVP_CASTER_LOW_MP_PERCENT = 20;
+	// Phase 3 duels. A duel reuses the PvP engagement (pvpTargetOid holds the opponent, so every hunt and party tick
+	// defers to it); PhantomData.duelPhase says which duel step the engagement is in.
+	private static final int DUEL_NONE = 0; // an ordinary PvP engagement, or none
+	private static final int DUEL_APPROACH = 1; // a challenging phantom is walking up to its opponent before asking
+	private static final int DUEL_ASKED = 2; // a challenging phantom is waiting for a real player's answer
+	private static final int DUEL_COUNTDOWN = 3; // accepted: waiting through the stock countdown for the duel to start
+	private static final int DUEL_FIGHTING = 4; // the stock duel is running
+	// Outcome of a finished duel, for the phantom's closing line.
+	private static final int DUEL_OUTCOME_NONE = 0;
+	private static final int DUEL_OUTCOME_WON = 1;
+	private static final int DUEL_OUTCOME_LOST = 2;
+	private static final int DUEL_OUTCOME_SURRENDERED = 3;
+	// A challenged phantom "thinks" for a random moment in this range before answering, so it reads like a person.
+	private static final int DUEL_ANSWER_DELAY_MIN_MS = 1500;
+	private static final int DUEL_ANSWER_DELAY_MAX_MS = 3500;
+	// A challenging phantom asks from inside this range (stock RequestDuelStart requires 250 for a player).
+	private static final int DUEL_ASK_RANGE = 200;
+	// A challenging phantom gives up walking to its opponent after this long.
+	private static final long DUEL_APPROACH_MAX_MS = 15000;
+	// Stock start: the duel is scheduled 3s after acceptance, then counts down 5s. This covers it with slack.
+	private static final long DUEL_COUNTDOWN_MAX_MS = 12000;
+	// Stock 1v1 duels last 120s; a safety cap a little past that in case the end is never observed.
+	private static final long DUEL_FIGHT_MAX_MS = 130000;
+	// How often an idle, honorable phantom considers issuing a challenge (then PhantomPvpDuelChancePercent rolls).
+	private static final long DUEL_CONSIDER_INTERVAL_MS = 30000;
+	// After issuing a challenge (accepted or not) a phantom waits this long before it may issue another.
+	private static final long DUEL_CHALLENGE_COOLDOWN_MS = 600000;
+	// Per opponent: once challenged, no phantom challenges the same player (or phantom) again for this long.
+	private static final long DUEL_TARGET_COOLDOWN_MS = 300000;
+	// How close a prospective opponent must be for an idle phantom to consider challenging it.
+	private static final int DUEL_NOTICE_RANGE = 600;
+	// Phantom-versus-phantom duels only start while a real player is this close to watch.
+	private static final int DUEL_AUDIENCE_RANGE = 1500;
+	private static final String[] DUEL_CHALLENGE_LINES =
+	{
+		"Hey, duel?",
+		"Fancy a quick duel?",
+		"Want to spar?",
+		"One duel, you and me?"
+	};
+	private static final String[] DUEL_ACCEPT_LINES =
+	{
+		"You're on.",
+		"Alright, let's go.",
+		"Sure, show me what you've got.",
+		"Ok, one round."
+	};
+	private static final String[] DUEL_DECLINE_LINES =
+	{
+		"Not now, I'm busy.",
+		"Maybe later.",
+		"No thanks.",
+		"Pass."
+	};
+	private static final String[] DUEL_WIN_LINES =
+	{
+		"gg",
+		"Good fight.",
+		"gg, close one."
+	};
+	private static final String[] DUEL_LOSE_LINES =
+	{
+		"gg, you got me.",
+		"Nice one.",
+		"gg wp"
+	};
+	private static final String[] DUEL_SURRENDER_LINES =
+	{
+		"Ok ok, I yield.",
+		"I give up, you win.",
+		"Enough, you win."
+	};
 	private static final int MAGE_CAST_RANGE = 650;
 	private static final int MAGE_RANGE_TOLERANCE = 150;
 	private static final int MAGE_CAST_MP_PERCENT = 20;
@@ -1011,6 +1102,7 @@ public class PhantomManager implements IXmlReader
 		// PvP personality, rolled once at construction (see PhantomPvpManager). 0-100 each.
 		final boolean aggressor; // an aggressor may initiate PvP (react to a flag/PK, gank); a non-aggressor only ever defends
 		final int bravery; // higher = tolerates being more outmatched before it flees (shifts the flee HP threshold)
+		final int honor; // higher = more willing to accept a duel; only an honorable phantom issues one (Phase 3)
 		// PvP engagement state (Phase 1: self-defense). Written by the pvpCombat tick and read by the separate
 		// hunt/deconflict ticks (assignTargets, mageCombat, supervise) to defer to PvP, so these are volatile: the
 		// tasks run on different pool threads and a stale read of pvpTargetOid would let the hunt yank the phantom
@@ -1028,6 +1120,15 @@ public class PhantomManager implements IXmlReader
 		// Phase 2 (react to flagged/PK): earliest time this aggressor phantom next CONSIDERS initiating on a flagged
 		// target. Set after each consideration so reacting is occasional, not a per-tick scan. Non-aggressors never set it.
 		volatile long nextInitiateAt;
+		// Phase 3 duel state (see DUEL_* constants). Armed from the duel answer task and driven by the pvpCombat tick.
+		volatile int duelPhase; // DUEL_NONE unless the current engagement is a formal duel
+		volatile long duelAnsweredAt; // challenger side: when its pending request was first seen answered or expired
+		volatile int duelOutcome; // DUEL_OUTCOME_*, for the closing line once the duel ends
+		volatile long nextDuelConsiderAt; // earliest time this idle phantom next considers issuing a challenge
+		// Olympiad roster noble (PhantomOlympiadManager): no hunt, PvP, rest, roam or respawn; serviceOlympian drives it.
+		boolean olympian;
+		boolean olyInMatch; // seen in Olympiad mode (moved to a stadium); the fight kit is on until the match ends
+		long olyNextWanderAt; // next short stroll while idle near the Olympiad Manager
 
 		PhantomData(Player player, Location home, Population population, boolean mage, BuddyRole role)
 		{
@@ -1038,10 +1139,18 @@ public class PhantomManager implements IXmlReader
 			this.role = role;
 			this.aggressor = PhantomPvpManager.rollAggressor();
 			this.bravery = PhantomPvpManager.rollBravery();
+			this.honor = PhantomPvpManager.rollHonor();
 		}
 	}
 
 	private final ConcurrentHashMap<Integer, PhantomData> _phantoms = new ConcurrentHashMap<>();
+	// Phase 3 (duels): objectId of an opponent -> time until which no phantom challenges it again.
+	private final ConcurrentHashMap<Integer, Long> _duelTargetCooldownUntil = new ConcurrentHashMap<>();
+	// Whether the PvP master switch was on at the last pvpCombat tick, so turning it off releases engagements once.
+	private boolean _pvpWasEnabled = true;
+	// FPC-115: phantoms whose accepted duel was still counting down when PvP was switched off -> when to stop watching.
+	// Each is canceled as soon as its duel starts. Only touched by the pvpCombat tick.
+	private final Map<Integer, Long> _duelsToCancel = new ConcurrentHashMap<>();
 	// Phase 2 (react to flagged/PK): objectId of a target -> time until which no aggressor may newly INITIATE on it,
 	// so several phantoms do not dogpile the same flagged player. Stamped when a phantom starts a reaction; entries
 	// are short-lived (PhantomPvpEngageCooldownSeconds) and pruned lazily on read.
@@ -1111,6 +1220,8 @@ public class PhantomManager implements IXmlReader
 		parseDatapackFile("data/PhantomPopulations.xml");
 		parseGeneratedHuntingZones();
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _populations.size() + " phantom population(s), " + _craftedFriends.size() + " crafted-friend order(s).");
+		// The Olympiad roster runs on its own tick; it idles whenever the feature or the competition is off.
+		PhantomOlympiadManager.getInstance().start();
 		if (!_populations.isEmpty() || !_craftedFriends.isEmpty())
 		{
 			// Populations are spawned on demand (when a real player approaches), not at boot - the supervisor
@@ -1585,6 +1696,14 @@ public class PhantomManager implements IXmlReader
 		if (player.getFriendList().contains(phantom.getObjectId()))
 		{
 			player.sendPacket(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_IN_YOUR_FRIENDS_LIST);
+			return;
+		}
+		// An Olympiad roster noble stays on its own account (its record is keyed to it); promoting it to a regular would
+		// pull it out of the roster, so it declines.
+		final PhantomData target = _phantoms.get(phantom.getObjectId());
+		if ((target != null) && target.olympian)
+		{
+			player.sendMessage(phantom.getName() + " declined your friend request.");
 			return;
 		}
 
@@ -3582,9 +3701,15 @@ public class PhantomManager implements IXmlReader
 	private void despawn(PhantomData data)
 	{
 		final int objectId = data.player.getObjectId();
+		// FPC-113: a phantom leaving the world must not leave its duel challenge open for the player to accept late.
+		// (A duel already running cancels itself on the stock side once this phantom is offline.)
+		if (data.duelPhase == DUEL_ASKED)
+		{
+			releaseDuelRequest(data.player, resolvePvpTarget(data));
+		}
 		// isRegular (not a raw account check) so a phantom promoted THIS session - whose final in-memory
 		// account still reads 'phantom' - is recognized and its row kept too.
-		final boolean persistent = isRegular(data.player);
+		final boolean persistent = isRegular(data.player) || data.olympian;
 		// Return any engine-parked offensive skills to AutoUse before the phantom leaves, so a persistent regular
 		// that respawns (or is reused) does not come back with an emptied AutoUse. No-op for an unparked phantom.
 		unparkHunterPlaystyle(data.player, data);
@@ -3799,30 +3924,63 @@ public class PhantomManager implements IXmlReader
 
 			final boolean female = Rnd.nextBoolean();
 			final PlayerAppearance appearance = new PlayerAppearance((byte) Rnd.get(0, 2), (byte) Rnd.get(0, 3), (byte) Rnd.get(0, 2), female);
-			final Player phantom = Player.create(template, ACCOUNT_NAME, nextName(), appearance, true);
-			if (phantom == null)
-			{
-				LOGGER.warning(getClass().getSimpleName() + ": Player.create returned null for party member (duplicate name / db error?).");
-				return null;
-			}
-			phantom.setDietMode(true); // ignore the weight of the potion/shot stack (see createAndSpawn)
-			phantom.setOnlineStatus(true, false);
+			return createPartyMember(template, nextName(), appearance, spawnLocation, level, role, null);
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Failed to spawn party member role " + role + ": " + e.getMessage());
+			return null;
+		}
+	}
 
-			if (role.isSupport())
+	/**
+	 * Creates, outfits and spawns a recruited party member from a resolved class template. Shared by LFM recruits
+	 * (random name and look) and town fakes joining a party (their own name, look, gear and clan).
+	 * @param look the town fake's appearance to keep, or {@code null} for a fresh recruit
+	 * @return the spawned member, or {@code null} on failure
+	 */
+	private Player createPartyMember(PlayerTemplate template, String name, PlayerAppearance appearance, Location spawnLocation, int level, PartyRole role, FakePlayerAppearance look)
+	{
+		final boolean mage = role.mage;
+		final Player phantom = Player.create(template, ACCOUNT_NAME, name, appearance, true);
+		if (phantom == null)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Player.create returned null for party member (duplicate name / db error?).");
+			return null;
+		}
+		phantom.setDietMode(true); // ignore the weight of the potion/shot stack (see createAndSpawn)
+		phantom.setOnlineStatus(true, false);
+
+		if (role.isSupport())
+		{
+			// The phantom was already created from the right support class template (default or override), so
+			// outfitSupport just levels/learns/gears it (no class transfer needed). Resurrection is NOT
+			// force-granted: outfitSupport's learnAllSkills teaches the class's complete tree (parents included),
+			// so any rez-capable class - the Cleric/Oracle line (HEALER) and the Prophet line (BUFFER, which
+			// inherits Cleric's Resurrection) - naturally knows Resurrection once its level qualifies (skill 1016,
+			// learned at 20). A class/level that never learned it simply cannot rez, by design.
+			outfitSupport(phantom, level, role);
+		}
+		else
+		{
+			outfitCombat(phantom, level, role);
+		}
+		if (look != null)
+		{
+			dressAs(phantom, look, mage); // a town fake keeps the gear it was seen wearing
+		}
+		phantom.refreshOverloaded();
+		if (look != null)
+		{
+			// A town fake keeps its own bot clan and title, so the crest over its head does not change.
+			if (look.getClanId() != 0)
 			{
-				// The phantom was already created from the right support class template (default or override), so
-				// outfitSupport just levels/learns/gears it (no class transfer needed). Resurrection is NOT
-				// force-granted: outfitSupport's learnAllSkills teaches the class's complete tree (parents included),
-				// so any rez-capable class - the Cleric/Oracle line (HEALER) and the Prophet line (BUFFER, which
-				// inherits Cleric's Resurrection) - naturally knows Resurrection once its level qualifies (skill 1016,
-				// learned at 20). A class/level that never learned it simply cannot rez, by design.
-				outfitSupport(phantom, level, role);
+				BotClanManager.getInstance().attach(phantom, ClanTable.getInstance().getClan(look.getClanId()));
+				phantom.setTitle(look.getTitle());
 			}
-			else
-			{
-				outfitCombat(phantom, level, role);
-			}
-			phantom.refreshOverloaded();
+		}
+		else
+		{
 			// Recruited (LFM) phantoms occasionally belong to a bot clan (BotClans.xml recruitClanChance), so a pickup
 			// group sometimes shows clan crests. Rolled before enterWorld so the first CharInfo already carries it.
 			final int recruitClanChance = BotClanManager.getInstance().getRecruitClanChance();
@@ -3830,42 +3988,135 @@ public class PhantomManager implements IXmlReader
 			{
 				BotClanManager.getInstance().attach(phantom, BotClanManager.getInstance().getRandomClan());
 			}
-			enterWorld(phantom, spawnLocation);
+		}
+		enterWorld(phantom, spawnLocation);
 
-			// role=NONE + recruited: skips every hunter path; population=null so the proximity deactivate never
-			// touches it. PhantomPartyManager drives it from onMemberSpawned onward.
-			final PhantomData data = new PhantomData(phantom, spawnLocation, null, mage, BuddyRole.NONE);
-			data.recruited = true;
-			_phantoms.put(phantom.getObjectId(), data);
-			attachPvpDamageListener(phantom, data);
+		// role=NONE + recruited: skips every hunter path; population=null so the proximity deactivate never
+		// touches it. PhantomPartyManager drives it from onMemberSpawned onward.
+		final PhantomData data = new PhantomData(phantom, spawnLocation, null, mage, BuddyRole.NONE);
+		data.recruited = true;
+		_phantoms.put(phantom.getObjectId(), data);
+		attachPvpDamageListener(phantom, data);
 
-			// Combat roles fire skills/shots/potions through the native AutoUse task on the party manager's
-			// assigned target. No AutoPlay here: the manager picks the target (assist), not the engine's scanner.
-			if (!role.isSupport())
+		// Combat roles fire skills/shots/potions through the native AutoUse task on the party manager's
+		// assigned target. No AutoPlay here: the manager picks the target (assist), not the engine's scanner.
+		if (!role.isSupport())
+		{
+			if (!mage && !phantom.getAutoUseSettings().getAutoActions().contains(AUTO_ATTACK_ACTION))
 			{
-				if (!mage && !phantom.getAutoUseSettings().getAutoActions().contains(AUTO_ATTACK_ACTION))
-				{
-					phantom.getAutoUseSettings().getAutoActions().add(AUTO_ATTACK_ACTION);
-				}
-				// AutoUse only fires offensive skills while the player "is auto-playing" (see AutoUseTaskManager).
-				// We set the flag without starting the AutoPlay target-scanner: in assist mode PhantomPartyManager
-				// picks the target (the leader's) and AutoUse casts the role's skills + shots on it. Free mode
-				// starts the real scanner via setRecruitHunting.
-				phantom.setAutoPlaying(true);
-				AutoUseTaskManager.getInstance().startAutoUseTask(phantom);
+				phantom.getAutoUseSettings().getAutoActions().add(AUTO_ATTACK_ACTION);
 			}
-			startSupervising();
-			LOGGER.info(getClass().getSimpleName() + ": Spawned " + role + " party member '" + phantom.getName() + "' (objId=" + phantom.getObjectId() + ", level " + level + ").");
-			if (PhantomPartyManager.DEBUG)
+			// AutoUse only fires offensive skills while the player "is auto-playing" (see AutoUseTaskManager).
+			// We set the flag without starting the AutoPlay target-scanner: in assist mode PhantomPartyManager
+			// picks the target (the leader's) and AutoUse casts the role's skills + shots on it. Free mode
+			// starts the real scanner via setRecruitHunting.
+			phantom.setAutoPlaying(true);
+			AutoUseTaskManager.getInstance().startAutoUseTask(phantom);
+		}
+		startSupervising();
+		LOGGER.info(getClass().getSimpleName() + ": Spawned " + role + " party member '" + phantom.getName() + "' (objId=" + phantom.getObjectId() + ", level " + level + ").");
+		if (PhantomPartyManager.DEBUG)
+		{
+			logLoadout(phantom, role, level);
+		}
+		return phantom;
+	}
+
+	/**
+	 * Spawns a party member that IS a town fake: same name, race, sex, face and hair, class, level, visible gear and bot
+	 * clan, standing where the fake stood. Its party role comes from its class. Used when a player invites a town fake
+	 * that agreed to party; the caller removes the fake NPC first.
+	 * @param look the town fake's appearance
+	 * @param location where the fake stood
+	 * @param heading the fake's facing
+	 * @return the spawned member, or {@code null} if it could not be created (the caller brings the fake back)
+	 */
+	public Player spawnPartyMemberAs(FakePlayerAppearance look, Location location, int heading)
+	{
+		if ((look == null) || (look.getName() == null) || (look.getPlayerClass() == null) || (_phantoms.size() >= MAX_PHANTOMS))
+		{
+			return null;
+		}
+		if (CharInfoTable.getInstance().doesCharNameExist(look.getName()))
+		{
+			return null; // a character already uses this name; never create a second one
+		}
+		final PlayerTemplate template = PlayerTemplateData.getInstance().getTemplate(look.getPlayerClass());
+		if (template == null)
+		{
+			return null;
+		}
+		try
+		{
+			final PartyRole role = roleForClass(look.getPlayerClass());
+			final PlayerAppearance appearance = new PlayerAppearance((byte) look.getFace(), (byte) look.getHairColor(), (byte) look.getHairStyle(), look.isFemale());
+			final int groundZ = GeoEngine.getInstance().getHeight(location.getX(), location.getY(), location.getZ());
+			final Player phantom = createPartyMember(template, look.getName(), appearance, new Location(location.getX(), location.getY(), groundZ), Math.max(1, look.getLevel()), role, look);
+			if (phantom != null)
 			{
-				logLoadout(phantom, role, level);
+				phantom.setHeading(heading);
 			}
 			return phantom;
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Failed to spawn party member role " + role + ": " + e.getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": Failed to spawn town fake '" + look.getName() + "' as a party member: " + e.getMessage());
 			return null;
+		}
+	}
+
+	/**
+	 * Puts a town fake's visible armor and weapon on a freshly outfitted party member, over the party kit, so the
+	 * phantom looks exactly like the fake the player saw. Jewelry is not visible and stays from the party kit. When
+	 * the weapon changes, shots (and arrows for a bow) matching the new weapon's grade replace the old ones.
+	 */
+	private void dressAs(Player phantom, FakePlayerAppearance look, boolean mage)
+	{
+		equipLookPiece(phantom, look.getEquipHead(), 0);
+		equipLookPiece(phantom, look.getEquipChest(), 0);
+		equipLookPiece(phantom, look.getEquipLegs(), 0);
+		equipLookPiece(phantom, look.getEquipGloves(), 0);
+		equipLookPiece(phantom, look.getEquipFeet(), 0);
+		equipLookPiece(phantom, look.getEquipCloak(), 0);
+		final ItemTemplate weapon = (look.getEquipRHand() > 0) ? ItemData.getInstance().getTemplate(look.getEquipRHand()) : null;
+		if (weapon instanceof Weapon)
+		{
+			final Item before = phantom.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+			final CrystalType oldGrade = (before == null) ? null : before.getTemplate().getCrystalType();
+			equip(phantom, weapon, Math.max(0, look.getWeaponEnchantLevel()));
+			if (oldGrade != weapon.getCrystalType())
+			{
+				if (oldGrade != null)
+				{
+					phantom.removeAutoSoulShot(mage ? spiritshotIdFor(oldGrade) : soulshotIdFor(oldGrade));
+				}
+				final int shotId = mage ? spiritshotIdFor(weapon.getCrystalType()) : soulshotIdFor(weapon.getCrystalType());
+				phantom.getInventory().addItem(ItemProcessType.REWARD, shotId, SHOT_COUNT, phantom, null);
+				phantom.addAutoSoulShot(shotId);
+			}
+			if (((Weapon) weapon).getItemType() == WeaponType.BOW)
+			{
+				final ItemTemplate arrow = findArrow(weapon.getCrystalType());
+				if ((arrow != null) && (phantom.getInventory().getItemByItemId(arrow.getId()) == null))
+				{
+					phantom.getInventory().addItem(ItemProcessType.REWARD, arrow.getId(), ARROW_COUNT, phantom, null);
+				}
+			}
+		}
+		// A shield the fake was seen holding (only kept when the weapon leaves the left hand free).
+		if ((look.getEquipLHand() > 0) && (look.getEquipLHand() != look.getEquipRHand()))
+		{
+			equipLookPiece(phantom, look.getEquipLHand(), 0);
+		}
+	}
+
+	/** Equips one item of a town fake's look when it is real, equipable gear; a no-op for 0 or an unknown id. */
+	private void equipLookPiece(Player phantom, int itemId, int enchant)
+	{
+		final ItemTemplate template = (itemId > 0) ? ItemData.getInstance().getTemplate(itemId) : null;
+		if ((template != null) && template.isEquipable())
+		{
+			equip(phantom, template, enchant);
 		}
 	}
 
@@ -4085,7 +4336,7 @@ public class PhantomManager implements IXmlReader
 	{
 		for (PhantomData data : _phantoms.values())
 		{
-			if (!data.mage || data.role.isBuddy() || data.recruited || data.dormant || data.resting || data.dispersing || (data.huntPauseUntil > 0) || (data.pvpTargetOid != 0))
+			if (!data.mage || data.olympian || data.role.isBuddy() || data.recruited || data.dormant || data.resting || data.dispersing || (data.huntPauseUntil > 0) || (data.pvpTargetOid != 0))
 			{
 				continue; // buddies/recruits never auto-hunt; otherwise skip if fanning out, on a breather, resting, asleep, or PvP-engaged
 			}
@@ -4241,12 +4492,33 @@ public class PhantomManager implements IXmlReader
 		// and party/clan-defense engagements armed by startPvpDefense. Each behavior is gated individually below.
 		if (!PhantomPvpManager.pvpEnabled())
 		{
+			// FPC-115: switched off (a config reload). Release every open engagement once, or the hunt and party ticks
+			// would keep deferring to phantoms nothing drives any more. Idle after that, as before.
+			if (_pvpWasEnabled)
+			{
+				_pvpWasEnabled = false;
+				releaseAllPvpEngagements(System.currentTimeMillis());
+			}
+		}
+		// A duel released at switch-off may still start after its countdown; cancel it then, even if PvP was switched
+		// back on meanwhile, since nothing is driving that phantom's side of it any more.
+		if (!_duelsToCancel.isEmpty())
+		{
+			cancelPendingDuels(System.currentTimeMillis());
+		}
+		if (!PhantomPvpManager.pvpEnabled())
+		{
 			return;
 		}
+		_pvpWasEnabled = true;
 		final long now = System.currentTimeMillis();
 		for (PhantomData data : _phantoms.values())
 		{
 			final Player phantom = data.player;
+			if (data.olympian)
+			{
+				continue; // an Olympiad noble fights only in its matches, driven by serviceOlympian
+			}
 			try
 			{
 				// Peace zone, dead, dormant, or mid-disperse: drop any engagement and skip (applies to every role).
@@ -4296,11 +4568,92 @@ public class PhantomManager implements IXmlReader
 				// a per-consideration roll, cooldowns, level band, newbie protection, peace zones, and clan/ally
 				// membership all gate it, so reacting is occasional and never touches a friendly target.
 				reactToFlagged(phantom, data, now);
+				// Phase 3: an idle, honorable phantom occasionally challenges a nearby player (or phantom) to a duel.
+				if (data.pvpTargetOid == 0)
+				{
+					considerIssuingDuel(phantom, data, now);
+				}
 			}
 			catch (Exception e)
 			{
 				LOGGER.warning(getClass().getSimpleName() + ": pvpCombat error for " + phantom.getName() + ": " + e.getMessage());
 			}
+		}
+	}
+
+	/**
+	 * Ends every open PvP engagement and duel (used once when the master switch is turned off by a reload). A stock
+	 * duel the phantom is already in is canceled first (FPC-115), so it never keeps running with nothing driving the
+	 * phantom. One that was accepted but is still counting down is canceled as soon as it starts.
+	 */
+	private void releaseAllPvpEngagements(long now)
+	{
+		for (PhantomData data : _phantoms.values())
+		{
+			if (data.pvpTargetOid == 0)
+			{
+				continue;
+			}
+			try
+			{
+				if (data.duelPhase != DUEL_NONE)
+				{
+					if (data.player.isInDuel())
+					{
+						cancelStockDuel(data.player);
+					}
+					else if ((data.duelPhase == DUEL_ASKED) || (data.duelPhase == DUEL_COUNTDOWN))
+					{
+						// Accepted (or maybe accepted just now) but not started: cancel it once it starts.
+						_duelsToCancel.put(data.player.getObjectId(), now + DUEL_COUNTDOWN_MAX_MS);
+					}
+				}
+				endPvp(data.player, data, resolvePvpTarget(data));
+			}
+			catch (Exception e)
+			{
+				LOGGER.warning(getClass().getSimpleName() + ": PvP release error for " + data.player.getName() + ": " + e.getMessage());
+			}
+		}
+	}
+
+	/**
+	 * While PvP is off: cancels any duel that was still counting down when the switch was turned off, the moment it
+	 * starts, and forgets entries whose countdown window has passed without a duel starting.
+	 */
+	private void cancelPendingDuels(long now)
+	{
+		for (Map.Entry<Integer, Long> entry : _duelsToCancel.entrySet())
+		{
+			final PhantomData data = _phantoms.get(entry.getKey());
+			if ((data != null) && (data.pvpTargetOid != 0))
+			{
+				_duelsToCancel.remove(entry.getKey()); // PvP is back on and a new engagement owns this phantom now
+				continue;
+			}
+			final WorldObject object = World.getInstance().findObject(entry.getKey());
+			if ((object instanceof Player) && ((Player) object).isInDuel())
+			{
+				cancelStockDuel((Player) object);
+				_duelsToCancel.remove(entry.getKey());
+			}
+			else if ((now >= entry.getValue()) || !(object instanceof Player))
+			{
+				_duelsToCancel.remove(entry.getKey());
+			}
+		}
+	}
+
+	/**
+	 * Cancels a running 1v1 stock duel through its own interruption path: an interrupted duelist makes the duel's next
+	 * check end it as canceled, with the stock messages and HP restore, and no winner. A duel already decided (a
+	 * winner or a defeated side) is left to finish normally.
+	 */
+	private static void cancelStockDuel(Player phantom)
+	{
+		if (phantom.getDuelState() == Duel.DUELSTATE_DUELLING)
+		{
+			phantom.setDuelState(Duel.DUELSTATE_INTERRUPTED);
 		}
 	}
 
@@ -4365,6 +4718,11 @@ public class PhantomManager implements IXmlReader
 		if (!(attacker instanceof Player) || (attacker.getObjectId() == victimOid))
 		{
 			return; // PvE damage from monsters, or self-inflicted, is not a PvP attacker
+		}
+		final Creature victim = event.getTarget();
+		if ((victim != null) && attacker.isInDuel() && victim.isInDuel() && (attacker.getDuelId() == victim.getDuelId()))
+		{
+			return; // a hit between two duelists of the same duel is consensual: never grounds for self, party, or clan defense
 		}
 		_recentPvpVictims.put(victimOid, new long[]
 		{
@@ -4586,10 +4944,38 @@ public class PhantomManager implements IXmlReader
 		}
 		// Arm only. Setting pvpTargetOid makes the next pvpCombat tick drive it (continuePvp -> drivePvp) and makes
 		// PhantomPartyManager defer to it (isPvpEngaged), so the party thread never drives this phantom's AI directly.
-		data.pvpFleeing = false;
-		data.nextPvpDecisionAt = 0;
-		data.pvpUntil = System.currentTimeMillis() + PVP_ENGAGE_MAX_MS;
-		data.pvpTargetOid = attacker.getObjectId();
+		// The claim is atomic (FPC-114): this runs on the party thread, so a duel answer or the PvP tick may race it.
+		claimEngagement(data, attacker.getObjectId(), System.currentTimeMillis() + PVP_ENGAGE_MAX_MS, DUEL_NONE);
+	}
+
+	/**
+	 * Atomically claims an idle phantom for a PvP engagement or a duel (FPC-114). Every path that starts one goes
+	 * through here, and {@link #endPvp} releases under the same lock, so two threads (the PvP tick, the duel answer
+	 * task, the party tick) can never both claim the same phantom. Sets pvpTargetOid last, so a phantom only reads as
+	 * engaged once the rest of its engagement state is in place.
+	 * @param data the phantom's state bag
+	 * @param opponentOid the opponent's objectId
+	 * @param until the engagement's (or duel step's) deadline
+	 * @param duelPhase {@link #DUEL_NONE} for an ordinary PvP engagement, otherwise the duel step it starts in
+	 * @return {@code true} if claimed; {@code false} if the phantom was already engaged
+	 */
+	private static boolean claimEngagement(PhantomData data, int opponentOid, long until, int duelPhase)
+	{
+		synchronized (data)
+		{
+			if (data.pvpTargetOid != 0)
+			{
+				return false;
+			}
+			data.duelPhase = duelPhase;
+			data.duelAnsweredAt = 0;
+			data.duelOutcome = DUEL_OUTCOME_NONE;
+			data.pvpFleeing = false;
+			data.nextPvpDecisionAt = 0;
+			data.pvpUntil = until;
+			data.pvpTargetOid = opponentOid;
+			return true;
+		}
 	}
 
 	/**
@@ -4681,27 +5067,12 @@ public class PhantomManager implements IXmlReader
 	/** Begins a PvP engagement: records the opponent, detaches the phantom from the hunt, and drives the first decision. */
 	private void beginPvp(Player phantom, PhantomData data, Player attacker, long now)
 	{
-		data.pvpTargetOid = attacker.getObjectId();
-		data.pvpUntil = now + PVP_ENGAGE_MAX_MS;
-		data.nextPvpDecisionAt = 0; // decide stand-or-flee now
-		data.pvpFleeing = false;
-		// The hunt-detach steps below are field-hunter machinery. A recruited member or buddy (a party/clan defender)
-		// is driven by PhantomPartyManager, which defers while pvpTargetOid != 0.
-		if (!data.recruited && !data.role.isBuddy())
+		// Claim atomically (FPC-114); nextPvpDecisionAt starts at 0 so stand-or-flee is decided now.
+		if (!claimEngagement(data, attacker.getObjectId(), now + PVP_ENGAGE_MAX_MS, DUEL_NONE))
 		{
-			// Stop the native auto-play target scanner so it does not re-acquire a monster over our player target; keep
-			// AutoUse running so shots, self-buffs, and (for a no-playstyle phantom) offensive skills still fire in PvP.
-			if (phantom.isAutoPlaying())
-			{
-				AutoPlayTaskManager.getInstance().stopAutoPlay(phantom);
-			}
-			if (data.resting)
-			{
-				endRest(phantom);
-				data.resting = false;
-			}
-			data.claimedOid = 0; // release any monster it owned to the hunt pool
+			return; // a duel answer or party defense claimed this phantom first
 		}
+		detachFromHunt(phantom, data);
 		// The playstyle skills stay PARKED in the engine: drivePvp drives them through tryHunterPlaystyle against the
 		// Player target (the engine is now Creature-typed), so every class uses its tuned rotation in PvP, not just a
 		// round-robin AutoUse dump, and a mage kites and nukes instead of meleeing. A no-playstyle phantom has nothing
@@ -4709,9 +5080,38 @@ public class PhantomManager implements IXmlReader
 		drivePvp(phantom, data, attacker, now);
 	}
 
+	/**
+	 * Detaches a field hunter from its hunt for a PvP engagement or a duel. Idempotent, so a duel phase can call it
+	 * every tick. A recruited member or buddy is left alone: PhantomPartyManager defers while pvpTargetOid != 0.
+	 */
+	private void detachFromHunt(Player phantom, PhantomData data)
+	{
+		if (data.recruited || data.role.isBuddy())
+		{
+			return;
+		}
+		// Stop the native auto-play target scanner so it does not re-acquire a monster over our player target; keep
+		// AutoUse running so shots, self-buffs, and (for a no-playstyle phantom) offensive skills still fire in PvP.
+		if (phantom.isAutoPlaying())
+		{
+			AutoPlayTaskManager.getInstance().stopAutoPlay(phantom);
+		}
+		if (data.resting)
+		{
+			endRest(phantom);
+			data.resting = false;
+		}
+		data.claimedOid = 0; // release any monster it owned to the hunt pool
+	}
+
 	/** Validates the current opponent (alive, in range, out of a peace zone, engagement not expired) then drives it, or disengages. */
 	private void continuePvp(Player phantom, PhantomData data, long now)
 	{
+		if (data.duelPhase != DUEL_NONE)
+		{
+			continueDuel(phantom, data, now); // a formal duel has its own lifecycle, cap, and no flee
+			return;
+		}
 		final Player target = resolvePvpTarget(data);
 		final boolean gone = (target == null) || target.isDead() || target.isInsideZone(ZoneId.PEACE) || (phantom.calculateDistance2D(target) > PVP_LEASH_RANGE);
 		if ((now >= data.pvpUntil) || gone)
@@ -4817,10 +5217,20 @@ public class PhantomManager implements IXmlReader
 		// Clear the "you hit me" record so self-defense does not immediately re-fire on the same, now-resolved attacker.
 		// A fresh hit after this point rewrites it through the damage listener and re-engages normally.
 		_recentPvpVictims.remove(phantom.getObjectId());
-		data.pvpTargetOid = 0;
-		data.pvpUntil = 0;
-		data.pvpFleeing = false;
-		data.nextPvpDecisionAt = 0;
+		if (data.duelPhase == DUEL_ASKED)
+		{
+			releaseDuelRequest(phantom, target); // FPC-113: never leave a challenge open that nothing will follow up
+		}
+		synchronized (data)
+		{
+			data.pvpUntil = 0;
+			data.pvpFleeing = false;
+			data.nextPvpDecisionAt = 0;
+			data.duelPhase = DUEL_NONE;
+			data.duelAnsweredAt = 0;
+			data.duelOutcome = DUEL_OUTCOME_NONE;
+			data.pvpTargetOid = 0; // last, under the claim lock (FPC-114)
+		}
 		if (phantom.isDead() || data.dormant || data.dispersing)
 		{
 			return; // nothing to resume
@@ -4835,6 +5245,454 @@ public class PhantomManager implements IXmlReader
 		// idling. It is no longer deferred (pvpTargetOid == 0), so its next party tick re-establishes follow/assist.
 		phantom.setTarget(null);
 		phantom.getAI().setIntention(Intention.IDLE);
+	}
+
+	// ---------------------------------------------------------------------
+	// Phase 3: duels. The stock duel system runs the duel itself (countdown, no death, no karma, HP restore); this
+	// code answers challenges a phantom cannot answer without a client, issues the occasional challenge, and drives
+	// the phantom's fight through the same PvP driver every other engagement uses.
+	// ---------------------------------------------------------------------
+
+	/**
+	 * Stock seam, called from {@code RequestDuelStart} once every stock check has passed for a 1v1 challenge. A
+	 * phantom has no client to show the challenge dialog to, so the phantom answers it here after a short pause.
+	 * @param challenger the player issuing the challenge
+	 * @param target the challenged player
+	 * @return {@code true} if the target is a phantom and the challenge was taken over here, so the stock handler must
+	 *         not send it to a client; {@code false} for any other target (the stock flow runs unchanged)
+	 */
+	public boolean answerDuelChallenge(Player challenger, Player target)
+	{
+		if ((challenger == null) || (target == null) || !isPhantom(target))
+		{
+			return false;
+		}
+		if (target.isProcessingRequest())
+		{
+			return false; // busy with another request: the stock handler sends its normal "busy" reply
+		}
+		challenger.onTransactionRequest(target);
+		final SystemMessage challenged = new SystemMessage(SystemMessageId.S1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
+		challenged.addString(target.getName());
+		challenger.sendPacket(challenged);
+		ThreadPool.schedule(() -> resolveDuelChallenge(challenger, target), Rnd.get(DUEL_ANSWER_DELAY_MIN_MS, DUEL_ANSWER_DELAY_MAX_MS));
+		return true;
+	}
+
+	/**
+	 * Stock seam, called from {@code RequestDuelStart} for a party duel whose opposing party leader is a phantom. A
+	 * phantom never leads a party today, so this is a safety net: the challenge is declined instead of left unanswered.
+	 * @param challenger the party leader issuing the challenge
+	 * @param partyLeader the opposing party's leader
+	 * @return {@code true} if the leader is a phantom and the challenge was declined here
+	 */
+	public boolean declinePartyDuelChallenge(Player challenger, Player partyLeader)
+	{
+		if ((challenger == null) || !isPhantom(partyLeader))
+		{
+			return false;
+		}
+		challenger.sendPacket(SystemMessageId.THE_OPPOSING_PARTY_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
+		return true;
+	}
+
+	/** Answers a pending challenge to a phantom: accept or decline, with the same messages the stock answer handler sends. */
+	private void resolveDuelChallenge(Player challenger, Player phantom)
+	{
+		if (phantom.getActiveRequester() != challenger)
+		{
+			return; // the request expired or was replaced while the phantom was "thinking"
+		}
+		try
+		{
+			final PhantomData data = _phantoms.get(phantom.getObjectId());
+			// Reserve the phantom before starting the duel (FPC-114), so a claim that won the race makes it decline.
+			if ((data != null) && mayAcceptDuel(challenger, phantom, data) && armDuel(data, challenger, DUEL_COUNTDOWN))
+			{
+				final SystemMessage accepted = new SystemMessage(SystemMessageId.S1_HAS_ACCEPTED_YOUR_CHALLENGE_TO_A_DUEL_THE_DUEL_WILL_BEGIN_IN_A_FEW_MOMENTS);
+				accepted.addString(phantom.getName());
+				challenger.sendPacket(accepted);
+				sayNearby(phantom, DUEL_ACCEPT_LINES);
+				DuelManager.getInstance().addDuel(challenger, phantom, 0);
+			}
+			else
+			{
+				final SystemMessage declined = new SystemMessage(SystemMessageId.S1_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
+				declined.addPcName(phantom);
+				challenger.sendPacket(declined);
+				sayNearby(phantom, DUEL_DECLINE_LINES);
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": duel answer error for " + phantom.getName() + ": " + e.getMessage());
+		}
+		finally
+		{
+			phantom.setActiveRequester(null);
+			challenger.onTransactionResponse();
+		}
+	}
+
+	/**
+	 * @param challenger the player (or phantom) issuing the challenge
+	 * @param phantom the challenged phantom
+	 * @param data the challenged phantom's state bag
+	 * @return {@code true} if the phantom accepts. It must be free (not already fighting, dispersing, or dormant) and
+	 *         both sides must still pass the stock {@code canDuel} checks, since a monster may have pulled either one
+	 *         while the phantom was deciding. A recruited member, buddy, or befriended regular of the challenger
+	 *         always spars with it; anyone else rolls on honor and the level gap.
+	 */
+	private boolean mayAcceptDuel(Player challenger, Player phantom, PhantomData data)
+	{
+		if (!PhantomPvpManager.duelsEnabled() || !challenger.isOnline() || challenger.isDead() || phantom.isDead())
+		{
+			return false;
+		}
+		if (data.olympian || data.dormant || data.dispersing || (data.pvpTargetOid != 0) || challenger.isInDuel() || phantom.isInDuel())
+		{
+			return false;
+		}
+		if ((phantom.getPvpFlag() != 0) || (challenger.getPvpFlag() != 0))
+		{
+			return false; // the stock duel refuses to start while either side is PvP-flagged
+		}
+		if (!validPvpOpponent(phantom, challenger) || !phantom.canDuel() || !challenger.canDuel())
+		{
+			return false; // includes the phantom-versus-phantom gate for a phantom challenger
+		}
+		if (isBoundTo(phantom, data, challenger))
+		{
+			return true;
+		}
+		return PhantomPvpManager.shouldAcceptDuel(Rnd.get(100), data.honor, phantom.getLevel(), challenger.getLevel());
+	}
+
+	/** @return {@code true} if this phantom serves {@code player}: its recruited party member, buddy, or befriended regular. */
+	private static boolean isBoundTo(Player phantom, PhantomData data, Player player)
+	{
+		if (data.friendOwnerId == player.getObjectId())
+		{
+			return true;
+		}
+		return (data.recruited || data.role.isBuddy()) && phantom.isInParty() && (phantom.getParty() == player.getParty());
+	}
+
+	/**
+	 * Claims a phantom for a duel step. Only records state (the pvpCombat tick does all AI work), so it is safe to call
+	 * from the duel answer task. The claim is atomic, so a phantom already engaged is never double-booked.
+	 * @return {@code true} if the phantom was free and is now reserved for this duel
+	 */
+	private static boolean armDuel(PhantomData data, Player opponent, int phase)
+	{
+		final long until = System.currentTimeMillis() + ((phase == DUEL_APPROACH) ? DUEL_APPROACH_MAX_MS : DUEL_COUNTDOWN_MAX_MS);
+		return claimEngagement(data, opponent.getObjectId(), until, phase);
+	}
+
+	/**
+	 * Withdraws a phantom's open duel challenge to a real player (FPC-113): the player's pending request, if it still
+	 * points at this phantom, and the phantom's own request timer. After this a late click on the player's dialog does
+	 * nothing, exactly as if the request had expired. Phantoms send no other transaction requests, so clearing the
+	 * phantom's timer never cancels anything else.
+	 */
+	private static void releaseDuelRequest(Player phantom, Player opponent)
+	{
+		if ((opponent != null) && (opponent.getActiveRequester() == phantom))
+		{
+			opponent.setActiveRequester(null);
+		}
+		phantom.onTransactionResponse();
+	}
+
+	/** @return {@code true} if this phantom is in any step of a formal duel (so PhantomBuddyManager holds its support routine). */
+	public boolean isDuelEngaged(Player phantom)
+	{
+		final PhantomData data = _phantoms.get(phantom.getObjectId());
+		return (data != null) && (data.pvpTargetOid != 0) && (data.duelPhase != DUEL_NONE);
+	}
+
+	/** Drives one pvpCombat tick of a duel engagement through its current phase. */
+	private void continueDuel(Player phantom, PhantomData data, long now)
+	{
+		final Player opponent = resolvePvpTarget(data);
+		switch (data.duelPhase)
+		{
+			case DUEL_APPROACH -> approachDuel(phantom, data, opponent, now);
+			case DUEL_ASKED -> awaitDuelAnswer(phantom, data, opponent, now);
+			case DUEL_COUNTDOWN -> awaitDuelStart(phantom, data, opponent, now);
+			default -> fightDuel(phantom, data, opponent, now);
+		}
+	}
+
+	/**
+	 * A challenging phantom walks up to its opponent, then asks. A real player gets the stock challenge dialog and
+	 * answers through the stock {@code RequestDuelAnswerStart}; a phantom opponent answers here at once.
+	 */
+	private void approachDuel(Player phantom, PhantomData data, Player opponent, long now)
+	{
+		if ((opponent == null) || opponent.isDead() || (now >= data.pvpUntil) || opponent.isProcessingRequest())
+		{
+			endPvp(phantom, data, opponent);
+			return;
+		}
+		detachFromHunt(phantom, data);
+		if (phantom.calculateDistance2D(opponent) > DUEL_ASK_RANGE)
+		{
+			phantom.getAI().setIntention(Intention.MOVE_TO, opponent.getLocation()); // re-aimed each tick as the opponent moves
+			return;
+		}
+		holdForDuel(phantom, opponent);
+		if (!phantom.canDuel() || !opponent.canDuel())
+		{
+			endPvp(phantom, data, opponent); // something pulled one of them into a fight on the way over
+			return;
+		}
+		sayNearby(phantom, DUEL_CHALLENGE_LINES);
+		final PhantomData other = _phantoms.get(opponent.getObjectId());
+		if (other != null)
+		{
+			// Phantom versus phantom: the opponent has no client either, so it answers right here.
+			// Reserve the opponent first (FPC-114), so it cannot be booked by another challenge or engagement meanwhile.
+			if (mayAcceptDuel(phantom, opponent, other) && armDuel(other, phantom, DUEL_COUNTDOWN))
+			{
+				sayNearby(opponent, DUEL_ACCEPT_LINES);
+				DuelManager.getInstance().addDuel(phantom, opponent, 0);
+				data.duelPhase = DUEL_COUNTDOWN;
+				data.pvpUntil = now + DUEL_COUNTDOWN_MAX_MS;
+			}
+			else
+			{
+				sayNearby(opponent, DUEL_DECLINE_LINES);
+				endPvp(phantom, data, opponent);
+			}
+			return;
+		}
+		// A real player: the same packets the stock RequestDuelStart sends, so the normal accept dialog appears.
+		phantom.onTransactionRequest(opponent);
+		opponent.sendPacket(new ExDuelAskStart(phantom.getName(), 0));
+		final SystemMessage challenged = new SystemMessage(SystemMessageId.S1_HAS_CHALLENGED_YOU_TO_A_DUEL);
+		challenged.addString(phantom.getName());
+		opponent.sendPacket(challenged);
+		data.duelPhase = DUEL_ASKED;
+		data.duelAnsweredAt = 0;
+		data.pvpUntil = now + (Player.REQUEST_TIMEOUT * 1000L) + DUEL_COUNTDOWN_MAX_MS;
+	}
+
+	/**
+	 * A challenging phantom waits for a real player's answer. Accepting starts the stock countdown and the phantom sees
+	 * itself enter the duel; declining or letting the request expire ends the wait once the countdown window passes.
+	 */
+	private void awaitDuelAnswer(Player phantom, PhantomData data, Player opponent, long now)
+	{
+		// Answered or expired once the request timer clears. An acceptance starts the duel within the stock countdown;
+		// nothing starting by then means a decline or no answer. endPvp withdraws any request still open (FPC-113).
+		final boolean pending = phantom.isProcessingRequest();
+		if (!pending && (data.duelAnsweredAt == 0))
+		{
+			data.duelAnsweredAt = now;
+		}
+		applyDuelWaitStep(phantom, data, opponent, now, PhantomPvpManager.duelWaitStep(opponent != null, phantom.isInDuel(), pending, data.duelAnsweredAt, now, data.pvpUntil, DUEL_COUNTDOWN_MAX_MS));
+	}
+
+	/** An accepted duel is counting down: hold still facing the opponent until the stock duel starts. */
+	private void awaitDuelStart(Player phantom, PhantomData data, Player opponent, long now)
+	{
+		detachFromHunt(phantom, data);
+		// No request is pending here, so this holds until the duel starts or the deadline passes (it never started).
+		applyDuelWaitStep(phantom, data, opponent, now, PhantomPvpManager.duelWaitStep(opponent != null, phantom.isInDuel(), false, 0, now, data.pvpUntil, DUEL_COUNTDOWN_MAX_MS));
+	}
+
+	/** Carries out a {@link PhantomPvpManager#duelWaitStep} verdict for the asked and countdown steps. */
+	private void applyDuelWaitStep(Player phantom, PhantomData data, Player opponent, long now, int step)
+	{
+		if (step == PhantomPvpManager.DUEL_WAIT_FIGHT)
+		{
+			startDuelFight(data, now);
+		}
+		else if (step == PhantomPvpManager.DUEL_WAIT_END)
+		{
+			endPvp(phantom, data, opponent);
+		}
+		else
+		{
+			holdForDuel(phantom, opponent);
+		}
+	}
+
+	private void startDuelFight(PhantomData data, long now)
+	{
+		data.duelPhase = DUEL_FIGHTING;
+		data.pvpUntil = now + DUEL_FIGHT_MAX_MS;
+		data.nextPvpDecisionAt = 0;
+	}
+
+	/**
+	 * The duel is running: fight with the class playstyle through the shared PvP driver, never flee (running past the
+	 * stock 1600 range would only cancel the duel), and let a timid phantom that is losing surrender instead. Once the
+	 * stock duel ends for any reason the phantom says its closing line and goes back to what it was doing.
+	 */
+	private void fightDuel(Player phantom, PhantomData data, Player opponent, long now)
+	{
+		if (!phantom.isInDuel() || (now >= data.pvpUntil))
+		{
+			finishDuel(phantom, data, opponent);
+			return;
+		}
+		final int state = phantom.getDuelState();
+		if (state == Duel.DUELSTATE_WINNER)
+		{
+			if (data.duelOutcome == DUEL_OUTCOME_NONE)
+			{
+				data.duelOutcome = DUEL_OUTCOME_WON;
+			}
+			return; // the stock duel stops the fighting and ends it shortly
+		}
+		if (state == Duel.DUELSTATE_DEAD)
+		{
+			if (data.duelOutcome == DUEL_OUTCOME_NONE)
+			{
+				data.duelOutcome = DUEL_OUTCOME_LOST;
+			}
+			return;
+		}
+		if ((state != Duel.DUELSTATE_DUELLING) || (opponent == null))
+		{
+			return; // interrupted: the stock duel is about to cancel
+		}
+		if (now >= data.nextPvpDecisionAt)
+		{
+			data.nextPvpDecisionAt = now + PVP_DECISION_HOLD_MS;
+			if (PhantomPvpManager.shouldSurrenderDuel((int) phantom.getCurrentHpPercent(), FakePlayersConfig.PHANTOM_PVP_FLEE_HP_PERCENT, data.bravery, phantom.getLevel(), opponent.getLevel()))
+			{
+				data.duelOutcome = DUEL_OUTCOME_SURRENDERED;
+				sayNearby(phantom, DUEL_SURRENDER_LINES);
+				DuelManager.getInstance().doSurrender(phantom);
+				return;
+			}
+		}
+		pvpStandCombat(phantom, data, opponent);
+	}
+
+	/** Closes a finished duel: the closing line (unless it already surrendered), then the normal engagement teardown. */
+	private void finishDuel(Player phantom, PhantomData data, Player opponent)
+	{
+		if (data.duelOutcome == DUEL_OUTCOME_WON)
+		{
+			sayNearby(phantom, DUEL_WIN_LINES);
+		}
+		else if (data.duelOutcome == DUEL_OUTCOME_LOST)
+		{
+			sayNearby(phantom, DUEL_LOSE_LINES);
+		}
+		endPvp(phantom, data, opponent);
+	}
+
+	/** Stands the phantom still facing its duel opponent (countdown, or waiting for an answer). */
+	private static void holdForDuel(Player phantom, Player opponent)
+	{
+		phantom.setTarget(opponent);
+		final Intention intention = phantom.getAI().getIntention();
+		if ((intention != Intention.ACTIVE) && (intention != Intention.IDLE))
+		{
+			phantom.getAI().setIntention(Intention.ACTIVE);
+		}
+	}
+
+	/**
+	 * An idle, honorable field hunter occasionally challenges a nearby player of a similar level, or (when phantoms may
+	 * fight each other) another idle field hunter while a real player is close enough to watch. Considered at most
+	 * once per {@link #DUEL_CONSIDER_INTERVAL_MS}; a challenge then puts the phantom on a long cooldown, and its
+	 * opponent on a per-target cooldown so no one is asked over and over.
+	 */
+	private void considerIssuingDuel(Player phantom, PhantomData data, long now)
+	{
+		if (!PhantomPvpManager.duelsEnabled() || (now < data.nextDuelConsiderAt))
+		{
+			return;
+		}
+		data.nextDuelConsiderAt = now + DUEL_CONSIDER_INTERVAL_MS;
+		if ((data.honor < PhantomPvpManager.DUEL_CHALLENGER_MIN_HONOR) || data.resting || (data.claimedOid != 0) || (data.huntPauseUntil > 0))
+		{
+			return; // not the challenging kind, or busy with a monster, a breather, or a rest
+		}
+		if (phantom.isProcessingRequest() || (phantom.getPvpFlag() != 0) || !phantom.canDuel())
+		{
+			return;
+		}
+		final Player opponent = duelChallengeTarget(phantom, data, now);
+		if ((opponent == null) || !PhantomPvpManager.rollIssueDuel())
+		{
+			return;
+		}
+		if (!armDuel(data, opponent, DUEL_APPROACH))
+		{
+			return; // something else claimed this phantom first
+		}
+		data.nextDuelConsiderAt = now + DUEL_CHALLENGE_COOLDOWN_MS;
+		_duelTargetCooldownUntil.put(opponent.getObjectId(), now + DUEL_TARGET_COOLDOWN_MS);
+	}
+
+	/** @return the nearest opponent this phantom may challenge to a duel right now, or {@code null}. */
+	private Player duelChallengeTarget(Player phantom, PhantomData data, long now)
+	{
+		Player best = null;
+		double bestDistance = Double.MAX_VALUE;
+		for (Player p : World.getInstance().getVisibleObjectsInRange(phantom, Player.class, DUEL_NOTICE_RANGE))
+		{
+			if ((p == phantom) || p.isDead() || p.isInDuel() || (p.getPvpFlag() != 0) || p.isProcessingRequest() || !p.canDuel())
+			{
+				continue;
+			}
+			if (!PhantomPvpManager.mayIssueDuel(data.honor, phantom.getLevel(), p.getLevel()))
+			{
+				continue;
+			}
+			final Long until = _duelTargetCooldownUntil.get(p.getObjectId());
+			if (until != null)
+			{
+				if (now < until)
+				{
+					continue; // challenged recently; leave it alone
+				}
+				_duelTargetCooldownUntil.remove(p.getObjectId(), until); // stale entry; prune it
+			}
+			final PhantomData other = _phantoms.get(p.getObjectId());
+			if (other != null)
+			{
+				// Another phantom: only when phantoms may fight each other, only an idle field hunter, and only with a
+				// real player close enough to see it.
+				if (!validPvpOpponent(phantom, p) || other.recruited || other.olympian || other.role.isBuddy() || (other.pvpTargetOid != 0) || (other.claimedOid != 0) || !realPlayerNear(p, DUEL_AUDIENCE_RANGE))
+				{
+					continue;
+				}
+			}
+			final double distance = phantom.calculateDistance2D(p);
+			if (distance < bestDistance)
+			{
+				bestDistance = distance;
+				best = p;
+			}
+		}
+		return best;
+	}
+
+	/** @return {@code true} if a real (non-phantom) player is within {@code range} of {@code center}. */
+	private boolean realPlayerNear(Player center, int range)
+	{
+		for (Player p : World.getInstance().getVisibleObjectsInRange(center, Player.class, range))
+		{
+			if (!isPhantom(p))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/** Says one random line from {@code lines} in normal (nearby) chat. */
+	private static void sayNearby(Player phantom, String[] lines)
+	{
+		phantom.broadcastPacket(new CreatureSay(phantom, ChatType.GENERAL, phantom.getName(), lines[Rnd.get(lines.length)]));
 	}
 
 	/** @return the phantom's current PvP opponent as a {@link Player}, or {@code null} if it left the world or is not a player. */
@@ -4860,9 +5718,9 @@ public class PhantomManager implements IXmlReader
 			final Player phantom = data.player;
 			try
 			{
-				if (data.role.isBuddy() || data.recruited || data.dormant || data.dispersing || phantom.isDead())
+				if (data.olympian || data.role.isBuddy() || data.recruited || data.dormant || data.dispersing || phantom.isDead())
 				{
-					continue; // buddies and recruited party members are not part of the hunt/deconflict
+					continue; // Olympiad nobles, buddies and recruited party members are not part of the hunt/deconflict
 				}
 
 				// PvP owns this phantom this tick: the pvpCombat tick has it engaged with (or fleeing from) a player.
@@ -5314,7 +6172,18 @@ public class PhantomManager implements IXmlReader
 				// Forget phantoms that left the world for good.
 				if (World.getInstance().findObject(phantom.getObjectId()) == null)
 				{
+					if (data.duelPhase == DUEL_ASKED)
+					{
+						releaseDuelRequest(phantom, resolvePvpTarget(data)); // FPC-113: no open challenge from a phantom that is gone
+					}
 					_phantoms.remove(phantom.getObjectId());
+					continue;
+				}
+
+				// Olympiad roster nobles are driven by PhantomOlympiadManager's tick (serviceOlympian): no hunt, rest,
+				// roam, dormancy or respawn here.
+				if (data.olympian)
+				{
 					continue;
 				}
 
@@ -5629,6 +6498,360 @@ public class PhantomManager implements IXmlReader
 			AutoPlayTaskManager.getInstance().startAutoPlay(phantom);
 			AutoUseTaskManager.getInstance().startAutoUseTask(phantom);
 		}
+	}
+
+	// ---------------------------------------------------------------------
+	// Olympiad roster nobles. PhantomOlympiadManager owns the roster and the sign-ups; this creates, logs in and logs
+	// out each noble, and drives its body: the stock match teleports, the fight, and idling near the Olympiad Manager.
+	// ---------------------------------------------------------------------
+
+	/** @return charId to base class id of every roster noble stored on the {@link #ACCOUNT_NAME_NOBLE} account */
+	public Map<Integer, Integer> loadOlympiadRoster()
+	{
+		final Map<Integer, Integer> roster = new HashMap<>();
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT charId, base_class FROM characters WHERE account_name=?"))
+		{
+			ps.setString(1, ACCOUNT_NAME_NOBLE);
+			try (ResultSet rs = ps.executeQuery())
+			{
+				while (rs.next())
+				{
+					roster.put(rs.getInt("charId"), rs.getInt("base_class"));
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Failed to load the Olympiad roster: " + e.getMessage());
+		}
+		return roster;
+	}
+
+	/** @return {@code false} only when the database says this roster noble's row is gone (errors count as present) */
+	public boolean olympiadNobleExists(int charId)
+	{
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT 1 FROM characters WHERE charId=? AND account_name=?"))
+		{
+			ps.setInt(1, charId);
+			ps.setString(2, ACCOUNT_NAME_NOBLE);
+			try (ResultSet rs = ps.executeQuery())
+			{
+				return rs.next();
+			}
+		}
+		catch (Exception e)
+		{
+			return true;
+		}
+	}
+
+	/**
+	 * Creates a new persistent roster noble of the given third class and logs it in at {@code location}.
+	 * @return the noble, or {@code null} on failure (nothing is left behind)
+	 */
+	public Player createOlympiadNoble(int classId, int level, Location location)
+	{
+		if (_phantoms.size() >= MAX_PHANTOMS)
+		{
+			return null;
+		}
+		final PlayerClass playerClass = PlayerClass.getPlayerClass(classId);
+		final PlayerTemplate template = (playerClass == null) ? null : PlayerTemplateData.getInstance().getTemplate(playerClass);
+		if (template == null)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": No player template for Olympiad noble class " + classId + ".");
+			return null;
+		}
+		// Orc and dwarf bodies skew male, like the field phantoms.
+		final Race race = playerClass.getRace();
+		final boolean female = ((race == Race.ORC) || (race == Race.DWARF)) ? (Rnd.get(100) < 30) : Rnd.nextBoolean();
+		final PlayerAppearance appearance = new PlayerAppearance((byte) Rnd.get(0, 2), (byte) Rnd.get(0, 3), (byte) Rnd.get(0, 2), female);
+		final Player noble = Player.create(template, ACCOUNT_NAME_NOBLE, nextName(), appearance, true);
+		if (noble == null)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Player.create returned null for an Olympiad noble (duplicate name / db error?).");
+			return null;
+		}
+		try
+		{
+			return spawnOlympian(noble, location, level, false);
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Failed to create Olympiad noble '" + noble.getName() + "': " + e.getMessage());
+			_phantoms.remove(noble.getObjectId());
+			try
+			{
+				noble.deleteMe();
+			}
+			catch (Exception ignored)
+			{
+				// best effort; the row delete below is what matters
+			}
+			GameClient.deleteCharByObjId(noble.getObjectId()); // don't leave a half-made row behind
+			return null;
+		}
+	}
+
+	/**
+	 * Logs a stored roster noble in at {@code location} (near an Olympiad Manager, not its last stored spot).
+	 * @return the noble, or {@code null} if it is already online, the cap is reached, or it failed to load
+	 */
+	public Player spawnOlympiadNoble(int charId, Location location)
+	{
+		if (_phantoms.containsKey(charId) || (_phantoms.size() >= MAX_PHANTOMS))
+		{
+			return null;
+		}
+		Player noble = null;
+		try
+		{
+			noble = Player.load(charId);
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Failed to load Olympiad noble " + charId + ": " + e.getMessage());
+		}
+		if ((noble == null) || !ACCOUNT_NAME_NOBLE.equals(noble.getAccountName()))
+		{
+			return null;
+		}
+		try
+		{
+			return spawnOlympian(noble, location, noble.getLevel(), true);
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Failed to log in Olympiad noble '" + noble.getName() + "': " + e.getMessage());
+			return null;
+		}
+	}
+
+	/**
+	 * Gears a created-or-loaded roster noble with the full friend kit, makes it noble, drops it into the world and
+	 * registers it. It gets no hunt: serviceOlympian drives it from here.
+	 */
+	private Player spawnOlympian(Player noble, Location location, int level, boolean loaded)
+	{
+		noble.setDietMode(true); // same reason as finishSpawn: potions and shots must never overload it
+		noble.setOnlineStatus(true, false);
+		if (loaded)
+		{
+			noble.getInventory().destroyAllItems(ItemProcessType.DESTROY, noble, null);
+		}
+		final boolean mage = noble.getPlayerClass().isMage();
+		outfitFriend(noble, level, mage);
+		noble.setNoble(true);
+		noble.refreshOverloaded();
+		enterWorld(noble, location);
+		final PhantomData data = new PhantomData(noble, location, null, mage, BuddyRole.NONE);
+		data.olympian = true;
+		data.olyNextWanderAt = System.currentTimeMillis() + Rnd.get(OLYMPIAN_WANDER_MIN_MS, OLYMPIAN_WANDER_MAX_MS);
+		_phantoms.put(noble.getObjectId(), data);
+		if (!loaded)
+		{
+			noble.storeMe(); // keep its level, class and noble status even if the server is killed before it logs out
+		}
+		startSupervising(); // the supervisor forgets a noble that left the world
+		LOGGER.info(getClass().getSimpleName() + ": Olympiad noble '" + noble.getName() + "' logged in (objId=" + noble.getObjectId() + ", " + noble.getPlayerClass() + ", level " + noble.getLevel() + ").");
+		return noble;
+	}
+
+	/** @return {@code true} if the player is a live Olympiad roster noble. */
+	public boolean isOlympian(Player player)
+	{
+		final PhantomData data = (player == null) ? null : _phantoms.get(player.getObjectId());
+		return (data != null) && data.olympian;
+	}
+
+	/** @return {@code true} if this roster noble is logged in (spawned, or decayed mid-teleport) */
+	public boolean isOlympianLoggedIn(int charId)
+	{
+		final PhantomData data = _phantoms.get(charId);
+		return (data != null) && data.olympian;
+	}
+
+	/**
+	 * @return every roster noble that is logged in. A noble in the middle of a teleport is decayed and out of the
+	 *         world's object list, but it is still included: its tick is what finishes the teleport.
+	 */
+	public List<Player> onlineOlympians()
+	{
+		final List<Player> nobles = new ArrayList<>();
+		for (PhantomData data : _phantoms.values())
+		{
+			if (data.olympian && (data.player != null))
+			{
+				nobles.add(data.player);
+			}
+		}
+		return nobles;
+	}
+
+	/** Logs a roster noble out, keeping its row (and with it its Olympiad record). */
+	public void despawnOlympian(Player noble)
+	{
+		final PhantomData data = (noble == null) ? null : _phantoms.get(noble.getObjectId());
+		if ((data != null) && data.olympian)
+		{
+			despawn(data);
+		}
+	}
+
+	/**
+	 * One tick of a roster noble's body, from PhantomOlympiadManager. In a match it holds still through the countdown,
+	 * then fights its opponent with the same stand-and-fight combat as PvP (its class playstyle, never fleeing: the
+	 * match is timed and ends at 0 HP without death). Out of a match it strolls near its Olympiad Manager.
+	 */
+	public void serviceOlympian(Player noble, long now)
+	{
+		final PhantomData data = _phantoms.get(noble.getObjectId());
+		if ((data == null) || !data.olympian)
+		{
+			return;
+		}
+		try
+		{
+			// The stock match teleports (to the stadium and back) only finish by themselves for a player with a client;
+			// a clientless one stays decayed and frozen until onTeleported runs, so finish them here.
+			if (noble.isTeleporting())
+			{
+				noble.onTeleported();
+				noble.broadcastUserInfo();
+			}
+			if (noble.isInOlympiadMode())
+			{
+				if (!data.olyInMatch)
+				{
+					data.olyInMatch = true;
+					prepareOlympiadFight(noble, data);
+				}
+				final Player opponent = (noble.isDead() || !noble.isOlympiadStart()) ? null : olympiadOpponent(noble);
+				if ((opponent == null) || opponent.isDead())
+				{
+					holdOlympiadPosition(noble); // the countdown, a finished fight, or no opponent in sight
+					return;
+				}
+				keepOlympiadShots(noble, data);
+				pvpStandCombat(noble, data, opponent);
+				return;
+			}
+			if (data.olyInMatch)
+			{
+				data.olyInMatch = false;
+				endOlympiadFight(noble, data);
+				PhantomOlympiadManager.getInstance().onMatchEnded(noble, now);
+			}
+			if (noble.isDead())
+			{
+				// A loser stays "dead" until the stock return teleport revives it. If that did not happen, stand it up.
+				if (data.deadSince == 0)
+				{
+					data.deadSince = now;
+				}
+				else if ((now - data.deadSince) >= OLYMPIAN_REVIVE_DELAY_MS)
+				{
+					noble.doRevive();
+					noble.setCurrentHpMp(noble.getMaxHp(), noble.getMaxMp());
+					noble.setCurrentCp(noble.getMaxCp());
+					data.deadSince = 0;
+				}
+				return;
+			}
+			data.deadSince = 0;
+			wanderOlympian(noble, data, now);
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Olympiad noble error for " + noble.getName() + ": " + e.getMessage());
+		}
+	}
+
+	/** Arms the fight kit once the noble is moved to a stadium: auto-attack, class playstyle, AutoUse. */
+	private void prepareOlympiadFight(Player noble, PhantomData data)
+	{
+		if (noble.isSitting())
+		{
+			noble.standUp();
+		}
+		noble.setRunning();
+		if (!data.mage && !noble.getAutoUseSettings().getAutoActions().contains(AUTO_ATTACK_ACTION))
+		{
+			noble.getAutoUseSettings().getAutoActions().add(AUTO_ATTACK_ACTION);
+		}
+		parkHunterPlaystyle(noble, data);
+		AutoUseTaskManager.getInstance().startAutoUseTask(noble);
+	}
+
+	/**
+	 * The stock match prep (run just after the move to the stadium) switches every auto shot off; switch the weapon's
+	 * own shots back on. Called every fight tick, since that prep may land after prepareOlympiadFight (a set, so cheap).
+	 */
+	private void keepOlympiadShots(Player noble, PhantomData data)
+	{
+		final Weapon weapon = noble.getActiveWeaponItem();
+		if (weapon != null)
+		{
+			noble.addAutoSoulShot(data.mage ? spiritshotIdFor(weapon.getCrystalType()) : soulshotIdFor(weapon.getCrystalType()));
+		}
+	}
+
+	/** Takes the fight kit off again after the match. */
+	private void endOlympiadFight(Player noble, PhantomData data)
+	{
+		AutoUseTaskManager.getInstance().stopAutoUseTask(noble);
+		unparkHunterPlaystyle(noble, data);
+		noble.setTarget(null);
+		noble.getAI().setIntention(Intention.IDLE);
+	}
+
+	/** Stands still without a target (the countdown, or after the fight is decided). Self-buffs may still land. */
+	private static void holdOlympiadPosition(Player noble)
+	{
+		if (noble.getTarget() != null)
+		{
+			noble.setTarget(null);
+		}
+		if (noble.isAttackingNow())
+		{
+			noble.abortAttack();
+		}
+		if (!noble.isCastingNow() && (noble.getAI().getIntention() != Intention.IDLE))
+		{
+			noble.getAI().setIntention(Intention.IDLE);
+		}
+	}
+
+	/** @return the other side of this noble's match, or {@code null} if it is not in sight */
+	private static Player olympiadOpponent(Player noble)
+	{
+		for (Player other : World.getInstance().getVisibleObjectsInRange(noble, Player.class, OLYMPIAD_OPPONENT_RANGE))
+		{
+			if ((other != noble) && other.isInOlympiadMode() && (other.getOlympiadGameId() == noble.getOlympiadGameId()) && (other.getOlympiadSide() != noble.getOlympiadSide()))
+			{
+				return other;
+			}
+		}
+		return null;
+	}
+
+	/** Every so often, walks an idle noble to a nearby spot around where it logged in. */
+	private static void wanderOlympian(Player noble, PhantomData data, long now)
+	{
+		if ((now < data.olyNextWanderAt) || noble.isMoving() || noble.isCastingNow() || noble.isSitting())
+		{
+			return;
+		}
+		data.olyNextWanderAt = now + Rnd.get(OLYMPIAN_WANDER_MIN_MS, OLYMPIAN_WANDER_MAX_MS);
+		final double angle = Rnd.nextDouble() * 2 * Math.PI;
+		final int radius = Rnd.get(40, OLYMPIAN_WANDER_RADIUS);
+		final int x = data.home.getX() + (int) (Math.cos(angle) * radius);
+		final int y = data.home.getY() + (int) (Math.sin(angle) * radius);
+		final Location destination = GeoEngine.getInstance().getValidLocation(noble, new Location(x, y, noble.getZ()));
+		noble.setWalking();
+		noble.getAI().setIntention(Intention.MOVE_TO, destination);
 	}
 
 	/** A unique, pronounceable character name (reuses the NPC name generator), checked against the DB. */

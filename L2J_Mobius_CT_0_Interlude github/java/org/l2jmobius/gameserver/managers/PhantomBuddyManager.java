@@ -174,6 +174,7 @@ public class PhantomBuddyManager implements IXmlReader
 		Player pendingBuffTarget; // who that on-demand buff goes on (the owner, or a named party member)
 		Player rechargeTarget; // "recharge" / "recharge <name>" order: keep refilling this member's MP until it is full or the owner says stop
 		long noSitUntil; // "stand" order: don't auto-sit for MP until this time (so it doesn't pop straight back down)
+		boolean olympiadHeld; // waiting while the owner is in an Olympiad match; rejoins the owner's party after it
 
 		Buddy(Player npc)
 		{
@@ -1064,10 +1065,19 @@ public class PhantomBuddyManager implements IXmlReader
 				{
 					continue; // idle in town; does nothing (no self-buff) until a player parties it
 				}
+				// The owner is in an Olympiad match, which removed them from the party: wait here, then rejoin.
+				if (holdForOwnerMatch(state, buddy))
+				{
+					continue;
+				}
 				if (buddy.isDead())
 				{
 					release(state, false);
 					continue;
+				}
+				if (PhantomManager.getInstance().isDuelEngaged(buddy))
+				{
+					continue; // sparring in a duel with its owner: hold buffing/healing/following until the duel ends
 				}
 				if (!serveOwner(state, buddy, now))
 				{
@@ -1704,6 +1714,39 @@ public class PhantomBuddyManager implements IXmlReader
 		}
 		state.npc.setRunning();
 		state.npc.getAI().setIntention(Intention.FOLLOW, owner);
+	}
+
+	/**
+	 * Stock Interlude removes a player from their party when an Olympiad match starts. While the owner is in the match
+	 * (see {@link PhantomOlympiadManager#holdsPartyFor}) the buddy waits where it is instead of being released for
+	 * losing the party; once the owner is back it rejoins the owner's party.
+	 * @return {@code true} while the buddy is held (skip the rest of its tick)
+	 */
+	private boolean holdForOwnerMatch(Buddy state, Player buddy)
+	{
+		final Player owner = state.owner;
+		if (PhantomOlympiadManager.getInstance().holdsPartyFor(owner))
+		{
+			if (!state.olympiadHeld)
+			{
+				state.olympiadHeld = true;
+				buddy.setTarget(null);
+				if (!buddy.isDead())
+				{
+					buddy.getAI().setIntention(Intention.IDLE);
+				}
+			}
+			return true;
+		}
+		if (state.olympiadHeld)
+		{
+			state.olympiadHeld = false;
+			if (!isPartiedWith(state, owner) && PhantomOlympiadManager.rejoinParty(owner, buddy))
+			{
+				ensureFollow(state, owner);
+			}
+		}
+		return false;
 	}
 
 	private boolean isPartiedWith(Buddy state, Player owner)

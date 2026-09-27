@@ -512,132 +512,303 @@ public class FakePlayerBehaviorManager implements IXmlReader
 		}
 		try
 		{
-			final int x;
-			final int y;
-			if (population.polygon.size() >= 3)
-			{
-				// Area population: spawn at a random point inside the drawn shape.
-				final Location pt = randomPointInPolygon(population);
-				x = pt.getX();
-				y = pt.getY();
-			}
-			else
-			{
-				final double angle = Rnd.nextDouble() * 2 * Math.PI;
-				final int distance = Rnd.get(0, population.radius);
-				x = population.center.getX() + (int) (Math.cos(angle) * distance);
-				y = population.center.getY() + (int) (Math.sin(angle) * distance);
-			}
-			final Location loc = GeoEngine.getInstance().getValidLocation(population.center, new Location(x, y, population.center.getZ()));
-			// Snap to the ground height. With geodata loaded this corrects open-field Z automatically;
-			// without geodata it is a no-op (so field bots need geodata to place reliably outdoors).
-			final int groundZ = GeoEngine.getInstance().getHeight(loc.getX(), loc.getY(), loc.getZ());
+			final Location spot = randomSpawnPoint(population);
 
-			final Spawn spawn = new Spawn(_baseId);
-			spawn.setXYZ(loc.getX(), loc.getY(), groundZ);
-			spawn.setHeading(Rnd.get(65536));
-			spawn.setAmount(1);
-			// We own respawn ourselves (with a fresh identity) so the engine's template respawn is off.
-			spawn.stopRespawn();
-			final Npc npc = spawn.doSpawn(false);
-			if (npc != null)
+			// Give the bot its own procedurally generated identity and broadcast the new look.
+			// Only dwarves craft, so a crafter population is locked to the Dwarven race.
+			final boolean isCrafter = (population.storeType != null) && (population.storeType.equalsIgnoreCase("CRAFT") || population.storeType.equalsIgnoreCase("MANUFACTURE"));
+			final FakePlayerAppearance look = FakePlayerAppearanceFactory.generate(population.minLevel, population.maxLevel, isCrafter ? Race.DWARF : population.race, isCrafter);
+			// A share of the town crowd belongs to a random bot clan (BotClans.xml fakePlayerClanChance), so their
+			// crest shows over their head. The live bot-clan id is stamped on the look and read by FakePlayerInfo.
+			final int fpClanChance = BotClanManager.getInstance().getFakePlayerClanChance();
+			if ((fpClanChance > 0) && (Rnd.get(100) < fpClanChance))
 			{
-				// Give the bot its own procedurally generated identity and broadcast the new look.
-				// Only dwarves craft, so a crafter population is locked to the Dwarven race.
-					final boolean isCrafter = (population.storeType != null) && (population.storeType.equalsIgnoreCase("CRAFT") || population.storeType.equalsIgnoreCase("MANUFACTURE"));
-					final FakePlayerAppearance look = FakePlayerAppearanceFactory.generate(population.minLevel, population.maxLevel, isCrafter ? Race.DWARF : population.race, isCrafter);
-					// A share of the town crowd belongs to a random bot clan (BotClans.xml fakePlayerClanChance), so their
-					// crest shows over their head. The live bot-clan id is stamped on the look and read by FakePlayerInfo.
-					final int fpClanChance = BotClanManager.getInstance().getFakePlayerClanChance();
-					if ((fpClanChance > 0) && (Rnd.get(100) < fpClanChance))
-					{
-						final Clan botClan = BotClanManager.getInstance().getRandomClan();
-						if (botClan != null)
-						{
-							look.setClanId(botClan.getId());
-							look.setTitle(BotClanManager.getInstance().randomTitle()); // clan members bear a generated title
-						}
-					}
-				if (population.storeType != null)
+				final Clan botClan = BotClanManager.getInstance().getRandomClan();
+				if (botClan != null)
 				{
-					final String kind = population.storeType.toUpperCase();
-					final int level = look.getLevel();
-					// A market-hub shop (e.g. Giran) ignores the level cap and stocks every grade; elsewhere
-					// the population's level range gates the tier, so towns sell region-appropriate goods.
-					final boolean fullStock = population.fullStock;
-					if (kind.equals("CRAFT") || kind.equals("MANUFACTURE"))
-					{
-						// A real manufacture store: offers recipes; the customer brings the materials.
-						final List<FakePlayerCraftItem> recipes = FakePlayerStoreFactory.generateCraftRecipes(level, fullStock);
-						look.setCraftItems(recipes);
-						look.setStore(PrivateStoreType.MANUFACTURE.getId(), FakePlayerStoreFactory.craftTitle(recipes));
-					}
-					else
-					{
-						final List<FakePlayerStoreItem> stock;
-						final int storeId;
-						// Sign logic in title() only distinguishes BUY from everything-else, so dedicated
-						// Ancient Adena vendors map onto the plain BUY/SELL title kind.
-						String titleKind = kind;
-						if (kind.equals("AABUY"))
-						{
-							// Vendor buys Ancient Adena for adena: the player sells their seal-stone winnings.
-							stock = FakePlayerStoreFactory.generateAncientAdenaBuy();
-							storeId = PrivateStoreType.BUY.getId();
-							titleKind = "BUY";
-						}
-						else if (kind.equals("AASELL"))
-						{
-							// Vendor sells Ancient Adena for adena: the player buys some to spend at the Mammon merchants.
-							stock = FakePlayerStoreFactory.generateAncientAdenaSell();
-							storeId = PrivateStoreType.SELL.getId();
-							titleKind = "SELL";
-						}
-						else if (kind.equals("BUY"))
-						{
-							stock = FakePlayerStoreFactory.generateBuy(level, fullStock);
-							storeId = PrivateStoreType.BUY.getId();
-						}
-						else
-						{
-							stock = FakePlayerStoreFactory.generateSell(level, fullStock);
-							storeId = kind.equals("PACKAGE") ? PrivateStoreType.PACKAGE_SELL.getId() : PrivateStoreType.SELL.getId();
-						}
-						look.setStoreItems(stock);
-						look.setStore(storeId, FakePlayerStoreFactory.title(titleKind, stock));
-					}
+					look.setClanId(botClan.getId());
+					look.setTitle(BotClanManager.getInstance().randomTitle()); // clan members bear a generated title
 				}
-				npc.setFakePlayerAppearance(look);
-				if (look.getPrivateStoreType() != 0)
+			}
+			if (population.storeType != null)
+			{
+				final String kind = population.storeType.toUpperCase();
+				final int level = look.getLevel();
+				// A market-hub shop (e.g. Giran) ignores the level cap and stocks every grade; elsewhere
+				// the population's level range gates the tier, so towns sell region-appropriate goods.
+				final boolean fullStock = population.fullStock;
+				if (kind.equals("CRAFT") || kind.equals("MANUFACTURE"))
 				{
-					// Seated vendors must never move: stop their own NPC AI and pin them in place.
-					npc.disableCoreAI(true);
-					npc.setImmobilized(true);
+					// A real manufacture store: offers recipes; the customer brings the materials.
+					final List<FakePlayerCraftItem> recipes = FakePlayerStoreFactory.generateCraftRecipes(level, fullStock);
+					look.setCraftItems(recipes);
+					look.setStore(PrivateStoreType.MANUFACTURE.getId(), FakePlayerStoreFactory.craftTitle(recipes));
 				}
 				else
 				{
-					// Movers: flag as a walker and kill template random-walk, exactly like the native
-					// WalkingManager. Otherwise the core NPC AI drags the bot back to its spawn the moment it
-					// travels past MaxDriftRange (default 300) and issues its own random walks, both of which
-					// fight our route MOVE_TO commands - the "walks out then snaps back home" behavior.
-					npc.setWalker();
-					npc.setRandomWalking(false);
+					final List<FakePlayerStoreItem> stock;
+					final int storeId;
+					// Sign logic in title() only distinguishes BUY from everything-else, so dedicated
+					// Ancient Adena vendors map onto the plain BUY/SELL title kind.
+					String titleKind = kind;
+					if (kind.equals("AABUY"))
+					{
+						// Vendor buys Ancient Adena for adena: the player sells their seal-stone winnings.
+						stock = FakePlayerStoreFactory.generateAncientAdenaBuy();
+						storeId = PrivateStoreType.BUY.getId();
+						titleKind = "BUY";
+					}
+					else if (kind.equals("AASELL"))
+					{
+						// Vendor sells Ancient Adena for adena: the player buys some to spend at the Mammon merchants.
+						stock = FakePlayerStoreFactory.generateAncientAdenaSell();
+						storeId = PrivateStoreType.SELL.getId();
+						titleKind = "SELL";
+					}
+					else if (kind.equals("BUY"))
+					{
+						stock = FakePlayerStoreFactory.generateBuy(level, fullStock);
+						storeId = PrivateStoreType.BUY.getId();
+					}
+					else
+					{
+						stock = FakePlayerStoreFactory.generateSell(level, fullStock);
+						storeId = kind.equals("PACKAGE") ? PrivateStoreType.PACKAGE_SELL.getId() : PrivateStoreType.SELL.getId();
+					}
+					look.setStoreItems(stock);
+					look.setStore(storeId, FakePlayerStoreFactory.title(titleKind, stock));
 				}
-				npc.broadcastInfo();
-
-				if (profile != null)
-				{
-					// Anchor to the population center (not the scatter point) so clusters stay tight.
-					_bots.put(npc.getObjectId(), new BotState(profile, population.center, population.radius, population));
-				}
-				return true;
 			}
+			final BotState state = (profile == null) ? null : new BotState(profile, population.center, population.radius, population);
+			// Anchor to the population center (not the scatter point) so clusters stay tight.
+			return placeBot(spot, Rnd.get(65536), look, state) != null;
 		}
 		catch (Exception e)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Failed to deploy bot in '" + population.name + "' (baseId=" + _baseId + "): " + e.getMessage());
 		}
 		return false;
+	}
+
+	/** A random, geo-valid, ground-snapped spawn point inside a population's circle or drawn area. */
+	private Location randomSpawnPoint(Population population)
+	{
+		final int x;
+		final int y;
+		if (population.polygon.size() >= 3)
+		{
+			// Area population: spawn at a random point inside the drawn shape.
+			final Location pt = randomPointInPolygon(population);
+			x = pt.getX();
+			y = pt.getY();
+		}
+		else
+		{
+			final double angle = Rnd.nextDouble() * 2 * Math.PI;
+			final int distance = Rnd.get(0, population.radius);
+			x = population.center.getX() + (int) (Math.cos(angle) * distance);
+			y = population.center.getY() + (int) (Math.sin(angle) * distance);
+		}
+		final Location loc = GeoEngine.getInstance().getValidLocation(population.center, new Location(x, y, population.center.getZ()));
+		// Snap to the ground height. With geodata loaded this corrects open-field Z automatically;
+		// without geodata it is a no-op (so field bots need geodata to place reliably outdoors).
+		final int groundZ = GeoEngine.getInstance().getHeight(loc.getX(), loc.getY(), loc.getZ());
+		return new Location(loc.getX(), loc.getY(), groundZ);
+	}
+
+	/**
+	 * Spawns one generated bot with a ready-made look at a spot and registers it with the behavior FSM.
+	 * @param loc where to stand (already ground-snapped)
+	 * @param heading facing
+	 * @param look its identity, gear and optional store
+	 * @param state its behavior state, or {@code null} for a bot with no profile (it only stands there)
+	 * @return the spawned bot, or {@code null} if the spawn failed
+	 */
+	private Npc placeBot(Location loc, int heading, FakePlayerAppearance look, BotState state)
+	{
+		final Spawn spawn;
+		try
+		{
+			spawn = new Spawn(_baseId);
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": No spawn for base template " + _baseId + ": " + e.getMessage());
+			return null;
+		}
+		spawn.setXYZ(loc.getX(), loc.getY(), loc.getZ());
+		spawn.setHeading(heading);
+		spawn.setAmount(1);
+		// We own respawn ourselves (with a fresh identity) so the engine's template respawn is off.
+		spawn.stopRespawn();
+		final Npc npc = spawn.doSpawn(false);
+		if (npc == null)
+		{
+			return null;
+		}
+		npc.setFakePlayerAppearance(look);
+		if (look.getPrivateStoreType() != 0)
+		{
+			// Seated vendors must never move: stop their own NPC AI and pin them in place.
+			npc.disableCoreAI(true);
+			npc.setImmobilized(true);
+		}
+		else
+		{
+			// Movers: flag as a walker and kill template random-walk, exactly like the native
+			// WalkingManager. Otherwise the core NPC AI drags the bot back to its spawn the moment it
+			// travels past MaxDriftRange (default 300) and issues its own random walks, both of which
+			// fight our route MOVE_TO commands - the "walks out then snaps back home" behavior.
+			npc.setWalker();
+			npc.setRandomWalking(false);
+		}
+		npc.broadcastInfo();
+		if (state != null)
+		{
+			_bots.put(npc.getObjectId(), state);
+		}
+		return npc;
+	}
+
+	// ===== Joining a player's party (the town fake steps out, a phantom with its identity plays the party) =====
+
+	/**
+	 * A town fake that stepped out of the crowd to join a player's party. It keeps everything needed to bring the
+	 * same bot back into its population when the party ends.
+	 */
+	public static class PartyLeave
+	{
+		private final FakePlayerAppearance _look;
+		private final Location _location;
+		private final int _heading;
+		private final Profile _profile;
+		private final Location _home;
+		private final int _radius;
+		private final Population _population;
+		private final int _generation;
+
+		PartyLeave(FakePlayerAppearance look, Location location, int heading, BotState state, int generation)
+		{
+			_look = look;
+			_location = location;
+			_heading = heading;
+			_profile = state.profile;
+			_home = state.home;
+			_radius = state.radius;
+			_population = state.population;
+			_generation = generation;
+		}
+
+		/** @return the bot's identity, class, level and gear */
+		public FakePlayerAppearance getLook()
+		{
+			return _look;
+		}
+
+		/** @return where the bot stood when it stepped out */
+		public Location getLocation()
+		{
+			return _location;
+		}
+
+		/** @return the bot's facing when it stepped out */
+		public int getHeading()
+		{
+			return _heading;
+		}
+	}
+
+	/**
+	 * Whether a bot may step out to join a party: a generated crowd member of a population, not a store vendor, and
+	 * not tied up in a trade (an offer, a claim, a meet or a deal store).
+	 * @param bot the town fake
+	 * @return {@code true} if {@link #leaveForParty} would take it
+	 */
+	public boolean canLeaveForParty(Npc bot)
+	{
+		if ((bot == null) || bot.isDead() || !bot.isSpawned())
+		{
+			return false;
+		}
+		final BotState state = _bots.get(bot.getObjectId());
+		final FakePlayerAppearance look = bot.getFakePlayerAppearance();
+		if ((state == null) || (state.population == null) || (look == null) || (look.getPrivateStoreType() != 0))
+		{
+			return false;
+		}
+		return isTradeResponderFree(state, look, System.currentTimeMillis());
+	}
+
+	/**
+	 * Takes a town fake out of the world so a phantom with its identity can join a party in its place. The bot leaves
+	 * the behavior FSM without triggering a respawn; {@link #returnFromParty} brings the same bot back afterwards.
+	 * @param bot the town fake
+	 * @return what is needed to bring it back, or {@code null} if it cannot leave (see {@link #canLeaveForParty})
+	 */
+	public PartyLeave leaveForParty(Npc bot)
+	{
+		synchronized (_tradeClaimLock) // a trade responder claim must not grab the bot while it steps out
+		{
+			if (!canLeaveForParty(bot))
+			{
+				return null;
+			}
+			final BotState state = _bots.remove(bot.getObjectId());
+			if (state == null)
+			{
+				return null;
+			}
+			final PartyLeave leave = new PartyLeave(bot.getFakePlayerAppearance(), new Location(bot.getX(), bot.getY(), bot.getZ()), bot.getHeading(), state, _generation);
+			bot.deleteMe();
+			return leave;
+		}
+	}
+
+	/**
+	 * Brings a bot that left for a party back into its population, as the same character. A bot whose population was
+	 * reloaded meanwhile is not brought back (the reload already refilled the population).
+	 * @param leave the record from {@link #leaveForParty}
+	 * @param where where it should stand, or {@code null} for a random spot of its population (it went home)
+	 * @return {@code true} if the bot is back in the world
+	 */
+	public boolean returnFromParty(PartyLeave leave, Location where)
+	{
+		if ((leave == null) || (leave._generation != _generation))
+		{
+			return false;
+		}
+		final Location spot = (where != null) ? where : randomSpawnPoint(leave._population);
+		final BotState state = (leave._profile == null) ? null : new BotState(leave._profile, leave._home, leave._radius, leave._population);
+		try
+		{
+			return placeBot(spot, (where != null) ? leave._heading : Rnd.get(65536), leave._look, state) != null;
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Failed to bring back town fake '" + leave._look.getName() + "': " + e.getMessage());
+			return false;
+		}
+	}
+
+	/**
+	 * @param leave the record from {@link #leaveForParty}
+	 * @param location a spot in the world
+	 * @return {@code true} if the spot lies within the bot's home population area, so it can simply stay there
+	 */
+	public boolean isHome(PartyLeave leave, Location location)
+	{
+		if ((leave == null) || (location == null) || (leave._population == null))
+		{
+			return false;
+		}
+		final Population population = leave._population;
+		if (population.polygon.size() >= 3)
+		{
+			return isInPolygon(location.getX(), location.getY(), population.polygon);
+		}
+		final long dx = location.getX() - population.center.getX();
+		final long dy = location.getY() - population.center.getY();
+		return ((dx * dx) + (dy * dy)) <= ((long) population.radius * population.radius);
 	}
 
 	/**

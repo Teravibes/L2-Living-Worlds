@@ -65,6 +65,14 @@ public class PhantomPvpManagerTest
 		testSizingEnrichment();
 		testOpponentKind();
 		testDriverGateComposition();
+		testDuelAcceptChance();
+		testDuelAcceptRoll();
+		testDuelIssueGate();
+		testDuelSurrender();
+		testDuelRolls();
+		testDuelWaitAccepted();
+		testDuelWaitDeclinedOrIgnored();
+		testDuelWaitCountdownAndGone();
 
 		System.out.println();
 		System.out.println("Ran " + checks + " checks, " + failures + " failure(s).");
@@ -302,6 +310,121 @@ public class PhantomPvpManagerTest
 	}
 
 	// ===== tiny assertion helpers =====
+
+	/** Acceptance starts at honor, drops per level the challenger is above, and is clamped; a hopeless gap always refuses. */
+	private static void testDuelAcceptChance()
+	{
+		eq(60, PhantomPvpManager.duelAcceptChancePercent(60, 40, 40), "even levels -> chance is honor");
+		eq(60, PhantomPvpManager.duelAcceptChancePercent(60, 45, 40), "challenger below -> chance is honor");
+		eq(60 - (3 * PhantomPvpManager.DUEL_LEVEL_GAP_ACCEPT_WEIGHT), PhantomPvpManager.duelAcceptChancePercent(60, 40, 43), "challenger 3 above -> honor minus 3 * weight");
+		eq(PhantomPvpManager.DUEL_ACCEPT_FLOOR, PhantomPvpManager.duelAcceptChancePercent(0, 40, 40), "zero honor -> floor");
+		eq(PhantomPvpManager.DUEL_ACCEPT_CEIL, PhantomPvpManager.duelAcceptChancePercent(100, 40, 40), "full honor -> ceiling");
+		eq(PhantomPvpManager.DUEL_ACCEPT_FLOOR, PhantomPvpManager.duelAcceptChancePercent(60, 40, 49), "large gap below hopeless -> floor, not zero");
+		eq(0, PhantomPvpManager.duelAcceptChancePercent(100, 40, 40 + PhantomPvpManager.HOPELESS_LEVEL_GAP), "hopeless gap -> never accepts");
+	}
+
+	/** shouldAcceptDuel is exactly "roll below the chance". */
+	private static void testDuelAcceptRoll()
+	{
+		final int chance = PhantomPvpManager.duelAcceptChancePercent(60, 40, 40); // 60
+		eqBool(true, PhantomPvpManager.shouldAcceptDuel(chance - 1, 60, 40, 40), "roll just under chance -> accept");
+		eqBool(false, PhantomPvpManager.shouldAcceptDuel(chance, 60, 40, 40), "roll equal to chance -> decline");
+		eqBool(true, PhantomPvpManager.shouldAcceptDuel(0, 0, 40, 40), "floor chance still accepts a zero roll");
+		eqBool(false, PhantomPvpManager.shouldAcceptDuel(0, 100, 40, 40 + PhantomPvpManager.HOPELESS_LEVEL_GAP), "hopeless gap refuses even a zero roll");
+	}
+
+	/** Only an honorable phantom challenges, and only within the level band either way. */
+	private static void testDuelIssueGate()
+	{
+		final int min = PhantomPvpManager.DUEL_CHALLENGER_MIN_HONOR;
+		final int band = PhantomPvpManager.DUEL_CHALLENGE_LEVEL_BAND;
+		eqBool(true, PhantomPvpManager.mayIssueDuel(min, 40, 40), "minimum honor, even levels -> may challenge");
+		eqBool(false, PhantomPvpManager.mayIssueDuel(min - 1, 40, 40), "below minimum honor -> never challenges");
+		eqBool(true, PhantomPvpManager.mayIssueDuel(100, 40, 40 + band), "target at the top of the band -> may challenge");
+		eqBool(true, PhantomPvpManager.mayIssueDuel(100, 40 + band, 40), "target at the bottom of the band -> may challenge");
+		eqBool(false, PhantomPvpManager.mayIssueDuel(100, 40, 41 + band), "target above the band -> no challenge");
+		eqBool(false, PhantomPvpManager.mayIssueDuel(100, 41 + band, 40), "target below the band -> no challenge");
+	}
+
+	/** Only a timid phantom surrenders, and only once it is at its flee threshold. */
+	private static void testDuelSurrender()
+	{
+		final int timid = PhantomPvpManager.DUEL_SURRENDER_MAX_BRAVERY - 1;
+		final int threshold = PhantomPvpManager.effectiveFleeHpPercent(BASE, timid, 40, 40);
+		eqBool(true, PhantomPvpManager.shouldSurrenderDuel(threshold, BASE, timid, 40, 40), "timid at threshold -> surrender");
+		eqBool(false, PhantomPvpManager.shouldSurrenderDuel(threshold + 1, BASE, timid, 40, 40), "timid above threshold -> fight on");
+		eqBool(false, PhantomPvpManager.shouldSurrenderDuel(1, BASE, PhantomPvpManager.DUEL_SURRENDER_MAX_BRAVERY, 40, 40), "not timid -> never surrenders, even at 1 HP");
+		eqBool(false, PhantomPvpManager.shouldSurrenderDuel(1, BASE, 100, 40, 40 + PhantomPvpManager.HOPELESS_LEVEL_GAP), "brave vs hopeless gap -> still fights the duel out");
+	}
+
+	/** Honor rolls stay in range, and the challenge roll honors a 0% and a 100% chance. */
+	private static void testDuelRolls()
+	{
+		boolean allHonorInRange = true;
+		for (int i = 0; i < 2000; i++)
+		{
+			final int honor = PhantomPvpManager.rollHonor();
+			if ((honor < PhantomPvpManager.HONOR_MIN) || (honor > PhantomPvpManager.HONOR_MAX))
+			{
+				allHonorInRange = false;
+			}
+		}
+		eqBool(true, allHonorInRange, "every honor roll is within [MIN, MAX]");
+		final int saved = FakePlayersConfig.PHANTOM_PVP_DUEL_CHANCE_PERCENT;
+		FakePlayersConfig.PHANTOM_PVP_DUEL_CHANCE_PERCENT = 0;
+		boolean anyAtZero = false;
+		for (int i = 0; i < 500; i++)
+		{
+			anyAtZero |= PhantomPvpManager.rollIssueDuel();
+		}
+		eqBool(false, anyAtZero, "0% duel chance never issues");
+		FakePlayersConfig.PHANTOM_PVP_DUEL_CHANCE_PERCENT = 100;
+		boolean allAtFull = true;
+		for (int i = 0; i < 500; i++)
+		{
+			allAtFull &= PhantomPvpManager.rollIssueDuel();
+		}
+		eqBool(true, allAtFull, "100% duel chance always issues");
+		FakePlayersConfig.PHANTOM_PVP_DUEL_CHANCE_PERCENT = saved;
+	}
+
+	// Duel wait timings used below: a 15s request timeout plus a 12s start grace, as PhantomManager uses them.
+	private static final long GRACE = 12000;
+	private static final long ASK_DEADLINE = 15000 + GRACE;
+
+	/** A player who accepts: the phantom holds while the request is pending and through the countdown, then fights. */
+	private static void testDuelWaitAccepted()
+	{
+		eq(PhantomPvpManager.DUEL_WAIT_HOLD, PhantomPvpManager.duelWaitStep(true, false, true, 0, 1000, ASK_DEADLINE, GRACE), "request pending -> hold");
+		eq(PhantomPvpManager.DUEL_WAIT_HOLD, PhantomPvpManager.duelWaitStep(true, false, false, 5000, 9000, ASK_DEADLINE, GRACE), "accepted, countdown running -> hold");
+		eq(PhantomPvpManager.DUEL_WAIT_FIGHT, PhantomPvpManager.duelWaitStep(true, true, false, 5000, 13000, ASK_DEADLINE, GRACE), "duel started -> fight");
+		eq(PhantomPvpManager.DUEL_WAIT_FIGHT, PhantomPvpManager.duelWaitStep(true, true, false, 5000, ASK_DEADLINE + 1, ASK_DEADLINE, GRACE), "duel started just past the deadline -> still fight, never abandon a running duel");
+	}
+
+	/** A player who declines, or never answers: the phantom gives up once the start grace passes with no duel. */
+	private static void testDuelWaitDeclinedOrIgnored()
+	{
+		// Declined at 3s: hold through the grace window, then end.
+		eq(PhantomPvpManager.DUEL_WAIT_HOLD, PhantomPvpManager.duelWaitStep(true, false, false, 3000, 3000 + GRACE, ASK_DEADLINE, GRACE), "declined, at the edge of the grace -> hold");
+		eq(PhantomPvpManager.DUEL_WAIT_END, PhantomPvpManager.duelWaitStep(true, false, false, 3000, 3001 + GRACE, ASK_DEADLINE, GRACE), "declined, grace passed -> end");
+		// Ignored: pending the whole 15s, then the timer expires and is seen answered at 15s.
+		eq(PhantomPvpManager.DUEL_WAIT_HOLD, PhantomPvpManager.duelWaitStep(true, false, true, 0, 14999, ASK_DEADLINE, GRACE), "ignored, still inside the request timeout -> hold");
+		eq(PhantomPvpManager.DUEL_WAIT_HOLD, PhantomPvpManager.duelWaitStep(true, false, false, 0, 15000, ASK_DEADLINE, GRACE), "expired but not yet recorded -> hold one tick");
+		eq(PhantomPvpManager.DUEL_WAIT_END, PhantomPvpManager.duelWaitStep(true, false, false, 15000, ASK_DEADLINE, ASK_DEADLINE, GRACE), "ignored, deadline reached -> end");
+		// A stuck pending flag can never hold past the hard deadline.
+		eq(PhantomPvpManager.DUEL_WAIT_END, PhantomPvpManager.duelWaitStep(true, false, true, 0, ASK_DEADLINE, ASK_DEADLINE, GRACE), "still pending at the deadline -> end");
+	}
+
+	/** Countdown after an accepted challenge, and an opponent who leaves at any point. */
+	private static void testDuelWaitCountdownAndGone()
+	{
+		final long countdownDeadline = GRACE;
+		eq(PhantomPvpManager.DUEL_WAIT_HOLD, PhantomPvpManager.duelWaitStep(true, false, false, 0, 4000, countdownDeadline, GRACE), "countdown -> hold");
+		eq(PhantomPvpManager.DUEL_WAIT_FIGHT, PhantomPvpManager.duelWaitStep(true, true, false, 0, 8000, countdownDeadline, GRACE), "countdown over, duel running -> fight");
+		eq(PhantomPvpManager.DUEL_WAIT_END, PhantomPvpManager.duelWaitStep(true, false, false, 0, countdownDeadline, countdownDeadline, GRACE), "duel never started by the deadline -> end");
+		eq(PhantomPvpManager.DUEL_WAIT_END, PhantomPvpManager.duelWaitStep(false, false, true, 0, 1000, ASK_DEADLINE, GRACE), "opponent gone while asked -> end");
+		eq(PhantomPvpManager.DUEL_WAIT_END, PhantomPvpManager.duelWaitStep(false, true, false, 0, 1000, countdownDeadline, GRACE), "opponent gone, even mid-duel -> end");
+	}
 
 	private static void eq(int expected, int actual, String what)
 	{

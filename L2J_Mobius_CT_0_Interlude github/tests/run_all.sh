@@ -36,12 +36,14 @@ PROD_SOURCES=(
 	"java/org/l2jmobius/commons/util/ConfigReader.java"
 	"java/org/l2jmobius/gameserver/config/custom/FakePlayersConfig.java"
 	"java/org/l2jmobius/gameserver/managers/PhantomPvpManager.java"
+	"java/org/l2jmobius/gameserver/managers/PhantomOlympiadRules.java"
 	"java/org/l2jmobius/gameserver/managers/FakePlayerChatParsing.java"
 	"java/org/l2jmobius/gameserver/managers/FakePlayerStorePricing.java"
 	"java/org/l2jmobius/gameserver/managers/FakePlayerStoreMath.java"
 	"java/org/l2jmobius/gameserver/managers/FakePlayerStoreEligibility.java"
 	"java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java"
 	"java/org/l2jmobius/gameserver/managers/PhantomBuffReservations.java"
+	"java/org/l2jmobius/gameserver/managers/TownFakeInviteRules.java"
 	"java/org/l2jmobius/gameserver/modules/Json.java"
 	"java/org/l2jmobius/gameserver/modules/ModuleException.java"
 	"java/org/l2jmobius/gameserver/modules/ModuleResourceType.java"
@@ -59,6 +61,8 @@ JAVA_MAIN_CLASSES=(
 	"FakePlayerNameFactoryTest"
 	"PhantomBuffReservationsTest"
 	"PhantomPvpManagerTest"
+	"PhantomOlympiadRulesTest"
+	"TownFakeInviteRulesTest"
 	"ModuleFrameworkTest"
 )
 

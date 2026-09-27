@@ -21,6 +21,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.config.GeneralConfig;
+import org.l2jmobius.gameserver.managers.FakePlayerChatManager;
 import org.l2jmobius.gameserver.managers.PhantomBuddyManager;
 import org.l2jmobius.gameserver.managers.PhantomManager;
 import org.l2jmobius.gameserver.managers.PhantomPartyManager;
@@ -62,6 +63,12 @@ public class RequestJoinParty extends ClientPacket
 		final Player target = World.getInstance().getPlayer(_name);
 		if (target == null)
 		{
+			// Town fake players are NPCs: an invite to one is answered by the bot itself (joins if it agreed, else asks why).
+			// The same inviter rules as below apply there first, and the loot type sent with this invite is kept.
+			if (FakePlayerChatManager.getInstance().onPartyInvite(requestor, _name, PartyDistributionType.findById(_partyDistributionTypeId)))
+			{
+				return;
+			}
 			requestor.sendPacket(SystemMessageId.YOU_MUST_FIRST_SELECT_A_USER_TO_INVITE_TO_YOUR_PARTY);
 			return;
 		}

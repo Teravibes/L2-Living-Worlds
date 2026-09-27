@@ -36,6 +36,17 @@ scripts/Configure-Brain.bat
 launcher/update.ps1
 tools/l2admin/index.html
 tools/l2admin/native-bridge.js
+# One-release exception to the "no customizable configs" rule. These configs changed
+# defaults this release, so they ship in the patch and overwrite the tester's copy:
+#   - FakePlayers.ini: phantom gear enchant is now +0 to +3, duel settings documented.
+#   - PhantomOlympiad.ini: new file for the Phantom Olympiad nobles.
+#   - Olympiad.ini: weekly Olympiad period and the current ranking shown.
+#   - NpcStatMultipliers.ini: raid and grand bosses at 75% of stock HP, P.Atk and M.Atk.
+# Remove these four entries after the next patch so later patches keep tester settings.
+game/config/Custom/FakePlayers.ini
+game/config/Custom/PhantomOlympiad.ini
+game/config/Olympiad.ini
+game/config/Custom/NpcStatMultipliers.ini
 game/data/PhantomPlaystyles.xml
 game/data/xsd/PhantomPlaystyles.xsd
 game/data/PhantomPopulations.xml

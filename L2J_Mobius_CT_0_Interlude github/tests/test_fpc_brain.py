@@ -765,6 +765,20 @@ class OutputContractTests(unittest.TestCase):
         self.assertNotIn("MEET", dropped)
         self.assertNotIn("[[", dropped)
 
+    def test_whisper_keeps_its_party_tag(self):
+        out = self.brain.validate_output("WHISPER", "sure inv me [[PARTY]]")
+        self.assertEqual("sure inv me [[PARTY]]", out)
+        # A malformed ending is canonicalized, and the tag is foreign to every other mode.
+        self.assertIn("[[PARTY]]", self.brain.validate_output("WHISPER", "k [[PARTY])"))
+        self.assertNotIn("PARTY", self.brain.validate_output("SAY", "k [[PARTY]]"))
+
+    def test_history_text_drops_party_tag(self):
+        self.assertEqual("sure inv me", self.brain.history_text("sure inv me [[PARTY]]"))
+
+    def test_strip_party_tag(self):
+        self.assertEqual("?", self.brain.strip_party_tag("? [[PARTY]]"))
+        self.assertEqual("omw [[MEET:gatekeeper]]", self.brain.strip_party_tag("omw [[MEET:gatekeeper]]"))
+
     def test_whisper_strips_a_tag_that_is_not_its_own(self):
         out = self.brain.validate_output("WHISPER", "later then [[DISBAND]]")
         self.assertNotIn("DISBAND", out)
@@ -1014,6 +1028,46 @@ class ReplyFinalizationTests(unittest.TestCase):
         self.assertEqual("ok deal", body)  # foreign tag stripped from the player-visible reply
         stored = [m["content"] for m in self.brain.conversations[("Tester", "Mirella")] if m["role"] == "assistant"]
         self.assertEqual(["ok deal"], stored)  # history matches what the player saw, not the raw "[[DISBAND]]" line
+
+    def test_invite_out_of_blue_never_agrees(self):
+        # Java sends this marker when a party invite reaches a bot the player never talked to about partying. Even if
+        # the model says yes, the PARTY tag is dropped so the bot does not take the invite.
+        original = self.brain.call_llm
+        self.brain.call_llm = lambda *a, **k: "sure lol [[PARTY]]"
+        try:
+            response = self.brain.app.test_client().post("/chat", data=self.brain.INVITE_OUT_OF_BLUE,
+                headers={"X-FPC": "Mirella", "X-Mode": "WHISPER", "X-Player": "Tester"})
+        finally:
+            self.brain.call_llm = original
+        self.assertEqual("sure lol", response.get_data(as_text=True))
+
+    def test_party_ask_keeps_the_party_tag(self):
+        original = self.brain.call_llm
+        self.brain.call_llm = lambda *a, **k: "ya sure, inv me [[PARTY]]"
+        try:
+            response = self.brain.app.test_client().post("/chat", data="wanna pt?",
+                headers={"X-FPC": "Mirella", "X-Mode": "WHISPER", "X-Player": "Tester"})
+        finally:
+            self.brain.call_llm = original
+        self.assertEqual("ya sure, inv me [[PARTY]]", response.get_data(as_text=True))
+        stored = [m["content"] for m in self.brain.conversations[("Tester", "Mirella")] if m["role"] == "assistant"]
+        self.assertEqual(["ya sure, inv me"], stored)  # Java decides whether the bot joins, so history keeps no tag
+
+    def test_invite_after_talk_keeps_the_party_tag(self):
+        # An invite after party talk is the bot's moment to decide, so its yes must reach Java.
+        original = self.brain.call_llm
+        self.brain.call_llm = lambda *a, **k: "k omw [[PARTY]]"
+        try:
+            response = self.brain.app.test_client().post("/chat", data=self.brain.INVITE_AFTER_TALK,
+                headers={"X-FPC": "Mirella", "X-Mode": "WHISPER", "X-Player": "Tester"})
+        finally:
+            self.brain.call_llm = original
+        self.assertEqual("k omw [[PARTY]]", response.get_data(as_text=True))
+
+    def test_invite_markers_match_java(self):
+        java = (Path(__file__).resolve().parents[1] / "java/org/l2jmobius/gameserver/managers/FakePlayerChatManager.java").read_text(encoding="utf-8")
+        self.assertIn('INVITE_OUT_OF_BLUE = "' + self.brain.INVITE_OUT_OF_BLUE + '"', java)
+        self.assertIn('INVITE_AFTER_TALK = "' + self.brain.INVITE_AFTER_TALK + '"', java)
 
     def test_private_mode_validator_trim_is_diagnosed(self):
         # FPC-051 regression (8A): private modes finalize the reply early (inside finalize_reply), but the diagnostic

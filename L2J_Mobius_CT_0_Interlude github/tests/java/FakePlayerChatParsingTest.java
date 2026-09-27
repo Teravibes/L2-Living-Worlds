@@ -57,6 +57,7 @@ public class FakePlayerChatParsingTest
 		testDealIntentPredicates();
 		testLfpLevel();
 		testLooksLikeLfp();
+		testIsPartyAsk();
 		testLooksLikeTradeAd();
 		testNormalizeMeetSpot();
 		testMeetTagPattern();
@@ -272,6 +273,25 @@ public class FakePlayerChatParsingTest
 		truth(FakePlayerChatParsing.looksLikeLfp("lfm 1 more dd"), "lfm is a party call");
 		truth(FakePlayerChatParsing.looksLikeLfp("looking for a healer"), "looking for ...");
 		truth(!FakePlayerChatParsing.looksLikeLfp("selling soulshots cheap"), "trade ad is not a party call");
+	}
+
+	private static void testIsPartyAsk()
+	{
+		truth(FakePlayerChatParsing.isPartyAsk("wanna pt?"), "wanna pt is a party ask");
+		truth(FakePlayerChatParsing.isPartyAsk("join my party"), "join my party");
+		truth(FakePlayerChatParsing.isPartyAsk("can i inv u"), "inv");
+		truth(FakePlayerChatParsing.isPartyAsk("duo at cruma?"), "duo");
+		// Hunting talk without a party word (FPC-122).
+		truth(FakePlayerChatParsing.isPartyAsk("want to go xp with me?"), "xp with me");
+		truth(FakePlayerChatParsing.isPartyAsk("lets go forsaken cata"), "lets go");
+		truth(FakePlayerChatParsing.isPartyAsk("are we going or what?"), "we going");
+		truth(FakePlayerChatParsing.isPartyAsk("wanna hunt at cruma"), "hunt");
+		truth(!FakePlayerChatParsing.isPartyAsk("where are you?"), "where are you is not a party ask");
+		truth(!FakePlayerChatParsing.isPartyAsk("how much for the boots"), "price question is not a party ask");
+		truth(!FakePlayerChatParsing.isPartyAsk("hey how are you"), "greeting is not a party ask");
+		truth(!FakePlayerChatParsing.isPartyAsk("wts soulshots"), "trade ad is not a party ask");
+		truth(!FakePlayerChatParsing.isPartyAsk("printer is empty"), "pt inside a word does not count");
+		truth(!FakePlayerChatParsing.isPartyAsk(null), "null is not a party ask");
 	}
 
 	private static void testLooksLikeTradeAd()

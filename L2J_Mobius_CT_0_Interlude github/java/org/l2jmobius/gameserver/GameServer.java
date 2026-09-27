@@ -118,6 +118,7 @@ import org.l2jmobius.gameserver.managers.CustomMailManager;
 import org.l2jmobius.gameserver.managers.DailyResetManager;
 import org.l2jmobius.gameserver.managers.DayNightSpawnManager;
 import org.l2jmobius.gameserver.managers.DimensionalRiftManager;
+import org.l2jmobius.gameserver.managers.DiscordPresenceManager;
 import org.l2jmobius.gameserver.managers.EventDropManager;
 import org.l2jmobius.gameserver.managers.FakePlayerBehaviorManager;
 import org.l2jmobius.gameserver.managers.FakePlayerChatManager;
@@ -307,6 +308,7 @@ public class GameServer
 		PhantomManager.getInstance();
 		PhantomPlaystyleData.getInstance();
 		PhantomBuddyManager.getInstance();
+		DiscordPresenceManager.getInstance(); // Living Worlds: character info for the launcher's Discord presence.
 		StaticObjectData.getInstance();
 		CastleManager.getInstance().loadInstances();
 		SchemeBufferTable.getInstance();

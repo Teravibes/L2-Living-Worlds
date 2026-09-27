@@ -93,6 +93,7 @@ import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.ArmorType;
 import org.l2jmobius.gameserver.model.item.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.type.ActionType;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -100,6 +101,7 @@ import org.l2jmobius.gameserver.model.skill.AbnormalType;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
@@ -199,6 +201,13 @@ public class PhantomManager implements IXmlReader
 	private static final int HP_POTION_ID = 1539; // Greater Healing Potion
 	private static final int HP_POTION_COUNT = 20000;
 	private static final int HP_POTION_PERCENT = 60;
+	// Healing potions a party companion may carry, best first: Greater, normal, Lesser Healing Potion.
+	private static final int[] COMPANION_HP_POTIONS =
+	{
+		1539,
+		1061,
+		1060
+	};
 	// Emergency rez scroll: every recruited party member carries a small stack of Scroll of Resurrection (skill 2014)
 	// so a party with no natural rezzer - an all-DPS group, or one whose only healer is also down - can still put a
 	// fallen member or the leader back up. The party brain (PhantomPartyManager) only reaches for a scroll when nobody
@@ -1129,6 +1138,11 @@ public class PhantomManager implements IXmlReader
 		boolean olympian;
 		boolean olyInMatch; // seen in Olympiad mode (moved to a stadium); the fight kit is on until the match ends
 		long olyNextWanderAt; // next short stroll while idle near the Olympiad Manager
+		// Party companion (addCompanion): a real player's own character, loaded from its row and driven by the party AI.
+		// Its row belongs to that player, so despawn saves it and never deletes it, and it is never promoted or re-geared.
+		boolean companion;
+		Runnable onCompanionLeave; // run once after the companion is saved and removed from the world (may be null)
+		int companionOwnerId; // objectId of the player who summoned this companion
 
 		PhantomData(Player player, Location home, Population population, boolean mage, BuddyRole role)
 		{
@@ -1706,6 +1720,12 @@ public class PhantomManager implements IXmlReader
 			player.sendMessage(phantom.getName() + " declined your friend request.");
 			return;
 		}
+		// A party companion is a real character on its own account; promoting it would move it to the bot account.
+		if ((target != null) && target.companion)
+		{
+			player.sendMessage(phantom.getName() + " is a summoned character. Log in to it to add it as a friend.");
+			return;
+		}
 
 		// Promote an ephemeral phantom to a persistent regular: flip its DB row to the regular account so the
 		// boot sweep skips it, despawn keeps it, and the friend login-spawn can find it. The in-memory account
@@ -1818,7 +1838,7 @@ public class PhantomManager implements IXmlReader
 	/**
 	 * Despawns the friend-regulars that were login-spawned for a player who is logging out, so they do not
 	 * linger with nobody around. A regular that another still-online player is also friends with is handed over
-	 * to that player rather than despawned.
+	 * to that player rather than despawned. The player's party companions are saved and removed too.
 	 * @param owner the player logging out
 	 */
 	public void onOwnerLogout(Player owner)
@@ -1831,6 +1851,13 @@ public class PhantomManager implements IXmlReader
 		_friendRegularsByOwner.remove(ownerId); // stop the supervisor keeping them online
 		for (PhantomData data : new ArrayList<>(_phantoms.values()))
 		{
+			// The owner's companions are saved and removed right now, before the logout or restart finishes, so the
+			// character selection screen that follows already reads what they earned.
+			if (data.companion && (data.companionOwnerId == ownerId))
+			{
+				despawn(data);
+				continue;
+			}
 			if (data.friendOwnerId != ownerId)
 			{
 				continue;
@@ -3707,6 +3734,11 @@ public class PhantomManager implements IXmlReader
 		{
 			releaseDuelRequest(data.player, resolvePvpTarget(data));
 		}
+		if (data.companion)
+		{
+			despawnCompanion(data); // a real player's own character: saved, never deleted
+			return;
+		}
 		// isRegular (not a raw account check) so a phantom promoted THIS session - whose final in-memory
 		// account still reads 'phantom' - is recognized and its row kept too.
 		final boolean persistent = isRegular(data.player) || data.olympian;
@@ -4220,6 +4252,144 @@ public class PhantomManager implements IXmlReader
 		data.recruited = true;
 		LOGGER.info(getClass().getSimpleName() + ": Friend-regular '" + friend.getName() + "' adopted into a party as " + role + ".");
 		return role;
+	}
+
+	/**
+	 * Brings a real player's own character, already loaded from its row with {@link Player#load}, into the owner's
+	 * party as a clientless member driven by the party AI (follow, assist, playstyle, heals and buffs by class). It keeps
+	 * its own level, skills, gear and consumables: nothing is added, removed or re-geared. Its soulshots and healing
+	 * potions are switched to auto-use when it carries them. When it leaves the party for any reason (dismissed, owner
+	 * logged out, dead past the res window, its own account logged in) it is saved and removed from the world, and then
+	 * {@code onLeave} runs. Its row is never deleted.
+	 * @param owner the player whose party it joins (solo, or the party leader)
+	 * @param companion the loaded, not yet spawned character
+	 * @param location where it appears
+	 * @param onLeave run once after it has been saved and removed (may be {@code null})
+	 * @return {@code true} if it joined; on {@code false} it has already been saved and removed again
+	 */
+	public boolean addCompanion(Player owner, Player companion, Location location, Runnable onLeave)
+	{
+		if ((owner == null) || (companion == null) || (location == null) || _phantoms.containsKey(companion.getObjectId()))
+		{
+			return false;
+		}
+		final PartyRole role = roleForClass(companion.getPlayerClass());
+		final boolean mage = role.mage;
+		armCompanionSupplies(companion, mage);
+		registerAutoSkills(companion);
+		companion.refreshOverloaded();
+		companion.spawnMe(location.getX(), location.getY(), location.getZ());
+		companion.setOfflinePlay(true); // keeps the AutoUse loop running without a client (see enterWorld)
+		companion.setOnlineStatus(true, true);
+		companion.setRunning();
+		companion.broadcastUserInfo();
+
+		final PhantomData data = new PhantomData(companion, location, null, mage, BuddyRole.NONE);
+		data.recruited = true;
+		data.companion = true;
+		data.onCompanionLeave = onLeave;
+		data.companionOwnerId = owner.getObjectId();
+		_phantoms.put(companion.getObjectId(), data);
+		attachPvpDamageListener(companion, data);
+		// Same runtime state as a recruited party member (see createPartyMember): combat roles cast through AutoUse on
+		// the target the party manager assigns, supports are cast by hand from the party tick.
+		if (!role.isSupport())
+		{
+			if (!mage && !companion.getAutoUseSettings().getAutoActions().contains(AUTO_ATTACK_ACTION))
+			{
+				companion.getAutoUseSettings().getAutoActions().add(AUTO_ATTACK_ACTION);
+			}
+			companion.setAutoPlaying(true);
+			AutoUseTaskManager.getInstance().startAutoUseTask(companion);
+		}
+		startSupervising();
+		LOGGER.info(getClass().getSimpleName() + ": Companion '" + companion.getName() + "' (objId=" + companion.getObjectId() + ", " + companion.getPlayerClass() + ", level " + companion.getLevel() + ") joined " + owner.getName() + " as " + role + ".");
+		// On failure the party manager releases it at once, which comes back through despawnCompanion.
+		return PhantomPartyManager.getInstance().joinCompanion(owner, companion);
+	}
+
+	/**
+	 * @param accountName a character's account name
+	 * @return {@code true} if the account is one of the bot accounts (ephemeral phantoms, persistent regulars, Olympiad
+	 *         nobles), whose characters belong to this manager and must never be summoned as a companion
+	 */
+	public static boolean isBotAccount(String accountName)
+	{
+		return ACCOUNT_NAME.equals(accountName) || ACCOUNT_NAME_REGULAR.equals(accountName) || ACCOUNT_NAME_NOBLE.equals(accountName);
+	}
+
+	/** @return {@code true} if the player is a live party companion (a real player's own character run by the AI). */
+	public boolean isCompanion(Player player)
+	{
+		final PhantomData data = (player == null) ? null : _phantoms.get(player.getObjectId());
+		return (data != null) && data.companion;
+	}
+
+	/**
+	 * Switches a companion's own soulshots or spiritshots (matching its weapon grade) and its best healing potion to
+	 * auto-use. Runtime settings only: nothing is added to its inventory.
+	 */
+	private static void armCompanionSupplies(Player companion, boolean mage)
+	{
+		final Item weapon = companion.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		if (weapon != null)
+		{
+			final CrystalType grade = weapon.getTemplate().getCrystalType();
+			final ActionType shotAction = mage ? ActionType.SPIRITSHOT : ActionType.SOULSHOT;
+			for (Item item : companion.getInventory().getItems())
+			{
+				if ((item.getTemplate().getDefaultAction() == shotAction) && (item.getTemplate().getCrystalType() == grade))
+				{
+					companion.addAutoSoulShot(item.getId());
+				}
+			}
+		}
+		for (int potionId : COMPANION_HP_POTIONS)
+		{
+			if (companion.getInventory().getItemByItemId(potionId) != null)
+			{
+				companion.getAutoUseSettings().setAutoPotionItem(potionId);
+				companion.getAutoPlaySettings().setAutoPotionPercent(HP_POTION_PERCENT);
+				break;
+			}
+		}
+	}
+
+	/**
+	 * Tears a companion down: saves and logs it out the way a real player leaves, then runs its leave callback. If its
+	 * own account has logged in meanwhile, stock character select already saved and removed this copy, and a new
+	 * instance may be in the world under the same objectId, so this stale copy is neither saved nor deleted again.
+	 */
+	private void despawnCompanion(PhantomData data)
+	{
+		final Player companion = data.player;
+		final int objectId = companion.getObjectId();
+		try
+		{
+			AutoPlayTaskManager.getInstance().stopAutoPlay(companion);
+			AutoUseTaskManager.getInstance().stopAutoUseTask(companion);
+			if (World.getInstance().getPlayer(objectId) == companion)
+			{
+				Disconnection.of(companion).storeAndDelete();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Failed to save companion " + companion.getName() + ": " + e.getMessage());
+		}
+		_phantoms.remove(objectId);
+		LOGGER.info(getClass().getSimpleName() + ": Companion '" + companion.getName() + "' left and was saved.");
+		if (data.onCompanionLeave != null)
+		{
+			try
+			{
+				data.onCompanionLeave.run();
+			}
+			catch (Exception e)
+			{
+				LOGGER.warning(getClass().getSimpleName() + ": Companion leave callback failed for " + companion.getName() + ": " + e.getMessage());
+			}
+		}
 	}
 
 	/** Despawns a recruited member (party disbanded / owner gone / grace elapsed / member dead). */

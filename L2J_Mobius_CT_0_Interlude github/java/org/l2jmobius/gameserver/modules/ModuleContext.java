@@ -49,6 +49,11 @@ public interface ModuleContext
 	ModuleEvents events();
 
 	/**
+	 * @return the party companion surface: brings a saved character into a player's party, run by the party AI
+	 */
+	ModuleCompanions companions();
+
+	/**
 	 * @return a logger scoped to this module, so its output is attributable
 	 */
 	Logger logging();

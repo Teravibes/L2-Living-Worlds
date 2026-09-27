@@ -878,6 +878,7 @@ public class Party extends AbstractPlayerGroup
 		// share of XP/SP - otherwise they'd both steal a cut and shrink the real player's by inflating the
 		// level-sum split. Exclude them whenever at least one real (client-connected) player remains to be
 		// rewarded. Opt in to a "realistic" split (AI counts toward the XP share) via FakePlayerPartyExpShare.
+		// Party companions (PhantomManager.addCompanion) always get their share.
 		if (!FakePlayersConfig.FAKE_PLAYER_PARTY_EXP_SHARE)
 		{
 			boolean hasRealMember = false;
@@ -894,7 +895,8 @@ public class Party extends AbstractPlayerGroup
 				final List<Player> realMembers = new ArrayList<>(members.size());
 				for (Player member : members)
 				{
-					if (member.getClient() != null)
+					// A party companion is a real player's own character run clientless, so it shares XP like a person.
+					if ((member.getClient() != null) || PhantomManager.getInstance().isCompanion(member))
 					{
 						realMembers.add(member);
 					}

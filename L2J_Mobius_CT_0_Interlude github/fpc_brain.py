@@ -865,6 +865,12 @@ load_knowledge()
 load_memory()
 print(f"Memory: {sum(len(v.get(c, [])) for v in _memory.values() if isinstance(v, dict) for c in ('trade', 'party', 'social'))} remembered fact(s).")
 
+# Java sends this as the player's message when a party invite reaches a bot the player never talked to about partying.
+# Must match FakePlayerChatManager.INVITE_OUT_OF_BLUE. The bot asks what they want and never agrees on this turn.
+INVITE_OUT_OF_BLUE = "*sends you a party invite without saying anything*"
+# Must match FakePlayerChatManager.INVITE_AFTER_TALK. The bot decides now; [[PARTY]] makes it join at once.
+INVITE_AFTER_TALK = "*sends you a party invite after you talked about partying*"
+
 def whisper_persona(fpc, voice):
     return (GLOBAL_RULES + "\n\n" + voice + "\n\n"
             f"You are the player '{fpc}', chatting PRIVATELY with another Lineage 2 player. "
@@ -894,7 +900,24 @@ def whisper_persona(fpc, voice):
             "- When you close a deal (any line that carries a MEET or SHOP tag), keep the spoken part short and "
             "on-topic about the trade or meeting. Do NOT bring up unrelated stuff (your day, catacombs, drops, "
             "epics, side stories) on the closing line.\n"
-            "- Shop tags and meet tags are commands only. Never mention, explain, quote, or read out tags.")
+            "- Shop tags and meet tags are commands only. Never mention, explain, quote, or read out tags.\n\n"
+
+            "Party behavior:\n"
+            "- If the player asks you to party, group, duo, hunt, farm, xp together or come along, and you are up for "
+            "it, agree briefly, tell them to invite you, and end your reply with [[PARTY]] on its own line. Asking "
+            "where to go first is fine, but once you say yes, add [[PARTY]] in that same reply.\n"
+            "- The game handles invites, not you. Never say you accepted, joined or are in their party, and never "
+            "promise to accept in a moment. Without [[PARTY]] you did not agree, and any invite is declined.\n"
+            "- You are standing in town and are not in any party. Never claim to be in another party or busy with "
+            "one. If you do not want to go, just say so.\n"
+            "- Only add [[PARTY]] when the player asked about partying with you. Never add it on your own, and never "
+            "while you are still only asking what they want.\n"
+            "- If the message is exactly " + repr(INVITE_OUT_OF_BLUE) + ", they sent you a party invite with no talk "
+            "first. You did not accept it. Ask briefly what they want or why ('?', 'wat u need?', 'hm? whats up'), "
+            "and do NOT add [[PARTY]].\n"
+            "- If the message is exactly " + repr(INVITE_AFTER_TALK) + ", they invited you after you two talked about "
+            "partying. Decide now: if you want to go, reply very briefly (like 'k', 'omw', 'ty') and add [[PARTY]]; "
+            "if not, say briefly why, without [[PARTY]].")
 
 def trade_persona(fpc, voice):
     return (GLOBAL_RULES + "\n\n" + voice + "\n\n"
@@ -1268,7 +1291,7 @@ def ambient_shout_grounding(bot_level, blocked_topics):
 # (a hallucinated [[DISBAND]] in a whisper, a [[SHOP]] in say chat) is stripped here. Java still authorizes the
 # surviving destructive tags against the player's actual message (FPC-044 / FPC-046); this only bounds the surface.
 _ALLOWED_TAGS = {
-    "WHISPER": frozenset({"MEET", "SHOP"}),
+    "WHISPER": frozenset({"MEET", "SHOP", "PARTY"}),
     "PARTY": frozenset({"ASSIST", "FREE", "FOLLOW", "STAY", "TP", "GRACE", "DISBAND"}),
     "BUDDY": frozenset({"FOLLOW", "STAY", "TP", "GRACE", "BUFF", "DISBAND"}),
 }
@@ -1305,16 +1328,26 @@ _LFP_ROLES = ("tank", "warrior", "dd", "archer", "dagger", "nuker", "healer", "b
 _MAX_CHAT_PROSE = 300
 
 _TRADE_ACTION_TAGS = frozenset({"MEET", "SHOP"})
+# Whisper tags Java authorizes after the model proposes them, so they never go into the kept conversation history.
+_HISTORY_DROP_TAGS = _TRADE_ACTION_TAGS | {"PARTY"}
 
 
 def history_text(reply):
-    """The reply as kept in (player, bot) whisper history: the MEET/SHOP action tags removed. Java decides whether a
+    """The reply as kept in (player, bot) whisper history: the MEET/SHOP/PARTY action tags removed. Java decides whether a
     proposed meet or store actually happens (it refuses one with no deal or no player agreement), so a stored tag could
     record an action that never ran, and the model later claimed "you agreed, are you coming?" about a meet that never
     started (FPC-069). What really happened reaches the brain from Java instead (X-Meet-State, the deal headers)."""
     def _drop(match):
         name = _TAG_ALIASES.get(match.group(1).upper(), match.group(1).upper())
-        return " " if name in _TRADE_ACTION_TAGS else match.group(0)
+        return " " if name in _HISTORY_DROP_TAGS else match.group(0)
+    return re.sub(r"\s+", " ", _CONTROL_TAG_RE.sub(_drop, reply or "")).strip()
+
+
+def strip_party_tag(reply):
+    """The reply without any PARTY tag (malformed endings included)."""
+    def _drop(match):
+        name = _TAG_ALIASES.get(match.group(1).upper(), match.group(1).upper())
+        return " " if name == "PARTY" else match.group(0)
     return re.sub(r"\s+", " ", _CONTROL_TAG_RE.sub(_drop, reply or "")).strip()
 
 
@@ -1755,6 +1788,8 @@ def chat():
                       + (deal_note or NO_DEAL_NOTE) + knowledge_note(message)
                       + f"\n\nRecent public trade chat you saw:\n{recent}")
             reply = finalize_reply(mode, call_llm(system, list(hist), 80, temperature))
+            if message.strip() == INVITE_OUT_OF_BLUE:
+                reply = strip_party_tag(reply)  # an unasked-for invite is never accepted on this turn
             stored = history_text(reply)
             if stored:
                 hist.append({"role": "assistant", "content": stored})

@@ -18,12 +18,21 @@ public partial class MainWindow : Window
     private Config _cfg;
     private readonly Updater _updater;
     private readonly DispatcherTimer _statusTimer;
+    private readonly DiscordPresence _discord;
 
     private static readonly SolidColorBrush DotOn = new(Color.FromRgb(0x6F, 0xBF, 0x5B));
     private static readonly SolidColorBrush DotOff = new(Color.FromRgb(0x5A, 0x55, 0x4C));
 
     private bool _busy;
     private UpdateInfo? _pendingUpdate;
+
+    // Last port probe results, so UI code can read server state without probing
+    // on the dispatcher thread. A closed loopback port takes the full 600 ms
+    // connect timeout on Windows, so a synchronous probe freezes the window.
+    private bool _loginUp;
+    private bool _gameUp;
+    private bool _statusRefreshRunning;
+    private bool _statusRefreshQueued;
 
     public MainWindow()
     {
@@ -59,6 +68,10 @@ public partial class MainWindow : Window
         _statusTimer.Tick += (_, __) => RefreshStatus();
         _statusTimer.Start();
         RefreshStatus();
+
+        // Discord Rich Presence runs on its own background timer.
+        _discord = new DiscordPresence(_paths);
+        Closed += (_, __) => _discord.Dispose();
 
         Loaded += async (_, __) =>
         {
@@ -216,7 +229,7 @@ public partial class MainWindow : Window
         if (_busy) return;
         _cfg = Config.Load(new Ini(_paths.IniPath));
 
-        if (Ports.IsOpen(Ports.Login) || Ports.IsOpen(Ports.Game))
+        if (_loginUp || _gameUp)
         {
             var go = MessageBox.Show(
                 "The server is running. For a clean snapshot it is best to Stop it first, then back up.\n\nBack up anyway?",
@@ -427,25 +440,57 @@ public partial class MainWindow : Window
 
     // ---- status -----------------------------------------------------------
 
-    private void RefreshStatus()
+    // Probes the four ports in parallel on the thread pool and applies the result
+    // on the UI thread. Only one refresh runs at a time; a request that arrives
+    // while one is running (for example right after Play or Stop finishes) is
+    // queued so the lights reflect the newest state instead of a stale probe.
+    private async void RefreshStatus()
     {
-        bool db = Ports.IsOpen(Ports.Database);
-        bool login = Ports.IsOpen(Ports.Login);
-        bool game = Ports.IsOpen(Ports.Game);
-        bool brain = Ports.IsOpen(Ports.Brain);
-
-        SetDot(DbDot, DbState, db);
-        SetDot(LoginDot, LoginState, login);
-        SetDot(GameDot, GameState, game);
-        SetDot(BrainDot, BrainState, brain);
-
-        bool anyServer = login || game || brain;
-        if (!_busy)
+        if (_statusRefreshRunning)
         {
-            PlayButton.IsEnabled = !anyServer;
-            StopButton.IsEnabled = anyServer || File.Exists(_paths.RegistryPath);
-            if (anyServer && StageText.Text == "Ready to launch.")
-                StageText.Text = "Server is running.";
+            _statusRefreshQueued = true;
+            return;
+        }
+
+        _statusRefreshRunning = true;
+        try
+        {
+            do
+            {
+                _statusRefreshQueued = false;
+
+                var dbTask = Task.Run(() => Ports.IsOpen(Ports.Database));
+                var loginTask = Task.Run(() => Ports.IsOpen(Ports.Login));
+                var gameTask = Task.Run(() => Ports.IsOpen(Ports.Game));
+                var brainTask = Task.Run(() => Ports.IsOpen(Ports.Brain));
+                await Task.WhenAll(dbTask, loginTask, gameTask, brainTask);
+
+                bool db = dbTask.Result;
+                bool login = loginTask.Result;
+                bool game = gameTask.Result;
+                bool brain = brainTask.Result;
+                _loginUp = login;
+                _gameUp = game;
+
+                SetDot(DbDot, DbState, db);
+                SetDot(LoginDot, LoginState, login);
+                SetDot(GameDot, GameState, game);
+                SetDot(BrainDot, BrainState, brain);
+
+                bool anyServer = login || game || brain;
+                if (!_busy)
+                {
+                    PlayButton.IsEnabled = !anyServer;
+                    StopButton.IsEnabled = anyServer || File.Exists(_paths.RegistryPath);
+                    if (anyServer && StageText.Text == "Ready to launch.")
+                        StageText.Text = "Server is running.";
+                }
+            }
+            while (_statusRefreshQueued);
+        }
+        finally
+        {
+            _statusRefreshRunning = false;
         }
     }
 
@@ -459,7 +504,7 @@ public partial class MainWindow : Window
     {
         _busy = busy;
         PlayButton.IsEnabled = !busy;
-        StopButton.IsEnabled = !busy && (Ports.IsOpen(Ports.Login) || Ports.IsOpen(Ports.Game) || File.Exists(_paths.RegistryPath));
+        StopButton.IsEnabled = !busy && (_loginUp || _gameUp || File.Exists(_paths.RegistryPath));
         SettingsButton.IsEnabled = !busy;
         UpdateButton.IsEnabled = !busy;
         BackupButton.IsEnabled = !busy;

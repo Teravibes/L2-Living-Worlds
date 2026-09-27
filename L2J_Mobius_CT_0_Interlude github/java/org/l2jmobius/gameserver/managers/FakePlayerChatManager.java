@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -38,6 +39,7 @@ import org.l2jmobius.gameserver.data.holders.FakePlayerChatHolder;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -48,11 +50,16 @@ import org.l2jmobius.gameserver.model.actor.enums.creature.Race;
 import org.l2jmobius.gameserver.model.actor.enums.player.PrivateStoreType;
 import org.l2jmobius.gameserver.model.actor.holders.npc.FakePlayerAppearance;
 import org.l2jmobius.gameserver.model.actor.holders.npc.FakePlayerStoreItem;
+import org.l2jmobius.gameserver.model.groups.Party;
+import org.l2jmobius.gameserver.model.groups.PartyDistributionType;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.spawns.Spawn;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.enums.ChatType;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.L2FriendSay;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Mobius
@@ -463,15 +470,26 @@ public class FakePlayerChatManager implements IXmlReader
 		// charge no longer depends on the brain echoing the right number back in its SHOP tag.
 		maybeHandleCounterOffer(player, fpcName, bot, message);
 
+		// Talk about partying opens a short window in which the bot's own "yes" (the PARTY tag) means it takes an invite.
+		notePartyAsk(player, fpcName, message);
+
 		// LLM brain hook (private whisper). Falls back to canned chat if the bridge is offline.
 		// The bot's whereabouts go along so it can truthfully answer "where are you?".
 		final String aiReply = askBrain(player, fpcName, message, bot);
 		if (aiReply != null)
 		{
-			sendChat(player, fpcName, handleMeetRequest(aiReply, message, player, bot));
+			sendChat(player, fpcName, handleMeetRequest(takePartyTag(player, bot, aiReply), message, player, bot));
 			return;
 		}
 		
+		// Brain offline: a bot asked to party simply says yes, so the invite still works without the brain.
+		if ((bot != null) && FakePlayerChatParsing.isPartyAsk(message) && FakePlayerBehaviorManager.getInstance().canLeaveForParty(bot))
+		{
+			notePartyAgreed(player.getName(), bot.getName());
+			sendChat(player, fpcName, Rnd.nextBoolean() ? "sure, inv me" : "ok inv");
+			return;
+		}
+
 		final String text = message.toLowerCase();
 		
 		if (text.contains("can you see me"))
@@ -1736,6 +1754,18 @@ public class FakePlayerChatManager implements IXmlReader
 		{
 			return;
 		}
+		// Party talk on shout: a bot that answers a real player's party call takes that player's invite, and a bot that
+		// shouts its own LFM takes an invite from anyone for a while.
+		if (channel.equals("SHOUT") && human && (speakerName != null) && !speakerName.isEmpty() && (overheard != null) && FakePlayerChatParsing.looksLikeLfp(overheard))
+		{
+			notePartyAgreed(speakerName, bot.getName());
+		}
+		else if (channel.equals("SHOUTAMBIENT") && FakePlayerChatParsing.looksLikeLfp(line))
+		{
+			final long now = System.currentTimeMillis();
+			prunePartyTalk(now);
+			PARTY_OPEN.put(bot.getName().toLowerCase(), now + PARTY_AGREED_MS);
+		}
 		// Defer the broadcast by a length-scaled "typing" time so the line doesn't appear the instant the brain
 		// returns, and follow-up bot banter only kicks off once the line is actually visible.
 		ThreadPool.schedule(() ->
@@ -2095,6 +2125,472 @@ public class FakePlayerChatManager implements IXmlReader
 				}
 			}, typingDelayMillis(reply));
 		}, Rnd.get(FRIEND_THINK_MIN, FRIEND_THINK_MAX), onComplete));
+	}
+
+	// ===== Party invites to town fakes =====
+	// A town fake is an NPC, so a party invite to it used to fail as "no such player". Now the invite reaches the bot:
+	// a bot that agreed to party with this player (in a whisper, or by answering their party shout) steps out of the
+	// crowd as a phantom with its own name, look, class, level and gear, and joins. An invite out of the blue is
+	// declined and the bot whispers back asking what the player wants. When the party ends the phantom leaves and the
+	// same bot comes back as a town fake.
+
+	// A whisper that brings up partying opens this window; the bot's "yes" (the brain's PARTY tag) counts inside it.
+	private static final long PARTY_ASK_WINDOW_MS = 300000;
+	// How long a bot keeps its word: an invite within this time of agreeing is accepted.
+	private static final long PARTY_AGREED_MS = 300000;
+	// A bot that answers invites looks at the invite for a moment first, like a person clicking "accept".
+	private static final int PARTY_ACCEPT_MIN_MS = 1000;
+	private static final int PARTY_ACCEPT_MAX_MS = 2500;
+	// A bot whose party ended away from its home crowd reappears at home after this long, as if it had walked or
+	// teleported back; one that ended at home just stays where it is.
+	private static final long PARTY_RETURN_HOME_MS = 60000;
+	// The brain's "yes, invite me" tag. Tolerates the same malformed endings as the other action tags.
+	private static final Pattern PARTY_TAG = Pattern.compile("\\[\\[\\s*PARTY\\s*(?::[^\\]\\)]*)?[\\]\\)]{1,2}", Pattern.CASE_INSENSITIVE);
+	// What the brain is told when an invite arrives with no talk first. The brain never agrees on this turn.
+	public static final String INVITE_OUT_OF_BLUE = "*sends you a party invite without saying anything*";
+	// What the brain is told when an invite arrives after party talk the bot never confirmed. It decides now.
+	public static final String INVITE_AFTER_TALK = "*sends you a party invite after you talked about partying*";
+
+	private static final Map<String, Long> PARTY_ASKED = new ConcurrentHashMap<>(); // (player, bot) -> last party talk
+	private static final Map<String, Long> PARTY_AGREED = new ConcurrentHashMap<>(); // (player, bot) -> agreed until
+	private static final Map<String, Long> PARTY_INVITED = new ConcurrentHashMap<>(); // (player, bot) -> last declined invite
+	private static final Map<String, Long> PARTY_OPEN = new ConcurrentHashMap<>(); // bot -> takes anyone's invite until (it shouted an LFM)
+	private static final Set<String> PARTY_JOINING = ConcurrentHashMap.newKeySet(); // bots answering an invite right now
+
+	/** Drops expired party talk so the maps stay small. */
+	private static void prunePartyTalk(long now)
+	{
+		PARTY_ASKED.values().removeIf(at -> (now - at) > PARTY_ASK_WINDOW_MS);
+		PARTY_INVITED.values().removeIf(at -> (now - at) > PARTY_ASK_WINDOW_MS);
+		PARTY_AGREED.values().removeIf(until -> now > until);
+		PARTY_OPEN.values().removeIf(until -> now > until);
+	}
+
+	/** Remembers that the player brought up partying with this bot in a whisper. */
+	private static void notePartyAsk(Player player, String botName, String message)
+	{
+		if ((player != null) && FakePlayerChatParsing.isPartyAsk(message))
+		{
+			final long now = System.currentTimeMillis();
+			prunePartyTalk(now);
+			PARTY_ASKED.put(dealKey(player.getName(), botName), now);
+		}
+	}
+
+	/** @return {@code true} if the player brought up partying with this bot in a whisper in the last few minutes */
+	private static boolean hasRecentPartyTalk(Player player, String botName)
+	{
+		final Long asked = PARTY_ASKED.get(dealKey(player.getName(), botName));
+		return (asked != null) && ((System.currentTimeMillis() - asked) <= PARTY_ASK_WINDOW_MS);
+	}
+
+	/**
+	 * @return {@code true} if the bot may say yes to partying with this player now: they talked about it, or the bot
+	 *         just declined their invite and asked what they want (the answer to that question can settle it)
+	 */
+	private static boolean mayAgreeToParty(Player player, String botName)
+	{
+		if (hasRecentPartyTalk(player, botName))
+		{
+			return true;
+		}
+		final Long invited = PARTY_INVITED.get(dealKey(player.getName(), botName));
+		return (invited != null) && ((System.currentTimeMillis() - invited) <= PARTY_ASK_WINDOW_MS);
+	}
+
+	/** The bot agreed to party with this player; an invite from them within {@link #PARTY_AGREED_MS} is accepted. */
+	private static void notePartyAgreed(String playerName, String botName)
+	{
+		final long now = System.currentTimeMillis();
+		prunePartyTalk(now);
+		PARTY_AGREED.put(dealKey(playerName, botName), now + PARTY_AGREED_MS);
+	}
+
+	/** @return {@code true} if this bot agreed to party with this player (or shouted an LFM itself) and still means it */
+	private static boolean isPartyAgreed(Player player, String botName)
+	{
+		final long now = System.currentTimeMillis();
+		final Long until = PARTY_AGREED.get(dealKey(player.getName(), botName));
+		if ((until != null) && (now <= until))
+		{
+			return true;
+		}
+		final Long open = PARTY_OPEN.get(botName.toLowerCase());
+		return (open != null) && (now <= open);
+	}
+
+	/**
+	 * Reads the brain's PARTY tag on a whisper reply and removes it. The tag only counts when the player brought up
+	 * partying in the last few minutes, so the model cannot make a bot join someone who never asked.
+	 * @return the reply without the tag; "inv me" when the reply was only the tag and it counted
+	 */
+	private String takePartyTag(Player player, Npc bot, String reply)
+	{
+		if ((reply == null) || !PARTY_TAG.matcher(reply).find())
+		{
+			return reply;
+		}
+		final String cleaned = PARTY_TAG.matcher(reply).replaceAll("").trim();
+		if (bot == null)
+		{
+			return cleaned;
+		}
+		if (!mayAgreeToParty(player, bot.getName()) || !FakePlayerBehaviorManager.getInstance().canLeaveForParty(bot))
+		{
+			return cleaned;
+		}
+		notePartyAgreed(player.getName(), bot.getName());
+		return cleaned.isEmpty() ? (Rnd.nextBoolean() ? "sure, inv me" : "k inv") : cleaned;
+	}
+
+	/**
+	 * Called by {@code RequestJoinParty} when the invited name is not an online player. Handles invites to town fakes,
+	 * applying the same inviter rules as a normal invite first (FPC-110) and keeping the loot type chosen with this
+	 * invite for a party it creates (FPC-111).
+	 * @param player the inviting player
+	 * @param name the name typed or targeted
+	 * @param distribution the loot type sent with this invite, or {@code null} if the client sent an unknown one
+	 * @return {@code true} if the name is a town fake and the invite was handled here
+	 */
+	public boolean onPartyInvite(Player player, String name, PartyDistributionType distribution)
+	{
+		if (!FakePlayersConfig.FAKE_PLAYERS_ENABLED || (player == null))
+		{
+			return false;
+		}
+		final Npc bot = resolveBot(name);
+		if ((bot == null) || !bot.isFakePlayer())
+		{
+			return false;
+		}
+		if (!mayInviteTownFake(player))
+		{
+			return true;
+		}
+		if (distribution == null)
+		{
+			return true; // an unknown loot type is ignored, as for a normal invite
+		}
+		if (!player.isInParty())
+		{
+			player.setPartyDistributionType(distribution); // the party this invite forms uses the chosen loot type
+		}
+		final String botName = bot.getName();
+		final SystemMessage invited = new SystemMessage(SystemMessageId.YOU_HAVE_INVITED_S1_TO_YOUR_PARTY);
+		invited.addString(botName);
+		player.sendPacket(invited);
+		// AFK store vendors act like offline shops: nobody is there to answer the invite.
+		if (isStoreVendor(bot) && !FakePlayerBehaviorManager.getInstance().isDealVendor(bot))
+		{
+			ThreadPool.schedule(() -> player.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY), Rnd.get(PARTY_ACCEPT_MIN_MS, PARTY_ACCEPT_MAX_MS));
+			return true;
+		}
+		if (isPartyAgreed(player, botName))
+		{
+			scheduleAccept(player, botName);
+			return true;
+		}
+		// A second click while the bot is already answering an invite changes nothing.
+		final String joining = botName.toLowerCase();
+		if (!PARTY_JOINING.add(joining))
+		{
+			return true;
+		}
+		if (hasRecentPartyTalk(player, botName) && FakePlayerBehaviorManager.getInstance().canLeaveForParty(bot))
+		{
+			// They talked about partying but the bot never said a clear yes: the invite is the question, so it
+			// decides now and joins right away if it wants to.
+			answerInvite(player, botName, true);
+			return true;
+		}
+		// Out of the blue: decline, then ask what they want, in the bot's own voice. The answer to that question can
+		// still settle it, so the next whisper may agree.
+		PARTY_INVITED.put(dealKey(player.getName(), botName), System.currentTimeMillis());
+		ThreadPool.schedule(() -> player.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY), Rnd.get(PARTY_ACCEPT_MIN_MS, PARTY_ACCEPT_MAX_MS));
+		answerInvite(player, botName, false);
+		return true;
+	}
+
+	/** The bot answers "yes" to an invite after a short look, unless it is already answering one. */
+	private void scheduleAccept(Player player, String botName)
+	{
+		final String joining = botName.toLowerCase();
+		if (!PARTY_JOINING.add(joining))
+		{
+			return;
+		}
+		ThreadPool.schedule(() ->
+		{
+			try
+			{
+				acceptPartyInvite(player, botName);
+			}
+			finally
+			{
+				PARTY_JOINING.remove(joining);
+			}
+		}, Rnd.get(PARTY_ACCEPT_MIN_MS, PARTY_ACCEPT_MAX_MS));
+	}
+
+	/**
+	 * The inviter-side rules of a normal invite (party ban, event, cursed weapon, jail, Olympiad, a pending request,
+	 * leadership, the Dimensional Rift, a full party), with the same messages the stock handler sends (FPC-110).
+	 * @return {@code true} if this player may invite someone now
+	 */
+	private static boolean mayInviteTownFake(Player player)
+	{
+		final Party party = player.getParty();
+		final TownFakeInviteRules.Refusal refusal = TownFakeInviteRules.inviterRefusal(player.isPartyBanned(), player.isRegisteredOnEvent(), player.isCursedWeaponEquipped(), player.isJailed(), player.isInOlympiadMode(), player.isProcessingRequest(), party != null, (party != null) && party.isLeader(player), (party != null) && party.isInDimensionalRift(), (party == null) ? 0 : party.getMemberCount());
+		switch (refusal)
+		{
+			case NONE:
+			{
+				return true;
+			}
+			case PARTY_BANNED:
+			{
+				player.sendMessage("You have been reported as an illegal program user, so participating in a party is not allowed.");
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				return false;
+			}
+			case EVENT:
+			{
+				player.sendMessage("Event paticipants cannot be invited to parties."); // same text as the stock handler
+				return false;
+			}
+			case CURSED_WEAPON:
+			{
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
+				return false;
+			}
+			case JAILED:
+			{
+				player.sendMessage("You cannot invite a player while is in Jail."); // same text as the stock handler
+				return false;
+			}
+			case OLYMPIAD:
+			{
+				player.sendMessage("A user currently participating in the Olympiad cannot send party and friend invitations.");
+				return false;
+			}
+			case BUSY:
+			{
+				player.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
+				return false;
+			}
+			case NOT_LEADER:
+			{
+				player.sendPacket(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS);
+				return false;
+			}
+			case DIMENSIONAL_RIFT:
+			{
+				player.sendMessage("You cannot invite a player when you are in the Dimensional Rift.");
+				return false;
+			}
+			default:
+			{
+				player.sendPacket(SystemMessageId.THE_PARTY_IS_FULL);
+				return false;
+			}
+		}
+	}
+
+	/** The agreed bot accepts: it steps out of the crowd as a phantom with its own identity and joins the party. */
+	private void acceptPartyInvite(Player player, String botName)
+	{
+		if ((player == null) || !player.isOnline())
+		{
+			return;
+		}
+		final Npc bot = resolveBot(botName);
+		final FakePlayerBehaviorManager behavior = FakePlayerBehaviorManager.getInstance();
+		if ((bot == null) || !behavior.canLeaveForParty(bot))
+		{
+			player.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY);
+			if (bot != null)
+			{
+				sendChat(player, botName, Rnd.nextBoolean() ? "cant rn sry" : "sec, busy rn");
+			}
+			return;
+		}
+		// The party may have changed while the bot looked at the invite (filled up, leadership passed on). Nothing is
+		// spent yet, so the agreement stays and the player can invite again once there is room.
+		if (!partyStillTakesMember(player))
+		{
+			return;
+		}
+		final boolean targeted = player.getTarget() == bot;
+		final FakePlayerBehaviorManager.PartyLeave leave = behavior.leaveForParty(bot);
+		if (leave == null)
+		{
+			player.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY);
+			return;
+		}
+		final Player member = PhantomManager.getInstance().spawnPartyMemberAs(leave.getLook(), leave.getLocation(), leave.getHeading());
+		if (member == null)
+		{
+			// Could not become a phantom (name taken, population cap): put the fake back where it stood.
+			behavior.returnFromParty(leave, leave.getLocation());
+			player.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY);
+			sendChat(player, botName, "cant rn sry");
+			return;
+		}
+		if (!PhantomPartyManager.getInstance().joinFromTownFake(player, member, lastSeen -> returnToTown(leave, lastSeen)))
+		{
+			// The join failed at the last step; the release already put the fake back. Tell the player and keep the
+			// agreement, so the next invite works without talking again (FPC-112).
+			if (!partyStillTakesMember(player))
+			{
+				return;
+			}
+			player.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY);
+			return;
+		}
+		// Joined: the agreement is used up.
+		PARTY_AGREED.remove(dealKey(player.getName(), botName));
+		PARTY_OPEN.remove(botName.toLowerCase());
+		if (targeted)
+		{
+			player.setTarget(member); // the fake the player had selected is now this character
+		}
+	}
+
+	/**
+	 * @return {@code true} if the player's party can still take a member; otherwise the player is told why (full party,
+	 *         or no longer the leader)
+	 */
+	private static boolean partyStillTakesMember(Player player)
+	{
+		final Party party = player.getParty();
+		if (party == null)
+		{
+			return true;
+		}
+		if (!party.isLeader(player))
+		{
+			player.sendPacket(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS);
+			return false;
+		}
+		if (!TownFakeInviteRules.mayAddMember(true, true, party.getMemberCount()))
+		{
+			player.sendPacket(SystemMessageId.THE_PARTY_IS_FULL);
+			return false;
+		}
+		return true;
+	}
+
+	/** The party is over: the same bot goes back to being a town fake, where it stood if that is home, else at home later. */
+	private static void returnToTown(FakePlayerBehaviorManager.PartyLeave leave, Location lastSeen)
+	{
+		final FakePlayerBehaviorManager behavior = FakePlayerBehaviorManager.getInstance();
+		if (behavior.isHome(leave, lastSeen))
+		{
+			behavior.returnFromParty(leave, lastSeen);
+		}
+		else
+		{
+			ThreadPool.schedule(() -> behavior.returnFromParty(leave, null), PARTY_RETURN_HOME_MS);
+		}
+	}
+
+	/**
+	 * The bot answers an invite it has not agreed to yet, through the brain so the turn stays in the conversation
+	 * history, or with a canned line when the brain is offline. Runs while the caller holds the bot in
+	 * {@link #PARTY_JOINING} and releases it at the end.
+	 * @param player the inviting player
+	 * @param botName the invited bot
+	 * @param afterTalk {@code true} if they talked about partying first: the bot decides now, and its PARTY tag makes it
+	 *            join at once; {@code false} for an invite out of the blue, already declined, where the bot only asks
+	 *            what they want and never agrees on this turn
+	 */
+	private void answerInvite(Player player, String botName, boolean afterTalk)
+	{
+		final String joining = botName.toLowerCase();
+		final AtomicBoolean answered = new AtomicBoolean();
+		final AtomicBoolean accepting = new AtomicBoolean();
+		// Runs exactly once, also when the brain queue drops this turn: the bot is freed for the next invite, and an
+		// invite that got no answer at all is declined so it does not hang.
+		final Runnable release = () ->
+		{
+			if (!accepting.get())
+			{
+				PARTY_JOINING.remove(joining);
+			}
+			if (afterTalk && !answered.get())
+			{
+				player.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY);
+			}
+		};
+		final String key = BrainConversationExecutor.key(player.getName(), botName);
+		final boolean queued = BrainConversationExecutor.submit(key, onComplete -> ThreadPool.schedule( //
+			() -> BrainExecutor.runBrainWork(() ->
+			{
+				final Npc bot = resolveBot(botName);
+				final String aiReply = (bot == null) ? null : askBrain(player, botName, afterTalk ? INVITE_AFTER_TALK : INVITE_OUT_OF_BLUE, bot);
+				final boolean yes = afterTalk && (bot != null) && (aiReply != null) && PARTY_TAG.matcher(aiReply).find() && FakePlayerBehaviorManager.getInstance().canLeaveForParty(bot);
+				String line = (aiReply == null) ? "" : stripOwnName(PARTY_TAG.matcher(MEET_TAG.matcher(SHOP_TAG.matcher(aiReply).replaceAll("")).replaceAll("")).replaceAll("").trim(), bot);
+				answered.set(true);
+				if (yes)
+				{
+					notePartyAgreed(player.getName(), botName);
+					accepting.set(true);
+					if (!line.isEmpty())
+					{
+						sendChat(player, botName, line);
+					}
+					ThreadPool.schedule(() ->
+					{
+						try
+						{
+							acceptPartyInvite(player, botName);
+						}
+						finally
+						{
+							PARTY_JOINING.remove(joining);
+						}
+					}, Rnd.get(PARTY_ACCEPT_MIN_MS, PARTY_ACCEPT_MAX_MS));
+					return;
+				}
+				if (afterTalk)
+				{
+					player.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY);
+				}
+				sendChat(player, botName, line.isEmpty() ? cannedInviteQuestion() : line);
+			}, () ->
+			{
+				release.run();
+				onComplete.run();
+			}), //
+			afterTalk ? Rnd.get(PARTY_ACCEPT_MIN_MS, PARTY_ACCEPT_MAX_MS) : Rnd.get(PARTY_ACCEPT_MAX_MS, PARTY_ACCEPT_MAX_MS + 2000)));
+		if (!queued)
+		{
+			release.run();
+		}
+	}
+
+	/** @return a short "what do you want?" line for when the brain is offline */
+	private static String cannedInviteQuestion()
+	{
+		switch (Rnd.get(4))
+		{
+			case 0:
+			{
+				return "?";
+			}
+			case 1:
+			{
+				return "wat u need?";
+			}
+			case 2:
+			{
+				return "hm? whats up";
+			}
+			default:
+			{
+				return "?? do i know u";
+			}
+		}
 	}
 
 	/**

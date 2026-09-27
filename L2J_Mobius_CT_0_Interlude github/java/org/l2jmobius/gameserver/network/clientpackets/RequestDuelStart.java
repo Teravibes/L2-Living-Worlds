@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.managers.PhantomManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.groups.Party;
@@ -132,6 +133,12 @@ public class RequestDuelStart extends ClientPacket
 			// Send request to targetChar's party leader
 			if (partyLeader != null)
 			{
+				// Living World hook: a phantom party leader has no client to answer, so the phantom manager declines for it.
+				if (PhantomManager.getInstance().declinePartyDuelChallenge(player, partyLeader))
+				{
+					return;
+				}
+				
 				if (!partyLeader.isProcessingRequest())
 				{
 					player.onTransactionRequest(partyLeader);
@@ -155,6 +162,12 @@ public class RequestDuelStart extends ClientPacket
 		else
 		// 1vs1 duel
 		{
+			// Living World hook: a phantom has no client to answer, so the phantom manager answers the challenge for it.
+			if (PhantomManager.getInstance().answerDuelChallenge(player, targetChar))
+			{
+				return;
+			}
+			
 			if (!targetChar.isProcessingRequest())
 			{
 				player.onTransactionRequest(targetChar);

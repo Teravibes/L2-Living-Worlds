@@ -55,6 +55,9 @@ public final class FakePlayerChatParsing
 	// longer word wins the alternation. Group 1/2 = the "@" form digits/suffix; group 3/4 = the cue form digits/suffix.
 	public static final Pattern TRADE_UNIT_PRICE = Pattern.compile("(?:@\\s*(\\d{1,9})(kk|k|m)?)|(?:\\b(\\d{1,9})(kk|k|m)?\\s*(?:adena|ad|ea|each|pc|per|a)\\b)", Pattern.CASE_INSENSITIVE);
 	public static final Pattern LFP_TRIGGER = Pattern.compile("\\b(lfm|lfp|lfg|lf|looking for|need|recruit|wanna pt|party up|join.*pt|more for|ppl for|pst)\\b", Pattern.CASE_INSENSITIVE);
+	// A whisper that brings up partying with the bot ("wanna pt?", "join my party", "inv u?", "duo?"). It only opens the
+	// window in which the bot's own "yes" (the brain's PARTY tag) counts as agreeing to an invite; it is not a yes itself.
+	public static final Pattern PARTY_ASK = Pattern.compile("\\b(party|pt|grp|group|inv|invite|join|duo|lfm|lfp|lfg|xp|exp|exping|lvling|leveling|lvl up|level up|hunt|hunting|farm|farming|with me|come with|come along|tag along|wanna come|lets go|let's go|wanna go|want to go|we going|u coming|you coming)\\b", Pattern.CASE_INSENSITIVE);
 	public static final Pattern LFP_LEVEL = Pattern.compile("(?:level|lvl|lv)\\s*\\.?\\s*(\\d{1,2})", Pattern.CASE_INSENSITIVE);
 	// Spoken amounts a player gives when a bot asks "how many?": a word or digit count followed by a magnitude word
 	// ("a couple thousand", "few hundred", "2 thousand", "a million"). Digits with a k/kk/m suffix are handled by
@@ -601,6 +604,12 @@ public final class FakePlayerChatParsing
 	public static boolean looksLikeLfp(String text)
 	{
 		return LFP_TRIGGER.matcher(text).find();
+	}
+
+	/** @return {@code true} if a whisper brings up partying together (see {@link #PARTY_ASK}). */
+	public static boolean isPartyAsk(String text)
+	{
+		return (text != null) && PARTY_ASK.matcher(text).find();
 	}
 
 	/** @return {@code true} if the text opens with a WTS/WTB trade-ad marker. */

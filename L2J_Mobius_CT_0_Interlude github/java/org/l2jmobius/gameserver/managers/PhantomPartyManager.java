@@ -36,6 +36,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -462,7 +463,9 @@ public class PhantomPartyManager
 		boolean holding; // "hold"/"stop": stand still and ignore the leader's target; only fight back when hit
 		boolean reminded; // already whispered "here, inv me" while waiting
 		boolean rezOnArrival; // summoned to a dead solo player: self-invite on arrival (a corpse can't answer /invite) so the rez lands at once
+		Consumer<Location> afterRelease; // a town fake that joined: brings the fake back, given where the member was when it left
 		long pendingSince; // spawn time; despawn if never invited within RECRUIT_TIMEOUT
+		boolean olympiadHeld; // waiting while the owner is in an Olympiad match; rejoins the owner's party after it
 		long graceUntil;
 		List<Skill> buffs; // lazy
 		List<Skill> fastHealKit; // lazy (known 2s-cast heals, best first); emergencyHeal() picks the strongest affordable
@@ -943,14 +946,16 @@ public class PhantomPartyManager
 		}
 		try
 		{
+			// Only a solo player or the party leader can add someone, never past the size cap (FPC-110). The invite
+			// packet checks this for real players; a clientless member is joined here, so it is checked again.
+			if (owner.isInParty() && !TownFakeInviteRules.mayAddMember(true, owner.getParty().isLeader(owner), owner.getParty().getMemberCount()))
+			{
+				return false;
+			}
 			if (!owner.isInParty())
 			{
 				final PartyDistributionType type = (owner.getPartyDistributionType() != null) ? owner.getPartyDistributionType() : PartyDistributionType.FINDERS_KEEPERS;
 				owner.setParty(new Party(owner, type));
-			}
-			else if (owner.getParty().getMemberCount() >= 9)
-			{
-				return false;
 			}
 			member.joinParty(owner.getParty());
 		}
@@ -1003,6 +1008,36 @@ public class PhantomPartyManager
 			_members.put(friend.getObjectId(), member);
 		}
 		return onInvited(owner, friend);
+	}
+
+	/**
+	 * Binds a town fake that agreed to party (and was just spawned as a phantom with its identity) into the inviting
+	 * player's party, with the full recruited-member AI. Called when the player's invite reaches a town fake. When the
+	 * member is released for any reason, {@code afterRelease} runs with where it was last seen, so the town fake comes
+	 * back; if joining fails it is released at once, which brings the fake back too.
+	 * @return {@code true} if the member joined
+	 */
+	public boolean joinFromTownFake(Player owner, Player member, Consumer<Location> afterRelease)
+	{
+		if ((owner == null) || (member == null))
+		{
+			return false;
+		}
+		final PartyRole role = PhantomManager.roleForClass(member.getPlayerClass());
+		final Member state = new Member(member, role);
+		state.owner = owner;
+		state.pendingSince = System.currentTimeMillis();
+		state.afterRelease = afterRelease;
+		parkPanicButtons(state);
+		PhantomPlaystyleEngine.parkAutoSkills(member, state.play, role.name()); // the playstyle engine owns offensive casting, like any recruit
+		_members.put(member.getObjectId(), state);
+		startTicking();
+		if (onInvited(owner, member))
+		{
+			return true;
+		}
+		release(state, false);
+		return false;
 	}
 
 	// ===== Commands (whisper + party chat, called from chat handlers) =====
@@ -2104,6 +2139,11 @@ public class PhantomPartyManager
 				if ((npc == null) || (World.getInstance().findObject(npc.getObjectId()) == null))
 				{
 					_members.remove(npc == null ? -1 : npc.getObjectId());
+					continue;
+				}
+				// The owner is in an Olympiad match, which removed them from the party: wait here, then rejoin.
+				if (state.partied && holdForOwnerMatch(state))
+				{
 					continue;
 				}
 				if (npc.isDead())
@@ -7298,6 +7338,39 @@ public class PhantomPartyManager
 		return true;
 	}
 
+	/**
+	 * Stock Interlude removes a player from their party when an Olympiad match starts. While the owner is in the match
+	 * (see {@link PhantomOlympiadManager#holdsPartyFor}) the member waits where it is instead of being released for
+	 * losing the party; once the owner is back it rejoins the owner's party.
+	 * @return {@code true} while the member is held (skip the rest of its tick)
+	 */
+	private boolean holdForOwnerMatch(Member state)
+	{
+		final Player owner = state.owner;
+		if (PhantomOlympiadManager.getInstance().holdsPartyFor(owner))
+		{
+			if (!state.olympiadHeld)
+			{
+				state.olympiadHeld = true;
+				state.npc.setTarget(null);
+				if (!state.npc.isDead())
+				{
+					state.npc.getAI().setIntention(Intention.IDLE);
+				}
+			}
+			return true;
+		}
+		if (state.olympiadHeld)
+		{
+			state.olympiadHeld = false;
+			if (!isPartiedWith(state) && PhantomOlympiadManager.rejoinParty(owner, state.npc))
+			{
+				ensureFollow(state);
+			}
+		}
+		return false;
+	}
+
 	private boolean isPartiedWith(Member state)
 	{
 		final Player owner = state.owner;
@@ -7358,7 +7431,19 @@ public class PhantomPartyManager
 		{
 			// best effort
 		}
+		final Location lastSeen = new Location(npc.getX(), npc.getY(), npc.getZ());
 		PhantomManager.getInstance().despawnRecruit(npc);
+		if (state.afterRelease != null)
+		{
+			try
+			{
+				state.afterRelease.accept(lastSeen); // a town fake goes back to being a town fake
+			}
+			catch (Exception e)
+			{
+				LOGGER.warning(getClass().getSimpleName() + ": Failed to return " + npc.getName() + " to town: " + e.getMessage());
+			}
+		}
 	}
 
 	private static boolean containsAny(String text, String... needles)

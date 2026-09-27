@@ -1040,6 +1040,17 @@ public class PhantomPartyManager
 		return false;
 	}
 
+	/**
+	 * Binds a party companion (a real player's own character that {@link PhantomManager#addCompanion} just brought into
+	 * the world) into the owner's party with the full recruited-member AI. Same path as a town fake, with nothing to
+	 * restore afterwards: the release despawns it, and PhantomManager saves it instead of deleting it.
+	 * @return {@code true} if the companion joined; if not, it has already been released
+	 */
+	public boolean joinCompanion(Player owner, Player companion)
+	{
+		return joinFromTownFake(owner, companion, null);
+	}
+
 	// ===== Commands (whisper + party chat, called from chat handlers) =====
 
 	/** Handles a whisper to a recruited member; a deterministic command, else a natural brain reply. */

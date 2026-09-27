@@ -61,6 +61,7 @@ The V1 `ModuleContext` surface:
 
 ```text
 ModuleContext
+  companions   bring a saved character into a player's party, run by the party AI (section 3.6)
   config       generic typed access to the module's own configuration
   events       register game event listeners
   handlers     register item, bypass, voiced, admin, effect, and target handlers
@@ -186,6 +187,25 @@ before the module's code runs, so its tables exist for `onEnable`. The script ru
 idempotent (`CREATE TABLE IF NOT EXISTS`); a failing statement fails the install and refuses the module. The platform
 never runs the `remove` script on its own: dropping a module's tables stays an explicit, opt-in action, because they
 can hold player progress. Disabling and removing a module never touch its tables.
+
+## 3.6 Party companions
+
+`context.companions()` is a platform service for features that bring a saved character into a player's party as a
+clientless member driven by the existing party AI (follow, assist, the class playstyle, heals and buffs). The first user
+is the Alt Companion module; a hired mercenary or a summoned helper could reuse it.
+
+- `summon(owner, charId, onLeave)` loads the character, places it next to the owner and joins it to the owner's party.
+  It returns a `Result`: `JOINED`, `NOT_FOUND`, `BOT`, `ALREADY_ONLINE`, `DEAD`, `PARTY_CLOSED` or `FAILED`.
+- `isCompanion(player)` tells whether a live player is a companion.
+
+The platform owns the safety rules: a bot character, a character already in the world, and a character saved dead are
+refused. A companion keeps its own level, skills, gear and consumables (its own soulshots and best healing potion are
+switched to auto-use; nothing is added). It is saved and removed when it leaves the party for any reason, and its row is
+never deleted. If its own account logs in while it is summoned, stock character select saves and removes the summoned
+copy first. Which characters a feature offers and how the player asks for one is the module's policy.
+
+Inside the server a companion is a recruited party member of `PhantomManager` (flag `companion`), so phantom-wide rules
+apply to it: party loot and adena follow `FakePlayerPartyLootShare`, and its kills credit quests to the owner.
 
 ## 4. Lifecycle and the levels of removal
 

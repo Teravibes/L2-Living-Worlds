@@ -73,6 +73,13 @@ game/modules/custom-item/MODULE.md
 game/modules/custom-item/TESTING.md
 game/modules/custom-item/scripts/CustomItemModule.java
 game/modules/custom-item/data/items/60000-60009.xml
+# Module framework: Alt Companion module (.alt). config/module.ini ships this one time so
+# patch-only testers get the switch; remove it from this list after the next patch.
+game/modules/alt-companion/module.json
+game/modules/alt-companion/MODULE.md
+game/modules/alt-companion/TESTING.md
+game/modules/alt-companion/config/module.ini
+game/modules/alt-companion/scripts/AltCompanionModule.java
 Start-Server.bat
 Stop-Server.bat
 launcher/launcher.ps1

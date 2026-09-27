@@ -1604,7 +1604,8 @@ def deal_note_from_headers():
                      "like '400k' and do NOT say 'each' or 'per'.")
     if total and not needs_count and per_unit:
         lines.append(f"- Total price is about {fmt_amount(total)} adena.")
-    lines.append("- Always say prices and amounts in short form like 45k or 1.2kk, never the full number like 45000.")
+    lines.append("- Always say prices and amounts in the same short form as above (k for thousands, kk for millions), "
+                 "never the full number. An amount under 1000 is just the plain number.")
     # Java's negotiation decision drives what the bot says next: it does not re-decide the price itself. Price and
     # quantity are independent now (FPC-040), so a price can be AGREED while the amount is still pending.
     if decision == "ACCEPT":
@@ -1694,7 +1695,8 @@ def chat():
                       "repeat the item name - just refer to it naturally (like 'it') if you need to. Do NOT ask "
                       "where to meet yet: the meeting spot comes later, only after you agree on a price. Use the "
                       "structured trade context for the price; if it says the amount is not agreed yet, ask how "
-                      "many they want. Say prices in short form like 45k, never 45000. Use memory naturally if "
+                      "many they want. Say prices in short form (k for thousands, kk for millions), never the full "
+                      "number; an amount under 1000 is just the plain number. Use memory naturally if "
                       "relevant, but do not act like a stalker. Do NOT pick a meeting place and do NOT add any tag.")
             reply = finalize_reply(mode, call_llm(system, [{"role": "user", "content": prompt}], 70, temperature))
             # Seed the private memory so the follow-up conversation remembers this deal.

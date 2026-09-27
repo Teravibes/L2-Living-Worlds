@@ -177,6 +177,7 @@ Match your need to an extension point. Reach for the first row that fits.
 | Add an admin command | `context.handlers()` with an `IAdminCommandHandler` | No |
 | Add a custom skill effect or target type | `context.handlers()` with an effect or target handler | No |
 | Add an NPC, quest, or spawn behavior | A normal script in your `scripts/` directory | No |
+| Bring a saved character into a player's party, run by the party AI | `context.companions()` | No, the service exists |
 | Scale damage by your own rule | `context.hooks()`, combat multiplier hook | Yes, if the hook does not exist yet |
 | Key a creature's data by its physical object, not its template | `context.hooks()`, entity data resolver | Yes, if not built yet |
 | Reinterpret a client request the client cannot be changed to send | `context.hooks()`, packet pre-dispatch | Yes, if not built yet |

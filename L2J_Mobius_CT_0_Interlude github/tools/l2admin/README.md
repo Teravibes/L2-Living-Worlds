@@ -1,7 +1,7 @@
 # Server Control Panel
 
-A standalone, modern editor for your server's `.ini` config files - rates, fake-player
-behaviour, auto-play, premium and more - **plus a visual editor for how recruited phantoms
+A standalone, modern editor for your server's `.ini` config files - rates, phantoms,
+PvP, the Olympiad and more - **plus a visual editor for how phantoms
 fight**. No install, no build, no login, **no Python/Flask**: one self-contained HTML file.
 
 ## Open it as an app (recommended, no browser)
@@ -53,21 +53,18 @@ loads straight away, or (if the browser has dropped write permission) shows a si
 
 - **Curated panels** - the settings that matter for the Living World, grouped and explained:
   - **Experience & SP**, **Drops & Spoil**, **Quests & Economy** (`Rates.ini`)
-  - **Fake Players** (`Custom/FakePlayers.ini`) - including the AI party toggles
-  - **Auto Play** (`Custom/AutoPlay.ini`)
-  - **Premium** (`Custom/PremiumSystem.ini`)
+  - **Phantoms** (`Custom/FakePlayers.ini`) - party, gear and hunting settings for phantoms
+  - **Phantom PvP** (`Custom/FakePlayers.ini`) - phantom PvP switches and tuning
+  - **Phantom Olympiad** (`Custom/PhantomOlympiad.ini`) - the phantom noble roster
   - **Raid Bosses** (`NPC.ini`) - scale every raid boss's attack, defense and regen at once (percent,
     100 = retail; restart to apply)
-- **Raw editor** - every key in any `.ini` in the folder, for power users.
+- **Raw editor** - every key in any `.ini` in the folder, for power users. The town bot settings
+  (the NPC crowd in towns, the `FakePlayer...` keys in `Custom/FakePlayers.ini` that are not on the
+  Phantoms tab) and the auto play settings (`Custom/AutoPlay.ini`) are only here, since they rarely
+  need changing.
 - **Phantom Playstyles** - a visual editor for `game/data/PhantomPlaystyles.xml` (see below).
-- **Population** - the visual map editor for FakePlayer and Phantom populations, routes, spawn zones,
+- **Population** - the visual map editor for town bot and phantom populations, routes, spawn zones,
   and map overlays (see below).
-
-Fields tagged **new** (phantom party XP/SP share, phantom loot/adena share, recruit enchant
-chance & range) are backed by new server code. That code only has to be compiled into
-`GameServer.jar` **once** (a one-time build step when the server is updated - not something you
-do to change a value). Once a server build that includes them is running, they apply with
-`//reload config` just like every other setting here.
 
 ## Phantom Playstyles
 
@@ -98,7 +95,7 @@ What it gives you:
   Sleep, Dryad Root, Resurrection) are blocked, because the manager casts those with its own
   threat/survival logic and two systems fighting over them is a bug.
 - **New / clone / delete playstyles**, including for lineages that have none today.
-- **Live warnings** - the same rules as `tools/validate_playstyles.py`, shown inline: a skill the
+- **Live warnings** - the same rules as the developer playstyle validator, shown inline: a skill the
   lineage never learns, a duplicate class claim that would make the entry dead code, a coverage
   hole that would leave a member with nothing to cast at some level.
 
@@ -153,7 +150,7 @@ This tab edits **which synthetic clans phantoms wear, how they group into allian
 reads the same **game/data** folder as the Phantom Playstyles tab (open it once and both tabs use it).
 
 - **Membership chances** - two dials at the top of the tab set how often bots wear one of your clans: one for
-  **town fake players**, one for **recruited (LFM) phantoms**, each `0..100` (0 = never, 100 = always). A bot in a
+  **town bots**, one for **recruited (LFM) phantoms**, each `0..100` (0 = never, 100 = always). A bot in a
   clan that belongs to an alliance shows that alliance crest too, so this one setting covers both. These write the
   `fakePlayerClanChance` / `recruitClanChance` attributes on the file's `<settings>` line (the panel creates that
   line if your file has none). Like the clans themselves, they are read at server boot, so **restart to apply**.
@@ -185,8 +182,8 @@ file byte for byte on load it disables editing rather than reformat it.
 
 ## Population
 
-This tab is the visual **map editor** for your server's populations: NPC fake players, real-Player
-phantoms, recruitable friends, and raid-boss strength. Open a folder and it renders your `geodata` as a
+This tab is the visual **map editor** for your server's populations: town bots (the NPC crowd), real-Player
+phantoms and recruitable friends. Open a folder and it renders your `geodata` as a
 height-relief world map, then you drop and drag population circles, draw patrol routes and spawn zones,
 and overlay city / world-map images.
 

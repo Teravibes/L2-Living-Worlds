@@ -44,6 +44,8 @@ PROD_SOURCES=(
 	"java/org/l2jmobius/gameserver/managers/FakePlayerNameFactory.java"
 	"java/org/l2jmobius/gameserver/managers/PhantomBuffReservations.java"
 	"java/org/l2jmobius/gameserver/managers/TownFakeInviteRules.java"
+	"java/org/l2jmobius/gameserver/managers/FakePlayerGrudgeRules.java"
+	"java/org/l2jmobius/gameserver/managers/PhantomSkillFallbackRules.java"
 	"java/org/l2jmobius/gameserver/modules/Json.java"
 	"java/org/l2jmobius/gameserver/modules/ModuleException.java"
 	"java/org/l2jmobius/gameserver/modules/ModuleResourceType.java"
@@ -63,6 +65,8 @@ JAVA_MAIN_CLASSES=(
 	"PhantomPvpManagerTest"
 	"PhantomOlympiadRulesTest"
 	"TownFakeInviteRulesTest"
+	"FakePlayerGrudgeRulesTest"
+	"PhantomSkillFallbackRulesTest"
 	"ModuleFrameworkTest"
 )
 

@@ -40,6 +40,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
+import org.l2jmobius.gameserver.model.actor.instance.Guard;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.spawns.Spawn;
 import org.l2jmobius.gameserver.network.Disconnection;
@@ -370,7 +371,7 @@ public class World
 					if (ai != null)
 					{
 						ai.describeStateToPlayer(object.asPlayer());
-						if (wo.isMonster() && (ai.getIntention() == Intention.IDLE))
+						if ((wo.isMonster() || (wo instanceof Guard)) && (ai.getIntention() == Intention.IDLE)) // Living World: wake guards too (FPC-128)
 						{
 							ai.setIntention(Intention.ACTIVE);
 						}
@@ -387,7 +388,7 @@ public class World
 					if (ai != null)
 					{
 						ai.describeStateToPlayer(wo.asPlayer());
-						if (object.isMonster() && (ai.getIntention() == Intention.IDLE))
+						if ((object.isMonster() || (object instanceof Guard)) && (ai.getIntention() == Intention.IDLE)) // Living World: wake guards too (FPC-128)
 						{
 							ai.setIntention(Intention.ACTIVE);
 						}
@@ -595,7 +596,7 @@ public class World
 						if (ai != null)
 						{
 							ai.describeStateToPlayer(object.asPlayer());
-							if (wo.isMonster() && (ai.getIntention() == Intention.IDLE))
+							if ((wo.isMonster() || (wo instanceof Guard)) && (ai.getIntention() == Intention.IDLE)) // Living World: wake guards too (FPC-128)
 							{
 								ai.setIntention(Intention.ACTIVE);
 							}
@@ -612,7 +613,7 @@ public class World
 						if (ai != null)
 						{
 							ai.describeStateToPlayer(wo.asPlayer());
-							if (object.isMonster() && (ai.getIntention() == Intention.IDLE))
+							if ((object.isMonster() || (object instanceof Guard)) && (ai.getIntention() == Intention.IDLE)) // Living World: wake guards too (FPC-128)
 							{
 								ai.setIntention(Intention.ACTIVE);
 							}

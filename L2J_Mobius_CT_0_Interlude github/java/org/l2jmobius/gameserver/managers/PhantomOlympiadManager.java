@@ -126,7 +126,14 @@ public class PhantomOlympiadManager
 			}
 			if (!_rosterLoaded)
 			{
-				_roster.putAll(phantoms.loadOlympiadRoster());
+				// Support-class and summoner nobles made before they were left out keep their rows but are never logged in.
+				phantoms.loadOlympiadRoster().forEach((charId, classId) ->
+				{
+					if (PhantomOlympiadRules.isRosterClass(classId))
+					{
+						_roster.put(charId, classId);
+					}
+				});
 				_rosterLoaded = true;
 			}
 			// At most one creation and one login per tick, so a big roster spreads its database and gearing cost.
@@ -165,7 +172,7 @@ public class PhantomOlympiadManager
 		for (Player player : waitingRealPlayers(PhantomOlympiadBridge.pools()))
 		{
 			final int playerClass = player.getBaseClass();
-			if (PhantomOlympiadRules.isThirdClass(playerClass) && (PhantomOlympiadRules.missing(counts[playerClass - PhantomOlympiadRules.FIRST_THIRD_CLASS_ID], PhantomOlympiadConfig.PHANTOM_OLYMPIAD_RIVALS_PER_CLASS) > 0))
+			if (PhantomOlympiadRules.isRosterClass(playerClass) && (PhantomOlympiadRules.missing(counts[playerClass - PhantomOlympiadRules.FIRST_THIRD_CLASS_ID], PhantomOlympiadConfig.PHANTOM_OLYMPIAD_RIVALS_PER_CLASS) > 0))
 			{
 				classId = playerClass;
 				break;
@@ -326,25 +333,59 @@ public class PhantomOlympiadManager
 
 		final List<Player> nobles = new ArrayList<>(phantoms.onlineOlympians());
 		Collections.shuffle(nobles);
+		// Per class a real player waits in: why its nobles did or did not join, for the diagnostic line below.
+		final Map<Integer, int[]> why = new HashMap<>(); // online, joined, moved from open queue, resting, in match, low points, dead
 		for (Player noble : nobles)
 		{
 			final int objectId = noble.getObjectId();
 			final int classId = noble.getBaseClass();
+			final int[] tally = realClassed.containsKey(classId) ? why.computeIfAbsent(classId, k -> new int[7]) : null;
+			if (tally != null)
+			{
+				tally[0]++;
+			}
 			final int waitingIn = pools.classedPoolOf(objectId);
 			if ((waitingIn >= 0) && !realClassed.containsKey(waitingIn))
 			{
 				PhantomOlympiadBridge.unregister(noble); // nobody real to fight in that pool any more
 				continue;
 			}
-			final boolean registered = pools.nonClassed.contains(objectId) || (waitingIn >= 0);
 			final boolean inMatch = noble.isInOlympiadMode() || isInGame(olympiad, noble);
+			// A noble of a real player's class waiting in the open queue moves to the player's class pool, which the
+			// player is waiting on; otherwise every noble of that class could sit in the open queue (FPC-130).
+			if ((tally != null) && !inMatch && pools.nonClassed.contains(objectId) && PhantomOlympiadBridge.unregister(noble))
+			{
+				pools.nonClassed.remove(Integer.valueOf(objectId));
+				nonClassedWaiting--;
+				tally[2]++;
+			}
+			final boolean registered = pools.nonClassed.contains(objectId) || (waitingIn >= 0);
 			if (!PhantomOlympiadRules.isFree(true, registered, inMatch, noble.isDead(), now, _restUntil.getOrDefault(objectId, 0L)))
 			{
+				if (tally != null)
+				{
+					if (inMatch)
+					{
+						tally[4]++;
+					}
+					else if (noble.isDead())
+					{
+						tally[6]++;
+					}
+					else if (!registered)
+					{
+						tally[3]++;
+					}
+				}
 				continue;
 			}
 			// A new noble has no record yet; stock gives it the starting points on its first sign-up.
 			final int points = olympiad.getNoblePoints(objectId);
 			final int effectivePoints = (points > 0) ? points : OlympiadConfig.OLYMPIAD_START_POINTS;
+			if ((tally != null) && !PhantomOlympiadRules.hasPointsFor(true, effectivePoints))
+			{
+				tally[5]++;
+			}
 			if (realClassed.containsKey(classId) && PhantomOlympiadRules.hasPointsFor(true, effectivePoints))
 			{
 				final List<Integer> pool = pools.classed.get(classId);
@@ -352,6 +393,7 @@ public class PhantomOlympiadManager
 				if (PhantomOlympiadRules.shouldSignUp(true, waiting, PhantomOlympiadRules.poolCap(OlympiadConfig.OLYMPIAD_CLASSED, realClassed.get(classId)), 0, 0) && PhantomOlympiadBridge.register(noble, true))
 				{
 					pools.classed.computeIfAbsent(classId, k -> new ArrayList<>()).add(objectId);
+					tally[1]++;
 					continue;
 				}
 			}
@@ -365,12 +407,37 @@ public class PhantomOlympiadManager
 				}
 			}
 		}
+		// A real player waiting in a class pool that is still short: say how that class's nobles stand (FPC-130).
+		for (Map.Entry<Integer, Integer> entry : realClassed.entrySet())
+		{
+			final int classId = entry.getKey();
+			final List<Integer> pool = pools.classed.get(classId);
+			final int size = (pool == null) ? 0 : pool.size();
+			if (size < OlympiadConfig.OLYMPIAD_CLASSED)
+			{
+				final int[] tally = why.getOrDefault(classId, new int[7]);
+				LOGGER.info(getClass().getSimpleName() + ": Class " + classId + " pool has " + size + "/" + OlympiadConfig.OLYMPIAD_CLASSED + " (" + entry.getValue() + " real). Nobles of the class: roster " + countRosterClass(classId) + ", online " + tally[0] + ", joined " + tally[1] + ", moved from open queue " + tally[2] + ", resting " + tally[3] + ", in match " + tally[4] + ", low points " + tally[5] + ", dead " + tally[6] + ".");
+			}
+		}
 	}
 
 	/** Called by {@link PhantomManager} when a noble's match is over, so it rests before signing up again. */
 	void onMatchEnded(Player noble, long now)
 	{
 		_restUntil.put(noble.getObjectId(), now + (Math.max(0, PhantomOlympiadConfig.PHANTOM_OLYMPIAD_REST_SECONDS) * 1000L));
+	}
+
+	private int countRosterClass(int classId)
+	{
+		int count = 0;
+		for (int rosterClass : _roster.values())
+		{
+			if (rosterClass == classId)
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 
 	private int countRoster(List<Integer> pool)

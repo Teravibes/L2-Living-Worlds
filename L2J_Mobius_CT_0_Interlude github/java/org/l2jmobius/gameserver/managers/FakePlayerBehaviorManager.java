@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -54,6 +55,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.actor.instance.Teleporter;
 import org.l2jmobius.gameserver.model.actor.instance.Warehouse;
 import org.l2jmobius.gameserver.model.spawns.Spawn;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 
 /**
@@ -71,6 +73,22 @@ import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
  */
 public class FakePlayerBehaviorManager implements IXmlReader
 {
+	/**
+	 * @param npc an NPC about to attack, or to be called in by its clan
+	 * @param target its hate target (a player, a phantom, or one's summon)
+	 * @return {@code true} if the NPC is a town fake player and the target's owner is a white player it should leave
+	 *         alone (see {@link FakePlayerGrudgeRules})
+	 */
+	public static boolean forgetsWhitePlayer(Npc npc, Creature target)
+	{
+		if ((npc == null) || (target == null) || !npc.isFakePlayer() || !target.isPlayable())
+		{
+			return false;
+		}
+		final Player player = target.asPlayer();
+		return (player != null) && FakePlayerGrudgeRules.forgets(FakePlayersConfig.FAKE_PLAYER_AGGRO_PLAYERS, player.getKarma(), player.getPvpFlag(), player.isInsideZone(ZoneId.PVP), player.isInOlympiadMode());
+	}
+	
 	private static final Logger LOGGER = Logger.getLogger(FakePlayerBehaviorManager.class.getName());
 
 	// How often we look for newly spawned / despawned fake players.

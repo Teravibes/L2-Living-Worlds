@@ -5354,7 +5354,7 @@ public abstract class Creature extends WorldObject
 	
 	public boolean isInsidePeaceZone(WorldObject attacker, WorldObject target)
 	{
-		if ((target == null) || !((target.isPlayable() || target.isFakePlayer()) && attacker.isPlayable()))
+		if ((target == null) || !((target.isPlayable() || target.isFakePlayer()) && (attacker.isPlayable() || attacker.isFakePlayer()))) // Living World: town fake players are held by peace zones too
 		{
 			return false;
 		}

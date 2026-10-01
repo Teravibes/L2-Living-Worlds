@@ -32,6 +32,25 @@ public class PhantomOlympiadRules
 	public static final int FIRST_THIRD_CLASS_ID = 88;
 	public static final int LAST_THIRD_CLASS_ID = 118;
 	public static final int THIRD_CLASS_COUNT = (LAST_THIRD_CLASS_ID - FIRST_THIRD_CLASS_ID) + 1;
+	/**
+	 * Third classes the roster never uses (owner's choice): the support classes, whose combat is a party healer's or
+	 * buffer's, and the summoners, whose servitors a phantom does not control. Cardinal, Hierophant, Eva's Saint,
+	 * Shillien Saint, Dominator, Doomcryer; Arcana Lord, Elemental Master, Spectral Master.
+	 */
+	private static final int[] EXCLUDED_CLASS_IDS =
+	{
+		97,
+		98,
+		105,
+		112,
+		115,
+		116,
+		96,
+		104,
+		111
+	};
+	/** How many third classes the roster fills. */
+	public static final int FIGHTING_CLASS_COUNT = THIRD_CLASS_COUNT - EXCLUDED_CLASS_IDS.length;
 	/** Third class starts at 76 and the Interlude cap is 80, so a roster noble is always in this band. */
 	public static final int NOBLE_LEVEL_MIN = 76;
 	public static final int NOBLE_LEVEL_MAX = 80;
@@ -47,6 +66,23 @@ public class PhantomOlympiadRules
 	public static boolean isThirdClass(int classId)
 	{
 		return (classId >= FIRST_THIRD_CLASS_ID) && (classId <= LAST_THIRD_CLASS_ID);
+	}
+
+	/** @return {@code true} if {@code classId} is a third class the phantom roster uses (not support, not summoner). */
+	public static boolean isRosterClass(int classId)
+	{
+		if (!isThirdClass(classId))
+		{
+			return false;
+		}
+		for (int excluded : EXCLUDED_CLASS_IDS)
+		{
+			if (excluded == classId)
+			{
+				return false;
+			}
+		}
+		return true;
 	}
 
 	/**
@@ -153,32 +189,40 @@ public class PhantomOlympiadRules
 	}
 
 	/**
-	 * How many nobles of a class the base roster holds: {@code rosterSize} spread over the third classes in id order,
-	 * so every class gets {@code rosterSize / 31} and the first {@code rosterSize % 31} classes one more.
-	 * @param classIndex {@code classId - FIRST_THIRD_CLASS_ID}
+	 * How many nobles of a class the base roster holds: {@code rosterSize} spread over the roster classes in id order,
+	 * so every class gets {@code rosterSize / FIGHTING_CLASS_COUNT} and the first {@code rosterSize % FIGHTING_CLASS_COUNT}
+	 * classes one more.
+	 * @param rank the class's position among the roster classes (0 = Duelist)
 	 */
-	public static int baseQuota(int classIndex, int rosterSize)
+	public static int baseQuota(int rank, int rosterSize)
 	{
 		final int size = Math.max(0, rosterSize);
-		return (size / THIRD_CLASS_COUNT) + ((classIndex < (size % THIRD_CLASS_COUNT)) ? 1 : 0);
+		return (size / FIGHTING_CLASS_COUNT) + ((rank < (size % FIGHTING_CLASS_COUNT)) ? 1 : 0);
 	}
 
 	/**
-	 * Picks the class the next base-roster noble gets: the lowest class id still below its {@link #baseQuota}. Rival
-	 * nobles added for a player's class only count toward that class's own quota, so they never take a base slot from
-	 * another class and the base roster always ends up spread over every class.
+	 * Picks the class the next base-roster noble gets: the lowest roster class id still below its {@link #baseQuota}.
+	 * Rival nobles added for a player's class only count toward that class's own quota, so they never take a base slot
+	 * from another class and the base roster always ends up spread over every roster class. Support classes and
+	 * summoners are skipped.
 	 * @param countsByClass nobles per class (base and rivals), indexed by {@code classId - FIRST_THIRD_CLASS_ID}
 	 * @return the class id, or 0 when the base roster is complete
 	 */
 	public static int nextBaseClass(int[] countsByClass, int rosterSize)
 	{
+		int rank = 0;
 		for (int i = 0; i < THIRD_CLASS_COUNT; i++)
 		{
+			if (!isRosterClass(FIRST_THIRD_CLASS_ID + i))
+			{
+				continue;
+			}
 			final int count = (i < countsByClass.length) ? countsByClass[i] : 0;
-			if (count < baseQuota(i, rosterSize))
+			if (count < baseQuota(rank, rosterSize))
 			{
 				return FIRST_THIRD_CLASS_ID + i;
 			}
+			rank++;
 		}
 		return 0;
 	}

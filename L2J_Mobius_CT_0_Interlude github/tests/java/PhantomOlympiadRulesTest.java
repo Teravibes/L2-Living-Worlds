@@ -73,14 +73,27 @@ public class PhantomOlympiadRulesTest
 		eqBool(false, PhantomOlympiadRules.isThirdClass(2), "Gladiator (2nd class) is not");
 	}
 
-	/** The base roster is its configured size spread over the 31 classes; rivals never take another class's base slot. */
+	/**
+	 * The base roster is its configured size spread over the 22 roster classes (support classes and summoners are
+	 * left out); rivals never take another class's base slot.
+	 */
 	private static void testNextBaseClass()
 	{
+		eq(22, PhantomOlympiadRules.FIGHTING_CLASS_COUNT, "31 third classes minus 6 support and 3 summoners");
+		eqBool(true, PhantomOlympiadRules.isRosterClass(88), "Duelist is a roster class");
+		eqBool(true, PhantomOlympiadRules.isRosterClass(118), "Maestro is a roster class");
+		eqBool(false, PhantomOlympiadRules.isRosterClass(112), "Shillien Saint is left out");
+		eqBool(false, PhantomOlympiadRules.isRosterClass(97), "Cardinal is left out");
+		eqBool(false, PhantomOlympiadRules.isRosterClass(116), "Doomcryer is left out");
+		eqBool(false, PhantomOlympiadRules.isRosterClass(96), "Arcana Lord is left out");
+		eqBool(false, PhantomOlympiadRules.isRosterClass(111), "Spectral Master is left out");
+		eqBool(false, PhantomOlympiadRules.isRosterClass(2), "a 2nd class is not a roster class");
+
 		eq(2, PhantomOlympiadRules.baseQuota(0, 40), "40: Duelist gets 2");
-		eq(2, PhantomOlympiadRules.baseQuota(8, 40), "40: the 9th class gets 2");
-		eq(1, PhantomOlympiadRules.baseQuota(9, 40), "40: the 10th class gets 1");
+		eq(2, PhantomOlympiadRules.baseQuota(17, 40), "40: the 18th roster class gets 2");
+		eq(1, PhantomOlympiadRules.baseQuota(18, 40), "40: the 19th roster class gets 1");
 		eq(0, PhantomOlympiadRules.baseQuota(0, 0), "size 0: no quota");
-		eq(3, PhantomOlympiadRules.baseQuota(30, 93), "93 = 3 per class");
+		eq(3, PhantomOlympiadRules.baseQuota(21, 66), "66 = 3 per roster class");
 
 		final int[] counts = new int[PhantomOlympiadRules.THIRD_CLASS_COUNT];
 		eq(88, PhantomOlympiadRules.nextBaseClass(counts, 40), "empty roster starts at Duelist");
@@ -90,6 +103,7 @@ public class PhantomOlympiadRulesTest
 		int created = 0;
 		for (int classId; (classId = PhantomOlympiadRules.nextBaseClass(counts, 40)) != 0; created++)
 		{
+			eqBool(true, PhantomOlympiadRules.isRosterClass(classId), "only roster classes are created (" + classId + ")");
 			counts[classId - PhantomOlympiadRules.FIRST_THIRD_CLASS_ID]++;
 		}
 		eq(40, created, "exactly 40 base nobles are created");
@@ -106,8 +120,8 @@ public class PhantomOlympiadRulesTest
 				twos++;
 			}
 		}
-		eq(22, ones, "40 nobles: 22 classes with one noble");
-		eq(9, twos, "40 nobles: 9 classes with two");
+		eq(4, ones, "40 nobles: 4 classes with one noble");
+		eq(18, twos, "40 nobles: 18 classes with two");
 
 		// Rivals added first: six Adventurers (93) for a player, then the base roster is built.
 		final int[] withRivals = new int[PhantomOlympiadRules.THIRD_CLASS_COUNT];
@@ -118,21 +132,21 @@ public class PhantomOlympiadRulesTest
 			eqBool(true, classId != 93, "rivals already cover Adventurer's base slots");
 			withRivals[classId - PhantomOlympiadRules.FIRST_THIRD_CLASS_ID]++;
 		}
-		eq(38, created, "the other 30 classes still get their 38 base slots");
+		eq(38, created, "the other 21 roster classes still get their 38 base slots");
 		int missingClasses = 0;
-		for (int count : withRivals)
+		for (int i = 0; i < withRivals.length; i++)
 		{
-			if (count == 0)
+			if (PhantomOlympiadRules.isRosterClass(PhantomOlympiadRules.FIRST_THIRD_CLASS_ID + i) && (withRivals[i] == 0))
 			{
 				missingClasses++;
 			}
 		}
-		eq(0, missingClasses, "every class has a noble even with rivals on the roster");
+		eq(0, missingClasses, "every roster class has a noble even with rivals on the roster");
 
 		eq(101, PhantomOlympiadRules.nextBaseClass(new int[]
 		{
-			2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1
-		}, 40), "a short counts array reads the missing classes as 0 (first is 101)");
+			2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 2, 2
+		}, 40), "a short counts array reads the missing classes as 0 and skips 96-98 (first is 101)");
 		eq(0, PhantomOlympiadRules.nextBaseClass(new int[]
 		{
 			5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5

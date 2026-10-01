@@ -58,6 +58,8 @@ import org.l2jmobius.gameserver.data.xml.ItemData;
 import org.l2jmobius.gameserver.data.xml.PhantomPlaystyleData;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.managers.PhantomWeaponSets.GearContext;
+import org.l2jmobius.gameserver.managers.PhantomWeaponSets.WeaponKind;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -84,6 +86,7 @@ import org.l2jmobius.gameserver.model.events.holders.actor.creature.OnCreatureDa
 import org.l2jmobius.gameserver.model.events.holders.actor.player.OnPlayerLogout;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.model.groups.Party;
 import org.l2jmobius.gameserver.model.item.Armor;
 import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -148,6 +151,11 @@ public class PhantomManager implements IXmlReader
 	private static final long OLYMPIAN_REVIVE_DELAY_MS = 10000;
 	// Both sides of a match stand 1800 apart at the start; the opponent search covers the whole stadium.
 	private static final int OLYMPIAD_OPPONENT_RANGE = 4000;
+	// Archer kiting: how long a kite run may take before the archer re-engages, the shortest step worth taking, and how
+	// far from its party leader a member may kite.
+	private static final long KITE_RUN_MS = 1500;
+	private static final int KITE_MIN_STEP = 100;
+	private static final int KITE_LEADER_LEASH = 900;
 	// Short grace after a player's EnterWorld before we login-spawn their befriended regulars, so login itself
 	// finishes first and the spawn work runs off the login (packet) thread.
 	private static final long FRIEND_SPAWN_DELAY = 3000;
@@ -184,6 +192,12 @@ public class PhantomManager implements IXmlReader
 	// spending skills (PANIC/LIMIT survival casts are exempt) so a hunter keeps enough MP to auto-attack
 	// instead of going fully OOM. Recruited members use their own per-role reserve in PhantomPartyManager.
 	private static final int HUNTER_MP_RESERVE = 15;
+	// Dagger rear positioning (FPC-144): only once within this range of the target, a step's walk window, blocked steps
+	// allowed per target, and how far behind the target's body edge the dagger stands.
+	private static final int HUNTER_REAR_RANGE = 300;
+	private static final long HUNTER_REAR_GRACE_MS = 1500;
+	private static final int HUNTER_REAR_MAX_TRIES = 3;
+	private static final int HUNTER_REAR_GAP = 25;
 	// Retaliation anti-thrash: a hunter waits at least this long between target switches to an attacker, and
 	// never abandons a current target already at/below the near-kill HP percent (finish the kill first).
 	private static final long RETARGET_COOLDOWN = 4000;
@@ -1108,6 +1122,9 @@ public class PhantomManager implements IXmlReader
 		boolean playstyleParked; // this fighter's offensive AutoUse was handed to the playstyle engine (restored on teardown/adopt)
 		long nextRetargetAt; // earliest time this hunter may switch target to a fresh attacker again (retaliation hysteresis)
 		long nextDbgAt; // throttle for the per-tick hunter debug trace (only used while PhantomPartyManager.DEBUG is on)
+		int rearTargetId; // the target a dagger is stepping behind (positionHunterRear); a new target resets rearTries
+		int rearTries; // blocked steps behind rearTargetId so far (gives up at HUNTER_REAR_MAX_TRIES)
+		long rearMoveAt; // when the last step behind was issued
 		// PvP personality, rolled once at construction (see PhantomPvpManager). 0-100 each.
 		final boolean aggressor; // an aggressor may initiate PvP (react to a flag/PK, gank); a non-aggressor only ever defends
 		final int bravery; // higher = tolerates being more outmatched before it flees (shifts the flee HP threshold)
@@ -1117,6 +1134,7 @@ public class PhantomManager implements IXmlReader
 		// tasks run on different pool threads and a stale read of pvpTargetOid would let the hunt yank the phantom
 		// off its PvP target.
 		volatile int pvpTargetOid; // objectId of the Player this phantom is currently fighting in PvP (0 = not engaged)
+		volatile boolean freshEngagement; // set when a PvP engagement is claimed; the first playstyle tick clears the PvE pacing so the opener fires at once
 		volatile long pvpUntil; // hard cap on the current PvP engagement, so a phantom never stays locked on a vanished target
 		volatile boolean pvpFleeing; // currently retreating from the PvP opponent rather than trading blows
 		volatile long nextPvpDecisionAt; // anti-thrash: earliest time the stand-or-flee decision may flip again
@@ -1138,6 +1156,8 @@ public class PhantomManager implements IXmlReader
 		boolean olympian;
 		boolean olyInMatch; // seen in Olympiad mode (moved to a stadium); the fight kit is on until the match ends
 		long olyNextWanderAt; // next short stroll while idle near the Olympiad Manager
+		long lastKiteAt; // when this archer last stepped back from a melee PvP opponent (0 = never)
+		long olyTeleportSeenAt; // when a pending (decayed) teleport was first seen; finished on a later tick (FPC-124)
 		// Party companion (addCompanion): a real player's own character, loaded from its row and driven by the party AI.
 		// Its row belongs to that player, so despawn saves it and never deletes it, and it is never promoted or re-geared.
 		boolean companion;
@@ -2333,7 +2353,7 @@ public class PhantomManager implements IXmlReader
 		{
 			// A friend parties with its owner and pulls real weight in content: full best-in-grade kit
 			// (the recruited-member loadout), not the deliberately cheap ambient look.
-			outfitFriend(phantom, level, mage);
+			outfitFriend(phantom, level, mage, GearContext.PARTY);
 		}
 		else
 		{
@@ -2456,7 +2476,7 @@ public class PhantomManager implements IXmlReader
 		// hunters run their class playstyles: several class skills hard-require a specific weapon (dances need
 		// equipped dual swords, dagger skills need a dagger), so the wrong weapon silently blocked those casts.
 		buildGear();
-		gearParty(phantom, level, mage, roleForClass(phantom.getPlayerClass()));
+		gearParty(phantom, level, mage, roleForClass(phantom.getPlayerClass()), GearContext.SOLO);
 		phantom.setCurrentHpMp(phantom.getMaxHp(), phantom.getMaxMp());
 		phantom.setCurrentCp(phantom.getMaxCp());
 		registerAutoSkills(phantom);
@@ -2468,7 +2488,7 @@ public class PhantomManager implements IXmlReader
 	 * jewelry slots, a shield for a tank class, an enchant chance - and it arrives fully buffed. A friend is
 	 * meant to party with its owner and do real content, not blend in as a cheaply-dressed ambient extra.
 	 */
-	private void outfitFriend(Player phantom, int level, boolean mage)
+	private void outfitFriend(Player phantom, int level, boolean mage, GearContext context)
 	{
 		if (level > 1)
 		{
@@ -2482,7 +2502,7 @@ public class PhantomManager implements IXmlReader
 		transferClass(phantom, level, mage);
 		learnAllSkills(phantom);
 		buildGear();
-		gearParty(phantom, level, mage, roleForClass(phantom.getPlayerClass()));
+		gearParty(phantom, level, mage, roleForClass(phantom.getPlayerClass()), context);
 		PhantomBuffs.applyFullBuffs(phantom, roleForClass(phantom.getPlayerClass()) == PartyRole.TANK);
 		phantom.setCurrentHpMp(phantom.getMaxHp(), phantom.getMaxMp());
 		phantom.setCurrentCp(phantom.getMaxCp());
@@ -2853,7 +2873,7 @@ public class PhantomManager implements IXmlReader
 	 * players rather than fresh dingbats.</li>
 	 * </ul>
 	 */
-	private void gearParty(Player phantom, int level, boolean mage, PartyRole role)
+	private void gearParty(Player phantom, int level, boolean mage, PartyRole role, GearContext context)
 	{
 		final CrystalType grade = gradeForLevel(level);
 		// A chance this member is an enchanted player; if so, a modest uniform enchant on weapon + armor (jewelry is
@@ -2864,13 +2884,23 @@ public class PhantomManager implements IXmlReader
 		final int enchant = (Rnd.get(100) < FakePlayersConfig.FAKE_PLAYER_RECRUIT_ENCHANT_CHANCE) ? Rnd.get(enchantMin, enchantMax + 1) : 0;
 
 		// Weapon (randomly chosen among the strongest role-compatible options) + matching shots (+ arrows for a bow).
-		final ItemTemplate weapon = partyWeapon(phantom.getPlayerClass(), role, mage, grade);
+		final ItemTemplate weapon = partyWeapon(phantom.getPlayerClass(), role, mage, grade, context);
 		if (weapon != null)
 		{
 			equip(phantom, weapon, enchant);
-			final int shotId = mage ? spiritshotIdFor(weapon.getCrystalType()) : soulshotIdFor(weapon.getCrystalType());
-			phantom.getInventory().addItem(ItemProcessType.REWARD, shotId, SHOT_COUNT, phantom, null);
-			phantom.addAutoSoulShot(shotId);
+			// A party member of a multi-weapon line also carries its spare (PhantomWeaponSets), switched on the
+			// leader's order. Same grade, so the same shots fit; diet mode keeps the extra weight harmless.
+			final WeaponKind spareKind = mage ? null : PhantomWeaponSets.spareKind(phantom.getPlayerClass(), context);
+			final ItemTemplate spare = (spareKind == null) ? null : randomTopEquip(grade, spareKind::matches);
+			if ((spare != null) && (spare.getId() != weapon.getId()))
+			{
+				final Item spareItem = phantom.getInventory().addItem(ItemProcessType.REWARD, spare.getId(), 1, phantom, null);
+				if ((spareItem != null) && (enchant > 0))
+				{
+					spareItem.setEnchantLevel(enchant);
+				}
+			}
+			armShots(phantom, weapon.getCrystalType(), mage, null);
 			if ((weapon instanceof Weapon) && (((Weapon) weapon).getItemType() == WeaponType.BOW))
 			{
 				final ItemTemplate arrow = findArrow(weapon.getCrystalType());
@@ -2952,8 +2982,19 @@ public class PhantomManager implements IXmlReader
 	 * Strong, varied weapon for a recruited member. Broad roles keep strict weapon families, while WARRIOR is
 	 * refined by the resolved occupation so its specialists do not all collapse to swords.
 	 */
-	private static ItemTemplate partyWeapon(PlayerClass playerClass, PartyRole role, boolean mage, CrystalType grade)
+	private static ItemTemplate partyWeapon(PlayerClass playerClass, PartyRole role, boolean mage, CrystalType grade, GearContext context)
 	{
+		if (mage && isWarcryerLine(playerClass))
+		{
+			// Orc Shaman, Warcryer and Doomcryer buff first and melee between buffs, so a party one carries a one-handed
+			// magic blunt (the usual party Warcryer weapon: casting stats for the buffs, and a real weapon to hit with)
+			// instead of a staff or a book. Picked from the current class, so it follows the class at every spawn.
+			final ItemTemplate mace = randomTopEquip(grade, item -> (item instanceof Weapon) && item.isMagicWeapon() && (((Weapon) item).getItemType() == WeaponType.BLUNT) && (item.getBodyPart() == BodyPart.R_HAND));
+			if (mace != null)
+			{
+				return mace;
+			}
+		}
 		if (mage)
 		{
 			// Magic melee weapons are valid caster weapons too. Keep both one-handed (R_HAND) and two-handed
@@ -2996,7 +3037,7 @@ public class PhantomManager implements IXmlReader
 		}
 		else if (role == PartyRole.WARRIOR)
 		{
-			final ItemTemplate specialist = warriorWeapon(playerClass, grade);
+			final ItemTemplate specialist = warriorWeapon(playerClass, grade, context);
 			if (specialist != null)
 			{
 				return specialist;
@@ -3017,37 +3058,90 @@ public class PhantomManager implements IXmlReader
 	}
 
 	/**
-	 * Primary weapon used by each occupation currently grouped under WARRIOR. Secondary technically-usable weapon
-	 * families are intentionally omitted: recruits should look and fight like their class, not sample every mastery.
+	 * Main weapon of an occupation grouped under WARRIOR, from its weapon set (PhantomWeaponSets): Gladiators and
+	 * Duelists dual swords, Warlords and Dreadnoughts a polearm, the Orc Raider line a two-handed sword or blunt (a
+	 * two-handed blunt in the Olympiad), Dwarves a one-handed blunt. Base classes have no set and use the sword
+	 * fallback.
 	 */
-	private static ItemTemplate warriorWeapon(PlayerClass playerClass, CrystalType grade)
+	private static ItemTemplate warriorWeapon(PlayerClass playerClass, CrystalType grade, GearContext context)
 	{
-		if (playerClass == null)
-		{
-			return null;
-		}
-		final String name = playerClass.name().toLowerCase();
-		if (nameHas(name, "gladiator", "duelist"))
-		{
-			return randomTopEquip(grade, item -> isPhysicalWeapon(item, WeaponType.DUAL));
-		}
-		if (nameHas(name, "warlord", "dreadnought"))
-		{
-			return randomTopEquip(grade, item -> isPhysicalWeapon(item, WeaponType.POLE));
-		}
-		if (nameHas(name, "raider", "destroyer", "titan"))
-		{
-			return randomTopEquip(grade, item -> isPhysicalWeapon(item, WeaponType.SWORD) && (item.getBodyPart() == BodyPart.LR_HAND));
-		}
-		if (playerClass.getRace() == Race.DWARF)
-		{
-			// Dwarves can learn polearm skills, but their normal single-target weapon and blunt-only stuns use blunts.
-			return randomTopEquip(grade, item -> isPhysicalWeapon(item, WeaponType.BLUNT) && (item.getBodyPart() == BodyPart.R_HAND));
-		}
-		return null; // base/generic fighter: use the default physical sword fallback
+		final WeaponKind kind = PhantomWeaponSets.mainKind(playerClass, context);
+		return (kind == null) ? null : randomTopEquip(grade, kind::matches);
 	}
 
 	/** Exact physical weapon family, excluding caster-oriented magic variants of the same item type. */
+	/**
+	 * Stocks and switches on the shots a party member fires with a weapon of {@code grade}: spiritshots for a caster,
+	 * soulshots for anything that hits with its weapon ({@link #usesPhysicalAttacks}), so a Warcryer or a mystic with no
+	 * attack spell yet gets both. The one place party shots are chosen: the party kit, a town fake's own weapon and an
+	 * adopted friend all go through it.
+	 * @param replacedGrade the grade of the weapon just taken off, whose shots are switched off first ({@code null} when
+	 *            none)
+	 */
+	private static void armShots(Player phantom, CrystalType grade, boolean mage, CrystalType replacedGrade)
+	{
+		final boolean physical = usesPhysicalAttacks(phantom, mage);
+		if (replacedGrade != null)
+		{
+			phantom.removeAutoSoulShot(spiritshotIdFor(replacedGrade));
+			phantom.removeAutoSoulShot(soulshotIdFor(replacedGrade));
+		}
+		if (mage)
+		{
+			stockShot(phantom, spiritshotIdFor(grade));
+		}
+		if (physical)
+		{
+			stockShot(phantom, soulshotIdFor(grade));
+		}
+	}
+
+	/** Tops a shot stack up to {@link #SHOT_COUNT} and switches it to auto-use. */
+	private static void stockShot(Player phantom, int shotId)
+	{
+		final Item held = phantom.getInventory().getItemByItemId(shotId);
+		final long have = (held == null) ? 0 : held.getCount();
+		if (have < SHOT_COUNT)
+		{
+			phantom.getInventory().addItem(ItemProcessType.REWARD, shotId, (int) (SHOT_COUNT - have), phantom, null);
+		}
+		phantom.addAutoSoulShot(shotId);
+	}
+
+	/** A known skill a caster fights with: an active damage skill that is not one the party manager owns. */
+	public static boolean isAttackSpell(Skill skill)
+	{
+		return !skill.isPassive() && !skill.isToggle() && skill.hasNegativeEffect() && (skill.getPower() > 0) && !skill.hasEffectType(EffectType.HATE) && !PhantomSkillFallbackRules.neverCast(skill.getId());
+	}
+
+	/** @return {@code true} if {@code player} knows at least one {@link #isAttackSpell attack spell} */
+	public static boolean knowsAttackSpell(Player player)
+	{
+		for (Skill skill : player.getAllSkills())
+		{
+			if (isAttackSpell(skill))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * @return {@code true} if this character hits with its weapon: every non-caster, the Warcryer line (melee between
+	 *         buffs), and a mystic that knows no attack spell yet (it melees until it learns one)
+	 */
+	public static boolean usesPhysicalAttacks(Player player, boolean mage)
+	{
+		return !mage || isWarcryerLine(player.getPlayerClass()) || !knowsAttackSpell(player);
+	}
+
+	/** @return {@code true} for the Orc Shaman line that buffs and melees: Orc Shaman, Warcryer and Doomcryer */
+	public static boolean isWarcryerLine(PlayerClass playerClass)
+	{
+		return (playerClass == PlayerClass.ORC_SHAMAN) || (playerClass == PlayerClass.WARCRYER) || (playerClass == PlayerClass.DOOMCRYER);
+	}
+
 	private static boolean isPhysicalWeapon(ItemTemplate item, WeaponType type)
 	{
 		return (item instanceof Weapon) && !item.isMagicWeapon() && (((Weapon) item).getItemType() == type);
@@ -3511,14 +3605,14 @@ public class PhantomManager implements IXmlReader
 
 	/**
 	 * Hands a field FIGHTER's offensive casting to the shared {@link PhantomPlaystyleEngine} when its class has a
-	 * generic (role-less) playstyle, exactly as {@link PhantomPartyManager} does for recruited members: the engine's
+	 * playstyle for its class role ({@link #hunterRole}), exactly as {@link PhantomPartyManager} does for recruited members: the engine's
 	 * listed offensive skills (and any PANIC/LIMIT self-buffs) are pulled out of AutoUse so the native round-robin
 	 * dump can't compete with the engine's paced, condition-gated decisions, while auto-attack, shots and potions
 	 * stay on AutoUse (a fighter); a mage's nukes are likewise parked and driven from the mage tick instead of AutoUse.
 	 * Idempotent and additive:
 	 * <ul>
 	 * <li>Feature off, a buddy, or a recruited member - never parked (the party manager owns recruits/buddies).</li>
-	 * <li>A class with no generic playstyle - not parked, so it stays on exactly today's AutoUse behavior.</li>
+	 * <li>A class with no playstyle for its role - not parked, so it stays on exactly today's AutoUse behavior.</li>
 	 * <li>A low-level phantom whose listed skills are all still unlearned - parkAutoSkills self-guards and leaves
 	 * AutoUse intact (so a mage still nukes via AutoUse, a fighter still auto-uses), never parked into silence.</li>
 	 * <li>Already parked - a no-op (a reload re-park is handled by syncParkingIfReloaded in the combat tick).</li>
@@ -3530,17 +3624,17 @@ public class PhantomManager implements IXmlReader
 		{
 			return;
 		}
-		if (PhantomPlaystyleData.getInstance().getPlaystyle(phantom.getPlayerClass().getId(), null) == null)
+		if (PhantomPlaystyleData.getInstance().getPlaystyle(phantom.getPlayerClass().getId(), hunterRole(phantom)) == null)
 		{
-			return; // no generic rotation for this class - leave it on native AutoUse (unchanged behavior)
+			return; // no rotation for this class - leave it on native AutoUse (unchanged behavior)
 		}
 		if (data.play == null)
 		{
 			data.play = new PhantomPlaystyleEngine.PlayState();
 		}
-		// roleName null resolves each class's generic style; parkAutoSkills self-guards (leaves AutoUse intact) when
+		// The class's own role resolves its style (FPC-131); parkAutoSkills self-guards (leaves AutoUse intact) when
 		// the playstyle can field nothing at this level, so a low-level hunter is never parked into silence.
-		PhantomPlaystyleEngine.parkAutoSkills(phantom, data.play, null);
+		PhantomPlaystyleEngine.parkAutoSkills(phantom, data.play, hunterRole(phantom));
 		data.playstyleParked = true;
 	}
 
@@ -3561,6 +3655,49 @@ public class PhantomManager implements IXmlReader
 	}
 
 	/**
+	 * The combat role a field hunter or Olympiad noble resolves its playstyle with: the one its class maps to, exactly as
+	 * for a recruited member of that class. Without it the dagger and archer lines, whose playstyles are role-split
+	 * because their first classes are shared, found no playstyle outside a party and fought on raw AutoUse (FPC-131).
+	 * A class with only a role-less playstyle still resolves that one.
+	 */
+	private static String hunterRole(Player phantom)
+	{
+		return roleForClass(phantom.getPlayerClass()).name();
+	}
+
+	/**
+	 * The playstyle state this phantom casts through on the hunter and PvP ticks. A field hunter or Olympiad noble uses
+	 * its own (once {@link #parkHunterPlaystyle} has handed its AutoUse to the engine). A recruited party member uses the
+	 * party manager's: its offensive AutoUse is parked into that state, so a party-defense PvP engagement driven from here
+	 * must cast through it too, or the member fights with no skills at all.
+	 * @return the state, or {@code null} when the engine does not drive this phantom
+	 */
+	private static PhantomPlaystyleEngine.PlayState playStateFor(Player phantom, PhantomData data)
+	{
+		if (data.recruited)
+		{
+			return PhantomPartyManager.getInstance().playStateOf(phantom);
+		}
+		return data.playstyleParked ? data.play : null;
+	}
+
+	/**
+	 * @return the role this phantom's playstyle resolves with: a recruited member's party role, otherwise its class role
+	 */
+	private static String playRole(Player phantom, PhantomData data)
+	{
+		if (data.recruited)
+		{
+			final String role = PhantomPartyManager.getInstance().roleNameOf(phantom);
+			if (role != null)
+			{
+				return role;
+			}
+		}
+		return hunterRole(phantom);
+	}
+
+	/**
 	 * One playstyle decision for a field hunter against its claimed {@code focus}: asks the shared engine for the
 	 * first listed skill whose moment has come and hand-casts it with the same guards the party uses, then restores
 	 * the mob as the target so combat bookkeeping (and, for a fighter, native AutoPlay auto-attack) stays on the focus
@@ -3571,17 +3708,32 @@ public class PhantomManager implements IXmlReader
 	 */
 	private void tryHunterPlaystyle(Player phantom, Creature focus, PhantomData data)
 	{
-		if (!data.playstyleParked || (data.play == null))
+		final PhantomPlaystyleEngine.PlayState play = playStateFor(phantom, data);
+		if (play == null)
 		{
 			return;
 		}
 		// Live off-switch: a config reload that turned the feature off hands casting straight back to AutoUse on the
 		// next tick, so the previous field-hunter behavior returns without waiting for the zone to cycle or a rebuild.
-		if (!FakePlayersConfig.PHANTOM_HUNTER_PLAYSTYLES)
+		// A recruited member's skills belong to the party manager, which keeps its own playstyle switch.
+		if (!data.recruited && !FakePlayersConfig.PHANTOM_HUNTER_PLAYSTYLES)
 		{
 			unparkHunterPlaystyle(phantom, data);
 			return;
 		}
+		final String role = playRole(phantom, data);
+		// A PvP engagement just began: whatever pacing the last PvE skill left must not hold back the PvP opener
+		// (Ultimate Evasion), so the first cast of the fight comes at once.
+		if (data.freshEngagement)
+		{
+			data.freshEngagement = false;
+			PhantomPlaystyleEngine.resetPacing(play);
+		}
+		// A recruited member keeps its party tactics in a party-defense fight: its role's MP reserve and its real party
+		// healer for HEALER_READY entries. A solo phantom has no healer to wait for, so its HEALER_READY is always open.
+		final PhantomPartyManager party = PhantomPartyManager.getInstance();
+		final int mpReserve = data.recruited ? party.mpReserveOf(phantom, HUNTER_MP_RESERVE) : HUNTER_MP_RESERVE;
+		final boolean healerReady = data.recruited ? party.healerReadyOf(phantom) : (phantom.getParty() == null);
 		if (phantom.isCastingNow() || phantom.isCastingSimultaneouslyNow())
 		{
 			hunterDbg(phantom, focus, data, "casting");
@@ -3598,18 +3750,28 @@ public class PhantomManager implements IXmlReader
 		if (!phantom.isMovementDisabled())
 		{
 			// React to a //phantom playstyle reload that added or removed this class's style before deciding.
-			PhantomPlaystyleEngine.syncParkingIfReloaded(phantom, data.play, null);
-			// Solo hunter: no party healer to gate LIMIT entries (healerReady false); underAttack drives PANIC self-buffs.
-			final PhantomPlaystyleEngine.CastAction action = PhantomPlaystyleEngine.pick(phantom, focus, data.play, false, underAttack(phantom), HUNTER_MP_RESERVE, null);
+			PhantomPlaystyleEngine.syncParkingIfReloaded(phantom, play, role);
+			// healerReady and mpReserve were resolved above (party tactics for a recruit). underAttack drives PANIC self-buffs.
+			PhantomPlaystyleEngine.CastAction action = PhantomPlaystyleEngine.pick(phantom, focus, play, healerReady, underAttack(phantom), mpReserve, role);
+			if (action == null)
+			{
+				// Nothing listed fits: try the phantom's own unlisted attack skills before settling for a swing.
+				action = PhantomPlaystyleEngine.pickFallback(phantom, focus, play, mpReserve);
+			}
 			if (action != null)
 			{
 				phantom.setTarget(action.target);
 				phantom.doCast(action.skill);
 				// Commit a once-per-target opener to the ledger only after the cast actually launched (mirrors the party)
 				// - a cast the core rejected stays retryable next tick instead of being burned for the life of this target.
-				if (phantom.isCastingNow() || phantom.isCastingSimultaneouslyNow())
+				// A toggle (a STANCE) finishes inside doCast; being on now is what shows that it went off.
+				if (phantom.isCastingNow() || phantom.isCastingSimultaneouslyNow() || (action.skill.isToggle() && phantom.isAffectedBySkill(action.skill.getId())))
 				{
-					PhantomPlaystyleEngine.confirmCast(data.play, action);
+					PhantomPlaystyleEngine.confirmCast(play, action);
+				}
+				else
+				{
+					PhantomPlaystyleEngine.markRejected(play, action); // refused: rest it briefly instead of retrying every tick
 				}
 				hunterDbg(phantom, focus, data, "cast " + action.skill.getName() + (action.target == phantom ? " (self)" : ""));
 				// Restore the mob as the target so the assign claim bookkeeping (and the attack-keeper below, next tick)
@@ -3631,6 +3793,62 @@ public class PhantomManager implements IXmlReader
 		{
 			keepMeleeAttacking(phantom, focus);
 		}
+	}
+
+	/**
+	 * Dagger rear positioning for a field hunter, a PvP fighter or an Olympiad noble (FPC-144), the solo counterpart of the
+	 * party's {@code positionRear}: steps to the target's back while it cannot turn on the dagger, so Backstab (REAR) and
+	 * the rear crit bonus land by play instead of by chance. A target cannot turn while it is stunned, asleep or
+	 * paralyzed, or while it fights someone else (a monster's most hated, a player's selected target). A target that has
+	 * the dagger itself in its sights is fought face to face, as a real dagger would. Gives up after a few blocked steps
+	 * per target (a wall at its back) rather than circling forever.
+	 * @return {@code true} while stepping - the caller skips re-issuing the attack and the playstyle this tick
+	 */
+	private boolean positionHunterRear(Player phantom, PhantomData data, Creature target)
+	{
+		if (!"DAGGER".equals(playRole(phantom, data)) || phantom.isCastingNow() || phantom.isMovementDisabled() || target.isMoving() || target.isDead())
+		{
+			return false;
+		}
+		if (phantom.calculateDistance2D(target) > HUNTER_REAR_RANGE)
+		{
+			return false; // still closing in - the normal engage walks it up first
+		}
+		final boolean helpless = target.isStunned() || target.isSleeping() || target.isParalyzed();
+		final WorldObject busyWith = target.isAttackable() ? target.asAttackable().getMostHated() : target.getTarget();
+		if (!helpless && ((busyWith == null) || (busyWith == phantom)))
+		{
+			return false; // it is facing us (or nobody): fight from where we stand
+		}
+		if (target.getObjectId() != data.rearTargetId)
+		{
+			data.rearTargetId = target.getObjectId();
+			data.rearTries = 0;
+		}
+		final long now = System.currentTimeMillis();
+		if (phantom.isMoving() && ((now - data.rearMoveAt) < HUNTER_REAR_GRACE_MS))
+		{
+			return true; // still stepping around it - let the move finish
+		}
+		if (phantom.isBehind(target))
+		{
+			data.rearTries = 0;
+			return false; // already at its back - stab away
+		}
+		if (data.rearTries >= HUNTER_REAR_MAX_TRIES)
+		{
+			return false; // its back is out of reach (wall?) - fight from the front rather than orbit forever
+		}
+		// The target faces the way its heading points; its back is directly opposite, just outside its body.
+		final double facing = (target.getHeading() * 2 * Math.PI) / 65536.0;
+		final double distance = target.getTemplate().getCollisionRadius() + HUNTER_REAR_GAP;
+		final Location rear = new Location(target.getX() - (int) (Math.cos(facing) * distance), target.getY() - (int) (Math.sin(facing) * distance), target.getZ());
+		data.rearMoveAt = now;
+		data.rearTries++;
+		phantom.setTarget(target);
+		phantom.setRunning();
+		phantom.getAI().setIntention(Intention.MOVE_TO, GeoEngine.getInstance().getValidLocation(phantom, rear));
+		return true;
 	}
 
 	/**
@@ -3685,7 +3903,10 @@ public class PhantomManager implements IXmlReader
 		LOGGER.info("HUNTER '" + phantom.getName() + "' (" + phantom.getPlayerClass() + ") foc='" + focus.getName() + "' d=" + (int) phantom.calculateDistance2D(focus) + " int=" + phantom.getAI().getIntention() + " atk=" + phantom.isAttackingNow() + " mov=" + phantom.isMoving() + " cast=" + phantom.isCastingNow() + " ua=" + underAttack(phantom) + " hp=" + phantom.getCurrentHpPercent() + "% mp=" + phantom.getCurrentMpPercent() + "% -> " + note);
 	}
 
-	/** @return true if a live monster within danger range is currently targeting this phantom (feeds PANIC playstyle entries). */
+	/**
+	 * @return true if a live monster within danger range is currently targeting this phantom, or, in a player fight (an
+	 *         Olympiad match, a duel, or while flagged), a live player is (feeds PANIC and UNDER_ATTACK playstyle entries)
+	 */
 	private static boolean underAttack(Player phantom)
 	{
 		for (Monster monster : World.getInstance().getVisibleObjectsInRange(phantom, Monster.class, REST_DANGER_RANGE))
@@ -3693,6 +3914,16 @@ public class PhantomManager implements IXmlReader
 			if (!monster.isDead() && (monster.getTarget() == phantom))
 			{
 				return true;
+			}
+		}
+		if (phantom.isInOlympiadMode() || phantom.isInDuel() || (phantom.getPvpFlag() != 0))
+		{
+			for (Player player : World.getInstance().getVisibleObjectsInRange(phantom, Player.class, REST_DANGER_RANGE))
+			{
+				if (!player.isDead() && (player.getTarget() == phantom))
+				{
+					return true;
+				}
 			}
 		}
 		return false;
@@ -4118,13 +4349,7 @@ public class PhantomManager implements IXmlReader
 			equip(phantom, weapon, Math.max(0, look.getWeaponEnchantLevel()));
 			if (oldGrade != weapon.getCrystalType())
 			{
-				if (oldGrade != null)
-				{
-					phantom.removeAutoSoulShot(mage ? spiritshotIdFor(oldGrade) : soulshotIdFor(oldGrade));
-				}
-				final int shotId = mage ? spiritshotIdFor(weapon.getCrystalType()) : soulshotIdFor(weapon.getCrystalType());
-				phantom.getInventory().addItem(ItemProcessType.REWARD, shotId, SHOT_COUNT, phantom, null);
-				phantom.addAutoSoulShot(shotId);
+				armShots(phantom, weapon.getCrystalType(), mage, oldGrade);
 			}
 			if (((Weapon) weapon).getItemType() == WeaponType.BOW)
 			{
@@ -4181,7 +4406,7 @@ public class PhantomManager implements IXmlReader
 			settings.setNextTargetMode(TARGET_MODE_MONSTER);
 			settings.setShortRange(false);
 			settings.setRespectfulHunting(true);
-			settings.setPickup(false); // recruited party members never loot - drops are left for the real player
+			settings.setPickup(false); // no native AutoPlay pickup: PhantomPartyManager collects drops itself (FakePlayerPartyPickup)
 			final AutoUseSettingsHolder autoUseSettings = member.getAutoUseSettings();
 			autoUseSkills.forEach(skill ->
 			{
@@ -4238,6 +4463,13 @@ public class PhantomManager implements IXmlReader
 		{
 			// Supports are cast by hand from the party tick (heal/buff/res), exactly like recruited healers.
 			AutoUseTaskManager.getInstance().stopAutoUseTask(friend);
+		}
+		// Its field kit carries only the shots its field role fired; a party Warcryer also melees, so top up the shot
+		// families its party role needs for the weapon it already holds (its gear itself is kept).
+		final Weapon heldWeapon = friend.getActiveWeaponItem();
+		if (heldWeapon != null)
+		{
+			armShots(friend, heldWeapon.getCrystalType(), role.mage, null);
 		}
 		else
 		{
@@ -4326,7 +4558,8 @@ public class PhantomManager implements IXmlReader
 	}
 
 	/**
-	 * Switches a companion's own soulshots or spiritshots (matching its weapon grade) and its best healing potion to
+	 * Switches a companion's own soulshots and/or spiritshots (matching its weapon grade; both for a caster that also
+	 * melees) and its best healing potion to
 	 * auto-use. Runtime settings only: nothing is added to its inventory.
 	 */
 	private static void armCompanionSupplies(Player companion, boolean mage)
@@ -4335,10 +4568,11 @@ public class PhantomManager implements IXmlReader
 		if (weapon != null)
 		{
 			final CrystalType grade = weapon.getTemplate().getCrystalType();
-			final ActionType shotAction = mage ? ActionType.SPIRITSHOT : ActionType.SOULSHOT;
+			final boolean physical = usesPhysicalAttacks(companion, mage);
 			for (Item item : companion.getInventory().getItems())
 			{
-				if ((item.getTemplate().getDefaultAction() == shotAction) && (item.getTemplate().getCrystalType() == grade))
+				final ActionType action = item.getTemplate().getDefaultAction();
+				if ((((action == ActionType.SPIRITSHOT) && mage) || ((action == ActionType.SOULSHOT) && physical)) && (item.getTemplate().getCrystalType() == grade))
 				{
 					companion.addAutoSoulShot(item.getId());
 				}
@@ -4430,7 +4664,7 @@ public class PhantomManager implements IXmlReader
 		learnAllSkills(phantom);
 		grantHeal(phantom, level);
 		giveBuffReagents(phantom); // Spirit Ore etc. so consumable buffs (Greater Might/Shield, Clarity) actually land
-		gearParty(phantom, level, true, role); // full caster loadout + jewelry + enchant chance, so supports survive content
+		gearParty(phantom, level, true, role, GearContext.PARTY); // full caster loadout + jewelry + enchant chance, so supports survive content
 		PhantomBuffs.applyFullBuffs(phantom, role == PartyRole.TANK); // a support arrives self-buffed (Acumen/Empower etc.) too
 		phantom.setCurrentHpMp(phantom.getMaxHp(), phantom.getMaxMp());
 		phantom.setCurrentCp(phantom.getMaxCp());
@@ -4451,7 +4685,7 @@ public class PhantomManager implements IXmlReader
 		// Recruited members gear up for real content: strong varied class-appropriate weapon + full armor + jewelry
 		// + shield (tank/one-handed caster) + a chance of enchant. gearParty resolves specialist WARRIOR weapons from
 		// the actual occupation, so Gladiators/Duelists, Warlords, Destroyers/Titans, and Dwarves keep their main type.
-		gearParty(phantom, level, role.mage, role);
+		gearParty(phantom, level, role.mage, role, GearContext.PARTY);
 		PhantomBuffs.applyFullBuffs(phantom, role == PartyRole.TANK); // arrive already buffed for its archetype, so a fresh party isn't unbuffed
 		phantom.setCurrentHpMp(phantom.getMaxHp(), phantom.getMaxMp());
 		phantom.setCurrentCp(phantom.getMaxCp());
@@ -5143,6 +5377,7 @@ public class PhantomManager implements IXmlReader
 			data.pvpFleeing = false;
 			data.nextPvpDecisionAt = 0;
 			data.pvpUntil = until;
+			data.freshEngagement = true;
 			data.pvpTargetOid = opponentOid;
 			return true;
 		}
@@ -5339,10 +5574,68 @@ public class PhantomManager implements IXmlReader
 			tryHunterPlaystyle(phantom, target, data); // in range: cast the tuned rotation (or AutoUse for a no-playstyle mage)
 			return;
 		}
+		// Archer: step back from a melee opponent that has closed in, then shoot from range again (L2Solo style).
+		if (kiteFrom(phantom, data, target))
+		{
+			return;
+		}
+		// Dagger: step to the opponent's back while it cannot turn on us (FPC-144); the attack resumes once there.
+		if (positionHunterRear(phantom, data, target))
+		{
+			return;
+		}
 		// Fighter: approach and auto-attack (the base ATTACK intention), then let the engine fire its class skills at
 		// the paced moments. tryHunterPlaystyle no-ops for a no-playstyle fighter, whose AutoUse casts as before.
 		engageTarget(phantom, target);
 		tryHunterPlaystyle(phantom, target, data);
+	}
+
+	/**
+	 * Archer kiting in PvP: a bow phantom whose melee opponent has closed to {@link PhantomPvpManager#KITE_TRIGGER_RANGE}
+	 * runs straight away from it to about {@link PhantomPvpManager#KITE_RETREAT_DISTANCE}, at most once per
+	 * {@link PhantomPvpManager#KITE_COOLDOWN_MS}, and is left to finish that run before it re-engages. A party member
+	 * never kites to a spot far from its leader, and a spot the geodata cannot reach is skipped (it shoots on instead).
+	 * @return {@code true} while a kite step is under way (the caller skips its attack this tick)
+	 */
+	private boolean kiteFrom(Player phantom, PhantomData data, Player target)
+	{
+		final long now = System.currentTimeMillis();
+		if ((data.lastKiteAt > 0) && ((now - data.lastKiteAt) < KITE_RUN_MS) && phantom.isMoving())
+		{
+			return true; // mid-step: let it land before re-engaging (an ATTACK now would cancel the run)
+		}
+		final Weapon weapon = phantom.getActiveWeaponItem();
+		final Weapon opponentWeapon = target.getActiveWeaponItem();
+		final boolean bow = (weapon != null) && (weapon.getItemType() == WeaponType.BOW);
+		final boolean opponentMelee = !target.getPlayerClass().isMage() && ((opponentWeapon == null) || (opponentWeapon.getItemType() != WeaponType.BOW));
+		final boolean canMove = !phantom.isMovementDisabled() && !phantom.isCastingNow();
+		if (!PhantomPvpManager.shouldKite(PhantomPvpManager.archerKitingEnabled(), bow, opponentMelee, phantom.calculateDistance2D(target), canMove, phantom.isInsideZone(ZoneId.PEACE), data.lastKiteAt, now))
+		{
+			return false;
+		}
+		final double angle = Math.atan2(phantom.getY() - target.getY(), phantom.getX() - target.getX());
+		final int x = target.getX() + (int) (Math.cos(angle) * PhantomPvpManager.KITE_RETREAT_DISTANCE);
+		final int y = target.getY() + (int) (Math.sin(angle) * PhantomPvpManager.KITE_RETREAT_DISTANCE);
+		final Location destination = GeoEngine.getInstance().getValidLocation(phantom, new Location(x, y, phantom.getZ()));
+		if (phantom.calculateDistance2D(destination) < KITE_MIN_STEP)
+		{
+			data.lastKiteAt = now; // cornered: no room to back off, so shoot on and try again after the cooldown
+			return false;
+		}
+		final Party party = phantom.getParty();
+		if ((party != null) && (party.getLeader() != phantom) && (party.getLeader().calculateDistance2D(destination) > KITE_LEADER_LEASH))
+		{
+			data.lastKiteAt = now;
+			return false;
+		}
+		data.lastKiteAt = now;
+		if (phantom.isAttackingNow())
+		{
+			phantom.abortAttack();
+		}
+		phantom.setRunning();
+		phantom.getAI().setIntention(Intention.MOVE_TO, destination);
+		return true;
 	}
 
 	/** Turns the phantom to attack the target, letting the core AI drive the approach, swing, and AutoUse casting. */
@@ -5391,6 +5684,14 @@ public class PhantomManager implements IXmlReader
 		{
 			releaseDuelRequest(phantom, target); // FPC-113: never leave a challenge open that nothing will follow up
 		}
+		// The next engagement starts fresh: its openers (Ultimate Evasion) may fire again on this same player, and a dagger
+		// that gave up reaching this player's back (a wall) tries again.
+		if (target != null)
+		{
+			PhantomPlaystyleEngine.forgetTarget(playStateFor(phantom, data), target.getObjectId());
+		}
+		data.rearTargetId = 0;
+		data.rearTries = 0;
 		synchronized (data)
 		{
 			data.pvpUntil = 0;
@@ -6021,7 +6322,7 @@ public class PhantomManager implements IXmlReader
 				// A field fighter that owns this live focus drives its class playstyle from here (paced by the
 				// engine, so the 1s tick does not machine-gun). Mages cast from the mage tick instead (positioning
 				// first); a phantom that just yielded (claimedOid 0) is skipped - it re-acquires in pass 2 first.
-				if (!data.mage && (data.claimedOid == id))
+				if (!data.mage && (data.claimedOid == id) && !positionHunterRear(phantom, data, monster))
 				{
 					tryHunterPlaystyle(phantom, monster, data);
 				}
@@ -6339,8 +6640,10 @@ public class PhantomManager implements IXmlReader
 			final Player phantom = data.player;
 			try
 			{
-				// Forget phantoms that left the world for good.
-				if (World.getInstance().findObject(phantom.getObjectId()) == null)
+				// Forget phantoms that left the world for good. A teleport decays the player out of the object list but
+				// keeps it in the player list, so a phantom mid-teleport (an Olympiad noble moved to or from a stadium)
+				// is not gone: dropping it here left the noble invisible in its match (FPC-124).
+				if ((World.getInstance().findObject(phantom.getObjectId()) == null) && (World.getInstance().getPlayer(phantom.getObjectId()) == null))
 				{
 					if (data.duelPhase == DUEL_ASKED)
 					{
@@ -6463,6 +6766,11 @@ public class PhantomManager implements IXmlReader
 				// Resting: when safe and low on HP/MP, sit to regen; stand when recovered or threatened.
 				final boolean danger = phantom.isInCombat() || hasLiveMonsterTarget(phantom) || isMonsterNear(phantom);
 				final boolean active = phantom.isMoving() || phantom.isCastingNow() || phantom.isAttackingNow();
+				// Out of the fight: turn off a stance that drains MP (Vicious Stance); the next fight turns it back on.
+				if (!phantom.isInCombat())
+				{
+					PhantomPlaystyleEngine.dropStances(phantom, data.play);
+				}
 				if (data.resting)
 				{
 					if (danger || ((phantom.getCurrentHpPercent() >= REST_STAND_PERCENT) && (phantom.getCurrentMpPercent() >= REST_MP_STAND_PERCENT)))
@@ -6812,7 +7120,7 @@ public class PhantomManager implements IXmlReader
 			noble.getInventory().destroyAllItems(ItemProcessType.DESTROY, noble, null);
 		}
 		final boolean mage = noble.getPlayerClass().isMage();
-		outfitFriend(noble, level, mage);
+		outfitFriend(noble, level, mage, GearContext.OLYMPIAD); // a fixed weapon, no spare
 		noble.setNoble(true);
 		noble.refreshOverloaded();
 		enterWorld(noble, location);
@@ -6885,11 +7193,33 @@ public class PhantomManager implements IXmlReader
 		try
 		{
 			// The stock match teleports (to the stadium and back) only finish by themselves for a player with a client;
-			// a clientless one stays decayed and frozen until onTeleported runs, so finish them here.
+			// a clientless one stays decayed and frozen until onTeleported runs, so finish them here. Only on a later
+			// tick than the one that first saw it: the stock teleport runs on another thread and sets the flag before it
+			// decays and moves the body, so finishing at once could respawn the noble at its old spot and leave the moved
+			// body out of the world with the flag already cleared (FPC-124).
 			if (noble.isTeleporting())
 			{
-				noble.onTeleported();
-				noble.broadcastUserInfo();
+				if (data.olyTeleportSeenAt == 0)
+				{
+					data.olyTeleportSeenAt = now;
+				}
+				else if (!noble.isSpawned())
+				{
+					data.olyTeleportSeenAt = 0;
+					noble.onTeleported();
+					noble.broadcastUserInfo();
+				}
+			}
+			else
+			{
+				data.olyTeleportSeenAt = 0;
+				if (!noble.isSpawned() && (World.getInstance().getPlayer(noble.getObjectId()) == noble))
+				{
+					// A body left out of the world with no teleport pending (and not logging out): put it back where it
+					// stands.
+					noble.spawnMe(noble.getX(), noble.getY(), noble.getZ());
+					noble.broadcastUserInfo();
+				}
 			}
 			if (noble.isInOlympiadMode())
 			{
@@ -6972,6 +7302,10 @@ public class PhantomManager implements IXmlReader
 	private void endOlympiadFight(Player noble, PhantomData data)
 	{
 		AutoUseTaskManager.getInstance().stopAutoUseTask(noble);
+		PhantomPlaystyleEngine.dropStances(noble, data.play); // before unparking, while the playstyle is still resolved
+		PhantomPlaystyleEngine.forgetAllTargets(data.play); // the next match opens fresh, even against the same noble
+		data.rearTargetId = 0;
+		data.rearTries = 0;
 		unparkHunterPlaystyle(noble, data);
 		noble.setTarget(null);
 		noble.getAI().setIntention(Intention.IDLE);

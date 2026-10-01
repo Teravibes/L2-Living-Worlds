@@ -16,8 +16,10 @@
 	<skill> attributes:
 	  id           - skill id (level resolved from what the member learned)
 	  name         - documentation only (the id is authoritative)
-	  use          - OPENER | ROTATION | AOE | DEBUFF | CONTROL | PANIC | LIMIT | PULL
+	  use          - OPENER | ROTATION | AOE | DEBUFF | CONTROL | PANIC | LIMIT | PULL | STANCE
 	                 (PANIC/LIMIT target self; LIMIT additionally needs a ready healer)
+	                 STANCE is a combat toggle (Vicious Stance): turned on in a fight while it is off, and turned off
+	                 again once the member is out of combat, so it does not drain MP while resting.
 	                 PULL is special: it is the ranged opener the CAMP PULLER uses to tag a mob (so a nuker
 	                 shoots it instead of running in to body-pull) and is read ONLY by the pull hook, never by
 	                 the combat rotation. Use a cheap single-target nuke. Its `when` is ignored - the pull hook
@@ -28,7 +30,8 @@
 	                 SELF_HP_BELOW (selfHpBelow), MP_ABOVE (mpAbove), MOBS_NEAR (mobsAtLeast),
 	                 MOBS_UNSPOILED (mobsAtLeast), REAR, CHARGES (chargesAtLeast), CHARGES_BELOW (chargesBelow),
 	                 DEBUFF_MISSING, SELF_ABNORMAL_FREE, NOT_SPOILED, DURABLE_TARGET, HEALER_READY,
-	                 ONCE_PER_TARGET, UNDER_ATTACK
+	                 ONCE_PER_TARGET, UNDER_ATTACK, PVP (the target is a player), FOCUS_ON_ME (the target has
+	                 this member selected)
 	  minLevel/maxLevel - the level window this entry applies in. Unlearned skills are skipped anyway, so
 	                 minLevel is rarely needed; maxLevel is what RETIRES an outgrown skill (a level 80
 	                 archer still knows Power Shot, so only an explicit cap stops it being used).
@@ -37,6 +40,12 @@
 	Mechanics (cast range, MP, reuse, reagents, weapon requirements, cast-time HP gates like Frenzy's)
 	come from the skill data at runtime and are never written here. Listing a skill the member can't
 	currently cast is harmless - it is simply skipped.
+
+	Unlisted skills: when nothing listed fits a tick, the engine may cast the best of the member's own unlisted
+	single-target attack or debuff skills (PhantomSkillFallback in FakePlayers.ini; never dances, songs, toggles,
+	heals, buffs, area skills, taunts, Sleep, Root or Spoil). Listing a skill hands it to this file: to keep an
+	outgrown skill from coming back through the fallback, list it with a maxLevel. HEALER_READY is always open to a
+	solo phantom (a field hunter or an Olympiad noble), which has no party healer to wait for.
 
 	FAIL-SAFE: if a member knows NONE of its playstyle's level-applicable skills, the engine does not take
 	over at all and the member keeps stock auto-use behavior. This system can only add competence.
@@ -50,8 +59,8 @@
 	- Manager-owned skills - NEVER list these: Ultimate Defense (110), Aggression (28), Aura of Hate (18),
 	  Sleep (1069), Dryad Root (1201), Resurrection (1016), heals, songs and dances. The party manager
 	  casts them with its own threat/survival/CC/support logic.
-	- Toggles and stances (Arcane Power, Focus Death, Dead Eye, Parry Stance...): auto-buff upkeep handles
-	  plain self-buffs; toggle management is out of scope in this version.
+	- Toggles and stances (Arcane Power, Parry Stance...): only toggles listed with use="STANCE" are ever
+	  turned on (so far the daggers' Vicious Stance); the rest are still unused (FPC-133).
 	- Spoil/Sweeper (loot integration) and cubic upkeep (needs a "cubic missing" condition).
 -->
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/PhantomPlaystyles.xsd">
@@ -153,12 +162,10 @@
 	     At this tier a character has 3-6 real combat skills; that IS the playstyle.
 	     ===================================================================================== -->
 
-	<!-- Warrior (1) -> Gladiator / Warlord. Sword-blunt smash, blunt stun, pole sweep: whichever the
-	     member's rolled weapon allows (the others fail their weapon check and are skipped). -->
+	<!-- Warrior (1) -> Gladiator / Warlord. A Warrior is given a sword, so the blunt stun (Stun Attack) and
+	     the pole sweep (Wild Sweep) are not listed: they could never fire (FPC-135). -->
 	<playstyle name="Warrior (1st class)" classIds="1">
 		<skill id="121" name="Battle Roar"  use="PANIC"    when="SELF_HP_BELOW" selfHpBelow="45" />
-		<skill id="245" name="Wild Sweep"   use="AOE"      when="MOBS_NEAR" mobsAtLeast="2" />
-		<skill id="100" name="Stun Attack"  use="CONTROL"  when="DEBUFF_MISSING" paceMs="6000" />
 		<skill id="255" name="Power Smash"  use="ROTATION" when="MP_ABOVE" mpAbove="25" />
 		<skill id="3"   name="Power Strike" use="ROTATION" when="MP_ABOVE" mpAbove="45" />
 	</playstyle>
@@ -221,7 +228,9 @@
 	     ===================================================================================== -->
 
 	<!-- Gladiator line: bank sonic charges, spend them in bursts; barrier when focused.
-	     Sonic Focus arrives at 40, so 20-39 is carried by the Warrior (1st class) block above. -->
+	     Sonic Focus arrives at 40, so 20-39 is carried by the Warrior (1st class) block above. The line fights with
+	     dual swords; a party member also carries a blunt (PhantomWeaponSets), and the blunt entries below fire only
+	     while the leader has it switch to that blunt. -->
 	<playstyle name="Duelist" classIds="2,88">
 		<skill id="442" name="Sonic Barrier"      use="PANIC"    when="SELF_HP_BELOW,UNDER_ATTACK" selfHpBelow="35" />
 		<skill id="121" name="Battle Roar"        use="PANIC"    when="SELF_HP_BELOW" selfHpBelow="40" />
@@ -231,11 +240,14 @@
 		<skill id="6"   name="Sonic Blaster"      use="ROTATION" when="CHARGES" chargesAtLeast="3" />
 		<skill id="8"   name="Sonic Focus"        use="ROTATION" when="CHARGES_BELOW" chargesBelow="4" />
 		<skill id="1"   name="Triple Slash"       use="ROTATION" when="MP_ABOVE" mpAbove="30" />
+		<skill id="100" name="Stun Attack"        use="CONTROL"  when="DEBUFF_MISSING" paceMs="6000" />
+		<skill id="260" name="Hammer Crush"       use="CONTROL"  when="DEBUFF_MISSING" paceMs="6000" />
 		<skill id="190" name="Fatal Strike"       use="ROTATION" when="MP_ABOVE" mpAbove="35" maxLevel="59" />
 		<skill id="255" name="Power Smash"        use="ROTATION" when="MP_ABOVE" mpAbove="40" maxLevel="45" />
 	</playstyle>
 
-	<!-- Warlord line: pole AoE - stun the stacked pack, then sweep it. -->
+	<!-- Warlord line: pole AoE - stun the stacked pack, then sweep it. A party member also carries a blunt
+	     (PhantomWeaponSets): Stun Attack and Power Smash fire only while the leader has it switch to that blunt. -->
 	<playstyle name="Dreadnought" classIds="3,89">
 		<skill id="181" name="Revival"      use="PANIC"    when="SELF_HP_BELOW,UNDER_ATTACK" selfHpBelow="25" />
 		<skill id="121" name="Battle Roar"  use="PANIC"    when="SELF_HP_BELOW" selfHpBelow="40" />
@@ -244,7 +256,7 @@
 		<skill id="36"  name="Whirlwind"    use="AOE"      when="MOBS_NEAR" mobsAtLeast="2" />
 		<skill id="245" name="Wild Sweep"   use="AOE"      when="MOBS_NEAR" mobsAtLeast="2" maxLevel="45" />
 		<skill id="361" name="Shock Blast"  use="ROTATION" when="MP_ABOVE" mpAbove="20" />
-		<skill id="100" name="Stun Attack"  use="CONTROL"  when="DEBUFF_MISSING" paceMs="6000" maxLevel="45" />
+		<skill id="100" name="Stun Attack"  use="CONTROL"  when="DEBUFF_MISSING" paceMs="6000" />
 		<skill id="255" name="Power Smash"  use="ROTATION" when="MP_ABOVE" mpAbove="35" maxLevel="45" />
 	</playstyle>
 
@@ -299,23 +311,36 @@
 
 	<!-- =============================== DAGGERS (role-split) =============================== -->
 	<!-- Rogue/Elven Scout/Assassin are SHARED with the archer lines, hence role="DAGGER".
-	     Backstab and Deadly Blow only arrive at 40; 20-39 is carried by Mortal Blow and Bleed. -->
+	     Backstab and Deadly Blow only arrive at 40; 20-39 is carried by Mortal Blow and Bleed.
+	     PvP follows the Interlude dagger guides. Ultimate Evasion is the first cast of every new fight with a player
+	     (listed above the stance; the PVP condition skips it against monsters) and still saves a low-HP dagger when
+	     it is ready. Vicious Stance stays on in a fight. Trick or Switch makes a player that has the dagger selected
+	     drop it. Bluff turns the enemy around for Backstab but only arrives at 77; before that the dagger walks to
+	     the target's back while the target is busy or stunned. -->
 
 	<playstyle name="Dagger (Human)" classIds="7,8,93" role="DAGGER">
+		<skill id="111" name="Ultimate Evasion" use="OPENER"   when="PVP" />
+		<skill id="312" name="Vicious Stance"   use="STANCE"   when="ALWAYS" />
 		<skill id="445" name="Mirage"           use="PANIC"    when="SELF_HP_BELOW,UNDER_ATTACK" selfHpBelow="35" />
 		<skill id="111" name="Ultimate Evasion" use="PANIC"    when="SELF_HP_BELOW,UNDER_ATTACK" selfHpBelow="40" />
 		<skill id="30"  name="Backstab"         use="ROTATION" when="REAR" />
+		<skill id="11"  name="Trick"            use="CONTROL"  when="PVP,FOCUS_ON_ME" />
+		<skill id="12"  name="Switch"           use="CONTROL"  when="PVP,FOCUS_ON_ME" />
 		<skill id="263" name="Deadly Blow"      use="ROTATION" when="ALWAYS" />
 		<skill id="344" name="Lethal Blow"      use="ROTATION" when="ALWAYS" />
 		<skill id="358" name="Bluff"            use="CONTROL"  when="DEBUFF_MISSING" paceMs="8000" />
+		<skill id="412" name="Sand Bomb"        use="DEBUFF"   when="DEBUFF_MISSING,DURABLE_TARGET" />
 		<skill id="96"  name="Bleed"            use="DEBUFF"   when="DEBUFF_MISSING,DURABLE_TARGET" maxLevel="45" />
 		<skill id="16"  name="Mortal Blow"      use="ROTATION" when="MP_ABOVE" mpAbove="30" maxLevel="45" />
 	</playstyle>
 
 	<playstyle name="Dagger (Elf)" classIds="22,23,101" role="DAGGER">
+		<skill id="111" name="Ultimate Evasion" use="OPENER"   when="PVP" />
+		<skill id="312" name="Vicious Stance"   use="STANCE"   when="ALWAYS" />
 		<skill id="446" name="Dodge"            use="PANIC"    when="SELF_HP_BELOW,UNDER_ATTACK" selfHpBelow="25" />
 		<skill id="111" name="Ultimate Evasion" use="PANIC"    when="SELF_HP_BELOW,UNDER_ATTACK" selfHpBelow="40" />
 		<skill id="30"  name="Backstab"         use="ROTATION" when="REAR" />
+		<skill id="12"  name="Switch"           use="CONTROL"  when="PVP,FOCUS_ON_ME" />
 		<skill id="263" name="Deadly Blow"      use="ROTATION" when="ALWAYS" />
 		<skill id="344" name="Lethal Blow"      use="ROTATION" when="ALWAYS" />
 		<skill id="358" name="Bluff"            use="CONTROL"  when="DEBUFF_MISSING" paceMs="8000" />
@@ -325,12 +350,16 @@
 	</playstyle>
 
 	<playstyle name="Dagger (Dark Elf)" classIds="35,36,108" role="DAGGER">
+		<skill id="111" name="Ultimate Evasion" use="OPENER"   when="PVP" />
+		<skill id="312" name="Vicious Stance"   use="STANCE"   when="ALWAYS" />
 		<skill id="111" name="Ultimate Evasion" use="PANIC"    when="SELF_HP_BELOW,UNDER_ATTACK" selfHpBelow="40" />
 		<skill id="30"  name="Backstab"         use="ROTATION" when="REAR" />
+		<skill id="11"  name="Trick"            use="CONTROL"  when="PVP,FOCUS_ON_ME" />
 		<skill id="122" name="Hex"              use="DEBUFF"   when="DEBUFF_MISSING,DURABLE_TARGET" />
 		<skill id="263" name="Deadly Blow"      use="ROTATION" when="ALWAYS" />
 		<skill id="344" name="Lethal Blow"      use="ROTATION" when="ALWAYS" />
 		<skill id="358" name="Bluff"            use="CONTROL"  when="DEBUFF_MISSING" paceMs="8000" />
+		<skill id="412" name="Sand Bomb"        use="DEBUFF"   when="DEBUFF_MISSING,DURABLE_TARGET" />
 		<skill id="96"  name="Bleed"            use="DEBUFF"   when="DEBUFF_MISSING,DURABLE_TARGET" maxLevel="45" />
 		<skill id="223" name="Sting"            use="ROTATION" when="MP_ABOVE" mpAbove="35" maxLevel="45" />
 		<skill id="16"  name="Mortal Blow"      use="ROTATION" when="MP_ABOVE" mpAbove="30" maxLevel="45" />
@@ -438,7 +467,10 @@
 	     Frenzy and Guts share the PINCH abnormal slot, so SELF_ABNORMAL_FREE keeps them mutually
 	     exclusive: Frenzy (higher priority) takes the slot for the offensive burst, and Guts is only
 	     allowed once Frenzy's buff has lapsed - never overwriting a live 10-minute Frenzy. Zealot is a
-	     different slot (PD_UP_SPECIAL) and does not compete. -->
+	     different slot (PD_UP_SPECIAL) and does not compete.
+	     Weapons (PhantomWeaponSets): a two-handed sword or blunt, always the blunt in the Olympiad, and a party
+	     member also carries a polearm for the leader's "switch to polearm". Stun Attack and Hammer Crush fire with
+	     the blunt, the pole AoEs with the polearm. The fist Iron Punch is not listed: the line never carries fists. -->
 	<playstyle name="Titan" classIds="45,46,113">
 		<skill id="176" name="Frenzy"       use="LIMIT"    when="HEALER_READY,SELF_ABNORMAL_FREE,DURABLE_TARGET" />
 		<skill id="420" name="Zealot"       use="LIMIT"    when="HEALER_READY,DURABLE_TARGET" />
@@ -449,9 +481,9 @@
 		<skill id="245" name="Wild Sweep"   use="AOE"      when="MOBS_NEAR" mobsAtLeast="2" maxLevel="45" />
 		<skill id="315" name="Crush of Doom" use="ROTATION" when="ALWAYS" />
 		<skill id="190" name="Fatal Strike" use="ROTATION" when="MP_ABOVE" mpAbove="30" />
-		<skill id="100" name="Stun Attack"  use="CONTROL"  when="DEBUFF_MISSING" paceMs="6000" maxLevel="45" />
+		<skill id="100" name="Stun Attack"  use="CONTROL"  when="DEBUFF_MISSING" paceMs="6000" />
+		<skill id="260" name="Hammer Crush" use="CONTROL"  when="DEBUFF_MISSING" paceMs="6000" />
 		<skill id="255" name="Power Smash"  use="ROTATION" when="MP_ABOVE" mpAbove="35" maxLevel="45" />
-		<skill id="29"  name="Iron Punch"   use="ROTATION" when="MP_ABOVE" mpAbove="40" maxLevel="45" />
 	</playstyle>
 
 	<!-- Tyrant line: force charges cycle from level 24 - build with Focused Force, spend on the
@@ -470,7 +502,9 @@
 		<skill id="29"  name="Iron Punch"         use="ROTATION" when="MP_ABOVE" mpAbove="40" maxLevel="45" />
 	</playstyle>
 
-	<!-- Bounty Hunter line: durable melee assist. Spoil economy integration comes later. -->
+	<!-- Bounty Hunter line: durable melee assist. Spoil economy integration comes later. Dwarves fight with a
+	     blunt; a party member also carries a polearm (PhantomWeaponSets), and the pole AoEs below fire only while
+	     the leader has it switch to that polearm. -->
 	<playstyle name="Fortune Seeker" classIds="54,55,117">
 		<!-- Spoil first - it has to land BEFORE the thing dies to be worth anything, and it is the whole
 		     economic point of the class. NOT_SPOILED reads the mob's real spoil state instead of a
@@ -482,16 +516,19 @@
 		<skill id="302" name="Spoil Festival" use="AOE"    when="MOBS_UNSPOILED" mobsAtLeast="3" paceMs="10000" />
 		<skill id="100" name="Stun Attack"  use="CONTROL"  when="DEBUFF_MISSING" paceMs="5000" />
 		<skill id="260" name="Hammer Crush" use="CONTROL"  when="DEBUFF_MISSING" paceMs="6000" />
+		<skill id="347" name="Earthquake"   use="AOE"      when="MOBS_NEAR" mobsAtLeast="3" />
 		<skill id="36"  name="Whirlwind"    use="AOE"      when="MOBS_NEAR" mobsAtLeast="2" />
 		<skill id="245" name="Wild Sweep"   use="AOE"      when="MOBS_NEAR" mobsAtLeast="2" maxLevel="45" />
 	</playstyle>
 
-	<!-- Warsmith line: hammer control + armor pressure; golems deferred with the other summons. -->
+	<!-- Warsmith line: hammer control + armor pressure; golems deferred with the other summons. Same weapons
+	     as the Fortune Seeker: a blunt, and in a party a polearm spare for the pole AoEs. -->
 	<playstyle name="Maestro" classIds="56,57,118">
 		<!-- The Warsmith line learns Spoil too (Artisan, lv10) - same reasoning as Fortune Seeker. -->
 		<skill id="254" name="Spoil"        use="DEBUFF"   when="NOT_SPOILED" />
 		<skill id="260" name="Hammer Crush" use="CONTROL"  when="DEBUFF_MISSING" paceMs="5000" />
 		<skill id="362" name="Armor Crush"  use="ROTATION" when="ALWAYS" />
+		<skill id="347" name="Earthquake"   use="AOE"      when="MOBS_NEAR" mobsAtLeast="3" />
 		<skill id="36"  name="Whirlwind"    use="AOE"      when="MOBS_NEAR" mobsAtLeast="2" />
 		<skill id="100" name="Stun Attack"  use="CONTROL"  when="DEBUFF_MISSING" paceMs="6000" maxLevel="45" />
 		<skill id="245" name="Wild Sweep"   use="AOE"      when="MOBS_NEAR" mobsAtLeast="2" maxLevel="45" />

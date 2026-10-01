@@ -73,6 +73,7 @@ public class PhantomPvpManagerTest
 		testDuelWaitAccepted();
 		testDuelWaitDeclinedOrIgnored();
 		testDuelWaitCountdownAndGone();
+		testArcherKite();
 
 		System.out.println();
 		System.out.println("Ran " + checks + " checks, " + failures + " failure(s).");
@@ -424,6 +425,22 @@ public class PhantomPvpManagerTest
 		eq(PhantomPvpManager.DUEL_WAIT_END, PhantomPvpManager.duelWaitStep(true, false, false, 0, countdownDeadline, countdownDeadline, GRACE), "duel never started by the deadline -> end");
 		eq(PhantomPvpManager.DUEL_WAIT_END, PhantomPvpManager.duelWaitStep(false, false, true, 0, 1000, ASK_DEADLINE, GRACE), "opponent gone while asked -> end");
 		eq(PhantomPvpManager.DUEL_WAIT_END, PhantomPvpManager.duelWaitStep(false, true, false, 0, 1000, countdownDeadline, GRACE), "opponent gone, even mid-duel -> end");
+	}
+
+	/** Archer kiting: only a bow phantom, only against melee in trigger range, never rooted or in town, on a cooldown. */
+	private static void testArcherKite()
+	{
+		final long now = 100_000;
+		eqBool(true, PhantomPvpManager.shouldKite(true, true, true, 200, true, false, 0, now), "melee in range: kite");
+		eqBool(true, PhantomPvpManager.shouldKite(true, true, true, PhantomPvpManager.KITE_TRIGGER_RANGE, true, false, 0, now), "exactly at the trigger range: kite");
+		eqBool(false, PhantomPvpManager.shouldKite(true, true, true, PhantomPvpManager.KITE_TRIGGER_RANGE + 1, true, false, 0, now), "outside the trigger range: shoot");
+		eqBool(false, PhantomPvpManager.shouldKite(false, true, true, 200, true, false, 0, now), "switched off");
+		eqBool(false, PhantomPvpManager.shouldKite(true, false, true, 200, true, false, 0, now), "no bow: no kite");
+		eqBool(false, PhantomPvpManager.shouldKite(true, true, false, 200, true, false, 0, now), "ranged or mage opponent: no kite");
+		eqBool(false, PhantomPvpManager.shouldKite(true, true, true, 200, false, false, 0, now), "rooted or casting: no kite");
+		eqBool(false, PhantomPvpManager.shouldKite(true, true, true, 200, true, true, 0, now), "never in a peace zone");
+		eqBool(false, PhantomPvpManager.shouldKite(true, true, true, 200, true, false, now - 1000, now), "inside the cooldown");
+		eqBool(true, PhantomPvpManager.shouldKite(true, true, true, 200, true, false, now - PhantomPvpManager.KITE_COOLDOWN_MS, now), "cooldown over");
 	}
 
 	private static void eq(int expected, int actual, String what)

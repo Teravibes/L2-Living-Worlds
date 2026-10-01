@@ -46,6 +46,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.Action;
+import org.l2jmobius.gameserver.config.custom.AutoPlayConfig;
 import org.l2jmobius.gameserver.config.custom.FakePlayersConfig;
 import org.l2jmobius.gameserver.ai.Intention;
 import org.l2jmobius.gameserver.config.NpcConfig;
@@ -150,6 +151,10 @@ public class PhantomPartyManager
 	private static final int SUPPORT_RANGE = 900; // heal/buff/res only when the target is this close
 	private static final int ASSIST_MAX_RANGE = 2200; // don't assist a mob the leader targeted across the map
 	private static final int DANGER_RANGE = 700;
+	// FakePlayerPartyPickup: after a fight a member collects ground drops this close to it...
+	private static final int PARTY_LOOT_SCAN_RANGE = 300;
+	private static final int PARTY_LOOT_PICKUP_RANGE = 40; // ...picking each one up once this close...
+	private static final long PARTY_LOOT_CLAIM_MAX = 6000; // ...and giving up on a drop it could not reach in this long
 	private static final int OWNER_HEAL_PERCENT = 60;
 	private static final int SELF_HEAL_PERCENT = 45;
 	private static final int RAID_HEAL_PERCENT = 80; // under a raid, heal party members pre-emptively at this HP% (boss spikes outrun reactive 60% healing)
@@ -157,6 +162,14 @@ public class PhantomPartyManager
 	private static final int CRITICAL_HEAL_PERCENT = 50; // a member this low is an emergency - heal it before topping the tank
 	private static final int BUFF_REFRESH_SECONDS = 20;
 	private static final int CASTER_CAST_RANGE = 650; // a nuker walks IN to within this of the assist target so it nukes from range, never melees
+	private static final int[] SUPPORT_MELEE_SKILLS = // Warcryer-line melee openers: Hammer Crush (stun), Steal Essence (drain)
+	{
+		260,
+		1245
+	};
+	private static final int SUPPORT_MELEE_SKILL_MP = 60; // a Warcryer only spends MP on these above this percent, so its buffs never run dry
+	private static final int CASTER_NUKE_MIN_RANGE = 400; // a spell reaching at least this counts as a ranged nuke when working out where a caster stands
+	private static final int CASTER_REACH_SLACK = 40; // a caster holds within its spell reach plus this (the playstyle's own reach check allows 60 plus collision)
 	private static final int CASTER_RANGE_TOLERANCE = 150; // ...and stands and casts anywhere inside CAST_RANGE + this, never backing off as the mob closes
 	private static final int CASTER_MIN_MP = 20; // below this percent a nuker stops casting and rests instead of meleeing
 	private static final int CASTER_SPREAD_STEP = 110; // lateral spacing between casters so several don't stack and eat one AoE
@@ -525,6 +538,10 @@ public class PhantomPartyManager
 		List<Monster> targetsToSweep;
 		Map<Integer, Integer> lootingSessionItems; // Map of Item.getObjectId() to Item.getCount()
 		TradingState tradingState = TradingState.NOT_TRADING;
+		int lootClaimOid; // FakePlayerPartyPickup: the ground drop this member is going for (0 = none), so two members never race for one item
+		long lootClaimAt; // ...when it set out, so a drop it can't reach is given up after PARTY_LOOT_CLAIM_MAX
+		Set<Integer> lootSkip; // drops this member gave up on; pruned once they are gone from the ground
+		boolean lootPausedHunt; // free hunt: AutoPlay was paused so it would not steal the loot walk; resume when done
 		Skill survival; // lazy (TANK): Ultimate Defense, hand-cast at low HP (parked out of the auto-buff loop)
 		boolean survivalLookedUp;
 		Skill cc; // lazy (NUKER): Sleep / Dryad Root for a loose add
@@ -1278,6 +1295,16 @@ public class PhantomPartyManager
 		if (text.contains("cubic") && (coreOrFirstCubic(state.npc) != 0))
 		{
 			handleCubicOrder(state, text, addressed);
+			return true;
+		}
+
+		// Weapon switching ("switch to polearm", "use your blunt", "switch back", "weapons?"): a member of a
+		// multi-weapon line carries a spare (PhantomWeaponSets), e.g. a dwarf takes out its polearm to hit several adds.
+		// Members with one weapon stay quiet unless named, so a party-wide order draws no refusals.
+		final String weaponReply = PhantomWeaponSets.order(state.npc, text, addressed);
+		if (weaponReply != null)
+		{
+			deliver(state, weaponReply);
 			return true;
 		}
 
@@ -2697,6 +2724,11 @@ public class PhantomPartyManager
 		{
 			return;
 		}
+		// Out of the fight a stance that drains MP (Vicious Stance) goes off; the next fight turns it back on.
+		if (!npc.isInCombat())
+		{
+			PhantomPlaystyleEngine.dropStances(npc, state.play);
+		}
 
 		// Camp-and-pull overrides both assist and free-hunt: the party holds at a fixed anchor and fights only what
 		// the puller brings in. The songs/survival/archer upkeep above still applies (a camp fighter still sings,
@@ -2723,6 +2755,7 @@ public class PhantomPartyManager
 
 		if (state.assist)
 		{
+			state.lootPausedHunt = false; // assist mode never runs AutoPlay, so there is no paused hunt to resume
 			final WorldObject t = owner.getTarget();
 			// Assist only real, legal mob targets. A forbidden target the owner clicked - a fake-player shopkeeper
 			// (attacking it flags the phantom for PvP, the "seller got nuked in town" bug), a treasure box, or a quest
@@ -2843,6 +2876,11 @@ public class PhantomPartyManager
 				{
 					return;
 				}
+				// Fight's over and nothing is on the party: pick up what dropped (FakePlayerPartyPickup).
+				if (collectLoot(state))
+				{
+					return;
+				}
 			}
 			// Nothing to assist (or a nuker that just ran dry): a caster low on MP sits to recover when safe;
 			// otherwise stick with the leader.
@@ -2872,12 +2910,10 @@ public class PhantomPartyManager
 				{
 					standIfSitting(npc);
 					npc.setTarget(onMe);
-					if (!state.role.mage)
+					if (!tryPlaystyle(state, onMe) && !castsSpells(state))
 					{
-						npc.setRunning();
-						npc.getAI().setIntention(Intention.ATTACK, onMe);
+						keepSwinging(state, onMe);
 					}
-					tryPlaystyle(state, onMe);
 					return;
 				}
 				if (peelDefend(state, onMe))
@@ -2897,27 +2933,58 @@ public class PhantomPartyManager
 				{
 					standIfSitting(npc);
 					npc.setTarget(mob);
-					if (!state.role.mage)
+					if (!castsSpells(state))
 					{
 						npc.setRunning();
-						npc.getAI().setIntention(Intention.ATTACK, mob); // a mage just holds the target - AutoUse nukes it
+						npc.getAI().setIntention(Intention.ATTACK, mob); // a caster just holds the target - AutoUse nukes it
 					}
 					break;
 				}
 			}
 		}
+		// Between kills, collect the drops (FakePlayerPartyPickup). AutoPlay is paused meanwhile, or it would grab
+		// the next mob and cancel the walk to the item; it resumes as soon as there is nothing left to pick up.
+		final boolean betweenKills = !(npc.getTarget() instanceof Monster) || ((Monster) npc.getTarget()).isDead();
+		if (betweenKills && !npc.isAttackingNow() && !npc.isCastingNow() && collectLoot(state))
+		{
+			if (!state.lootPausedHunt)
+			{
+				state.lootPausedHunt = true;
+				PhantomManager.getInstance().setRecruitHunting(npc, false);
+			}
+			return;
+		}
+		if (state.lootPausedHunt)
+		{
+			state.lootPausedHunt = false;
+			PhantomManager.getInstance().setRecruitHunting(npc, true);
+		}
+		final boolean leashed = npc.calculateDistance2D(owner) > LEASH_RANGE;
 		// With this member's offensive AutoUse list parked (the playstyle engine owns it), free-hunt still gets
-		// its skills: play the class on whatever AutoPlay/retaliation is currently targeting.
+		// its skills: play the class on whatever AutoPlay/retaliation is currently targeting. Between skills a
+		// melee member or archer keeps swinging: AutoPlay only issues an attack when the AI is not already set to
+		// attack, so a swing loop a cast stopped would otherwise never restart (the member stood there casting
+		// until its MP ran out, then took hits doing nothing).
 		if (npc.getTarget() instanceof Monster)
 		{
 			final Monster freeTarget = (Monster) npc.getTarget();
 			if (!freeTarget.isDead())
 			{
-				tryPlaystyle(state, freeTarget);
+				final boolean caster = castsSpells(state);
+				// AutoPlay never walks a caster into spell range (it stops at "mage, does not auto hit"), so a nuker that
+				// picked a mob beyond its reach would stand there for good: close in the same way assist does.
+				if (caster && !leashed)
+				{
+					positionCaster(state, freeTarget);
+				}
+				if (!tryPlaystyle(state, freeTarget) && !caster && !leashed)
+				{
+					keepSwinging(state, freeTarget);
+				}
 			}
 		}
 		// Leash the member back if it wanders off; driveFollow walks it in and teleports if it is very far or stuck.
-		if (npc.calculateDistance2D(owner) > LEASH_RANGE)
+		if (leashed)
 		{
 			PhantomManager.getInstance().setRecruitHunting(npc, false);
 			driveFollow(state, owner);
@@ -2929,6 +2996,141 @@ public class PhantomPartyManager
 				}
 			}, 4000);
 		}
+	}
+
+	/**
+	 * FakePlayerPartyPickup: once a fight is over and nothing is attacking the party, walks to the nearest ground drop
+	 * this member may take and picks it up. What happens to the item is the party's loot mode: Finders keepers leaves
+	 * it with the member (tracked for "return loot"), Random/By turn hands it to an eligible member, and adena is
+	 * always split by the stock party code. Herbs and cursed weapons are left for the player.
+	 * @return {@code true} while it is handling a drop (walking to one or having just picked one up), so the caller
+	 *         returns this tick; {@code false} when there is nothing to collect, looting is off, or the party is under
+	 *         attack.
+	 */
+	private boolean collectLoot(Member state)
+	{
+		final Player npc = state.npc;
+		if (!FakePlayersConfig.FAKE_PLAYER_PARTY_PICKUP || npc.isDead() || (state.tradingState != TradingState.NOT_TRADING) || partyUnderAttack(state))
+		{
+			state.lootClaimOid = 0;
+			return false;
+		}
+		final Party party = npc.getParty();
+		final boolean findersKeepers = (party == null) || (party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS);
+		Item best = null;
+		double bestDistance = Double.MAX_VALUE;
+		for (Item item : World.getInstance().getVisibleObjectsInRange(npc, Item.class, PARTY_LOOT_SCAN_RANGE))
+		{
+			if (!mayCollect(state, item, findersKeepers))
+			{
+				continue;
+			}
+			final double distance = npc.calculateDistance2D(item);
+			if (distance < bestDistance)
+			{
+				bestDistance = distance;
+				best = item;
+			}
+		}
+		if (best == null)
+		{
+			state.lootClaimOid = 0;
+			if (state.lootSkip != null)
+			{
+				state.lootSkip.removeIf(oid -> World.getInstance().findObject(oid) == null);
+			}
+			return false;
+		}
+		final long now = System.currentTimeMillis();
+		if (best.getObjectId() != state.lootClaimOid)
+		{
+			state.lootClaimOid = best.getObjectId();
+			state.lootClaimAt = now;
+		}
+		else if ((now - state.lootClaimAt) > PARTY_LOOT_CLAIM_MAX)
+		{
+			// Could not get to it in time (stuck on geometry): leave it and move on to the next one.
+			if (state.lootSkip == null)
+			{
+				state.lootSkip = ConcurrentHashMap.newKeySet();
+			}
+			state.lootSkip.add(best.getObjectId());
+			state.lootClaimOid = 0;
+			return true;
+		}
+		standIfSitting(npc);
+		if (bestDistance > PARTY_LOOT_PICKUP_RANGE)
+		{
+			if (!npc.isMoving())
+			{
+				npc.setRunning();
+				npc.getAI().setIntention(Intention.MOVE_TO, best);
+			}
+			return true; // still walking to the drop
+		}
+		npc.doPickupItem(best);
+		state.lootClaimOid = 0;
+		return true; // picked one up; more may remain for the next tick
+	}
+
+	/**
+	 * Whether {@code state}'s member may go for this ground drop: the same rules the game applies to a real pickup
+	 * (drop protection, owner or owner's party), not an herb or cursed weapon, room in the bag when it keeps what it
+	 * picks up, not given up on, not already claimed by another member of the same party, and reachable.
+	 */
+	private boolean mayCollect(Member state, Item item, boolean findersKeepers)
+	{
+		final Player npc = state.npc;
+		if ((item == null) || !item.isSpawned() || AutoPlayConfig.IGNORED_AUTO_PICK_ITEMS.contains(item.getId()))
+		{
+			return false;
+		}
+		if (item.getTemplate().hasExImmediateEffect() || CursedWeaponsManager.getInstance().isCursed(item.getId()))
+		{
+			return false; // herbs are the player's to use; a cursed weapon is never a bot's pick
+		}
+		if (!item.getDropProtection().tryPickUp(npc) || ((item.getOwnerId() != 0) && (item.getOwnerId() != npc.getObjectId()) && !npc.isInLooterParty(item.getOwnerId())))
+		{
+			return false; // someone outside the party owns it
+		}
+		if (findersKeepers && !npc.getInventory().validateCapacity(item))
+		{
+			return false; // bag full: leave it on the ground
+		}
+		if ((state.lootSkip != null) && state.lootSkip.contains(item.getObjectId()))
+		{
+			return false;
+		}
+		for (Member other : _members.values())
+		{
+			if ((other != state) && (other.owner == state.owner) && (other.lootClaimOid == item.getObjectId()))
+			{
+				return false; // a partymate is already going for it
+			}
+		}
+		return GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), item.getX(), item.getY(), item.getZ(), npc.getInstanceId());
+	}
+
+	/** @return {@code true} if a live mob near this member is on anyone in its party (or on a party member's summon). */
+	private boolean partyUnderAttack(Member state)
+	{
+		for (Monster mob : World.getInstance().getVisibleObjectsInRange(state.npc, Monster.class, SUPPORT_RANGE))
+		{
+			if (mob.isDead())
+			{
+				continue;
+			}
+			WorldObject target = mob.getTarget();
+			if ((target != null) && target.isSummon())
+			{
+				target = target.asSummon().getOwner();
+			}
+			if ((target instanceof Creature) && ((target == state.npc) || isPartyCreature(state.owner, (Creature) target)))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private boolean checkForSweepableMobs(Member state)
@@ -3026,11 +3228,12 @@ public class PhantomPartyManager
 		{
 			return true;
 		}
-		if (state.role.mage)
+		if (castsSpells(state))
 		{
 			// A nuker casts from range - it must NEVER be given a physical ATTACK intention (that walked a caster into
 			// melee to auto-hit even on a full MP bar). Hold at cast range; AutoUse fires the nukes. Out of MP, drop the
-			// target and return false so the caller sits it down to recharge instead of meleeing.
+			// target and return false so the caller sits it down to recharge instead of meleeing. A mystic with no
+			// attack spell at all (a starter Orc Mystic) is not a caster yet and falls through to melee below.
 			if (npc.getCurrentMpPercent() >= CASTER_MIN_MP)
 			{
 				if (maybeCrowdControl(state, focus)) // a loose add on a squishy gets slept/rooted first
@@ -3078,6 +3281,18 @@ public class PhantomPartyManager
 			state.castStuckSince = 0L; // a fresh cast launched this tick - nothing stale for the watchdog below to clear
 			return true;
 		}
+		keepSwinging(state, focus);
+		return true;
+	}
+
+	/**
+	 * Keeps a live auto-attack on {@code focus}: engages or retargets through the AI, and relaunches a swing loop that a
+	 * skill cast stopped. Phantoms cast by calling {@code doCast} directly, so the AI is never told to go back to
+	 * attacking, and a swing that comes due mid-cast is dropped (AbstractAI ignores READY_TO_ACT while casting). Used by
+	 * assist, camp and free hunt, and by a Warcryer-line support meleeing between buffs.
+	 */
+	private void keepSwinging(Member state, Monster focus)
+	{
 		// Keep a live auto-attack on the focus so a clientless melee/archer keeps plinking with soulshots between skills
 		// instead of dropping to IDLE. THE CORE PROBLEM: after a playstyle skill the cast interrupts the melee loop, and
 		// the AI is left INTENDING attack on this same focus but with no swing scheduled. Re-issuing setIntention(ATTACK,
@@ -3088,6 +3303,7 @@ public class PhantomPartyManager
 		// now + timeBetweenAttacks), so it is false ONLY when the loop is genuinely stopped - exactly this wedge. In that
 		// wedged case we poke THINK to relaunch the swing (doAttack self-guards via isAttackDisabled, so it can never
 		// swing early); any other case re-engages/retargets normally through setIntention.
+		final Player npc = state.npc;
 		final long now = System.currentTimeMillis();
 		boolean casting = npc.isCastingNow();
 		if (casting)
@@ -3129,7 +3345,6 @@ public class PhantomPartyManager
 				npc.getAI().setIntention(Intention.ATTACK, focus); // fresh engage or retarget - onIntentionAttack relaunches on its own
 			}
 		}
-		return true;
 	}
 
 	// ===== Camp-and-pull (Bucket 3): hold a fixed camp; a named puller drags mobs back to be killed there =====
@@ -3175,6 +3390,11 @@ public class PhantomPartyManager
 		else if (isPuller && (now >= camp.nextPullAt))
 		{
 			runPull(state, camp, now); // camp clear and off the rest beat: go fetch the next mob
+			return;
+		}
+		// Idle camp fighter or a resting puller: collect the drops around the camp first (FakePlayerPartyPickup).
+		if ((focus == null) && collectLoot(state))
+		{
 			return;
 		}
 		// Idle camp fighter, a resting puller, or a dry mage: recover MP when safe, then hold at the anchor.
@@ -3783,27 +4003,83 @@ public class PhantomPartyManager
 		{
 			return; // don't interrupt a cast or fight a stun
 		}
+		// Stand inside the reach of the member's own spells, not a fixed 650 + 150: most early nukes reach only 600,
+		// so a caster parked at 700 to 800 was out of range for every spell it had and never cast.
+		final int reach = casterReach(state);
 		double dx = npc.getX() - target.getX();
 		double dy = npc.getY() - target.getY();
 		double distance = Math.hypot(dx, dy);
-		if (distance <= (CASTER_CAST_RANGE + CASTER_RANGE_TOLERANCE))
+		final boolean canSee = GeoEngine.getInstance().canSeeTarget(npc, target);
+		if ((distance <= (reach + CASTER_REACH_SLACK)) && canSee)
 		{
-			return; // within casting range - stand and cast; never back off just because it closed in
+			return; // within casting range with line of sight - stand and cast; never back off just because it closed in
 		}
 		if (distance < 1)
 		{
 			distance = 1;
 		}
-		// Too far to cast: close the gap. AoE spread offsets each caster sideways by a fixed per-member amount so
-		// several don't stack on one tile and all eat the same boss AoE. The offset is perpendicular to the target
-		// line and stable per member (objId), so it fans them out around the boss without jittering.
-		final double perp = Math.atan2(dy, dx) + (Math.PI / 2);
-		final int lateral = (((npc.getObjectId() % 5) - 2) * CASTER_SPREAD_STEP); // -2..+2 lanes
-		final int standX = target.getX() + (int) ((dx / distance) * CASTER_CAST_RANGE) + (int) (Math.cos(perp) * lateral);
-		final int standY = target.getY() + (int) ((dy / distance) * CASTER_CAST_RANGE) + (int) (Math.sin(perp) * lateral);
-		final Location destination = GeoEngine.getInstance().getValidLocation(npc, new Location(standX, standY, npc.getZ()));
+		// Too far to cast, or no line of sight (the core silently refuses a spell it cannot see through): close the gap.
+		// AoE spread offsets each caster sideways by a fixed per-member amount so several don't stack on one tile and
+		// all eat the same boss AoE. The offset is perpendicular to the target line and stable per member (objId), so it
+		// fans them out around the boss without jittering. The stand point is pulled in until it can see the target.
+		final double nx = dx / distance;
+		final double ny = dy / distance;
+		final int standRange = Math.max(CASTER_REACH_SLACK, Math.min(reach, (int) distance) - CASTER_REACH_SLACK);
+		// -2..+2 lanes, kept to a third of the stand range so the sideways step never carries it back out of reach.
+		final int lateral = ((npc.getObjectId() % 5) - 2) * Math.min(CASTER_SPREAD_STEP, standRange / 6);
+		final Location destination = (standRange >= LOS_STEP_MIN) ? losStandPoint(npc, target, nx, ny, -ny, nx, standRange, lateral) : GeoEngine.getInstance().getValidLocation(npc, new Location(target.getX() + (int) (nx * standRange), target.getY() + (int) (ny * standRange), npc.getZ()));
 		npc.setRunning();
 		npc.getAI().setIntention(Intention.MOVE_TO, destination);
+	}
+
+	/**
+	 * How far this caster can cast its attack spells from. With a playstyle it is the shortest ranged spell among the
+	 * entries the engine actually fires on a single target at this level ({@link PhantomPlaystyleEngine#rotationReach}),
+	 * so a retired or pack-only spell never drags it in. Without one (AutoUse casts) it is the shortest known ranged
+	 * nuke (cast range {@link #CASTER_NUKE_MIN_RANGE} or more). Either way it is capped at {@link #CASTER_CAST_RANGE}.
+	 * Close-range spells such as Aura Burn (150) only set the reach when the member has no ranged nuke at all, so one
+	 * short spell never drags a whole caster into melee. A member with no attack spell falls back to the cap.
+	 */
+	private static int casterReach(Member state)
+	{
+		final Player npc = state.npc;
+		final int authored = PhantomPlaystyleEngine.rotationReach(npc, state.play, state.role.name(), CASTER_NUKE_MIN_RANGE);
+		if (authored > 0)
+		{
+			return Math.min(authored, CASTER_CAST_RANGE);
+		}
+		int ranged = Integer.MAX_VALUE;
+		int shortOnly = 0;
+		for (Skill skill : npc.getAllSkills())
+		{
+			if (!PhantomManager.isAttackSpell(skill) || (skill.getCastRange() <= 0))
+			{
+				continue;
+			}
+			if (skill.getCastRange() >= CASTER_NUKE_MIN_RANGE)
+			{
+				ranged = Math.min(ranged, skill.getCastRange());
+			}
+			else
+			{
+				shortOnly = Math.max(shortOnly, skill.getCastRange());
+			}
+		}
+		if (ranged != Integer.MAX_VALUE)
+		{
+			return Math.min(ranged, CASTER_CAST_RANGE);
+		}
+		return (shortOnly > 0) ? shortOnly : CASTER_CAST_RANGE;
+	}
+
+	/**
+	 * Whether this member fights as a caster: a mage role that knows at least one attack spell. A mystic that has none
+	 * yet (an Orc Mystic below level 7, or an alt that never learned one) melees with its weapon instead of standing
+	 * there with nothing to cast.
+	 */
+	private static boolean castsSpells(Member state)
+	{
+		return state.role.mage && PhantomManager.knowsAttackSpell(state.npc);
 	}
 
 	/**
@@ -5324,7 +5600,8 @@ public class PhantomPartyManager
 	 * One playstyle decision for this member against {@code focus}: asks the engine for the first listed skill
 	 * whose moment has come and hand-casts it with the usual guards. A member whose class has no playstyle (or
 	 * whose moment hasn't come) returns {@code false} and fights on with plain attacks.
-	 * @return {@code true} if a cast fired - the caller skips the attack re-issue this tick
+	 * @return {@code true} if a cast launched - the caller skips the attack re-issue this tick; {@code false} when nothing
+	 *         fitted or the server refused the cast
 	 */
 	private boolean tryPlaystyle(Member state, Monster focus)
 	{
@@ -5338,7 +5615,12 @@ public class PhantomPartyManager
 		// A //phantom playstyle reload may have added or removed this member's playstyle since it was recruited;
 		// reconcile AutoUse ownership before deciding, so legacy auto-skills don't compete (nor leave it bare).
 		PhantomPlaystyleEngine.syncParkingIfReloaded(npc, state.play, state.role.name());
-		final PhantomPlaystyleEngine.CastAction action = PhantomPlaystyleEngine.pick(npc, focus, state.play, healerReady(state), underAttack(npc), mpReserve(state.role), state.role.name());
+		PhantomPlaystyleEngine.CastAction action = PhantomPlaystyleEngine.pick(npc, focus, state.play, healerReady(state), underAttack(npc), mpReserve(state.role), state.role.name());
+		if (action == null)
+		{
+			// Nothing listed fits: try the member's own unlisted attack skills before settling for a swing.
+			action = PhantomPlaystyleEngine.pickFallback(npc, focus, state.play, mpReserve(state.role));
+		}
 		if (action == null)
 		{
 			return false;
@@ -5351,12 +5633,19 @@ public class PhantomPartyManager
 		npc.doCast(action.skill);
 		// Commit a once-per-target opener to the ledger ONLY now that the cast has actually launched. A doCast the
 		// core rejected (out of range, interrupted, target gone) leaves the ledger clean, so the opener retries next
-		// tick instead of being silently burned for the life of this target.
-		if (npc.isCastingNow() || npc.isCastingSimultaneouslyNow())
+		// tick instead of being silently burned for the life of this target. A zero-time skill finishes inside doCast
+		// and clears the casting flag before it returns; its reuse timer (the engine only picks skills that were ready)
+		// still shows that it went off.
+		if (npc.isCastingNow() || npc.isCastingSimultaneouslyNow() || npc.isSkillDisabled(action.skill) || (action.skill.isToggle() && npc.isAffectedBySkill(action.skill.getId())))
 		{
 			PhantomPlaystyleEngine.confirmCast(state.play, action);
+			return true;
 		}
-		return true;
+		// Refused: rest the skill briefly instead of retrying every tick, put the target back on the mob (a refused
+		// self-cast left it on the member itself) and report no cast, so the caller swings this tick instead of idling.
+		PhantomPlaystyleEngine.markRejected(state.play, action);
+		npc.setTarget(focus);
+		return false;
 	}
 
 	/**
@@ -5901,6 +6190,13 @@ public class PhantomPartyManager
 			return;
 		}
 
+		// 7b) A Warcryer-line buffer melees the party's target once no heal, buff or rest is due, the way the class is
+		// played in Interlude. Never during a raid: there it stays on healing and battery duty.
+		if (!raid && supportMelee(state, camp))
+		{
+			return;
+		}
+
 		// 8) Default: hold at the camp if camping, else stay near the anchor (the tank in a raid, else the leader).
 		if (camp != null)
 		{
@@ -5913,6 +6209,67 @@ public class PhantomPartyManager
 				driveFollow(state, anchor);
 			}
 		}
+	}
+
+	/**
+	 * Melee for a Warcryer-line buffer (Orc Shaman, Warcryer, Doomcryer) between its buffs and heals, with its weapon,
+	 * opening with Hammer Crush or Steal Essence while it has MP to spare (the buffs come first). What it hits follows
+	 * the party's mode: the mob at the camp while camping, the mob AutoPlay picked for it while hunting freely, the
+	 * leader's target while assisting, and in every mode a mob that is hitting it. Other supports keep out of melee.
+	 * @param camp the owner's camp, or {@code null} when not camping
+	 * @return {@code true} if it is fighting this tick (the caller skips following or holding at the camp)
+	 */
+	private boolean supportMelee(Member state, Camp camp)
+	{
+		final Player npc = state.npc;
+		if (!PhantomManager.isWarcryerLine(npc.getPlayerClass()) || state.holding || npc.isCastingNow())
+		{
+			return false;
+		}
+		Monster focus;
+		if (camp != null)
+		{
+			focus = campFocus(state, camp);
+		}
+		else if (!state.assist)
+		{
+			focus = (npc.getTarget() instanceof Monster) ? (Monster) npc.getTarget() : null;
+		}
+		else
+		{
+			focus = leaderFocus(state);
+		}
+		if ((focus != null) && (focus.isDead() || focus.isRaid() || PhantomManager.isPhantomForbiddenTarget(focus) || ((camp == null) && (state.owner.calculateDistance2D(focus) > ASSIST_MAX_RANGE))))
+		{
+			focus = null; // a camp mob is judged by the camp, anything else must stay near the leader
+		}
+		if (focus == null)
+		{
+			focus = attackerOnMe(state, null, false);
+		}
+		if ((focus == null) || npc.isInsideZone(ZoneId.PEACE) || focus.isInsideZone(ZoneId.PEACE))
+		{
+			return false;
+		}
+		standIfSitting(npc);
+		if (npc.getCurrentMpPercent() >= SUPPORT_MELEE_SKILL_MP)
+		{
+			for (int skillId : SUPPORT_MELEE_SKILLS)
+			{
+				final Skill skill = npc.getKnownSkill(skillId);
+				if (castable(npc, skill) && (npc.calculateDistance2D(focus) <= (skill.getCastRange() + npc.getTemplate().getCollisionRadius() + focus.getTemplate().getCollisionRadius())) && skill.checkCondition(npc, focus, false))
+				{
+					npc.setTarget(focus);
+					npc.doCast(skill);
+					if (npc.isCastingNow())
+					{
+						return true;
+					}
+				}
+			}
+		}
+		keepSwinging(state, focus);
+		return true;
 	}
 
 	/** Who a support should keep itself in range of: support sticks to the live tank during a raid (so it can heal it), else the leader. */
@@ -7467,6 +7824,46 @@ public class PhantomPartyManager
 			}
 		}
 		return false;
+	}
+
+	/**
+	 * The playstyle state of a recruited member, for {@link PhantomManager}'s PvP tick, which drives the member while a
+	 * party-defense engagement owns it. The member's offensive AutoUse is parked into this state, so that tick casts
+	 * through it too.
+	 * @return the member's playstyle state, or {@code null} when {@code npc} is not a recruited member
+	 */
+	public PhantomPlaystyleEngine.PlayState playStateOf(Player npc)
+	{
+		final Member state = _members.get(npc.getObjectId());
+		return (state == null) ? null : state.play;
+	}
+
+	/**
+	 * @return the MP reserve a recruited member's role keeps in party combat, or {@code fallback} when it is not one
+	 */
+	public int mpReserveOf(Player npc, int fallback)
+	{
+		final Member state = _members.get(npc.getObjectId());
+		return (state == null) ? fallback : mpReserve(state.role);
+	}
+
+	/**
+	 * @return whether a recruited member's party has a healer ready to rescue it (the HEALER_READY gate), {@code false}
+	 *         when it is not a recruited member
+	 */
+	public boolean healerReadyOf(Player npc)
+	{
+		final Member state = _members.get(npc.getObjectId());
+		return (state != null) && healerReady(state);
+	}
+
+	/**
+	 * @return the party role name a recruited member's playstyle resolves with, or {@code null} when it is not one
+	 */
+	public String roleNameOf(Player npc)
+	{
+		final Member state = _members.get(npc.getObjectId());
+		return (state == null) ? null : state.role.name();
 	}
 
 	public static PhantomPartyManager getInstance()

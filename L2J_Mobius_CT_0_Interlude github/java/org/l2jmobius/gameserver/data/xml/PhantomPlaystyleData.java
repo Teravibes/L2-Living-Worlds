@@ -61,8 +61,9 @@ public class PhantomPlaystyleData implements IXmlReader
 		CONTROL, // stun/slow/root style interruption
 		PANIC, // self-defense at low HP while under attack (targets self)
 		LIMIT, // low-HP limit buffs (Frenzy/Zealot family): healer-gated, skill data enforces its own HP gate (targets self)
-		PULL; // ranged tag the camp puller opens a pull with (a cheap single-target nuke); read ONLY by the pull
+		PULL, // ranged tag the camp puller opens a pull with (a cheap single-target nuke); read ONLY by the pull
 		// hook, never by the combat rotation - so a nuker that would otherwise body-pull instead shoots the mob.
+		STANCE; // a combat toggle (Vicious Stance) turned on in a fight while it is off, and dropped before resting (targets self)
 
 		public boolean self()
 		{
@@ -89,7 +90,9 @@ public class PhantomPlaystyleData implements IXmlReader
 		DURABLE_TARGET, // target is a raid or meaty enough that a setup cast amortizes
 		HEALER_READY, // a live party healer with MP is present (gate for LIMIT self-endangering)
 		ONCE_PER_TARGET, // cast at most once per target (openers, per-fight debuffs)
-		UNDER_ATTACK; // something is actively coming at this member (PANIC gate)
+		UNDER_ATTACK, // something is actively coming at this member (PANIC gate)
+		PVP, // the target is a player (dagger PvP openers and target drops)
+		FOCUS_ON_ME; // the target has this member selected (Trick/Switch make it drop us)
 	}
 
 	/** One ordered playstyle line: cast {@code skillId} when all {@code conds} hold. Immutable after load. */

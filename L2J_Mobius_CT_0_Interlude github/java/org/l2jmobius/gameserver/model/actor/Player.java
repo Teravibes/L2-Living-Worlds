@@ -8511,7 +8511,9 @@ public class Player extends Playable
 				return true;
 			}
 			
-			return (getKarma() > 0); // Guards attack only PK players.
+			// Guards attack only PK players, and (Living World) a flagged player who assaulted a guard: Guard.addDamage
+			// flags him and makes the nearby guards hate him, so the guards that hate him may strike back (FPC-127).
+			return (getKarma() > 0) || ((_pvpFlag > 0) && (attacker.asAttackable().getHating(this) > 0));
 		}
 		
 		// Check if the Player has Karma

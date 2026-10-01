@@ -172,6 +172,7 @@
   .field{display:grid;grid-template-columns:1fr auto;gap:14px 20px;align-items:center;
     padding:15px 2px;border-bottom:1px solid var(--line)}
   .field:last-child{border-bottom:none}
+  .fgroup{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:26px 0 4px}
   .field .meta{min-width:0}
   .field .flabel{font-weight:600;font-size:14.5px;color:var(--ink);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
   .field .fkey{font-family:var(--mono);font-size:11px;color:var(--stone-dim)}
@@ -307,6 +308,7 @@
   .u-PANIC   {color:#d88a8a;border-color:#d88a8a55;background:#d88a8a18}
   .u-LIMIT   {color:#c98ad8;border-color:#c98ad855;background:#c98ad818}
   .u-PULL    {color:#8fd8a8;border-color:#8fd8a855;background:#8fd8a818}
+  .u-STANCE  {color:#d8b08f;border-color:#d8b08f55;background:#d8b08f18}
 
   .ps-body{min-width:0}
   .ps-name{font-size:14px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -464,7 +466,7 @@ body.fpc-active { overflow-x: hidden; }
   <section id="empty" class="hero">
     <svg class="crest-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l7 4v6c0 4.4-3 7.6-7 10-4-2.4-7-5.6-7-10V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>
     <h1>Server Control Panel</h1>
-    <p>Edit your rates, fake-player behaviour, auto-play and more - no server, no login, no editing raw text files. Open your server's <code class="inl">game</code> folder to begin, and the config and data tabs both load from it.</p>
+    <p>Edit your rates, phantoms, the Olympiad and more - no server, no login, no editing raw text files. Open your server's <code class="inl">game</code> folder to begin, and the config and data tabs both load from it.</p>
     <div class="cta">
       <button id="reopenBtnBig" class="btn btn-primary hidden" onclick="reopenRemembered()"></button>
       <button id="openBtn" class="btn btn-primary" onclick="pickFolder()">Open game folder</button>
@@ -531,55 +533,8 @@ const PANELS = [
       {key:"RateQuestRewardXP",    label:"Quest XP",    type:"float", help:"Experience from quest rewards."},
       {key:"RateQuestRewardSP",    label:"Quest SP",    type:"float", help:"Skill points from quest rewards."},
       {key:"RateQuestRewardAdena", label:"Quest adena", type:"float", help:"Adena from quest rewards."},
-      {key:"FakePlayerStorePriceMultiplier", label:"AI store price scale", type:"float",
-       help:"Multiplier on fake-player private-store / crafter prices. Raise it to match an inflated adena rate."},
-    ]},
-  { id:"fp", title:"Fake Players", file:"FakePlayers.ini",
-    blurb:"The Living World population: town NPCs, phantoms and recruited parties.",
-    fields:[
-      {key:"EnableFakePlayers",  label:"Enable fake players", type:"bool", help:"Master switch for the whole population."},
-      {key:"FakePlayerChat",     label:"Chat with fake players", type:"bool", help:"Bots hold whisper/trade/shout conversations (needs the Python brain)."},
-      {key:"FakePlayerBehavior", label:"Autonomous behaviour", type:"bool", help:"Bots wander and patrol on their own."},
-      {key:"FakePlayerUseShots", label:"Use soulshots", type:"bool", help:"Fake players fire shots in combat."},
-      {key:"FakePlayerAggroMonsters", label:"Attack nearby monsters", type:"bool", help:"Aggressive-AI bots engage mobs around them."},
-      {key:"FakePlayerAggroPlayers",  label:"Attack nearby players",  type:"bool", help:"Aggressive-AI bots engage real players (PvP)."},
-      {key:"FakePlayerCanDropItems",  label:"Drop items on death",    type:"bool", help:"Killed bots can drop loot."},
-      {key:"FakePlayerCanPickup",     label:"Pick up items",          type:"bool", help:"Bots collect dropped items."},
-      {key:"FakePlayerPartyQuestCredit", label:"Credit you for AI quest kills", type:"bool",
-       help:"Your partied AI's killing blows count toward YOUR quests, so you needn't last-hit every mob."},
-      {key:"FakePlayerPartyQuestCreditRange", label:"Quest-credit range", type:"int",
-       help:"How close (game units) you must be to the kill for that credit. 0 = no distance check."},
-      {key:"FakePlayerPartyExpShare", label:"Phantoms share party XP/SP", type:"bool", isNew:true,
-       help:"OFF (default): you keep 100% of party XP even though the AI fights alongside you. ON: the AI counts toward the level-based split, for a more realistic grouped feel (you keep less)."},
-      {key:"FakePlayerPartyLootShare", label:"Phantoms share loot & adena", type:"bool", isNew:true,
-       help:"OFF (default): drops and adena stay with you (AI never rolls, and can't quietly eat an adena cut). ON: the AI rolls for loot like a real member."},
-      {key:"FakePlayerRecruitEnchantChance", label:"Recruit enchant chance %", type:"int", isNew:true,
-       help:"Percent chance a recruited party member arrives with enchanted gear. 0 = never, 100 = always."},
-      {key:"FakePlayerRecruitEnchantMin", label:"Recruit enchant min (+)", type:"int", isNew:true,
-       help:"Lowest enchant a geared recruit rolls."},
-      {key:"FakePlayerRecruitEnchantMax", label:"Recruit enchant max (+)", type:"int", isNew:true,
-       help:"Highest enchant a geared recruit rolls."},
-      {key:"FakePlayerAmbientTradeIntervalSeconds", label:"Ambient trade interval (sec)", type:"int", isNew:true, default:"90",
-       help:"Seconds between spontaneous trade-channel lines (one random bot each tick). Lower = chattier. Default 90. Takes effect on restart. Actual pace also depends on your LLM model and PC."},
-      {key:"FakePlayerAmbientShoutIntervalSeconds", label:"Ambient shout interval (sec)", type:"int", isNew:true, default:"120",
-       help:"Seconds between spontaneous shout lines / LFM ads (one random bot each tick). Lower = chattier. Default 120. Takes effect on restart. Actual pace also depends on your LLM model and PC."},
-      {key:"FakePlayerMaxPublicChatsPerMinute", label:"Max public chats / min", type:"int", isNew:true, default:"8",
-       help:"Shared cap on ALL public bot lines per minute (shout, trade, say, ambient). Raise for a busier town, lower to keep it calm. Default 8. Applies on //reload config."},
-      {key:"FakePlayerBotChatChainDepth", label:"Bot-to-bot chain depth", type:"int", isNew:true, default:"2",
-       help:"How many times bots bounce a line off each other before it stops. Higher = longer bot threads; 0 = bots only answer real players. Default 2. Applies on //reload config."},
-      {key:"FakePlayerBotChatReplyChance", label:"Bot-to-bot reply chance (%)", type:"int", isNew:true, default:"15",
-       help:"Percent chance a bot replies to another bot's public line. Lower to thin bot-to-bot chatter, raise for busier back-and-forth. Default 15. Applies on //reload config."},
-    ]},
-  { id:"auto", title:"Auto Play", file:"AutoPlay.ini",
-    blurb:"The engine that drives phantom hunters and free-hunting recruits.",
-    fields:[
-      {key:"EnableAutoPlay",   label:"Enable auto play", type:"bool", help:"Master switch. The Living World needs this ON so AI hunts and fights back."},
-      {key:"EnableAutoPotion", label:"Auto potion", type:"bool", help:"Auto-drink healing potions."},
-      {key:"EnableAutoSkill",  label:"Auto skill", type:"bool", help:"Auto-cast selected skills."},
-      {key:"EnableAutoItem",   label:"Auto item", type:"bool", help:"Auto-use selected items."},
-      {key:"ResumeAutoPlay",   label:"Resume on login", type:"bool", help:"Restart auto play when a character enters the game."},
-      {key:"ShortRange",       label:"Short target range", type:"int", help:"Melee auto-target radius (default 600)."},
-      {key:"LongRange",        label:"Long target range",  type:"int", help:"Ranged auto-target radius (default 1400)."},
+      {key:"FakePlayerStorePriceMultiplier", label:"Town bot store prices", type:"float",
+       help:"Multiplier on the prices of private stores and crafters run by town bots. Raise it to match an inflated adena rate."},
     ]},
   { id:"raids", title:"Raid Bosses", file:"NPC.ini",
     blurb:"Scale every raid boss at once. Values are percent, 100 = retail; these tune attack, defense and regen, not the boss HP pool. Read only at startup, so restart the server to apply.",
@@ -590,6 +545,93 @@ const PANELS = [
       {key:"RaidMDefenceMultiplier", label:"Magic defense",    type:"int", default:"100", help:"Percent of retail. 100 = default, lower = weaker. Restart required."},
       {key:"RaidHpRegenMultiplier",  label:"HP regen",         type:"int", default:"100", help:"Percent of retail. 100 = default, lower = weaker. Restart required."},
       {key:"RaidMpRegenMultiplier",  label:"MP regen",         type:"int", default:"100", help:"Percent of retail. 100 = default, lower = weaker. Restart required."},
+    ]},
+  { id:"phantoms", title:"Phantoms", file:"FakePlayers.ini",
+    blurb:"Phantoms are the bots that are real characters: field hunters, your recruited party members, support buddies, friends and Olympiad nobles. The town crowd (town bots) is not affected by these; its settings are in the Raw Editor.",
+    fields:[
+      {heading:"Your party"},
+      {key:"FakePlayerPartyQuestCredit", label:"Phantom kills count for your quests", type:"bool", default:"True",
+       help:"When a recruited party member or support buddy lands the killing blow, the quest kill counts for you, so you don't have to last-hit every mob."},
+      {key:"FakePlayerPartyQuestCreditRange", label:"Quest kill range", type:"int", default:"1500",
+       help:"How close (game units) you must be to the kill for that credit. 0 = no distance check."},
+      {key:"FakePlayerPartyExpShare", label:"Phantoms share party XP/SP", type:"bool", default:"False",
+       help:"OFF (default): you keep 100% of party XP even though phantoms fight alongside you. ON: phantoms count toward the level-based split, for a more realistic grouped feel (you keep less)."},
+      {key:"FakePlayerPartyLootShare", label:"Phantoms share loot & adena", type:"bool", default:"False",
+       help:"OFF (default): drops and adena stay with you (phantoms never roll, and can't quietly eat an adena cut). ON: phantoms roll for loot like a real member."},
+      {key:"FakePlayerPartyPickup", label:"Phantoms pick up party drops", type:"bool", default:"True",
+       help:"ON (default): after a fight, when nothing is attacking the party, recruited party members pick up nearby drops. The party loot mode decides who gets them: Finders keepers leaves items with the phantom until you say \"return loot\", Random and By turn hand them out (to you while loot share is OFF). Herbs are left for you. OFF: phantoms never pick anything up."},
+      {heading:"Gear"},
+      {key:"FakePlayerRecruitEnchantChance", label:"Enchanted gear chance %", type:"int", default:"100",
+       help:"Percent chance a phantom arrives with enchanted weapon and armor. Covers party recruits, field hunters, friends and Olympiad nobles, not support buddies. 0 = never, 100 = always."},
+      {key:"FakePlayerRecruitEnchantMin", label:"Enchant min (+)", type:"int", default:"0",
+       help:"Lowest enchant an enchanted phantom rolls."},
+      {key:"FakePlayerRecruitEnchantMax", label:"Enchant max (+)", type:"int", default:"3",
+       help:"Highest enchant an enchanted phantom rolls."},
+      {heading:"Hunting"},
+      {key:"PhantomAutoHuntingZones", label:"Auto-generated hunting zones", type:"bool", default:"True",
+       help:"Also load the field hunter zones in data/PhantomPopulations.generated.xml, on top of your own PhantomPopulations.xml. A zone stays asleep until a real player comes near."},
+      {key:"PhantomHunterPlaystyles", label:"Field hunters use playstyles", type:"bool", default:"True",
+       help:"Field hunters use the skill rotations from the Phantom Playstyles tab, like party members do. OFF: they fall back to plain auto-cast."},
+      {key:"PhantomSkillFallback", label:"Use unlisted attack skills", type:"bool", default:"True",
+       help:"When its playstyle has nothing to cast, a phantom may use one of its own single-target attack or debuff skills that the playstyle does not list. Never dances, songs, heals, buffs, area skills, Sleep, Root or Spoil."},
+      {key:"PhantomHunterRetaliate", label:"Turn on monsters that attack them", type:"bool", default:"True",
+       help:"A field hunter that gets jumped by a monster it was ignoring turns to fight it. OFF: hunters stay on their first target."},
+    ]},
+  { id:"pvp", title:"Phantom PvP", file:"FakePlayers.ini",
+    blurb:"PvP between you and phantoms, and between phantoms. Town bots are never involved, and towns and other peace zones are always safe.",
+    fields:[
+      {key:"PhantomPvpEnabled", label:"Enable phantom PvP", type:"bool", default:"True",
+       help:"Master switch. OFF turns every setting on this tab off."},
+      {heading:"Behaviour"},
+      {key:"PhantomPvpSelfDefense", label:"Fight back when attacked", type:"bool", default:"True",
+       help:"A phantom fights back, or flees when outmatched, when a player or another phantom attacks it."},
+      {key:"PhantomPvpReactToFlagged", label:"Attack flagged and PK players", type:"bool", default:"True",
+       help:"A phantom may engage a player or phantom that is already flagged (purple) or a red PK."},
+      {key:"PhantomPvpDuels", label:"Duels", type:"bool", default:"True",
+       help:"Phantoms answer duel challenges and now and then challenge you or each other. Duels never cost karma or items."},
+      {key:"PhantomPvpPartyDefense", label:"Party members defend you", type:"bool", default:"True",
+       help:"Recruited party members, buddies and friends turn on anyone who attacks you or the party."},
+      {key:"PhantomPvpClanDefense", label:"Clan and alliance defense", type:"bool", default:"True",
+       help:"A phantom also helps a clan or alliance member under attack, within the defend radius below."},
+      {key:"PhantomPvpBetweenPhantoms", label:"Phantoms fight each other", type:"bool", default:"True",
+       help:"Phantoms may also fight other phantoms, not only you."},
+      {key:"PhantomArcherKiting", label:"Archers keep their distance", type:"bool", default:"True",
+       help:"An archer phantom steps back to shooting range when a melee player closes in during PvP, a duel or an Olympiad match. Never in town."},
+      {heading:"Tuning"},
+      {key:"PhantomPvpDefendRadius", label:"Defend radius", type:"int", default:"1200",
+       help:"How close (game units) an ally must be for a phantom to rush to its defense."},
+      {key:"PhantomPvpMaxLevelGapAbovePlayer", label:"Max level gap", type:"int", default:"6",
+       help:"A phantom this many levels above its target will not start PvP against it. Self-defense is not affected."},
+      {key:"PhantomPvpAggressorPercent", label:"Aggressive phantoms %", type:"int", default:"15",
+       help:"Share of phantoms rolled with an aggressive personality. The rest only defend themselves or their party."},
+      {key:"PhantomPvpReactChancePercent", label:"Attack flagged chance %", type:"int", default:"25",
+       help:"Chance an aggressive phantom actually engages a flagged or PK target it notices. 0 = never, 100 = always."},
+      {key:"PhantomPvpEngageCooldownSeconds", label:"Engage cooldown (sec)", type:"int", default:"300",
+       help:"Seconds before the same phantom starts PvP on the same target again, so you are never hounded by one bot."},
+      {key:"PhantomPvpDuelChancePercent", label:"Duel challenge chance %", type:"int", default:"10",
+       help:"Chance an idle phantom issues a duel when the situation allows one."},
+      {key:"PhantomPvpFleeHpPercent", label:"Flee at HP %", type:"int", default:"30",
+       help:"HP percent at which a phantom breaks off and flees. Each phantom's bravery shifts this up or down."},
+    ]},
+  { id:"olympiad", title:"Phantom Olympiad", file:"PhantomOlympiad.ini",
+    blurb:"Phantom nobles that take part in the Olympiad. Needs OlympiadEnabled = True in Olympiad.ini as well.",
+    fields:[
+      {key:"PhantomOlympiadEnabled", label:"Enable phantom nobles", type:"bool", default:"True",
+       help:"Master switch. Phantom nobles log in when the competition opens, wait near the Olympiad Managers and log out when it closes."},
+      {key:"PhantomOlympiadRosterSize", label:"Roster size", type:"int", default:"40",
+       help:"How many phantom nobles the base roster has, spread over the 31 third classes. Raising it adds nobles next time the competition opens. Lowering it does not remove existing ones."},
+      {key:"PhantomOlympiadMinLevel", label:"Noble min level", type:"int", default:"76",
+       help:"Lowest level for newly created nobles. An existing noble keeps its level."},
+      {key:"PhantomOlympiadMaxLevel", label:"Noble max level", type:"int", default:"80",
+       help:"Highest level for newly created nobles."},
+      {key:"PhantomOlympiadRivalsPerClass", label:"Rivals for your class", type:"int", default:"6",
+       help:"When you sign up, at least this many nobles of your class are made available so classed matches can start. 0 = off."},
+      {key:"PhantomOlympiadSignUpChancePercent", label:"Sign up chance %", type:"int", default:"10",
+       help:"While no real player is signed up, each idle noble's chance per check (every 30 seconds) to sign up, so phantom only matches keep running to watch. 0 = nobles only sign up when you do."},
+      {key:"PhantomOlympiadRestSeconds", label:"Rest between matches (sec)", type:"int", default:"180",
+       help:"How long a noble waits after a match before it may sign up again."},
+      {key:"PhantomOlympiadRejoinParty", label:"Party rejoins after your match", type:"bool", default:"True",
+       help:"Your recruited party members and buddies wait during your match and rejoin your party when you come back."},
     ]},
 
 ];
@@ -932,6 +974,13 @@ function buildCuratedPanel(p, active){
     '</h2><p>' + escapeHtml(p.blurb) + ' <span class="muted">&middot; ' + escapeHtml(p.file) + '</span></p></div>';
 
   p.fields.forEach(fd => {
+    if (fd.heading){
+      const h = document.createElement("h3");
+      h.className = "fgroup";
+      h.textContent = fd.heading;
+      sec.appendChild(h);
+      return;
+    }
     const cur = getVal(p.file, fd.key);
     const missing = cur === null;
     const row = document.createElement("div");
@@ -1178,7 +1227,7 @@ function discardAll(){
 
 const PS_FILE = "PhantomPlaystyles.xml";
 const ICON_SUBDIR = "skill icons"; // icons ship next to the datapack at game/data/skill icons
-const PS_USES = ["OPENER","ROTATION","AOE","DEBUFF","CONTROL","PANIC","LIMIT","PULL"];
+const PS_USES = ["OPENER","ROTATION","AOE","DEBUFF","CONTROL","PANIC","LIMIT","PULL","STANCE"];
 const PS_ROLES = ["TANK","WARRIOR","ARCHER","DAGGER","MONK","SINGER","DANCER","NUKER"];
 
 // Condition -> the numeric attribute it pairs with (null = the condition takes no parameter).
@@ -1187,7 +1236,7 @@ const PS_CONDS = {
   ALWAYS:null, TARGET_HP_BELOW:"hpBelow", TARGET_HP_ABOVE:"hpAbove", SELF_HP_BELOW:"selfHpBelow",
   MP_ABOVE:"mpAbove", MOBS_NEAR:"mobsAtLeast", MOBS_UNSPOILED:"mobsAtLeast", REAR:null, CHARGES:"chargesAtLeast",
   CHARGES_BELOW:"chargesBelow", DEBUFF_MISSING:null, SELF_ABNORMAL_FREE:null, NOT_SPOILED:null,
-  DURABLE_TARGET:null, HEALER_READY:null, ONCE_PER_TARGET:null, UNDER_ATTACK:null
+  DURABLE_TARGET:null, HEALER_READY:null, ONCE_PER_TARGET:null, UNDER_ATTACK:null, PVP:null, FOCUS_ON_ME:null
 };
 const PS_COND_TEXT = {
   ALWAYS:"always", TARGET_HP_BELOW:"target below {v}% HP", TARGET_HP_ABOVE:"target above {v}% HP",
@@ -1195,7 +1244,8 @@ const PS_COND_TEXT = {
   MOBS_UNSPOILED:"{v}+ unspoiled mobs", REAR:"from behind", CHARGES:"{v}+ charges banked", CHARGES_BELOW:"under {v} charges",
   DEBUFF_MISSING:"its slot is free", SELF_ABNORMAL_FREE:"own slot is free", NOT_SPOILED:"target not spoiled",
   DURABLE_TARGET:"target is durable", HEALER_READY:"a healer is ready",
-  ONCE_PER_TARGET:"once per target", UNDER_ATTACK:"while under attack"
+  ONCE_PER_TARGET:"once per target", UNDER_ATTACK:"while under attack",
+  PVP:"against a player", FOCUS_ON_ME:"target has us selected"
 };
 
 // Skills the party manager casts with its own threat/survival/CC/support logic. Listing one here
@@ -1615,7 +1665,7 @@ function psBuildPanel(){
   const sec = document.createElement("section");
   sec.className = "panel"; sec.dataset.panel = "__ps";
   sec.innerHTML = '<div class="panel-head"><h2>Phantom Playstyles</h2>' +
-    '<p>How recruited phantoms fight. The list is a priority order - the engine casts the first entry whose ' +
+    '<p>How phantoms fight: party members always, field hunters when "Field hunters use playstyles" is on in the Phantoms tab. The list is a priority order - the engine casts the first entry whose ' +
     'conditions pass. <span class="muted">&middot; data/PhantomPlaystyles.xml</span></p></div>' +
     '<div id="psBody"></div>';
   return sec;
@@ -2665,7 +2715,7 @@ function bcRender(){
     'A bot in a clan that belongs to an alliance shows that alliance crest too, so this is your one dial for both. ' +
     'Set here and save; like the clans below, it is rebuilt at server boot, so <b>restart the server</b> to apply.</p>' +
     '<div style="display:flex;align-items:center;gap:10px;margin:6px 0">' +
-      '<label class="bc-note" style="margin:0;flex:1">Town fake players wearing a clan (%)</label>' +
+      '<label class="bc-note" style="margin:0;flex:1">Town bots wearing a clan (%)</label>' +
       '<input class="bc-in" type="number" min="0" max="100" style="width:90px" value="' + escapeHtml(fakePct) + '"' + dis +
       ' oninput="bcSetSettingAttr(\'fakePlayerClanChance\',this.value)"></div>' +
     '<div style="display:flex;align-items:center;gap:10px;margin:6px 0">' +
@@ -3176,7 +3226,7 @@ const FPC_APP_HTML = `<div id="app">
 		</div>
 
 		<div id="modebar">
-			<button id="modeNpc">NPC fake players</button>
+			<button id="modeNpc">Town bots</button>
 			<button id="modePhantom" class="sec">Phantoms</button>
 			<button id="modeRaid" class="sec">Raid bosses</button>
 		</div>
@@ -4562,7 +4612,7 @@ FPCGID('toggleAll').onclick = () => { const anyVisible = pops.some(p => p.visibl
 // Import matches on name (case-insensitive) and skips any population you already have, so it can
 // never clobber your own work - the same merge posture the Bot Clans tab uses.
 function popIoName(){ return (mode === 'phantom' ? 'phantom-populations' : 'fakeplayer-populations') + '.xml'; }
-function popModeLabel(m){ return m === 'phantom' ? 'Phantoms' : 'NPC fake players'; }
+function popModeLabel(m){ return m === 'phantom' ? 'Phantoms' : 'Town bots'; }
 // A bare <population> (no profile/store/route/race, no <profile> block) is a phantom file;
 // FakePlayerBehavior.xml always carries movement <profile> elements and behavior attributes.
 function detectXmlPopMode(doc){

@@ -21,6 +21,7 @@
 package org.l2jmobius.gameserver.managers;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -28,6 +29,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.config.custom.FakePlayersConfig;
 import org.l2jmobius.gameserver.data.xml.PhantomPlaystyleData;
 import org.l2jmobius.gameserver.data.xml.PhantomPlaystyleData.Cond;
 import org.l2jmobius.gameserver.data.xml.PhantomPlaystyleData.PlayEntry;
@@ -37,8 +39,10 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skill.AbnormalType;
 import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.model.skill.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 import org.l2jmobius.gameserver.util.LocationUtil;
 
@@ -118,6 +122,9 @@ public class PhantomPlaystyleEngine
 		int parkedGeneration = -1; // data generation the current parking reflects; a reload bump re-parks (see syncParkingIfReloaded)
 
 		int generation = -1; // data generation this resolution came from
+		// Skills the server rejected recently (skill id -> when): not tried again for a short backoff, so a cast the core
+		// refuses (wrong weapon, lost target, failed condition) does not repeat every tick. See markRejected.
+		final Map<Integer, Long> rejectedAt = new HashMap<>();
 
 		/** Forces re-resolution when the data has been reloaded, so an edit applies without re-recruiting. */
 		void refreshIfReloaded()
@@ -228,12 +235,21 @@ public class PhantomPlaystyleEngine
 			{
 				continue;
 			}
+			if (PhantomSkillFallbackRules.backedOff(rejectedAt(state, entry.skillId), now))
+			{
+				continue; // the server refused it a moment ago; give it a short rest
+			}
 			final Skill skill = npc.getKnownSkill(entry.skillId);
 			if ((skill == null) || npc.isSkillDisabled(skill) || (npc.getCurrentMp() < skill.getMpConsume()) || !PhantomBuffs.canAffordReagent(npc, skill))
 			{
 				continue;
 			}
-			final boolean selfCast = entry.use.self() || (skill.getTargetType() == TargetType.SELF);
+			// A stance already on stays on: casting a live toggle again would do nothing (callSkill ignores it).
+			if ((entry.use == Use.STANCE) && npc.isAffectedBySkill(entry.skillId))
+			{
+				continue;
+			}
+			final boolean selfCast = entry.use.self() || (entry.use == Use.STANCE) || (skill.getTargetType() == TargetType.SELF);
 			if (!selfCast && !inReach(npc, focus, skill))
 			{
 				continue; // out of range - positioning/auto-attack closes the gap, retry next tick
@@ -260,6 +276,48 @@ public class PhantomPlaystyleEngine
 	}
 
 	/**
+	 * How far a caster driven by this playstyle should stand to fight: the shortest cast range among the entries that
+	 * fire on an ordinary single target at the member's level (ROTATION and OPENER) and that it knows, counting only
+	 * ranged spells of at least {@code minRange}. Retired entries (outside their level window), pack-gated AOE entries,
+	 * pull tags and self-casts never set it, so a spell the engine will not cast (Flame Strike after 45) cannot drag the
+	 * caster in.
+	 * @return that range, or {@code 0} when the member has no playstyle or no such entry
+	 */
+	public static int rotationReach(Player npc, PlayState state, String roleName, int minRange)
+	{
+		if (state == null)
+		{
+			return 0;
+		}
+		state.refreshIfReloaded();
+		if (!state.lookedUp)
+		{
+			state.lookedUp = true;
+			state.playstyle = PhantomPlaystyleData.getInstance().getPlaystyle(npc.getPlayerClass().getId(), roleName);
+		}
+		if (state.playstyle == null)
+		{
+			return 0;
+		}
+		final int level = npc.getLevel();
+		int reach = 0;
+		for (PlayEntry entry : state.playstyle.entries)
+		{
+			if (((entry.use != Use.ROTATION) && (entry.use != Use.OPENER)) || !entry.appliesAt(level))
+			{
+				continue;
+			}
+			final Skill skill = npc.getKnownSkill(entry.skillId);
+			if ((skill == null) || (skill.getTargetType() == TargetType.SELF) || (skill.getCastRange() < minRange))
+			{
+				continue;
+			}
+			reach = (reach == 0) ? skill.getCastRange() : Math.min(reach, skill.getCastRange());
+		}
+		return reach;
+	}
+
+	/**
 	 * Records a once-per-target cast in the member's ledger. Called by the party manager ONLY after {@code doCast}
 	 * has actually put the phantom into a casting state - so the OPENER / ONCE_PER_TARGET slot is spent on a real
 	 * launch, never on a decision the engine core silently refused. A no-op for ordinary (repeatable) casts.
@@ -273,6 +331,154 @@ public class PhantomPlaystyleEngine
 			return;
 		}
 		state.castLedger.computeIfAbsent(action.focusObjectId, k -> new HashSet<>()).add(action.ledgerSkillId);
+	}
+
+	/**
+	 * Clears the pacing beat, so the next {@link #pick} may cast at once. Called when a PvP engagement starts, so the
+	 * opener is not held back by the pacing a PvE skill left.
+	 */
+	public static void resetPacing(PlayState state)
+	{
+		if (state != null)
+		{
+			state.nextCastAt = 0;
+		}
+	}
+
+	/**
+	 * Forgets the once-per-target ledger for one target, so its OPENER and ONCE_PER_TARGET entries can fire again. Called
+	 * when a PvP engagement ends, so a later, separate fight with the same player opens the same way.
+	 */
+	public static void forgetTarget(PlayState state, int objectId)
+	{
+		if (state != null)
+		{
+			state.castLedger.remove(objectId);
+		}
+	}
+
+	/**
+	 * Forgets the whole once-per-target ledger (end of an Olympiad match: the next match opens fresh).
+	 */
+	public static void forgetAllTargets(PlayState state)
+	{
+		if (state != null)
+		{
+			state.castLedger.clear();
+		}
+	}
+
+	/**
+	 * Turns off every STANCE toggle of the member's playstyle that is on, so a stance that drains MP (Vicious Stance)
+	 * does not keep burning it while the member rests or walks between fights. The next fight turns it back on.
+	 * @param npc the phantom
+	 * @param state the member's playstyle runtime state (a no-op until the playstyle has been resolved)
+	 */
+	public static void dropStances(Player npc, PlayState state)
+	{
+		if ((state == null) || (state.playstyle == null))
+		{
+			return;
+		}
+		for (PlayEntry entry : state.playstyle.entries)
+		{
+			if ((entry.use == Use.STANCE) && npc.isAffectedBySkill(entry.skillId))
+			{
+				npc.stopSkillEffects(SkillFinishType.REMOVED, entry.skillId);
+			}
+		}
+	}
+
+	/**
+	 * Records that the server refused a cast this engine chose (the caller's {@code doCast} did not launch), so neither
+	 * {@link #pick} nor {@link #pickFallback} offers it again for {@link PhantomSkillFallbackRules#REJECT_BACKOFF_MS}.
+	 */
+	public static void markRejected(PlayState state, CastAction action)
+	{
+		if ((state != null) && (action != null))
+		{
+			state.rejectedAt.put(action.skill.getId(), System.currentTimeMillis());
+		}
+	}
+
+	private static long rejectedAt(PlayState state, int skillId)
+	{
+		final Long at = state.rejectedAt.get(skillId);
+		return (at == null) ? 0 : at;
+	}
+
+	/**
+	 * The fallback when {@link #pick} found nothing this tick: the best of the phantom's own single-target offensive
+	 * skills that its playstyle does NOT list, so a class whose list has run thin at its level (a level 80 Spectral
+	 * Dancer with only Arrest left) still fights with its real kit instead of only swinging. Listed skills stay under the
+	 * playstyle's control (its level windows and conditions); dances, songs, toggles, passives, heals, buffs, area skills,
+	 * taunts and the manager-owned skills in {@link PhantomSkillFallbackRules#neverCast} are never picked here. It shares
+	 * the playstyle's pacing and MP reserve. Candidates are scored by {@link PhantomSkillFallbackRules#score}.
+	 * @return the cast, or {@code null} to keep auto-attacking
+	 */
+	public static CastAction pickFallback(Player npc, Creature focus, PlayState state, int mpReservePercent)
+	{
+		if ((state == null) || (focus == null) || !FakePlayersConfig.PHANTOM_SKILL_FALLBACK)
+		{
+			return null;
+		}
+		// Only for a phantom the engine actually drives (a playstyle it can field at this level, so its offensive AutoUse
+		// is parked). A class with no playstyle still casts through AutoUse; a second caster here would double up.
+		if ((state.playstyle == null) || (usableCount(npc, state.playstyle) == 0))
+		{
+			return null;
+		}
+		final long now = System.currentTimeMillis();
+		if ((now < state.nextCastAt) || (npc.getCurrentMpPercent() < mpReservePercent))
+		{
+			return null;
+		}
+		final Set<Integer> listed = new HashSet<>();
+		for (PlayEntry entry : state.playstyle.entries)
+		{
+			listed.add(entry.skillId);
+		}
+		Skill best = null;
+		double bestScore = Double.NEGATIVE_INFINITY;
+		for (Skill skill : npc.getAllSkills())
+		{
+			final int id = skill.getId();
+			if (listed.contains(id) || PhantomSkillFallbackRules.neverCast(id) || skill.isPassive() || skill.isToggle() || skill.isDance() || skill.isChanneling() || skill.isSuicideAttack())
+			{
+				continue;
+			}
+			// Single-target skills anywhere; area and aura skills only in an Olympiad match, where the opponent is the
+			// only one they can hit (FPC-129).
+			final boolean area = arenaFight(npc, focus) && isAreaAttack(skill);
+			if (((skill.getTargetType() != TargetType.ONE) && !area) || !skill.hasNegativeEffect() || skill.hasEffectType(EffectType.HATE) || (skill.getAbnormalType() == AbnormalType.SLEEP))
+			{
+				continue;
+			}
+			if (PhantomSkillFallbackRules.backedOff(rejectedAt(state, id), now) || npc.isSkillDisabled(skill) || (npc.getCurrentMp() < skill.getMpConsume()) || (npc.getCurrentHp() <= skill.getHpConsume()) || !PhantomBuffs.canAffordReagent(npc, skill))
+			{
+				continue;
+			}
+			if ((skill.getPower() <= 0) && focus.isAffectedBySkill(id))
+			{
+				continue; // a pure debuff already on the target
+			}
+			if (!(area ? areaHits(npc, focus, skill) : inReach(npc, focus, skill)) || !skill.checkCondition(npc, focus, false))
+			{
+				continue;
+			}
+			final double score = PhantomSkillFallbackRules.score(skill.getPower(), skill.getMpConsume());
+			if (score > bestScore)
+			{
+				best = skill;
+				bestScore = score;
+			}
+		}
+		if (best == null)
+		{
+			return null;
+		}
+		state.nextCastAt = now + DEFAULT_PACE_MS + Rnd.get(PACE_JITTER_MS);
+		return new CastAction(best, focus, false, focus.getObjectId(), best.getId());
 	}
 
 	/**
@@ -425,9 +631,17 @@ public class PhantomPlaystyleEngine
 				}
 				case MOBS_NEAR:
 				{
-					// PvE-only (an AoE justified by a monster pack). A Player focus has no mob pack, so the condition
-					// fails and the AoE entry does not fire in PvP; the PvE path still passes a Monster here.
-					if (!(focus instanceof Monster) || (countPack(npc, (Monster) focus, skill) < entry.mobsAtLeast))
+					// An AoE justified by a monster pack. A Player focus has no mob pack, so outside an Olympiad match the
+					// entry does not fire in PvP. In a match the arena holds only the opponent, so the area skill fires
+					// whenever it would hit him: a pole or aura class otherwise has almost no skill left to use (FPC-129).
+					if (focus instanceof Monster)
+					{
+						if (countPack(npc, (Monster) focus, skill) < entry.mobsAtLeast)
+						{
+							return false;
+						}
+					}
+					else if (!arenaFight(npc, focus) || !areaHits(npc, focus, skill))
 					{
 						return false;
 					}
@@ -523,6 +737,22 @@ public class PhantomPlaystyleEngine
 					}
 					break;
 				}
+				case PVP:
+				{
+					if (!focus.isPlayer())
+					{
+						return false;
+					}
+					break;
+				}
+				case FOCUS_ON_ME:
+				{
+					if (focus.getTarget() != npc)
+					{
+						return false;
+					}
+					break;
+				}
 			}
 		}
 		// The once-per-target ledger check (kept out of the switch so the state stays with the caller's loop).
@@ -530,6 +760,55 @@ public class PhantomPlaystyleEngine
 	}
 
 	/** Where an AoE's affect area is anchored: on the caster (AURA family) or on the selected target (AREA family). */
+	/**
+	 * @return true in an Olympiad match against a player, where area skills can only hit the opponent
+	 */
+	private static boolean arenaFight(Player npc, Creature focus)
+	{
+		return focus.isPlayer() && npc.isInOlympiadMode();
+	}
+
+	/**
+	 * @return true for an enemy area or aura skill (centered on the caster or on the target)
+	 */
+	private static boolean isAreaAttack(Skill skill)
+	{
+		switch (skill.getTargetType())
+		{
+			case AREA:
+			case AURA:
+			case FRONT_AREA:
+			case FRONT_AURA:
+			case BEHIND_AREA:
+			case BEHIND_AURA:
+			{
+				return true;
+			}
+			default:
+			{
+				return false;
+			}
+		}
+	}
+
+	/**
+	 * @return true if an area skill cast now would hit {@code focus}: inside the aura radius for a caster-centered skill,
+	 *         in cast range for a target-centered one, and inside the skill's front or rear arc when it has one
+	 */
+	private static boolean areaHits(Player npc, Creature focus, Skill skill)
+	{
+		if (!inArc(npc, focus, arcSign(skill)))
+		{
+			return false;
+		}
+		if (isCasterCentered(skill))
+		{
+			final int radius = (skill.getAffectRange() > 0) ? skill.getAffectRange() : DEFAULT_AOE_RADIUS;
+			return LocationUtil.checkIfInRange(radius, npc, focus, false);
+		}
+		return inReach(npc, focus, skill);
+	}
+
 	private static boolean isCasterCentered(Skill skill)
 	{
 		switch (skill.getTargetType())
@@ -667,7 +946,7 @@ public class PhantomPlaystyleEngine
 	/**
 	 * Parks the skills this player's playstyle owns out of AutoUse at recruit time so the round-robin
 	 * dump can't compete with the engine's decisions. Every OFFENSIVE auto-skill is parked when a
-	 * playstyle exists (unlisted skills are deliberately unused: curation, not omission). Playstyle-LISTED
+	 * playstyle exists (unlisted ones only come back through the scored {@link #pickFallback}). Playstyle-LISTED
 	 * ids are additionally pulled out of the auto-BUFF list - PANIC/LIMIT skills (Ultimate Evasion,
 	 * Frenzy, Battle Roar...) are continuous self-buffs there, and AutoUse would burn them off cooldown at
 	 * full HP on trash (the same bug the tank's Ultimate Defense parking fixed). Unlisted self-buffs keep

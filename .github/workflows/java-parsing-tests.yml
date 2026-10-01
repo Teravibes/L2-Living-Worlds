@@ -16,6 +16,8 @@ on:
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomPvpManager.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomOlympiadRules.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/TownFakeInviteRules.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerGrudgeRules.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomSkillFallbackRules.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/modules/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/java/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/js/**"
@@ -34,6 +36,8 @@ on:
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomPvpManager.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomOlympiadRules.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/TownFakeInviteRules.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/FakePlayerGrudgeRules.java"
+      - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/managers/PhantomSkillFallbackRules.java"
       - "L2J_Mobius_CT_0_Interlude github/java/org/l2jmobius/gameserver/modules/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/java/**"
       - "L2J_Mobius_CT_0_Interlude github/tests/js/**"
@@ -73,6 +77,8 @@ jobs:
             "java/org/l2jmobius/gameserver/managers/PhantomPvpManager.java" \
             "java/org/l2jmobius/gameserver/managers/PhantomOlympiadRules.java" \
             "java/org/l2jmobius/gameserver/managers/TownFakeInviteRules.java" \
+            "java/org/l2jmobius/gameserver/managers/FakePlayerGrudgeRules.java" \
+            "java/org/l2jmobius/gameserver/managers/PhantomSkillFallbackRules.java" \
             "java/org/l2jmobius/gameserver/modules/Json.java" \
             "java/org/l2jmobius/gameserver/modules/ModuleException.java" \
             "java/org/l2jmobius/gameserver/modules/ModuleManifest.java" \
@@ -91,6 +97,8 @@ jobs:
           java -cp build/test-classes PhantomPvpManagerTest
           java -cp build/test-classes PhantomOlympiadRulesTest
           java -cp build/test-classes TownFakeInviteRulesTest
+          java -cp build/test-classes FakePlayerGrudgeRulesTest
+          java -cp build/test-classes PhantomSkillFallbackRulesTest
           java -cp build/test-classes ModuleFrameworkTest
 
       - name: Set up Node

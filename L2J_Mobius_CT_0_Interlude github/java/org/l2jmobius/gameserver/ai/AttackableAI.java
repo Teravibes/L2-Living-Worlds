@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.config.custom.FactionSystemConfig;
 import org.l2jmobius.gameserver.config.custom.FakePlayersConfig;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.managers.DimensionalRiftManager;
+import org.l2jmobius.gameserver.managers.FakePlayerBehaviorManager;
 import org.l2jmobius.gameserver.managers.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -855,6 +856,15 @@ public class AttackableAI extends CreatureAI
 		Creature mostHate = npc.getMostHated();
 		if (mostHate == null)
 		{
+			setIntention(Intention.ACTIVE);
+			return;
+		}
+		
+		// Living World: a town fake player drops its grudge once the player's name is white (FakePlayerGrudgeRules).
+		if (FakePlayerBehaviorManager.forgetsWhitePlayer(npc, mostHate))
+		{
+			npc.stopHating(mostHate);
+			setTarget(null);
 			setIntention(Intention.ACTIVE);
 			return;
 		}
@@ -2499,7 +2509,7 @@ public class AttackableAI extends CreatureAI
 							}
 							
 							// By default, when a faction member calls for help, attack the caller's attacker.
-							if (GeoEngine.getInstance().canSeeTarget(nearby, finalTarget))
+							if (GeoEngine.getInstance().canSeeTarget(nearby, finalTarget) && !FakePlayerBehaviorManager.forgetsWhitePlayer(nearby, finalTarget))
 							{
 								nearby.getAI().notifyAction(Action.AGGRESSION, finalTarget, 1);
 							}

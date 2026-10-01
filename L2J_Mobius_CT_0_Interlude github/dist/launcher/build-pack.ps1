@@ -239,18 +239,10 @@ if (Test-Path $adminSrc) {
     Ok "config editor bundled (opened by the launcher's Config Editor button)"
 }
 
-# ---- 6e. bundle the playstyle validator into pack\tools --------------------
-# Ships with the pack so anyone editing game\data\PhantomPlaystyles.xml can check their work
-# (skill ids, names, conditions, per-level coverage) before restarting. Needs Python 3; in game
-# "//phantom playstyle check" reports parse problems without it.
-$playstyleValidator = Join-Path $ProjectRoot 'research\validate_playstyles.py'
-if (Test-Path $playstyleValidator) {
-    Info "bundling the playstyle validator into pack\tools ..."
-    $toolsDir = Join-Path $Pack 'tools'
-    New-Item -ItemType Directory -Force -Path $toolsDir | Out-Null
-    Copy-Item $playstyleValidator (Join-Path $toolsDir 'validate_playstyles.py') -Force
-    Ok "playstyle validator bundled (python tools\validate_playstyles.py)"
-}
+# ---- 6e. (removed) the playstyle validator is a developer tool --------------
+# research\validate_playstyles.py is no longer bundled: players do not need it, and it needs Python.
+# The admin tool's playstyle editor shows the same warnings inline, and in game
+# "//phantom playstyle check" reports parse problems.
 
 # ---- 6f. compile the one-click launcher (LivingWorld.exe) ------------------
 # The player entry point is a single self-contained exe (no .NET runtime and no

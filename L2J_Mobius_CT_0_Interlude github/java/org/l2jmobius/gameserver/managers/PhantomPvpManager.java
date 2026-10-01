@@ -97,6 +97,12 @@ public class PhantomPvpManager
 	public static final int DUEL_WAIT_HOLD = 0;
 	public static final int DUEL_WAIT_FIGHT = 1;
 	public static final int DUEL_WAIT_END = 2;
+	/** Archer kiting (L2Solo style): a melee opponent this close makes a bow phantom step back. */
+	public static final int KITE_TRIGGER_RANGE = 300;
+	/** How far from the opponent a kiting archer aims to stand after its step. */
+	public static final int KITE_RETREAT_DISTANCE = 500;
+	/** At most one kite step per this long, so the archer spends most of the fight shooting. */
+	public static final long KITE_COOLDOWN_MS = 3500;
 
 	protected PhantomPvpManager()
 	{
@@ -327,6 +333,38 @@ public class PhantomPvpManager
 			return DUEL_WAIT_HOLD;
 		}
 		return ((now - answeredAt) > answerGraceMs) ? DUEL_WAIT_END : DUEL_WAIT_HOLD;
+	}
+
+	/** @return {@code true} if archer phantoms may kite in PvP ({@link FakePlayersConfig#PHANTOM_ARCHER_KITING}) */
+	public static boolean archerKitingEnabled()
+	{
+		return FakePlayersConfig.PHANTOM_ARCHER_KITING;
+	}
+
+	/**
+	 * Whether a bow phantom should step back from its PvP opponent this tick. Only against a melee opponent that has
+	 * closed to {@link #KITE_TRIGGER_RANGE}, never while rooted, casting or inside a peace zone, and at most once per
+	 * {@link #KITE_COOLDOWN_MS}.
+	 * @param enabled {@link #archerKitingEnabled()}
+	 * @param bow the phantom has a bow equipped
+	 * @param opponentMelee the opponent fights in melee (no bow, not a mage)
+	 * @param distance the distance to the opponent
+	 * @param canMove the phantom is not rooted, stunned or casting
+	 * @param inPeaceZone the phantom stands in a peace zone
+	 * @param lastKiteAt when it last stepped back (0 = never)
+	 * @param now the current time
+	 */
+	public static boolean shouldKite(boolean enabled, boolean bow, boolean opponentMelee, double distance, boolean canMove, boolean inPeaceZone, long lastKiteAt, long now)
+	{
+		if (!enabled || !bow || !opponentMelee || !canMove || inPeaceZone)
+		{
+			return false;
+		}
+		if (distance > KITE_TRIGGER_RANGE)
+		{
+			return false;
+		}
+		return (lastKiteAt == 0) || ((now - lastKiteAt) >= KITE_COOLDOWN_MS);
 	}
 
 	/**

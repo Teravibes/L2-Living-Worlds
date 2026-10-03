@@ -174,13 +174,41 @@ as its own window, already pointed at your server files, so every tab is ready w
 setup: **rates and server settings**, phantom playstyles, bot clans, and the fake-player
 **population map**. You change things without editing a single file, and a save rewrites
 only the values you touched while keeping your comments and layout intact. The **Modules**
-button enables, disables, or removes optional feature modules the same way.
+button enables, disables, or removes optional feature modules the same way (see [Modules](#modules)).
 
 Prefer to edit by hand? Every setting still lives in plain files: standard L2J Mobius
 `.ini` files under `L2J_Mobius_CT_0_Interlude github/dist/game/config/`, the custom
 "Living World" options under `config/Custom/` (e.g. `FakePlayers.ini`), and the XML
 behaviour/route files under `dist/game/data/`. Rates, spawns, and the fake-player
 populations are all adjustable there too.
+
+---
+
+## Modules
+
+The server supports **modules**: optional features packaged as a self-contained folder that you add
+without rebuilding anything. Examples are an NPC buffer, a class master, a GM shop, or extra menus for
+calling phantoms into your party.
+
+Reviewed modules are published in the
+[**L2 Living Worlds Modules**](https://github.com/Teravibes/L2-Living-Worlds-Modules-) repository,
+which lists each one with its author and a short description.
+
+To install a module:
+
+1. Copy its folder into your server's `game/modules/` directory, so you end up with
+   `game/modules/<module-id>/`.
+2. Open the launcher's **Modules** panel and make sure the module is enabled.
+3. Restart the server. The module takes effect on the next start.
+
+To remove one, disable it in the launcher and delete its folder.
+
+> Modules are executable code and run with your server's permissions. Only the modules in the
+> modules repository have been reviewed. Install modules from anywhere else at your own risk.
+
+Want to write your own? See [docs/MODULE_AUTHORING_GUIDE.md](docs/MODULE_AUTHORING_GUIDE.md) and
+[docs/MODULE_FRAMEWORK.md](docs/MODULE_FRAMEWORK.md), then submit it through the server's Discord
+as described in the modules repository.
 
 ---
 
